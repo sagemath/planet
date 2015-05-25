@@ -70,6 +70,10 @@ img.face {
     margin-top: -3em;
 }
 
+.content img {
+  max-width: 100%;
+}
+
 .entry {
     margin-bottom: 2em;
 }
