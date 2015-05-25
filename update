@@ -6,4 +6,4 @@ cd `dirname "$0"`
 cd planet_sage
 
 # this calls the update script (via crontab!) and files end up in "output"
-python ../planet-2.0/planet.py config.ini 1> $HOME/log/update.out 2> $HOME/log/update.error
+python ../planet-2.0/planet.py config.ini 1> ../log/update.out 2> ../log/update.error
