@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:rss="http://purl.org/rss/1.0/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+<foaf:Group>
+	<foaf:name>Planet Sage</foaf:name>
+	<foaf:homepage>http://planet.sagemath.org</foaf:homepage>
+	<rdfs:seeAlso rdf:resource="http://planet.sagemath.org/foafroll.xml" />
+
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Alasdair McAndrew</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://amca01.wordpress.com">
+					<dc:title>Alasdair's musings » Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://amca01.wordpress.com/category/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Alex Ghitza</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://aghitza.org/tags/sage/">
+					<dc:title>tags/sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://128.250.32.118:8371/tags/sage/index.rss" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Amit Jamadagni</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://knotsknotted.wordpress.com/">
+					<dc:title>MYSTIC MATHPERIENCE » GSoC</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://knotsknotted.wordpress.com/category/gsoc/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Carlo Hamalainen</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://carlo-hamalainen.net/blog">
+					<dc:title>Carlo Hamalainen</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://carlo-hamalainen.net/blog/?feed=rss2&amp;cat=8" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Christopher Olah</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://christopherolah.wordpress.com">
+					<dc:title>Christopher Olah's Blog » sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://christopherolah.wordpress.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>David Horgan (quantumtetrahedron)</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://quantumtetrahedron.wordpress.com/">
+					<dc:title>quantumtetrahedron » Personal research</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://quantumtetrahedron.wordpress.com/category/personal-research/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>David Joyner</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://wdjoyner.wordpress.com">
+					<dc:title>Yet Another Mathblog » sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://wdjoyner.wordpress.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Doxdrum</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://doxdrum.wordpress.com">
+					<dc:title>Doxdrum's Blog » Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://doxdrum.wordpress.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Eviatar Bach</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://www.phas.ubc.ca/~eviatarb/">
+					<dc:title>Eviatar Bach » Eviatar Bach</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://www.phas.ubc.ca/~eviatarb/index.php?feed=type&amp;c=sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Fredrik Johansson</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://fredrik-j.blogspot.com/search/label/sage">
+					<dc:title>Fredrik Johansson</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://fredrik-j.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Harald Schilly</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://blog.harald.schil.ly/search/label/sage">
+					<dc:title>Harald Schilly</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://blog.harald.schil.ly/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Jan Pöschko</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://gsoc-sage-lattices.blogspot.com/">
+					<dc:title>Lattices in Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://gsoc-sage-lattices.blogspot.com/feeds/posts/default" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Jens Rasch</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://6dime.blogspot.com/search/label/sage">
+					<dc:title>6dime</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://6dime.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Lee Worden</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://leeworden.net/lw/taxonomy/term/25">
+					<dc:title>Lee Worden - sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://leeworden.net/lw/taxonomy/term/25/feed" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Liang Ze</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://sheaves.github.io/">
+					<dc:title>Sheaves</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://sheaves.github.io/feed.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Lina Kulakova</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://lina-kulakova.blogspot.com/">
+					<dc:title>Sage GSoC</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://lina-kulakova.blogspot.com/feeds/posts/default" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Marshall Hampton</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://neutraldrifts.blogspot.com/search/label/sage">
+					<dc:title>Neutral Drifts</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://neutraldrifts.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Martin Albrecht</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://martinralbrecht.wordpress.com">
+					<dc:title>malb::blog » sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://martinralbrecht.wordpress.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Minh Van Nguyen</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://mvngu.wordpress.com">
+					<dc:title>mvngu » Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://mvngu.wordpress.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Nick Alexander</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://ncalexan.wordpress.com">
+					<dc:title>Alexander's particulars » sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://ncalexan.wordpress.com/category/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Nikhil Peter</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://blog.hav3n.net/?tag=gsoc-2014">
+					<dc:title>Nikhil's GSoC Blog » GSoC 2014</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Ondrej Certik</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://ondrejcertik.blogspot.com/search/label/sage">
+					<dc:title>Ondřej Čertík</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://ondrejcertik.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Oscar Lazo</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://phisycsandgnulinux.site11.com">
+					<dc:title>El conocimiento es compartir. » sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://phisycsandgnulinux.site11.com/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>PolyBoRi Blog</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://polybori.blogspot.com/">
+					<dc:title>The PolyBoRi Blog</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://polybori.blogspot.com/feeds/posts/default/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Rasmi Elasmar</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://rasmi.io/">
+					<dc:title>Rasmi.io » Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://rasmi.io/tag/sage/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Robert Miller</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://blog.rlmiller.org/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Serge A. Salamanka</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://sageworldmath.blogspot.com/search/label/sage">
+					<dc:title>SageWorldMath</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://sageworldmath.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Simon Spicer</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://mathandhats.blogspot.com">
+					<dc:title>Math and Hats</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Sébastien Labbé</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/">
+					<dc:title>Sébastien Labbé</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/categorie/sage/feed/atom/index.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>The Matroid Union</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://matroidunion.org">
+					<dc:title>The Matroid Union » Sage</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://matroidunion.org/?feed=rss2&amp;cat=7" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Titus Nicolae</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://titusnicolae.blogspot.com/">
+					<dc:title>Titus Nicolae</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://titusnicolae.blogspot.com/feeds/posts/default" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Verónica Suaste Morales</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://broniks.blogspot.com/search/label/sage">
+					<dc:title>Programming Projects</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://broniks.blogspot.mx/feeds/posts/default/-/sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Vince Knight</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://vincent-knight.com/unpeudemath/feed.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Vince Knight</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>William Stein</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://sagemath.blogspot.com/">
+					<dc:title>Sage: Open Source Mathematics Software</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://sagemath.blogspot.com/feeds/posts/default" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+
+</foaf:Group>
+</rdf:RDF>

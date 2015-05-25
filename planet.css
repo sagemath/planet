@@ -1,0 +1,338 @@
+/* This is the CSS style file for planet.sagemath.org, the feed aggregator
+website for the Sage mathematical software package */
+/* Adapted from Harald Schilly's CSS style file for www.sagemath.org
+Copyright (c) 2008-2009 Harald Schilly <harald.schilly@gmail.com>
+                        Minh Van Nguyen <nguyenminh2@gmail.com> */
+
+body {
+    text-align: left;
+    font-size: 95%;
+    width: 75%;
+    margin: 10px auto 10px auto;
+    border-right: 4px;
+    margin-right: 200px;
+    background: #ffffff url("images/background.png") repeat-x;
+    /*min-width: 750px;*/
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    text-align: left;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+html {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background-color: #b8b9f6;
+    font-family: sans-serif;
+    text-align: left;
+    overflow: auto;
+}
+
+h1 {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 140%;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 125%;
+    border-bottom: 2px solid #c9c9f9;
+}
+
+h3 {
+    margin-top: 25px;
+    font-size: 115%;
+    border-bottom: 1px /*dotted #c9c9f9*/;
+}
+
+h4 {
+    font-family: "Bitstream Vera Sans", sans-serif;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    padding-left: 0px;
+    padding-right: 15px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-align: left;
+    color: #0f0fff;
+}
+
+img.face {
+    float: right;
+    margin-top: -3em;
+}
+
+.entry {
+    margin-bottom: 2em;
+}
+
+.entry .date {
+    font-family: "Bitstream Vera Sans", sans-serif;
+    color: grey;
+}
+
+.entry .date a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-left: 20px;
+    
+    font-family: "Bitstream Vera Sans", sans-serif;
+    font-size: 85%;
+}
+
+.sidebar h2 {
+    font-size: 110%;
+    font-weight: bold;
+    color: black;
+    
+    padding-left: 5px;
+    margin-left: 0px;
+}
+
+.sidebar ul {
+    padding-left: 1em;
+    margin-left: 0px;
+
+    list-style-type: none;
+}
+
+.sidebar ul li:hover {
+    color: grey;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul li a img {
+    border: 0;
+}
+
+.sidebar p {
+    border-top: 1px solid grey;
+    margin-top: 30px;
+    padding-top: 10px;
+    
+    padding-left: 5px;
+}
+
+.sidebar .message {
+    cursor: help;
+}
+
+.sidebar a.message:hover {
+    cursor: help;
+    background-color: #ff0000;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+    color: blue !important;
+}
+
+li { margin-top: 0.5em; padding-right: 15px;}
+ul, ol {
+    margin-left:0px;
+    padding-left:30px;
+}
+ul {
+    list-style-type:square;
+}
+.mOverlay { text-align:left; }
+.mOverlay li { margin-top: 0; text-align: left;}
+
+a {
+    border: 0;
+}
+a, a:hover, a:visited, a:active {
+    color: #0f0fFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #090999;
+}
+
+img:hover {
+    background-color:transparent;
+}
+img {
+    border: 0;
+}
+
+#source table tr.first td { font-size: 130%; border-bottom: 1px solid black;}
+tr.odd td { background-color : #dfdfff; }
+tr.even td { background-color : #e9e9f9; }
+
+span.code {
+font-family: "DejaVu Sans Mono", "Lucida Console", "Courier New", monospace;
+font-size: 90%;
+background-color: #dfdfff;
+padding-left: 2px;
+padding-right: 2px;
+}
+
+div.code, pre.code {
+font-family: "DejaVu Sans Mono", "Lucida Console", "Courier New", monospace;
+font-size: 85%;
+white-space: pre;
+margin: 0;
+}
+.round {
+-moz-border-radius: 10px;
+-o-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+.nowrap {
+white-space: nowrap;
+}
+
+/* replace this later by their proper CSS3 styles */
+.twocols {
+column-count:2;
+column-gap:2em;
+-o-column-count:2;
+-o-column-gap:2em;
+-moz-column-count:2;
+-moz-column-gap:2em;
+-webkit-column-count:2;
+-webkit-column-gap:2em;
+}
+
+div#header {
+white-space: nowrap;
+clear: both;
+margin: 0px 15px 10px 15px;
+}
+#header-navbar {
+clear: both;
+}
+#header-text {
+white-space: nowrap;
+margin-right: 0px;
+float: right;
+text-align: right;
+font-style: italic;
+line-height: 20px;
+}
+form { padding:0; margin: 0; }
+#header-text form input {
+background: transparent;
+font-style: italic;
+vertical-align: baseline;
+}
+#header-logo {
+margin: 0;
+margin-bottom: 30px;
+padding: 0;
+float: left;
+font-size: 48px;
+white-space: nowrap;
+letter-spacing: 2px;
+color: #0f0fff;
+}
+#header-logo img {
+vertical-align: middle;
+}
+
+#bodycontent div {
+/*margin-right: 15px;*/
+/*padding-left: 15px;
+padding-right: 15px;*/
+}
+.leftpadding { padding-left: 15px; }
+.rightpadding { padding-right: 15px; }
+div.bodypadding { padding-left: 15px; padding-right: 15px; }
+div.topmargin { margin-top: 35px; }
+div.txt, pre.txt { margin-bottom: 15px; }
+.padding { padding-left: 15px; padding-right: 15px;
+} .center { text-align: center; }
+.narrow {
+margin-left: auto;
+margin-right: auto;
+min-width: 600px;
+width: 75%;
+}
+.justify { /*text-align: justify;*/ }
+.right { text-align: right; }
+.left  {  text-align: left; }
+table.right {
+margin-left: auto;
+margin-right: 0px;
+}
+
+/*no dotted border when clicking*/
+a:focus, a:active {
+outline: 0;
+-moz-outline: none;
+color: #090999;
+}
+
+
+.body-corner {
+padding: 0;
+margin: 0;
+line-height:0px;
+}
+div.body-corner div {
+display: block;
+width: 15px;
+height: 15px;
+/*background: transparent url("http://www.sagemath.org/pix/page-graphics.gif") no-repeat;*/
+background: transparent;
+overflow: hidden;
+}
+#body-corner-tl {
+margin: 0;
+float: left;
+background-position: 0px 0px;
+}
+#body-corner-tr {
+margin: 0;
+float: right;
+background-position: -15px 0px;
+}
+#body-corner-br {
+margin: 0;
+float: right;
+background-position: -30px 0px;
+}
+#body-corner-bl {
+margin: 0;
+float: left;
+background-position: -45px 0px;
+}
+.trademark {
+color:#C9C9F9;
+font-size:60%;
+text-align:center;
+}
+
