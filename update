@@ -7,3 +7,11 @@ cd planet_sage
 
 # this calls the update script (via crontab!) and files end up in "output"
 python ../planet-2.0/planet.py config.ini 1> ../log/update.out 2> ../log/update.error
+
+cd ../output
+
+git fetch origin
+git checkout -B gh-pages
+git reset --soft origin/gh-pages
+git add -A -- .
+git commit -m "auto publish `date -u --rfc-3339=seconds`"

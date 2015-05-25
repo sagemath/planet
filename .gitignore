@@ -1,3 +1,4 @@
+output/
 .hg/
 log
 planet_sage/cache
