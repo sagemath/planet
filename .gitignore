@@ -1,0 +1,8 @@
+.hg/
+log
+planet_sage/cache
+planet_sage/cache.bak
+planet_sage/output
+*.tmplc
+*.pyc
+*.pyo

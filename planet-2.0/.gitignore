@@ -1,0 +1,3 @@
+examples/*.tmplc
+planet/tests/*.tmplc
+cache/
