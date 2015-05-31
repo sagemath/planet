@@ -15,8 +15,8 @@
 		<foaf:Agent>
 			<foaf:name>Alasdair McAndrew</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://amca01.wordpress.com">
-					<dc:title>Alasdair's musings » Sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://amca01.wordpress.com/category/sage/feed/" />
 					</rdfs:seeAlso>
@@ -28,10 +28,10 @@
 		<foaf:Agent>
 			<foaf:name>Alex Ghitza</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://aghitza.org/tags/sage/">
-					<dc:title>tags/sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://128.250.32.118:8371/tags/sage/index.rss" />
+						<rss:channel rdf:about="http://aghitza.org/tags/sage/index.rss" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -42,7 +42,7 @@
 			<foaf:name>Amit Jamadagni</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://knotsknotted.wordpress.com/">
-					<dc:title>MYSTIC MATHPERIENCE » GSoC</dc:title>
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://knotsknotted.wordpress.com/category/gsoc/feed/" />
 					</rdfs:seeAlso>
@@ -52,10 +52,23 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Benjamin Hackl</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://benjamin-hackl.at/tag/gsoc15/">
+					<dc:title>Benjamin Hackl » GSoC15</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://benjamin-hackl.at/tag/gsoc15/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Carlo Hamalainen</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://carlo-hamalainen.net/blog">
-					<dc:title>Carlo Hamalainen</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://carlo-hamalainen.net/blog/?feed=rss2&amp;cat=8" />
 					</rdfs:seeAlso>
@@ -67,8 +80,8 @@
 		<foaf:Agent>
 			<foaf:name>Christopher Olah</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://christopherolah.wordpress.com">
-					<dc:title>Christopher Olah's Blog » sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://christopherolah.wordpress.com/tag/sage/feed/" />
 					</rdfs:seeAlso>
@@ -81,7 +94,7 @@
 			<foaf:name>David Horgan (quantumtetrahedron)</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://quantumtetrahedron.wordpress.com/">
-					<dc:title>quantumtetrahedron » Personal research</dc:title>
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://quantumtetrahedron.wordpress.com/category/personal-research/feed/" />
 					</rdfs:seeAlso>
@@ -93,10 +106,10 @@
 		<foaf:Agent>
 			<foaf:name>David Joyner</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://wdjoyner.wordpress.com">
-					<dc:title>Yet Another Mathblog » sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://wdjoyner.wordpress.com/tag/sage/feed/" />
+						<rss:channel rdf:about="http://wdjoyner.wordpress.com/tag/sage/feed" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -106,8 +119,8 @@
 		<foaf:Agent>
 			<foaf:name>Doxdrum</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://doxdrum.wordpress.com">
-					<dc:title>Doxdrum's Blog » Sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://doxdrum.wordpress.com/tag/sage/feed/" />
 					</rdfs:seeAlso>
@@ -236,8 +249,8 @@
 		<foaf:Agent>
 			<foaf:name>Martin Albrecht</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://martinralbrecht.wordpress.com">
-					<dc:title>malb::blog » sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://martinralbrecht.wordpress.com/tag/sage/feed/" />
 					</rdfs:seeAlso>
@@ -249,10 +262,10 @@
 		<foaf:Agent>
 			<foaf:name>Minh Van Nguyen</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://mvngu.wordpress.com">
-					<dc:title>mvngu » Sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://mvngu.wordpress.com/tag/sage/feed/" />
+						<rss:channel rdf:about="http://mvngu.wordpress.com/tag/sage/feed" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -262,10 +275,10 @@
 		<foaf:Agent>
 			<foaf:name>Nick Alexander</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://ncalexan.wordpress.com">
-					<dc:title>Alexander's particulars » sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://ncalexan.wordpress.com/category/sage/feed/" />
+						<rss:channel rdf:about="http://ncalexan.wordpress.com/tag/sage/feed/" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -301,10 +314,10 @@
 		<foaf:Agent>
 			<foaf:name>Oscar Lazo</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://phisycsandgnulinux.site11.com">
-					<dc:title>El conocimiento es compartir. » sage</dc:title>
+				<foaf:Document rdf:about="">
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://phisycsandgnulinux.site11.com/tag/sage/feed/" />
+						<rss:channel rdf:about="http://phisycsandgnulinux.site11.com/?tag=sage&amp;feed=rss2" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -328,7 +341,7 @@
 			<foaf:name>Rasmi Elasmar</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://rasmi.io/">
-					<dc:title>Rasmi.io » Sage</dc:title>
+					<dc:title></dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://rasmi.io/tag/sage/feed/" />
 					</rdfs:seeAlso>
@@ -431,10 +444,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
-					<dc:title>Un peu de math</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://vincent-knight.com/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -444,10 +457,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
-					<dc:title>Un peu de math...</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
