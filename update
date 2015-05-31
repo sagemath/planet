@@ -15,3 +15,4 @@ git checkout -B gh-pages
 git reset --soft origin/gh-pages
 git add -A -- .
 git commit -m "auto publish `date -u --rfc-3339=seconds`"
+git push
