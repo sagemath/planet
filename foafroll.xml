@@ -195,6 +195,19 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Jonathan Lee</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
+					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Lee Worden</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://leeworden.net/lw/taxonomy/term/25">
@@ -457,10 +470,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
-					<dc:title>Un peu de math</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -470,10 +483,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
-					<dc:title>Un peu de math...</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
