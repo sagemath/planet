@@ -78,6 +78,19 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Chao Xu</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="https://sage2015gsocmatroid.wordpress.com/">
+					<dc:title></dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="https://sage2015gsocmatroid.wordpress.com/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Christopher Olah</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="">
