@@ -80,10 +80,10 @@
 		<foaf:Agent>
 			<foaf:name>Chao Xu</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="https://sage2015gsocmatroid.wordpress.com/">
+				<foaf:Document rdf:about="http://sage2015gsocmatroid.wordpress.com/">
 					<dc:title></dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="https://sage2015gsocmatroid.wordpress.com/feed/" />
+						<rss:channel rdf:about="http://sage2015gsocmatroid.wordpress.com/feed/" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
