@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>June 09, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://borassisagemath.blogspot.com/" title="Performance Improvements for the Graph Module of Sagemath">Michele Borassi</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-8558001006126216932.post-517109036063053537">
+<h4><a href="http://borassisagemath.blogspot.com/2015/06/performance-comparison-of-different.html">Performance comparison of different graph libraries</a></h4>
+<div class="entry">
+<div class="content">
+As promised in the last post, I have compared the performances of several graph libraries, in order to choose which ones should be deployed with Sagemath. Here, I provide the main results of this analysis, while more details are available on <a href="https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison">my website</a> (see also the links below).<br />The libraries chosen are the most famous graph libraries written in Python, C, or C++ (I have chosen these languages because they are easier to integrate in Sagemath, using Cython). Furthermore, I have excluded NetworkX, which is already deployed with Sagemath.<br />First of all, I have to enforce that no graph library comparison can be completely fair, and also this comparison can be criticized, due to the large amount of available routines, to the constant evolution of libraries, and to many small differences in the outputs (for instance, one library might compute the value of a maximum s-t flow, another library might actually compute the flow, and a third one might compute all maximum flows). Despite this, I have tried to be as fair as possible, through a deeper and more detailed analysis than previous comparisons (<a href="https://graph-tool.skewed.de/performance">https://graph-tool.skewed.de/performance</a>, <a href="http://www.programmershare.com/3210372/">http://www.programmershare.com/3210372/</a>, <a href="http://arxiv.org/pdf/1403.3005.pdf">http://arxiv.org/pdf/1403.3005.pdf</a>).<br />The first comparison deals with the number of algorithms implemented. I have chosen a set of 107 possible algorithms, trying to cover all possible tasks that a graph library should perform (avoiding easy tasks that are common to all libraries, like outputting the number of nodes, the number of edges, the neighbors of a node, etc). In some cases, two tasks were collapsed in one, if the algorithms solving these tasks are very similar (for instance, computing a maximum flow and computing a minimum cut, computing vertex betweenness and edge betweenness, etc).<br />The number of routines available for each library is plotted in the following chart, and a table containing all features is available in <a href="https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison/detailed-feature-comparison">HTML</a> or as a <a href="https://docs.google.com/spreadsheets/d/1Iu1hkQtRn9J-sgfZbQTu2RoXzyjoMEWP5-cm3nAwnWE/edit?usp=sharing">Google Sheet</a>.<br />        <br />The results show that Sagemath has more routines than all competitors (66), closely followed by igraph (62). All other libraries are very close to each other, having about 30 routines each. Furthermore, Sagemath could be improved in the fields of neighbor similarity measures (assortativity, bibcoupling, cocitation, etc), community detection, and random graph generators. For instance, igraph contains 29 routines that are not available in Sagemath.<br /><br />The second comparison analyzes the running-time of some of the algorithms implemented in the libraries. In particular, I have chosen 8 of the most common tasks in graph analysis: computing the diameter, computing the maximum flow between two vertices, finding connected components and strongly connected components, computing betweenness centrality, computing the clustering coefficient, computing the clique number, and generating a graph with the preferential attachment model. I have run each of these algorithms on 3 inputs, and I have considered the total execution time (excluding the time needed to load the graph). More details on this experiment are available <a href="https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison/detailed-performance-comparison">here</a>, and the results are also available in a <a href="https://docs.google.com/spreadsheets/d/1Iu1hkQtRn9J-sgfZbQTu2RoXzyjoMEWP5-cm3nAwnWE/edit?usp=sharing">Google Sheet</a>.<br />In order to make the results more readable, I have plotted the ratio between the time needed by a given library and the minimum time needed by any library. If an algorithm was not implemented, or it needed more than 3 hours to complete, the corresponding bar is not shown.<br />     <br />Overall, the results show that NetworKit is the fastest library, or one of the fastest, in all routines that are implemented (apart from the generation of preferential attachment graphs, where it is very slow). Boost graph library is very close to NetworKit, and it also contains more routines. Also Sagemath is quite efficient in all tasks, apart from the computation of strongly connected components and the generation of a preferential attachment graph, where it needed more than 3 hours. However, in the latter case, the main problem was not speed but memory consumption.<br /><br />In conclusion, Sagemath can highly benefit from the possibility of using algorithms from other libraries. First of all, it might improve the number of algorithms offered, especially by including igraph, and it also might improve its performance, by including Boost, NetworKit, or other fast graph libraries.</div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://borassisagemath.blogspot.com/2015/06/performance-comparison-of-different.html">by Michele Borassi (noreply@blogger.com) at June 09, 2015 07:24 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>June 04, 2015</h2>
 
 <div class="channelgroup">
@@ -4033,7 +4069,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-June 09, 2015 01:30 PM<br>
+June 09, 2015 02:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
