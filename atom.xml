@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-06-14T13:30:16+00:00</updated>
+	<updated>2015-06-14T14:30:17+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -119,7 +119,7 @@ We’ll use a &lt;code&gt;funny_threshold&lt;/code&gt; and any joke that ranks a
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;classifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nltk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NaiveBayesClassifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Year'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2013&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Labeled_Feature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;This classifier will take in to account all the words in a given joke and spit out if it’s funny or not.
+&lt;p&gt;This classifier will take into account all the words in a given joke and spit out if it’s funny or not.
 It can also give us some indication as to what makes a joke funny or not:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;classifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show_most_informative_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -239,7 +239,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -258,7 +258,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-14T13:30:16+00:00</updated>
+			<updated>2015-06-14T14:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -277,7 +277,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-14T13:30:16+00:00</updated>
+			<updated>2015-06-14T14:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -296,7 +296,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-14T13:30:16+00:00</updated>
+			<updated>2015-06-14T14:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -363,7 +363,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -499,7 +499,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -667,7 +667,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -773,7 +773,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -826,7 +826,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -889,7 +889,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1040,7 +1040,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1109,7 +1109,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1172,7 +1172,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1276,7 +1276,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1660,7 +1660,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-14T09:30:08+00:00</updated>
+			<updated>2015-06-14T14:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2358,7 +2358,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2378,7 +2378,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2398,7 +2398,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2418,7 +2418,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3033,7 +3033,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3053,7 +3053,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3091,7 +3091,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3130,7 +3130,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3150,7 +3150,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3170,7 +3170,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-14T13:30:06+00:00</updated>
+			<updated>2015-06-14T14:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3190,7 +3190,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3210,7 +3210,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3230,7 +3230,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3268,7 +3268,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-14T13:30:15+00:00</updated>
+			<updated>2015-06-14T14:30:16+00:00</updated>
 		</source>
 	</entry>
 
