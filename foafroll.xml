@@ -54,7 +54,7 @@
 		<foaf:Agent>
 			<foaf:name>Benjamin Hackl</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://benjamin-hackl.at/tag/gsoc15/">
+				<foaf:Document rdf:about="http://benjamin-hackl.at">
 					<dc:title>Benjamin Hackl » GSoC15</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://benjamin-hackl.at/tag/gsoc15/feed/" />
@@ -210,7 +210,7 @@
 		<foaf:Agent>
 			<foaf:name>Jonathan Lee</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/">
 					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
