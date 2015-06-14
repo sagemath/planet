@@ -54,6 +54,258 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>June 14, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/">Python, natural language processing and predicting funny</a></h4>
+<div class="entry">
+<div class="content">
+<p>Every year there is a big festival in Edinburgh called <a href="https://tickets.edfringe.com/?gclid=Cj0KEQjwzPSrBRC_oOXfxPWP6t0BEiQARqav2KeTlfbBfcnFIHJN6llKStyz-2p1di-dm69gm88C3B0aAivP8P8HAQ">the fringe
+festival</a>.
+I blogged about this a while ago, <a href="http://drvinceknight.blogspot.co.uk/2013/08/a-very-brief-and-shallow-analysis-of.html">in that post I did a very basic bit of
+natural language
+processing</a>
+aiming to try and identify what made things funny.
+In this blog post I’m going to push that a bit further by building a
+classification model that aims to predict if a joke is funny or not.
+(tldr: I don’t really succeed but but that’s mainly because I have very little
+data - having more data would not necessarily guarantee success either but the code and approach is what’s worth taking from this post… 😪).</p>
+
+<p>If you want to skip the brief description and go straight to look at the code
+you can find the <a href="https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/nlp-of-jokes.ipynb">ipython notebook on github
+here</a> and <a href="https://cloud.sagemath.com/projects/a4f27edc-8528-4c7f-adf7-b6c790e29349/files/nlp-of-jokes.html">on cloud.sagemath here</a>.</p>
+
+<p>The <strong>data</strong> comes from a series of <a href="http://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-28838287">BBC
+articles</a>
+which reports (more or less every year since 2011?) the top ten jokes at the
+fringe festival. This does in fact only give 60 odd jokes to work with…</p>
+
+<p>Here is the latest winner (by Tim Vine):</p>
+
+<blockquote>
+  <p>I decided to sell my Hoover… well it was just collecting dust.</p>
+</blockquote>
+
+<p>After cleaning it up slightly I’ve thrown that all in a <a href="https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/jokes.json"><code>json</code> file here</a>.
+So in order to import the data in to a panda data frame I just run:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s">'jokes.json'</span><span class="p">)</span> <span class="c"># Loading the json file</span></code></pre></div>
+
+<p>Pandas is great, I’ve been used to creating my own bespoke classes for handling
+data but in general just using pandas does the exact right job.
+At this point I basically follow along with
+<a href="http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-and-nltk/">this post on sentiment analysis of twitter</a> which makes use of the ridiculously powerful <code>nltk</code> library.</p>
+
+<p>We can use the <code>nltk</code> library to ‘tokenise’ and get rid of common words:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">commonwords</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s">'english'</span><span class="p">))]</span> <span class="c"># &lt;- Need to download the corpus: import nltk; nltk.download()</span>
+<span class="n">commonwords</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s">'M'</span><span class="p">,</span> <span class="s">'VE'</span><span class="p">])</span>  <span class="c"># Adding a couple of things that need to be removed</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">RegexpTokenizer</span><span class="p">(</span><span class="s">r'\w+'</span><span class="p">)</span>  <span class="c"># To be able to strip out unwanted things in strings</span>
+<span class="n">string_to_list</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="n">el</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">el</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">commonwords</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'Joke'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Raw_joke'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">string_to_list</span><span class="p">)</span></code></pre></div>
+
+<p>Note that this requires downloading one of the awesome corpuses
+(<a href="https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=plural%20of%20corpus&es_th=1">thats apparently the right way to say that</a>) from nltk.</p>
+
+<p>Here is how this looks:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">joke</span> <span class="o">=</span> <span class="s">'I decided to sell my Hoover... well it was just collecting dust.'</span>
+<span class="n">string_to_list</span><span class="p">(</span><span class="n">joke</span><span class="p">)</span></code></pre></div>
+
+<p>which gives:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="p">[</span><span class="s">'DECIDED'</span><span class="p">,</span> <span class="s">'SELL'</span><span class="p">,</span> <span class="s">'HOOVER'</span><span class="p">,</span> <span class="s">'WELL'</span><span class="p">,</span> <span class="s">'COLLECTING'</span><span class="p">,</span> <span class="s">'DUST'</span><span class="p">]</span></code></pre></div>
+
+<h2 id="we-can-now-get-started-on-building-a-classifier">We can now get started on building a classifier</h2>
+
+<p>Here is the general idea of what will be happening:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/description_of_ratio_learning_for_nlp_jokes.svg" alt="" /></p>
+
+<p>First of all we need to build up the ‘features’ of each joke,
+in other words pull the words out in to a nice easy format.</p>
+
+<p>To do that we need to find all the words from our training data set, another way of describing this is that we need to build up our dictionary:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_all_words</span><span class="p">(</span><span class="n">dataframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A function that gets all the words from the Joke column in a given dataframe</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">all_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">jk</span> <span class="ow">in</span> <span class="n">dataframe</span><span class="p">[</span><span class="s">'Joke'</span><span class="p">]:</span>
+        <span class="n">all_words</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">jk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">all_words</span>
+
+<span class="n">all_words</span> <span class="o">=</span> <span class="n">get_all_words</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2013</span><span class="p">])</span>  <span class="c"># This uses all jokes before 2013 as our training data set.</span></code></pre></div>
+
+<p>We then build something that will tell us for each joke which of the overall words is in it:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="k">def</span> <span class="nf">extract_features</span><span class="p">(</span><span class="n">joke</span><span class="p">,</span> <span class="n">all_words</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">joke</span><span class="p">)</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">features</span><span class="p">[</span><span class="s">'contains(</span><span class="si">%s</span><span class="s">)'</span> <span class="o">%</span> <span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">all_words</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">features</span></code></pre></div>
+
+<p><em>Once we have done that, we just need to decide what we will call a <strong>funny</strong> joke</em>. For this purpose
+We’ll use a <code>funny_threshold</code> and any joke that ranks above the
+<code>funny_threshold</code> in any given year will be considered <strong>funny</strong>:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">funny_threshold</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'Rank'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Rank'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'Funny'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Rank'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">funny_threshold</span></code></pre></div>
+
+<p>Now we just need to create a tuple for each joke that puts the features mentioned earlier and a classification (if the joke was funny or not) together:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">df</span><span class="p">[</span><span class="s">'Labeled_Feature'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'Features'</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s">'Funny'</span><span class="p">])</span></code></pre></div>
+
+<p>We can now (<strong>in one line of code!!!!</strong>) create a classifier:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">classifier</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">NaiveBayesClassifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2013</span><span class="p">][</span><span class="s">'Labeled_Feature'</span><span class="p">])</span></code></pre></div>
+
+<p>This classifier will take in to account all the words in a given joke and spit out if it’s funny or not.
+It can also give us some indication as to what makes a joke funny or not:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">classifier</span><span class="o">.</span><span class="n">show_most_informative_features</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span></code></pre></div>
+
+<p>Here is the output of that:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">Most</span> <span class="n">Informative</span> <span class="n">Features</span>
+     <span class="n">contains</span><span class="p">(</span><span class="n">GOT</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>   <span class="bp">False</span> <span class="p">:</span> <span class="bp">True</span>   <span class="o">=</span>  <span class="mf">2.4</span> <span class="p">:</span> <span class="mf">1.0</span>
+    <span class="n">contains</span><span class="p">(</span><span class="n">KNOW</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.7</span> <span class="p">:</span> <span class="mf">1.0</span>
+  <span class="n">contains</span><span class="p">(</span><span class="n">PEOPLE</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>   <span class="bp">False</span> <span class="p">:</span> <span class="bp">True</span>   <span class="o">=</span>  <span class="mf">1.7</span> <span class="p">:</span> <span class="mf">1.0</span>
+     <span class="n">contains</span><span class="p">(</span><span class="n">SEX</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>   <span class="bp">False</span> <span class="p">:</span> <span class="bp">True</span>   <span class="o">=</span>  <span class="mf">1.7</span> <span class="p">:</span> <span class="mf">1.0</span>
+   <span class="n">contains</span><span class="p">(</span><span class="n">NEVER</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>   <span class="bp">False</span> <span class="p">:</span> <span class="bp">True</span>   <span class="o">=</span>  <span class="mf">1.7</span> <span class="p">:</span> <span class="mf">1.0</span>
+      <span class="n">contains</span><span class="p">(</span><span class="n">RE</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.6</span> <span class="p">:</span> <span class="mf">1.0</span>
+  <span class="n">contains</span><span class="p">(</span><span class="n">FRIEND</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.6</span> <span class="p">:</span> <span class="mf">1.0</span>
+     <span class="n">contains</span><span class="p">(</span><span class="n">SAY</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.6</span> <span class="p">:</span> <span class="mf">1.0</span>
+  <span class="n">contains</span><span class="p">(</span><span class="n">BOUGHT</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.6</span> <span class="p">:</span> <span class="mf">1.0</span>
+     <span class="n">contains</span><span class="p">(</span><span class="n">ONE</span><span class="p">)</span> <span class="o">=</span> <span class="bp">True</span>    <span class="bp">True</span> <span class="p">:</span> <span class="bp">False</span>  <span class="o">=</span>  <span class="mf">1.5</span> <span class="p">:</span> <span class="mf">1.0</span></code></pre></div>
+
+<p>This immediately gives us some information:</p>
+
+<ul>
+  <li>If your joke is about <code>SEX</code> is it more likely to <em>not</em> be funny.</li>
+  <li>If your joke is about <code>FRIEND</code>s is it more likely to <em>be</em> funny.</li>
+</ul>
+
+<p>That’s all very nice but we can now (theoretically - again, I really don’t have enough data for this) start using the mathematical model to tell you if something is funny:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">joke</span> <span class="o">=</span> <span class="s">'Why was 10 afraid of 7? Because 7 8 9'</span>
+<span class="n">classifier</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">extract_features</span><span class="p">(</span><span class="n">string_to_list</span><span class="p">(</span><span class="n">joke</span><span class="p">),</span> <span class="n">get_all_words</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2013</span><span class="p">])))</span></code></pre></div>
+
+<p>That joke is apparently funny (the output of above is <code>True</code>). The following joke however is apparently not (the output of below if <code>False</code>):</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">joke</span> <span class="o">=</span> <span class="s">'Your mother is ...'</span>
+<span class="k">print</span> <span class="n">classifier</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">extract_features</span><span class="p">(</span><span class="n">string_to_list</span><span class="p">(</span><span class="n">joke</span><span class="p">),</span> <span class="n">get_all_words</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2013</span><span class="p">])))</span></code></pre></div>
+
+<p>As you can see in the <a href="https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/nlp-of-jokes.ipynb">ipython notebook</a>
+it is then very easy to measure how good the predictions are
+(I used the data from years before 2013 to predict 2014).</p>
+
+<h2 id="results">Results</h2>
+
+<p>Here is a plot of the accuracy of the classifier for changing values of <code>funny_threshold</code>:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/varying_values_of_funny_threshold.png" alt="" /></p>
+
+<p>You’ll notice a couple of things:</p>
+
+<ul>
+  <li>When the threshold is 0 or 1: the classifier works perfectly.
+This makes sense: all the jokes are either funny or not so it’s very easy
+for the classifier to do well.</li>
+  <li>There seems to be a couple of regions where the classifier does
+particularly poorly: just after a value of 4. Indeed there are points where
+the classifier does worse than flipping a coin.</li>
+  <li>At a value of 4, the classifier does particularly well!</li>
+</ul>
+
+<p>Now, one final thing I’ll take a look at is what happens if I start
+randomly selecting a portion of the entire data set to be the training set:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/description_of_random_ratio_learning_for_nlp_jokes.svg" alt="" /></p>
+
+<p>Below are 10 plots that correspond to 50 repetitions of the above where I
+randomly sample a ratio of the data set to be the training set:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-1.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-2.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-3.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-4.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-5.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-6.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-7.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-8.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-9.png" alt="" /></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-10.png" alt="" /></p>
+
+<p>Finally (although it’s really not helpful), here are all of those on a single plot:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-all.png" alt="" /></p>
+
+<p><strong>First of all: all those plots are basically one line of <a href="http://stanford.edu/~mwaskom/software/seaborn/"><code>seaborn</code> code</a> which is ridiculously cool</strong>. Seaborn is basically magic:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="n">sns</span><span class="o">.</span><span class="n">tsplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span></code></pre></div>
+
+<p>Second of all, it looks like the lower bound of the classifiers is around .5.
+Most of them start of at .5, in other words they are as good as flipping a coin
+before we let them learn from anything, which makes sense.
+Finally it seems that the threshold of 4 classifier seems to be the only one that
+gradually improves as more data is given to it. That’s perhaps indicating that
+something interesting is happening there but that investigation would be for another day.</p>
+
+<p><strong>All of the conclusions about the actual data should certainly not be taken seriously:
+I simply do not have enough data.</strong> But, the overall process and code is what is worth taking away.
+<strong>It’s pretty neat that the variety of awesome python libraries
+lets you do this sort of thing more or less out of the box.</strong></p>
+
+<p>Please do take a look at <a href="https://github.com/drvinceknight/EdinburghFringeJokes">this github repository</a>
+but I’ve also just put the notebook on <a href="https://cloud.sagemath.com/">cloud.sagemath</a> so assuming you
+<code>pip install</code> the libraries and get the data etc you can play around with this right in your browser:</p>
+
+<p><a href="https://cloud.sagemath.com/projects/a4f27edc-8528-4c7f-adf7-b6c790e29349/files/nlp-of-jokes.html">Here is the notebook on cloud.sagemath</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/">June 14, 2015 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>June 09, 2015</h2>
 
 <div class="channelgroup">
@@ -3798,114 +4050,6 @@ It&#8217;s been a busy week so far in the land of UI improvements. Disclaimer: I
 </div>
 
 </div>
-<div class="daygroup">
-<h2>June 28, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://blog.hav3n.net/?tag=gsoc-2014" title="Nikhil's GSoC Blog » GSoC 2014">Nikhil Peter</a></h3>
-
-
-<div class="entrygroup" id="http://blog.hav3n.net/?p=39" lang="en-US">
-<h4><a href="http://blog.hav3n.net/?p=39">GSoC – Post Mid-Term Update</a></h4>
-<div class="entry">
-<div class="content">
-Well, Mid-Terms have just finished(I passed!), and I&#8217;ve been neglecting this blog so here are some updates. The app is now in beta! More info can be found at the sage-devel post here Most of the work done is internal, but there are a few external fixes and enhancements as well. Agendas for the next [&#8230;]</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://blog.hav3n.net/?p=39">by hav3n at June 28, 2014 05:41 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>June 27, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://drvinceknight.blogspot.com/search/label/Sage" title="Un peu de math...">Vince Knight</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-4212553888783541751.post-8371434845098368979">
-<h4><a href="http://drvinceknight.blogspot.com/2014/06/pointing-at-blog-post-about-sage-and.html">Pointing at a blog post about Sage and a treasure hunt</a></h4>
-<div class="entry">
-<div class="content">
-It looks like I might be moving... I've been playing with jekyll&nbsp;+ github and really love the workflow so it looks like I might be moving this blog over there.<br /><br />It's not official yet as I still need to think about a couple of things but in the meantime here's a post I just wrote over there about how the team I was in used Sage in a mathematical treasure hunt:&nbsp;<a class="ot-anchor aaTEdf" href="http://goo.gl/iLgGnL" rel="nofollow" target="_blank">http://goo.gl/iLgGnL</a></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://drvinceknight.blogspot.com/2014/06/pointing-at-blog-post-about-sage-and.html">by Vincent Knight (noreply@blogger.com) at June 27, 2014 11:10 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>June 26, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://mathandhats.blogspot.com/search/label/sage" title="Math and Hats">Simon Spicer</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-4667528901979447244.post-3621459165867084973">
-<h4><a href="http://mathandhats.blogspot.com/2014/06/fun-with-elliptic-curve-l-function.html">Fun with elliptic curve L-function explicit formulae</a></h4>
-<div class="entry">
-<div class="content">
-Although I gave a brief exposition of the "baseline" explicit formula for the elliptic curve $L$-functions in a previous post, I wanted to spend some more time showing how one can use this formula to prove some useful statements about the elliptic curves and their $L$-functions. Some of these are already implemented in some way in the code I am building for my GSoC project, and I hope to include more as time goes on.<br /><br />First up, let's fix some notation. For the duration of this post we fix an elliptic curve $E$ over the rationals with conductor $N$. Let $L_E(s)$ be its associated $L$-function, and let $\Lambda_E(s)$ be the completed $L$-function thereof, i.e.<br />$\Lambda_E(s) = N^{s/2}(2\pi)^s\Gamma(s)L_E(s)$, where $\Gamma$ is the usual Gamma function on $\mathbb{C}$. If you want to know more about how $E$, $L_E$ and $\Lambda_E$ are defined and how we compute with them, some of my previous posts (<a href="http://mathandhats.blogspot.com/2014/06/day-1-of-my-google-summer-of-code.html">here</a> and <a href="http://mathandhats.blogspot.com/2014/06/how-to-compute-with-elliptic-curve-l.html">here</a>) go into their exposition in more detail.<br /><br />Let's recap briefly how we derived the baseline explicit formula for the $L$-function of $E$ (see <a href="http://mathandhats.blogspot.com/2014/06/the-explicit-formula-and-estimating-rank.html">this post</a>&nbsp;for more background thereon). Taking logarithmic derivatives of the above formula for $\Lambda_E(s)$ and shifting to the left by one gives us the following equality:<br />$$\frac{\Lambda_E^{\prime}}{\Lambda_E}(1+s) = \log\left(\frac{\sqrt{N}}{2\pi}\right) + \frac{\Gamma^{\prime}}{\Gamma}(1+s) + \frac{L_E^{\prime}}{L_E}(1+s).$$<br />Nothing magic here yet. However, $\frac{\Lambda_E^{\prime}}{\Lambda_E}$, $\frac{\Gamma^{\prime}}{\Gamma}$ and $\frac{L_E^{\prime}}{L_E}$ all have particularly nice series expansions about the central point. We have:<br /><br /><ul><li>$\frac{\Lambda_E^{\prime}}{\Lambda_E}(1+s) = \sum_{\gamma} \frac{s}{s^2+\gamma^2}$, where $\gamma$ ranges over the imaginary parts of the zeros of $L_E$ on the critical line; this converges for any $s$ not equal to a zero of $L_E$.</li><li>$\frac{\Gamma^{\prime}}{\Gamma}(1+s) = -\eta + \sum_{k=1}^{\infty} \frac{s}{k(k+s)}$, where $\eta$ is the Euler-Mascheroni constant $=0.5772156649\ldots$ (this constant is usually denoted by the symbol $\gamma$ - but we'll be using that symbol for something else soon enough!); this sum converges for all $s$ not equal to a negative integer.</li><li>$\frac{L_E^{\prime}}{L_E}(1+s) = \sum_{n=1}^{\infty} c_n n^{-s}$; this only converges absolutely in the right half plane $\Re(s)&gt;\frac{1}{2}$.</li></ul><br />Here<br />$$ c_n = \begin{cases}<br />\left[p^m+1-\#E(\mathbb{F}_{p^m})\right]\frac{\log p}{p^m}, &amp; n = p^m \mbox{ is a perfect prime power,} \\<br />0 &amp; \mbox{otherwise.}\end{cases} $$<br /><br />Assembling these equalities gives us the aforementioned explicit formula:<br />$$ \sum_{\gamma} \frac{s}{s^2+\gamma^2} = \left[-\eta+\log\left(\frac{\sqrt{N}}{2\pi}\right)\right] + \sum_{k=1}^{\infty} \frac{s}{k(k+s)} + \sum_n c_n n^{-s}$$<br />which holds for any $s$ where all three series converge. It is this formula which we will use repeatedly to plumb the nature of $E$.<br /><br />For ease of exposition we'll denote the term in the square brackets $C_0$. It pitches up a lot in the math below, and it's a pain to keep writing out!<br /><br />Some things to note:<br /><br /><ul><li>$C_0 = -\eta+\log\left(\frac{\sqrt{N}}{2\pi}\right)$ is easily computable (assuming you know $N$). Importantly, this constant depends only on the conductor of $E$; it contains no other arithmetic information about the curve, nor does it depend in any way on the complex input $s$.</li><li>The sum $\sum_{k=1}^{\infty} \frac{s}{k(k+s)}$ doesn't depend on the curve <i>at all</i>. As such, when it comes to computing values associated to this sum we can just hard-code the computation before we even get to working with the curve itself.</li><li>The coefficients $c_n$ can computed by counting the number of points on $E$ over finite fields up to some bound. This is quick to do for any particular prime power.</li></ul><br />Good news: the code I've written can compute all the above values quickly and efficiently:<br /><br /><div><div><span>sage:&nbsp;</span>E&nbsp;=&nbsp;EllipticCurve([-12,29])</div><div><span>sage:&nbsp;</span>Z&nbsp;=&nbsp;LFunctionZeroSum(E)</div><div><span>sage:&nbsp;</span>N = E.conductor()</div><div><span>sage:&nbsp;</span>print(Z.C0(),RDF(-euler_gamma+log(sqrt(N)/(2*pi))))</div><div>(2.0131665172,&nbsp;2.0131665172)</div><div><div><span>sage:&nbsp;</span>print(Z.digamma(3.5),RDF(psi(3.5)))</div><div>(1.10315664065,&nbsp;1.10315664065)</div><div><span>sage:&nbsp;</span>Z.digamma(3.5,include_constant_term=False)</div><div>1.68037230555</div><div><span>sage:&nbsp;</span>Z.cn(389)</div><div>-0.183966457901</div></div><div><div><span>sage:&nbsp;</span>Z.cn(next_prime(1e9))</div><div>0.000368045198812</div><div><span>sage:&nbsp;</span>timeit('Z.cn(next_prime(1e9))')</div><div>625&nbsp;loops,&nbsp;best&nbsp;of&nbsp;3:&nbsp;238&nbsp;µs&nbsp;per&nbsp;loop</div></div></div><br />So by computing values on the right we can compute the sum on the left - without having to know the exact locations of the zeros $\gamma$, which in general is hard to compute.<br /><br />Now that we have this formula in the bag, let's put it to work.<br /><br /><h3>NAÏVE RANK ESTIMATION</h3><br />If we multiply the sum over the zeros by $s$ and letting $\Delta = 1/s$, we get<br />$$\sum_{\gamma} \frac{\Delta^{-2}}{\Delta^{-2}+\gamma^2} = \sum_{\gamma} \frac{1}{1+(\Delta\gamma)^2},$$<br />Note that for large values of $\Delta$, $\frac{1}{1+(\Delta\gamma)^2}$ is small but strictly positive for all nonzero $\gamma$, and 1 for the central zeros, which have $\gamma=0$. Thus the value of the sum when $\Delta$ is large gives a close upper bound on the analytic rank $r$ of $E$. That is, we can bound the rank of $E$ from above by choosing a suitably large value of $\Delta$ and computing the quantity on the right in the inequality below:<br />$$r &lt; \sum_{\gamma} \frac{1}{1+(\Delta\gamma)^2} = \frac{1}{\Delta}\left[C_0 + \sum_{k=1}^{\infty} \frac{1}{k(1+\Delta k)} + \sum_n c_n n^{-1/\Delta}\right]. $$<br />Great! Right? Wrong. In practice this approach is not a very good one. The reason is the infinite sum over $n$ only converges absolutely for $\Delta&lt;2$, and for Delta values as small as this, the obtained bound won't be very good. A value of $\Delta=2$, for example, gives us the zero sum $\sum_{\gamma} \frac{1}{1+(2\gamma)^2}$. If a curve's $L$-function has a zero with imaginary part about 0.5, for example - as many $L$-functions do - then such a zero will contribute 0.5 to the sum. And because zeros come in symmetric pairs, the sum value will then be at least a whole unit larger than the actual analytic rank. In general, for $\Delta&lt;2$ the computed sum can be quite a bit bigger than the actual analytic rank of $E$.<br /><br />Moreover, even though the Generalized Riemann Hypothesis predicts that the sum $\sum_n c_n n^{-1/\Delta}$ does indeed converge for any positive value of $\Delta$, in practice the convergence is so slow that we end up needing to compute inordinate amounts of the $c_n$ in order to hope to get a good approximation of the sum. So no dice; this approach is just too inefficient to be practical.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container"><tbody><tr><td><a href="http://1.bp.blogspot.com/-Mz3qApXl4JY/U6yP78O1d2I/AAAAAAAAAEI/TGSY9_IAGUM/s1600/cn_cumsum.png"><img border="0" src="http://1.bp.blogspot.com/-Mz3qApXl4JY/U6yP78O1d2I/AAAAAAAAAEI/TGSY9_IAGUM/s1600/cn_cumsum.png" height="195" width="400" /></a></td></tr><tr><td class="tr-caption">A graphic depiction of the convergence problems we run into when trying to evaluate the sum over the $c_n$. For the elliptic curve $E: y^2 + y = x^3 - 79*x + 342$ the above plot shows the cumulative sum $\sum_{n&lt;T} c_n n^{-1/4}$ for $T$ up to 100000; this corresponds to $\Delta=4$. Note that even when we include this many terms in the sum, its value still varies considerably. It's unlikely the final computed value is correct to a single decimal digit yet.</td></tr></tbody></table><br /><h3>A BETTER APPROACH (THE ONE IMPLEMENTED IN MY CODE)</h3><br />We can get around this impasse by evaluating a modified sum over the zeros, one which requires us to only ever need to compute finitely many of the $c_n$. Here's how we do it. Start with the sum $\sum_{\gamma} \frac{s}{s^2+\gamma^2}$, and divide by $s^2$ to get $\frac{1}{s(s^2+\gamma^2)}$. Now hearken back to your college sophomore math classes and take the inverse Laplace transform of this sum. We get<br />$$ \mathcal{L}^{-1} \left[\sum_{\gamma} \frac{1}{s(s^2+\gamma^2)}\right](t) = \sum_{\gamma} \mathcal{L}^{-1} \left[\frac{1}{s(s^2+\gamma^2)}\right](t) = \frac{t^2}{2} \sum_{\gamma} \left(\frac{\sin(\frac{t}{2}\gamma)}{\frac{t}{2}\gamma}\right)^2 $$<br />Letting $\Delta = \frac{t}{2\pi}$ we get the sum<br />$$ \mathcal{L}^{-1} \left[\sum_{\gamma} \frac{s}{s^2+\gamma^2}\right](\Delta) = 2\pi^2\Delta^2 \sum_{\gamma} \text{sinc}^2(\Delta\gamma), $$<br />where $\text{sinc}(x) = \frac{\sin(\pi x)}{\pi x}$, and $\text{sinc}(0) = 1$.<br /><br />Note that as before, $\text{sinc}^2(\Delta\gamma)$ exaluates to 1 for the central zeros, and is small but positive for all nonzero $\gamma$ when $\Delta$ is large. So again, this sum will give an upper bound on the analytic rank of $E$, and that this bound converges to the true analytic rank as $\Delta \to \infty$.<br /><br />If we do the same - divide by $s^2$ and take inverse Laplace transforms - to the quantities on the right, we get the following:<br /><br /><ul><li>$\mathcal{L}^{-1} \left[\frac{C_0}{s^2} \right] = 2\pi\Delta C_0;$</li><li>$ \mathcal{L}^{-1} \left[\sum_{k=1}^{\infty} \frac{1}{sk(k+s)}\right] = \sum_{k=1}^{\infty} \frac{1}{k^2}\left(1-e^{-2\pi\Delta k}\right);$</li><li>$\mathcal{L}^{-1} \left[ \sum_{n=1}^{\infty} c_n \frac{n^{-s}}{s^2} \right] = \sum_{\log n&lt;2\pi\Delta} c_n\cdot(2\pi\Delta - \log n). $</li></ul>Note that the last sum is <i>finite</i>: for any given value of $\Delta$, we only need to compute the $c_n$ for $n$ up to $e^{2\pi\Delta}$. This is the great advantage here: we can compute the sum <i>exactly</i>&nbsp;without introducing any truncation error. The other two quantities are also readly computable to any precision.<br /><br />Combining the above values and dividing by $2\pi^2\Delta^2$, we arrive at the rank bounding formula which is implemented in my GSoC code, hideous as it is:<br />\begin{align*}<br />r &lt; \sum_{\gamma} \text{sinc}^2(\Delta\gamma) = &nbsp;\frac{1}{\pi\Delta} &amp;\left[ C_0 + \frac{1}{2\pi\Delta}\sum_{k=1}^{\infty} \frac{1}{k^2}\left(1-e^{-2\pi\Delta k}\right) \right. \\<br />&amp;\left. + \sum_{n&lt;e^{2\pi\Delta}} c_n\left(1 - \frac{\log n}{2\pi\Delta}\right) \right] \end{align*}<br />Of course, the number of terms needed on the right hand side is still exponential in $\Delta$, so this limits the tightness of the sum we can compute on the left hand side. In practice a personal computer can compute the sum with $\Delta=2$ in a few seconds, and a more powerful cluster can handle $\Delta=3$ in a similar time. Beyond Delta values of about 4, however, the number of $c_n$ is just too great to make the sum effectively computable.<br /><br /><h3>THE DENSITY OF ZEROS ON THE CRITICAL LINE</h3><br />Explicit formula-type sums can also be used to answer questions about the distribution of zeros of $L_E$ along the critical line. Let $T$ be a positive real number, and $M_E(T)$ be the counting function that gives the number of zeros in the critical strip with imaginary part at most $T$ in magnitude. By convention, when $T$ coincides with a zero of $L_E$, then we count that zero with weight. In other words, we can write<br />$$ M_E(T) = \sum_{|\gamma|&lt;T} 1 + \sum_{|\gamma|=T} 1/2.$$<br />There is a more mathematically elegant way to write this sum. Let $\theta(x)$ be the Heaviside function on $x$ given by<br />$$ \theta(x) = \begin{cases} 0, &amp; x&lt;0 \\<br />\frac{1}{2}, &amp; x=0 \\<br />1, &amp; x&gt;0. \end{cases}$$<br />Then we have that<br />$$M_E(T) = \sum_{\gamma} \theta(T^2-\gamma^2). $$<br />We have written $M_E(T)$ as a sum over the zeros of $L_E$, so we expect that it comprises the left-hand-side of some explicit formula-type sum. This is indeed this the case. Using Fourier transforms we can show that<br />$$M_E(T) = \frac{2}{\pi}\left[C_0 T + \sum_{k=1}^{\infty} \left(\frac{T}{k} - \arctan \frac{T}{k}\right) + \sum_{n=1}^{\infty} \frac{c_n}{\log n}\cdot \sin(T\log n) \right] $$<br /><br />With this formula in hand we can start asking questions on how the zeros of $L_E$ are distributed. For example, how does average zero density on the critical line scale as a function of $T$, the imaginary part of the area in the critical strip we're considering? How does zero density scale with the curve's conductor $N$?<br /><br />If one assumes the Generalized Riemann Hypothesis, we can show that $\sum_{n=1}^{\infty} \frac{c_n}{\log n}\cdot \sin(T\log n) = O(\log T)$. Moreover, this sum is in a sense equidistributed about zero, so we expect its contribution for a sufficiently large randomly chosen value of $T$ to be zero. The other two quantities are more straightforward. The $C_0 T$ term is clearly linear in $T$. Going back to the definition of $C_0$, we see that $C_0 T = \frac{1}{2}T\log N + $constant$\cdot T$. Finally, we can show that the sum over $k$ equals $T\log T + O(\log T)$. Combining this gives us the estimate<br />$$ M_E(T) = \frac{1}{\pi} T (\log N + 2\log T+a)&nbsp;+ O(\log T)&nbsp;$$<br />for some explicitly computable constant $a$ independent of $E$, $N$ or $T$ . That is, the number of zeros with imaginary part at most $T$ in magnitude is "very close" to $\frac{1}{\pi}T(\log N + 2\log T)$. Another way to put it is than the number of zeros in the interval $[T,T+1]$ is about $\frac{1}{2}\log N + \log T$.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container"><tbody><tr><td><a href="http://2.bp.blogspot.com/-Se_FhBWmhPU/U6yWCAPfKQI/AAAAAAAAAEY/wQqTw0cApWI/s1600/zero_counting_function.png"><img border="0" src="http://2.bp.blogspot.com/-Se_FhBWmhPU/U6yWCAPfKQI/AAAAAAAAAEY/wQqTw0cApWI/s1600/zero_counting_function.png" height="196" width="400" /></a></td></tr><tr><td class="tr-caption">The value of $M_E(T)$ for $T$ up to 30, for the elliptic curve $E:&nbsp;y^2 + y = x^3 - x$. The black line is just the 'smooth part' of $M_E(T)$, given by $\frac{2}{\pi}\left(C_0 T + \sum_{k=1}^{\infty} \left(\frac{T}{k} - \arctan \frac{T}{k}\right)\right)$. This gives us the 'expected number of zeros up to $T$', before we know any data about $E$ other than its conductor. The blue line is what we get when we add in $\sum_{n=1}^{\infty} \frac{c_n}{\log n}\cdot \sin(T\log n)$, which tells us the exact locations of the zeros: they will be found at the places where the blue curve jumps by 2.<br /><br />Note that the sum over $n$ converges *very* slowly. To produce the above plot, I included terms up to $n=1 000 000$, and there is still considerable rounding visible in the blue curve. If I could some how evaluate the $c_n$ sum in all its infinite glory, then resulting plot would be perfectly sharp, comprised of flat lines that jump vertically by 2 at the loci of the zeros.</td></tr></tbody></table><br /><br />These are two of the uses of explicit formula-type sums in the context of elliptic curve $L$-functions. If you want to read more about them, feel free to pick up my PhD thesis - when it eventually gets published!</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://mathandhats.blogspot.com/2014/06/fun-with-elliptic-curve-l-function.html">by Simon Spicer (noreply@blogger.com) at June 26, 2014 03:23 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -4069,7 +4213,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-June 14, 2015 08:30 AM<br>
+June 14, 2015 09:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
