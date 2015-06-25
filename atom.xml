@@ -5,8 +5,27 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-06-25T07:30:12+00:00</updated>
+	<updated>2015-06-25T08:30:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Edge Connectivity through Boost Graph Library</title>
+		<link href="http://borassisagemath.blogspot.com/2015/06/edge-connectivity-through-boost-graph_25.html"/>
+		<id>tag:blogger.com,1999:blog-8558001006126216932.post-7547483421803460595</id>
+		<updated>2015-06-25T00:56:40+00:00</updated>
+		<content type="html">After two weeks, we have managed to interface Boost and Sagemath! &lt;br /&gt;&lt;br /&gt;However, the interface was not as simple as it seemed. The main problem we found is the genericity of Boost: almost all Boost algorithms work with several graph implementations, which differ in the data structures used to store edges and vertices. For instance, the code that implements breadth-first search works if the adjacency list of a vertex v is a vector, a list, a set, etc. This result is accomplished by using templates [1]. Unfortunately, the only way to interface Sagemath with C++ code is Cython, which is not template-friendly, yet. In particular, Cython provides genericity through fused types [2], whose support is still experimental, and which do not offer full integration with templates [3-5].&lt;br /&gt;&lt;br /&gt;After a thorough discussion with David, Nathann, and Martin (thank you very much!), we have found a solution: for the input, we have defined a fused type &quot;BoostGenGraph&quot;, including all Boost graph implementations, and all functions that interface Boost and Sagemath use this fused type. This way, for each algorithm, we may choose the most suitable graph implementation. For the output, whose type might be dependent on the input type, we use C++ to transform it into a &quot;standard&quot; type (vector, or struct).&lt;br /&gt;&lt;br /&gt;We like this solution because it is very clean, and it allows us to exploit Boost genericity without any copy-paste. Still, there are some drawbacks:&lt;br /&gt;1) Cython fused types do not allow nested calls of generic functions;&lt;br /&gt;2) Boost graphs cannot be converted to Python objects: they must be defined and deleted in the same Cython function;&lt;br /&gt;3) No variable can have a generic type, apart from the arguments of generic functions.&lt;br /&gt;&lt;br /&gt;These drawbacks will be overcome as soon as Cython makes templates and generic types interact: this way, we will be able create a much stronger interface, by writing a graph backend based on Boost, so that the user might create, convert, and modify Boost graphs directly from Python. However, for the moment, we will implement all algorithms using the current interface, which already provides genericity, and which has no drawback if the only goal is to &quot;steal&quot; algorithms from Boost.&lt;br /&gt;&lt;br /&gt;As a test, we have computed the edge connectivity of a graph through Boost: the code is available in ticket 18564 [6]. Since the algorithm provided by Sagemath is not optimal (it is based on linear programming), the difference in the running time is impressive, as shown by the following tests:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(100,1000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 1.42 ms per loop&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 11.3 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomBarabasiAlbert(300,3)&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 9.96 s per loop&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 3.33 ms per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Basically, on a random Erdos-Renyi graph with 100 vertices and 1000 edges, the new algorithm is 8,000 times faster, and on a random Barabasi-Albert graph with 300 nodes and average degree 3, the new algorithm is 3,000 times faster! This way, we can compute the edge connectivity of much bigger graphs, like a random Erdos-Renyi graph with 5,000 vertices and 50,000 edges:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(5,000, 50,000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;1 loops, best of 3: 16.2 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;The results obtained with this first algorithm are very promising: in the next days, we plan to interface several other algorithms, in order to improve both the number of available routines and the speed of Sagemath graph library!&lt;br /&gt;&lt;br /&gt;[1] https://en.wikipedia.org/wiki/Template_%28C%2B%2B%29&lt;br /&gt;[2] http://docs.cython.org/src/userguide/fusedtypes.html&lt;br /&gt;[3] https://groups.google.com/forum/#!topic/cython-users/qQpMo3hGQqI&lt;br /&gt;[4] https://groups.google.com/forum/#!searchin/cython-users/fused/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[5] https://groups.google.com/forum/#!searchin/cython-users/fused$20template/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[6] http://trac.sagemath.org/ticket/18564</content>
+		<author>
+			<name>Michele Borassi</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://borassisagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
+			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
+			<updated>2015-06-25T08:30:13+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Python, natural language processing and predicting funny</title>
@@ -258,7 +277,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-25T07:30:12+00:00</updated>
+			<updated>2015-06-25T08:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -277,7 +296,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-25T07:30:12+00:00</updated>
+			<updated>2015-06-25T08:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -296,7 +315,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-06-25T07:30:12+00:00</updated>
+			<updated>2015-06-25T08:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -363,7 +382,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2358,7 +2377,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2378,7 +2397,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2398,7 +2417,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2418,7 +2437,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3033,7 +3052,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3053,7 +3072,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3170,7 +3189,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T07:30:05+00:00</updated>
+			<updated>2015-06-25T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3249,26 +3268,6 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<link rel="self" href="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014"/>
 			<id>http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014</id>
 			<updated>2015-05-25T16:03:27+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">The Birch and Swinnerton-Dyer Conjecture and computing analytic rank</title>
-		<link href="http://mathandhats.blogspot.com/2014/07/the-birch-and-swinnerton-dyer.html"/>
-		<id>tag:blogger.com,1999:blog-4667528901979447244.post-94589752012638265</id>
-		<updated>2014-07-08T17:04:33+00:00</updated>
-		<content type="html">&lt;div&gt;Let $E$ be an elliptic curve with $L$-function $L_E(s)$. Recall that Google Summer of Code project is to implement in Sage a method that allows us to compute $\sum_{\gamma} f(\Delta \gamma)$, where $\gamma$ ranges over the imaginary parts of the nontrivial zeros of $L_E$, $\Delta$ is a given positive parameter, and $f(x)$ is a specified symmetric continuous integrable function that is 1 at the origin. The value of this sum then bounds the analytic rank of $E$ - the number of zeros at the central point - from above, since we are summing $1$ with multipliticy $r_{an}$ in the sum, along with some other nonzero positive terms (that are hopefully small). See &lt;a href=&quot;http://mathandhats.blogspot.com/2014/06/fun-with-elliptic-curve-l-function.html&quot;&gt;this post&lt;/a&gt; for more info on the method.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;One immediate glaring issue here is that zeros that are close to the critical point will contribute values that are close to 1 in the sum, so the curve will then appear to have larger analytic rank than it actually does. An obvious question, then, is to ask: how close can the noncentral zeros get to the central point? Is there some way to show that they cannot be too close? If so, then we could figure out just how large of a $\Delta$ we would need to use in order to get a rank bound that is actually tight.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-3JIMGjpIGhA/U7xnevHtwyI/AAAAAAAAAFk/neB1jWIIuio/s1600/low-lying+zeros.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-3JIMGjpIGhA/U7xnevHtwyI/AAAAAAAAAFk/neB1jWIIuio/s1600/low-lying+zeros.png&quot; height=&quot;400&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot;&gt;The rank zero curve $y^2 = x^3 - &amp;nbsp;x^3 - 7460362000712 x - 7842981500851012704$ has an extremely low-lying zero at $\gamma =&amp;nbsp;0.0256$ (and thus another one at $-0.0256$; as a result the zero sum looks like it's converging towards a value of 2 instead of the actual analytic rank of zero. In order to actually get a sum value out that's less than one we would have to use a $\Delta$ value of about 20; this is far beyond what's feasible due to the exponential dependence of the zero sum method on $\Delta$.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The good news is that there is hope in this regard; the nature of low-lying zeros for elliptic curve $L$-functions is actually the topic of my PhD dissertation (which I'm still working on, so I can't provide a link thereto just yet!). In order to understand how close the lowest zero can get to the central point we will need to talk a bit about the BSD Conjecture.&lt;/div&gt;&lt;br /&gt;The&amp;nbsp;&lt;a href=&quot;http://en.wikipedia.org/wiki/BSD_conjecture&quot;&gt;Birch and Swinnerton-Dyer Conjecture&lt;/a&gt;&amp;nbsp;is one of the two &lt;a href=&quot;http://www.claymath.org/millennium-problems&quot;&gt;Clay Math Millenium Problems&lt;/a&gt; related to $L$-functions. The conjecture is comprised of two parts; the first part I&amp;nbsp;mentioned briefly in &lt;a href=&quot;http://mathandhats.blogspot.com/2014/06/day-1-of-my-google-summer-of-code.html&quot;&gt;this previous post&lt;/a&gt;.&amp;nbsp;However, we can use the second part to gain insight into how good our zero sum based estimate&amp;nbsp;for analytic rank&amp;nbsp;will be.&lt;br /&gt;&lt;br /&gt;Even though I've stated the first part of the BSD Conjecture before, for completeness I'll reproduce the full conjecture here. Let $E$ be an elliptic curve defined over the rational numbers, e.g. a curve represented by the equation $y^2 = x^3&amp;nbsp;+ Ax&amp;nbsp;+ B$ for some integers $A$ and $B$ such that $4A^3+27B^2 \ne 0$. Let $E(\mathbb{Q})$ be the group of rational points on the elliptic curve, and let $r_{al}$ be the &lt;i&gt;algebraic rank&lt;/i&gt; of $E(\mathbb{Q})$. Let $L_E(s)$ be the $L$-function attached to $E$, and let $L_E(1+s) = s^{r_{an}}\left[a_0 + a_1 s&amp;nbsp;+ \ldots\right]$ be the Taylor expansion of $L_E(s)$ about $s=1$ such that the leading coefficient $a_0$ is nonzero; $r_{an}$ is called the &lt;i&gt;analytic rank&lt;/i&gt; of $E$ (see &lt;a href=&quot;http://mathandhats.blogspot.com/2014/06/day-1-of-my-google-summer-of-code.html&quot;&gt;here&lt;/a&gt; for more details on all of the above objects). The first part of the BSD conjecture asserts that $r_{al}=r_{an}$; that is, the order of vanishing of the $L$-function about the central point is exactly equal to the number of free generators in the group of rational points on $E$.&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The second part of the conjecture asserts that we actually know the exact value of that leading coefficient $a_0$ in terms of other invariants of $E$. Specifically:&lt;/div&gt;&lt;div&gt;$$ a_0 = \frac{\Omega_E\cdot\text{Reg}_E\cdot\prod_p c_p\cdot\#\text{Ш}(E/\mathbb{Q})}{(\#E_{\text{Tor}}(\mathbb{Q}))^2}. $$&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Fear not if you have no idea what any of these quantities are. They are all things that we know how to compute - or at least estimate in size. I provide below brief descriptions of each of these quantities; however, feel free to skip this part. It suffices to know that we have a formula for computing the exact value of that leading coefficient $a_0$.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;&lt;ol&gt;&lt;li&gt;$\#E_{\text{Tor}}(\mathbb{Q})$ is the number of rational torsion points on $E$. Remember that the solutions $(x,y)$ to the elliptic curve equation $y^2 = x^3&amp;nbsp;+ Ax+B$, where $x$ and $y$ are both rational numbers, form a group. Recall also that that the group of rational points $E(\mathbb{Q})$ may be finite or infinite, depending on whether the group has algebraic rank zero, or greater than zero. However, it turns out that there are only ever finitely many &lt;i&gt;torsion&lt;/i&gt; points - those which can be added to themselves some finite number of times to get the group identity element. These points of finite order&amp;nbsp;form a subgroup, denoted $E_{\text{Tor}}(\mathbb{Q})$, and the quantity in question is just the size of this finite group (squared in the formula). In fact, it's &lt;a href=&quot;http://en.wikipedia.org/wiki/Mazur's_torsion_theorem&quot;&gt;been proven&lt;/a&gt; that the size of&amp;nbsp;$E_{\text{Tor}}(\mathbb{Q})$ is at most 16.&lt;/li&gt;&lt;li&gt;$\Omega_E$ is the real period of $E$. This is perhaps a bit more tricky to define, but it essentially is a number that measures the size of the set of real points of $E$. If you plot the graph of the equation representing $E: y^2 = x^3 + Ax&amp;nbsp;+ B$ on the cartesian plane, you get something that looks like one of the following:&lt;br /&gt;&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-VmiruEPt2Yc/U7xiwh4bbJI/AAAAAAAAAFc/B1K7EfcqVwQ/s1600/real_periods.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-VmiruEPt2Yc/U7xiwh4bbJI/AAAAAAAAAFc/B1K7EfcqVwQ/s1600/real_periods.png&quot; height=&quot;300&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot;&gt;The plots of the real solutions to four elliptic curves, and their associated real periods.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br /&gt;There is a way to assign an intrinsic &quot;size&quot; to these graphs, which we denote the &lt;i&gt;real period&lt;/i&gt;&amp;nbsp;$\Omega_E$. The technical definition is that&amp;nbsp;$\Omega_E$ is equal to the integral of the absolute value of the differential $\omega = \frac{dx}{2y}$ along the part of the real graph of $E$ that is connected to infinity (that or twice that depending on whether the cubic equation $x^3&amp;nbsp;+ Ax&amp;nbsp;+ B$ has one or three real roots respectively).&lt;/li&gt;&lt;li&gt;$\text{Reg}_E$ is the &lt;i&gt;regulator&lt;/i&gt; of $E$. This is a number that measures the &quot;density&quot; of rational points on $E$. Recall that $E(\mathbb{Q}) \approx T \times \mathbb{Z}^{r_{an}}$, i.e there free part of $E(\mathbb{Q})$ is isomorphic to $r_{an}$ copies of the integers. There is a canonical way to embed the free part of&amp;nbsp;$E(\mathbb{Q})$ in $\mathbb{R}^{r_{an}}$ as a &lt;a href=&quot;http://en.wikipedia.org/wiki/Lattice_(group)&quot;&gt;lattice&lt;/a&gt;; the regulator&amp;nbsp;$\text{Reg}_E$ is the volume of the fundamental domain of this lattice. The thing to take away here is that elliptic curves with small regulators have lots of rational points whose coefficients have small numerators and denominators, while curves with large regulators have few such points.&lt;/li&gt;&lt;li&gt;$\prod_p c_p$ is the &lt;i&gt;Tamagawa product&lt;/i&gt; for $E$. For each prime $p$, one can consider the points on $E$ over the &lt;a href=&quot;http://en.wikipedia.org/wiki/P-adic_numbers&quot;&gt;$p$-adic numbers&lt;/a&gt;&amp;nbsp;$\mathbb{Q}_p$. The &lt;i&gt;Tamagawa number&lt;/i&gt;&amp;nbsp;$c_p$ is the ratio of the size of the full group of $p$-adic points on $E$ to the subgroup of $p$-adic points that are connected to the identity. This is always a positive integer, and crucially, in all but a finite number of cases the ratio is 1. Thus we can consider the product of the $c_p$ as we range over all prime numbers, and this is precisely the definition of the Tamagawa product.&lt;/li&gt;&lt;li&gt;$\#\text{Ш}(E/\mathbb{Q})$ is the order of the &lt;i&gt;Tate-Shafarevich group&lt;/i&gt; of $E$ over the rational numbers. The&amp;nbsp;&lt;a href=&quot;http://en.wikipedia.org/wiki/Tate%E2%80%93Shafarevich_group&quot;&gt;Tate-Shafarevich&lt;/a&gt; group of $E$ is probably the most mysterious part of the BSD formula; it is defined as the subgroup of the Weil–Châtelet group $H^1(G_{\mathbb{Q}},E)$ that becomes trivial when passing to any completion of $\mathbb{Q}$. If you're like me then this definition will be completely opaque; however, we can think of&amp;nbsp;$\text{Ш}(E/\mathbb{Q})$ as measuring how much $E$ violates the &lt;a href=&quot;http://en.wikipedia.org/wiki/Local-global_principle&quot;&gt;local-global principle&lt;/a&gt;: that one should be able to find rational solutions to an algebraic equation by finding solutions modulo a prime number $p$ for each $p$, and then piecing this information together with the Chinese Remainder Theorem to get a rational solution. Curves with nontrivial $\text{Ш}$ have homogeneous spaces that have solutions modulo $p$ for all $p$, but no rational points. The main thing here is that&amp;nbsp;$\text{Ш}$ is conjectured to be finite, in which case&amp;nbsp;$\#\text{Ш}(E/\mathbb{Q})$ is just a positive integer (in fact, it can be shown for elliptic curves that if&amp;nbsp;$\text{Ш}$ is indeed finite, then its size is a perfect square).&lt;br /&gt;&lt;div&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;Why is the BSD Conjecture relevant to rank estimation? Because it helps us overcome the crucial obstacle to computing analytic rank exactly: without extra knowledge, it's impossible to decide using numerical techniques whether the $n$th derivative of the $L$-function at the central point is exactly zero, or just so small that it looks like it is zero to the precision that we're using. If we can use the BSD formula to show a priori that $a_0$ must be at least $M_E$ in magnitude, where $M_E$ is some number that depends only on some easily computable data attached to the elliptic curve $E$, then all we need to do is evaluate successive derivatives of $L_E$ at the central point to enough precision to decide if that derivative is less than $M_E$ or not; this is readily doable on a finite precision machine. Keep going until we hit a derivative which is then definitely greater than $M_E$ in magnitude, at which we can halt and declare that the analytic rank is precisely the order of that derivative.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;In the context of the explicit formula-based zero sum rank estimation method implemented in our GSoC project, the size of the leading coefficient also controls how far close the lowest noncentral zero can be from the central point. Specifically, we have the folling result: Let $\gamma_0$ be the lowest-lying noncentral zero for $L_E$ (i.e. the zero closest to the central point that is not actually at the central point); let $\Lambda_E(s) = N^{s/2}(2\pi)^s\Gamma(s)L_E(s)$ is the completed $L$-function for $E$, and let $\Lambda_E(1+s) = s^{r_{an}}\left[b_0 + b_1 s&amp;nbsp;+ b_2 s^2 \ldots\right]$ be the Taylor expansion of $\Lambda_E$ about the central point. Then:&lt;/div&gt;&lt;div&gt;$$ \gamma_0 &amp;gt; \sqrt{\frac{b_0}{b_2}}. $$&lt;/div&gt;&lt;div&gt;Thankfully, $b_0$ is easily relatable back to the constant $a_0$, and we have known computable upper bounds on the magnitude of $b_2$, so knowing how small $a_0$ is tells us how close the lowest zero can be to the central point. Thus bounding $a_0$ from below in terms of some function of $E$ tells us how large of a $\Delta$ value we need to use in our zero sum, and thus how long the computation will take as a function of $E$.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;If this perhaps sounds a bit handwavy at this point it's because this is all still a work in progress, to be published as part of my dissertation. Nevertheless, the bottom line is that bounding the leading $L$-series coefficient from below gives us a way to directly analyze the computational complexity of analytic rank methods.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;I hope to go into more detail in a future post about what we can do to bound from below the leading coefficient of $L_E$ at the central point, and why this is a far from straightforward endeavour.&lt;/div&gt;&lt;/div&gt;</content>
-		<author>
-			<name>Simon Spicer</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com</uri>
-		</author>
-		<source>
-			<title type="html">Math and Hats</title>
-			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
-			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
-			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-06-17T11:30:11+00:00</updated>
 		</source>
 	</entry>
 
