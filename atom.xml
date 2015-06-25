@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-06-25T09:30:14+00:00</updated>
+	<updated>2015-06-25T10:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -17,7 +17,7 @@
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -49,9 +49,9 @@ payoffs. Here is an example:&lt;/p&gt;
 
 
 
-&lt;p&gt;We see that if the first player plays their first row strategy and the second
-player their second column strategy then the first player gets a utility of 5
-and the second player a utility of 6.&lt;/p&gt;
+&lt;p&gt;We see that if the first player plays their third row strategy and the second
+player their second column strategy then the first player gets a utility of 6
+and the second player a utility of 1.&lt;/p&gt;
 
 &lt;p&gt;This can also be written as two separate matrices.
 A matrix \(A\) for Player 1 and \(B\) for Player 2.&lt;/p&gt;
@@ -261,7 +261,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -496,7 +496,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -509,7 +509,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -528,7 +528,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -547,7 +547,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -620,7 +620,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -756,7 +756,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -924,7 +924,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1030,7 +1030,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1083,7 +1083,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1146,7 +1146,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1297,7 +1297,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1366,7 +1366,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1429,7 +1429,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1533,7 +1533,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1917,7 +1917,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-06-25T09:30:07+00:00</updated>
+			<updated>2015-06-25T10:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2615,7 +2615,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -2635,7 +2635,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -2655,7 +2655,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -2675,7 +2675,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -3290,7 +3290,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -3310,7 +3310,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -3427,7 +3427,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-06-25T09:30:06+00:00</updated>
+			<updated>2015-06-25T10:30:04+00:00</updated>
 		</source>
 	</entry>
 
