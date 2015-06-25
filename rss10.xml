@@ -14,6 +14,7 @@
 	<items>
 		<rdf:Seq>
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-7547483421803460595" />
+			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-517109036063053537" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-5727768572864220659" />
@@ -71,6 +72,231 @@
 	<content:encoded>After two weeks, we have managed to interface Boost and Sagemath! &lt;br /&gt;&lt;br /&gt;However, the interface was not as simple as it seemed. The main problem we found is the genericity of Boost: almost all Boost algorithms work with several graph implementations, which differ in the data structures used to store edges and vertices. For instance, the code that implements breadth-first search works if the adjacency list of a vertex v is a vector, a list, a set, etc. This result is accomplished by using templates [1]. Unfortunately, the only way to interface Sagemath with C++ code is Cython, which is not template-friendly, yet. In particular, Cython provides genericity through fused types [2], whose support is still experimental, and which do not offer full integration with templates [3-5].&lt;br /&gt;&lt;br /&gt;After a thorough discussion with David, Nathann, and Martin (thank you very much!), we have found a solution: for the input, we have defined a fused type &quot;BoostGenGraph&quot;, including all Boost graph implementations, and all functions that interface Boost and Sagemath use this fused type. This way, for each algorithm, we may choose the most suitable graph implementation. For the output, whose type might be dependent on the input type, we use C++ to transform it into a &quot;standard&quot; type (vector, or struct).&lt;br /&gt;&lt;br /&gt;We like this solution because it is very clean, and it allows us to exploit Boost genericity without any copy-paste. Still, there are some drawbacks:&lt;br /&gt;1) Cython fused types do not allow nested calls of generic functions;&lt;br /&gt;2) Boost graphs cannot be converted to Python objects: they must be defined and deleted in the same Cython function;&lt;br /&gt;3) No variable can have a generic type, apart from the arguments of generic functions.&lt;br /&gt;&lt;br /&gt;These drawbacks will be overcome as soon as Cython makes templates and generic types interact: this way, we will be able create a much stronger interface, by writing a graph backend based on Boost, so that the user might create, convert, and modify Boost graphs directly from Python. However, for the moment, we will implement all algorithms using the current interface, which already provides genericity, and which has no drawback if the only goal is to &quot;steal&quot; algorithms from Boost.&lt;br /&gt;&lt;br /&gt;As a test, we have computed the edge connectivity of a graph through Boost: the code is available in ticket 18564 [6]. Since the algorithm provided by Sagemath is not optimal (it is based on linear programming), the difference in the running time is impressive, as shown by the following tests:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(100,1000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 1.42 ms per loop&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 11.3 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomBarabasiAlbert(300,3)&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 9.96 s per loop&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 3.33 ms per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Basically, on a random Erdos-Renyi graph with 100 vertices and 1000 edges, the new algorithm is 8,000 times faster, and on a random Barabasi-Albert graph with 300 nodes and average degree 3, the new algorithm is 3,000 times faster! This way, we can compute the edge connectivity of much bigger graphs, like a random Erdos-Renyi graph with 5,000 vertices and 50,000 edges:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(5,000, 50,000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;1 loops, best of 3: 16.2 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;The results obtained with this first algorithm are very promising: in the next days, we plan to interface several other algorithms, in order to improve both the number of available routines and the speed of Sagemath graph library!&lt;br /&gt;&lt;br /&gt;[1] https://en.wikipedia.org/wiki/Template_%28C%2B%2B%29&lt;br /&gt;[2] http://docs.cython.org/src/userguide/fusedtypes.html&lt;br /&gt;[3] https://groups.google.com/forum/#!topic/cython-users/qQpMo3hGQqI&lt;br /&gt;[4] https://groups.google.com/forum/#!searchin/cython-users/fused/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[5] https://groups.google.com/forum/#!searchin/cython-users/fused$20template/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[6] http://trac.sagemath.org/ticket/18564</content:encoded>
 	<dc:date>2015-06-25T00:56:40+00:00</dc:date>
 	<dc:creator>Michele Borassi</dc:creator>
+</item>
+<item rdf:about="http://drvinceknight.github.io/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/">
+	<title>Vince Knight: On testing degeneracy of bi-matrix games</title>
+	<link>http://drvinceknight.github.io/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/</link>
+	<content:encoded>&lt;p&gt;We (&lt;a href=&quot;https://plus.google.com/+JamesCampbell95/posts&quot;&gt;James Campbell&lt;/a&gt; and Vince Knight are writing this together) have been working
+on implementing code in &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;Sage&lt;/a&gt; to test if a game is
+degenerate or not. In this post we’ll prove a simple result that is used in the
+algorithm that we are/have implemented.&lt;/p&gt;
+
+&lt;h2 id=&quot;bi-matrix-games&quot;&gt;Bi-Matrix games&lt;/h2&gt;
+
+&lt;p&gt;For a general overview of these sorts of things take a look at &lt;a href=&quot;http://vknight.org/unpeudemath/code/2014/12/10/sneak-preview-of-game-theory-in-sage-3-of-3/&quot;&gt;this post from a
+while ago on the subject of bi-matrix games in
+Sage&lt;/a&gt;.
+A bi-matrix is a matrix of tuples corresponding to payoffs for a 2 player Normal Form Game.
+Rows represent strategies for the first player and columns represent strategies
+for the second player, and each tuple of the bi-matrix corresponds to a tuple of
+payoffs. Here is an example:&lt;/p&gt;
+
+
+
+&lt;p&gt;We see that if the first player plays their first row strategy and the second
+player their second column strategy then the first player gets a utility of 5
+and the second player a utility of 6.&lt;/p&gt;
+
+&lt;p&gt;This can also be written as two separate matrices.
+A matrix \(A\) for Player 1 and \(B\) for Player 2.&lt;/p&gt;
+
+
+
+&lt;p&gt;Here is how this can be constructed in Sage using the &lt;code&gt;NormalFormGame&lt;/code&gt; class:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NormalFormGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Normal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Game&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utilities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Currently, within Sage, we can obtain the Nash equilibria of games:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obtain_nash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that this game has 3 Nash equilibria. For each, we see that the
+supports (the number of non zero entries) of both players’ strategies are the
+same size. This is, in fact, a theoretical certainty when games are &lt;strong&gt;non
+degenerate&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we modify the game slightly:&lt;/p&gt;
+
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NormalFormGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obtain_nash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that the second equilibrium has supports of different sizes. In fact,
+ if the first player did play \((1,0,0)\) (in other words just play the
+first row) the second player could play &lt;strong&gt;any mixture&lt;/strong&gt; of strategies as a best
+response and not particularly \((2/3,1/3)\). This is because the game in
+consideration is now &lt;strong&gt;degenerate&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;(Note that both of the games above are taken from
+&lt;a href=&quot;https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&amp;ei=bymLVdTxBaS27gbYhILABg&amp;usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&amp;sig2=w6RVpLM9DYILh2gbzOPRqw&amp;bvm=bv.96339352,bs.1,d.bGg&quot;&gt;Nisan et al. 2007 [pdf]&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-degenerate-game&quot;&gt;What is a degenerate game&lt;/h2&gt;
+
+&lt;p&gt;A bimatrix game is called nondegenerate if the number of pure best responses to
+a mixed strategy never exceeds the size of its support.
+In a degenerate game, this definition is violated, for example if there is a
+pure strategy that has two pure best responses (as in the example above), but
+it is also possible to have a mixed strategy with support size \(k\) that
+has \(k+1\) strategies that are a best response.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of this:&lt;/p&gt;
+
+
+
+&lt;p&gt;If we consider the mixed strategy for player 2: \(y=(1/2,1/2)\), then the
+utility to player 1 is given by:&lt;/p&gt;
+
+
+
+&lt;p&gt;We see that there are 3 best responses to \(y\) and as \(y\) has support
+size 2 this implies that the game above is degenerate.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-does-the-literature-say-about-degenerate-games&quot;&gt;What does the literature say about degenerate games&lt;/h2&gt;
+
+&lt;p&gt;The original definition of degenerate games was given in &lt;a href=&quot;http://www.math.mcgill.ca/vetta/CS764.dir/lemke.pdf&quot;&gt;Lemke, Howson
+1964 [pdf]&lt;/a&gt;
+and their definition was dependent on the labeling polytope that they used for
+their famous algorithm for the computation of equilibria (which is currently
+being implemented in Sage!).
+Further to this &lt;a href=&quot;https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.cis.upenn.edu%2F~mkearns%2Fteaching%2Fcgt%2Fstengel.ps&amp;ei=HCmLVZ-vJOWM7Aa8_7kQ&amp;usg=AFQjCNGb_r3PDIvTBl4N3UXi55kDR_01OQ&amp;sig2=9yUZEl49EmM5nAUD95oOjg&amp;bvm=bv.96339352,bs.1,d.bGg&quot;&gt;Stengel
+1999 [ps]&lt;/a&gt; offers a nice overview of a variety of
+equivalent definitions.&lt;/p&gt;
+
+&lt;p&gt;Sadly, all of these definitions require finding a particular mixed strategy
+profile \((x, y)\) for which a particular condition holds.
+To be able to implement a test for degeneracy based on any of these definitions
+would require a continuous search over possible mixed strategy pairs.&lt;/p&gt;
+
+&lt;p&gt;In the previous example (where we take \(y=(1/2,1/2)\) we could have
+identified this \(y\) by looking at the utilities for each pure strategy for
+player 1 against \(y=(y_1, 1-y_1)\):&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;p&gt;(\(r_i\) denotes row strategy \(i\) for player 1.)
+A plot of this is shown:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/plot_for_degenerate_game_post.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can (in this instance) quickly search through values of \(y_1\) and
+identify the point that has &lt;strong&gt;the most&lt;/strong&gt; best responses which gives the best
+chance of passing the degeneracy condition (\(y_1=1/2\)).
+This is not really practical from a generic point of view which leads to
+this blog post: we have identified what the particular \(x, y\) is that
+is sufficient to test.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-sufficient-mixed-strategy-to-test-for-degeneracy&quot;&gt;A sufficient mixed strategy to test for degeneracy&lt;/h2&gt;
+
+&lt;p&gt;The definition of degeneracy can be written as:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Def.&lt;/strong&gt; A Normal Form Game is degenerate iff:&lt;/p&gt;
+
+&lt;p&gt;There exists \(x\in \Delta X\) such that \( |S(x)| &amp;lt; |\sigma_2| \)
+where \(\sigma_2\) is the support such that \( (xB)_j = \max(xB) \), for all
+\(j \) in \( \sigma_2\).&lt;/p&gt;
+
+&lt;p&gt;OR&lt;/p&gt;
+
+&lt;p&gt;There exists \(y\in \Delta Y\) such that \( |S(x)| &amp;lt; |\sigma_1| \)
+where \(\sigma_1\) is the support such that \( (Ay)_i = \max(Ay) \), for all
+\(i \) in \( \sigma_1\).&lt;/p&gt;
+
+&lt;p&gt;(\(X\) and \(Y\) are the pure strategies for player 1 and 2 and \(\Delta X,
+\Delta Y\) the corresponding mixed strategies spaces.&lt;/p&gt;
+
+&lt;p&gt;The result we are implementing in Sage aims to remove the need to search
+particular mixed strategies \(x, y\) (a continuous search) and replace
+that by a search over supports (a discrete search).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; A Normal Form Game is degenerate iff:&lt;/p&gt;
+
+&lt;p&gt;There exists \( \sigma_1 \subseteq X \) and \( \sigma_2 \subseteq Y \)
+such that \( |\sigma_1| &amp;lt; |\sigma_2| \) and \( S(x^*) = \sigma_1 \)
+where \( x^* \) is a solution of \( (xB)_j = \max(xB) \), for
+all \(j \) in \( \sigma_2 \) (note that a valid \(x^*\) is understood to
+be a mixed strategy vector).&lt;/p&gt;
+
+&lt;p&gt;OR&lt;/p&gt;
+
+&lt;p&gt;There exists \( \sigma_1 \subseteq X \) and \( \sigma_2 \subseteq Y \)
+such that \( |\sigma_1| &amp;gt; |\sigma_2| \) and \( S(y^*) = \sigma_2 \)
+where \( y^* \) is a solution of \( (Ay)_i = \max(Ay) \), for
+all \(i \) in \( \sigma_1 \).&lt;/p&gt;
+
+&lt;p&gt;Using the definition given above the proof is relatively straightforward but we
+will include it below (mainly to try and convince ourselves that we haven’t made a
+mistake).&lt;/p&gt;
+
+&lt;p&gt;We will only consider the first part of each condition (the ones for the first
+player). The result follows in the same way for the second player.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof \(\Leftarrow\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume a game defined by \(A, B\) is degenerate, by the above &lt;strong&gt;definition&lt;/strong&gt;
+without loss of generality this implies that there exists an
+\(x\in \Delta X\) such that \( |S(x)| &amp;lt; |\sigma_2| \)
+where \(\sigma_2\) is the support such that \( (xB)_j = \max(xB) \), for all
+\(j \) in \( \sigma_2\).&lt;/p&gt;
+
+&lt;p&gt;If we denote \(S(x)\) by \(\sigma_1\)
+then the definition implies that \(|\sigma_1| &amp;lt; |\sigma_2| \)
+and further more that \( (xB)_j = \max(xB) \), for all \(j \) in \( \sigma_2 \) as required.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof \(\Rightarrow\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If we now assume that we have \(\sigma_1, \sigma_2, x^*\) as per the first part
+of the theorem then we have \(|\sigma_1|&amp;lt;|\sigma_2|\) and taking \(x=x^*\)
+implies that \(|S(x)|&amp;lt;|\sigma_2|\). Furthermore as \(x^*\) is a solution of
+\( (xB)_j = \max(xB) \) the result follows (by the &lt;strong&gt;definition&lt;/strong&gt; given above).&lt;/p&gt;
+
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;This result implies that we simply need to consider all potential pairs of
+supports. Depending on the relative size of the supports we can use one of the
+two conditions of the result. If we ordered the supports by size the situation
+for the two player game looks somewhat like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/diagram_for_search_space_for_post_on_degenerate_game.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that for an \(m\times n\) game there are \((2^m-1)\) potential supports
+for player 1 (the size of the powerset of strategy set without the empty set)
+and \((2^n-1)\) potential supports of for player 2.
+Thus the rectangle drawn above has dimension \((2^m-1)\times(2^n-1)\).
+Needless to say that our implementation will not be efficient (testing
+degeneracy is after all an NP complete problem in linear programming (see &lt;a href=&quot;http://www-personal.umich.edu/~murty/np-comp_prob_lin_prog.pdf&quot;&gt;Chandrasekaran 1982 - [pdf]&lt;/a&gt;) but at least we
+have identified exactly which mixed strategy we need to test for each support
+pair.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chandrasekaran, R., Santosh N. Kabadi, and Katta G. Murthy. “Some NP-complete
+problems in linear programming.” Operations Research Letters 1.3 (1982):
+101-104.
+&lt;a href=&quot;http://www-personal.umich.edu/~murty/np-comp_prob_lin_prog.pdf&quot;&gt;[pdf]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lemke, Carlton E., and Joseph T. Howson, Jr. “Equilibrium points of bimatrix
+games.” Journal of the Society for Industrial &amp;amp; Applied Mathematics 12.2
+(1964): 413-423. &lt;a href=&quot;http://www.math.mcgill.ca/vetta/CS764.dir/lemke.pdf&quot;&gt;[pdf]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;N Nisan, T Roughgarden, E Tardos, VV Vazirani Vol. 1. Cambridge:
+Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&amp;ei=bymLVdTxBaS27gbYhILABg&amp;usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&amp;sig2=w6RVpLM9DYILh2gbzOPRqw&amp;bvm=bv.96339352,bs.1,d.bGg&quot;&gt;[pdf]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;von Stengel, B. “Computing equilibria for two person games.” Technical report.
+&lt;a href=&quot;https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.cis.upenn.edu%2F~mkearns%2Fteaching%2Fcgt%2Fstengel.ps&amp;ei=HCmLVZ-vJOWM7Aa8_7kQ&amp;usg=AFQjCNGb_r3PDIvTBl4N3UXi55kDR_01OQ&amp;sig2=9yUZEl49EmM5nAUD95oOjg&amp;bvm=bv.96339352,bs.1,d.bGg&quot;&gt;[ps]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded>
+	<dc:date>2015-06-25T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="http://drvinceknight.github.io/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/">
 	<title>Vince Knight: Python, natural language processing and predicting funny</title>
