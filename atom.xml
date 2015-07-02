@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-07-02T02:30:13+00:00</updated>
+	<updated>2015-07-02T03:30:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -17,7 +17,7 @@
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -509,7 +509,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -528,7 +528,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -547,7 +547,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -3341,7 +3341,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
@@ -3380,7 +3380,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
@@ -3400,7 +3400,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
@@ -3440,7 +3440,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
@@ -3460,7 +3460,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
@@ -3480,7 +3480,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
+			<uri>http://mathandhats.blogspot.com</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
