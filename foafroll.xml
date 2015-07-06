@@ -431,7 +431,7 @@
 		<foaf:Agent>
 			<foaf:name>Sébastien Labbé</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/">
+				<foaf:Document rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue">
 					<dc:title>Sébastien Labbé</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/categorie/sage/feed/atom/index.xml" />
@@ -483,10 +483,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
-					<dc:title>Un peu de math</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -496,10 +496,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
-					<dc:title>Un peu de math...</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
