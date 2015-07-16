@@ -83,7 +83,7 @@
 &lt;/ul&gt;
 &lt;h3&gt;Examples&lt;/h3&gt;
 &lt;p&gt;An asymptotic ring (over a monomial growth group with coefficients and exponents from the rational field) can be created with&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: R.&amp;lt;x&amp;gt; = AsymptoticRing('monomial', QQ); R
-Asymptotic Ring over Monomial Growth Group in x over Rational Field with coefficients from Rational Field&lt;/pre&gt;&lt;p&gt;Note that we marked the code as &lt;em&gt;experimental&lt;/em&gt;, meaning that you will see some warnings regarding the stability of the code. Now, as we have an asymptotic ring, we can do some calculations. For example, take $ (\sqrt{x} + O(1))^{15}$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: (2*x^(1/2) + O(x^0))^15
+Asymptotic Ring over Monomial Growth Group in x over Rational Field with coefficients from Rational Field&lt;/pre&gt;&lt;p&gt;Note that we marked the code as &lt;em&gt;experimental&lt;/em&gt;, meaning that you will see some warnings regarding the stability of the code. Now, as we have an asymptotic ring, we can do some calculations. For example, take $ (2\sqrt{x} + O(1))^{15}$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: (2*x^(1/2) + O(x^0))^15
 O(x^7) + 32768*x^(15/2)&lt;/pre&gt;&lt;p&gt;We can also have a look at the underlying structure:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: expr = (x^(3/7) + 2*x^(1/5)) * (x + O(x^0)); expr
 O(x^(3/7)) + 2*x^(6/5) + 1*x^(10/7)
 sage: expr.poset

@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-07-16T16:30:13+00:00</updated>
+	<updated>2015-07-16T17:30:15+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry xml:lang="en-US">
@@ -30,7 +30,7 @@
 &lt;/ul&gt;
 &lt;h3&gt;Examples&lt;/h3&gt;
 &lt;p&gt;An asymptotic ring (over a monomial growth group with coefficients and exponents from the rational field) can be created with&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: R.&amp;lt;x&amp;gt; = AsymptoticRing('monomial', QQ); R
-Asymptotic Ring over Monomial Growth Group in x over Rational Field with coefficients from Rational Field&lt;/pre&gt;&lt;p&gt;Note that we marked the code as &lt;em&gt;experimental&lt;/em&gt;, meaning that you will see some warnings regarding the stability of the code. Now, as we have an asymptotic ring, we can do some calculations. For example, take $ (\sqrt{x} + O(1))^{15}$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: (2*x^(1/2) + O(x^0))^15
+Asymptotic Ring over Monomial Growth Group in x over Rational Field with coefficients from Rational Field&lt;/pre&gt;&lt;p&gt;Note that we marked the code as &lt;em&gt;experimental&lt;/em&gt;, meaning that you will see some warnings regarding the stability of the code. Now, as we have an asymptotic ring, we can do some calculations. For example, take $ (2\sqrt{x} + O(1))^{15}$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: (2*x^(1/2) + O(x^0))^15
 O(x^7) + 32768*x^(15/2)&lt;/pre&gt;&lt;p&gt;We can also have a look at the underlying structure:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: expr = (x^(3/7) + 2*x^(1/5)) * (x + O(x^0)); expr
 O(x^(3/7)) + 2*x^(6/5) + 1*x^(10/7)
 sage: expr.poset
@@ -67,7 +67,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -86,7 +86,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -105,7 +105,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -597,7 +597,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -616,7 +616,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -635,7 +635,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -682,7 +682,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -702,7 +702,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -729,7 +729,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-07-16T16:30:13+00:00</updated>
+			<updated>2015-07-16T17:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -2697,7 +2697,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2717,7 +2717,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2737,7 +2737,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -2757,7 +2757,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3372,7 +3372,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3392,7 +3392,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-16T16:30:05+00:00</updated>
+			<updated>2015-07-16T17:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3423,14 +3423,14 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com</uri>
+			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-07-16T11:30:12+00:00</updated>
+			<updated>2015-07-16T17:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -3462,14 +3462,14 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com</uri>
+			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-07-16T11:30:12+00:00</updated>
+			<updated>2015-07-16T17:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -3482,14 +3482,14 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 		<author>
 			<name>Simon Spicer</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com</uri>
+			<uri>http://mathandhats.blogspot.com/search/label/sage</uri>
 		</author>
 		<source>
 			<title type="html">Math and Hats</title>
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-07-16T11:30:12+00:00</updated>
+			<updated>2015-07-16T17:30:13+00:00</updated>
 		</source>
 	</entry>
 
