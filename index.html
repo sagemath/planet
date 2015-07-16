@@ -54,6 +54,87 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>July 16, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+
+
+<div class="entrygroup" id="http://benjamin-hackl.at/?p=358" lang="en-US">
+<h4><a href="http://benjamin-hackl.at/2015/07/16/computing-with-asymptotic-expressions/">Computing with Asymptotic Expressions</a></h4>
+<div class="entry">
+<div class="content">
+<p>It has been quite some time since my last update on the progress of <a href="http://benjamin-hackl.at/2015/05/29/asymptotic-expressions-motivation/">my Google Summer of Code project</a>, which has two reasons. On the one hand, I have been busy because of the end of the semester, as well as because of the finalization of <a href="http://benjamin-hackl.at/2015/07/03/master-thesis-submitted/">my Master&#8217;s thesis</a> &#8212; and on the other hand, it is not very interesting to write a post on discussing and implementing rather technical details. Nevertheless, <a href="http://danielkrenn.at">Daniel Krenn</a> and myself have been quite busy in order to bring asymptotic expressions to SageMath. Fortunately, these efforts are starting to become quite fruitful.</p>
+<p>In this post I want to discuss our current implementation roadmap (i.e. not only for the remaining Summer of Code, but also for the time afterwards), and give some examples for what we are currently able to do.</p>
+<h3>Strutcture and Roadmap</h3>
+<p>An overview of the entire roadmap can be found at <a href="http://trac.sagemath.org/17601">here (trac #17601)</a>. Recall that the <a href="http://benjamin-hackl.at/2015/05/29/asymptotic-expressions-motivation/">overall goal</a> of this project is to bring asymptotic expressions like $2^n + n^2 \log n + O(n)$ to Sage. Our implementation (which aims to be as general and expandable as possible) tackles this problem with a <em>three-layer approach</em>:</p>
+<ul>
+<li><em><a href="http://trac.sagemath.org/17600">GrowthGroups and GrowthElements (trac #17600)</a>.</em> These elements and parents manage the growth (and just the growth!) of a summand in an asymptotic expression like above. The simplest cases are <em>monomial</em> and <em>logarithmic</em> growth groups. For example, their elements are given by $n^r$ and $\log(n)^r$ where the exponent $r$ is from some ordered ring like $\mathbb{Z}$ or $\mathbb{Q}$. Both cases (monomial and logarithmic growth groups) can be handled in the current implementation &#8212; however, growth elements like $n^2 \log n$ are intended to live in the cartesian product of a monomial and a logarithmic growth group (in the same variable). Parts of this infrastructure are already prepared (see <a href="http://trac.sagemath.org/18587">trac #18587</a>).</li>
+<li><em><a href="http://trac.sagemath.org/17715">AsymptoticTerms and TermMonoids (trac #17715)</a>. </em>While GrowthElements only represent the growth, AsymptoticTerms have more information: basically, they represent a summand in an asymptotic expression. There are different classes for each type of asymptotic term (e.g. <em>ExactTerm </em>and <em>OTerm &#8212; </em>with more to come). Additionally to a growth element, some types of asymptotic terms (like exact terms) also possess a coefficient.</li>
+<li><em><a href="http://trac.sagemath.org/17716">AsymptoticExpression and AsymptoticRing (trac #17716)</a>. </em>This is what we are currently working on, and we do have a running prototype! <img src="http://benjamin-hackl.at/asdf-wp/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" /> The version that can be found on trac is only missing some doctests and a bit of documentation. Asymptotic expressions are the central objects within this project, and essentially they are sums of several asymptotic terms. In the background, we use a special data structure (&#8220;<em>mutable posets</em>&#8220;, <a href="http://trac.sagemath.org/17693">trac #17693</a>) in order to model the (partial) order induced by the various growth elements belonging to an asymptotic expression. This allows to perform critical operations like <em>absorption</em> (when an \(O\)-term absorbs &#8220;weaker&#8221; terms) efficiently and in a simple way.</li>
+</ul>
+<p>The resulting <em>minimal prototype</em> can, in some sense, be compared to Sage&#8217;s <em>PowerSeriesRing</em>: however, we also allow non-integer coefficients, and extending this prototype to work with multivariate expressions should not be too hard now, as the necessary infrastructure is there.</p>
+<p>Following the finalization of the <em>minimal prototype</em>, there are several improvements to be made. Here are some examples:</p>
+<ul>
+<li>Besides addition and multiplication, we also want to <em>divide</em> asymptotic expressions, and higher-order operations like exponentiation and taking the logarithm would be interesting as well.</li>
+<li>Also, conversion from, for example, the symbolic ring is important when it comes to usability of our tools. We will implement and enhance this conversion gradually.</li>
+</ul>
+<h3>Examples</h3>
+<p>An asymptotic ring (over a monomial growth group with coefficients and exponents from the rational field) can be created with</p><pre class="crayon-plain-tag">sage: R.&lt;x&gt; = AsymptoticRing('monomial', QQ); R
+Asymptotic Ring over Monomial Growth Group in x over Rational Field with coefficients from Rational Field</pre><p>Note that we marked the code as <em>experimental</em>, meaning that you will see some warnings regarding the stability of the code. Now, as we have an asymptotic ring, we can do some calculations. For example, take $ (\sqrt{x} + O(1))^{15}$:</p><pre class="crayon-plain-tag">sage: (2*x^(1/2) + O(x^0))^15
+O(x^7) + 32768*x^(15/2)</pre><p>We can also have a look at the underlying structure:</p><pre class="crayon-plain-tag">sage: expr = (x^(3/7) + 2*x^(1/5)) * (x + O(x^0)); expr
+O(x^(3/7)) + 2*x^(6/5) + 1*x^(10/7)
+sage: expr.poset
+poset(O(x^(3/7)), 2*x^(6/5), 1*x^(10/7))
+sage: print expr.poset.full_repr()
+poset(O(x^(3/7)), 2*x^(6/5), 1*x^(10/7))
++-- null
+|   +-- no predecessors
+|   +-- successors:   O(x^(3/7))
++-- O(x^(3/7))
+|   +-- predecessors:   null
+|   +-- successors:   2*x^(6/5)
++-- 2*x^(6/5)
+|   +-- predecessors:   O(x^(3/7))
+|   +-- successors:   1*x^(10/7)
++-- 1*x^(10/7)
+|   +-- predecessors:   2*x^(6/5)
+|   +-- successors:   oo
++-- oo
+|   +-- predecessors:   1*x^(10/7)
+|   +-- no successors</pre><p>As you might have noticed, the &#8220;O&#8221;-constructor that is used for the <em>PowerSeriesRing</em> and related structures, can also be used here. In particular, $O(\mathit{expr})$ acts exactly as expected:</p><pre class="crayon-plain-tag">sage: expr
+O(x^(3/7)) + 2*x^(6/5) + 1*x^(10/7)
+sage: O(expr)
+O(x^(10/7))</pre><p>Of course, the usual rules for computing with asymptotic expressions hold:</p><pre class="crayon-plain-tag">sage: O(x) + O(x)
+O(x)
+sage: O(x) - O(x)
+O(x)</pre><p>So far, so good. Our next step is making the <em>multivariate growth groups</em> usable for the <em>AsymptoticRing</em> and then improving the overall user interface of the ring.</p>
+<p>&nbsp;</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://benjamin-hackl.at/2015/07/16/computing-with-asymptotic-expressions/">by behackl at July 16, 2015 03:42 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>July 09, 2015</h2>
 
 <div class="channelgroup">
@@ -732,7 +813,7 @@ This blog will follow my Google Summer of Code project, entitled <i>Performance 
 
 
 
-<h3><a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
 
 
 <div class="entrygroup" id="http://benjamin-hackl.at/?p=244" lang="en-US">
@@ -833,7 +914,7 @@ This blog will follow my Google Summer of Code project, entitled <i>Performance 
 
 
 
-<h3><a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
 
 
 <div class="entrygroup" id="http://benjamin-hackl.at/?p=109" lang="en-US">
@@ -4161,74 +4242,6 @@ A recent improvement I've implemented in my GSoC code is to allow for paralleliz
 </div>
 
 </div>
-<div class="daygroup">
-<h2>July 31, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-8194907099094130533">
-<h4><a href="http://sagemath.blogspot.com/2014/07/sagemathcloud-history-and-status.html">SageMathCloud -- history and status</a></h4>
-<div class="entry">
-<div class="content">
-2005: I made first release the SageMath software project, with the goal to create a viable open source free alternative to Mathematica, Magma, Maple, Matlab.<br /><br />2006: First web-based notebook interface for using Sage, called "sagenb". It was a cutting edge "AJAX" application at the time, though aimed at a small number of users.<br /><br />2007-2009: Much work on sagenb. But it's still not scalable. Doesn't matter since we don't have that many users.<br /><br />2011-: Sage becomes "self sustaining" from my point of view -- I have more time to work on other things, since the community has really stepped up.<br /><br />2012: I'm inspired by the Simons Foundation's (and especially Jim Simon's) "cluelessness" about open source software to create a new online scalable web application to (1) make it easier for people to get access to Sage, especially on Windows, and (2) generate a more longterm sustainable revenue stream to support Sage development. (I was invited to a day-long meeting in NYC at Simon's headquarters.)<br /><br />2012-2013: Spent much of 2012 and early 2013 researching options, building prototypes, some time talking with Craig Citro and Robert Bradshaw (both at Google), and launched SageMathCloud in April 2013. SMC got some high-profile use, e.g., by UCLA's 400+ student calculus course.<br /><br />2014: Much development over the last 1.5 years. Usage has also grown. There is some growth information <a href="http://boxen.math.washington.edu/home/schilly/salvus/stats/stats.html">here</a>. I also have useful google analytics data from the whole time, which shows around 4000 unique users per week, with an average session duration of 97 minutes (see attached). Number of users has actually dropped off during the summer, since there is much less teaching going on.<br /><br />SMC itself is written mostly in CoffeeScript using Node.js on the backend. There's a small amount of Python as well.<br /><br />It's a highly distributed multi-data center application. The database is Cassandra. The backend server processes are mostly Node.js processes, and also nginx+haproxy+stunnel.<br /><br />A copy of user data is stored in every data center, and is snapshotted every few minutes, both via :<br /><ul><li>ZFS -- for rolling snapshots that vanish after a month -- and via</li><li>bup -- for snapshots that remain forever, and are consistent across data centers.</li></ul>These snapshots are critical for making it possible to trust collaborators on projects to not (accidentally) destroy your work. It is not possible for users to delete the bup snapshots, by design.<br />Here's what it does: realtime collaborative editing of Latex docs, IPython notebooks, Sage worksheets; use the command line terminal; have several people collaborate on a project (=a Linux account).<br />The main applications seem to be:<br /><ul><li>teaching courses with a programming or math software components -- where you want all your students to be able to use something, e.g., IPython, Julia, etc, and don't want to have to deal with trying to get them to install said software themselves. Also, you want to easily be able to share files with students, see their work in realtime, etc. It's a much, much easier for people to get going that with naked VM's they have to configure -- and also I provide cross-data center replication.</li><li>collaborative research mathematics -- all co-authors of a paper work together in an SMC project, both writing the paper there and doing computations.</li></ul>Active development work right now:<br /><ul><li>course management for homework (etc)</li><li>administration functionality (mainly motivated by self-hosting and better moderation)</li><li>easy history slider to see all pasts states of a document</li><li>switching from bootstrap2 to bootstrap3.</li></ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2014/07/sagemathcloud-history-and-status.html">by William Stein (noreply@blogger.com) at July 31, 2014 10:17 PM</a>
-</p>
-</div>
-</div>
-
-
-
-</div>
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://mathandhats.blogspot.com" title="Math and Hats">Simon Spicer</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-4667528901979447244.post-376025509331820632">
-<h4><a href="http://mathandhats.blogspot.com/2014/07/the-average-rank-of-elliptic-curves.html">The average rank of elliptic curves</a></h4>
-<div class="entry">
-<div class="content">
-It's about time I should demonstrate the utility of the code I've written - the aim of the game for my GSoC project, after all, is to provide a new suite of tools with which to conduct mathematical research.<br /><br />First some background. Given an elliptic curve $E$ specified by equation $y^2 = x^3&nbsp;+ Ax&nbsp;+ B$ for integers $A$ and $B$, one of the questions we can ask is: what is the average rank of $E$ as $A$ and $B$ are allowed to vary? Because there are an infinite number of choices of $A$ and $B$, we need to formulate this question a bit more carefully. To this end, let us define the <i>height</i>&nbsp;of $E$ to be<br />$$ h(E) = \max\{|A|^3,|B|^2\} $$<br />[Aside: The height essentially measures the size of the coefficients of $E$ and is thus a fairly decent measure of the arithmetic complexity of the curve. We need the 3rd and 2nd powers in order to make the height function scale appropriately with the curve's discriminant.]<br /><br />We can then ask: what is the limiting value of the average rank of all curves up to height $X$, as $X$ gets bigger and bigger? Is it infinity? Is it 0? Is it some non-trivial positive value? Does the limit even exist? It's possible that the average rank, as a function of $X$ could oscillate about and never stabilize.<br /><br />There are strong heuristic arguments suggesting that the answer should be exactly $\frac{1}{2}$. Specifically, as the height bound $X$ gets very large, half of all curves should have rank 0, half should have rank 1, and a negligible proportion should have rank 2 or greater.<br /><br />Even as recently as five years ago this there we knew nothing concrete unconditionally about average curve rank. There are some results by <a href="http://link.springer.com/article/10.1007%2FBF01232033#page-1">Brumer</a>,&nbsp;<a href="http://projecteuclid.org/download/pdf_1/euclid.dmj/1082665288">Heath-Brown</a>&nbsp;and <a href="http://www.ams.org/journals/jams/2006-19-01/S0894-0347-05-00503-5/">Young</a> providing successively better upper bounds on the average rank of curves ordered by height (2.3, 2 and $\frac{25}{14}$ respectively), but these results are contingent on the Riemann Hypothesis.<br /><br />However, starting in 2011 Manjul Bhargava, together with Christopher Skinner and Arul Shankar, published a series of landmark papers (see <a href="https://www.dpmms.cam.ac.uk/research/BSD2011/bsd2011-Bhargava.pdf">here</a>&nbsp;for a good expository slideshow, and&nbsp;<a href="http://arxiv.org/pdf/1407.1826v2.pdf">here</a> and <a href="http://arxiv.org/pdf/1312.7859v1.pdf">here</a>&nbsp;for two of the latest publications) proving <i>unconditionally</i> that average rank - that is, the limiting value of the average rank of all elliptic curves up to height $X$ - is bounded above by 0.885. A consequence of their work too is that <a href="http://mattbakerblog.wordpress.com/tag/ranks-of-elliptic-curves/">at least 66% of all elliptic curves satisfy the rank part of the Birch and Swinnerton-Dyer Conjecture</a>.<br /><br />To a computationally-minded number theorist, the obvious question to ask is: Does the data support these results? I am by no means the first person to ask this question. Extensive databases of elliptic curves under various orderings have already been compiled, most notably those by <a href="http://homepages.warwick.ac.uk/~masgaj/ftp/data/">Cremona</a> (ordered by conductor) and <a href="http://modular.math.washington.edu/papers/stein-watkins/">Stein-Watkins</a> (ordered essentially by discriminant). However, as yet no extensive tabulation of height-ordered elliptic curves has been carried out.<br /><br />Here is a summarized table of elliptic curves with height at most 10000 - a total of 8638 curves, and the ranks thereof (all computations done in Sage, of course):<br /><br /><div align="center"><table border="0" cellpadding="0" cellspacing="0"><colgroup><col width="35" /><col span="2" width="49" /></colgroup><tbody><tr class="xl65" height="17"><td class="xl66" height="17" width="35">Rank</td><td class="xl68" width="49"># Curves</td><td class="xl67" width="49">%</td></tr><tr height="17"><td class="xl69" height="17"><div>0</div></td><td align="right" class="xl70">2988</td><td align="right" class="xl71">34.59%</td></tr><tr height="16"><td class="xl75" height="16"><div>1</div></td><td align="right" class="xl76">4307</td><td align="right" class="xl77">49.86%</td></tr><tr height="16"><td class="xl75" height="16"><div>2</div></td><td align="right" class="xl76">1286</td><td align="right" class="xl77">14.89%</td></tr><tr height="16"><td class="xl75" height="16"><div>3</div></td><td align="right" class="xl76">57</td><td align="right" class="xl77">0.66%</td></tr><tr height="16"><td class="xl75" height="16"><div>$\ge$4</div></td><td align="right" class="xl76">0</td><td align="right" class="xl77">0.00%</td></tr><tr height="16"><td class="xl72" height="16">Total:</td><td align="right" class="xl73">8638</td><td class="xl74"></td></tr></tbody></table></div><br />Thus the average rank of elliptic curves is 0.816 when the height bound is 10000. This is worrisome: the average is significantly different from the value of 0.5 we're hoping to see.<br /><br />The situation gets even worse when we go up to height bound 100000:<br /><br /><div align="center"><table border="0" cellpadding="0" cellspacing="0"><colgroup><col width="35" /><col span="2" width="49" /></colgroup><tbody><tr class="xl65" height="17"><td class="xl66" height="17" width="35">Rank</td><td class="xl68" width="49"># Curves</td><td class="xl67" width="49">%</td></tr><tr height="17"><td class="xl69" height="17"><div>0</div></td><td align="right" class="xl70">19492</td><td align="right" class="xl71">33.11%</td></tr><tr height="16"><td class="xl75" height="16"><div>1</div></td><td align="right" class="xl76">28818</td><td align="right" class="xl77">48.96%</td></tr><tr height="16"><td class="xl75" height="16"><div>2</div></td><td align="right" class="xl76">9747</td><td align="right" class="xl77">16.56%</td></tr><tr height="16"><td class="xl75" height="16"><div>3</div></td><td align="right" class="xl76">801</td><td align="right" class="xl77">1.36%</td></tr><tr height="16"><td class="xl75" height="16"><div><span>$\ge$</span>4</div></td><td align="right" class="xl76">4</td><td align="right" class="xl77">0.01%</td></tr><tr height="16"><td class="xl72" height="16">Total:</td><td align="right" class="xl73">58862</td><td class="xl74"></td></tr></tbody></table></div><br />This yields an average rank of 0.862 for height bound 100000. Bizarrely, the average rank is getting bigger, not smaller!<br /><br />[Note: the fact that 0.862 is close to Bhargava's asymptotic bound of 0.885 is coincidental. Run the numbers for height 1 million, for example, and you get an average rank of 0.8854, which is bigger than the above asymptotic bound. Observationally, we see the average rank continue to increase as we push out to even larger height bounds beyond this.]<br /><br />So what's the issue here? It turns out that a lot of the asymptotic statements we can make about elliptic curves are precisely that: asymptotic, and we don't yet have a good understanding of the associated rates of convergence. Elliptic curves, ornery beasts that they are, can seem quite different from their limiting behaviour when one only considers curves with small coefficients. We expect (hope?) that the average to eventually turn around and start to decrease back down to 0.5, but the exact point at which that happens is as yet unknown.<br /><br />This is where I come in. One of the projects I've been working on (with Wei Ho, Jen Balakrishnan, Jamie Weigandt, Nathan Kaplan and William Stein) is to compute the average rank of elliptic curves for as large a height bound as possible, in the hope that we will get results a bit more reassuring than the above. The main steps of the project are thus:<br /><br /><ol><li>Generate an&nbsp;ordered-by-height&nbsp;database of all elliptic curves up to some very large &nbsp;height bound (currently 100&nbsp;million; about 18.5 million curves);</li><li>Use every trick in the book to compute the ranks of said elliptic curves;</li><li>Compute the average of said ranks.</li></ol><div>Steps 1 and 3 are easy. Step 2 is not. Determining the rank of an elliptic curve is a notoriously hard problem - no unconditional algorithm with known complexity currently exists - especially when you want to do it for millions of curves in a reasonable amount of time. Sage, for example, already has a <span>rank()</span> method attached to their <span>EllipticCurve</span> class; if you pass the right parameters to it, the method will utilize an array of approaches to get a value out that is (assuming standard conjectures) the curve's rank. However, its runtime for curves of height near 100 million&nbsp;is on the order of 20 seconds; set it loose on 18.5 million such curves and you're looking at a total computation time of about 10 CPU years.</div><div><br /></div><div>Enter GSoC project stage left. At the expense of assuming the Generalized Riemann Hypothesis and the Birch and Swinnerton-Dyer Conjecture, we can use the zero sum rank bounding code I've been working on to quickly compute concrete upper bounds on an elliptic curve's rank. This approach has a couple of major advantages to it:</div><div><ul><li>It's <i>fast</i>. In the time it's taken me to write this post, I've computed rank bounds on 2.5 million curves.</li><li>Runtime is essentially constant for any curve in the database; we don't have to worry about how the method scales with height or conductor. If we want to go up to larger height bounds at a later date, no problem.</li></ul><div>As always, some Terms and Conditions apply. The rank bounding code only gives you an upper bound on the rank: if, for example, you run the code on a curve and get the number 4 back, there's no way to determine with this method if the curve's rank is 4, or if it is really some non-negative integer less than 4.&nbsp;</div></div><div><br /></div><div>Note: there is an invariant attached to an elliptic curve called the <i>root number</i>&nbsp;which&nbsp;is efficiently computable, even for curves with large conductor (it took less than 20 minutes to compute the root number for all 18.5 million curves in our database). The root number is one of two values: -1 or +1; if it's -1 the curve has odd analytic rank, and if it's +1 the curve has even analytic rank. Assuming BSD we can therefore always easily tell if the curve's rank is even or odd. My GSoC rank estimation code takes the root number into account, so in the example above, a returned value of 4 tells us that the curve's true rank is one of three values: 0, 2 or 4.</div><div><br /></div><div>Even better, if the returned value is 0 or 1, we know this must be the actual algebraic rank of the curve: firstly, there's no ambiguity as to what the analytic rank is - it has to the returned 0 or 1; secondly, <a href="http://en.wikipedia.org/wiki/Birch_and_Swinnerton-Dyer_conjecture#Current_status">the BSD conjecture has been proven in the rank 0 &amp; 1 cases</a>. Thus even though we are a priori only computing analytic rank upper bounds, for some proportion of curves we've found the actual algebraic rank.<br /><br />[Note that the rank bounding code I've written is predicated on knowing that all nontrivial zeros of an elliptic curve $L$-function lie on the critical line, so we still have to assume the Generalized Riemann Hypothesis.]</div><div><br /></div><div>Thus running the rank bound code on the entire database of curves is a very sensible first step, and it's what I'm currently doing. It's computationally cheap to do - on <a href="https://cloud.sagemath.com/">SageMathCloud,</a>&nbsp;using a Delta value of 1.0, the runtime for a single curve is about 4 milliseconds. Moreover, for some non-negligible percentage of curves the bounds will be observably sharp - based on some trial runs I'm expecting about 20-30% of the computed bounds to be 0 or 1.</div><div><br /></div><div>That's about 4 million curves for which we won't have to resort to much more expensive rank finding methods. Huge savings!</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://mathandhats.blogspot.com/2014/07/the-average-rank-of-elliptic-curves.html">by Simon Spicer (noreply@blogger.com) at July 31, 2014 07:37 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -4269,7 +4282,7 @@ maintainer</a>.
 <a href="http://knotsknotted.wordpress.com/category/gsoc/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://knotsknotted.wordpress.com/" class="message" title="internal server error">Amit Jamadagni</a>
 </li>
 <li>
-<a href="http://benjamin-hackl.at/tag/gsoc15/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a>
+<a href="http://benjamin-hackl.at/tag/gsoc15/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a>
 </li>
 <li>
 <a href="http://carlo-hamalainen.net/blog/?feed=rss2&amp;cat=8" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="no activity in 356 days">Carlo Hamalainen</a>
@@ -4392,7 +4405,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-July 16, 2015 03:30 PM<br>
+July 16, 2015 04:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
