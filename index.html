@@ -54,6 +54,113 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>July 23, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/">Using the two thirds of the average game in class</a></h4>
+<div class="entry">
+<div class="content">
+<p>This past week I have been delighted to have a short pedagogic paper accepted
+for publication in <a href="https://journals.gre.ac.uk/index.php/msor">MSOR
+Connections</a>. The paper is entitled:
+“Playing Games: A Case Study in Active Learning Applied to Game Theory”. The
+journal is open access and you can see a <a href="https://github.com/drvinceknight/Playing-games-a-case-study-in-active-learning/blob/master/paper/paper.pdf">pre print
+here</a>.
+As well as describing some literature on active learning I also present some
+data I’ve been collecting (with the help of others) as to how people play two
+subsequent plays of the <a href="https://en.wikipedia.org/wiki/Guess_2/3_of_the_average">two thirds of the average
+game</a> (and talk about
+another game also).</p>
+
+<p>In this post I’ll briefly put up the results here as well as mention a
+Python library I’m working on.</p>
+
+<p>If you’re not familiar with it, the two thirds of the average game asks players
+to guess a number between 0 and 100. The closest number to 2/3rds of the average
+number guessed is declared the winner.</p>
+
+<p>I use this all the time in class and during outreach events. I start by asking
+participants to play without more explanation than the basic rules of the game.
+Following this, as a group we go over some simple best response dynamics that
+indicate that the equilibrium play for the game is for everyone to guess 0.
+<strong>After this explanation, everyone plays again.</strong></p>
+
+<p>Below you can see how this game has gone as a collection of all the data I’ve
+put together:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/histogram_of_guesses.png" alt="" /></p>
+
+<p>You will note that some participants actually increase their second guess but in
+general we see a possible indication (based on two data points, so obviously
+this is not meant to be a conclusive statement) of convergence towards the
+theoretic equilibria.</p>
+
+<p>Here is a plot showing the relationship between the first and second guess (when
+removing the guesses that increase, although as you can see in the paper this
+does not make much difference):</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/jointplot_of_guesses_removing_increasing_guesses.png" alt="" /></p>
+
+<p>The significant linear relationship between the guesses is given by:</p>
+
+
+
+<p>So a good indication of what someone will guess in the second round is that it
+would be a third of their first round guess.</p>
+
+<p>Here is some Sage code that produces the cobweb diagram assuming the following
+sequence represents each guess (using <a href="http://wiki.sagemath.org/interact/dynsys">code by Marshall
+Hampton</a>):</p>
+
+
+
+<div class="compute"></div>
+
+<p>that plot shows the iterations of the hypothetical guesses if we were to play more rounds :)</p>
+
+<p><strong>The other thing</strong> I wanted to point at in this blog post is this
+<a href="https://github.com/drvinceknight/TwoThirds">twothirds</a> library which will
+potentially allow anyone to analyse these games quickly. I’m still working on
+it but if it’s of interest please do jump in :) I have put up a <a href="https://github.com/drvinceknight/TwoThirds/blob/master/demo.ipynb">Jupyter
+notebook demoing what it can do so far (which is almost everything but with
+some rough
+edges)</a>. If
+you want to try it out, download that notebook and run:</p>
+
+<div class="highlight"><pre><code class="language-bash"><span class="nv">$ </span>pip install twothirds</code></pre></div>
+
+<p>I hope that once the library is set up anyone who uses it could simply send
+over data of game plays via PR which would help update the above plots and
+conclusions :)</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/">July 23, 2015 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>July 16, 2015</h2>
 
 <div class="channelgroup">
@@ -4405,7 +4512,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-July 23, 2015 10:30 AM<br>
+July 23, 2015 11:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

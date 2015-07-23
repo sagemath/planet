@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/" />
 			<rdf:li rdf:resource="http://benjamin-hackl.at/?p=358" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-2595108397440560513" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-7547483421803460595" />
@@ -63,6 +64,83 @@
 	</items>
 </channel>
 
+<item rdf:about="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/">
+	<title>Vince Knight: Using the two thirds of the average game in class</title>
+	<link>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/</link>
+	<content:encoded>&lt;p&gt;This past week I have been delighted to have a short pedagogic paper accepted
+for publication in &lt;a href=&quot;https://journals.gre.ac.uk/index.php/msor&quot;&gt;MSOR
+Connections&lt;/a&gt;. The paper is entitled:
+“Playing Games: A Case Study in Active Learning Applied to Game Theory”. The
+journal is open access and you can see a &lt;a href=&quot;https://github.com/drvinceknight/Playing-games-a-case-study-in-active-learning/blob/master/paper/paper.pdf&quot;&gt;pre print
+here&lt;/a&gt;.
+As well as describing some literature on active learning I also present some
+data I’ve been collecting (with the help of others) as to how people play two
+subsequent plays of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Guess_2/3_of_the_average&quot;&gt;two thirds of the average
+game&lt;/a&gt; (and talk about
+another game also).&lt;/p&gt;
+
+&lt;p&gt;In this post I’ll briefly put up the results here as well as mention a
+Python library I’m working on.&lt;/p&gt;
+
+&lt;p&gt;If you’re not familiar with it, the two thirds of the average game asks players
+to guess a number between 0 and 100. The closest number to 2/3rds of the average
+number guessed is declared the winner.&lt;/p&gt;
+
+&lt;p&gt;I use this all the time in class and during outreach events. I start by asking
+participants to play without more explanation than the basic rules of the game.
+Following this, as a group we go over some simple best response dynamics that
+indicate that the equilibrium play for the game is for everyone to guess 0.
+&lt;strong&gt;After this explanation, everyone plays again.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Below you can see how this game has gone as a collection of all the data I’ve
+put together:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/histogram_of_guesses.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You will note that some participants actually increase their second guess but in
+general we see a possible indication (based on two data points, so obviously
+this is not meant to be a conclusive statement) of convergence towards the
+theoretic equilibria.&lt;/p&gt;
+
+&lt;p&gt;Here is a plot showing the relationship between the first and second guess (when
+removing the guesses that increase, although as you can see in the paper this
+does not make much difference):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/jointplot_of_guesses_removing_increasing_guesses.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The significant linear relationship between the guesses is given by:&lt;/p&gt;
+
+
+
+&lt;p&gt;So a good indication of what someone will guess in the second round is that it
+would be a third of their first round guess.&lt;/p&gt;
+
+&lt;p&gt;Here is some Sage code that produces the cobweb diagram assuming the following
+sequence represents each guess (using &lt;a href=&quot;http://wiki.sagemath.org/interact/dynsys&quot;&gt;code by Marshall
+Hampton&lt;/a&gt;):&lt;/p&gt;
+
+
+
+&lt;div class=&quot;compute&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;that plot shows the iterations of the hypothetical guesses if we were to play more rounds :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The other thing&lt;/strong&gt; I wanted to point at in this blog post is this
+&lt;a href=&quot;https://github.com/drvinceknight/TwoThirds&quot;&gt;twothirds&lt;/a&gt; library which will
+potentially allow anyone to analyse these games quickly. I’m still working on
+it but if it’s of interest please do jump in :) I have put up a &lt;a href=&quot;https://github.com/drvinceknight/TwoThirds/blob/master/demo.ipynb&quot;&gt;Jupyter
+notebook demoing what it can do so far (which is almost everything but with
+some rough
+edges)&lt;/a&gt;. If
+you want to try it out, download that notebook and run:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install twothirds&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I hope that once the library is set up anyone who uses it could simply send
+over data of game plays via PR which would help update the above plots and
+conclusions :)&lt;/p&gt;</content:encoded>
+	<dc:date>2015-07-23T00:00:00+00:00</dc:date>
+</item>
 <item rdf:about="http://benjamin-hackl.at/?p=358">
 	<title>Benjamin Hackl: Computing with Asymptotic Expressions</title>
 	<link>http://benjamin-hackl.at/2015/07/16/computing-with-asymptotic-expressions/</link>
