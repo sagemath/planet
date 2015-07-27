@@ -5,8 +5,27 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-07-27T15:30:17+00:00</updated>
+	<updated>2015-07-27T16:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Including igraph Library</title>
+		<link href="http://borassisagemath.blogspot.com/2015/07/including-igraph-library.html"/>
+		<id>tag:blogger.com,1999:blog-8558001006126216932.post-2060557766871480571</id>
+		<updated>2015-07-27T09:07:42+00:00</updated>
+		<content type="html">Hello!&lt;br /&gt;In this new blog post, I would like to discuss the inclusion of igraph library inside Sage.&lt;br /&gt;Up to now, I have interfaced Sagemath with Boost graph library, in order to run Boost algorithms inside Sage. Now, I want to do the same with igraph, the other major C++ graph library, which stands out because it contains 62 routines, 29 of which are not available in Sage. Moreover, igraph library is very efficient, as shown in [1] and in the previous post on library comparison.&lt;br /&gt;&lt;br /&gt;This inclusion of igraph in Sage is quite complicated, because we have to include a new external library [2] (while in the Boost case we already had the sources). We started this procedure through ticket &lt;a href=&quot;http://trac.sagemath.org/ticket/18929&quot;&gt;18929&lt;/a&gt;: unfortunately, after this ticket is closed, igraph will only be an optional package, and we will have to wait one year before it becomes standard. The disadvantage of optional packages is that they must be installed before being able to use them; however, the installation is quite easy: it is enough to run Sage with option &lt;span&gt;-i python_igraph&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;After the installation, the usage of igraph library is very simple, because igraph already provides a Python interface, that can be used in Sage. To transform the Sagemath network &lt;span&gt;g_sage&lt;/span&gt; into an igraph network &lt;span&gt;g_igraph&lt;/span&gt;, it is enough to type &lt;span&gt;g_igraph=g_sage.igraph_graph()&lt;/span&gt;, while to create a Sagemath network from an igraph network it is enough to type &lt;span&gt;g_sage = Graph(g_igraph)&lt;/span&gt; or &lt;span&gt;&lt;span&gt;&lt;/span&gt;g_sage=DiGraph(g_igraph)&lt;span&gt;&lt;/span&gt;&lt;/span&gt;. After this conversion, we can use all routines offered by igraph!&lt;br /&gt;For instance, if we want to create a graph through the preferential attachment model, we can do it with the Sagemath routine, or with the igraph routine:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomBarabasiAlbert(100, 2)&lt;br /&gt;sage: G.num_verts()&lt;br /&gt;100&lt;br /&gt;sage: G = Graph(igraph.Graph.Barabasi(100, int(2)))&lt;br /&gt;sage: G.num_verts()&lt;br /&gt;100&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;The result is the same (apart from randomness), but the time is very different:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: import igraph&lt;br /&gt;sage: %timeit G = Graph(igraph.Graph.Barabasi(10000000, int(2)))&lt;br /&gt;1 loops, best of 3: 46.2 s per loop&lt;/span&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomBarabasiAlbert(10000000, 2)&lt;/span&gt;&lt;br /&gt;&lt;span&gt;Stopped after 3 hours.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Otherwise, we may use igraph to generate graphs with Forest-Fire algorithm, which is not available in Sagemath:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = Graph(igraph.Graph.Forest_Fire(10, 0.1))&lt;br /&gt;sage: G.edges()&lt;br /&gt;[(0, 1, None), (0, 2, None), (1, 7, None), (2, 3, None), (2, 4, None), (3, 5, None), (3, 8, None), (4, 6, None), (8, 9, None)]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;We may also do the converse: transform a Sage network into an igraph network and apply an igraph algorithm. For instance, we can use label propagation to find communities (a task which is not implemented in Sage):&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.CompleteGraph(5)+graphs.CompleteGraph(5)&lt;/span&gt;&lt;br /&gt;&lt;span&gt;sage: G.add_edge(0,5)&lt;br /&gt;sage: com = G.igraph_graph().community_label_propagation()&lt;br /&gt;sage: len(com)&lt;br /&gt;2&lt;br /&gt;sage: com[0]&lt;br /&gt;[0, 1, 2, 3, 4]&lt;br /&gt;sage: com[1]&lt;br /&gt;[5, 6, 7, 8, 9]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;The algorithm found the two initial cliques as communities.&lt;br /&gt;&lt;br /&gt;I hope that these examples are enough to show the excellent possibilities offered by igraph library, and that these features will soon be available in Sagemath!&lt;br /&gt;&lt;br /&gt;[1] &lt;a href=&quot;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison&quot;&gt;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison&lt;/a&gt;&lt;br /&gt;[2] &lt;a href=&quot;http://doc.sagemath.org/html/en/developer/packaging.html&quot;&gt;http://doc.sagemath.org/html/en/developer/packaging.html&lt;/a&gt;</content>
+		<author>
+			<name>Michele Borassi</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://borassisagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
+			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
+			<updated>2015-07-27T16:30:12+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Using the two thirds of the average game in class</title>
@@ -176,7 +195,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-27T15:30:17+00:00</updated>
+			<updated>2015-07-27T16:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -195,7 +214,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-27T15:30:17+00:00</updated>
+			<updated>2015-07-27T16:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -687,7 +706,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-27T15:30:17+00:00</updated>
+			<updated>2015-07-27T16:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -706,7 +725,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-27T15:30:17+00:00</updated>
+			<updated>2015-07-27T16:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -725,7 +744,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-07-27T15:30:17+00:00</updated>
+			<updated>2015-07-27T16:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -792,7 +811,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2787,7 +2806,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2807,7 +2826,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2827,7 +2846,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2847,7 +2866,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3462,7 +3481,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3482,7 +3501,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-07-27T15:30:08+00:00</updated>
+			<updated>2015-07-27T16:30:06+00:00</updated>
 		</source>
 	</entry>
 

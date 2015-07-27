@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>July 27, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://borassisagemath.blogspot.com/" title="Performance Improvements for the Graph Module of Sagemath">Michele Borassi</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-8558001006126216932.post-2060557766871480571">
+<h4><a href="http://borassisagemath.blogspot.com/2015/07/including-igraph-library.html">Including igraph Library</a></h4>
+<div class="entry">
+<div class="content">
+Hello!<br />In this new blog post, I would like to discuss the inclusion of igraph library inside Sage.<br />Up to now, I have interfaced Sagemath with Boost graph library, in order to run Boost algorithms inside Sage. Now, I want to do the same with igraph, the other major C++ graph library, which stands out because it contains 62 routines, 29 of which are not available in Sage. Moreover, igraph library is very efficient, as shown in [1] and in the previous post on library comparison.<br /><br />This inclusion of igraph in Sage is quite complicated, because we have to include a new external library [2] (while in the Boost case we already had the sources). We started this procedure through ticket <a href="http://trac.sagemath.org/ticket/18929">18929</a>: unfortunately, after this ticket is closed, igraph will only be an optional package, and we will have to wait one year before it becomes standard. The disadvantage of optional packages is that they must be installed before being able to use them; however, the installation is quite easy: it is enough to run Sage with option <span>-i python_igraph</span>.<br /><br />After the installation, the usage of igraph library is very simple, because igraph already provides a Python interface, that can be used in Sage. To transform the Sagemath network <span>g_sage</span> into an igraph network <span>g_igraph</span>, it is enough to type <span>g_igraph=g_sage.igraph_graph()</span>, while to create a Sagemath network from an igraph network it is enough to type <span>g_sage = Graph(g_igraph)</span> or <span><span></span>g_sage=DiGraph(g_igraph)<span></span></span>. After this conversion, we can use all routines offered by igraph!<br />For instance, if we want to create a graph through the preferential attachment model, we can do it with the Sagemath routine, or with the igraph routine:<br /><br /><span>sage: G = graphs.RandomBarabasiAlbert(100, 2)<br />sage: G.num_verts()<br />100<br />sage: G = Graph(igraph.Graph.Barabasi(100, int(2)))<br />sage: G.num_verts()<br />100</span><br /><br />The result is the same (apart from randomness), but the time is very different:<br /><br /><span>sage: import igraph<br />sage: %timeit G = Graph(igraph.Graph.Barabasi(10000000, int(2)))<br />1 loops, best of 3: 46.2 s per loop</span><br /><span>sage: G = graphs.RandomBarabasiAlbert(10000000, 2)</span><br /><span>Stopped after 3 hours.</span><br /><br />Otherwise, we may use igraph to generate graphs with Forest-Fire algorithm, which is not available in Sagemath:<br /><br /><span>sage: G = Graph(igraph.Graph.Forest_Fire(10, 0.1))<br />sage: G.edges()<br />[(0, 1, None), (0, 2, None), (1, 7, None), (2, 3, None), (2, 4, None), (3, 5, None), (3, 8, None), (4, 6, None), (8, 9, None)]</span><br /><br /><br />We may also do the converse: transform a Sage network into an igraph network and apply an igraph algorithm. For instance, we can use label propagation to find communities (a task which is not implemented in Sage):<br /><br /><span>sage: G = graphs.CompleteGraph(5)+graphs.CompleteGraph(5)</span><br /><span>sage: G.add_edge(0,5)<br />sage: com = G.igraph_graph().community_label_propagation()<br />sage: len(com)<br />2<br />sage: com[0]<br />[0, 1, 2, 3, 4]<br />sage: com[1]<br />[5, 6, 7, 8, 9]</span><br /><br />The algorithm found the two initial cliques as communities.<br /><br />I hope that these examples are enough to show the excellent possibilities offered by igraph library, and that these features will soon be available in Sagemath!<br /><br />[1] <a href="https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison">https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison</a><br />[2] <a href="http://doc.sagemath.org/html/en/developer/packaging.html">http://doc.sagemath.org/html/en/developer/packaging.html</a></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://borassisagemath.blogspot.com/2015/07/including-igraph-library.html">by Michele Borassi (noreply@blogger.com) at July 27, 2015 09:07 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>July 23, 2015</h2>
 
 <div class="channelgroup">
@@ -4512,7 +4548,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-July 27, 2015 03:30 PM<br>
+July 27, 2015 04:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
