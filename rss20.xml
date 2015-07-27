@@ -16,6 +16,86 @@
 	<author>noreply@blogger.com (Michele Borassi)</author>
 </item>
 <item>
+	<title>Vince Knight: A talk on computational game theory in Sagemath</title>
+	<guid>http://drvinceknight.github.io/unpeudemath/code/2015/07/27/A-talk-on-computational-game-theory-in-Sagemath/</guid>
+	<link>http://drvinceknight.github.io/unpeudemath/code/2015/07/27/A-talk-on-computational-game-theory-in-Sagemath/</link>
+	<description>&lt;p&gt;Today, Cardiff University, School of Mathematics students: James Campbell, Hannah
+Lorrimore as well as Google Summer of Code student Tobenna P. Igwe (PhD student
+at the University of Liverpool) as well as I presented the current game
+theoretic capabilities of &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;Sagemath&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This talk happened as part of a two day visit to see &lt;a href=&quot;http://www.cs.ox.ac.uk/people/dmitrii.pasechnik/&quot;&gt;Dima
+Pasechnik&lt;/a&gt; to work on the
+stuff we’ve been doing and the visit was kindly supported by
+&lt;a href=&quot;http://www.codima.ac.uk/&quot;&gt;CoDiMa&lt;/a&gt; (an
+EPSRC funded project to support the development of GAP and Sagemath)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here is the video of the talk:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;video&quot;&gt;
+    
+        
+    
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cloud.sagemath.com/projects/2a31f88b-4244-4bd1-8e3a-3169ff24daac/files/Talk-2015-07-27/talk.sagews&quot;&gt;Here is a link to the sage worksheet we used for the talk.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some photos I took during the talk:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-0apjrcG0qEw/VbZsAWAPXtI/AAAAAAABlSo/ZYWuBQSwnL8/w747-h560-no/IMG_20150727_151428.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://lh6.googleusercontent.com/Mdhv4ZH7H6Yww9H8P6hTJ5C8PTuTI55ysCjQUe-PTZ0=w747-h560-no&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://lh3.googleusercontent.com/-p6qHJDfk-xc/VbZsAab_4yI/AAAAAAABlSo/aj65EG02mvo/w747-h560-no/IMG_20150727_152941.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and here are some I took of us working on code afterwards:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-qBweJME_HBg/VbZsARW7D_I/AAAAAAABlTI/8GHa-SPNSxg/w747-h560-no/IMG_20150727_155756.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://lh5.googleusercontent.com/-kZLhblBepTE/VbZsAYQk_CI/AAAAAAABlTA/2USGMza-jj8/w747-h560-no/IMG_20150727_175244.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here is the abstract of the talk:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Game Theory is the study of rational interaction and is getting increasingly important in CS. Ability to quickly compute a solution concept for a nontrivial (non-)cooperative game helps a lot in practical and theoretic work, as well as in teaching.
+This talk will describe
+and demonstrate the game theoretic capabilities of Sagemath
+(http://www.sagemath.org/), a Python library, described as having the following mission:
+‘Creating a viable free opensource alternative to Magma, Maple, Mathematica and
+Matlab’.&lt;/p&gt;
+
+&lt;p&gt;The talk will describe algorithms and classes that are implemented for the
+computation of Nash equilibria in bimatrix games. These include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A support enumeration algorithm;&lt;/li&gt;
+  &lt;li&gt;A reverse search algorithm through the lrs library;&lt;/li&gt;
+  &lt;li&gt;The Lemke-Howson algorithm using the Gambit library (https://github.com/gambitproject/gambit).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition to this, demonstrations of further capabilities that are actively being
+developed will also be given:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tests for degeneracy in games;&lt;/li&gt;
+  &lt;li&gt;A class for extensive form games which include the use of the graph
+theoretic capabilities of Sage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following two developments which are being carried out as part of a
+Google Summer of Code project will also be demonstrated:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An implementation of the Lemke-Howson algorithm;&lt;/li&gt;
+  &lt;li&gt;Extensions to N player games;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Demonstrations will use the (free) online tool cloud.sagemath which allows anyone with
+connectivity to use Sage (and solve game theoretic problems!). Cloud.sagemath
+also serves as a great teaching and research tool with access to not only Sage but Jupyter
+(Ipython) notebooks, R, LaTeX and a variety of other software tools.&lt;/p&gt;
+
+&lt;p&gt;The talk will concentrate on strategic non-cooperative games but matching games
+and characteristic function games will also be briefly discussed.&lt;/p&gt;</description>
+	<pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Vince Knight: Using the two thirds of the average game in class</title>
 	<guid>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/</guid>
 	<link>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/07/23/Using-the-two-thirds-of-the-average-game-in-class/</link>
