@@ -149,8 +149,13 @@ would take .61 hours for a bus to the third. So we would catch the bust to the s
 <p>We can use this to write a function that will take a transition rate matrix,
 simulate the transitions and keep track of the time spent in each state:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="k">def</span> <span class="nf">simulate_cmc</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">warm_up</span><span class="p">):</span>
+<div class="highlight"><pre><code class="language-python"><span class="k">def</span> <span class="nf">sample_from_rate</span><span class="p">(</span><span class="n">rate</span><span class="p">):</span>
     <span class="kn">import</span> <span class="nn">random</span>
+    <span class="k">if</span> <span class="n">rate</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">oo</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">expovariate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">simulate_cmc</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">warm_up</span><span class="p">):</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>  <span class="c"># In case a matrix is input</span>
     <span class="n">state_space</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span>  <span class="c"># Index the state space</span>
     <span class="n">time_spent</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span><span class="mi">0</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">state_space</span><span class="p">}</span>  <span class="c"># Set up a dictionary to keep track of time</span>
@@ -158,9 +163,9 @@ simulate the transitions and keep track of the time spent in each state:</p>
     <span class="n">current_state</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c"># First state</span>
     <span class="k">while</span> <span class="n">clock</span> <span class="o">&lt;</span> <span class="n">time</span><span class="p">:</span>
         <span class="c"># Sample the transitions</span>
-        <span class="n">sojourn_times</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">expovariate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span> <span class="k">for</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">[</span><span class="n">current_state</span><span class="p">][:</span><span class="n">current_state</span><span class="p">]]</span>
+        <span class="n">sojourn_times</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_from_rate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span> <span class="k">for</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">[</span><span class="n">current_state</span><span class="p">][:</span><span class="n">current_state</span><span class="p">]]</span>
         <span class="n">sojourn_times</span> <span class="o">+=</span> <span class="p">[</span><span class="n">oo</span><span class="p">]</span>  <span class="c"># An infinite sojourn to the same state</span>
-        <span class="n">sojourn_times</span> <span class="o">+=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">expovariate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span> <span class="k">for</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">[</span><span class="n">current_state</span><span class="p">][</span><span class="n">current_state</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]]</span>
+        <span class="n">sojourn_times</span> <span class="o">+=</span> <span class="p">[</span><span class="n">sample_from_rate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span> <span class="k">for</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">[</span><span class="n">current_state</span><span class="p">][</span><span class="n">current_state</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]]</span>
 
         <span class="c"># Identify the next state</span>
         <span class="n">next_state</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">state_space</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">sojourn_times</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
@@ -4735,7 +4740,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-August 01, 2015 11:30 AM<br>
+August 01, 2015 12:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

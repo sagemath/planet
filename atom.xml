@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-08-01T11:30:20+00:00</updated>
+	<updated>2015-08-01T12:30:25+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -91,8 +91,13 @@ would take .61 hours for a bus to the third. So we would catch the bust to the s
 &lt;p&gt;We can use this to write a function that will take a transition rate matrix,
 simulate the transitions and keep track of the time spent in each state:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;simulate_cmc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;warm_up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sample_from_rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oo&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expovariate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;simulate_cmc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;warm_up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# In case a matrix is input&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;state_space&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# Index the state space&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;time_spent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;state_space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# Set up a dictionary to keep track of time&lt;/span&gt;
@@ -100,9 +105,9 @@ simulate the transitions and keep track of the time spent in each state:&lt;/p&g
     &lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# First state&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;c&quot;&gt;# Sample the transitions&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expovariate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_from_rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# An infinite sojourn to the same state&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expovariate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample_from_rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rate&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
 
         &lt;span class=&quot;c&quot;&gt;# Identify the next state&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;next_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state_space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sojourn_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
@@ -141,7 +146,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -160,7 +165,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -252,7 +257,7 @@ and characteristic function games will also be briefly discussed.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -342,7 +347,7 @@ conclusions :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -424,7 +429,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -443,7 +448,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -681,7 +686,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -916,7 +921,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -935,7 +940,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -954,7 +959,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -973,7 +978,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-01T11:30:20+00:00</updated>
+			<updated>2015-08-01T12:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -1040,7 +1045,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1176,7 +1181,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1344,7 +1349,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1450,7 +1455,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1503,7 +1508,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1566,7 +1571,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1717,7 +1722,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1786,7 +1791,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1849,7 +1854,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1953,7 +1958,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2337,7 +2342,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T10:30:06+00:00</updated>
+			<updated>2015-08-01T12:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3035,7 +3040,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3055,7 +3060,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3075,7 +3080,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3095,7 +3100,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3710,7 +3715,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3730,7 +3735,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3768,7 +3773,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
 			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-08-01T11:30:19+00:00</updated>
+			<updated>2015-08-01T12:30:24+00:00</updated>
 		</source>
 	</entry>
 
@@ -3787,7 +3792,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2015-08-01T11:30:04+00:00</updated>
+			<updated>2015-08-01T12:30:05+00:00</updated>
 		</source>
 	</entry>
 
