@@ -54,7 +54,7 @@
 		<foaf:Agent>
 			<foaf:name>Benjamin Hackl</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://benjamin-hackl.at">
+				<foaf:Document rdf:about="http://benjamin-hackl.at/tag/gsoc15/">
 					<dc:title>Benjamin Hackl » GSoC15</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://benjamin-hackl.at/tag/gsoc15/feed/" />
@@ -288,7 +288,7 @@
 		<foaf:Agent>
 			<foaf:name>Michele Borassi</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://borassisagemath.blogspot.it/">
+				<foaf:Document rdf:about="http://borassisagemath.blogspot.com/">
 					<dc:title>Performance Improvements for the Graph Module of Sagemath</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://borassisagemath.blogspot.com/feeds/posts/default" />
