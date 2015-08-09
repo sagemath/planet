@@ -5,8 +5,96 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-08-09T15:30:13+00:00</updated>
+	<updated>2015-08-09T16:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Why I am a paying member of cloud.sagemath</title>
+		<link href="http://drvinceknight.github.io/unpeudemath/code/2015/08/09/why-I-am-a-paying-user-of-cloud.sagemath/"/>
+		<id>http://drvinceknight.github.io/unpeudemath/code/2015/08/09/why-I-am-a-paying-user-of-cloud.sagemath/</id>
+		<updated>2015-08-09T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;If you are not familiar with &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;Sagemath&lt;/a&gt; it is a free
+open source mathematics package that does simple things like expand algebraic
+expressions as well as far more complex things (optimisation, graph theory,
+combinatorics, game theory etc…). &lt;a href=&quot;https://cloud.sagemath.com&quot;&gt;Cloud.sagemath&lt;/a&gt;
+is a truly amazing tool not just for Sage bu for scientific computation in
+general and it’s &lt;strong&gt;free&lt;/strong&gt;. Completely 100% free. In this post I’ll explain why I
+pay for it.&lt;/p&gt;
+
+&lt;p&gt;A while ago, a colleague and I were having a chat about the fact that our site
+Maple license hadn’t been renewed fast enough (or something similar to that). My
+colleague was fairly annoyed by this saying something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;‘We are kind of like professional athletes, if I played soccer at a
+professional club I would have the best facilities available to me. There
+would not be a question of me having the best boots.’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now I don’t think we ever finished this conversation (or at least I don’t really
+remember what I said) but this is something that’s stayed with me for quite a
+while.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First of all:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I think there are probably a very large proportion of professional soccer
+players who do not play at the very top level and so do not enjoy having access
+to the very best facilities (I certainly wouldn’t consider myself the Ronaldo of
+mathematics…).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Secondly:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mathematicians are (in some ways) &lt;strong&gt;way cooler&lt;/strong&gt; than soccer players. We are
+somewhat like magicians, in the past we have not needed much more than a pencil
+and some paper to work our craft. Whilst a chemist/physicist/medical research
+needs a lab and/or other things we can pretty much work just with a whiteboard.&lt;/p&gt;
+
+&lt;p&gt;We are basically magicians. We can make something from nothing.&lt;/p&gt;
+
+&lt;p&gt;Since moving to open source software for all my research and teaching this is
+certainly how I’ve felt. Before discovering open source tools I needed to make
+sure I had the correct licence or otherwise before I could work but this is no
+longer the case. I just need a very basic computer (I bought a thinkpad for £60
+the other day!) and I am just as powerful as I could want to be.&lt;/p&gt;
+
+&lt;p&gt;This is even more &lt;strong&gt;true&lt;/strong&gt; with &lt;a href=&quot;https://cloud.sagemath.com&quot;&gt;cloud.sagemath&lt;/a&gt;.
+Anyone can use a variety of scientific computing tools for no cost whatsoever
+(not even a cost associated with the time spent installing software): it just
+works. I have used this to work on sage source code with students, carry out
+research and also to deliver presentations: it’s awesome.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So, why do I pay $7 month to use it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Firstly because it gives me the ability to move some projects to servers that
+are supposedly more robust. I have no doubt that they are more robust but in all
+honesty I can’t say I’ve seen problems with the ‘less’ robust servers (150 of my
+students used them last year and will be doing so again in the Autumn).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The main reason I pay to use cloud.sagemath is because I can afford to.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This was put in very clear terms to me during the organisation of &lt;a href=&quot;http://2015.djangocon.eu/&quot;&gt;DjangoCon
+Europe&lt;/a&gt;. The principle at Python conferences is that
+everyone pays to attend. This in turn ensures that funds are available for
+people who cannot afford to pay to attend.&lt;/p&gt;
+
+&lt;p&gt;I am in a lucky enough financial position that for about the price of two fancy
+cups of coffee a month I can help support an absolutely amazing project that
+helps everyone and anyone have the same powers a magician does. This helps
+(although my contribution is obviously a very small part of it) ensure that
+students and anyone else who cannot afford to help support the project, can use
+Sage.&lt;/p&gt;</content>
+		<author>
+			<name>Vince Knight</name>
+			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
+		</author>
+		<source>
+			<title type="html">Un peu de math</title>
+			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
+			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
+			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
+			<updated>2015-08-09T16:30:06+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Simulating continuous Markov chains</title>
@@ -146,7 +234,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -257,7 +345,7 @@ and characteristic function games will also be briefly discussed.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -347,7 +435,7 @@ conclusions :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -686,7 +774,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -921,7 +1009,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1045,7 +1133,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1181,7 +1269,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1349,7 +1437,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1455,7 +1543,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1508,7 +1596,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1571,7 +1659,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1722,7 +1810,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1791,7 +1879,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1854,7 +1942,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1958,7 +2046,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2342,7 +2430,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-01T12:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3040,7 +3128,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3060,7 +3148,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3080,7 +3168,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3100,7 +3188,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3715,7 +3803,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3735,64 +3823,7 @@ consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-09T15:30:06+00:00</updated>
-		</source>
-	</entry>
-
-	<entry xml:lang="en-US">
-		<title type="html">GSoC: An End, And A New Beginning</title>
-		<link href="http://blog.hav3n.net/?p=45"/>
-		<id>http://blog.hav3n.net/?p=45</id>
-		<updated>2014-08-23T09:15:24+00:00</updated>
-		<content type="html">Well, it&amp;#8217;s officially done. As per my proposal, the project has been officially completed. It&amp;#8217;s been a rollercoaster ride of new experiences, a ton of code(by my count its somewhere around 20k lines or so, but GitHub shows a much larger number) and some unforgettable memories. The app is nowhere near perfect, however, and I [&amp;#8230;]</content>
-		<author>
-			<name>Nikhil Peter</name>
-			<uri>http://blog.hav3n.net/?tag=gsoc-2014</uri>
-		</author>
-		<source>
-			<title type="html">Nikhil's GSoC Blog » GSoC 2014</title>
-			<link rel="self" href="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014"/>
-			<id>http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014</id>
-			<updated>2015-05-25T16:03:27+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">GSoC: Wrapping Up</title>
-		<link href="http://mathandhats.blogspot.com/2014/08/gsoc-wrapping-up.html"/>
-		<id>tag:blogger.com,1999:blog-4667528901979447244.post-1747499748510710173</id>
-		<updated>2014-08-22T09:04:50+00:00</updated>
-		<content type="html">Today marks the last day of my Google Summer of Code 2014 project. Evaluations are due midday Friday PDT, and code submissions for successfully passed projects start soon thereafter. The end result of my project can be found at Sage &lt;a href=&quot;http://trac.sagemath.org/ticket/16773&quot;&gt;Trac Ticket 16773&lt;/a&gt;. In total it's just over 2000 lines of Python and Cython code, to be added to the next major Sage release (6.4) if/when it gets a final thumbs-up review.&lt;br /&gt;&lt;br /&gt;When I write just the number of lines of code it doesn't sound like very much at all - I'm sure there are GSoC projects this year that produced at least 10k lines of code! However, given that what I wrote is complex mathematical code that needed a) significant optimization, and b) to be be mathematically sound in the first place, I'd say that isn't too bad. Especially since the code does what the project description aimed for it to do: compute analytic ranks of rational elliptic curves very quickly with a very low rate of failure. Hopefully this functionality can and will be used to produce numerical data for number theory research in the years to come.&lt;br /&gt;&lt;br /&gt;The Google Summer of Code has been a thoroughly rewarding experience for me. It's a great way to sharpen one's coding skills and get paid in the process. I recommend it for any university student who's looking to go into any industry that requires programming skills; I'd apply to do it again next year if I wasn't planning to graduate then!</content>
-		<author>
-			<name>Simon Spicer</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://mathandhats.blogspot.com</uri>
-		</author>
-		<source>
-			<title type="html">Math and Hats</title>
-			<subtitle type="html">A litany of logic and interesting headgear.</subtitle>
-			<link rel="self" href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage"/>
-			<id>tag:blogger.com,1999:blog-4667528901979447244</id>
-			<updated>2015-08-01T16:30:11+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">New combinatorial designs in Sage - by Nathann Cohen</title>
-		<link href="http://blog.harald.schil.ly/2014/08/new-combinatorial-designs-in-sage-by.html"/>
-		<id>tag:blogger.com,1999:blog-3473399517246044360.post-7007006977497989671</id>
-		<updated>2014-08-18T20:32:02+00:00</updated>
-		<content type="html">&lt;div dir=&quot;ltr&quot;&gt;&lt;div&gt;This is a guest post by Nathann Cohen.&amp;nbsp;&lt;/div&gt;&lt;hr size=&quot;1&quot; /&gt;&lt;br /&gt;&lt;h2&gt;New combinatorial designs in Sage&lt;/h2&gt;&lt;div&gt;Below, these graphs are a decomposition of a $K_{13}$ (i.e. the complete graph on 13 points) into copies of $K_4$. Pick two vertices you like: they appear exactly once together in one of the $K_4$.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-1SBIfp8sEvk/U_IG5p8AdXI/AAAAAAAAcMc/nK8044Ld6aY/s1600/bidis.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-1SBIfp8sEvk/U_IG5p8AdXI/AAAAAAAAcMc/nK8044Ld6aY/s1600/bidis.png&quot; height=&quot;400&quot; width=&quot;398&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div&gt;The second graph shows a decomposition of  a $K_{4,4,4}$ (i.e. the complete multipartite graph on $4\times 3$ points) into  copies of $K_3$. Pick two vertices you like from different groups: they  appear exactly once together in one of the $K_4$.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-2iuNNiHo9As/U_IG7AZEGrI/AAAAAAAAcMk/lfIOKmKHXDE/s1600/TDs.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-2iuNNiHo9As/U_IG7AZEGrI/AAAAAAAAcMk/lfIOKmKHXDE/s1600/TDs.png&quot; height=&quot;365&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br /&gt;Sage  has gotten quite good at building such decompositions (a specific kind  of combinatorial designs) when they exist. This post is about them.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;The first object belongs to a family called &lt;b&gt;Balanced Incomplete Block Designs (or $(n,k)$-BIBD)&lt;/b&gt;, which are defined as &quot;a collection $\mathcal S$ of sets, all of them with size $k$ (here $k=4$), such that any pair of points of a set $X$ with $|X|=n$ (here $n=13$) appears in exactly one set of $\mathcal S$&quot;.&lt;br /&gt;&lt;br /&gt;The second belongs to the family of &lt;b&gt;Transversal Designs (or $TD(k,n)$)&lt;/b&gt; which have a similar definition: consider a set $X$ containing $k$ groups (here $k=3$) of $n$ vertices (here $n=4$). A collection $\mathcal S$ of sets, each of which contains one point from each group, is a $TD(k,n)$ if any two points from different groups appear together in exactly one set of $\mathcal S$.&lt;br /&gt;&lt;br /&gt; The main problem with combinatorial designs is to know where they exist. And that is not obvious. Sage does what it can on about that:  &lt;br /&gt;&lt;ul&gt;&lt;li&gt; If you want it to build a $(14,4)$-BIBD, it will tell you that none exists. &lt;/li&gt;&lt;li&gt; If you want it to build a $(16,4)$-BIBD, it will tell you that one exists. &lt;/li&gt;&lt;li&gt; If you want it to build a $(51,6)$-BIBD, it will tell you that it just not know if there is one (and nobody knows better at the moment) &lt;/li&gt;&lt;/ul&gt;Examples here:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;sage: designs.balanced_incomplete_block_design(14,4,existence=True)&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;False&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;sage: designs.balanced_incomplete_block_design(16,4,existence=True)&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;sage: designs.balanced_incomplete_block_design(51,6,existence=True)&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;Unknown&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;For a developer (and design lover), the game consists in teaching Sage how to build all combinatorial designs that appear in some research paper. For BIBD as well as for Transversal Designs, on which a LOT of sweat was spent these last months.&lt;br /&gt;&lt;br /&gt;For Transversal designs the game is a bit different, as we know that a $TD(k-1,n)$ exists whenever a $TD(k,n)$ exists. Thus, the game consists in finding the largest integer $k_n$ such that a $TD(k_n,n)$ exists. This game is hardly new, and hardly straightforward: In the Handbook of Combinatorial Designs, one can find the table of such $k$ up to $n=10000$ (see &lt;a href=&quot;http://books.google.fr/books?id=S9FA9rq1BgoC&amp;dq=handbook%20combinatorial%20designs%20MOLS%2010000&amp;pg=PA176&quot;&gt;here&lt;/a&gt;).&lt;br /&gt;&lt;br /&gt;The good thing about Sage is that it does not just claim that such a design exists: it also builds it, and there is no better existence proof than that (it is very very quick to check that a combinatorial design is valid).  The &lt;i&gt;other&lt;/i&gt; good thing is that there is no common database for such data (the Handbook is not updated/printed every night), and that by teaching Sage all new designs found by researchers we build such a database. And it already contains designs that were not known when the Handbook was printed.&lt;br /&gt;&lt;br /&gt;Finally, the &lt;i&gt;other other&lt;/i&gt; good thing about Sage is that it will soon be able to tell you where those designs  come from. Indeed, the most powerful results in the field of Transversal Designs are of the shape &quot;If there exists a $TD(k_1,n_1)$, and a $TD(k_2,n_2)$, ..., and a $TD(k_c,n_c)$, then you can combine them all to obtain a $TD(k,n)$ with $k=k(k_1,...,k_c)$ and $n=n(n_1,...,n_c)$&quot;. And it is never very clear how to inverse these functions: if you want to build a $TD(k,n)$, which integers $k_1,...,k_c,n_1,...,n_c$ should you pick ?&lt;br /&gt;&lt;br /&gt; Sage knows. It must know it, in order to build these designs anyway. And you can find that data inside. And soon, we will teach it to give you the bibliographical references of the papers in which you can find the right construction to produce the $TD(k,n)$ that you want. And we will provide the right parameters. And the world will be at peace.&lt;br /&gt;&lt;br /&gt; A couple of things before we part: &lt;br /&gt;&lt;ul&gt;&lt;li&gt;Transversal Designs (TD), Orthogonal Arrays (OA), and Mutually Orthogonal Latin Squares (MOLS) are all equivalent objects. &lt;/li&gt;&lt;li&gt;We write a LOT of Transversal Designs code these days, so expect all this to improve very fast. &lt;/li&gt;&lt;li&gt;You can learn what Sage knows of combinatorial designs &lt;a href=&quot;http://www.sagemath.org/doc/reference/combinat/designs.html&quot;&gt;right here&lt;/a&gt;. &lt;/li&gt;&lt;/ul&gt;Finally, there are far too many combinatorial designs for one man to learn. If you love combinatorial designs, come join us: &lt;a href=&quot;http://www.labri.fr/perso/vdelecro/&quot;&gt;Vincent Delecroix&lt;/a&gt;, you, &lt;a href=&quot;http://www.steinertriples.fr/ncohen/&quot;&gt;and I&lt;/a&gt; have code to write together. And if you know a related mathematical results that Sage ignores, come tell us: we could not have gone so far without the mathematical knowledge of &lt;a href=&quot;https://research.unsw.edu.au/people/dr-julian-abel&quot;&gt;Julian Abel&lt;/a&gt;. And Sage does not know everything yet.&lt;br /&gt;&lt;br /&gt;Have fuuuuuuuuuuuuuuuuuuun !&lt;br /&gt;&lt;br /&gt;Nathann &lt;/div&gt;</content>
-		<author>
-			<name>Harald Schilly</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://blog.harald.schil.ly/search/label/sage</uri>
-		</author>
-		<source>
-			<title type="html">Harald Schilly</title>
-			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
-			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2015-08-02T19:31:15+00:00</updated>
+			<updated>2015-08-09T16:30:05+00:00</updated>
 		</source>
 	</entry>
 
