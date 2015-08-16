@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>August 16, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://borassisagemath.blogspot.com/" title="Performance Improvements for the Graph Module of Sagemath">Michele Borassi</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-8558001006126216932.post-3180150143433384427">
+<h4><a href="http://borassisagemath.blogspot.com/2015/08/conclusion-of-main-part-of-project.html">Conclusion of the Main Part of the Project</a></h4>
+<div class="entry">
+<div class="content">
+<span>Hi!</span><br /><span>In this post, I will summarize the results obtained with the inclusion in Sage of Boost and igraph libraries. This was the main part of my Google Summer of Code project, and it was completed yesterday, when ticket 19003 was closed.</span><br /><br /><span>We have increased the number of graph algorithms available in Sage from 66 to 98 (according to the list used in the initial comparison of the graph libraries [1]). Furthermore, we decreased the running-time of several Sage algorithms: in some cases, we have been able to improve the asymptotic running-time, obtaining up to 10000x improvements in our tests. Finally, during the inclusion of external algorithms, we have refactored and cleaned some of Sage source code, like the shortest path routines: we have standardized the input and the output of 15 routines related to shortest paths, and we have removed duplicate code as much as possible.</span><br /><br /><span>More specifically, the first part of the project was the inclusion of Boost graph library: since the library is only available in C++, we had to develop an interface. This interface lets us convert easily a Sage graph into a Boost graph, and run algorithms on the converted graph. Then, we have written routines to re-translate the output into a Sage-readable format: this way, the complicated Boost library is "hidden", and users can interact with it as they do with Sage. In particular, we have interfaced the following algorithms:</span><br /><ul><li><span>Edge connectivity (trac.sagemath.org/ticket/18564);</span></li><li><span>Clustering coefficient </span><span>(trac.sagemath.org/ticket/18811);</span></li><li><span>Cuthill-McKee and King vertex orderings </span><span>(trac.sagemath.org/ticket/18876);</span></li><li><span>Minimum spanning tree</span><span> </span><span>(trac.sagemath.org/ticket/18910);</span></li><li><span>Dijkstra, Bellman-Ford, Johnson shortest paths</span><span> </span><span>(trac.sagemath.org/ticket/18931);</span></li></ul><span>All these algorithms were either not available in Sage, or quite slow, compared to the Boost routines. As far as we know, Boost does not offer other algorithms that improve Sage algorithms: however, if such algorithms are developed in the future, it will be very easy to include them, using the new interface.</span><br /><span><br /></span><span>In the second part of the project, we included igraph: since this library already offers a Python interface, we decided to include it as an optional package (before it becomes a standard package, at least an year should pass [2]). To install the package, it is enough to type the following instruction from the Sage root folder:</span><br /><br /><span><span>sage -i igraph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # To install the igraph C core</span></span><br /><span><span>sage -i python_igraph # To install the Python interface</span></span><br /><br />Then, we can easily interact with igraph: for a list of available routines, it is enough to type "<span>igraph.</span>" and click tab twice. To convert a Sage graph <span>g_sage</span> into an igraph graph it is enough to type <span>g_igraph = g_sage.igraph_graph()</span>, while a Sage graph can be instantiated from an igraph graph through <span>g_sage=Graph(g_igraph)</span> or <span>g_sage=DiGraph(g_igraph)</span>. This way, all igraph algorithms are now available in Sage.<br /><br />Furthermore, we have included the igraph maximum flow algoritm inside the Sage corresponding function, obtaining significant improvements (for more information and benchmarks, we refer to ticket 19003 [3]).<br /><br />In conclusion, I think the project reached its main goal, the original plan was followed very closely, and we have been able to overcome all problems.<br /><br />Before closing this post, I would like to thank many people that helped me with great advices, and who provided great solutions to all the problems I faced. First of all, my mentor David Coudert: he always answered very fast to all my queries, and he gave me great suggestions to improve the quality of the code I wrote. Then, a very big help came from Nathann Cohen, who often cooperated with David in reviewing my code and proposing new solutions. Moreover, I have to thank Martin Cross, who gave me good suggestions with Boost graph library, and Volker Braun, who closed all my ticket. Finally, I have to thank the whole Sage community for giving me this great opportunity!<br /><br />[1] https://docs.google.com/spreadsheets/d/1Iu1hkQtRn9J-sgfZbQTu2RoXzyjoMEWP5-cm3nAwnWE/edit?usp=sharing<br />[2] http://doc.sagemath.org/html/en/developer/coding_in_other.html<br />[3] http://trac.sagemath.org/ticket/19003</div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://borassisagemath.blogspot.com/2015/08/conclusion-of-main-part-of-project.html">by Michele Borassi (noreply@blogger.com) at August 16, 2015 06:59 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>August 09, 2015</h2>
 
 <div class="channelgroup">
@@ -4116,464 +4152,6 @@ Transactions of the American Mathematical Society 46: 453–466.
 </div>
 
 </div>
-<div class="daygroup">
-<h2>August 27, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
-
-
-<div class="entrygroup" id="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released" lang="en">
-<h4><a href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released">slabbe-0.1.spkg released</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>These is a summary of the functionalities present in <a class="reference external" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Sage">slabbe-0.1</a> optional Sage
-package. It depends on version 6.3 of Sage because it uses
-<a class="reference external" href="http://www.sagemath.org/doc/reference/structure/sage/sets/recursively_enumerated_set.html">RecursivelyEnumeratedSet</a> code that was merged in 6.3.  It contains modules
-on digital geometry, combinatorics on words and more.</p>
-<p>Install the optional spkg (depends on sage-6.3):</p>
-
-
-<div class="pygments_manni"><pre>sage -i http://www.liafa.univ-paris-diderot.fr/~labbe/Sage/slabbe-0.1.spkg
-</pre></div>
-
-
-
-<p>In each of the example below, you first have to import the module once and for
-all:</p>
-
-
-<div class="pygments_manni"><pre>sage: from slabbe import *
-</pre></div>
-
-
-
-<p>To construct the image below, make sure to use tikz package so that <tt class="docutils literal">view</tt> is
-able to compile tikz code when called:</p>
-
-
-<div class="pygments_manni"><pre>sage: latex.add_to_preamble(&quot;\\usepackage{tikz}&quot;)
-sage: latex.extra_preamble()
-'\\usepackage{tikz}'
-</pre></div>
-
-
-
-<div class="section" id="draw-the-part-of-a-discrete-plane">
-<h1>Draw the part of a discrete plane</h1>
-
-
-<div class="pygments_manni"><pre>sage: p = DiscretePlane([1,pi,7], 1+pi+7, mu=0)
-sage: d = DiscreteTube([-5,5],[-5,5])
-sage: I = p &amp; d
-sage: I
-Intersection of the following objects:
-Set of points x in ZZ^3 satisfying: 0 &lt;= (1, pi, 7) . x + 0 &lt; pi + 8
-DiscreteTube: Preimage of [-5, 5] x [-5, 5] by a 2 by 3 matrix
-sage: clip = d.clip()
-sage: tikz = I.tikz(clip=clip)
-sage: view(tikz, tightpage=True)
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/discreteplane1pi7.png"><img alt="/~labbe/Files/2014/discreteplane1pi7.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/discreteplane1pi7.png" /></a>
-</div>
-<div class="section" id="draw-the-part-of-a-discrete-line">
-<h1>Draw the part of a discrete line</h1>
-
-
-<div class="pygments_manni"><pre>sage: L = DiscreteLine([-2,3], 5)
-sage: b = DiscreteBox([0,10], [0,10])
-sage: I = L &amp; b
-sage: I
-Intersection of the following objects:
-Set of points x in ZZ^2 satisfying: 0 &lt;= (-2, 3) . x + 0 &lt; 5
-[0, 10] x [0, 10]
-sage: I.plot()
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/discreteline23.png"><img alt="/~labbe/Files/2014/discreteline23.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/discreteline23.png" /></a>
-</div>
-<div class="section" id="double-square-tiles">
-<h1>Double square tiles</h1>
-<p>This module was developped for the article on the combinatorial properties of
-double square tiles written with Ariane Garon and Alexandre Blondin Massé
-<a class="citation-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#bgl2012" id="id3">[BGL2012]</a>. The original version of the code was written with Alexandre.</p>
-
-
-<div class="pygments_manni"><pre>sage: D = DoubleSquare((34,21,34,21))
-sage: D
-Double Square Tile
-  w0 = 3032321232303010303230301012101030   w4 = 1210103010121232121012123230323212
-  w1 = 323030103032321232303                w5 = 101212321210103010121
-  w2 = 2321210121232303232123230301030323   w6 = 0103032303010121010301012123212101
-  w3 = 212323032321210121232                w7 = 030101210103032303010
-(|w0|, |w1|, |w2|, |w3|) = (34, 21, 34, 21)
-(d0, d1, d2, d3)         = (42, 68, 42, 68)
-(n0, n1, n2, n3)         = (0, 0, 0, 0)
-sage: D.plot()
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2.png"><img alt="/~labbe/Files/2014/fibo2.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2.png" /></a>
-
-
-<div class="pygments_manni"><pre>sage: D.extend(0).extend(1).plot()
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2extend0extend1.png"><img alt="/~labbe/Files/2014/fibo2extend0extend1.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2extend0extend1.png" /></a>
-<p>We have shown that using two invertible operations (called SWAP and TRIM),
-every double square tiles can be reduced to the unit square:</p>
-
-
-<div class="pygments_manni"><pre>sage: D.plot_reduction()
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2reduction.png"><img alt="/~labbe/Files/2014/fibo2reduction.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/fibo2reduction.png" /></a>
-<p>The reduction operations are:</p>
-
-
-<div class="pygments_manni"><pre>sage: D.reduction()
-['SWAP_1', 'TRIM_1', 'TRIM_3', 'SWAP_1', 'TRIM_1', 'TRIM_3', 'TRIM_0', 'TRIM_2']
-</pre></div>
-
-
-
-<p>The result of the reduction is the unit square:</p>
-
-
-<div class="pygments_manni"><pre>sage: unit_square = D.apply(D.reduction())
-sage: unit_square
-Double Square Tile
-  w0 =     w4 =
-  w1 = 3   w5 = 1
-  w2 =     w6 =
-  w3 = 2   w7 = 0
-(|w0|, |w1|, |w2|, |w3|) = (0, 1, 0, 1)
-(d0, d1, d2, d3)         = (2, 0, 2, 0)
-(n0, n1, n2, n3)         = (0, NaN, 0, NaN)
-sage: unit_square.plot()
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/unit_square.png"><img alt="/~labbe/Files/2014/unit_square.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/unit_square.png" /></a>
-<p>Since SWAP and TRIM are invertible operations, we can recover every double
-square from the unit square:</p>
-
-
-<div class="pygments_manni"><pre>sage: E = unit_square.extend(2).extend(0).extend(3).extend(1).swap(1).extend(3).extend(1).swap(1)
-sage: D == E
-True
-</pre></div>
-
-
-
-</div>
-<div class="section" id="christoffel-graphs">
-<h1>Christoffel graphs</h1>
-<p>This module was developped for the article on a d-dimensional extension of
-Christoffel Words written with Christophe Reutenauer <a class="citation-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#lr2014" id="id5">[LR2014]</a>.</p>
-
-
-<div class="pygments_manni"><pre>sage: G = ChristoffelGraph((6,10,15))
-sage: G
-Christoffel set of edges for normal vector v=(6, 10, 15)
-sage: tikz = G.tikz_kernel()
-sage: view(tikz, tightpage=True)
-</pre></div>
-
-
-
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/christoffelgraph6_10_15.png"><img alt="/~labbe/Files/2014/christoffelgraph6_10_15.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/christoffelgraph6_10_15.png" /></a>
-</div>
-<div class="section" id="bispecial-extension-types">
-<h1>Bispecial extension types</h1>
-<p>This module was developped for the article on the factor complexity of
-infinite sequences genereated by substitutions written with Valérie Berthé
-<a class="citation-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#bl2014" id="id7">[BL2014]</a>.</p>
-<p>The extension type of an ordinary bispecial factor:</p>
-
-
-<div class="pygments_manni"><pre>sage: L = [(1,3), (2,3), (3,1), (3,2), (3,3)]
-sage: E = ExtensionType1to1(L, alphabet=(1,2,3))
-sage: E
-  E(w)   1   2   3
-   1             X
-   2             X
-   3     X   X   X
- m(w)=0, ordinary
-sage: E.is_ordinaire()
-True
-</pre></div>
-
-
-
-<p>Creation of a strong-weak pair of bispecial words from a neutral
-<strong>not ordinaire</strong> word:</p>
-
-
-<div class="pygments_manni"><pre>sage: p23 = WordMorphism({1:[1,2,3],2:[2,3],3:[3]})
-sage: e = ExtensionType1to1([(1,2),(2,3),(3,1),(3,2),(3,3)], [1,2,3])
-sage: e
-  E(w)   1   2   3
-   1         X
-   2             X
-   3     X   X   X
- m(w)=0, not ord.
-sage: A,B = e.apply(p23)
-sage: A
-  E(3w)   1   2   3
-    1
-    2         X   X
-    3     X   X   X
- m(w)=1, not ord.
-sage: B
-  E(23w)   1   2   3
-    1          X
-    2
-    3              X
- m(w)=-1, not ord.
-</pre></div>
-
-
-
-</div>
-<div class="section" id="fast-kolakoski-word">
-<h1>Fast Kolakoski word</h1>
-<p>This module was written for fun. It uses cython implementation inspired from
-the 10 lines of C code written by Dominique Bernardi and shared during Sage
-Days 28 in Orsay, France, in January 2011.</p>
-
-
-<div class="pygments_manni"><pre>sage: K = KolakoskiWord()
-sage: K
-word: 1221121221221121122121121221121121221221...
-sage: %time K[10^5]
-CPU times: user 1.56 ms, sys: 7 µs, total: 1.57 ms
-Wall time: 1.57 ms
-1
-sage: %time K[10^6]
-CPU times: user 15.8 ms, sys: 30 µs, total: 15.8 ms
-Wall time: 15.9 ms
-2
-sage: %time K[10^8]
-CPU times: user 1.58 s, sys: 2.28 ms, total: 1.58 s
-Wall time: 1.59 s
-1
-sage: %time K[10^9]
-CPU times: user 15.8 s, sys: 12.4 ms, total: 15.9 s
-Wall time: 15.9 s
-1
-</pre></div>
-
-
-
-<p>This is much faster than the Python implementation available in Sage:</p>
-
-
-<div class="pygments_manni"><pre>sage: K = words.KolakoskiWord()
-sage: %time K[10^5]
-CPU times: user 779 ms, sys: 25.9 ms, total: 805 ms
-Wall time: 802 ms
-1
-</pre></div>
-
-
-
-</div>
-<div class="section" id="references">
-<h1>References</h1>
-<table class="docutils citation" frame="void" id="bgl2012" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#id3">[BGL2012]</a></td><td>A. Blondin Massé, A. Garon, S. Labbé, Combinatorial properties
-of double square tiles, <em>Theoretical Computer Science</em> 502 (2013) 98-117.
-<a class="reference external" href="http://dx.doi.org/10.1016/j.tcs.2012.10.040">doi:10.1016/j.tcs.2012.10.040</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="lr2014" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#id5">[LR2014]</a></td><td>Labbé, Sébastien, and Christophe Reutenauer. A d-dimensional Extension of
-Christoffel Words. <a class="reference external" href="http://arxiv.org/abs/1404.4021">arXiv:1404.4021</a> (April 15, 2014).</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="bl2014" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released#id7">[BL2014]</a></td><td>V. Berthé, S. Labbé, Factor Complexity of S-adic sequences
-generated by the Arnoux-Rauzy-Poincaré Algorithm. <a class="reference external" href="http://arxiv.org/abs/1404.4189">arXiv:1404.4189</a> (April, 2014).</td></tr>
-</tbody>
-</table>
-</div>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/slabbe-0.1.spkg-released">by Sébastien Labbé at August 27, 2014 04:53 PM</a>
-</p>
-</div>
-</div>
-
-
-
-
-<div class="entrygroup" id="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/releasing-slabbe-my-own-sage-package" lang="en">
-<h4><a href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/releasing-slabbe-my-own-sage-package">Releasing slabbe, my own Sage package</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>Since two years I wrote thousands of line of private code for my own research.
-Each module having between 500 and 2000 lines of code. The code which is the
-more clean corresponds to code written in conjunction with research articles.
-People who know me know that I systematically put docstrings and doctests in my
-code to facilitate reuse of the code by myself, but also in the idea of sharing
-it and eventually making it public.</p>
-<p>I did not made that code into Sage because it was not mature enough. Also, when
-I tried to make a complete module go into Sage (see <a class="reference external" href="http://trac.sagemath.org/ticket/13069">#13069</a> and <a class="reference external" href="http://trac.sagemath.org/ticket/13346">#13346</a>),
-then the monstrous never evolving <a class="reference external" href="http://trac.sagemath.org/ticket/12224">#12224</a> became a dependency of the first
-and the second was unofficially reviewed asking me to split it into smaller
-chunks to make the review process easier. I never did it because I spent
-already too much time on it (making a module 100% doctested takes time). Also,
-the module was corresponding to a published article and I wanted to leave it
-just like that.</p>
-<p><strong>Getting new modules into Sage is hard</strong></p>
-<p>In general, the introduction of a complete new module into Sage is hard
-especially for beginners. Here are two examples I feel responsible for:
-<a class="reference external" href="http://trac.sagemath.org/ticket/10519">#10519</a> is 4 years old and counting, the author <a class="reference external" href="http://trac.sagemath.org/ticket/10519#comment:67">has a new work and
-responsabilities</a>; in <a class="reference external" href="http://trac.sagemath.org/ticket/12996">#12996</a>, the author was decouraged by the amount of
-work given by the reviewers. There is a lot of things a beginner has to
-consider to obtain a positive review. And even for a more advanced developper,
-other difficulties arise. Indeed, a module introduces a lot of new functions
-and it may also introduce a lot of new bugs... and Sage developpers are
-sometimes reluctant to give it a positive review. And if it finally gets a
-positive review, it is not available easily to normal users of Sage until the
-next release of Sage.</p>
-<p><strong>Releasing my own Sage package</strong></p>
-<p>Still I felt the need around me to make my code public. But how? There are
-people (a few of course but I know there are) who are interested in reproducing
-computations and images done in my articles. This is why I came to the idea of
-releasing my own Sage package containing my public research code. This way both
-developpers and colleagues that are user of Sage but not developpers will be
-able to install and use my code. This will make people more aware if there is
-something useful in a module for them. And if one day, somebody tells me: &quot;this
-should be in Sage&quot;, then I will be able to say : &quot;I agree! Do you want to
-review it?&quot;.</p>
-<p><strong>Old style Sage package</strong> vs <strong>New sytle git Sage package</strong></p>
-<p>Then I had to chose between the old and the new style for Sage packages. I did
-not like the new style, because</p>
-<blockquote>
-<ul class="simple">
-<li>I wanted the history of my package to be independant of the history of Sage,</li>
-<li>I wanted it to be as easy to install as <tt class="docutils literal">sage <span class="pre">-i</span> slabbe</tt>,</li>
-<li>I wanted it to work on any recent enough version of Sage,</li>
-<li>I wanted to be able to release a new version, give it to a colleague who
-could install it right away without changing its own Sage (i.e., updating
-the checksums).</li>
-</ul>
-</blockquote>
-<p>Therefore, I choose the old style. I based my work on other optional Sage
-packages, namely the <a class="reference external" href="http://sagemanifolds.obspm.fr/">SageManifolds</a> spkg and the <a class="reference external" href="http://www.risc.jku.at/research/combinat/risc/software/ore_algebra/index.php">ore_algebra</a> spkg.</p>
-<p><strong>Content of the initial version</strong></p>
-<p>The initial version of the slabbe Sage package has modules concerning four
-topics: <em>Digital geometry</em>, <em>Combinatorics on words</em>, <em>Combinatorics</em> and
-<em>Python class inheritance</em>.</p>
-<a class="reference external image-reference" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/slabbe_content.png"><img alt="/~labbe/Files/2014/slabbe_content.png" src="http://www.liafa.univ-paris-diderot.fr/~labbe/Files/2014/slabbe_content.png" /></a>
-<p>For installation or for release notes of the initial version of the spkg,
-consult the slabbe spkg section of the <a class="reference external" href="http://www.liafa.univ-paris-diderot.fr/~labbe/Sage">Sage</a> page of this website.</p>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/2014/08/releasing-slabbe-my-own-sage-package">by Sébastien Labbé at August 27, 2014 04:48 PM</a>
-</p>
-</div>
-</div>
-
-
-
-</div>
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-5041553718036647954">
-<h4><a href="http://sagemath.blogspot.com/2014/08/what-is-sagemathcloud-lets-clear-some.html">What is SageMathCloud: let's clear some things up</a></h4>
-<div class="entry">
-<div class="content">
-<span>[PDF version of this blog post]</span><br /><blockquote><i>"You will have to close source and commercialize Sage. It's inevitable."</i> -- Michael Monagan, cofounder of Maple, told me this in 2006.</blockquote><a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud (SMC) </a>is a website that I first launched in April 2013, through which you can use Sage and all other open source math software online, edit Latex documents, IPython notebooks, Sage worksheets, track your todo items, and many other types of documents. You can write, compile, and run code in most programming languages, and use a color command line terminal. There is realtime collaboration on everything through shared projects, terminals, etc. Each project comes with a default quota of 5GB disk space and 8GB of RAM.<br /><br /><a href="https://cloud.sagemath.com/" target="_blank">SMC</a> is fun to use, pretty to look at, frequently backs up your work in many ways, is fault tolerant, encourages collaboration, and provides a web-based way to use standard command-line tools.<br /><br /><h3 id="the-relationship-with-the-sagemath-software">The Relationship with the <a href="http://sagemath.org/">SageMath Software</a></h3>The goal of the SageMath software project, which I founded in 2005, is to create a viable free open source alternative to Magma, Mathematica, Maple, and Matlab. <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> is <strong>not</strong> mathematics software -- instead, <a href="https://cloud.sagemath.com/" target="_blank">SMC </a>is best viewed by analogy as a browser-based version of a Linux desktop environment like KDE or Gnome. The vast majority of the code we write for <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> involves text editor issues (problems similar to those confronted by Emacs or Vim), personal information management, support for editing LaTeX documents, terminals, file management, etc. There is almost no mathematics involved at all.<br /><br />That said, the main software <em>I</em> use is Sage, so of course support for Sage is a primary focus. <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> is a software environment that is being optimized for its users, who are mostly college students and teachers who use Sage (or Python) in conjunction with their courses. A big motivation for the existence of <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> is to make Sage much more accessible, since growth of Sage has stagnated since 2011, with the number one show-stopper obstruction being the difficulty of students installing Sage.<br /><h4 id="sage-is-failing">Sage is Failing</h4>Measured by the mission statement, Sage has overall failed. The core goal is to provide similar functionality to Magma (and the other Ma's) across the board, and the Sage development model and community has failed to do this across the board, since after 9 years, based on our current progress, we will never get there. There are numerous core areas of research mathematics that I'm personally familiar with (in arithmetic geometry), where Sage has barely moved in years and Sage does only a few percent of what Magma does. Unless there is a viable plan for the areas to <strong>all</strong> be systematically addressed in a reasonable timeframe, not just with arithmetic geometry in Magma, but with everything in Mathematica, Maple., etc, we are definitely failing at the main goal I have for the Sage math software project.<br /><br />I have absolutely no doubt that money combined with good planning and management would make it possible to achieve our mission statement. I've seen this hundreds of times over at a small scale at Sage Days workshops during the last decade. And let's not forget that with very substantial funding, Linux now provides a viable free open source alternative to Microsoft Windows. Just providing Sage developers with travel expenses (and 0 salary) is enough to get a huge amount done, when possible. But all my attempts with foundations and other clients to get any <em>significant</em> funding, at even the level of 1% of the funding that Mathematica gets each year, has failed. For the life of the Sage project, we've never got more than maybe 0.1% of what Mathematica gets in revenue. It's just a fact that the mathematics community provides Mathematica $50+ million a year, enough to fund over 600 fulltime positions, and they won't provide enough to fund one single Sage developer fulltime.<br /><br />But the Sage mission statement remains, and even if everybody else in the world gives up on it, <strong>I HAVE NOT</strong>. <a href="https://cloud.sagemath.com/" target="_blank">SMC </a>is my last ditch strategy to provide resources and visibility so we can succeed at this goal and give the world a viable free open source alternative to the Ma's. I wish I were writing interesting mathematical software, but I'm not, because I'm sucking it up and playing the long game.<br /><br /><h3 id="the-users-of-smc">The Users of <a href="https://cloud.sagemath.com/" target="_blank">SMC</a></h3>During the last academic year (e.g., April 2014) there were about 20K "monthly active users" (as defined by Google Analytics), 6K weekly active users, and usually around 300 simultaneous connected users. The summer months have been slower, due to less teaching.<br /><br />Numerically most users are undergraduate students in courses, who are asked to use <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> in conjunction with a course. There's also quite a bit of usage of <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> by people doing research in mathematics, statistics, economics, etc. -- pretty much all computational sciences. Very roughly, people create Sage worksheets, IPython notebooks, and Latex documents in somewhat equal proportions.<br /><h3 id="what-smc-runs-on">What <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> runs on</h3>Technically, SMC is a multi-datacenter web application without specific dependencies on particular cloud provider functionality. In particular, we use the Cassandra database, and custom backend services written in Node.js (about 15,000 lines of backend code). We also use Amazon's Route 53 service for geographically aware DNS. There are two racks containing dedicated computers on opposites sides of campus at University of Washington with 19 total machines, each with about 1TB SSD, 4TB+ HDD, and 96GB RAM. We also have dozens of VM's running at 2 Google data centers to the east.<br /><br />A substantial fraction of the work in implementing <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> has been in designing and implementing (and reimplementing many times, in response to real usage) a robust replicated backend infrastructure for projects, with regular snapshots and automatic failover across data centers. As I write this, users have created 66677 projects; each project is a self-contained Linux account whose files are replicated across several data centers.<br /><h3 id="the-source-code-of-smc">The Source Code of <a href="https://cloud.sagemath.com/" target="_blank">SMC</a></h3>The underlying source of SMC, both the backend server and frontend client, is mostly written in CoffeeScript. The frontend (which is nearly 20,000 lines of code) is implemented using the "progressive refinement" approach to HTML5/CSS/Javascript web development. We do not use any Javascript single page app frameworks, though we make heavy use of Bootstrap3 and jQuery. All of the library dependencies of SMC, e.g., CodeMirror, Bootstrap, jQuery, etc. for SMC are licensed under very permissive BSD/MIT, etc. libraries. In particular, absolutely nothing in the Javascript software stack is GPL or AGPL licensed. The plan is that any SMC source code that will be open sourced will be released under the BSD license. Some of the SMC source code is not publicly available, and is owned by University of Washington. But other code, e.g., the realtime sync code, is already available.<br />Some of the functionality of SMC, for example Sage worksheets, communicate with a separate process via a TCP connection. That separate process is in some cases a GPL'd program such as Sage, R, or Octave, so the viral nature of the GPL does not apply to SMC. Also, of course the virtual machines are running the Linux operating system, which is mostly GPL licensed. (There is absolutely no AGPL-licensed code anywhere in the picture.)<br /><br />Note that since none of the SMC server and client code links (even at an interpreter level) with any GPL'd software, that code can be legally distributed under any license (e.g., from BSD to commercial).<br />Also we plan to create a fully open source version of the Sage worksheet server part of SMC for inclusion with Sage. This is not our top priority, since there are several absolutely critical tasks that still must be finished first on SMC, e.g., basic course management.<br /><h3 id="the-smc-business-model">The <a href="https://cloud.sagemath.com/" target="_blank">SMC</a> Business Model</h3>The University of Washington Center for Commercialization (C4C) has been very involved and supportive since the start of the projects. There are no financial investors or separate company; instead, funding comes from UW, some unspent grant funds that were about to expire, and a substantial Google "Academic Education Grant" ($60K). Our first customer is the "US Army Engineer Research and Development Center", which just started a support/license agreement to run their own SMC internally. We don't currently offer a SaaS product for sale yet -- the options for what can be sold by UW are constrained, since UW is a not-for-profit state university. Currently users receive enhancements to their projects (e.g., increased RAM or disk space) in exchange for explaining to me the interesting research or teaching they are doing with <a href="https://cloud.sagemath.com/">SMC.</a><br /><br />The longterm plan is to start a separate for-profit company if we build a sufficient customer base. If this company is successful, it would also support fulltime development of Sage (e.g., via teaching buyouts for faculty, support of students, etc.), similar to how Magma (and Mathematica, etc.) development is funded.<br /><br />In conclusion, in response to Michael Monagan, you are wrong. And you are right.</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2014/08/what-is-sagemathcloud-lets-clear-some.html">by William Stein (noreply@blogger.com) at August 27, 2014 06:55 AM</a>
-</p>
-</div>
-</div>
-
-
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-2620037689426510230">
-<h4><a href="http://sagemath.blogspot.com/2014/08/you-dont-really-think-that-sage-has.html">You don't really think that Sage has failed, do you?</a></h4>
-<div class="entry">
-<div class="content">
-<div>I just received an email from a postdoc in Europe, and very longtime contributor to the<a href="http://sagemath.org/" target="_blank"> Sage project</a>. &nbsp;He's asking for a letter of recommendation, since he has to leave the world of mathematical software development (after a decade of training and experience), so that he can take a job at hedge fund. &nbsp;He ends his request with the question:</div><div><br /></div><div>&gt; P.S. You don't _really_ think that Sage has failed, do you?<br /><br />After almost exactly 10 years of working on the <a href="http://sagemath.org/" target="_blank">Sage project</a>, I absolutely do think it has failed to accomplish the stated goal of the mission statement: "<em>Create a viable free open source alternative to Magma, Maple, Mathematica and Matlab</em><span>."</span>. &nbsp; &nbsp; When it was only a few years into the project, it was really hard to evaluate progress against such a lofty mission statement. &nbsp;However, after 10 years, it's clear to me that not only have we not got there, we are not going to ever get there before I retire. &nbsp; And that's definitely a failure. &nbsp;&nbsp;</div><div><br /></div><div>Here's a very rough quote I overheard at lunch today at <a href="http://wiki.sagemath.org/days61" target="_blank">Sage Days 61</a>, from John Voight, who wrote much quaternion algebra code in <a href="http://magma.maths.usyd.edu.au/magma/" target="_blank">Magma</a>: "I'm making a list of what is missing from Sage that Magma has for working with quaternion algebras. &nbsp;However, it's so incredibly daunting, that I don't want to put in everything. &nbsp;I've been working on Magma's quaternion algebras for over 10 years, as have several other people. &nbsp;It's truly daunting how much functionality Magma has compared to Sage."</div><div><br /></div><div>The only possible way Sage will not fail at the stated mission is if I can get several million dollars a year in money to support developers to work fulltime on implementing interesting core mathematical algorithms. &nbsp;This is something that Magma has had for over 20 years, and that Maple, Matlab, and Mathematica also have. &nbsp; That I don't have such funding is probably why you are about to take a job at a hedge fund. &nbsp; &nbsp;If I had the money, I would <b><i>try</i></b> to hire a few of the absolute best people (rather than a bunch of amateurs), people like you, Robert Bradshaw, etc. -- we know who is good. (And clearly I mean serious salaries, not grad student wages!)</div><div><br /></div><div>So yes, I think the current approach to Sage has failed. &nbsp; &nbsp;I am going to try another approach, namely <a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a>. &nbsp;If it works, maybe the world will get a free open source alternative to Magma, Mathematica, etc. &nbsp;Otherwise, maybe the world never ever will. &nbsp; &nbsp; &nbsp;If you care like I do about having such a thing, and you're teaching course, or whatever, maybe try using <a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a>. &nbsp; If enough people use <a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a> for college teaching, then maybe a business model will emerge, and Sage will get proper funding. &nbsp;&nbsp;</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2014/08/you-dont-really-think-that-sage-has.html">by William Stein (noreply@blogger.com) at August 27, 2014 06:52 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -4713,10 +4291,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -4737,7 +4315,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-August 16, 2015 01:30 PM<br>
+August 16, 2015 02:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
