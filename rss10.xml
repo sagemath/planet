@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://benjamin-hackl.at/?p=391" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-8558001006126216932.post-3180150143433384427" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/08/09/why-I-am-a-paying-user-of-cloud.sagemath/" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/08/01/simulating_continuous_markov_chains/" />
@@ -60,6 +61,53 @@
 	</items>
 </channel>
 
+<item rdf:about="http://benjamin-hackl.at/?p=391">
+	<title>Benjamin Hackl: Asymptotic Expressions: Current Developments</title>
+	<link>http://benjamin-hackl.at/2015/08/17/asymptotic-expressions-current-developments/</link>
+	<content:encoded>&lt;p&gt;Since my last blog entry on the status of our implementation of &lt;a href=&quot;http://trac.sagemath.org/17601&quot;&gt;Asymptotic Expressions in SageMath&lt;/a&gt; quite a lot of improvements have happened. Essentially, all the pieces required in order to have a basic working implementation of multivariate asymptotics are there. The remaining tasks within my Google Summer of Code project are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Polish the documentation of our &lt;em&gt;minimal prototype&lt;/em&gt;, which consists of &lt;a href=&quot;http://trac.sagemath.org/17716&quot;&gt;#17716&lt;/a&gt; and the respective dependencies. Afterwards, we will set this to &lt;em&gt;needs_review&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Open a ticket for the &lt;em&gt;multivariate asymptotic ring &lt;/em&gt;and put together everything that we have written so far there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this blog post I want to give some more examples of what can be done with our implementation right now and what we would like to be able to handle in the future.&lt;/p&gt;
+&lt;h3&gt;Status Quo&lt;/h3&gt;
+&lt;p&gt;After I wrote my last blog entry, we introduced a central idea/interface to our project: &lt;em&gt;short notations&lt;/em&gt;. By using the &lt;em&gt;short notation factory&lt;/em&gt; for growth groups (introduced in &lt;a href=&quot;http://trac.sagemath.org/ticket/18930&quot;&gt;#18930&lt;/a&gt;) it becomes very simple to construct the desired growth group. Essentially, &lt;em&gt;monomial growth groups&lt;/em&gt; (cf. &lt;a href=&quot;http://trac.sagemath.org/17600&quot;&gt;#17600&lt;/a&gt;), i.e. groups that contain elements of the form &lt;pre class=&quot;crayon-plain-tag&quot;&gt;variable^power&lt;/pre&gt; (for a fixed variable and powers from some base ring, e.g. the Integer Ring or even the Rational Field) are represented by &lt;pre class=&quot;crayon-plain-tag&quot;&gt;variable^base&lt;/pre&gt; , where the base ring is also specified via its shortened name. The &lt;em&gt;short notation factory&lt;/em&gt; then enables us to do the following:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: from sage.groups.asymptotic_growth_group import GrowthGroup
+sage: G = GrowthGroup('x^ZZ'); G
+Growth Group x^ZZ
+sage: G.an_element()
+x
+sage: G = GrowthGroup('x^QQ'); G
+Growth Group x^QQ
+sage: G.an_element()
+x^(1/2)&lt;/pre&gt;&lt;p&gt;Naturally, this interface carries over to the generation of asymptotic rings: instead of the (slightly dubious) &lt;pre class=&quot;crayon-plain-tag&quot;&gt;&quot;monomial&quot;&lt;/pre&gt; keyword advertised in my last blog entry, we can now actually construct the growth group by specifying the respective growth group via its short representation:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: R.&amp;lt;x&amp;gt; = AsymptoticRing('x^ZZ', QQ); R
+Asymptotic Ring &amp;lt;x^ZZ&amp;gt; over Rational Field
+sage: (x^2 + O(x))^50
+x^100 + O(x^99)&lt;/pre&gt;&lt;p&gt;Recently, we also implemented another type of growth group: &lt;em&gt;exponential growth groups&lt;/em&gt; (see &lt;a href=&quot;http://trac.sagemath.org/ticket/19028&quot;&gt;#19028&lt;/a&gt;). These groups represent elements of the form &lt;pre class=&quot;crayon-plain-tag&quot;&gt;base^variable&lt;/pre&gt; where the base is from some multiplicative group. For example, we could do the following:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: G = GrowthGroup('QQ^x'); G
+Growth Group QQ^x
+sage: G.an_element()
+(1/2)^x
+sage: G(2^x) * G(3^x)
+6^x
+sage: G(5^x) * G((1/7)^x)
+(5/7)^x&lt;/pre&gt;&lt;p&gt;Note: unfortunately, we did not implement a function that allows taking some element from some growth group (e.g. &lt;pre class=&quot;crayon-plain-tag&quot;&gt;x&lt;/pre&gt; from a monomial growth group) as the variable in an exponential growth group &lt;strong&gt;yet&lt;/strong&gt;. Implementing some way to &amp;#8220;change&amp;#8221; between growth groups by taking the log or the exponential function is one of our next steps.&lt;/p&gt;
+&lt;p&gt;We also made this &lt;em&gt;short notation&lt;/em&gt; a central interface for working with &lt;em&gt;cartesian products&lt;/em&gt;. This is implemented in &lt;a href=&quot;http://trac.sagemath.org/ticket/18587&quot;&gt;#18587&lt;/a&gt;. For example, this allows to construct growth groups containing elements like $2^x \sqrt[5]{x^2} \log(x)^2$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: G = GrowthGroup('QQ^x * x^QQ * log(x)^ZZ'); G
+Growth Group QQ^x * x^QQ * log(x)^ZZ
+sage: G.an_element()
+(1/2)^x * x^(1/2) * log(x)
+sage: G(2^x * x^(2/5) * log(x)^2)
+2^x * x^(2/5) * log(x)^2&lt;/pre&gt;&lt;p&gt;Simple parsing from the symbolic ring (and from strings) is implemented. Like I have written above, operations like &lt;pre class=&quot;crayon-plain-tag&quot;&gt;2^G(x)&lt;/pre&gt; or &lt;pre class=&quot;crayon-plain-tag&quot;&gt;log(G(x))&lt;/pre&gt; are one of the next steps on our roadmap.&lt;/p&gt;
+&lt;h3&gt;Further Steps&lt;/h3&gt;
+&lt;p&gt;Of course, having an easy way to generate growth groups (and thus also asymptotic rings) is nice &amp;#8212; however, it would be even better if the process of finding the correct parent would be even more automated. Unfortunately, this requires some non-trivial effort regarding the pushout construction &amp;#8212; which will certainly not happen within the GSoC project.&lt;/p&gt;
+&lt;p&gt;As soon as we have an efficient way to &amp;#8220;switch&amp;#8221; between factors of a growth group (e.g. by taking the logarithm or the exponential function), this has to be carried over up to the asymptotic ring. Operations like&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: 2^(x^2 + O(x))
+2^(x^2) * 2^(O(x))&lt;/pre&gt;&lt;p&gt;where the output could also be &lt;pre class=&quot;crayon-plain-tag&quot;&gt;2^(x^2) * O(x^g)&lt;/pre&gt; , where $g$ is determined by &lt;pre class=&quot;crayon-plain-tag&quot;&gt;series_precision()&lt;/pre&gt; .&lt;/p&gt;
+&lt;p&gt;Division of asymptotic expressions can be realized with just about the same idea, for example:&lt;/p&gt;
+&lt;p&gt;\[ \frac{1}{x^2 + O(x)} = \frac{1}{x^2} \frac{1}{1 + O(1/x)} = x^{-2} + O(x^{-3}), \]&lt;/p&gt;
+&lt;p&gt;and so on. If an infinite series occurs, it will have to be cut using an $O$-Term, most likely somehow depending on &lt;pre class=&quot;crayon-plain-tag&quot;&gt;series_precision()&lt;/pre&gt; as well.&lt;/p&gt;
+&lt;p&gt;Ultimately, we would also like to incorporate, for example, Stirling&amp;#8217;s approximation of the factorial such that we could do something like&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: n.factorial()
+sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which then can be used to obtain asymptotic expansions of binomial coefficients like $\binom{2n}{n}$:&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;sage: (2*n).factorial() / (n.factorial()^2)
+1/sqrt(pi) * 4^n * n^(-1/2) + ...&lt;/pre&gt;&lt;p&gt;As you can see, there is still a lot of work within our &amp;#8220;Asymptotic Expressions&amp;#8221; project &amp;#8212; nevertheless, with the minimal working prototype and the ability to create cartesian products of growth groups, the fundament for all of this is already implemented! &lt;img src=&quot;http://s.w.org/images/core/emoji/72x72/1f609.png&quot; alt=&quot;😉&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</content:encoded>
+	<dc:date>2015-08-17T07:15:20+00:00</dc:date>
+</item>
 <item rdf:about="tag:blogger.com,1999:blog-8558001006126216932.post-3180150143433384427">
 	<title>Michele Borassi: Conclusion of the Main Part of the Project</title>
 	<link>http://borassisagemath.blogspot.com/2015/08/conclusion-of-main-part-of-project.html</link>

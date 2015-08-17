@@ -54,6 +54,83 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>August 17, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+
+
+<div class="entrygroup" id="http://benjamin-hackl.at/?p=391" lang="en-US">
+<h4><a href="http://benjamin-hackl.at/2015/08/17/asymptotic-expressions-current-developments/">Asymptotic Expressions: Current Developments</a></h4>
+<div class="entry">
+<div class="content">
+<p>Since my last blog entry on the status of our implementation of <a href="http://trac.sagemath.org/17601">Asymptotic Expressions in SageMath</a> quite a lot of improvements have happened. Essentially, all the pieces required in order to have a basic working implementation of multivariate asymptotics are there. The remaining tasks within my Google Summer of Code project are:</p>
+<ul>
+<li>Polish the documentation of our <em>minimal prototype</em>, which consists of <a href="http://trac.sagemath.org/17716">#17716</a> and the respective dependencies. Afterwards, we will set this to <em>needs_review</em>.</li>
+<li>Open a ticket for the <em>multivariate asymptotic ring </em>and put together everything that we have written so far there.</li>
+</ul>
+<p>In this blog post I want to give some more examples of what can be done with our implementation right now and what we would like to be able to handle in the future.</p>
+<h3>Status Quo</h3>
+<p>After I wrote my last blog entry, we introduced a central idea/interface to our project: <em>short notations</em>. By using the <em>short notation factory</em> for growth groups (introduced in <a href="http://trac.sagemath.org/ticket/18930">#18930</a>) it becomes very simple to construct the desired growth group. Essentially, <em>monomial growth groups</em> (cf. <a href="http://trac.sagemath.org/17600">#17600</a>), i.e. groups that contain elements of the form <pre class="crayon-plain-tag">variable^power</pre> (for a fixed variable and powers from some base ring, e.g. the Integer Ring or even the Rational Field) are represented by <pre class="crayon-plain-tag">variable^base</pre> , where the base ring is also specified via its shortened name. The <em>short notation factory</em> then enables us to do the following:</p><pre class="crayon-plain-tag">sage: from sage.groups.asymptotic_growth_group import GrowthGroup
+sage: G = GrowthGroup('x^ZZ'); G
+Growth Group x^ZZ
+sage: G.an_element()
+x
+sage: G = GrowthGroup('x^QQ'); G
+Growth Group x^QQ
+sage: G.an_element()
+x^(1/2)</pre><p>Naturally, this interface carries over to the generation of asymptotic rings: instead of the (slightly dubious) <pre class="crayon-plain-tag">"monomial"</pre> keyword advertised in my last blog entry, we can now actually construct the growth group by specifying the respective growth group via its short representation:</p><pre class="crayon-plain-tag">sage: R.&lt;x&gt; = AsymptoticRing('x^ZZ', QQ); R
+Asymptotic Ring &lt;x^ZZ&gt; over Rational Field
+sage: (x^2 + O(x))^50
+x^100 + O(x^99)</pre><p>Recently, we also implemented another type of growth group: <em>exponential growth groups</em> (see <a href="http://trac.sagemath.org/ticket/19028">#19028</a>). These groups represent elements of the form <pre class="crayon-plain-tag">base^variable</pre> where the base is from some multiplicative group. For example, we could do the following:</p><pre class="crayon-plain-tag">sage: G = GrowthGroup('QQ^x'); G
+Growth Group QQ^x
+sage: G.an_element()
+(1/2)^x
+sage: G(2^x) * G(3^x)
+6^x
+sage: G(5^x) * G((1/7)^x)
+(5/7)^x</pre><p>Note: unfortunately, we did not implement a function that allows taking some element from some growth group (e.g. <pre class="crayon-plain-tag">x</pre> from a monomial growth group) as the variable in an exponential growth group <strong>yet</strong>. Implementing some way to &#8220;change&#8221; between growth groups by taking the log or the exponential function is one of our next steps.</p>
+<p>We also made this <em>short notation</em> a central interface for working with <em>cartesian products</em>. This is implemented in <a href="http://trac.sagemath.org/ticket/18587">#18587</a>. For example, this allows to construct growth groups containing elements like $2^x \sqrt[5]{x^2} \log(x)^2$:</p><pre class="crayon-plain-tag">sage: G = GrowthGroup('QQ^x * x^QQ * log(x)^ZZ'); G
+Growth Group QQ^x * x^QQ * log(x)^ZZ
+sage: G.an_element()
+(1/2)^x * x^(1/2) * log(x)
+sage: G(2^x * x^(2/5) * log(x)^2)
+2^x * x^(2/5) * log(x)^2</pre><p>Simple parsing from the symbolic ring (and from strings) is implemented. Like I have written above, operations like <pre class="crayon-plain-tag">2^G(x)</pre> or <pre class="crayon-plain-tag">log(G(x))</pre> are one of the next steps on our roadmap.</p>
+<h3>Further Steps</h3>
+<p>Of course, having an easy way to generate growth groups (and thus also asymptotic rings) is nice &#8212; however, it would be even better if the process of finding the correct parent would be even more automated. Unfortunately, this requires some non-trivial effort regarding the pushout construction &#8212; which will certainly not happen within the GSoC project.</p>
+<p>As soon as we have an efficient way to &#8220;switch&#8221; between factors of a growth group (e.g. by taking the logarithm or the exponential function), this has to be carried over up to the asymptotic ring. Operations like</p><pre class="crayon-plain-tag">sage: 2^(x^2 + O(x))
+2^(x^2) * 2^(O(x))</pre><p>where the output could also be <pre class="crayon-plain-tag">2^(x^2) * O(x^g)</pre> , where $g$ is determined by <pre class="crayon-plain-tag">series_precision()</pre> .</p>
+<p>Division of asymptotic expressions can be realized with just about the same idea, for example:</p>
+<p>\[ \frac{1}{x^2 + O(x)} = \frac{1}{x^2} \frac{1}{1 + O(1/x)} = x^{-2} + O(x^{-3}), \]</p>
+<p>and so on. If an infinite series occurs, it will have to be cut using an $O$-Term, most likely somehow depending on <pre class="crayon-plain-tag">series_precision()</pre> as well.</p>
+<p>Ultimately, we would also like to incorporate, for example, Stirling&#8217;s approximation of the factorial such that we could do something like</p><pre class="crayon-plain-tag">sage: n.factorial()
+sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...</pre><p>which then can be used to obtain asymptotic expansions of binomial coefficients like $\binom{2n}{n}$:</p><pre class="crayon-plain-tag">sage: (2*n).factorial() / (n.factorial()^2)
+1/sqrt(pi) * 4^n * n^(-1/2) + ...</pre><p>As you can see, there is still a lot of work within our &#8220;Asymptotic Expressions&#8221; project &#8212; nevertheless, with the minimal working prototype and the ability to create cartesian products of growth groups, the fundament for all of this is already implemented! <img src="http://s.w.org/images/core/emoji/72x72/1f609.png" alt="😉" class="wp-smiley" /></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://benjamin-hackl.at/2015/08/17/asymptotic-expressions-current-developments/">by behackl at August 17, 2015 07:15 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>August 16, 2015</h2>
 
 <div class="channelgroup">
@@ -612,7 +689,7 @@ conclusions :)</p></div>
 
 
 
-<h3><a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
 
 
 <div class="entrygroup" id="http://benjamin-hackl.at/?p=358" lang="en-US">
@@ -1361,7 +1438,7 @@ This blog will follow my Google Summer of Code project, entitled <i>Performance 
 
 
 
-<h3><a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
 
 
 <div class="entrygroup" id="http://benjamin-hackl.at/?p=244" lang="en-US">
@@ -1462,7 +1539,7 @@ This blog will follow my Google Summer of Code project, entitled <i>Performance 
 
 
 
-<h3><a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
+<h3><a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a></h3>
 
 
 <div class="entrygroup" id="http://benjamin-hackl.at/?p=109" lang="en-US">
@@ -4192,7 +4269,7 @@ maintainer</a>.
 <a href="http://knotsknotted.wordpress.com/category/gsoc/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://knotsknotted.wordpress.com/" class="message" title="internal server error">Amit Jamadagni</a>
 </li>
 <li>
-<a href="http://benjamin-hackl.at/tag/gsoc15/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://benjamin-hackl.at/tag/gsoc15/" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a>
+<a href="http://benjamin-hackl.at/tag/gsoc15/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://benjamin-hackl.at" title="Benjamin Hackl » GSoC15">Benjamin Hackl</a>
 </li>
 <li>
 <a href="http://carlo-hamalainen.net/blog/?feed=rss2&amp;cat=8" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="no activity in 356 days">Carlo Hamalainen</a>
@@ -4291,10 +4368,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -4315,7 +4392,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-August 17, 2015 06:30 AM<br>
+August 17, 2015 07:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
