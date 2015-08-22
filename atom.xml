@@ -5,8 +5,30 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-08-22T20:30:14+00:00</updated>
+	<updated>2015-08-22T21:30:15+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry xml:lang="en-US">
+		<title type="html">Google Summer of Code 2015: Conclusion</title>
+		<link href="http://benjamin-hackl.at/2015/08/22/google-summer-of-code-2015-conclusion/"/>
+		<id>http://benjamin-hackl.at/?p=404</id>
+		<updated>2015-08-22T11:34:56+00:00</updated>
+		<content type="html">&lt;p&gt;The &lt;a href=&quot;https://developers.google.com/open-source/gsoc/&quot;&gt;&amp;#8220;Google Summer of Code 2015&amp;#8221;&lt;/a&gt; program has ended yesterday, on the 21. of August at 19.00 UTC. This blog entry shall provide a short wrap-up of &lt;a href=&quot;http://www.google-melange.com/gsoc/project/details/google/gsoc2015/behackl/5649050225344512&quot;&gt;our GSoC project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The aim of our project was to implement a &lt;em&gt;basic framework&lt;/em&gt; that enables us to do computations with asymptotic expressions in SageMath &amp;#8212; and I am very happy to say that we very much succeeded to do so. An overview of all our developments can be found at meta ticket &lt;a href=&quot;http://trac.sagemath.org/17601&quot;&gt;#17601&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Although we did not really follow the timeline suggested in my original proposal (mainly because the implementation of the &lt;a href=&quot;http://trac.sagemath.org/17716&quot;&gt;&lt;em&gt;Asymptotic Ring&lt;/em&gt;&lt;/a&gt; took way longer than originally anticipated) we managed to implement the majority of ideas from my proposal &amp;#8212; with the most important part being that our current prototype is &lt;strong&gt;stable&lt;/strong&gt;. In particular, this means that we do not expect to make major design changes at this point. Every detail of our design is well-discussed and can be explained.&lt;/p&gt;
+&lt;p&gt;Of course, our &lt;a href=&quot;http://trac.sagemath.org/17601&quot;&gt;&lt;em&gt;&amp;#8220;Asymptotic Expressions&amp;#8221; &lt;/em&gt;project&lt;/a&gt; is far from finished, and we will continue to extend the functionality of our framework. For example, although working with exponential and logarithmic terms is currently possible, it is not very convenient because the $\log$, $\exp$, and power functions are not fully implemented. Furthermore, it would be interesting to investigate the performance-gain obtained by cythonizing the central parts of this framework (e.g. parts of the &lt;em&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17693&quot;&gt;MutablePoset&lt;/a&gt;&lt;/em&gt;&amp;#8230;) &amp;#8212; and so on&amp;#8230;&lt;/p&gt;
+&lt;p&gt;To conclude, I want to thank &lt;a href=&quot;http://danielkrenn.at&quot;&gt;Daniel Krenn&lt;/a&gt; for his hard work and helpful advice als my mentor, as well as the SageMath community for giving me the opportunity to work on this project within the Google Summer of Code program! &lt;img src=&quot;http://benjamin-hackl.at/asdf-wp/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:-)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</content>
+		<author>
+			<name>Benjamin Hackl</name>
+			<uri>http://benjamin-hackl.at</uri>
+		</author>
+		<source>
+			<title type="html">Benjamin Hackl » GSoC15</title>
+			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
+			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
+			<updated>2015-08-22T21:30:15+00:00</updated>
+		</source>
+	</entry>
 
 	<entry xml:lang="en-US">
 		<title type="html">Asymptotic Expressions: Current Developments</title>
@@ -57,13 +79,13 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 1/sqrt(pi) * 4^n * n^(-1/2) + ...&lt;/pre&gt;&lt;p&gt;As you can see, there is still a lot of work within our &amp;#8220;Asymptotic Expressions&amp;#8221; project &amp;#8212; nevertheless, with the minimal working prototype and the ability to create cartesian products of growth groups, the fundament for all of this is already implemented! &lt;img src=&quot;http://s.w.org/images/core/emoji/72x72/1f609.png&quot; alt=&quot;😉&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</content>
 		<author>
 			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
+			<uri>http://benjamin-hackl.at</uri>
 		</author>
 		<source>
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-08-22T12:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -82,7 +104,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -331,7 +353,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -570,13 +592,13 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
 		<author>
 			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
+			<uri>http://benjamin-hackl.at</uri>
 		</author>
 		<source>
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-08-22T12:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -595,7 +617,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -614,7 +636,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1106,7 +1128,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1125,7 +1147,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1144,7 +1166,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-08-22T20:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1185,13 +1207,13 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
 		<author>
 			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
+			<uri>http://benjamin-hackl.at</uri>
 		</author>
 		<source>
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-08-22T12:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1211,7 +1233,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-22T20:30:06+00:00</updated>
+			<updated>2015-08-22T21:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -1232,13 +1254,13 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 &lt;p&gt;The work on our project (multivariate) Asymptotic Expressions (in cooperation with &lt;a href=&quot;http://danielkrenn.at&quot;&gt;Daniel Krenn&lt;/a&gt; and &lt;a href=&quot;http://wwwu.aau.at/cheuberg&quot;&gt;Clemens Heuberger&lt;/a&gt;) begins (or rather continues) on Monday, the 25th of May. Over the course of next week (probably in a $\varepsilon$-neighborhood of Monday) I will blog about the status quo, as well as about the motivation for the project. &lt;img src=&quot;http://benjamin-hackl.at/asdf-wp/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:-)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</content>
 		<author>
 			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
+			<uri>http://benjamin-hackl.at</uri>
 		</author>
 		<source>
 			<title type="html">Benjamin Hackl » GSoC15</title>
 			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
 			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2015-08-22T12:30:14+00:00</updated>
+			<updated>2015-08-22T21:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -3206,7 +3228,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-22T20:30:06+00:00</updated>
+			<updated>2015-08-22T21:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3226,7 +3248,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-22T20:30:06+00:00</updated>
+			<updated>2015-08-22T21:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3246,7 +3268,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-22T20:30:06+00:00</updated>
+			<updated>2015-08-22T21:30:07+00:00</updated>
 		</source>
 	</entry>
 
@@ -3266,7 +3288,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-22T20:30:06+00:00</updated>
+			<updated>2015-08-22T21:30:07+00:00</updated>
 		</source>
 	</entry>
 

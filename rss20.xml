@@ -8,6 +8,17 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>Benjamin Hackl: Google Summer of Code 2015: Conclusion</title>
+	<guid>http://benjamin-hackl.at/?p=404</guid>
+	<link>http://benjamin-hackl.at/2015/08/22/google-summer-of-code-2015-conclusion/</link>
+	<description>&lt;p&gt;The &lt;a href=&quot;https://developers.google.com/open-source/gsoc/&quot;&gt;&amp;#8220;Google Summer of Code 2015&amp;#8221;&lt;/a&gt; program has ended yesterday, on the 21. of August at 19.00 UTC. This blog entry shall provide a short wrap-up of &lt;a href=&quot;http://www.google-melange.com/gsoc/project/details/google/gsoc2015/behackl/5649050225344512&quot;&gt;our GSoC project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The aim of our project was to implement a &lt;em&gt;basic framework&lt;/em&gt; that enables us to do computations with asymptotic expressions in SageMath &amp;#8212; and I am very happy to say that we very much succeeded to do so. An overview of all our developments can be found at meta ticket &lt;a href=&quot;http://trac.sagemath.org/17601&quot;&gt;#17601&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Although we did not really follow the timeline suggested in my original proposal (mainly because the implementation of the &lt;a href=&quot;http://trac.sagemath.org/17716&quot;&gt;&lt;em&gt;Asymptotic Ring&lt;/em&gt;&lt;/a&gt; took way longer than originally anticipated) we managed to implement the majority of ideas from my proposal &amp;#8212; with the most important part being that our current prototype is &lt;strong&gt;stable&lt;/strong&gt;. In particular, this means that we do not expect to make major design changes at this point. Every detail of our design is well-discussed and can be explained.&lt;/p&gt;
+&lt;p&gt;Of course, our &lt;a href=&quot;http://trac.sagemath.org/17601&quot;&gt;&lt;em&gt;&amp;#8220;Asymptotic Expressions&amp;#8221; &lt;/em&gt;project&lt;/a&gt; is far from finished, and we will continue to extend the functionality of our framework. For example, although working with exponential and logarithmic terms is currently possible, it is not very convenient because the $\log$, $\exp$, and power functions are not fully implemented. Furthermore, it would be interesting to investigate the performance-gain obtained by cythonizing the central parts of this framework (e.g. parts of the &lt;em&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17693&quot;&gt;MutablePoset&lt;/a&gt;&lt;/em&gt;&amp;#8230;) &amp;#8212; and so on&amp;#8230;&lt;/p&gt;
+&lt;p&gt;To conclude, I want to thank &lt;a href=&quot;http://danielkrenn.at&quot;&gt;Daniel Krenn&lt;/a&gt; for his hard work and helpful advice als my mentor, as well as the SageMath community for giving me the opportunity to work on this project within the Google Summer of Code program! &lt;img src=&quot;http://benjamin-hackl.at/asdf-wp/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:-)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</description>
+	<pubDate>Sat, 22 Aug 2015 11:34:56 +0000</pubDate>
+</item>
+<item>
 	<title>Benjamin Hackl: Asymptotic Expressions: Current Developments</title>
 	<guid>http://benjamin-hackl.at/?p=391</guid>
 	<link>http://benjamin-hackl.at/2015/08/17/asymptotic-expressions-current-developments/</link>
