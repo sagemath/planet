@@ -5,8 +5,51 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-08-28T08:30:11+00:00</updated>
+	<updated>2015-08-28T09:30:23+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Natural language processing of new jokes from 2015</title>
+		<link href="http://drvinceknight.github.io/unpeudemath/code/2015/08/28/natural-language-processing-of-new-jokes-from-2015/"/>
+		<id>http://drvinceknight.github.io/unpeudemath/code/2015/08/28/natural-language-processing-of-new-jokes-from-2015/</id>
+		<updated>2015-08-28T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;This is a brief update to a previous post: &lt;a href=&quot;http://vknight.org/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny/&quot;&gt;“Python, natural language processing
+and predicting
+funny”&lt;/a&gt;.
+In that post I carried out some basic natural language processing with Python to
+predict whether or not a joke is funny. In this post I just update that with
+some more data from this year’s &lt;a href=&quot;http://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-34039927&quot;&gt;Edinburgh Fringe
+festival&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Take a look at &lt;a href=&quot;https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/nlp-of-jokes-2015.ipynb&quot;&gt;the ipython
+notebook&lt;/a&gt; which shows graphics and outputs of all the jokes.
+Interestingly this year’s winning joke is not deemed funny by the basic model :)
+but overall was 60% right this year (which is pretty good compared to last
+year).&lt;/p&gt;
+
+&lt;p&gt;Here is a summary plot of the classifiers for different thresholds of ‘funny’:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-all.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The corresponding plot this year (with the new data):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/joke_classification_moving_ratio_threshold-all-2015.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Take a look at the notebook file and by all means grab &lt;a href=&quot;https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/jokes.csv&quot;&gt;the csv
+file&lt;/a&gt; to
+play (but do let me know how you get on :)).&lt;/p&gt;</content>
+		<author>
+			<name>Vince Knight</name>
+			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
+		</author>
+		<source>
+			<title type="html">Un peu de math</title>
+			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
+			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
+			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
+			<updated>2015-08-28T09:30:06+00:00</updated>
+		</source>
+	</entry>
 
 	<entry xml:lang="en-US">
 		<title type="html">Google Summer of Code 2015: Conclusion</title>
@@ -192,7 +235,7 @@ Sage.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -334,7 +377,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -445,7 +488,7 @@ and characteristic function games will also be briefly discussed.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -535,7 +578,7 @@ conclusions :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -874,7 +917,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1109,7 +1152,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1233,7 +1276,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-28T08:30:05+00:00</updated>
+			<updated>2015-08-28T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1369,7 +1412,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1537,7 +1580,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1643,7 +1686,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1696,7 +1739,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1759,7 +1802,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1910,7 +1953,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1979,7 +2022,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2042,7 +2085,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2146,7 +2189,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2530,7 +2573,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://drvinceknight.github.io/unpeudemath/feed.xml"/>
 			<id>http://drvinceknight.github.io/unpeudemath/feed.xml</id>
-			<updated>2015-08-09T16:30:06+00:00</updated>
+			<updated>2015-08-28T09:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3228,7 +3271,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-28T08:30:05+00:00</updated>
+			<updated>2015-08-28T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3248,7 +3291,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-28T08:30:05+00:00</updated>
+			<updated>2015-08-28T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3268,7 +3311,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-28T08:30:05+00:00</updated>
+			<updated>2015-08-28T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3288,7 +3331,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-08-28T08:30:05+00:00</updated>
+			<updated>2015-08-28T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
