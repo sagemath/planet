@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-09-05T17:30:13+00:00</updated>
+	<updated>2015-09-05T18:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">The Simons Foundation and Open Source Software</title>
+		<link href="http://sagemath.blogspot.com/2015/09/the-simons-foundation-and-open-source.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-5753647510986290314</id>
+		<updated>2015-09-05T11:28:34+00:00</updated>
+		<content type="html">&lt;h2 id=&quot;jim-simons&quot;&gt;Jim Simons&lt;/h2&gt;Jim Simons is a mathematician who left academia to start a hedge fund that beat the stock market. He contributes back to the mathematical community through the &lt;a href=&quot;https://www.simonsfoundation.org/&quot;&gt;Simons Foundation&lt;/a&gt;, which provides an enormous amount of support to mathematicians and physicists, and has many outreach programs.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://sagemath.org/&quot;&gt;SageMath&lt;/a&gt; is a large software package for mathematics that I started in 2005 with the goal of &lt;strong&gt;creating a free open source viable alternative to Magma, Mathematica, Maple, and Matlab&lt;/strong&gt;. People frequently tell me I should approach the Simons Foundation for funding to support Sage. &lt;a href=&quot;https://news.ycombinator.com/item?id=10036779&quot;&gt;For example&lt;/a&gt;:&lt;br /&gt;&lt;blockquote&gt;Jim Simons, after retiring from Renaissance Technologies with a cool 15 billion, has spent the last 10 years giving grants to people in the pure sciences. He's a true academic at heart [...] Anyways, he's very fond of academics and gives MacArthur-esque grants, especially to people who want to change the way mathematics is taught. Approach his fund. &lt;strong&gt;I'm 100% sure he'll give you a grant on the spot.&lt;/strong&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;the-national-science-foundation&quot;&gt;The National Science Foundation&lt;/h2&gt;Last month the http://sagemath.org website had 45,114 monthly active users. However, as far as I know, there is no NSF funding for Sage in the United States right now, and development is mostly done on a shoestring in spare time. We have recently failed to get several NSF grants for Sage, despite there being Sage-related grants in the past from NSF. I know that funding is random, and I will keep trying. I have two proposals for Sage funding submitted to NSF right now.&lt;br /&gt;&lt;h2 id=&quot;several-million-dollars-per-year&quot;&gt;Several million dollars per year&lt;/h2&gt;I was incredibly excited in 2012 when David Eisenbud invited me to a meeting at the Simons Foundation headquarters in New York City with the following official description of their goals:&lt;br /&gt;&lt;blockquote&gt;The purpose of this round table is to investigate what sorts of support would facilitate the &lt;strong&gt;development, deployment and maintenance of open-source software used for fundamental research in mathematics&lt;/strong&gt;, statistics and theoretical physics. We hope that this group will consider what support is currently available, and whether there are projects that the Simons Foundation could undertake that would add significantly to the usefulness of computational tools for basic research.&amp;nbsp;Modes of support that duplicate or marginally improve on support that is already available through the universities or the federal government will not be of interest to the foundation. Questions of software that is primarily educational in nature may be useful as a comparison, but are not of primary interest. &amp;nbsp;The scale of foundation support will depend upon what is needed and on the potential scientific benefit, but could be substantial, perhaps up to &lt;strong&gt;several million dollars per year&lt;/strong&gt;.&lt;/blockquote&gt;&lt;blockquote&gt;Current modes of funding for research software in mathematics, statistics and physics differ very significantly. There may be correspondingly great differences in what the foundation might accomplish in these areas.&amp;nbsp;We hope that the round table members will be able to help the foundation understand the current landscape &amp;nbsp;(what are the needs, what is available, whether it is useful, how it is supported) both in general and across the different disciplines, and will help us think creatively about new possibilities.&lt;/blockquote&gt;I flew across country to this the meeting, where we spent the day discussing ways in which &quot;several million dollars per year&quot; could revolutionize &quot;the development, deployment and maintenance of open-source software used for fundamental research in mathematics...&quot;.&lt;br /&gt;&lt;br /&gt;In the afternoon Jim Simons arrived, and shook our hands. He then lectured us with some anecdotes, didn't listen to what we had to say, and didn't seem to understand open source software. I was frustrated watching how he treated the other participants, so I didn't say a word to him. I feel bad for failing to express myself.&lt;br /&gt;&lt;h2 id=&quot;the-decision&quot;&gt;The Decision&lt;/h2&gt;In the backroom during a coffee break, David Eisenbud told me that it had already been decided that they were going to just fund Magma by &lt;a href=&quot;https://news.ycombinator.com/item?id=10036779&quot;&gt;making it freely available to all academics in North America&lt;/a&gt;. WTF? I explained to David that Magma is closed source and that not only does funding Magma not help open source software like Sage, it actively hurts it. A huge motivation for people to contribute to Sage is that they do not have access to Magma (which was very expensive).&lt;br /&gt;&lt;br /&gt;I wandered out of that meeting in a daze; things had gone so differently than I had expected. How could a goal to &quot;facilitate the development, deployment and maintenance of open-source software... perhaps up to several million dollars per year&quot; result in a decision that would make things possibly much worse for open source software?&lt;br /&gt;&lt;br /&gt;That day I started thinking about creating what would become &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;. The engineering work needed to make Sage accessible to a wider audience wasn't going to happen without substantial funding (I had put years of my life into this problem but it's really hard, and I couldn't do it by myself). At least I could try to make it so people don't have to install Sage (which is very difficult). I also hoped a commercial entity could provide a more sustainable source of funding for open source mathematics software. Three years later, the net result of me starting SageMathCloud and spending almost every waking moment on it is that I've gone from having many grants to not, and SageMathCloud itself is losing money. But I remain cautiously optimistic and forge on...&lt;br /&gt;&lt;h2 id=&quot;we-will-not-fund-sage&quot;&gt;We will not fund Sage&lt;/h2&gt;Prompted by numerous messages recently from people, I wrote to David Eisenbud this week. He suggested I write to Yuri Schinkel, who is the current director of the Simons Foundation:&lt;br /&gt;&lt;blockquote&gt;Dear William,&lt;/blockquote&gt;&lt;blockquote&gt;Before I joined the foundation, there was a meeting conducted by David Eisenbud to discuss possible projects in this area, including Sage.&lt;/blockquote&gt;&lt;blockquote&gt;After that meeting it was decided that the foundation would support Magma.&lt;/blockquote&gt;&lt;blockquote&gt;Please keep me in the loop regarding developments at Sage, but &lt;strong&gt;I regret that we will not fund Sage&lt;/strong&gt; at this time.&lt;/blockquote&gt;&lt;blockquote&gt;Best regards, Yuri&lt;/blockquote&gt;The Simons Foundation, the NSF, or any other foundation does not owe the Sage project anything. Sage is used by a lot of people for free, who together have their research and teaching supported by hundreds of millions of dollars in NSF grants. Meanwhile the Sage project barely hobbles along. I meet people who have fantastic development or documentations projects for Sage that they can't do because they are far too busy with their fulltime teaching jobs. More funding would have a massive impact. It's only fair that the US mathematical community is at least aware of a missed opportunity.&lt;br /&gt;&lt;a href=&quot;http://opendreamkit.org/&quot; target=&quot;_blank&quot;&gt;Funding in Europe&lt;/a&gt; for open source math software is much better.</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2015-09-05T18:30:05+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">React, Flux, RethinkDB and SageMathCloud -- Summer 2015 update</title>
@@ -24,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -167,7 +187,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -416,7 +436,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -680,7 +700,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -699,7 +719,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1191,7 +1211,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1210,7 +1230,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1229,7 +1249,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-09-05T17:30:13+00:00</updated>
+			<updated>2015-09-05T18:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1296,7 +1316,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3291,7 +3311,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3311,7 +3331,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3331,7 +3351,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3351,7 +3371,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-05T17:30:05+00:00</updated>
+			<updated>2015-09-05T18:30:05+00:00</updated>
 		</source>
 	</entry>
 
