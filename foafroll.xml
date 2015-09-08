@@ -431,10 +431,10 @@
 		<foaf:Agent>
 			<foaf:name>Sébastien Labbé</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/">
+				<foaf:Document rdf:about="http://www.slabbe.org/blogue">
 					<dc:title>Sébastien Labbé</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://www.liafa.univ-paris-diderot.fr/~labbe/blogue/categorie/sage/feed/atom/index.xml" />
+						<rss:channel rdf:about="http://www.slabbe.org/blogue/categorie/sage/feed/index.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
