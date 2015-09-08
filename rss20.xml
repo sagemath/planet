@@ -8,2019 +8,6 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
-	<title>Sébastien Labbé: Some small Sage tricks</title>
-	<guid>http://www.slabbe.org/blogue/2012/12/some-small-sage-tricks</guid>
-	<link>http://www.slabbe.org/blogue/2012/12/some-small-sage-tricks</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Below are some Sage tricks that I gathered from other users of Sage, from
-sage-devel and other places since one year.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stop the focus in the Notebook&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This &lt;em&gt;Notebook hack of the day&lt;/em&gt; was &lt;a class=&quot;reference external&quot; href=&quot;http://groups.google.com/group/sage-devel/browse_thread/thread/c06e9b819cef90df&quot;&gt;published on sage-devel&lt;/a&gt; by William Stein
-during May 2012 to fix that focus movement in the Notebook:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;html('&amp;lt;script&amp;gt;cell_focus=function(x,y){} &amp;lt;/script&amp;gt;')
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Consult the documentation of a function in the browser&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Open the documentation of a particular function in a web browser, from either
-the command-line or the notebook:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: browse_sage_doc(factor)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;It works also for methods of an object:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: m = matrix(2, range(4))
-sage: browse_sage_doc(m.inverse)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I found this command when I consulted the &lt;tt class=&quot;docutils literal&quot;&gt;help()&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: help()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Implicit multiplication&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Some behavior in Sage can be made implicit like multiplication and variable
-definition. This might be good for new users coming from Maple for instance.&lt;/p&gt;
-&lt;p&gt;Normally, this syntax raises an error:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;------------------------------------------------------------&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;ipython console&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-     &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-       &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;
-&lt;span class=&quot;ne&quot;&gt;SyntaxError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;syntax&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;It is possible to make it work:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;implicit_multiplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Implicit variable definition&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The following works &lt;strong&gt;only&lt;/strong&gt; in the Sage Notebook. It allows to turn on
-automatic definition of variables:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;automatic_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Turn out automatic show when using plot&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Set the default to &lt;tt class=&quot;docutils literal&quot;&gt;False&lt;/tt&gt; for showing plots using any plot commands:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: show_default(False)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I prefer &lt;tt class=&quot;docutils literal&quot;&gt;False&lt;/tt&gt; but you may not.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Rerun the patchbot&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;One can re-run the tests of a particular ticket by adding &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;?kick&lt;/span&gt;&lt;/tt&gt; to the url
-of the ticket on the patchbot Sage server. For example, to rerun the tests on
-the ticket #13461, one can load the following page:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;http://patchbot.sagemath.org/ticket/13461/?kick
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;This trick was &lt;a class=&quot;reference external&quot; href=&quot;http://groups.google.com/d/topic/sage-devel/s9PxGFtNFC4/discussion&quot;&gt;shared on sage-devel&lt;/a&gt; during August 2012.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Python debugger&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The majority of the &lt;a class=&quot;reference external&quot; href=&quot;http://arxiv.org/abs/1210.0530&quot;&gt;Best Practices for Scientific Computing&lt;/a&gt; are followed by
-the Sage Development model. But, there is one principle that at least I do not
-use enough : a debugger. However, a Python debugger exists and a &lt;a class=&quot;reference external&quot; href=&quot;http://onlamp.com/pub/a/python/2005/09/01/debugger.html&quot;&gt;tutorial for
-using the Python debugger&lt;/a&gt; is available on onlamp.com.&lt;/p&gt;
-&lt;p&gt;I remember that discussion on sage-devel &lt;a class=&quot;reference external&quot; href=&quot;http://groups.google.com/d/topic/sage-devel/1_vPFk6u28U/discussion&quot;&gt;Poll: which debugger do you use?&lt;/a&gt;
-where developers were sharing their debugger tricks. It seems that using print
-statements is unavoidable.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Computing basic statistics with R&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I always knew R is in Sage but never used it even if sometimes I need to
-compute some statistics of list of numbers. In Sage, one can print statistics
-of a list of numbers using R:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Qu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Median&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Mean&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Qu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-  &lt;span class=&quot;mf&quot;&gt;14.00&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;27.75&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;57.50&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;53.45&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;69.00&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;98.00&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Creation of the number field in \(\sqrt{5}\)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Before learning it from &lt;a class=&quot;reference external&quot; href=&quot;http://youtu.be/NW_P0N8MO2s&quot;&gt;this video&lt;/a&gt; of William Stein, I did not know that the
-square brackets could be used to create such number field:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZZ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Order&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqrt5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;polynomial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqrt5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sqrt5&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Using Sage locally in the notebook from a server&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;First, log into the server using the following port setup:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;ssh -L 8389:localhoat:8389 [SERVER]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Start the notebook with the given port:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage -notebook port=8389
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;This ask for a password, if you forget it, you may reset it by first opening
-Sage, and by starting the notebook with the option &lt;tt class=&quot;docutils literal&quot;&gt;reset=True&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notebook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8389&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Then, by opening the browser at the following adress, I can log in to the
-notebook from the server:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;http://localhost:8389/home/admin/
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Going from Mercurial to Git&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Sage will soon &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.sagemath.org/sagedaysgit&quot;&gt;move from Mercurial to Git&lt;/a&gt;. In the past, I tried to
-understand the difference between Mercurial and Git. I was never able to find a
-simple text or blog post on the web explaining in a simple way the differences.
-One diffence would be &lt;a class=&quot;reference external&quot; href=&quot;http://lucumr.pocoo.org/2010/8/17/git-and-mercurial-branching/&quot;&gt;about branching&lt;/a&gt;. But I was not using branches with
-Mercurial... As I see it, differences between Mercurial and Git are hard to
-explain or at least hard to understand.&lt;/p&gt;
-&lt;p&gt;Anyway, I once found this tutorial on the Git version control system:
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.eecs.harvard.edu/~cduan/technical/git/&quot;&gt;Understanding Git Conceptually&lt;/a&gt; where the approach is &amp;quot;conceptual&amp;quot; and maybe
-easier for the mathematician. For instance, in Section 1 it is written that
-repositories can be &amp;quot;&lt;em&gt;visualized as a directed acyclic graph of commit
-objects&lt;/em&gt;&amp;quot;. I still haven't go through this tutorial but I consider to start
-with this one.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inheritance tree&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;One may draw the inheritance tree of a class with the following command:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;class_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;img alt=&quot;/Files/2012/class_graph_integer.png&quot; src=&quot;http://www.slabbe.org/Files/2012/class_graph_integer.png&quot; /&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: My implementation of André's Joyal Bijection using Sage</title>
-	<guid>http://www.slabbe.org/blogue/2012/05/my-implementation-of-andre-s-joyal-bijection-using-sage</guid>
-	<link>http://www.slabbe.org/blogue/2012/05/my-implementation-of-andre-s-joyal-bijection-using-sage</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.math.rutgers.edu/~zeilberg/&quot;&gt;Doron Zeilbeger&lt;/a&gt; made a talk last Friday at CRM in Montreal during &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.sagemath.org/days38&quot;&gt;Sage
-Days 38&lt;/a&gt; about \(n^{n-2}\). At the end of the talk, he propoed a contest to
-code &lt;a class=&quot;reference external&quot; href=&quot;http://fr.wikipedia.org/wiki/Bijection_de_Joyal&quot;&gt;Joyal's Bijection&lt;/a&gt; which relates double rooted trees on \(n\)
-vertices and endofunctions on \(n\) elements. I wrote an implementation in
-Sage. My code is available here : &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/Files/2012/joyal_bijection.sage&quot;&gt;joyal_bijection.sage&lt;/a&gt;.  It will certainly not win for the
-most brief code, but it is object oriented, documented, reusable, testable and
-allows introspection.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;example&quot;&gt;
-&lt;h1&gt;Example&lt;/h1&gt;
-&lt;p&gt;First, we must load the file:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;joyal_bijection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Creation of an endofunction:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Creation of a double rooted tree:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DoubleRootedTree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rooted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Edges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;RootA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;RootB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;From the endofunction &lt;tt class=&quot;docutils literal&quot;&gt;f&lt;/tt&gt;, we get a double rooted tree:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_double_rooted_tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rooted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Edges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;RootA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;RootB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;From the double rooted tree &lt;tt class=&quot;docutils literal&quot;&gt;D&lt;/tt&gt;, we get an endofunction:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;In fact, we get &lt;tt class=&quot;docutils literal&quot;&gt;D&lt;/tt&gt; from &lt;tt class=&quot;docutils literal&quot;&gt;f&lt;/tt&gt; and vice versa:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_double_rooted_tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;timing&quot;&gt;
-&lt;h1&gt;Timing&lt;/h1&gt;
-&lt;p&gt;On my machine, it takes 2.23 seconds to transform a random endofunction on
-\(\{0, 1, \cdots, 9999\}\) to a double rooted tree and then back to the
-endofunction and make sure the result is OK:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Endofunctions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_double_rooted_tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_endofunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CPU&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.23&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Wall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.24&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;comments&quot;&gt;
-&lt;h1&gt;Comments&lt;/h1&gt;
-&lt;p&gt;I am using the Sage graph library (Networkx) to find the cycles of a graph and
-to find the shortest path between two vertices. It would be interesting to
-compare the timing when using the &lt;a class=&quot;reference external&quot; href=&quot;http://zen.networkdynamics.org/&quot;&gt;zen&lt;/a&gt; library which is lot faster then
-networkx.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Testing the IPython 0.12 Notebook</title>
-	<guid>http://www.slabbe.org/blogue/2012/05/testing-the-ipython-0.12-notebook</guid>
-	<link>http://www.slabbe.org/blogue/2012/05/testing-the-ipython-0.12-notebook</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;On December 21 2011, version 0.12 of &lt;a class=&quot;reference external&quot; href=&quot;http://ipython.org/&quot;&gt;IPython&lt;/a&gt; was released with its own
-notebook. The differences with the Sage Notebook are explained by Fernando
-Perez, leader of IPython project, in the blog post &lt;a class=&quot;reference external&quot; href=&quot;http://blog.fperez.org/2012/01/ipython-notebook-historical.html&quot;&gt;The IPython notebook: a
-historical retrospective&lt;/a&gt; he wrote last January. One of the differences is
-that the IPython Notebook run in its own directory whereas each cell of the
-Sage Notebook lives in its directory.&lt;/p&gt;
-&lt;p&gt;The latest version of IPython is 0.12.1 and was released in April 2012 and I
-was curious of testing it. I followed the &lt;a class=&quot;reference external&quot; href=&quot;http://ipython.org/ipython-doc/stable/install/install.html#installnotebook&quot;&gt;installations&lt;/a&gt; informations. I got
-into trouble some times but finally managed to install it.  Below is how I did
-to install IPython 0.12.1 on my OSX 10.5.8 using Python 2.6.7.&lt;/p&gt;
-&lt;p&gt;Installing dependencies:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sudo easy_install-2.6 tornado
-sudo easy_install-2.6 nose
-sudo easy_install-2.6 pyzmq
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The following command was broken for a while:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sudo easy_install-2.6 pyzmq
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;ending with error &lt;tt class=&quot;docutils literal&quot;&gt;TypeError: 'NoneType' object is not callable&lt;/tt&gt;. I managed
-to make it work by redoing the above install commands in the correct above
-order:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sudo easy_install-2.6 tornado
-sudo easy_install-2.6 nose
-sudo easy_install-2.6 pyzmq
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Installing ipython-0.12:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sudo easy_install-2.6 ipython
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;To make &lt;tt class=&quot;docutils literal&quot;&gt;ipython&lt;/tt&gt; known from the command line, I added the following line to
-the file &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.bash_profile&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;# ipython
-export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:$PATH
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I tested the &lt;tt class=&quot;docutils literal&quot;&gt;ipython&lt;/tt&gt; installation with the &lt;tt class=&quot;docutils literal&quot;&gt;iptest&lt;/tt&gt; command. It finishes
-with &lt;tt class=&quot;docutils literal&quot;&gt;Status: OK&lt;/tt&gt;&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;iptest
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I open the ipython notebook and it worked:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;ipython notebook
-[NotebookApp] Using existing profile dir: u'/Users/slabbe/.ipython/profile_default'
-[NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888
-[NotebookApp] Use Control-C to stop this server and shut down all kernels.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;In safari, I get the following problem:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;Websocket connection to
-ws://127.0.0.1:8888/kernels/86fef706-f386-4116-b3e4-d6d7776afb0d could not
-be established.  You will NOT be able to run code.  Your browser may not be
-compatible with the websocket version in the server, or if the url does not
-look right, there could be an error in the server's configuration.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;But, in firefox, it works when I open a page at the above adress
-&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http://127.0.0.1:8888&lt;/span&gt;&lt;/tt&gt;. It gives me the following dashboard page.&lt;/p&gt;
-&lt;img alt=&quot;/Files/2012/ipynb_dashboard.png&quot; src=&quot;http://www.slabbe.org/Files/2012/ipynb_dashboard.png&quot; /&gt;
-&lt;p&gt;I created my first notebook and did some tests. I followed the documentation
-found &lt;a class=&quot;reference external&quot; href=&quot;http://ipython.org/ipython-doc/stable/interactive/htmlnotebook.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt=&quot;/Files/2012/ipynb_notebook.png&quot; src=&quot;http://www.slabbe.org/Files/2012/ipynb_notebook.png&quot; /&gt;
-&lt;p&gt;The next thing would be to try to use this with Sage. Some progress has been
-done and can be followed at ticket &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/sage_trac/ticket/12719&quot;&gt;#12719&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Evolution of the overall doctest coverage of Sage up to 4.8</title>
-	<guid>http://www.slabbe.org/blogue/2012/05/evolution-of-the-overall-doctest-coverage-of-sage</guid>
-	<link>http://www.slabbe.org/blogue/2012/05/evolution-of-the-overall-doctest-coverage-of-sage</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Recently, a &lt;a class=&quot;reference external&quot; href=&quot;http://groups.google.com/group/sage-devel/browse_thread/thread/aa60c0616ecdd1b6&quot;&gt;discussion on sage-devel&lt;/a&gt; mentionned the graph I did last year
-for the evolution of the overall doctest coverage of Sage. The graph was out of
-date, so I updated it with the recent data:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;Sage 4.7:   May 26, 2011        85.4%   ~  23769 / 27833
-Sage 4.7.1: August 16, 2011     85.7%   ~  24129 / 28155
-Sage 4.7.2: November 03, 2011   86.0%   ~  24477 / 28462
-Sage 4.8:   January 20, 2012    86.1%   ~  24601 / 28573
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;We are far from the +4.7% a year I was expecting...&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;doctest-coverage-of-sage&quot;&gt;
-&lt;h1&gt;Doctest coverage of Sage&lt;/h1&gt;
-&lt;img alt=&quot;/Files/2012/coverage_evolution.png&quot; src=&quot;http://www.slabbe.org/Files/2012/coverage_evolution.png&quot; /&gt;
-&lt;p&gt;I think we should now stop looking at this percentage for the 100% coverage
-goal, because the coverage is mostly influenced by the hundreds of new
-doctested functions that are added to every new version of Sage.&lt;/p&gt;
-&lt;p&gt;Instead we should consider the evolution of the number of undoctested functions
-(and maybe fix objectives about it):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;Sage 4.7:   May 26, 2011        4064
-Sage 4.7.1: August 16, 2011     4026  -&amp;gt;  38 old functions now 100% doctested
-Sage 4.7.2: November 03, 2011   3985  -&amp;gt;  41 old functions now 100% doctested
-Sage 4.8:   January 20, 2012    3972  -&amp;gt;  13 old functions now 100% doctested
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Here is the graph of it:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;number-of-undoctested-functions-in-sage&quot;&gt;
-&lt;h1&gt;Number of undoctested functions in Sage&lt;/h1&gt;
-&lt;img alt=&quot;/Files/2012/undoctested_fn_evolution.png&quot; src=&quot;http://www.slabbe.org/Files/2012/undoctested_fn_evolution.png&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Arnoux-Rauzy-Poincaré sequences</title>
-	<guid>http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences</guid>
-	<link>http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;In a recent article with Valérie Berthé &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#bl15&quot; id=&quot;id1&quot;&gt;[BL15]&lt;/a&gt;, we provided a multidimensional
-continued fraction algorithm called Arnoux-Rauzy-Poincaré (ARP) to construct,
-given any vector \(v\in\mathbb{R}_+^3\), an infinite word
-\(w\in\{1,2,3\}^\mathbb{N}\) over a three-letter alphabet such that the
-frequencies of letters in \(w\) exists and are equal to \(v\) and such that
-the number of factors (i.e.  finite block of consecutive letters) of length
-\(n\) appearing in \(w\) is linear and less than \(\frac{5}{2}n+1\). We
-also conjecture that for almost all \(v\) the contructed word describes a
-discrete path in the positive octant staying at a bounded distance from the
-euclidean line of direction \(v\).&lt;/p&gt;
-&lt;p&gt;In Sage, you can construct this word using the next version of my package
-slabbe-0.2 (not released yet, email me to press me to finish it). The one with
-frequencies of letters proportionnal to \((1, e, \pi)\) is:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe.mcf import algo
-sage: D = algo.arp.substitutions()
-sage: it = algo.arp.coding_iterator((1,e,pi))
-sage: w = words.s_adic(it, repeat(1), D)
-word: 1232323123233231232332312323123232312323...
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The factor complexity is close to 2n+1 and the balance is often less or equal
-to three:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: w[:10000].number_of_factors(100)
-202
-sage: w[:100000].number_of_factors(1000)
-2002
-sage: w[:1000].balance()
-3
-sage: w[:2000].balance()
-3
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Note that bounded distance from the euclidean line almost surely was proven in
-&lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#dhs2013&quot; id=&quot;id2&quot;&gt;[DHS2013]&lt;/a&gt; for Brun algorithm, another MCF algorithm.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Other approaches: Standard model and billiard sequences&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Other approaches have been proposed to construct such discrete lines.&lt;/p&gt;
-&lt;p&gt;One of them is the standard model of Eric Andres &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#a03&quot; id=&quot;id3&quot;&gt;[A03]&lt;/a&gt;. It is also equivalent
-to billiard sequences in the cube. It is well known that the factor complexity
-of billiard sequences is quadratic \(p(n)=n^2+n+1\) &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#amst94&quot; id=&quot;id4&quot;&gt;[AMST94]&lt;/a&gt;.
-Experimentally, we can verify this. We first create a billiard word of some
-given direction:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe import BilliardCube
-sage: v = vector(RR, (1, e, pi))
-sage: b = BilliardCube(v)
-sage: b
-Cubic billiard of direction (1.00000000000000, 2.71828182845905, 3.14159265358979)
-sage: w = b.to_word()
-sage: w
-word: 3231232323123233213232321323231233232132...
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;We create some prefixes of \(w\) that we represent internally as &lt;tt class=&quot;docutils literal&quot;&gt;char*&lt;/tt&gt;.
-The creation is slow because the implementation of billiard words in my
-optional package is in Python and is not that efficient:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3 = Word(w[:10^3], alphabet=[1,2,3], datatype='char')
-sage: p4 = Word(w[:10^4], alphabet=[1,2,3], datatype='char') # takes 3s
-sage: p5 = Word(w[:10^5], alphabet=[1,2,3], datatype='char') # takes 32s
-sage: p6 = Word(w[:10^6], alphabet=[1,2,3], datatype='char') # takes 5min 20s
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;We see below that exactly \(n^2+n+1\) factors of length \(n&amp;lt;20\) appears in
-the prefix of length 1000000 of \(w\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: A = ['n'] + range(30)
-sage: c3 = ['p_(w[:10^3])(n)'] + map(p3.number_of_factors, range(30))
-sage: c4 = ['p_(w[:10^4])(n)'] + map(p4.number_of_factors, range(30))
-sage: c5 = ['p_(w[:10^5])(n)'] + map(p5.number_of_factors, range(30)) # takes 4s
-sage: c6 = ['p_(w[:10^6])(n)'] + map(p6.number_of_factors, range(30)) # takes 49s
-sage: ref = ['n^2+n+1'] + [n^2+n+1 for n in range(30)]
-sage: T = table(columns=[A,c3,c4,c5,c6,ref])
-sage: T
-  n    p_(w[:10^3])(n)   p_(w[:10^4])(n)   p_(w[:10^5])(n)   p_(w[:10^6])(n)   n^2+n+1
-+----+-----------------+-----------------+-----------------+-----------------+---------+
-  0    1                 1                 1                 1                 1
-  1    3                 3                 3                 3                 3
-  2    7                 7                 7                 7                 7
-  3    13                13                13                13                13
-  4    21                21                21                21                21
-  5    31                31                31                31                31
-  6    43                43                43                43                43
-  7    52                55                56                57                57
-  8    63                69                71                73                73
-  9    74                85                88                91                91
-  10   87                103               107               111               111
-  11   100               123               128               133               133
-  12   115               145               151               157               157
-  13   130               169               176               183               183
-  14   144               195               203               211               211
-  15   160               223               232               241               241
-  16   176               253               263               273               273
-  17   192               285               296               307               307
-  18   208               319               331               343               343
-  19   224               355               368               381               381
-  20   239               392               407               421               421
-  21   254               430               448               463               463
-  22   268               470               491               507               507
-  23   282               510               536               553               553
-  24   296               552               583               601               601
-  25   310               596               632               651               651
-  26   324               642               683               703               703
-  27   335               687               734               757               757
-  28   345               734               787               813               813
-  29   355               783               842               871               871
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Billiard sequences generate paths that are at a bounded distance from an
-euclidean line. This is equivalent to say that the balance is finite. The
-balance is defined as the supremum value of difference of the number of
-apparition of a letter in two factors of the same length. For billiard
-sequences, the balance is 2:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3.balance()
-2
-sage: p4.balance() # takes 2min 37s
-2
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Other approaches: Melançon and Reutenauer&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Melançon and Reutenauer &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#mr13&quot; id=&quot;id5&quot;&gt;[MR13]&lt;/a&gt; also suggested a method that generalizes
-Christoffel words in higher dimension. The construction is based on the
-application of two substitutions generalizing the construction of sturmian
-sequences. Below we compute the factor complexity and the balance of some of
-their words over a three-letter alphabet.&lt;/p&gt;
-&lt;p&gt;On a three-letter alphabet, the two morphisms are:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: L = WordMorphism('1-&amp;gt;1,2-&amp;gt;13,3-&amp;gt;2')
-sage: R = WordMorphism('1-&amp;gt;13,2-&amp;gt;2,3-&amp;gt;3')
-sage: L
-WordMorphism: 1-&amp;gt;1, 2-&amp;gt;13, 3-&amp;gt;2
-sage: R
-WordMorphism: 1-&amp;gt;13, 2-&amp;gt;2, 3-&amp;gt;3
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 1: periodic case \(LRLRLRLRLR\dots\). In this example, the factor
-complexity seems to be around \(p(n)=2.76n\) and the balance is at least 28:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from itertools import repeat, cycle
-sage: W = words.s_adic(cycle((L,R)),repeat('1'))
-sage: W
-word: 1213122121313121312212212131221213131213...
-sage: map(W[:10000].number_of_factors, [10,20,40,80])
-[27, 54, 110, 221]
-sage: [27/10., 54/20., 110/40., 221/80.]
-[2.70000000000000, 2.70000000000000, 2.75000000000000, 2.76250000000000]
-sage: W[:1000].balance()  # takes 1.6s
-21
-sage: W[:2000].balance()  # takes 6.4s
-28
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 2: \(RLR^2LR^4LR^8LR^{16}LR^{32}LR^{64}LR^{128}\dots\) taken from
-the conclusion of their article. In this example, the factor complexity seems
-to be \(p(n)=3n\) and balance at least as high (=bad) as \(122\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: W = words.s_adic([R,L,R,R,L,R,R,R,R,L]+[R]*8+[L]+[R]*16+[L]+[R]*32+[L]+[R]*64+[L]+[R]*128,'1')
-sage: W.length()
-330312
-sage: map(W.number_of_factors, [10, 20, 100, 200, 300, 1000])
-[29, 57, 295, 595, 895, 2981]
-sage: [29/10., 57/20., 295/100., 595/200., 895/300., 2981/1000.]
-[2.90000000000000,
- 2.85000000000000,
- 2.95000000000000,
- 2.97500000000000,
- 2.98333333333333,
- 2.98100000000000]
-sage: W[:1000].balance()  # takes 1.6s
-122
-sage: W[:2000].balance()  # takes 6s
-122
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 3: some random ones. The complexity \(p(n)/n\) occillates between 2
-and 3 for factors of length \(n=1000\) in prefixes of length 100000:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
-....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
-....:     print W[:100000].number_of_factors(1000)/1000.
-2.02700000000000
-2.23600000000000
-2.74000000000000
-2.21500000000000
-2.78700000000000
-2.52700000000000
-2.85700000000000
-2.33300000000000
-2.65500000000000
-2.51800000000000
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;For ten randomly generated words, the balance goes from 6 to 27 which is much
-more than what is obtained for billiard words or by our approach:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
-....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
-....:     print W[:1000].balance(), W[:2000].balance()
-12 15
-8 24
-14 14
-5 11
-17 17
-14 14
-6 6
-19 27
-9 16
-12 12
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;div class=&quot;section&quot; id=&quot;references&quot;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;bl15&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id1&quot;&gt;[BL15]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;V. Berthé, S. Labbé,
-Factor Complexity of S-adic words generated by the Arnoux-Rauzy-Poincaré Algorithm,
-&lt;em&gt;Advances in Applied Mathematics&lt;/em&gt; 63 (2015) 90-130.
-&lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.aam.2014.11.001&quot;&gt;http://dx.doi.org/10.1016/j.aam.2014.11.001&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;dhs2013&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id2&quot;&gt;[DHS2013]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Delecroix, Vincent, Tomás Hejda, and Wolfgang Steiner. “Balancedness of
-Arnoux-Rauzy and Brun Words.” In Combinatorics on Words, 119–31. Springer,
-2013. &lt;a class=&quot;reference external&quot; href=&quot;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&quot;&gt;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;a03&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id3&quot;&gt;[A03]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;E. Andres,
-Discrete linear objects in dimension n: the standard model,
-Graphical Models 65 (2003) 92-111.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;amst94&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id4&quot;&gt;[AMST94]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;P. Arnoux, C. Mauduit, I. Shiokawa, J. I. Tamura,
-Complexity of sequences defined by billiards in the cube,
-Bull. Soc. Math. France 122 (1994) 1-12.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;mr13&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id5&quot;&gt;[MR13]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;G. Melançon, C. Reutenauer,
-On a class of Lyndon words extending Christoffel words and related to a
-multidimensional continued fraction algorithm.
-J. Integer Seq. 16, No. 9, Article 13.9.7, 30 p., electronic only (2013).
-&lt;a class=&quot;reference external&quot; href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&quot;&gt;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: slabbe-0.1.spkg released</title>
-	<guid>http://www.slabbe.org/blogue/2014/08/slabbe-0.1.spkg-released</guid>
-	<link>http://www.slabbe.org/blogue/2014/08/slabbe-0.1.spkg-released</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;These is a summary of the functionalities present in &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/Sage&quot;&gt;slabbe-0.1&lt;/a&gt; optional Sage
-package. It depends on version 6.3 of Sage because it uses
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.sagemath.org/doc/reference/structure/sage/sets/recursively_enumerated_set.html&quot;&gt;RecursivelyEnumeratedSet&lt;/a&gt; code that was merged in 6.3.  It contains modules
-on digital geometry, combinatorics on words and more.&lt;/p&gt;
-&lt;p&gt;Install the optional spkg (depends on sage-6.3):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage -i http://www.liafa.univ-paris-diderot.fr/~labbe/Sage/slabbe-0.1.spkg
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;In each of the example below, you first have to import the module once and for
-all:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe import *
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;To construct the image below, make sure to use tikz package so that &lt;tt class=&quot;docutils literal&quot;&gt;view&lt;/tt&gt; is
-able to compile tikz code when called:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: latex.add_to_preamble(&amp;quot;\\usepackage{tikz}&amp;quot;)
-sage: latex.extra_preamble()
-'\\usepackage{tikz}'
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;div class=&quot;section&quot; id=&quot;draw-the-part-of-a-discrete-plane&quot;&gt;
-&lt;h1&gt;Draw the part of a discrete plane&lt;/h1&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p = DiscretePlane([1,pi,7], 1+pi+7, mu=0)
-sage: d = DiscreteTube([-5,5],[-5,5])
-sage: I = p &amp;amp; d
-sage: I
-Intersection of the following objects:
-Set of points x in ZZ^3 satisfying: 0 &amp;lt;= (1, pi, 7) . x + 0 &amp;lt; pi + 8
-DiscreteTube: Preimage of [-5, 5] x [-5, 5] by a 2 by 3 matrix
-sage: clip = d.clip()
-sage: tikz = I.tikz(clip=clip)
-sage: view(tikz, tightpage=True)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/discreteplane1pi7.png&quot;&gt;&lt;img alt=&quot;/Files/2014/discreteplane1pi7.png&quot; src=&quot;http://www.slabbe.org/Files/2014/discreteplane1pi7.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;draw-the-part-of-a-discrete-line&quot;&gt;
-&lt;h1&gt;Draw the part of a discrete line&lt;/h1&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: L = DiscreteLine([-2,3], 5)
-sage: b = DiscreteBox([0,10], [0,10])
-sage: I = L &amp;amp; b
-sage: I
-Intersection of the following objects:
-Set of points x in ZZ^2 satisfying: 0 &amp;lt;= (-2, 3) . x + 0 &amp;lt; 5
-[0, 10] x [0, 10]
-sage: I.plot()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/discreteline23.png&quot;&gt;&lt;img alt=&quot;/Files/2014/discreteline23.png&quot; src=&quot;http://www.slabbe.org/Files/2014/discreteline23.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;double-square-tiles&quot;&gt;
-&lt;h1&gt;Double square tiles&lt;/h1&gt;
-&lt;p&gt;This module was developped for the article on the combinatorial properties of
-double square tiles written with Ariane Garon and Alexandre Blondin Massé
-&lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#bgl2012&quot; id=&quot;id3&quot;&gt;[BGL2012]&lt;/a&gt;. The original version of the code was written with Alexandre.&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: D = DoubleSquare((34,21,34,21))
-sage: D
-Double Square Tile
-  w0 = 3032321232303010303230301012101030   w4 = 1210103010121232121012123230323212
-  w1 = 323030103032321232303                w5 = 101212321210103010121
-  w2 = 2321210121232303232123230301030323   w6 = 0103032303010121010301012123212101
-  w3 = 212323032321210121232                w7 = 030101210103032303010
-(|w0|, |w1|, |w2|, |w3|) = (34, 21, 34, 21)
-(d0, d1, d2, d3)         = (42, 68, 42, 68)
-(n0, n1, n2, n3)         = (0, 0, 0, 0)
-sage: D.plot()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/fibo2.png&quot;&gt;&lt;img alt=&quot;/Files/2014/fibo2.png&quot; src=&quot;http://www.slabbe.org/Files/2014/fibo2.png&quot; /&gt;&lt;/a&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: D.extend(0).extend(1).plot()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/fibo2extend0extend1.png&quot;&gt;&lt;img alt=&quot;/Files/2014/fibo2extend0extend1.png&quot; src=&quot;http://www.slabbe.org/Files/2014/fibo2extend0extend1.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;We have shown that using two invertible operations (called SWAP and TRIM),
-every double square tiles can be reduced to the unit square:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: D.plot_reduction()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/fibo2reduction.png&quot;&gt;&lt;img alt=&quot;/Files/2014/fibo2reduction.png&quot; src=&quot;http://www.slabbe.org/Files/2014/fibo2reduction.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;The reduction operations are:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: D.reduction()
-['SWAP_1', 'TRIM_1', 'TRIM_3', 'SWAP_1', 'TRIM_1', 'TRIM_3', 'TRIM_0', 'TRIM_2']
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The result of the reduction is the unit square:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: unit_square = D.apply(D.reduction())
-sage: unit_square
-Double Square Tile
-  w0 =     w4 =
-  w1 = 3   w5 = 1
-  w2 =     w6 =
-  w3 = 2   w7 = 0
-(|w0|, |w1|, |w2|, |w3|) = (0, 1, 0, 1)
-(d0, d1, d2, d3)         = (2, 0, 2, 0)
-(n0, n1, n2, n3)         = (0, NaN, 0, NaN)
-sage: unit_square.plot()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/unit_square.png&quot;&gt;&lt;img alt=&quot;/Files/2014/unit_square.png&quot; src=&quot;http://www.slabbe.org/Files/2014/unit_square.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Since SWAP and TRIM are invertible operations, we can recover every double
-square from the unit square:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: E = unit_square.extend(2).extend(0).extend(3).extend(1).swap(1).extend(3).extend(1).swap(1)
-sage: D == E
-True
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;christoffel-graphs&quot;&gt;
-&lt;h1&gt;Christoffel graphs&lt;/h1&gt;
-&lt;p&gt;This module was developped for the article on a d-dimensional extension of
-Christoffel Words written with Christophe Reutenauer &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#lr2014&quot; id=&quot;id5&quot;&gt;[LR2014]&lt;/a&gt;.&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: G = ChristoffelGraph((6,10,15))
-sage: G
-Christoffel set of edges for normal vector v=(6, 10, 15)
-sage: tikz = G.tikz_kernel()
-sage: view(tikz, tightpage=True)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/christoffelgraph6_10_15.png&quot;&gt;&lt;img alt=&quot;/Files/2014/christoffelgraph6_10_15.png&quot; src=&quot;http://www.slabbe.org/Files/2014/christoffelgraph6_10_15.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;bispecial-extension-types&quot;&gt;
-&lt;h1&gt;Bispecial extension types&lt;/h1&gt;
-&lt;p&gt;This module was developped for the article on the factor complexity of
-infinite sequences genereated by substitutions written with Valérie Berthé
-&lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#bl2014&quot; id=&quot;id7&quot;&gt;[BL2014]&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The extension type of an ordinary bispecial factor:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: L = [(1,3), (2,3), (3,1), (3,2), (3,3)]
-sage: E = ExtensionType1to1(L, alphabet=(1,2,3))
-sage: E
-  E(w)   1   2   3
-   1             X
-   2             X
-   3     X   X   X
- m(w)=0, ordinary
-sage: E.is_ordinaire()
-True
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Creation of a strong-weak pair of bispecial words from a neutral
-&lt;strong&gt;not ordinaire&lt;/strong&gt; word:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p23 = WordMorphism({1:[1,2,3],2:[2,3],3:[3]})
-sage: e = ExtensionType1to1([(1,2),(2,3),(3,1),(3,2),(3,3)], [1,2,3])
-sage: e
-  E(w)   1   2   3
-   1         X
-   2             X
-   3     X   X   X
- m(w)=0, not ord.
-sage: A,B = e.apply(p23)
-sage: A
-  E(3w)   1   2   3
-    1
-    2         X   X
-    3     X   X   X
- m(w)=1, not ord.
-sage: B
-  E(23w)   1   2   3
-    1          X
-    2
-    3              X
- m(w)=-1, not ord.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;fast-kolakoski-word&quot;&gt;
-&lt;h1&gt;Fast Kolakoski word&lt;/h1&gt;
-&lt;p&gt;This module was written for fun. It uses cython implementation inspired from
-the 10 lines of C code written by Dominique Bernardi and shared during Sage
-Days 28 in Orsay, France, in January 2011.&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: K = KolakoskiWord()
-sage: K
-word: 1221121221221121122121121221121121221221...
-sage: %time K[10^5]
-CPU times: user 1.56 ms, sys: 7 µs, total: 1.57 ms
-Wall time: 1.57 ms
-1
-sage: %time K[10^6]
-CPU times: user 15.8 ms, sys: 30 µs, total: 15.8 ms
-Wall time: 15.9 ms
-2
-sage: %time K[10^8]
-CPU times: user 1.58 s, sys: 2.28 ms, total: 1.58 s
-Wall time: 1.59 s
-1
-sage: %time K[10^9]
-CPU times: user 15.8 s, sys: 12.4 ms, total: 15.9 s
-Wall time: 15.9 s
-1
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;This is much faster than the Python implementation available in Sage:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: K = words.KolakoskiWord()
-sage: %time K[10^5]
-CPU times: user 779 ms, sys: 25.9 ms, total: 805 ms
-Wall time: 802 ms
-1
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;references&quot;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;bgl2012&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id3&quot;&gt;[BGL2012]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;A. Blondin Massé, A. Garon, S. Labbé, Combinatorial properties
-of double square tiles, &lt;em&gt;Theoretical Computer Science&lt;/em&gt; 502 (2013) 98-117.
-&lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.tcs.2012.10.040&quot;&gt;doi:10.1016/j.tcs.2012.10.040&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;lr2014&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id5&quot;&gt;[LR2014]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Labbé, Sébastien, and Christophe Reutenauer. A d-dimensional Extension of
-Christoffel Words. &lt;a class=&quot;reference external&quot; href=&quot;http://arxiv.org/abs/1404.4021&quot;&gt;arXiv:1404.4021&lt;/a&gt; (April 15, 2014).&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;bl2014&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id7&quot;&gt;[BL2014]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;V. Berthé, S. Labbé, Factor Complexity of S-adic sequences
-generated by the Arnoux-Rauzy-Poincaré Algorithm. &lt;a class=&quot;reference external&quot; href=&quot;http://arxiv.org/abs/1404.4189&quot;&gt;arXiv:1404.4189&lt;/a&gt; (April, 2014).&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Releasing slabbe, my own Sage package</title>
-	<guid>http://www.slabbe.org/blogue/2014/08/releasing-slabbe-my-own-sage-package</guid>
-	<link>http://www.slabbe.org/blogue/2014/08/releasing-slabbe-my-own-sage-package</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Since two years I wrote thousands of line of private code for my own research.
-Each module having between 500 and 2000 lines of code. The code which is the
-more clean corresponds to code written in conjunction with research articles.
-People who know me know that I systematically put docstrings and doctests in my
-code to facilitate reuse of the code by myself, but also in the idea of sharing
-it and eventually making it public.&lt;/p&gt;
-&lt;p&gt;I did not made that code into Sage because it was not mature enough. Also, when
-I tried to make a complete module go into Sage (see &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/13069&quot;&gt;#13069&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/13346&quot;&gt;#13346&lt;/a&gt;),
-then the monstrous never evolving &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/12224&quot;&gt;#12224&lt;/a&gt; became a dependency of the first
-and the second was unofficially reviewed asking me to split it into smaller
-chunks to make the review process easier. I never did it because I spent
-already too much time on it (making a module 100% doctested takes time). Also,
-the module was corresponding to a published article and I wanted to leave it
-just like that.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Getting new modules into Sage is hard&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In general, the introduction of a complete new module into Sage is hard
-especially for beginners. Here are two examples I feel responsible for:
-&lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/10519&quot;&gt;#10519&lt;/a&gt; is 4 years old and counting, the author &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/10519#comment:67&quot;&gt;has a new work and
-responsabilities&lt;/a&gt;; in &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/12996&quot;&gt;#12996&lt;/a&gt;, the author was decouraged by the amount of
-work given by the reviewers. There is a lot of things a beginner has to
-consider to obtain a positive review. And even for a more advanced developper,
-other difficulties arise. Indeed, a module introduces a lot of new functions
-and it may also introduce a lot of new bugs... and Sage developpers are
-sometimes reluctant to give it a positive review. And if it finally gets a
-positive review, it is not available easily to normal users of Sage until the
-next release of Sage.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Releasing my own Sage package&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Still I felt the need around me to make my code public. But how? There are
-people (a few of course but I know there are) who are interested in reproducing
-computations and images done in my articles. This is why I came to the idea of
-releasing my own Sage package containing my public research code. This way both
-developpers and colleagues that are user of Sage but not developpers will be
-able to install and use my code. This will make people more aware if there is
-something useful in a module for them. And if one day, somebody tells me: &amp;quot;this
-should be in Sage&amp;quot;, then I will be able to say : &amp;quot;I agree! Do you want to
-review it?&amp;quot;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Old style Sage package&lt;/strong&gt; vs &lt;strong&gt;New sytle git Sage package&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Then I had to chose between the old and the new style for Sage packages. I did
-not like the new style, because&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;I wanted the history of my package to be independant of the history of Sage,&lt;/li&gt;
-&lt;li&gt;I wanted it to be as easy to install as &lt;tt class=&quot;docutils literal&quot;&gt;sage &lt;span class=&quot;pre&quot;&gt;-i&lt;/span&gt; slabbe&lt;/tt&gt;,&lt;/li&gt;
-&lt;li&gt;I wanted it to work on any recent enough version of Sage,&lt;/li&gt;
-&lt;li&gt;I wanted to be able to release a new version, give it to a colleague who
-could install it right away without changing its own Sage (i.e., updating
-the checksums).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Therefore, I choose the old style. I based my work on other optional Sage
-packages, namely the &lt;a class=&quot;reference external&quot; href=&quot;http://sagemanifolds.obspm.fr/&quot;&gt;SageManifolds&lt;/a&gt; spkg and the &lt;a class=&quot;reference external&quot; href=&quot;http://www.risc.jku.at/research/combinat/risc/software/ore_algebra/index.php&quot;&gt;ore_algebra&lt;/a&gt; spkg.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Content of the initial version&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The initial version of the slabbe Sage package has modules concerning four
-topics: &lt;em&gt;Digital geometry&lt;/em&gt;, &lt;em&gt;Combinatorics on words&lt;/em&gt;, &lt;em&gt;Combinatorics&lt;/em&gt; and
-&lt;em&gt;Python class inheritance&lt;/em&gt;.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/slabbe_content.png&quot;&gt;&lt;img alt=&quot;/Files/2014/slabbe_content.png&quot; src=&quot;http://www.slabbe.org/Files/2014/slabbe_content.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;For installation or for release notes of the initial version of the spkg,
-consult the slabbe spkg section of the &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/Sage&quot;&gt;Sage&lt;/a&gt; page of this website.&lt;/p&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: My status report at Sage Days 57 (RecursivelyEnumeratedSet)</title>
-	<guid>http://www.slabbe.org/blogue/2014/04/my-status-report-at-sage-days-57-recursivelyenumeratedset</guid>
-	<link>http://www.slabbe.org/blogue/2014/04/my-status-report-at-sage-days-57-recursivelyenumeratedset</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;At Sage Days 57, I worked on the trac ticket &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/6637&quot;&gt;#6637&lt;/a&gt;: &lt;em&gt;standardize the
-interface to TransitiveIdeal and friends&lt;/em&gt;. My patch proposes to replace
-&lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdeal&lt;/tt&gt; and &lt;tt class=&quot;docutils literal&quot;&gt;SearchForest&lt;/tt&gt; by a new class called
-&lt;tt class=&quot;docutils literal&quot;&gt;RecursivelyEnumeratedSet&lt;/tt&gt; that would handle every case.&lt;/p&gt;
-&lt;p&gt;A set S is called recursively enumerable if there is an algorithm that
-enumerates the members of S. We consider here the recursively enumerated
-set that are described by some &lt;tt class=&quot;docutils literal&quot;&gt;seeds&lt;/tt&gt; and a successor function &lt;tt class=&quot;docutils literal&quot;&gt;succ&lt;/tt&gt;.
-The successor function may have some structure (symmetric, graded, forest)
-or not. Many kinds of iterators are provided: depth first search, breadth
-first search or elements of given depth.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;transitiveideal-and-transitiveidealgraded&quot;&gt;
-&lt;h1&gt;TransitiveIdeal and TransitiveIdealGraded&lt;/h1&gt;
-&lt;p&gt;Consider the permutations of \(\{1,2,3\}\) and the poset generated by the
-method &lt;tt class=&quot;docutils literal&quot;&gt;permutohedron_succ&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: P = Permutations(3)
-sage: d = {p:p.permutohedron_succ() for p in P}
-sage: S = Poset(d)
-sage: S.plot()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/poset_123.png&quot;&gt;&lt;img alt=&quot;/Files/2014/poset_123.png&quot; src=&quot;http://www.slabbe.org/Files/2014/poset_123.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;The &lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdeal&lt;/tt&gt; allows to generates all permutations from the identity
-permutation using the method &lt;tt class=&quot;docutils literal&quot;&gt;permutohedron_succ&lt;/tt&gt; as successor function:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: succ = attrcall(&amp;quot;permutohedron_succ&amp;quot;)
-sage: seed = [Permutation([1,2,3])]
-sage: T = TransitiveIdeal(succ, seed)
-sage: list(T)
-[[1, 2, 3], [2, 1, 3], [1, 3, 2], [2, 3, 1], [3, 2, 1], [3, 1, 2]]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Remark that the previous ordering is neither breadth first neither depth first.
-It is a naive search because it stores the element to process in a set instead
-of a queue or a stack.&lt;/p&gt;
-&lt;p&gt;Note that the method &lt;tt class=&quot;docutils literal&quot;&gt;permutohedron_succ&lt;/tt&gt; produces a graded poset. Therefore,
-one may use the &lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdealGraded&lt;/tt&gt; class instead:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: T = TransitiveIdealGraded(succ, seed)
-sage: list(T)
-[[1, 2, 3], [2, 1, 3], [1, 3, 2], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;For &lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdealGraded&lt;/tt&gt;, the enumeration is breadth first search.
-Althougth, if you look at the code (version Sage 6.1.1 or earlier), we see that
-this iterator do not make use of the graded hypothesis at all because the
-&lt;tt class=&quot;docutils literal&quot;&gt;known&lt;/tt&gt; set remembers every generated elements:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;current_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_generators&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;known&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_max_depth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;next_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_succ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;known&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;next_level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;known&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;current_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_level&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;timings-for-transitiveideal&quot;&gt;
-&lt;h1&gt;Timings for TransitiveIdeal&lt;/h1&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: succ = attrcall(&amp;quot;permutohedron_succ&amp;quot;)
-sage: seed = [Permutation([1..5])]
-sage: T = TransitiveIdeal(succ, seed)
-sage: %time L = list(T)
-CPU times: user 26.6 ms, sys: 1.57 ms, total: 28.2 ms
-Wall time: 28.5 ms
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: seed = [Permutation([1..8])]
-sage: T = TransitiveIdeal(succ, seed)
-sage: %time L = list(T)
-CPU times: user 14.4 s, sys: 141 ms, total: 14.5 s
-Wall time: 14.8 s
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;timings-for-transitiveidealgraded&quot;&gt;
-&lt;h1&gt;Timings for TransitiveIdealGraded&lt;/h1&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: seed = [Permutation([1..5])]
-sage: T = TransitiveIdealGraded(succ, seed)
-sage: %time L = list(T)
-CPU times: user 25.3 ms, sys: 1.04 ms, total: 26.4 ms
-Wall time: 27.4 ms
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: seed = [Permutation([1..8])]
-sage: T = TransitiveIdealGraded(succ, seed)
-sage: %time L = list(T)
-CPU times: user 14.5 s, sys: 85.8 ms, total: 14.5 s
-Wall time: 14.7 s
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;In conlusion, use &lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdeal&lt;/tt&gt; for naive search algorithm and use
-&lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdealGraded&lt;/tt&gt; for breadth search algorithm. Both class do not use
-the graded hypothesis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;recursively-enumerated-set-with-a-graded-structure&quot;&gt;
-&lt;h1&gt;Recursively enumerated set with a graded structure&lt;/h1&gt;
-&lt;p&gt;The new class &lt;tt class=&quot;docutils literal&quot;&gt;RecursivelyEnumeratedSet&lt;/tt&gt; provides all iterators for each
-case. The example below are for the graded case.&lt;/p&gt;
-&lt;p&gt;Depth first search iterator:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: succ = attrcall(&amp;quot;permutohedron_succ&amp;quot;)
-sage: seed = [Permutation([1..5])]
-sage: R = RecursivelyEnumeratedSet(seed, succ, structure='graded')
-sage: it_depth = R.depth_first_search_iterator()
-sage: [next(it_depth) for _ in range(5)]
-[[1, 2, 3, 4, 5],
- [1, 2, 3, 5, 4],
- [1, 2, 5, 3, 4],
- [1, 2, 5, 4, 3],
- [1, 5, 2, 4, 3]]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Breadth first search iterator:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: it_breadth = R.breadth_first_search_iterator()
-sage: [next(it_breadth) for _ in range(5)]
-[[1, 2, 3, 4, 5],
- [1, 3, 2, 4, 5],
- [1, 2, 4, 3, 5],
- [2, 1, 3, 4, 5],
- [1, 2, 3, 5, 4]]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Elements of given depth iterator:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: list(R.elements_of_depth_iterator(9))
-[[5, 4, 2, 3, 1], [4, 5, 3, 2, 1], [5, 3, 4, 2, 1], [5, 4, 3, 1, 2]]
-sage: list(R.elements_of_depth_iterator(10))
-[[5, 4, 3, 2, 1]]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Levels (a level is a set of elements of the same depth):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: R.level(0)
-[[1, 2, 3, 4, 5]]
-sage: R.level(1)
-{[1, 2, 3, 5, 4], [1, 2, 4, 3, 5], [1, 3, 2, 4, 5], [2, 1, 3, 4, 5]}
-sage: R.level(2)
-{[1, 2, 4, 5, 3],
- [1, 2, 5, 3, 4],
- [1, 3, 2, 5, 4],
- [1, 3, 4, 2, 5],
- [1, 4, 2, 3, 5],
- [2, 1, 3, 5, 4],
- [2, 1, 4, 3, 5],
- [2, 3, 1, 4, 5],
- [3, 1, 2, 4, 5]}
-sage: R.level(3)
-{[1, 2, 5, 4, 3],
- [1, 3, 4, 5, 2],
- [1, 3, 5, 2, 4],
- [1, 4, 2, 5, 3],
- [1, 4, 3, 2, 5],
- [1, 5, 2, 3, 4],
- [2, 1, 4, 5, 3],
- [2, 1, 5, 3, 4],
- [2, 3, 1, 5, 4],
- [2, 3, 4, 1, 5],
- [2, 4, 1, 3, 5],
- [3, 1, 2, 5, 4],
- [3, 1, 4, 2, 5],
- [3, 2, 1, 4, 5],
- [4, 1, 2, 3, 5]}
-sage: R.level(9)
-{[4, 5, 3, 2, 1], [5, 3, 4, 2, 1], [5, 4, 2, 3, 1], [5, 4, 3, 1, 2]}
-sage: R.level(10)
-{[5, 4, 3, 2, 1]}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;recursively-enumerated-set-with-a-symmetric-structure&quot;&gt;
-&lt;h1&gt;Recursively enumerated set with a symmetric structure&lt;/h1&gt;
-&lt;p&gt;We construct a recursively enumerated set with symmetric structure and
-depth first search for default enumeration algorithm:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: succ = lambda a: [(a[0]-1,a[1]), (a[0],a[1]-1), (a[0]+1,a[1]), (a[0],a[1]+1)]
-sage: seeds = [(0,0)]
-sage: C = RecursivelyEnumeratedSet(seeds, succ, structure='symmetric', algorithm='depth')
-sage: C
-A recursively enumerated set with a symmetric structure (depth first search)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;In this case, depth first search is the default algorithm for iteration:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: it_depth = iter(C)
-sage: [next(it_depth) for _ in range(10)]
-[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9)]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Breadth first search. This algorithm makes use of the symmetric structure and
-remembers only the last two levels:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: it_breadth = C.breadth_first_search_iterator()
-sage: [next(it_breadth) for _ in range(10)]
-[(0, 0), (0, 1), (0, -1), (1, 0), (-1, 0), (-1, 1), (-2, 0), (0, 2), (2, 0), (-1, -1)]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Levels (elements of given depth):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: sorted(C.level(0))
-[(0, 0)]
-sage: sorted(C.level(1))
-[(-1, 0), (0, -1), (0, 1), (1, 0)]
-sage: sorted(C.level(2))
-[(-2, 0), (-1, -1), (-1, 1), (0, -2), (0, 2), (1, -1), (1, 1), (2, 0)]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;timings-for-recursivelyenumeratedset&quot;&gt;
-&lt;h1&gt;Timings for &lt;tt class=&quot;docutils literal&quot;&gt;RecursivelyEnumeratedSet&lt;/tt&gt;&lt;/h1&gt;
-&lt;p&gt;We get same timings as for &lt;tt class=&quot;docutils literal&quot;&gt;TransitiveIdeal&lt;/tt&gt; but it uses less memory so it
-might be able to enumerate bigger sets:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: succ = attrcall(&amp;quot;permutohedron_succ&amp;quot;)
-sage: seed = [Permutation([1..5])]
-sage: R = RecursivelyEnumeratedSet(seed, succ, structure='graded')
-sage: %time L = list(R)
-CPU times: user 24.7 ms, sys: 1.33 ms, total: 26.1 ms
-Wall time: 26.4 ms
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: seed = [Permutation([1..8])]
-sage: R = RecursivelyEnumeratedSet(seed, succ, structure='graded')
-sage: %time L = list(R)
-CPU times: user 14.5 s, sys: 70.2 ms, total: 14.5 s
-Wall time: 14.6 s
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Dessins et calculs d'orbites avec Sage d'une fonction associée à l'algo LLL</title>
-	<guid>http://www.slabbe.org/blogue/2014/02/dessins-et-calculs-d-orbites-avec-sage-d-une-fonction-associee-a-l-algo-lll</guid>
-	<link>http://www.slabbe.org/blogue/2014/02/dessins-et-calculs-d-orbites-avec-sage-d-une-fonction-associee-a-l-algo-lll</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Aujourd'hui avait lieu une rencontre de l'ANR &lt;a class=&quot;reference external&quot; href=&quot;http://www.liafa.univ-paris-diderot.fr/dyna3s/&quot;&gt;DynA3S&lt;/a&gt;. Suite à une présentation
-de Brigitte Vallée, j'ai codé quelques lignes en Sage pour étudier une fonction
-qu'elle a introduite. Cette fonction est reliée à la compréhension de la
-densité des termes sous-diagonaux dans l'exécution de l'algorithme LLL.&lt;/p&gt;
-&lt;p&gt;D'abord voici mon fichier: &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/Files/2014/brigitte.sage&quot;&gt;brigitte.sage&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- .. _brigitte.sage: HOME/Files/2014/brigitte.sage --&gt;
-&lt;p&gt;Pour utiliser ce fichier, il faut d'abord l'importer dans Sage en utilisant la
-commande suivante. En ligne de commande, ça fonctionne bien. Dans le Sage
-notebook, je ne sais plus trop si la commande &lt;tt class=&quot;docutils literal&quot;&gt;load&lt;/tt&gt; permet encore de le
-faire (?):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: %runfile brigitte.sage       # not tested
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;On doit générer plusieurs orbites pour visualiser quelque chose, car les
-orbites de la fonction sont de taille 1, 2 ou 3 en général avant que la
-condition d'arrêt soit atteinte. Ici, on génère 10000 orbites (les points
-initiaux sont choisis aléatoirement et uniformément dans \([0,1]\times[-0.5,
-0.5]\). On dessine les derniers points des orbites:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: D = plusieurs_orbit(10000)
-Note: la plus longue orbite est de taille 3
-sage: A = points(D[0], color='red', legend_label='derniers')
-sage: B = points(D[1], color='blue', legend_label='avant derniers')
-sage: C = points(D[2], color='black', legend_label='2e avant derniers')
-sage: G = A + B + C
-sage: G.axes_labels((&amp;quot;$x$&amp;quot;, r&amp;quot;$\nu$&amp;quot;))
-sage: title = r&amp;quot;$(x,\nu) \mapsto (\frac{x}{(x+\nu^2)^2},\frac{\nu}{(x+\nu^2)})$&amp;quot;
-sage: G.show(title=title, xmax=2)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/orbit_x_nu.png&quot;&gt;&lt;img alt=&quot;/Files/2014/orbit_x_nu.png&quot; src=&quot;http://www.slabbe.org/Files/2014/orbit_x_nu.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Un raccourci pour faire à peu près le même dessin que ci-haut:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: draw_plusieurs_orbites(10000).show(xmax=2)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;On dessine des histogrammes surperposés de la densité de ces points une fois
-projetés sur l'axe des \(\nu\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: histogrammes_nu(10000, nbox=10)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/histo_nu.png&quot;&gt;&lt;img alt=&quot;/Files/2014/histo_nu.png&quot; src=&quot;http://www.slabbe.org/Files/2014/histo_nu.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Le dessin semble indiquer que la densité non uniforme semble provenir
-simplement par les points \((x,\nu)\) tels que \(x\leq 1\).&lt;/p&gt;
-&lt;p&gt;On dessine des histogrammes superposés de la densité de ces points une fois
-projetés sur l'axe des \(x\) (on donne des couleurs selon la valeur de
-\(\nu\)):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: histogrammes_x(30000, nbox=5, ymax=1500, xmax=8)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/histo_x.png&quot;&gt;&lt;img alt=&quot;/Files/2014/histo_x.png&quot; src=&quot;http://www.slabbe.org/Files/2014/histo_x.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Le dessin semble indiquer que la densité ne dépend pas de \(\nu\) pour
-\(x\geq 1\).&lt;/p&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Using sage in the new ipython notebook</title>
-	<guid>http://www.slabbe.org/blogue/2013/02/using-sage-in-the-new-ipython-notebook</guid>
-	<link>http://www.slabbe.org/blogue/2013/02/using-sage-in-the-new-ipython-notebook</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;(NEW: See also the &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/blogue/2014/03/demo-of-the-ipython-notebook-at-sage-paris-group-meeting/&quot;&gt;demo I made at the Sage Paris group meeting in March 2014&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;Ticket &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/sage_trac/ticket/12719&quot;&gt;#12719&lt;/a&gt; (Upgrade to IPython 0.13) was merged into sage-5.7.beta1.
-This took a lot of energy (see the number of comments in the ticket and
-especially the number of patches and dependencies). Big thanks to Volker Braun,
-Mike Hansen, Jason Grout, Jeroen Demeyer who worked on this since almost one
-year. Note that in December 2012, the &lt;a class=&quot;reference external&quot; href=&quot;http://ipython.org/&quot;&gt;IPython&lt;/a&gt; project has received a
-&lt;a class=&quot;reference external&quot; href=&quot;http://ipython.org/sloan-grant.html&quot;&gt;$1.15M grant from the Alfred P. Sloan foundation&lt;/a&gt;, that will support IPython
-development for the next two years. I really like this IPython sage command
-line interface so it is really good news!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The IPython notebook&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Since version 0.12 (December 21 2011), IPython is released with its own
-notebook. The differences with the Sage Notebook are explained by Fernando
-Perez, leader of IPython project, in the blog post &lt;a class=&quot;reference external&quot; href=&quot;http://blog.fperez.org/2012/01/ipython-notebook-historical.html&quot;&gt;The IPython notebook: a
-historical retrospective&lt;/a&gt; he wrote in January 2012. One of the differences is
-that the IPython Notebook run in its own directory whereas each cell of the
-Sage Notebook lives in its directory. As William Stein says in the presentation
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.youtube.com/watch?v=oW_AtLyLN_I&quot;&gt;Browser-based notebook interfaces for mathematical software - past, present
-and future&lt;/a&gt; he gave last December at ICERM, there are plenty of projects and
-directions these days for those interfaces.&lt;/p&gt;
-&lt;p&gt;In May 2012, I &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/blogue/2012/05/testing-the-ipython-0.12-notebook/&quot;&gt;tested&lt;/a&gt; the same ticket which was to upgrade to IPython 0.12 at
-that time. Today, I was curious to test it again.&lt;/p&gt;
-&lt;p&gt;First, I installed sage-5.7.beta4:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;./sage -version
-Sage Version 5.7.beta4, Release Date: 2013-02-09
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Install tornado:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;./sage -sh
-easy_install-2.7 tornado
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;[update March 6th, 2014] Note that some linux user have to install
-&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;libssl-dev&lt;/span&gt;&lt;/tt&gt; before tornado:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sudo apt-get install libssl-dev
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Install zeromq and pyzmq:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;./sage -i zeromq
-./sage -i pyzmq
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Start the ipython notebook:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;./sage -ipython notebook
-[NotebookApp] Using existing profile dir: u'/Users/slabbe/.sage/ipython-0.12/profile_default'
-[NotebookApp] Serving notebooks from /Users/slabbe/Applications/sage-5.7.beta4
-[NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
-[NotebookApp] Use Control-C to stop this server and shut down all kernels.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2013/ipython_notebook_home.png&quot;&gt;&lt;img alt=&quot;/Files/2013/ipython_notebook_home.png&quot; src=&quot;http://www.slabbe.org/Files/2013/ipython_notebook_home.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Create a new notebook. One may use sage commands by adding the line &lt;tt class=&quot;docutils literal&quot;&gt;from
-sage.all import *&lt;/tt&gt; in the first cell.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2013/ipython_notebook_nb.png&quot;&gt;&lt;img alt=&quot;/Files/2013/ipython_notebook_nb.png&quot; src=&quot;http://www.slabbe.org/Files/2013/ipython_notebook_nb.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;The next things I want to look at are:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Test the conversion of files from &lt;tt class=&quot;docutils literal&quot;&gt;.py&lt;/tt&gt; to &lt;tt class=&quot;docutils literal&quot;&gt;.pynb&lt;/tt&gt;.&lt;/li&gt;
-&lt;li&gt;Test the conversion of files from &lt;tt class=&quot;docutils literal&quot;&gt;.rst&lt;/tt&gt; to &lt;tt class=&quot;docutils literal&quot;&gt;.pynb&lt;/tt&gt;.&lt;/li&gt;
-&lt;li&gt;Test the qtconsole.&lt;/li&gt;
-&lt;li&gt;Test the parallel computing capacities of the IPython.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: Percolation and self-avoiding walks</title>
-	<guid>http://www.slabbe.org/blogue/2012/12/percolation-and-self-avoiding-walks</guid>
-	<link>http://www.slabbe.org/blogue/2012/12/percolation-and-self-avoiding-walks</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Today, I am presenting the Chapter 3 of the book &lt;a class=&quot;reference external&quot; href=&quot;http://www.statslab.cam.ac.uk/~grg/books/pgs.html&quot;&gt;Probability on Graphs&lt;/a&gt; of
-Geoffrey Grimmett during a &lt;a class=&quot;reference external&quot; href=&quot;http://www.liafa.univ-paris-diderot.fr/~jolivet/pog/&quot;&gt;monthly reading seminar&lt;/a&gt; at LIAFA.  The title of
-the chapter is &lt;em&gt;Percolation and self-avoiding walks&lt;/em&gt;.  I did some computations
-to improve my intuition on the question. My code is in the following file :
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/Files/2012/bond_percolation.sage&quot;&gt;bond_percolation.sage&lt;/a&gt;. This post is about some of my computations. You
-might want to &lt;a class=&quot;reference external&quot; href=&quot;http://aleph.sagemath.org/?z=eJxFy7EKgzAQgOHdp8hSUNCLSrsUsjh0LvgAJZqzHo1JSM4GOvTZ69bx5-M_xd0tZFGszOEqZc4ZLOlFw-7o3QQdKTWGDEbPsET5tXqaUN6OJcm-7Xo5eWceAePsrWbyDpJ-YjEKJYZD7n8Y9RYslkG1cKmFUX1VjBCs53JT57YWwZPjRB9U3VG80vxymJLqKkirz2X1A5FWOwI=&amp;lang=sage&quot;&gt;test them yourself online&lt;/a&gt; using the Sage Cell Server.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;basic-definitions&quot;&gt;
-&lt;h1&gt;Basic Definitions&lt;/h1&gt;
-&lt;p&gt;Let \(\mathbb{L}^d=(\mathbb{Z}^d,\mathbb{E}^d)\) be the hypercubic
-lattice. Let \(p\in[0,1]\). Each edge \(e\in \mathbb{E}^d\) is
-designated either &lt;em&gt;open&lt;/em&gt; with probability \(p\), or &lt;em&gt;closed&lt;/em&gt; otherwise,
-different edges receiving independant states. For \(x,y\in \mathbb{Z}^d\),
-we write \(x \leftrightarrow y \) if there exists an open path joining
-\(x\) and \(y\).  For \(x\in \mathbb{Z}^d\), we consider the open
-cluster \(C_x\) containing \(x\) :
-\[
-C_x = \{y \in \mathbb{Z}^d : x \leftrightarrow y \}.
-\]
-The percolation probability \(\Theta(p)\) is given by
-\[
-\Theta(p) = P_p(\vert C_0\vert=\infty).
-\]
-Finally, the critical probability is defined as
-\[
-p_c = \sup\{p : \Theta(p) = 0&amp;nbsp;\}.
-\]
-The question is to compute \(p_c\). Results in the Chapter give lower bound
-and upper bound for \(p_c\). Many problems are still open like the one
-claiming that \(\Theta(p_c) = 0\) for all \(d\geq 2\): it is known only
-for \(d=2\) and \(d\geq 19\) according to a remark in the chapter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;some-samples-when-p-0-5&quot;&gt;
-&lt;h1&gt;Some samples when p=0.5&lt;/h1&gt;
-&lt;p&gt;A bond percolation sample inside the box \(\Lambda(m)=[-m,m]^d\) when
-\(p=0.5\) and \(d=2\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BondPercolationSample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pointsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consisting&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7993&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primitives&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/sample_p500_m40.png&quot;&gt;&lt;img alt=&quot;/Files/2012/sample_p500_m40.png&quot; src=&quot;http://www.slabbe.org/Files/2012/sample_p500_m40.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Another time gives something different:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BondPercolationSample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pointsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consisting&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10176&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primitives&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/sample_p500_m40_second.png&quot;&gt;&lt;img alt=&quot;/Files/2012/sample_p500_m40_second.png&quot; src=&quot;http://www.slabbe.org/Files/2012/sample_p500_m40_second.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;some-samples-for-ranges-of-values-of-p&quot;&gt;
-&lt;h1&gt;Some samples for ranges of values of p&lt;/h1&gt;
-&lt;p&gt;From &lt;tt class=&quot;docutils literal&quot;&gt;p=0.1&lt;/tt&gt; to &lt;tt class=&quot;docutils literal&quot;&gt;p=0.9&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percolation_graphics_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/array_p1_p9_m5.png&quot;&gt;&lt;img alt=&quot;/Files/2012/array_p1_p9_m5.png&quot; src=&quot;http://www.slabbe.org/Files/2012/array_p1_p9_m5.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;From &lt;tt class=&quot;docutils literal&quot;&gt;p=0.41&lt;/tt&gt; to &lt;tt class=&quot;docutils literal&quot;&gt;p=0.49&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percolation_graphics_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.41&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/array_p41_p50_m5.png&quot;&gt;&lt;img alt=&quot;/Files/2012/array_p41_p50_m5.png&quot; src=&quot;http://www.slabbe.org/Files/2012/array_p41_p50_m5.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;From &lt;tt class=&quot;docutils literal&quot;&gt;p=0.51&lt;/tt&gt; to &lt;tt class=&quot;docutils literal&quot;&gt;p=0.59&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percolation_graphics_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.51&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/array_p51_p60_m5.png&quot;&gt;&lt;img alt=&quot;/Files/2012/array_p51_p60_m5.png&quot; src=&quot;http://www.slabbe.org/Files/2012/array_p51_p60_m5.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upper-bound-and-lower-bound-for-percolation-probability-theta-p&quot;&gt;
-&lt;h1&gt;Upper bound and lower bound for percolation probability \(\Theta(p)\)&lt;/h1&gt;
-&lt;p&gt;In every case, we have the following upper bound for the percolation probability:
-\[
-\Theta(p) = \mathbb{P}_p(\vert C_0\vert=\infty)
-\leq \mathbb{P}_p(\vert C_0\vert &amp;gt; 1)
-= 1 - \mathbb{P}_p(\vert C_0\vert = 1)
-= 1 - (1-p)^{2d}.
-\]
-In particular, if \(p\neq 1\), then \(\Theta(p)&amp;lt;1\).
-In Sage, define the upper bound:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'p,n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper_bound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Also, from Equation (3.8), we have the following lower bound:
-\[
-\Theta(p) \geq 1 - \sum_{n=4}^{\infty} n (4(1-p))^n.
-\]&lt;/p&gt;
-&lt;p&gt;In Sage, define the lower bound:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'p,n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower_bound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower_bound&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;factor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3072&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14336&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26624&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24592&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11288&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2057&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;This is not defined when \(p=3/4\), but we are interested in the values in
-the interval \(]3/4,1]\). In particular, for which value of \(p\) is this
-lower bound strictly larger than zero:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower_bound&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.76&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;0.8639366490304586&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Let's now draw a graph of the lower and upper bound:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;U&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper_bound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'red'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower_bound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.86&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'green'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;U&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'red'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r&amp;quot;$1-\sum_{n=4}^{\infty} n4^n(1-p)^n$&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r&amp;quot;$1 -(1-p)^{4}$&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r&amp;quot;$1-\sum_{n=4}^{\infty} n4^n(1-p)^n\leq\Theta(p)\leq 1 -(1-p)^{2d}$&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'black'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'red'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'green'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%.5f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.88&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'green'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontal_alignment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'left'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/percolation_upper_lower.png&quot;&gt;&lt;img alt=&quot;/Files/2012/percolation_upper_lower.png&quot; src=&quot;http://www.slabbe.org/Files/2012/percolation_upper_lower.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;Thus we conclude that \(\Theta(p) &amp;gt;0\) for \(p&amp;gt;0.8639\) and thus \(p_c
-\leq 0.8639\).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;percolation-probability-dimension-2&quot;&gt;
-&lt;h1&gt;Percolation probability - dimension 2&lt;/h1&gt;
-&lt;p&gt;The code allows to define the percolation probability function for a given
-dimension &lt;tt class=&quot;docutils literal&quot;&gt;d&lt;/tt&gt;. It generates &lt;tt class=&quot;docutils literal&quot;&gt;n&lt;/tt&gt; samples and consider the cluster to be
-infinite if its cardinality is larger than the given &lt;tt class=&quot;docutils literal&quot;&gt;stop&lt;/tt&gt; value.&lt;/p&gt;
-&lt;p&gt;Here we use Sage adaptative recursion algorithm for drawing the plot of the
-percolation probability which finds the particular important intervals to ask
-for more values of the function. See help section of plot function for details.
-Because &lt;tt class=&quot;docutils literal&quot;&gt;T&lt;/tt&gt; might be long to compute we start with only 4 points.&lt;/p&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=100&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop100.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d2_n10_stop100.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop100.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=1000&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop1000.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d2_n10_stop1000.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop1000.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=2000&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop2000.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d2_n10_stop2000.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d2_n10_stop2000.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;percolation-probability-dimension-3&quot;&gt;
-&lt;h1&gt;Percolation probability - dimension 3&lt;/h1&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=100&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d3_n10_stop100.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d3_n10_stop100.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d3_n10_stop100.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=1000&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d3_n10_stop1000.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d3_n10_stop1000.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d3_n10_stop1000.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;percolation-probability-dimension-4&quot;&gt;
-&lt;h1&gt;Percolation probability - dimension 4&lt;/h1&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=100&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d4_n10_stop100.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d4_n10_stop100.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d4_n10_stop100.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;percolation-probability-dimension-13&quot;&gt;
-&lt;h1&gt;Percolation probability - dimension 13&lt;/h1&gt;
-&lt;p&gt;When &lt;tt class=&quot;docutils literal&quot;&gt;stop=100&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PercolationProbability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;return_plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adaptive_recursion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2012/theta_d13_n10_stop100.png&quot;&gt;&lt;img alt=&quot;/Files/2012/theta_d13_n10_stop100.png&quot; src=&quot;http://www.slabbe.org/Files/2012/theta_d13_n10_stop100.png&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;theorem-3-2&quot;&gt;
-&lt;h1&gt;Theorem 3.2&lt;/h1&gt;
-&lt;p&gt;Theorem 3.2 states that \(0 &amp;lt; p_c &amp;lt; 1\), but its proof does much more in
-fact. Following the computation we just did for Equation (3.8), we get for
-\(d=2\)
-\[
-0.3333 &amp;lt; \frac{1}{2d-1} \leq p_c \leq 0.8639
-\]
-and for \(d=3\):
-\[
-0.2000 &amp;lt; \frac{1}{2d-1} \leq p_c \leq 0.8639
-\]
-This allows to grasp the improvement brought later by Theorem 3.12.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;connective-constant&quot;&gt;
-&lt;h1&gt;Connective constant&lt;/h1&gt;
-&lt;p&gt;Using the two following sequences of the &lt;a class=&quot;reference external&quot; href=&quot;http://oeis.org/&quot;&gt;On-Line Encyclopedia of Integer
-Sequences&lt;/a&gt;, one can evaluate the connective constant \(\kappa(d)\)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oeis.org/A001411&quot;&gt;A001411&lt;/a&gt;: Number of n-step self-avoiding walks on square lattice.&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oeis.org/A001412&quot;&gt;A001412&lt;/a&gt;: Number of n-step self-avoiding walks on cubic lattice.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;By taking the k-th root of of k-th term of &lt;a class=&quot;reference external&quot; href=&quot;http://oeis.org/A001411&quot;&gt;A001411&lt;/a&gt;, we may give an
-approximation of \(\kappa(2)\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;284&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;780&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2172&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5916&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16268&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;44100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;120292&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;324932&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;881500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2374444&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6416596&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17245332&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;46466676&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;124658732&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;335116620&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;897697164&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2408806028&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6444560484&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17266613812&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;46146397316&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123481354908&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;329712786220&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;881317491628&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numerical_approx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.00000000000000&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.46410161513775&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.30192724889463&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.16227766016838&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.09502148400370&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.03400133198980&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.99705187539871&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.96144397263395&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.93714926770637&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.91369345857619&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.89627439045790&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.87949308754677&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.86632078916860&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.85362749495679&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.84328447096562&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.83329615650289&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.82493415671599&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.81684125361654&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.80992368218258&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.80321554383456&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.79738645741910&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.79172363211806&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.78673687369245&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.78188437392354&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.77756387722633&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.77335345579129&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;2.76956977331575&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;By taking the k-th root of of k-th term of &lt;a class=&quot;reference external&quot; href=&quot;http://oeis.org/A001412&quot;&gt;A001412&lt;/a&gt;, we may give an
-approximation of \(\kappa(3)\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;726&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3534&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16926&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81390&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;387966&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1853886&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;8809878&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;41934150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;198842742&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;943974510&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4468911678&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21175146054&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;100121875974&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;473730252102&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2237723684094&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10576033219614&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49917327838734&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;235710090502158&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1111781983442406&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5245988215191414&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24730180885580790&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;116618841700433358&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;549493796867100942&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2589874864863200574&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;12198184788179866902&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;57466913094951837030&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;270569905525454674614&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numerical_approx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;6.00000000000000&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.47722557505166&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.31329284591305&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.19079831727404&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.12452137580198&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.06709510955294&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;5.02933019629493&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.99573287588832&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.97111339009676&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.94876680377358&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.93129192790635&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.91521453865211&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.90209314463520&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.88990167518413&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.87964724632057&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.87004597517131&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.86178722582108&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.85400655861169&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.84719703702142&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.84074902256992&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.83502763526502&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.82958688248615&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.82470487210973&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.82004549244633&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.81582557693112&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.81178552451599&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.80809774735294&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.80455755518719&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.80130435575213&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.79817388859565&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Then, \(\kappa(2)\) would be something less than 2.769 and \(\kappa(3)\)
-would be something less than 4.798.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;theorem-3-12&quot;&gt;
-&lt;h1&gt;Theorem 3.12&lt;/h1&gt;
-&lt;p&gt;Thus, we may evaluate the lower bound and upper bound given at Theorem 3.12.
-For dimension \(d=2\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.76956977331575&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.76956977331575&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.76956977331575&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;0.361066909970928&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.361066909970928&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;0.638933090029072&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The critical probability of bond percolation on \(\mathbb{L}^d\) with \(d=2\)
-satisfies
-\[
-0.3610 &amp;lt; \frac{1}{\kappa(2)} \leq p_c \leq 1 - \frac{1}{\kappa(2)} &amp;lt; 0.6389.
-\]
-If we look at the graph of the percolation probability \(\Theta(p)\) we did
-above for when \(d=2\), it seems that the lower bound is not far from
-\(p_c\).  The lower bound 0.3610 is a small improvement to the simple one got
-from Theorem 3.2 (0.3333).&lt;/p&gt;
-&lt;p&gt;Similarly, for dimension \(d=3\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.79817388859565&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.79817388859565&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;4.79817388859565&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;0.208412621805310&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The critical probability of bond percolation on \(\mathbb{L}^d\) with \(d=3\)
-satisfies
-\[
-0.2084 &amp;lt; \frac{1}{\kappa(3)} \leq p_c \leq 1 - \frac{1}{\kappa(2)} &amp;lt; 0.6389.
-\]
-Again, if we look at the graph of \(\Theta(p)\) we did above for when
-\(d=3\), it seems that the lower bound 0.2084 is not far from \(p_c\). In
-this case, the lower bound 0.2084 is a rather small improvement to the lower
-bound from Theorem 3.2 (0.2000). It might be caused by a poor approximation of
-\(\kappa(3)\) from the above sequences of only 30 terms from the OEIS.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 08 Sep 2015 14:11:43 +0000</pubDate>
-</item>
-<item>
 	<title>William Stein: The Simons Foundation and Open Source Software</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-5753647510986290314</guid>
 	<link>http://sagemath.blogspot.com/2015/09/the-simons-foundation-and-open-source.html</link>
@@ -4232,6 +2219,305 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</description>
 	<pubDate>Sun, 08 Mar 2015 00:00:00 +0000</pubDate>
 </item>
 <item>
+	<title>Sébastien Labbé: Arnoux-Rauzy-Poincaré sequences</title>
+	<guid>http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences</guid>
+	<link>http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences</link>
+	<description>&lt;div class=&quot;document&quot;&gt;
+&lt;p&gt;In a recent article with Valérie Berthé &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#bl15&quot; id=&quot;id1&quot;&gt;[BL15]&lt;/a&gt;, we provided a multidimensional
+continued fraction algorithm called Arnoux-Rauzy-Poincaré (ARP) to construct,
+given any vector \(v\in\mathbb{R}_+^3\), an infinite word
+\(w\in\{1,2,3\}^\mathbb{N}\) over a three-letter alphabet such that the
+frequencies of letters in \(w\) exists and are equal to \(v\) and such that
+the number of factors (i.e.  finite block of consecutive letters) of length
+\(n\) appearing in \(w\) is linear and less than \(\frac{5}{2}n+1\). We
+also conjecture that for almost all \(v\) the contructed word describes a
+discrete path in the positive octant staying at a bounded distance from the
+euclidean line of direction \(v\).&lt;/p&gt;
+&lt;p&gt;In Sage, you can construct this word using the next version of my package
+slabbe-0.2 (not released yet, email me to press me to finish it). The one with
+frequencies of letters proportionnal to \((1, e, \pi)\) is:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe.mcf import algo
+sage: D = algo.arp.substitutions()
+sage: it = algo.arp.coding_iterator((1,e,pi))
+sage: w = words.s_adic(it, repeat(1), D)
+word: 1232323123233231232332312323123232312323...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;The factor complexity is close to 2n+1 and the balance is often less or equal
+to three:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: w[:10000].number_of_factors(100)
+202
+sage: w[:100000].number_of_factors(1000)
+2002
+sage: w[:1000].balance()
+3
+sage: w[:2000].balance()
+3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Note that bounded distance from the euclidean line almost surely was proven in
+&lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#dhs2013&quot; id=&quot;id2&quot;&gt;[DHS2013]&lt;/a&gt; for Brun algorithm, another MCF algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Other approaches: Standard model and billiard sequences&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Other approaches have been proposed to construct such discrete lines.&lt;/p&gt;
+&lt;p&gt;One of them is the standard model of Eric Andres &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#a03&quot; id=&quot;id3&quot;&gt;[A03]&lt;/a&gt;. It is also equivalent
+to billiard sequences in the cube. It is well known that the factor complexity
+of billiard sequences is quadratic \(p(n)=n^2+n+1\) &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#amst94&quot; id=&quot;id4&quot;&gt;[AMST94]&lt;/a&gt;.
+Experimentally, we can verify this. We first create a billiard word of some
+given direction:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe import BilliardCube
+sage: v = vector(RR, (1, e, pi))
+sage: b = BilliardCube(v)
+sage: b
+Cubic billiard of direction (1.00000000000000, 2.71828182845905, 3.14159265358979)
+sage: w = b.to_word()
+sage: w
+word: 3231232323123233213232321323231233232132...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;We create some prefixes of \(w\) that we represent internally as &lt;tt class=&quot;docutils literal&quot;&gt;char*&lt;/tt&gt;.
+The creation is slow because the implementation of billiard words in my
+optional package is in Python and is not that efficient:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3 = Word(w[:10^3], alphabet=[1,2,3], datatype='char')
+sage: p4 = Word(w[:10^4], alphabet=[1,2,3], datatype='char') # takes 3s
+sage: p5 = Word(w[:10^5], alphabet=[1,2,3], datatype='char') # takes 32s
+sage: p6 = Word(w[:10^6], alphabet=[1,2,3], datatype='char') # takes 5min 20s
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;We see below that exactly \(n^2+n+1\) factors of length \(n&amp;lt;20\) appears in
+the prefix of length 1000000 of \(w\):&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: A = ['n'] + range(30)
+sage: c3 = ['p_(w[:10^3])(n)'] + map(p3.number_of_factors, range(30))
+sage: c4 = ['p_(w[:10^4])(n)'] + map(p4.number_of_factors, range(30))
+sage: c5 = ['p_(w[:10^5])(n)'] + map(p5.number_of_factors, range(30)) # takes 4s
+sage: c6 = ['p_(w[:10^6])(n)'] + map(p6.number_of_factors, range(30)) # takes 49s
+sage: ref = ['n^2+n+1'] + [n^2+n+1 for n in range(30)]
+sage: T = table(columns=[A,c3,c4,c5,c6,ref])
+sage: T
+  n    p_(w[:10^3])(n)   p_(w[:10^4])(n)   p_(w[:10^5])(n)   p_(w[:10^6])(n)   n^2+n+1
++----+-----------------+-----------------+-----------------+-----------------+---------+
+  0    1                 1                 1                 1                 1
+  1    3                 3                 3                 3                 3
+  2    7                 7                 7                 7                 7
+  3    13                13                13                13                13
+  4    21                21                21                21                21
+  5    31                31                31                31                31
+  6    43                43                43                43                43
+  7    52                55                56                57                57
+  8    63                69                71                73                73
+  9    74                85                88                91                91
+  10   87                103               107               111               111
+  11   100               123               128               133               133
+  12   115               145               151               157               157
+  13   130               169               176               183               183
+  14   144               195               203               211               211
+  15   160               223               232               241               241
+  16   176               253               263               273               273
+  17   192               285               296               307               307
+  18   208               319               331               343               343
+  19   224               355               368               381               381
+  20   239               392               407               421               421
+  21   254               430               448               463               463
+  22   268               470               491               507               507
+  23   282               510               536               553               553
+  24   296               552               583               601               601
+  25   310               596               632               651               651
+  26   324               642               683               703               703
+  27   335               687               734               757               757
+  28   345               734               787               813               813
+  29   355               783               842               871               871
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Billiard sequences generate paths that are at a bounded distance from an
+euclidean line. This is equivalent to say that the balance is finite. The
+balance is defined as the supremum value of difference of the number of
+apparition of a letter in two factors of the same length. For billiard
+sequences, the balance is 2:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3.balance()
+2
+sage: p4.balance() # takes 2min 37s
+2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Other approaches: Melançon and Reutenauer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Melançon and Reutenauer &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#mr13&quot; id=&quot;id5&quot;&gt;[MR13]&lt;/a&gt; also suggested a method that generalizes
+Christoffel words in higher dimension. The construction is based on the
+application of two substitutions generalizing the construction of sturmian
+sequences. Below we compute the factor complexity and the balance of some of
+their words over a three-letter alphabet.&lt;/p&gt;
+&lt;p&gt;On a three-letter alphabet, the two morphisms are:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: L = WordMorphism('1-&amp;gt;1,2-&amp;gt;13,3-&amp;gt;2')
+sage: R = WordMorphism('1-&amp;gt;13,2-&amp;gt;2,3-&amp;gt;3')
+sage: L
+WordMorphism: 1-&amp;gt;1, 2-&amp;gt;13, 3-&amp;gt;2
+sage: R
+WordMorphism: 1-&amp;gt;13, 2-&amp;gt;2, 3-&amp;gt;3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Example 1: periodic case \(LRLRLRLRLR\dots\). In this example, the factor
+complexity seems to be around \(p(n)=2.76n\) and the balance is at least 28:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from itertools import repeat, cycle
+sage: W = words.s_adic(cycle((L,R)),repeat('1'))
+sage: W
+word: 1213122121313121312212212131221213131213...
+sage: map(W[:10000].number_of_factors, [10,20,40,80])
+[27, 54, 110, 221]
+sage: [27/10., 54/20., 110/40., 221/80.]
+[2.70000000000000, 2.70000000000000, 2.75000000000000, 2.76250000000000]
+sage: W[:1000].balance()  # takes 1.6s
+21
+sage: W[:2000].balance()  # takes 6.4s
+28
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Example 2: \(RLR^2LR^4LR^8LR^{16}LR^{32}LR^{64}LR^{128}\dots\) taken from
+the conclusion of their article. In this example, the factor complexity seems
+to be \(p(n)=3n\) and balance at least as high (=bad) as \(122\):&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: W = words.s_adic([R,L,R,R,L,R,R,R,R,L]+[R]*8+[L]+[R]*16+[L]+[R]*32+[L]+[R]*64+[L]+[R]*128,'1')
+sage: W.length()
+330312
+sage: map(W.number_of_factors, [10, 20, 100, 200, 300, 1000])
+[29, 57, 295, 595, 895, 2981]
+sage: [29/10., 57/20., 295/100., 595/200., 895/300., 2981/1000.]
+[2.90000000000000,
+ 2.85000000000000,
+ 2.95000000000000,
+ 2.97500000000000,
+ 2.98333333333333,
+ 2.98100000000000]
+sage: W[:1000].balance()  # takes 1.6s
+122
+sage: W[:2000].balance()  # takes 6s
+122
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Example 3: some random ones. The complexity \(p(n)/n\) occillates between 2
+and 3 for factors of length \(n=1000\) in prefixes of length 100000:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
+....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
+....:     print W[:100000].number_of_factors(1000)/1000.
+2.02700000000000
+2.23600000000000
+2.74000000000000
+2.21500000000000
+2.78700000000000
+2.52700000000000
+2.85700000000000
+2.33300000000000
+2.65500000000000
+2.51800000000000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;For ten randomly generated words, the balance goes from 6 to 27 which is much
+more than what is obtained for billiard words or by our approach:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
+....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
+....:     print W[:1000].balance(), W[:2000].balance()
+12 15
+8 24
+14 14
+5 11
+17 17
+14 14
+6 6
+19 27
+9 16
+12 12
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;div class=&quot;section&quot; id=&quot;references&quot;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;bl15&quot; rules=&quot;none&quot;&gt;
+&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id1&quot;&gt;[BL15]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;V. Berthé, S. Labbé,
+Factor Complexity of S-adic words generated by the Arnoux-Rauzy-Poincaré Algorithm,
+&lt;em&gt;Advances in Applied Mathematics&lt;/em&gt; 63 (2015) 90-130.
+&lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.aam.2014.11.001&quot;&gt;http://dx.doi.org/10.1016/j.aam.2014.11.001&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;dhs2013&quot; rules=&quot;none&quot;&gt;
+&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id2&quot;&gt;[DHS2013]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Delecroix, Vincent, Tomás Hejda, and Wolfgang Steiner. “Balancedness of
+Arnoux-Rauzy and Brun Words.” In Combinatorics on Words, 119–31. Springer,
+2013. &lt;a class=&quot;reference external&quot; href=&quot;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&quot;&gt;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;a03&quot; rules=&quot;none&quot;&gt;
+&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id3&quot;&gt;[A03]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;E. Andres,
+Discrete linear objects in dimension n: the standard model,
+Graphical Models 65 (2003) 92-111.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;amst94&quot; rules=&quot;none&quot;&gt;
+&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id4&quot;&gt;[AMST94]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;P. Arnoux, C. Mauduit, I. Shiokawa, J. I. Tamura,
+Complexity of sequences defined by billiards in the cube,
+Bull. Soc. Math. France 122 (1994) 1-12.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;mr13&quot; rules=&quot;none&quot;&gt;
+&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id5&quot;&gt;[MR13]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;G. Melançon, C. Reutenauer,
+On a class of Lyndon words extending Christoffel words and related to a
+multidimensional continued fraction algorithm.
+J. Integer Seq. 16, No. 9, Article 13.9.7, 30 p., electronic only (2013).
+&lt;a class=&quot;reference external&quot; href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&quot;&gt;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+	<pubDate>Thu, 26 Feb 2015 16:22:00 +0000</pubDate>
+</item>
+<item>
 	<title>Vince Knight: This class teaches me to not trust my classmates: An iterated prisoners dilemma in class</title>
 	<guid>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/</guid>
 	<link>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/</link>
@@ -4911,7 +3197,7 @@ The correction has been pencilled in. The original number printed was 1.
 	<guid>http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence</guid>
 	<link>http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence</link>
 	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;The Oldenburger infinite sequence &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#o39&quot; id=&quot;id1&quot;&gt;[O39]&lt;/a&gt;
+&lt;p&gt;The Oldenburger infinite sequence &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence#o39&quot; id=&quot;id1&quot;&gt;[O39]&lt;/a&gt;
 \[
 K = 1221121221221121122121121221121121221221\ldots
 \]
@@ -5094,14 +3380,14 @@ is that the abelian complexity of the Oldenburger sequence grows like
 &lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;o39&quot; rules=&quot;none&quot;&gt;
 &lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/categorie/sage/feed/index.xml#id1&quot;&gt;[O39]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oldenburger, Rufus (1939). &amp;quot;Exponent trajectories in symbolic dynamics&amp;quot;.
+&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence#id1&quot;&gt;[O39]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oldenburger, Rufus (1939). &amp;quot;Exponent trajectories in symbolic dynamics&amp;quot;.
 Transactions of the American Mathematical Society 46: 453–466.
 &lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.2307%2F1989933&quot;&gt;doi:10.2307/1989933&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
-	<pubDate>Sun, 28 Sep 2014 02:00:00 +0000</pubDate>
+	<pubDate>Sat, 27 Sep 2014 22:00:00 +0000</pubDate>
 </item>
 
 </channel>
