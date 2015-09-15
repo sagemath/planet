@@ -210,7 +210,7 @@
 		<foaf:Agent>
 			<foaf:name>Jonathan Lee</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/">
 					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
@@ -444,7 +444,7 @@
 		<foaf:Agent>
 			<foaf:name>The Matroid Union</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://matroidunion.org">
+				<foaf:Document rdf:about="http://matroidunion.org/">
 					<dc:title>The Matroid Union » Sage</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://matroidunion.org/?feed=rss2&amp;cat=7" />
