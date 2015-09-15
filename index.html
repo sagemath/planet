@@ -4326,16 +4326,14 @@ The correction has been pencilled in. The original number printed was 1.
 <div class="content">
 <p>This post will cover the coloring of edges in the lattice of subgroups of a group. </p>
 
-<p><img src="http://sheaves.github.io/images/C3semiC8.png" alt="Lattice of subgroups of $C3:C8$" /></p>
+<p><img src="http://sheaves.github.io/images/C3semiC8_2.svg" alt="Lattice of subgroups of $C3:C8$" /></p>
 
 <!--more-->
 
-<p>Coloring edges is almost as simple as <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/">coloring vertices</a>, so we’ll start with that. </p>
-
 <h2 id="generating-small-groups">Generating small groups</h2>
-<p>As we’ve done in previous posts, let’s start by choosing a group and generate its lattice of subgroups. This can be done by referring to this list of <a href="http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32">constructions for every group of order less than 32 </a>. These instructions allow us to construct every group on Wikipedia’s <a href="http://en.wikipedia.org/wiki/List_of_small_groups">list of small groups</a>! </p>
+<p>As we’ve done in <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/" target="_blank">previous posts</a>, let’s  choose a group and generate its lattice of subgroups. This can be done by referring to this list of <a href="http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32" target="_blank">constructions for every group of order less than 32 </a>. These instructions allow us to construct every group on Wikipedia’s <a href="http://en.wikipedia.org/wiki/List_of_small_groups" target="_blank">list of small groups</a>! </p>
 
-<p>For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we’ll label by cardinality, and we won’t color the vertices.</p>
+<p>For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we won’t color the vertices.</p>
 
 <p><em>(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)</em></p>
 
@@ -4344,11 +4342,11 @@ The correction has been pencilled in. The original number printed was 1.
 </div>
 
 <h2 id="coloring-edges">Coloring edges</h2>
-<p>In the <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/">previous post</a>, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.</p>
+<p>In the <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/" target="_blank">previous post</a>, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.</p>
 
-<p>However, suppose we want to see the subnormal series of the group. A <a href="http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series">subnormal series</a> is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking <em>pairs</em> of subgroups to see whether one is a normal subgroup of the other. This suggests that we color <em>edges</em> according to whether one of its endpoints is a normal subgroup of the other endpoint.</p>
+<p>However, suppose we want to see the subnormal series of the group. A <a href="http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series" target="_blank">subnormal series</a> is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking <em>pairs</em> of subgroups to see whether one is a normal subgroup of the other. This suggests that we color <em>edges</em> according to whether one of its endpoints is a normal subgroup of the other endpoint.</p>
 
-<p>The edges of the <a href="http://en.wikipedia.org/wiki/Hasse_diagram">Hasse diagram</a> of a poset are the pairs $(h,k)$ where $h$ is <a href="http://en.wikipedia.org/wiki/Covering_relation">covered by</a> $k$ in the poset. This means that $h &lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling <code>P.cover_relations()</code> on the poset $P$.</p>
+<p>The edges of the <a href="http://en.wikipedia.org/wiki/Hasse_diagram" target="_blank">Hasse diagram</a> of a poset are the pairs $(h,k)$ where $h$ is <a href="http://en.wikipedia.org/wiki/Covering_relation" target="_blank">covered by</a> $k$ in the poset. This means that $h &lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling <code>P.cover_relations()</code> on the poset $P$.</p>
 
 <p>To color edges of a graph, we create a dictionary <code>edge_colors</code>:</p>
 
@@ -4357,9 +4355,9 @@ The correction has been pencilled in. The original number printed was 1.
 </div>
 
 <h3 id="up-next">Up next…</h3>
-<p>This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the next post, I’ll write code to label edges. Doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.</p>
+<p>This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the <a href="http://sheaves.github.io/Subgroup-Explorer/">next post</a>, I’ll write code to label edges, but will probably skip explaining it, as doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.</p>
 
-<p>After that, I hope to write a bit about doing some simple representation theory things in Sage.</p></div>
+<p>After that, I hope to write a bit about doing some <a href="http://sheaves.github.io/Representation-Theory-Intro/">simple representation theory</a> in Sage.</p></div>
 
 
 
@@ -4961,7 +4959,7 @@ maintainer</a>.
 <a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
-<a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org/" class="message" title="internal server error">The Matroid Union</a>
+<a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
 </li>
 <li>
 <a href="http://titusnicolae.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://titusnicolae.blogspot.com/" class="message" title="no activity in 356 days">Titus Nicolae</a>
@@ -4970,10 +4968,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -4994,7 +4992,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-September 15, 2015 07:30 AM<br>
+September 15, 2015 08:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

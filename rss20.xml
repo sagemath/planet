@@ -3077,16 +3077,14 @@ The correction has been pencilled in. The original number printed was 1.
 	<link>http://sheaves.github.io/Subgroup-Lattice-Edges/</link>
 	<description>&lt;p&gt;This post will cover the coloring of edges in the lattice of subgroups of a group. &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/images/C3semiC8.png&quot; alt=&quot;Lattice of subgroups of $C3:C8$&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/images/C3semiC8_2.svg&quot; alt=&quot;Lattice of subgroups of $C3:C8$&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;Coloring edges is almost as simple as &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot;&gt;coloring vertices&lt;/a&gt;, so we’ll start with that. &lt;/p&gt;
-
 &lt;h2 id=&quot;generating-small-groups&quot;&gt;Generating small groups&lt;/h2&gt;
-&lt;p&gt;As we’ve done in previous posts, let’s start by choosing a group and generate its lattice of subgroups. This can be done by referring to this list of &lt;a href=&quot;http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32&quot;&gt;constructions for every group of order less than 32 &lt;/a&gt;. These instructions allow us to construct every group on Wikipedia’s &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_small_groups&quot;&gt;list of small groups&lt;/a&gt;! &lt;/p&gt;
+&lt;p&gt;As we’ve done in &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot; target=&quot;_blank&quot;&gt;previous posts&lt;/a&gt;, let’s  choose a group and generate its lattice of subgroups. This can be done by referring to this list of &lt;a href=&quot;http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32&quot; target=&quot;_blank&quot;&gt;constructions for every group of order less than 32 &lt;/a&gt;. These instructions allow us to construct every group on Wikipedia’s &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_small_groups&quot; target=&quot;_blank&quot;&gt;list of small groups&lt;/a&gt;! &lt;/p&gt;
 
-&lt;p&gt;For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we’ll label by cardinality, and we won’t color the vertices.&lt;/p&gt;
+&lt;p&gt;For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we won’t color the vertices.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)&lt;/em&gt;&lt;/p&gt;
 
@@ -3095,11 +3093,11 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;/div&gt;
 
 &lt;h2 id=&quot;coloring-edges&quot;&gt;Coloring edges&lt;/h2&gt;
-&lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot;&gt;previous post&lt;/a&gt;, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.&lt;/p&gt;
 
-&lt;p&gt;However, suppose we want to see the subnormal series of the group. A &lt;a href=&quot;http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series&quot;&gt;subnormal series&lt;/a&gt; is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking &lt;em&gt;pairs&lt;/em&gt; of subgroups to see whether one is a normal subgroup of the other. This suggests that we color &lt;em&gt;edges&lt;/em&gt; according to whether one of its endpoints is a normal subgroup of the other endpoint.&lt;/p&gt;
+&lt;p&gt;However, suppose we want to see the subnormal series of the group. A &lt;a href=&quot;http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series&quot; target=&quot;_blank&quot;&gt;subnormal series&lt;/a&gt; is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking &lt;em&gt;pairs&lt;/em&gt; of subgroups to see whether one is a normal subgroup of the other. This suggests that we color &lt;em&gt;edges&lt;/em&gt; according to whether one of its endpoints is a normal subgroup of the other endpoint.&lt;/p&gt;
 
-&lt;p&gt;The edges of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Hasse_diagram&quot;&gt;Hasse diagram&lt;/a&gt; of a poset are the pairs $(h,k)$ where $h$ is &lt;a href=&quot;http://en.wikipedia.org/wiki/Covering_relation&quot;&gt;covered by&lt;/a&gt; $k$ in the poset. This means that $h &amp;lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling &lt;code&gt;P.cover_relations()&lt;/code&gt; on the poset $P$.&lt;/p&gt;
+&lt;p&gt;The edges of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Hasse_diagram&quot; target=&quot;_blank&quot;&gt;Hasse diagram&lt;/a&gt; of a poset are the pairs $(h,k)$ where $h$ is &lt;a href=&quot;http://en.wikipedia.org/wiki/Covering_relation&quot; target=&quot;_blank&quot;&gt;covered by&lt;/a&gt; $k$ in the poset. This means that $h &amp;lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling &lt;code&gt;P.cover_relations()&lt;/code&gt; on the poset $P$.&lt;/p&gt;
 
 &lt;p&gt;To color edges of a graph, we create a dictionary &lt;code&gt;edge_colors&lt;/code&gt;:&lt;/p&gt;
 
@@ -3108,9 +3106,9 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;/div&gt;
 
 &lt;h3 id=&quot;up-next&quot;&gt;Up next…&lt;/h3&gt;
-&lt;p&gt;This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the next post, I’ll write code to label edges. Doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.&lt;/p&gt;
+&lt;p&gt;This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Explorer/&quot;&gt;next post&lt;/a&gt;, I’ll write code to label edges, but will probably skip explaining it, as doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.&lt;/p&gt;
 
-&lt;p&gt;After that, I hope to write a bit about doing some simple representation theory things in Sage.&lt;/p&gt;</description>
+&lt;p&gt;After that, I hope to write a bit about doing some &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;simple representation theory&lt;/a&gt; in Sage.&lt;/p&gt;</description>
 	<pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
 </item>
 <item>
