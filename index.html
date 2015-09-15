@@ -4150,14 +4150,15 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 
 <h2 id="basic-definitions">Basic Definitions</h2>
 
-<p>Given a group $G$, a linear representation of $G$ is a group homomorphism $\rho: G \to \mathrm{GL}(V)$ 
-such that </p>
-
-
+<p>Given a group $G$, a linear representation of $G$ is a group homomorphism $\rho: G \to \mathrm{GL}(V)$. </p>
 
 <p>For our purposes, we will assume that $G$ is a finite group and $V$ is an $n$-dimensional vector space over $\mathbb{C}$. Then $\mathrm{GL}(V)$ is isomorphic to the invertible $n \times n$ matrices over $\mathbb{C}$, which we will denote $\mathrm{GL}_n \mathbb{C}$. </p>
 
-<p>So a representation is just a function that takes group elements and returns invertible matrices, in such a way that the above equation holds.</p>
+<p>So a representation is just a function that takes group elements and returns invertible matrices, such that</p>
+
+
+
+<p>where we have matrix multiplication on the right-hand side.</p>
 
 <p>Various authors refer to the map $\rho$, the vector space $V$, or the tuple $(V,\rho)$ as a representation; this shouldn’t cause any confusion, as it’s usually clear from context whether we are referring to a map or a vector space. When I need to be extra precise, I’ll use $(V,\rho)$.</p>
 
@@ -4261,34 +4262,29 @@ such that </p>
 <h4><a href="http://sheaves.github.io/Subgroup-Explorer/">Subgroup Explorer</a></h4>
 <div class="entry">
 <div class="content">
-<p><img src="http://sheaves.github.io/images/SubgroupExplorer.png" alt="Subgroup Explorer" title="Subgroup Lattice Generator" /></p>
-
-<p>I’ve written a subgroup lattice generator for all groups of size up to 32. It’s powered by Sage and GAP, and allows you to view the lattice of subgroups or subgroup conjugacy classes of a group from your browser.</p>
+<p>To sum up the subgroup lattice series, I’ve written a subgroup lattice generator. It’s powered by Sage and GAP, and allows you to view the lattice of subgroups or subgroup conjugacy classes of a group from your browser.</p>
 
 <!--more-->
-<p>Click <strong>Go!</strong> below to refresh the viewer, or if it doesn’t load.</p>
 
-<div class="go">
+<div class="auto">
   
 </div>
 
 <p><a href="http://en.wikipedia.org/wiki/Normal_subgroup" target="_blank">Normal subgroups</a> are colored green. Additionally, the <a href="http://en.wikipedia.org/wiki/Center_%28group_theory%29" target="_blank">center</a> is blue while the <a href="http://en.wikipedia.org/wiki/Commutator_subgroup" target="_blank">commutator subgroup</a> is pink.</p>
 
-<p>Showing the full subgroup lattice can get messy for large groups. If the option <code>Conjugacy classes of subgroups</code> is selected, the viewer only shows the <a href="http://en.wikipedia.org/wiki/Conjugacy_class#Conjugacy_of_subgroups_and_general_subsets" target="_blank">conjugacy classes of subgroups</a> (i.e. all subgroups that are conjugate are combined into a single vertex).</p>
+<p>Showing the full subgroup lattice can get messy for large groups. If the option <code>Conjugacy classes</code> is selected, the viewer only shows the <a href="http://en.wikipedia.org/wiki/Conjugacy_class#Conjugacy_of_subgroups_and_general_subsets" target="_blank">conjugacy classes of subgroups</a> (i.e. all subgroups that are conjugate are combined into a single vertex).</p>
 
 <p>The edge labels indicate how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class <strong>contains</strong>, or how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class is <strong>contained by</strong>. The labels are omitted if these numbers are 1. The edge colors indicate whether the subgroups in the “smaller” conjugacy class are normal subgroups of those in “larger” conjugacy class.</p>
 
-<p>In the image at the top of the post, the group <code>C15 : C4</code> (the colon stands for <a href="http://en.wikipedia.org/wiki/Semidirect_product" target="_blank">semi-direct product</a> and is usually written $\rtimes$) contains 5 subgroups isomorphic to <code>C3 : C4</code>, which in turn contains 3 subgroups isomorphic to <code>C4</code> and 1 subgroup isomorphic to <code>C6</code> (the 5 belows to another edge). The edge colors indicate that <code>C6</code> is a normal subgroup of <code>C3 : C3</code> whereas <code>C4</code> is not. For further information on group descriptors, click <a href="http://groupprops.subwiki.org/wiki/GAP:StructureDescription#Aspects_of_structure_description" target="_blank">here</a>.</p>
+<p>For instance, the group <code>C15 : C4</code> (of order 60; the colon stands for <a href="http://en.wikipedia.org/wiki/Semidirect_product" target="_blank">semi-direct product</a> and is usually written $\rtimes$) contains 5 subgroups isomorphic to <code>C3 : C4</code>, which in turn contains 3 subgroups isomorphic to <code>C4</code> and 1 subgroup isomorphic to <code>C6</code> (the 5 belows to another edge). The edge colors indicate that <code>C6</code> is a normal subgroup of <code>C3 : C3</code> whereas <code>C4</code> is not. For further information on group descriptors, click <a href="http://groupprops.subwiki.org/wiki/GAP:StructureDescription#Aspects_of_structure_description" target="_blank">here</a>.</p>
 
-<p>And here’s the code for a version that you can run on <a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a>. It allows you to input much larger groups. This was used to produce the image at the top of the post. Don’t try running it here, however, since the SageCellServer doesn’t have the <code>database_gap</code> package installed.</p>
-
-<div class="no_eval">
-  
-</div>
+<p>As mentioned in the <a href="http://sheaves.github.io/Subgroup-Lattice-Edges/" target="_blank">previous post</a>, labelling the edges requires taking apart the poset plotting code. I had to extract the Hasse diagram of a poset as a graph and modifying the edge labels directly. This explains why the code is much longer than in previous posts.</p>
 
 <p>Finally, while verifying the results of this program, I found an error in <a href="http://www.cambridge.org/us/academic/subjects/mathematics/algebra/representations-groups-computational-approach" target="_blank">this book</a>!
 The correction has been pencilled in. The original number printed was 1.
-<img src="http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg" alt="A5 Lattice" title="A5 Subgroup Lattice" /></p></div>
+<img src="http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg" alt="A5 Lattice" title="A5 Subgroup Lattice" /></p>
+
+<p>This is the last post on subgroup lattices. My <a href="http://sheaves.github.io/Representation-Theory-Intro/">next post</a> will be the start of a new series on doing represntation theory in Sage.</p></div>
 
 
 
@@ -4992,7 +4988,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-September 15, 2015 08:30 AM<br>
+September 15, 2015 09:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

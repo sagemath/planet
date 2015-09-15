@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-09-15T08:30:14+00:00</updated>
+	<updated>2015-09-15T09:30:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -44,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -446,7 +446,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1718,7 +1718,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2339,7 +2339,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -2558,7 +2558,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3122,7 +3122,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3229,7 +3229,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3338,7 +3338,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3426,7 +3426,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3441,14 +3441,15 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 
 &lt;h2 id=&quot;basic-definitions&quot;&gt;Basic Definitions&lt;/h2&gt;
 
-&lt;p&gt;Given a group $G$, a linear representation of $G$ is a group homomorphism $\rho: G \to \mathrm{GL}(V)$ 
-such that &lt;/p&gt;
-
-
+&lt;p&gt;Given a group $G$, a linear representation of $G$ is a group homomorphism $\rho: G \to \mathrm{GL}(V)$. &lt;/p&gt;
 
 &lt;p&gt;For our purposes, we will assume that $G$ is a finite group and $V$ is an $n$-dimensional vector space over $\mathbb{C}$. Then $\mathrm{GL}(V)$ is isomorphic to the invertible $n \times n$ matrices over $\mathbb{C}$, which we will denote $\mathrm{GL}_n \mathbb{C}$. &lt;/p&gt;
 
-&lt;p&gt;So a representation is just a function that takes group elements and returns invertible matrices, in such a way that the above equation holds.&lt;/p&gt;
+&lt;p&gt;So a representation is just a function that takes group elements and returns invertible matrices, such that&lt;/p&gt;
+
+
+
+&lt;p&gt;where we have matrix multiplication on the right-hand side.&lt;/p&gt;
 
 &lt;p&gt;Various authors refer to the map $\rho$, the vector space $V$, or the tuple $(V,\rho)$ as a representation; this shouldn’t cause any confusion, as it’s usually clear from context whether we are referring to a map or a vector space. When I need to be extra precise, I’ll use $(V,\rho)$.&lt;/p&gt;
 
@@ -3526,7 +3527,7 @@ such that &lt;/p&gt;
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3535,34 +3536,29 @@ such that &lt;/p&gt;
 		<link href="http://sheaves.github.io/Subgroup-Explorer/"/>
 		<id>http://sheaves.github.io/Subgroup-Explorer/</id>
 		<updated>2015-01-17T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/images/SubgroupExplorer.png&quot; alt=&quot;Subgroup Explorer&quot; title=&quot;Subgroup Lattice Generator&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I’ve written a subgroup lattice generator for all groups of size up to 32. It’s powered by Sage and GAP, and allows you to view the lattice of subgroups or subgroup conjugacy classes of a group from your browser.&lt;/p&gt;
+		<content type="html">&lt;p&gt;To sum up the subgroup lattice series, I’ve written a subgroup lattice generator. It’s powered by Sage and GAP, and allows you to view the lattice of subgroups or subgroup conjugacy classes of a group from your browser.&lt;/p&gt;
 
 &lt;!--more--&gt;
-&lt;p&gt;Click &lt;strong&gt;Go!&lt;/strong&gt; below to refresh the viewer, or if it doesn’t load.&lt;/p&gt;
 
-&lt;div class=&quot;go&quot;&gt;
+&lt;div class=&quot;auto&quot;&gt;
   
 &lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Normal_subgroup&quot; target=&quot;_blank&quot;&gt;Normal subgroups&lt;/a&gt; are colored green. Additionally, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Center_%28group_theory%29&quot; target=&quot;_blank&quot;&gt;center&lt;/a&gt; is blue while the &lt;a href=&quot;http://en.wikipedia.org/wiki/Commutator_subgroup&quot; target=&quot;_blank&quot;&gt;commutator subgroup&lt;/a&gt; is pink.&lt;/p&gt;
 
-&lt;p&gt;Showing the full subgroup lattice can get messy for large groups. If the option &lt;code&gt;Conjugacy classes of subgroups&lt;/code&gt; is selected, the viewer only shows the &lt;a href=&quot;http://en.wikipedia.org/wiki/Conjugacy_class#Conjugacy_of_subgroups_and_general_subsets&quot; target=&quot;_blank&quot;&gt;conjugacy classes of subgroups&lt;/a&gt; (i.e. all subgroups that are conjugate are combined into a single vertex).&lt;/p&gt;
+&lt;p&gt;Showing the full subgroup lattice can get messy for large groups. If the option &lt;code&gt;Conjugacy classes&lt;/code&gt; is selected, the viewer only shows the &lt;a href=&quot;http://en.wikipedia.org/wiki/Conjugacy_class#Conjugacy_of_subgroups_and_general_subsets&quot; target=&quot;_blank&quot;&gt;conjugacy classes of subgroups&lt;/a&gt; (i.e. all subgroups that are conjugate are combined into a single vertex).&lt;/p&gt;
 
 &lt;p&gt;The edge labels indicate how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class &lt;strong&gt;contains&lt;/strong&gt;, or how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class is &lt;strong&gt;contained by&lt;/strong&gt;. The labels are omitted if these numbers are 1. The edge colors indicate whether the subgroups in the “smaller” conjugacy class are normal subgroups of those in “larger” conjugacy class.&lt;/p&gt;
 
-&lt;p&gt;In the image at the top of the post, the group &lt;code&gt;C15 : C4&lt;/code&gt; (the colon stands for &lt;a href=&quot;http://en.wikipedia.org/wiki/Semidirect_product&quot; target=&quot;_blank&quot;&gt;semi-direct product&lt;/a&gt; and is usually written $\rtimes$) contains 5 subgroups isomorphic to &lt;code&gt;C3 : C4&lt;/code&gt;, which in turn contains 3 subgroups isomorphic to &lt;code&gt;C4&lt;/code&gt; and 1 subgroup isomorphic to &lt;code&gt;C6&lt;/code&gt; (the 5 belows to another edge). The edge colors indicate that &lt;code&gt;C6&lt;/code&gt; is a normal subgroup of &lt;code&gt;C3 : C3&lt;/code&gt; whereas &lt;code&gt;C4&lt;/code&gt; is not. For further information on group descriptors, click &lt;a href=&quot;http://groupprops.subwiki.org/wiki/GAP:StructureDescription#Aspects_of_structure_description&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For instance, the group &lt;code&gt;C15 : C4&lt;/code&gt; (of order 60; the colon stands for &lt;a href=&quot;http://en.wikipedia.org/wiki/Semidirect_product&quot; target=&quot;_blank&quot;&gt;semi-direct product&lt;/a&gt; and is usually written $\rtimes$) contains 5 subgroups isomorphic to &lt;code&gt;C3 : C4&lt;/code&gt;, which in turn contains 3 subgroups isomorphic to &lt;code&gt;C4&lt;/code&gt; and 1 subgroup isomorphic to &lt;code&gt;C6&lt;/code&gt; (the 5 belows to another edge). The edge colors indicate that &lt;code&gt;C6&lt;/code&gt; is a normal subgroup of &lt;code&gt;C3 : C3&lt;/code&gt; whereas &lt;code&gt;C4&lt;/code&gt; is not. For further information on group descriptors, click &lt;a href=&quot;http://groupprops.subwiki.org/wiki/GAP:StructureDescription#Aspects_of_structure_description&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;And here’s the code for a version that you can run on &lt;a href=&quot;https://cloud.sagemath.com/&quot; target=&quot;_blank&quot;&gt;SageMathCloud&lt;/a&gt;. It allows you to input much larger groups. This was used to produce the image at the top of the post. Don’t try running it here, however, since the SageCellServer doesn’t have the &lt;code&gt;database_gap&lt;/code&gt; package installed.&lt;/p&gt;
-
-&lt;div class=&quot;no_eval&quot;&gt;
-  
-&lt;/div&gt;
+&lt;p&gt;As mentioned in the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Edges/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, labelling the edges requires taking apart the poset plotting code. I had to extract the Hasse diagram of a poset as a graph and modifying the edge labels directly. This explains why the code is much longer than in previous posts.&lt;/p&gt;
 
 &lt;p&gt;Finally, while verifying the results of this program, I found an error in &lt;a href=&quot;http://www.cambridge.org/us/academic/subjects/mathematics/algebra/representations-groups-computational-approach&quot; target=&quot;_blank&quot;&gt;this book&lt;/a&gt;!
 The correction has been pencilled in. The original number printed was 1.
-&lt;img src=&quot;http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg&quot; alt=&quot;A5 Lattice&quot; title=&quot;A5 Subgroup Lattice&quot; /&gt;&lt;/p&gt;</content>
+&lt;img src=&quot;http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg&quot; alt=&quot;A5 Lattice&quot; title=&quot;A5 Subgroup Lattice&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the last post on subgroup lattices. My &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;next post&lt;/a&gt; will be the start of a new series on doing represntation theory in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
 			<uri>http://sheaves.github.io</uri>
@@ -3572,7 +3568,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3624,7 +3620,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3691,7 +3687,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-09-15T08:30:12+00:00</updated>
+			<updated>2015-09-15T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3711,7 +3707,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3731,7 +3727,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3751,7 +3747,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3771,7 +3767,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T08:30:04+00:00</updated>
+			<updated>2015-09-15T09:30:05+00:00</updated>
 		</source>
 	</entry>
 
