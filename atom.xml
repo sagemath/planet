@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-09-15T04:30:14+00:00</updated>
+	<updated>2015-09-15T05:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -44,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -446,7 +446,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -583,7 +583,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -832,7 +832,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1096,7 +1096,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1115,7 +1115,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1607,7 +1607,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1626,7 +1626,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1645,7 +1645,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.com/</uri>
+			<uri>http://borassisagemath.blogspot.it/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
@@ -1718,7 +1718,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2332,14 +2332,14 @@ So whilst that individual did not get any in, they contributed an important part
 &lt;p&gt;The next post discusses how to do this easily, by making use of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Schur_orthogonality_relations&quot;&gt;Schur orthogonality relations&lt;/a&gt;. These are really cool relations among the rows and columns of the character table. Apart from decomposing representations into irreducibles, we’ll also be able to prove that the character table is always square!&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2551,14 +2551,14 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 &lt;p&gt;For more information, checkout the &lt;a href=&quot;http://www.sagemath.org/doc/reference/plotting/sage/plot/animate.html&quot;&gt;Sage reference for animated plots&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3115,14 +3115,14 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 &lt;p&gt;In the next few posts, I’ll switch gears to &lt;a href=&quot;http://en.wikipedia.org/wiki/Character_theory&quot; target=&quot;_blank&quot;&gt;character theory&lt;/a&gt;, which is a simpler but more powerful way of working with group representations.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3222,14 +3222,14 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;It turns out that finite groups have finitely many irreducible representations! In the &lt;a href=&quot;http://sheaves.github.io/Group-Ring-Regular-Representation/&quot;&gt;next post&lt;/a&gt;, we’ll construct a representation for any finite group $G$ that contains &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3331,14 +3331,14 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;I won’t prove this, but note that if $V$ has a decomposition $W_1 \oplus W_2$, then the projection onto either $W_i$ will have the desired properties.  If we have such a $T$, then its eigenspaces will give a decomposition of $(V,\rho)$. This will be the subject of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Decomposing-Representations/&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3419,14 +3419,14 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;We’ll try to answer this last question and Q1 in the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot;&gt;next few posts&lt;/a&gt;, and see what it means for us when working with representations in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3519,14 +3519,14 @@ such that &lt;/p&gt;
 &lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Sums-Products/&quot;&gt;next post&lt;/a&gt;, I’ll run through two simple ways of combining existing representations to get new ones: the direct sum and the tensor product. I’ll also define &lt;em&gt;irreducible&lt;/em&gt; representations, and state some results that will shed some light on the above questions.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3565,14 +3565,14 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;img src=&quot;http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg&quot; alt=&quot;A5 Lattice&quot; title=&quot;A5 Subgroup Lattice&quot; /&gt;&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3619,14 +3619,14 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;p&gt;After that, I hope to write a bit about doing some simple representation theory things in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3686,14 +3686,14 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;/ul&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-05-25T16:03:28+00:00</updated>
+			<updated>2015-09-15T05:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -3713,7 +3713,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3733,7 +3733,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3753,7 +3753,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3773,7 +3773,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-09-15T04:30:05+00:00</updated>
+			<updated>2015-09-15T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
