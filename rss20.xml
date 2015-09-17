@@ -8,6 +8,54 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>Vince Knight: A Summer of game theory software development</title>
+	<guid>http://drvinceknight.github.io/unpeudemath/code/2015/09/17/A-Summer-of-game-theory-software-development/</guid>
+	<link>http://drvinceknight.github.io/unpeudemath/code/2015/09/17/A-Summer-of-game-theory-software-development/</link>
+	<description>&lt;p&gt;This Summer has seen 3 undergraduates carry out 8 week placements with me
+developing further game theoretic code in Sagemath:&lt;/p&gt;
+
+&lt;p&gt;Hannah Lorrimore (going in to her 2nd year) spent her placement working
+very hard to implement classes for extensive form games. These are mainly
+a graphical representation of games based on a tree like structure. Hannah
+not only developed the appropriate data structures but also worked hard to
+make sure the graphics looked good. You can see an example of the output
+below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/tree.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;James Campbell (going in to an industrial placement year) picked up where he
+left off last Summer (James built the first parts of Game Theory code for
+Sagemath) and developed a test for degeneracy of games. This involves building a
+corresponding linear system for the game and testing a particular condition.
+James and I wrote a blog post about some of the theory here:
+&lt;a href=&quot;http://vknight.org/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/&quot;&gt;http://vknight.org/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Rhys Ward (going in to his first year) has been working at the interface
+between extensive form games and normal form games. His main contribution
+(Rhys is still working as of the writing of this) has been to build code
+that converts an extensive form game to a normal form game. This requires
+carefully traversing the underlying tree and keeping track of the strategy
+space. Rhys has also built a catalog of normal form games and is now
+starting to work on the capability to remove dominated strategies from a
+normal form game.&lt;/p&gt;
+
+&lt;p&gt;Hannah, Rhys and James have also been working in conjunction with Tobenna
+Peter Igwe who is a PhD student at the University of Liverpool. Tobenna has
+been implementing a variety of game theoretic code as part of the Google
+Summer of Code project with me as his mentor.&lt;/p&gt;
+
+&lt;p&gt;Hannah, James, Tobenna and I visited Oxford University to spend two days
+working with Dr Dima Pasechnik and giving a talk. You can see a video of the
+talk here: https://www.youtube.com/watch?v=v4kKYr5I2io&lt;/p&gt;
+
+&lt;p&gt;All of this code will now be reviewed by the Sagemath community and will
+(just as James’s code last year) be eventually available to anyone who wants
+to study game theory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note: this blog post is based on a similar Cardiff University newsletter item.&lt;/strong&gt;&lt;/p&gt;</description>
+	<pubDate>Thu, 17 Sep 2015 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>William Stein</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753</guid>
 	<link>http://sagemath.blogspot.com/2015/09/funding-open-source-mathematical.html</link>
@@ -3185,211 +3233,6 @@ The correction has been pencilled in. The original number printed was 1.
 	<description>&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud (SMC)&lt;/a&gt; is a free (&lt;a href=&quot;http://www.nsf.gov/&quot;&gt;NSF&lt;/a&gt;, &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt; and &lt;a href=&quot;http://www.washington.edu/&quot;&gt;UW&lt;/a&gt; supported) website that lets you collaboratively work with Sage worksheets, IPython notebooks, LaTeX documents and much, much more. All work is snapshotted every few minutes, and copied out to several data centers, so if something goes wrong with a project running on one machine (right before your lecture begins or homework assignment is due), it will pop up on another machine. We designed the backend architecture from the ground up to be very horizontally scalable and have no single points of failure.&lt;br /&gt;&lt;br /&gt;This post is about an important new feature: &lt;em&gt;&lt;b&gt;You can now mark a folder or file so that all other users can view it, and very easily copy it to their own project.&lt;/b&gt;&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-oV_0xhD4af0/VEAnl6SRVQI/AAAAAAABQ2U/NkKVdh0NbNE/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.15.58%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-oV_0xhD4af0/VEAnl6SRVQI/AAAAAAABQ2U/NkKVdh0NbNE/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.15.58%2BPM.png&quot; height=&quot;308&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;This solves problems:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You create a &quot;template&quot; project, e.g., with pre-installed software, worksheets, IPython notebooks, etc., and want other users to easily be able to clone it as a new project. &lt;strong&gt;Solution:&lt;/strong&gt; Mark the home directory of the project public, and share the link widely.&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-FDT_Z1UD9H0/VEAn9tH3OhI/AAAAAAABQ2c/RQGklZMBiJA/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.17.35%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-FDT_Z1UD9H0/VEAn9tH3OhI/AAAAAAABQ2c/RQGklZMBiJA/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.17.35%2BPM.png&quot; height=&quot;201&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You create a syllabus for a course, an assignment, a worksheet full of 3d images, etc., that you want to share with a group of students. &lt;strong&gt;Solution:&lt;/strong&gt; Make the syllabus or worksheet public, and share the link with your students via an email and on the course website. (Note: You can also use a course document to share files with all students privately.) &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/some%203d%20plots.sagews&quot; target=&quot;_blank&quot;&gt;For example...&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-dMZS2DgsnzY/VEAouDdZu6I/AAAAAAABQ2k/6iPT0OWIomk/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.20.38%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-dMZS2DgsnzY/VEAouDdZu6I/AAAAAAABQ2k/6iPT0OWIomk/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.20.38%2BPM.png&quot; height=&quot;320&quot; width=&quot;286&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-hQIq6QKlzLo/VEApB-yQV8I/AAAAAAABQ2s/o-jx4vjIlj0/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.22.15%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-hQIq6QKlzLo/VEApB-yQV8I/AAAAAAABQ2s/o-jx4vjIlj0/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.22.15%2BPM.png&quot; height=&quot;74&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You run into a problem using &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; and want help. &lt;strong&gt;Solution:&lt;/strong&gt; Make the worksheet or code that isn't working public, and post &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/confused.sagews&quot; target=&quot;_blank&quot;&gt;a link&lt;/a&gt; in a forum asking for help.&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-CdngoQAPCi8/VEApPsnc_8I/AAAAAAABQ20/r6wHP-IMqQ8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.23.13%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-CdngoQAPCi8/VEApPsnc_8I/AAAAAAABQ20/r6wHP-IMqQ8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.23.13%2BPM.png&quot; height=&quot;216&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You write a blog post explaining how to solve a problem and write related code in an &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; worksheet, which you want your readers to see. &lt;strong&gt;Solution:&lt;/strong&gt; Make that code public and post a link in your blog post.&lt;/li&gt;&lt;/ul&gt;Here's &lt;a href=&quot;http://youtu.be/B4GiyjIXL4Q&quot;&gt;a screencast&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Each &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; project has its own local &quot;project server&quot;, which takes some time to start up, and serves files, coordinates Sage, terminal, and IPython sessions, etc. Public sharing completely avoids having anything to do with the project server -- &lt;strong&gt;it works fine even if the project server is not running&lt;/strong&gt; -- it's always fast and there is no startup time if the project server isn't running. Moreover, public sharing reads the live files from your project, so you can update the files in a public shared directory, add new files, etc., and users will see these changes (when they refresh, since it's not automatic).&lt;br /&gt;As an example, here is the &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/cloud-examples/&quot;&gt;cloud-examples github repo as a share&lt;/a&gt;. If you click on it (and have a SageMathCloud account), you'll see this:&lt;br /&gt;&lt;pre&gt;&lt;br /&gt;&lt;/pre&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-nFbB6EldXxw/VEAph5pthGI/AAAAAAABQ28/cEBiDtyHSf8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.24.21%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-nFbB6EldXxw/VEAph5pthGI/AAAAAAABQ28/cEBiDtyHSf8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.24.21%2BPM.png&quot; height=&quot;280&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;pre&gt;&lt;br /&gt;&lt;/pre&gt;&lt;h2 id=&quot;what-next&quot;&gt;What Next?&lt;/h2&gt;There is an enormous amount of natural additional functionality to build on top of public sharing.&lt;br /&gt;&lt;br /&gt;For example, not all document types can be previewed in read-only mode right now; in particular, IPython notebooks, task lists, LaTeX documents, images, and PDF files must be copied from the public share to another project before people can view them. It is better to release a first usable version of public sharing before systematically going through and implementing the additional features needed to support all of the above. You &lt;em&gt;can&lt;/em&gt; make complicated Sage worksheets with embedded images and 3d graphics, and those can be previewed before copying them to a project.&lt;br /&gt;Right now, the only way to visit a public share is to paste the URL into a browser tab and load it. Soon the projects page will be re-organized so you can search for publicly shared paths, see all public shares that you have previously visited, who shared them, how many +1's they've received, comments, etc.&lt;br /&gt;&lt;br /&gt;Also, I plan to eventually make it so public shares will be visible to people who have not logged in, and when viewing a publicly shared file or directory, there will be an option to start it running in a limited &lt;em&gt;project&lt;/em&gt;, which will vanish from existence after a period of inactivity (say).&lt;br /&gt;&lt;br /&gt;There are also dozens of details that are not yet implemented. For example, it would be nice to be able to directly download files (and directories!) to your computer from a public share. And it's also natural to share a folder or file with a specific list of people, rather than sharing it publicly. If somebody is viewing a public file and you change it, they should likely see the update automatically. Right now when viewing a share, you don't even know who shared it, and if you open a worksheet it can automatically execute Javascript, which is potentially unsafe. &amp;nbsp;Once public content is easily found, if somebody posts &quot;evil&quot; content publicly, there needs to be an easy way for users to report it.&lt;br /&gt;&lt;h2 id=&quot;sharing-will-permeate-everything&quot;&gt;Sharing will permeate everything&lt;/h2&gt;Sharing has been thought about a great deal during the last few years in the context of sites such as Github, Facebook, Google+ and Twitter. With &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt;, we've developed a foundation for interactive collaborative computing in a browser, and will introduce sharing on top of that in a way that is motivated by your problems. For example, as with Github or Google+, when somebody makes a copy of your publicly shared folder, this copy should be listed (under &quot;copies&quot;) and it could start out public by default. There is much to do.&lt;br /&gt;&lt;br /&gt;One reason it took so long to release the first version of public sharing is that I kept imagining that sharing would happen at the level of complete projects, just like sharing in Github. However, when thinking through your problems, it makes way more sense in &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; to share individual directories and files. Technically, sharing at this level works works well for &lt;em&gt;read-only&lt;/em&gt; access, not for read-write access, since projects are mapped to Linux accounts. Another reason I have been very hesitant to support sharing is that I've had enormous trouble over the years with spammers posting content that gets me in trouble (with my University -- it is illegal for UW to host advertisements). However, by not letting search engines index content, the motivation for spammers to post nasty content is greatly reduced.&lt;br /&gt;&lt;br /&gt;Imagine publicly sharing recipes for automatically gradable homework problems, which use the full power of everything installed in &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt;, get forked, improved, used, etc.</description>
 	<pubDate>Thu, 16 Oct 2014 13:29:42 +0000</pubDate>
 	<author>noreply@blogger.com (William Stein)</author>
-</item>
-<item>
-	<title>William Stein: SageMathCloud Course Management</title>
-	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-4658363764746166473</guid>
-	<link>http://sagemath.blogspot.com/2014/10/sagemathcloud-course-management.html</link>
-	<description>&lt;div class=&quot;modal-body&quot;&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot; target=&quot;_blank&quot;&gt;SageMathCloud&lt;/a&gt; now has some very rudimentary course management functionality. &amp;nbsp;Though still very basic, it makes it much, much easier to make files available to students, collect homework, etc., entirely using &lt;a href=&quot;https://cloud.sagemath.com/&quot; target=&quot;_blank&quot;&gt;SageMathCloud&lt;/a&gt; (without having to use email or any other submissions systems or github to share files). &amp;nbsp; To get started, create a new course by clicking on +New, then typing the name of your course and click &quot;Course&quot;:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-zJYWHLYWRP8/VCxOUQCrbrI/AAAAAAABQQ4/KT4IWWwUQKg/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.55.15%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-zJYWHLYWRP8/VCxOUQCrbrI/AAAAAAABQQ4/KT4IWWwUQKg/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.55.15%2BAM.png&quot; height=&quot;198&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;Course documents allow you to manage a &lt;i&gt;list of students&lt;/i&gt;, &lt;i&gt;create projects&lt;/i&gt; for each                     of them, &lt;i&gt;share homework&lt;/i&gt; and folders with them, &lt;i&gt;collect                     homework&lt;/i&gt;, and &lt;i&gt;grade and return&lt;/i&gt; it to students.                       &lt;br /&gt;&lt;h4&gt;Add Students&lt;/h4&gt;To add a student to your course, click on the &lt;a class=&quot;btn btn-primary btn-default&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-users&quot;&gt; &lt;/i&gt;  Students&lt;/a&gt; tab,                         then type a student's name or email address in the &quot;Add student&quot; box to the right and press                         enter or click the button.   Searching for an email address is best, since you can be certain that the person you're adding is                         really a student in your course (instead of an unknown SageMathCloud user with the same name); moreover, if your student                         doesn't already have an account, they will receive an invitation via email.                         &lt;span class=&quot;lighten&quot;&gt;(NOTE: There is currently no way to add dozens of students at once.)&lt;/span&gt;                    &lt;br /&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-5jlvxCeEwAk/VCxO5T9_U1I/AAAAAAABQRA/YjyF5gcEogs/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.57.53%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-5jlvxCeEwAk/VCxO5T9_U1I/AAAAAAABQRA/YjyF5gcEogs/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.57.53%2BAM.png&quot; height=&quot;171&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;Once you add a student, click on &lt;a class=&quot;btn btn-warning&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-plus-circle&quot;&gt; &lt;/i&gt;  Create Project&lt;/a&gt; next to your                         student's name to create their project.  You own the project, and they will be added as a collaborator, and invited by email if they                         do not yet have an account.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-pi4VnSnlrCA/VCxPS2-Tc4I/AAAAAAABQRQ/03FygAXUnRM/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.59.50%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-pi4VnSnlrCA/VCxPS2-Tc4I/AAAAAAABQRQ/03FygAXUnRM/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.59.50%2BAM.png&quot; height=&quot;123&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-C5hvg7AuAow/VCxPSzz8TuI/AAAAAAABQRU/LyBP3j2xA7s/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.00.10%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-C5hvg7AuAow/VCxPSzz8TuI/AAAAAAABQRU/LyBP3j2xA7s/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.00.10%2BPM.png&quot; height=&quot;129&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&amp;nbsp;Don't worry, student projects are hidden by default from your main project listing.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-ZzDNFNJIvAQ/VCxPk6o1hnI/AAAAAAABQRg/fF3r40SK6_c/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.01.23%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-ZzDNFNJIvAQ/VCxPk6o1hnI/AAAAAAABQRg/fF3r40SK6_c/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.01.23%2BPM.png&quot; height=&quot;115&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;(To delete a student, click &lt;i class=&quot;fa fa-times&quot;&gt; &lt;/i&gt; to the right of the student.                         You can toggle whether deleted students are shown in settings.)&lt;br /&gt;&lt;br /&gt;&lt;h4&gt;Add Assignments&lt;/h4&gt;To create an assignment, first click                         &lt;a href=&quot;https://www.blogger.com/null&quot;&gt;                            &lt;i class=&quot;project-control-icon fa fa-plus-circle&quot;&gt;&lt;/i&gt;                            &lt;span class=&quot;project-pages-button-label hidden-xs&quot;&gt;New&lt;/span&gt;                        &lt;/a&gt;                        in the upper left of your project to create a new folder, and create or add files to it, as usual.                         Click on the &lt;a class=&quot;btn btn-default btn-primary&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-share-square-o&quot;&gt; &lt;/i&gt; Assignments&lt;/a&gt;                        tab of the course, then search for the folder by typing some part of its name in the box on the far right.                         Click to select the folder and it will be added to your                         list of assignments.                         To make &lt;b&gt;copies&lt;/b&gt; of this folder available to all of your students whose projects you have created,                         click the &lt;a class=&quot;btn btn-warning&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-share-square-o&quot;&gt; &lt;/i&gt;  Assign&lt;/a&gt; button.                         &lt;span class=&quot;lighten&quot;&gt;NOTE: You can share arbitrary folders with any contents with your                             students -- folders don't have                             to contain &quot;assignments&quot;, and may contain anything, Sage worksheets, IPython notebooks,                             LaTeX documents, etc.&lt;/span&gt;                    &lt;br /&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-zv3oNd_QHhI/VCxQD8AEiSI/AAAAAAABQRo/aIPlWFZ83cw/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.03.06%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-zv3oNd_QHhI/VCxQD8AEiSI/AAAAAAABQRo/aIPlWFZ83cw/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.03.06%2BPM.png&quot; height=&quot;98&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-LT4ZJFwHv3k/VCxQEwwjM7I/AAAAAAABQRw/N9d6TlSgoak/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.03.20%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-LT4ZJFwHv3k/VCxQEwwjM7I/AAAAAAABQRw/N9d6TlSgoak/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.03.20%2BPM.png&quot; height=&quot;140&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;lighten&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;h4&gt;Collecting and Grading Assignments&lt;/h4&gt;To collect an assignment from your students,                         click &lt;a class=&quot;btn btn-warning&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-share-square-o fa-rotate-180&quot;&gt; &lt;/i&gt;  Collect&lt;/a&gt; to the right of an assignment                         to collect it from all students.                         &lt;span class=&quot;lighten&quot;&gt;                        (NOTE: There is currently no way to schedule collection to happen at a specific time -- it happens                         when you click the button.  Click it again to update the collected files.)&lt;/span&gt;                    &lt;br /&gt;Once the assignments are collected, click                         &lt;button class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot;&gt;                            &lt;i class=&quot;fa fa-eye&quot;&gt; &lt;/i&gt; Grade &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;                        &lt;/button&gt;                        and select a student to jump to the folder that contains the collected version of a                         student's assignment. Edit the                         files there, indicating grades on each problem, etc.                         &lt;span class=&quot;lighten&quot;&gt;                            NOTE: There is no special support yet for recording grades, knowing which homework you have graded already, etc.                         &lt;/span&gt;                    &lt;br /&gt;When you are done grading, click &lt;a class=&quot;btn btn-warning&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-share-square-o&quot;&gt; &lt;/i&gt;  Return Graded&lt;/a&gt;                        to return the graded homework to the students.  If the homework folder is called &lt;tt&gt;homework1&lt;/tt&gt;, then the graded version                         will appear in the student's project as &lt;tt&gt;homework1-graded&lt;/tt&gt;.                     &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-QlF6BMvK4wM/VCxQXrL-QxI/AAAAAAABQR4/0PsVB19gPE0/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.04.35%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-QlF6BMvK4wM/VCxQXrL-QxI/AAAAAAABQR4/0PsVB19gPE0/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B12.04.35%2BPM.png&quot; height=&quot;108&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;h4&gt;Course Settings&lt;/h4&gt;Set the title and description of the course in the                         &lt;a class=&quot;btn btn-default btn-primary&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;i class=&quot;fa fa-wrench&quot;&gt; &lt;/i&gt; Settings&lt;/a&gt; tab.  When you                         change these, the new title and description                         propagates automatically to all student projects for this course.                     &lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-h0Zt3E4dEGs/VCxO9o_lDsI/AAAAAAABQRI/FTyzihxwku0/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.58.21%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-h0Zt3E4dEGs/VCxO9o_lDsI/AAAAAAABQRI/FTyzihxwku0/s1600/Screen%2BShot%2B2014-10-01%2Bat%2B11.58.21%2BAM.png&quot; height=&quot;151&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;h4&gt;Other&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;A&amp;nbsp;&lt;a href=&quot;http://youtu.be/C8ZALCcCCkM&quot; target=&quot;_blank&quot;&gt;Video Tutorial&lt;/a&gt;                        &lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;Technical Remarks&lt;/h4&gt;The underlying file format of a .course file is a plain text file with one line in JSON format for each student,                     shared assignment, and for settings.                  &lt;/div&gt;</description>
-	<pubDate>Wed, 01 Oct 2014 12:05:16 +0000</pubDate>
-	<author>noreply@blogger.com (William Stein)</author>
-</item>
-<item>
-	<title>Sébastien Labbé: Abelian complexity of the Oldenburger sequence</title>
-	<guid>http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence</guid>
-	<link>http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;The Oldenburger infinite sequence &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence#o39&quot; id=&quot;id1&quot;&gt;[O39]&lt;/a&gt;
-\[
-K = 1221121221221121122121121221121121221221\ldots
-\]
-also known under the name of &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Kolakoski_sequence&quot;&gt;Kolakoski&lt;/a&gt;, is equal to its &lt;em&gt;exponent
-trajectory&lt;/em&gt;.  The exponent trajectory \(\Delta\) can be obtained by counting
-the lengths of blocks of consecutive and equal letters:
-\[
-K =
-1^12^21^22^11^12^21^12^21^22^11^22^21^12^11^22^11^12^21^22^11^22^11^12^21^12^21^22^11^12^21^12^11^22^11^22^21^12^21^2\ldots
-\]
-The sequence of exponents above gives the exponent trajectory of the
-Oldenburger sequence:
-\[
-\Delta = 12211212212211211221211212\ldots
-\]
-which is equal to the original sequence \(K\).
-You can define this sequence in Sage:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: K = words.KolakoskiWord()
-sage: K
-word: 1221121221221121122121121221121121221221...
-sage: K.delta()          # delta returns the exponent trajectory
-word: 1221121221221121122121121221121121221221...
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;There are a lot of open problem related to basic properties of that sequence.
-For example, we do not know if that sequence is recurrent, that is, all finite
-subword or factor (finite block of consecutive letters) always reappear. Also,
-it is still open to prove whether the density of &lt;tt class=&quot;docutils literal&quot;&gt;1&lt;/tt&gt; in that sequence is
-equal to \(1/2\).&lt;/p&gt;
-&lt;p&gt;In this blog post, I do some computations on its abelian complexity
-\(p_{ab}(n)\) defined as the number of distinct abelian vectors of subwords of
-length \(n\) in the sequence. The abelian vector \(\vec{w}\) of a word
-\(w\) counts the number of occurences of each letter:
-\[
-w = 12211212212
-\quad
-\mapsto
-\quad
-1^5 2^7 \text{, abelianized}
-\quad
-\mapsto
-\quad
-\vec{w} = (5, 7) \text{, the abelian vector of }
-w
-\]&lt;/p&gt;
-&lt;p&gt;Here are the abelian vectors of subwords of length 10 and 20 in the prefix of
-length 100 of the Oldenburger sequence.  The functions &lt;tt class=&quot;docutils literal&quot;&gt;abelian_vectors&lt;/tt&gt; and
-&lt;tt class=&quot;docutils literal&quot;&gt;abelian_complexity&lt;/tt&gt;  are not in Sage as of now. Code is available at &lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/17058&quot;&gt;trac
-#17058&lt;/a&gt; to be merged in Sage soon:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: prefix = words.KolakoskiWord()[:100]
-sage: prefix.abelian_vectors(10)
-{(4, 6), (5, 5), (6, 4)}
-sage: prefix.abelian_vectors(20)
-{(8, 12), (9, 11), (10, 10), (11, 9), (12, 8)}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Therefore, the prefix of length 100 has 3 vectors of subwords of length 10 and 5
-vectors of subwords of length 20:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p100.abelian_complexity(10)
-3
-sage: p100.abelian_complexity(20)
-5
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I import the &lt;tt class=&quot;docutils literal&quot;&gt;OldenburgerSequence&lt;/tt&gt; from my optional spkg because it is faster
-than the implementation in Sage:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe import KolakoskiWord as OldenburgerSequence
-sage: Olden = OldenburgerSequence()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I count the number of abelian vectors of subwords of length 100 in the prefix of
-length \(2^{20}\) of the Oldenburger sequence:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: prefix = Olden[:2^20]
-sage: %time prefix.abelian_vectors(100)
-CPU times: user 3.48 s, sys: 66.9 ms, total: 3.54 s
-Wall time: 3.56 s
-{(47, 53), (48, 52), (49, 51), (50, 50), (51, 49), (52, 48), (53, 47)}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Number of abelian vectors of subwords of length less than 100 in the prefix of
-length \(2^{20}\) of the Oldenburger sequence:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: %time L100 = map(prefix.abelian_complexity, range(100))
-CPU times: user 3min 20s, sys: 1.08 s, total: 3min 21s
-Wall time: 3min 23s
-sage: from collections import Counter
-sage: Counter(L100)
-Counter({5: 26, 6: 26, 4: 17, 7: 15, 3: 8, 8: 4, 2: 3, 1: 1})
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Let's draw that:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: labels = ('Length of factors', 'Number of abelian vectors')
-sage: title = 'Abelian Complexity of the prefix of length $2^{20}$ of Oldenburger sequence'
-sage: list_plot(L100, color='green', plotjoined=True, axes_labels=labels, title=title)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/oldenburger_abelian_100.png&quot;&gt;&lt;img alt=&quot;/Files/2014/oldenburger_abelian_100.png&quot; src=&quot;http://www.slabbe.org/Files/2014/oldenburger_abelian_100.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;It seems to grow something like \(\log(n)\). Let's now consider subwords of
-length \(2^n\) for \(0\leq n\leq 12\) in the same prefix of length
-\(2^{20}\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: %time L20 = [(2^n, prefix.abelian_complexity(2^n)) for n in range(20)]
-CPU times: user 41 s, sys: 239 ms, total: 41.2 s
-Wall time: 41.5 s
-sage: L20
-[(1, 2), (2, 3), (4, 3), (8, 3), (16, 3), (32, 5), (64, 5), (128, 9),
-(256, 9), (512, 13), (1024, 17), (2048, 22), (4096, 27), (8192, 40),
-(16384, 46), (32768, 67), (65536, 81), (131072, 85), (262144, 90), (524288, 104)]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;I now look at subwords of length \(2^n\) for \(0\leq n\leq 23\) in the
-longer prefix of length \(2^{24}\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: prefix = Olden[:2^24]
-sage: %time L24 = [(2^n, prefix.abelian_complexity(2^n)) for n in range(24)]
-CPU times: user 20min 47s, sys: 13.5 s, total: 21min
-Wall time: 20min 13s
-sage: L24
-[(1, 2), (2, 3), (4, 3), (8, 3), (16, 3), (32, 5), (64, 5), (128, 9), (256,
-9), (512, 13), (1024, 17), (2048, 23), (4096, 33), (8192, 46), (16384, 58),
-(32768, 74), (65536, 98), (131072, 134), (262144, 165), (524288, 229),
-(1048576, 302), (2097152, 371), (4194304, 304), (8388608, 329)]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The next graph gather all of the above computations:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: G = Graphics()
-sage: legend = 'in the prefix of length 2^{}'
-sage: G += list_plot(L24, plotjoined=True, thickness=4, color='blue', legend_label=legend.format(24))
-sage: G += list_plot(L20, plotjoined=True, thickness=4, color='red', legend_label=legend.format(20))
-sage: G += list_plot(L100, plotjoined=True, thickness=4, color='green', legend_label=legend.format(20))
-sage: labels = ('Length of factors', 'Number of abelian vectors')
-sage: title = 'Abelian complexity of Oldenburger sequence'
-sage: G.show(scale=('semilogx', 2), axes_labels=labels, title=title)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2014/oldenburger_abelian_2e24.png&quot;&gt;&lt;img alt=&quot;/Files/2014/oldenburger_abelian_2e24.png&quot; src=&quot;http://www.slabbe.org/Files/2014/oldenburger_abelian_2e24.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;A linear growth in the above graphics with logarithmic \(x\) abcisse would
-mean a growth in \(\log(n)\).  After those experimentations, my hypothesis
-is that the abelian complexity of the Oldenburger sequence grows like
-\(\log(n)^2\).&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;references&quot;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;o39&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2014/09/abelian-complexity-of-the-oldenburger-sequence#id1&quot;&gt;[O39]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oldenburger, Rufus (1939). &amp;quot;Exponent trajectories in symbolic dynamics&amp;quot;.
-Transactions of the American Mathematical Society 46: 453–466.
-&lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.2307%2F1989933&quot;&gt;doi:10.2307/1989933&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Sat, 27 Sep 2014 22:00:00 +0000</pubDate>
 </item>
 
 </channel>
