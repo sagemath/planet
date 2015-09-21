@@ -54,6 +54,272 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>September 21, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">There are 13.366.431.646 solutions to the Quantumino game</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>Some years ago, I wrote <a class="reference external" href="http://doc.sagemath.org/html/en/reference/games/sage/games/quantumino.html">code</a> in Sage to solve the Quantumino puzzle. I also
+used it to make a one-minute <a class="reference external" href="http://vimeo.com/35348052">video</a> illustrating the Dancing links algorithm
+which I am proud to say it is now part of the <a class="reference external" href="http://en.wikipedia.org/wiki/Dancing_Links">Dancing links</a> wikipedia page.</p>
+<a class="reference external image-reference" href="http://www.familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274"><img alt="/Files/2015/Quantumino.png" src="http://www.slabbe.org/Files/2015/Quantumino.png" /></a>
+<p>I must say that the video is not perfect. On wikipedia, the <a class="reference external" href="http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv">file talk page</a>
+of the video says that the <em>Jerky camera movement is distracting</em>. That is
+because <a class="reference external" href="http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/">I managed to make the video</a> out of images created by
+<tt class="docutils literal"><span class="pre">.show(viewer='tachyon')</span></tt> which changes the coordinate system, hardcodes a
+lot of parameters, zoom properly, simplifies stuff to make sure the user don't
+see just a blank image. But, for making a movie, we need access to more
+parameters especially the placement of the camera (to avoid the jerky
+movement). I know that Tachyon allows all of that. It is still a project that I
+have to create a more versatile <tt class="docutils literal">Graphics3D <span class="pre">-&gt;</span> Tachyon</tt> conversion allowing
+to construct nice videos of evolving mathematical objects. That's another
+story.</p>
+<p>Let me recall that the goal of the Quantumino puzzle is to fill a \(2\times
+5\times 8\) box with 16 out of 17 three-dimensional pentaminos. After writing
+the sage code to solve the puzzle, one question was left: how many solutions
+are there? Is the <a class="reference external" href="http://familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274">official website</a> realist or very prudent when they say
+that <em>there are over 10.000 potential solutions</em>? Can it be computed in hours?
+days? months? years? ... or light-years!? The only thing I knew was that the
+following computation (letting the 0-th pentamino aside) never finished on my
+machine:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.games.quantumino</span> <span class="kn">import</span> <span class="n">QuantuminoSolver</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">QuantuminoSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span>
+</pre></div>
+
+
+
+<p>Since I spent already too much time on this side-project, I decided in 2012 to
+stop spending any more time on it and to really focus on finishing writing my
+thesis.</p>
+<p>So before I finish writing my thesis, I knew that the computation was not going
+to take a light-year, since I was able to finish the computation of the number
+of solutions when the 0-th pentamino is put aside and when the 1-st pentamino
+is pre-positioned somewhere in the box. That computation completed in 4 hours
+on my old laptop and gave about 5 millions solutions. There are 17 choices of
+pentatminos to put aside, there are 360 distinct positions of the 1-st
+pentamino, so I estimated the number of solution to be something like
+\(17\times 360\times 5000000 = 30 \times 10^9\). Most importantly, I
+estimated the computation to take \(17\times 360\times 4= 24480\) hours or
+1020 days. Therefore, I knew I could not do it on my laptop.</p>
+<p>But last year, I received an email from the designer of the Quantumino puzzle:</p>
+
+
+<div class="pygments_manni"><pre>-------- Message transféré --------
+Sujet : quantumino
+Date : Tue, 09 Dec 2014 13:22:30 +0100
+De : Nicolaas Neuwahl
+Pour : Sebastien Labbe
+
+hi sébastien labbé,
+
+i'm the designer of the quantumino puzzle.
+i'm not a mathematician, i'm an architect. i like mathematics.
+i'm quite impressed to see the sage work on quantumino, also i have not the
+knowledge for full understanding.
+
+i have a question for you - can you tell me HOW MANY different quantumino-
+solutions exist?
+
+ty and bye
+
+nicolaas neuwahl
+</pre></div>
+
+
+
+<p>This summer was a good timing to launch the computation on my beautiful Intel®
+Core™ i5-4590 CPU &#64; 3.30GHz × 4 at Université de Liège. First, I improved the
+Sage code to allow a parallel computation of number of solutions in the dancing
+links code (<a class="reference external" href="http://trac.sagemath.org/ticket/18987">#18987</a>, merged in a Sage 6.9.beta6). Secondly, we may remark
+that each tiling of the \(2\times 5\times 8\) box can be rotated in order
+to find 3 other solutions. It is possible to gain a factor 4 by avoiding to
+count 4 times the same solution up to rotations (<a class="reference external" href="http://trac.sagemath.org/ticket/19107">#19107</a>, still needs work
+from myself). Thanks to Vincent Delecroix for doing the review on both ticket.</p>
+<p>With those two tickets (some previous version to be honest) on top of sage-6.8, I
+started the computation on August 4th and the computation finished last week on
+September 18th for a total of 45 days. The computation was stopped only once on
+September 8th (I forgot to close firefox and thunderbird that night...).</p>
+<p>The number of solutions and computation time for each pentamino put aside
+together with the first solution found is shown in the table below.  We remark
+that some values are equal when the aside pentaminoes are miror images
+(why!?:).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="/Files/2015/b0.png" class="first last" src="http://www.slabbe.org/Files/2015/b0.png" />
+</td>
+<td><img alt="/Files/2015/b1.png" class="first last" src="http://www.slabbe.org/Files/2015/b1.png" />
+</td>
+</tr>
+<tr><td>634900493  solutions</td>
+<td>634900493  solutions</td>
+</tr>
+<tr><td>2 days, 6:22:44.883358</td>
+<td>2 days, 6:19:08.945691</td>
+</tr>
+<tr><td><img alt="/Files/2015/b2.png" class="first last" src="http://www.slabbe.org/Files/2015/b2.png" />
+</td>
+<td><img alt="/Files/2015/b3.png" class="first last" src="http://www.slabbe.org/Files/2015/b3.png" />
+</td>
+</tr>
+<tr><td>509560697  solutions</td>
+<td>509560697  solutions</td>
+</tr>
+<tr><td>2 days, 0:01:36.844612</td>
+<td>2 days, 0:41:59.447773</td>
+</tr>
+<tr><td><img alt="/Files/2015/b4.png" class="first last" src="http://www.slabbe.org/Files/2015/b4.png" />
+</td>
+<td><img alt="/Files/2015/b5.png" class="first last" src="http://www.slabbe.org/Files/2015/b5.png" />
+</td>
+</tr>
+<tr><td>628384422  solutions</td>
+<td>628384422  solutions</td>
+</tr>
+<tr><td>2 days, 7:52:31.459247</td>
+<td>2 days, 8:44:49.465672</td>
+</tr>
+<tr><td><img alt="/Files/2015/b6.png" class="first last" src="http://www.slabbe.org/Files/2015/b6.png" />
+</td>
+<td><img alt="/Files/2015/b7.png" class="first last" src="http://www.slabbe.org/Files/2015/b7.png" />
+</td>
+</tr>
+<tr><td>1212362145  solutions</td>
+<td>1212362145  solutions</td>
+</tr>
+<tr><td>3 days, 17:25:00.346627</td>
+<td>3 days, 19:10:02.353063</td>
+</tr>
+<tr><td><img alt="/Files/2015/b8.png" class="first last" src="http://www.slabbe.org/Files/2015/b8.png" />
+</td>
+<td><img alt="/Files/2015/b9.png" class="first last" src="http://www.slabbe.org/Files/2015/b9.png" />
+</td>
+</tr>
+<tr><td>197325298  solutions</td>
+<td>556534800  solutions</td>
+</tr>
+<tr><td>22:51:54.439932</td>
+<td>1 day, 19:05:23.908326</td>
+</tr>
+<tr><td><img alt="/Files/2015/b10.png" class="first last" src="http://www.slabbe.org/Files/2015/b10.png" />
+</td>
+<td><img alt="/Files/2015/b11.png" class="first last" src="http://www.slabbe.org/Files/2015/b11.png" />
+</td>
+</tr>
+<tr><td>664820756  solutions</td>
+<td>468206736  solutions</td>
+</tr>
+<tr><td>2 days, 8:48:54.767662</td>
+<td>1 day, 20:14:56.014557</td>
+</tr>
+<tr><td><img alt="/Files/2015/b12.png" class="first last" src="http://www.slabbe.org/Files/2015/b12.png" />
+</td>
+<td><img alt="/Files/2015/b13.png" class="first last" src="http://www.slabbe.org/Files/2015/b13.png" />
+</td>
+</tr>
+<tr><td>1385955043  solutions</td>
+<td>1385955043  solutions</td>
+</tr>
+<tr><td>4 days, 1:40:30.270929</td>
+<td>4 days, 4:44:05.399367</td>
+</tr>
+<tr><td><img alt="/Files/2015/b14.png" class="first last" src="http://www.slabbe.org/Files/2015/b14.png" />
+</td>
+<td><img alt="/Files/2015/b15.png" class="first last" src="http://www.slabbe.org/Files/2015/b15.png" />
+</td>
+</tr>
+<tr><td>694998374  solutions</td>
+<td>694998374  solutions</td>
+</tr>
+<tr><td>2 days, 11:44:29.631</td>
+<td>2 days, 6:01:57.946708</td>
+</tr>
+<tr><td><img alt="/Files/2015/b16.png" class="first last" src="http://www.slabbe.org/Files/2015/b16.png" />
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>1347221708  solutions</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>3 days, 21:51:29.043459</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore the total number of solutions up to rotations is \(13 366 431 646
+\approx 13\times 10^9\) which is indeed more than 10000:)</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">634900493</span><span class="p">,</span> <span class="mi">634900493</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">628384422</span><span class="p">,</span>
+<span class="mi">628384422</span><span class="p">,</span> <span class="mi">1212362145</span><span class="p">,</span> <span class="mi">1212362145</span><span class="p">,</span> <span class="mi">197325298</span><span class="p">,</span> <span class="mi">556534800</span><span class="p">,</span> <span class="mi">664820756</span><span class="p">,</span>
+<span class="mi">468206736</span><span class="p">,</span> <span class="mi">1385955043</span><span class="p">,</span> <span class="mi">1385955043</span><span class="p">,</span> <span class="mi">694998374</span><span class="p">,</span> <span class="mi">694998374</span><span class="p">,</span> <span class="mi">1347221708</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="mi">13366431646</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">factor</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">23</span> <span class="o">*</span> <span class="mi">271</span> <span class="o">*</span> <span class="mi">1072231</span>
+</pre></div>
+
+
+
+<table border="1" class="docutils">
+<caption>Summary</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>The machine (4 cores)</td>
+<td>Intel® Core™ i5-4590 CPU &#64; 3.30GHz × 4 (Université de Liège)</td>
+</tr>
+<tr><td>Computation Time</td>
+<td>45 days, (Aug 4th -- Sep 18th, 2015)</td>
+</tr>
+<tr><td>Number of solutions (up to rotations)</td>
+<td>13.366.431.646</td>
+</tr>
+<tr><td>Number of solutions / cpu / s</td>
+<td>859.47</td>
+</tr>
+</tbody>
+</table>
+<p>My code will be available on github.</p>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">by Sébastien Labbé at September 21, 2015 01:30 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>September 17, 2015</h2>
 
 <div class="channelgroup">
@@ -3321,7 +3587,7 @@ Except this time Laura, lost her crown :)</p></div>
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences" lang="en">
@@ -4767,7 +5033,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
@@ -4779,10 +5045,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -4803,7 +5069,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-September 21, 2015 12:30 PM<br>
+September 21, 2015 01:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

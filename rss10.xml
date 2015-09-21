@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/09/17/A-Summer-of-game-theory-software-development/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-5753647510986290314" />
@@ -66,6 +67,243 @@
 	</items>
 </channel>
 
+<item rdf:about="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">
+	<title>Sébastien Labbé: There are 13.366.431.646 solutions to the Quantumino game</title>
+	<link>http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game</link>
+	<content:encoded>&lt;div class=&quot;document&quot;&gt;
+&lt;p&gt;Some years ago, I wrote &lt;a class=&quot;reference external&quot; href=&quot;http://doc.sagemath.org/html/en/reference/games/sage/games/quantumino.html&quot;&gt;code&lt;/a&gt; in Sage to solve the Quantumino puzzle. I also
+used it to make a one-minute &lt;a class=&quot;reference external&quot; href=&quot;http://vimeo.com/35348052&quot;&gt;video&lt;/a&gt; illustrating the Dancing links algorithm
+which I am proud to say it is now part of the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Dancing_Links&quot;&gt;Dancing links&lt;/a&gt; wikipedia page.&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274&quot;&gt;&lt;img alt=&quot;/Files/2015/Quantumino.png&quot; src=&quot;http://www.slabbe.org/Files/2015/Quantumino.png&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;I must say that the video is not perfect. On wikipedia, the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv&quot;&gt;file talk page&lt;/a&gt;
+of the video says that the &lt;em&gt;Jerky camera movement is distracting&lt;/em&gt;. That is
+because &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/&quot;&gt;I managed to make the video&lt;/a&gt; out of images created by
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.show(viewer='tachyon')&lt;/span&gt;&lt;/tt&gt; which changes the coordinate system, hardcodes a
+lot of parameters, zoom properly, simplifies stuff to make sure the user don't
+see just a blank image. But, for making a movie, we need access to more
+parameters especially the placement of the camera (to avoid the jerky
+movement). I know that Tachyon allows all of that. It is still a project that I
+have to create a more versatile &lt;tt class=&quot;docutils literal&quot;&gt;Graphics3D &lt;span class=&quot;pre&quot;&gt;-&amp;gt;&lt;/span&gt; Tachyon&lt;/tt&gt; conversion allowing
+to construct nice videos of evolving mathematical objects. That's another
+story.&lt;/p&gt;
+&lt;p&gt;Let me recall that the goal of the Quantumino puzzle is to fill a \(2\times
+5\times 8\) box with 16 out of 17 three-dimensional pentaminos. After writing
+the sage code to solve the puzzle, one question was left: how many solutions
+are there? Is the &lt;a class=&quot;reference external&quot; href=&quot;http://familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274&quot;&gt;official website&lt;/a&gt; realist or very prudent when they say
+that &lt;em&gt;there are over 10.000 potential solutions&lt;/em&gt;? Can it be computed in hours?
+days? months? years? ... or light-years!? The only thing I knew was that the
+following computation (letting the 0-th pentamino aside) never finished on my
+machine:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sage.games.quantumino&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_solutions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Since I spent already too much time on this side-project, I decided in 2012 to
+stop spending any more time on it and to really focus on finishing writing my
+thesis.&lt;/p&gt;
+&lt;p&gt;So before I finish writing my thesis, I knew that the computation was not going
+to take a light-year, since I was able to finish the computation of the number
+of solutions when the 0-th pentamino is put aside and when the 1-st pentamino
+is pre-positioned somewhere in the box. That computation completed in 4 hours
+on my old laptop and gave about 5 millions solutions. There are 17 choices of
+pentatminos to put aside, there are 360 distinct positions of the 1-st
+pentamino, so I estimated the number of solution to be something like
+\(17\times 360\times 5000000 = 30 \times 10^9\). Most importantly, I
+estimated the computation to take \(17\times 360\times 4= 24480\) hours or
+1020 days. Therefore, I knew I could not do it on my laptop.&lt;/p&gt;
+&lt;p&gt;But last year, I received an email from the designer of the Quantumino puzzle:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;-------- Message transféré --------
+Sujet : quantumino
+Date : Tue, 09 Dec 2014 13:22:30 +0100
+De : Nicolaas Neuwahl
+Pour : Sebastien Labbe
+
+hi sébastien labbé,
+
+i'm the designer of the quantumino puzzle.
+i'm not a mathematician, i'm an architect. i like mathematics.
+i'm quite impressed to see the sage work on quantumino, also i have not the
+knowledge for full understanding.
+
+i have a question for you - can you tell me HOW MANY different quantumino-
+solutions exist?
+
+ty and bye
+
+nicolaas neuwahl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;This summer was a good timing to launch the computation on my beautiful Intel®
+Core™ i5-4590 CPU &amp;#64; 3.30GHz × 4 at Université de Liège. First, I improved the
+Sage code to allow a parallel computation of number of solutions in the dancing
+links code (&lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/18987&quot;&gt;#18987&lt;/a&gt;, merged in a Sage 6.9.beta6). Secondly, we may remark
+that each tiling of the \(2\times 5\times 8\) box can be rotated in order
+to find 3 other solutions. It is possible to gain a factor 4 by avoiding to
+count 4 times the same solution up to rotations (&lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/19107&quot;&gt;#19107&lt;/a&gt;, still needs work
+from myself). Thanks to Vincent Delecroix for doing the review on both ticket.&lt;/p&gt;
+&lt;p&gt;With those two tickets (some previous version to be honest) on top of sage-6.8, I
+started the computation on August 4th and the computation finished last week on
+September 18th for a total of 45 days. The computation was stopped only once on
+September 8th (I forgot to close firefox and thunderbird that night...).&lt;/p&gt;
+&lt;p&gt;The number of solutions and computation time for each pentamino put aside
+together with the first solution found is shown in the table below.  We remark
+that some values are equal when the aside pentaminoes are miror images
+(why!?:).&lt;/p&gt;
+&lt;table border=&quot;1&quot; class=&quot;docutils&quot;&gt;
+&lt;colgroup&gt;
+&lt;col width=&quot;50%&quot; /&gt;
+&lt;col width=&quot;50%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b0.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b0.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b1.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b1.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;634900493  solutions&lt;/td&gt;
+&lt;td&gt;634900493  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2 days, 6:22:44.883358&lt;/td&gt;
+&lt;td&gt;2 days, 6:19:08.945691&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b2.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b2.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b3.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b3.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;509560697  solutions&lt;/td&gt;
+&lt;td&gt;509560697  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2 days, 0:01:36.844612&lt;/td&gt;
+&lt;td&gt;2 days, 0:41:59.447773&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b4.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b4.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b5.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b5.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;628384422  solutions&lt;/td&gt;
+&lt;td&gt;628384422  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2 days, 7:52:31.459247&lt;/td&gt;
+&lt;td&gt;2 days, 8:44:49.465672&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b6.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b6.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b7.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b7.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1212362145  solutions&lt;/td&gt;
+&lt;td&gt;1212362145  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;3 days, 17:25:00.346627&lt;/td&gt;
+&lt;td&gt;3 days, 19:10:02.353063&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b8.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b8.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b9.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b9.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;197325298  solutions&lt;/td&gt;
+&lt;td&gt;556534800  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;22:51:54.439932&lt;/td&gt;
+&lt;td&gt;1 day, 19:05:23.908326&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b10.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b10.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b11.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b11.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;664820756  solutions&lt;/td&gt;
+&lt;td&gt;468206736  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2 days, 8:48:54.767662&lt;/td&gt;
+&lt;td&gt;1 day, 20:14:56.014557&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b12.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b12.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b13.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b13.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1385955043  solutions&lt;/td&gt;
+&lt;td&gt;1385955043  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;4 days, 1:40:30.270929&lt;/td&gt;
+&lt;td&gt;4 days, 4:44:05.399367&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b14.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b14.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt=&quot;/Files/2015/b15.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b15.png&quot; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;694998374  solutions&lt;/td&gt;
+&lt;td&gt;694998374  solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2 days, 11:44:29.631&lt;/td&gt;
+&lt;td&gt;2 days, 6:01:57.946708&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt=&quot;/Files/2015/b16.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b16.png&quot; /&gt;
+&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1347221708  solutions&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;3 days, 21:51:29.043459&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Therefore the total number of solutions up to rotations is \(13 366 431 646
+\approx 13\times 10^9\) which is indeed more than 10000:)&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;634900493&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;634900493&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;509560697&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;509560697&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;628384422&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;628384422&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1212362145&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1212362145&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;197325298&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;556534800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;664820756&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;468206736&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1385955043&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1385955043&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;694998374&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;694998374&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1347221708&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;13366431646&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;271&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1072231&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;table border=&quot;1&quot; class=&quot;docutils&quot;&gt;
+&lt;caption&gt;Summary&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width=&quot;50%&quot; /&gt;
+&lt;col width=&quot;50%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign=&quot;top&quot;&gt;
+&lt;tr&gt;&lt;td&gt;The machine (4 cores)&lt;/td&gt;
+&lt;td&gt;Intel® Core™ i5-4590 CPU &amp;#64; 3.30GHz × 4 (Université de Liège)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Computation Time&lt;/td&gt;
+&lt;td&gt;45 days, (Aug 4th -- Sep 18th, 2015)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of solutions (up to rotations)&lt;/td&gt;
+&lt;td&gt;13.366.431.646&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of solutions / cpu / s&lt;/td&gt;
+&lt;td&gt;859.47&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My code will be available on github.&lt;/p&gt;
+&lt;/div&gt;</content:encoded>
+	<dc:date>2015-09-21T13:30:06+00:00</dc:date>
+	<dc:creator>Sébastien Labbé</dc:creator>
+</item>
 <item rdf:about="http://drvinceknight.github.io/unpeudemath/code/2015/09/17/A-Summer-of-game-theory-software-development/">
 	<title>Vince Knight: A Summer of game theory software development</title>
 	<link>http://drvinceknight.github.io/unpeudemath/code/2015/09/17/A-Summer-of-game-theory-software-development/</link>
