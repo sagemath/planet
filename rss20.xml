@@ -16,17 +16,6 @@
 used it to make a one-minute &lt;a class=&quot;reference external&quot; href=&quot;http://vimeo.com/35348052&quot;&gt;video&lt;/a&gt; illustrating the Dancing links algorithm
 which I am proud to say it is now part of the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Dancing_Links&quot;&gt;Dancing links&lt;/a&gt; wikipedia page.&lt;/p&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274&quot;&gt;&lt;img alt=&quot;/Files/2015/Quantumino.png&quot; src=&quot;http://www.slabbe.org/Files/2015/Quantumino.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;I must say that the video is not perfect. On wikipedia, the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv&quot;&gt;file talk page&lt;/a&gt;
-of the video says that the &lt;em&gt;Jerky camera movement is distracting&lt;/em&gt;. That is
-because &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/&quot;&gt;I managed to make the video&lt;/a&gt; out of images created by
-&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.show(viewer='tachyon')&lt;/span&gt;&lt;/tt&gt; which changes the coordinate system, hardcodes a
-lot of parameters, zoom properly, simplifies stuff to make sure the user don't
-see just a blank image. But, for making a movie, we need access to more
-parameters especially the placement of the camera (to avoid the jerky
-movement). I know that Tachyon allows all of that. It is still a project that I
-have to create a more versatile &lt;tt class=&quot;docutils literal&quot;&gt;Graphics3D &lt;span class=&quot;pre&quot;&gt;-&amp;gt;&lt;/span&gt; Tachyon&lt;/tt&gt; conversion allowing
-to construct nice videos of evolving mathematical objects. That's another
-story.&lt;/p&gt;
 &lt;p&gt;Let me recall that the goal of the Quantumino puzzle is to fill a \(2\times
 5\times 8\) box with 16 out of 17 three-dimensional pentaminos. After writing
 the sage code to solve the puzzle, one question was left: how many solutions
@@ -38,21 +27,21 @@ machine:&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sage.games.quantumino&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_solutions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_solutions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# long time (!)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 
 &lt;p&gt;Since I spent already too much time on this side-project, I decided in 2012 to
-stop spending any more time on it and to really focus on finishing writing my
+stop investing any more time on it and to really focus on finishing writing my
 thesis.&lt;/p&gt;
 &lt;p&gt;So before I finish writing my thesis, I knew that the computation was not going
 to take a light-year, since I was able to finish the computation of the number
-of solutions when the 0-th pentamino is put aside and when the 1-st pentamino
-is pre-positioned somewhere in the box. That computation completed in 4 hours
-on my old laptop and gave about 5 millions solutions. There are 17 choices of
-pentatminos to put aside, there are 360 distinct positions of the 1-st
-pentamino, so I estimated the number of solution to be something like
+of solutions when the 0-th pentamino is put aside and when one pentamino is
+pre-positioned somewhere in the box. That computation completed in 4 hours on
+my old laptop and gave about 5 millions solutions. There are 17 choices of
+pentatminos to put aside, there are 360 distinct positions of that pentamino in
+the box, so I estimated the number of solution to be something like
 \(17\times 360\times 5000000 = 30 \times 10^9\). Most importantly, I
 estimated the computation to take \(17\times 360\times 4= 24480\) hours or
 1020 days. Therefore, I knew I could not do it on my laptop.&lt;/p&gt;
@@ -89,11 +78,14 @@ links code (&lt;a class=&quot;reference external&quot; href=&quot;http://trac.sa
 that each tiling of the \(2\times 5\times 8\) box can be rotated in order
 to find 3 other solutions. It is possible to gain a factor 4 by avoiding to
 count 4 times the same solution up to rotations (&lt;a class=&quot;reference external&quot; href=&quot;http://trac.sagemath.org/ticket/19107&quot;&gt;#19107&lt;/a&gt;, still needs work
-from myself). Thanks to Vincent Delecroix for doing the review on both ticket.&lt;/p&gt;
-&lt;p&gt;With those two tickets (some previous version to be honest) on top of sage-6.8, I
-started the computation on August 4th and the computation finished last week on
-September 18th for a total of 45 days. The computation was stopped only once on
-September 8th (I forgot to close firefox and thunderbird that night...).&lt;/p&gt;
+from myself). Thanks to Vincent Delecroix for doing the review on both ticket.
+Dividing the estimated 1024 days of computation needed by a factor \(4\times
+4=16\) gives an approximation of 64 days to complete the computation. Two
+months, just enough to be tractable!&lt;/p&gt;
+&lt;p&gt;With those two tickets (some previous version to be honest) on top of sage-6.8,
+I started the computation on August 4th and the computation finished last week
+on September 18th for a total of 45 days. The computation was stopped only once
+on September 8th (I forgot to close firefox and thunderbird that night...).&lt;/p&gt;
 &lt;p&gt;The number of solutions and computation time for each pentamino put aside
 together with the first solution found is shown in the table below.  We remark
 that some values are equal when the aside pentaminoes are miror images
@@ -204,8 +196,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Therefore the total number of solutions up to rotations is \(13 366 431 646
-\approx 13\times 10^9\) which is indeed more than 10000:)&lt;/p&gt;
+&lt;p&gt;Therefore the total number of solutions up to rotations is 13 366 431 646 which
+is indeed more than 10000:)&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;634900493&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;634900493&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;509560697&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;509560697&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;628384422&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -233,16 +225,28 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;45 days, (Aug 4th -- Sep 18th, 2015)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Number of solutions (up to rotations)&lt;/td&gt;
-&lt;td&gt;13.366.431.646&lt;/td&gt;
+&lt;td&gt;13 366 431 646&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Number of solutions / cpu / s&lt;/td&gt;
-&lt;td&gt;859.47&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;Number of solutions / cpu / second&lt;/td&gt;
+&lt;td&gt;859&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;My code will be available on github.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About the video on wikipedia.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I must say that the video is not perfect. On wikipedia, the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv&quot;&gt;file talk page&lt;/a&gt;
+of the video says that the &lt;em&gt;Jerky camera movement is distracting&lt;/em&gt;. That is
+because &lt;a class=&quot;reference external&quot; href=&quot;http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/&quot;&gt;I managed to make the video&lt;/a&gt; out of images created by
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.show(viewer='tachyon')&lt;/span&gt;&lt;/tt&gt; which changes the coordinate system, hardcodes a
+lot of parameters, zoom properly, simplifies stuff to make sure the user don't
+see just a blank image. But, for making a movie, we need access to more
+parameters especially the placement of the camera (to avoid the jerky
+movement). I know that Tachyon allows all of that. It is still a project that I
+have to create a more versatile &lt;tt class=&quot;docutils literal&quot;&gt;Graphics3D &lt;span class=&quot;pre&quot;&gt;-&amp;gt;&lt;/span&gt; Tachyon&lt;/tt&gt; conversion allowing
+to construct nice videos of evolving mathematical objects. That's another
+story.&lt;/p&gt;
 &lt;/div&gt;</description>
-	<pubDate>Mon, 21 Sep 2015 13:30:06 +0000</pubDate>
+	<pubDate>Mon, 21 Sep 2015 14:55:00 +0000</pubDate>
 </item>
 <item>
 	<title>Vince Knight: A Summer of game theory software development</title>

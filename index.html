@@ -64,7 +64,7 @@
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" lang="en">
@@ -76,17 +76,6 @@
 used it to make a one-minute <a class="reference external" href="http://vimeo.com/35348052">video</a> illustrating the Dancing links algorithm
 which I am proud to say it is now part of the <a class="reference external" href="http://en.wikipedia.org/wiki/Dancing_Links">Dancing links</a> wikipedia page.</p>
 <a class="reference external image-reference" href="http://www.familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274"><img alt="/Files/2015/Quantumino.png" src="http://www.slabbe.org/Files/2015/Quantumino.png" /></a>
-<p>I must say that the video is not perfect. On wikipedia, the <a class="reference external" href="http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv">file talk page</a>
-of the video says that the <em>Jerky camera movement is distracting</em>. That is
-because <a class="reference external" href="http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/">I managed to make the video</a> out of images created by
-<tt class="docutils literal"><span class="pre">.show(viewer='tachyon')</span></tt> which changes the coordinate system, hardcodes a
-lot of parameters, zoom properly, simplifies stuff to make sure the user don't
-see just a blank image. But, for making a movie, we need access to more
-parameters especially the placement of the camera (to avoid the jerky
-movement). I know that Tachyon allows all of that. It is still a project that I
-have to create a more versatile <tt class="docutils literal">Graphics3D <span class="pre">-&gt;</span> Tachyon</tt> conversion allowing
-to construct nice videos of evolving mathematical objects. That's another
-story.</p>
 <p>Let me recall that the goal of the Quantumino puzzle is to fill a \(2\times
 5\times 8\) box with 16 out of 17 three-dimensional pentaminos. After writing
 the sage code to solve the puzzle, one question was left: how many solutions
@@ -98,21 +87,21 @@ machine:</p>
 
 
 <div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.games.quantumino</span> <span class="kn">import</span> <span class="n">QuantuminoSolver</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">QuantuminoSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">QuantuminoSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span>   <span class="c"># long time (!)</span>
 </pre></div>
 
 
 
 <p>Since I spent already too much time on this side-project, I decided in 2012 to
-stop spending any more time on it and to really focus on finishing writing my
+stop investing any more time on it and to really focus on finishing writing my
 thesis.</p>
 <p>So before I finish writing my thesis, I knew that the computation was not going
 to take a light-year, since I was able to finish the computation of the number
-of solutions when the 0-th pentamino is put aside and when the 1-st pentamino
-is pre-positioned somewhere in the box. That computation completed in 4 hours
-on my old laptop and gave about 5 millions solutions. There are 17 choices of
-pentatminos to put aside, there are 360 distinct positions of the 1-st
-pentamino, so I estimated the number of solution to be something like
+of solutions when the 0-th pentamino is put aside and when one pentamino is
+pre-positioned somewhere in the box. That computation completed in 4 hours on
+my old laptop and gave about 5 millions solutions. There are 17 choices of
+pentatminos to put aside, there are 360 distinct positions of that pentamino in
+the box, so I estimated the number of solution to be something like
 \(17\times 360\times 5000000 = 30 \times 10^9\). Most importantly, I
 estimated the computation to take \(17\times 360\times 4= 24480\) hours or
 1020 days. Therefore, I knew I could not do it on my laptop.</p>
@@ -149,11 +138,14 @@ links code (<a class="reference external" href="http://trac.sagemath.org/ticket/
 that each tiling of the \(2\times 5\times 8\) box can be rotated in order
 to find 3 other solutions. It is possible to gain a factor 4 by avoiding to
 count 4 times the same solution up to rotations (<a class="reference external" href="http://trac.sagemath.org/ticket/19107">#19107</a>, still needs work
-from myself). Thanks to Vincent Delecroix for doing the review on both ticket.</p>
-<p>With those two tickets (some previous version to be honest) on top of sage-6.8, I
-started the computation on August 4th and the computation finished last week on
-September 18th for a total of 45 days. The computation was stopped only once on
-September 8th (I forgot to close firefox and thunderbird that night...).</p>
+from myself). Thanks to Vincent Delecroix for doing the review on both ticket.
+Dividing the estimated 1024 days of computation needed by a factor \(4\times
+4=16\) gives an approximation of 64 days to complete the computation. Two
+months, just enough to be tractable!</p>
+<p>With those two tickets (some previous version to be honest) on top of sage-6.8,
+I started the computation on August 4th and the computation finished last week
+on September 18th for a total of 45 days. The computation was stopped only once
+on September 8th (I forgot to close firefox and thunderbird that night...).</p>
 <p>The number of solutions and computation time for each pentamino put aside
 together with the first solution found is shown in the table below.  We remark
 that some values are equal when the aside pentaminoes are miror images
@@ -264,8 +256,8 @@ that some values are equal when the aside pentaminoes are miror images
 </tr>
 </tbody>
 </table>
-<p>Therefore the total number of solutions up to rotations is \(13 366 431 646
-\approx 13\times 10^9\) which is indeed more than 10000:)</p>
+<p>Therefore the total number of solutions up to rotations is 13 366 431 646 which
+is indeed more than 10000:)</p>
 
 
 <div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">634900493</span><span class="p">,</span> <span class="mi">634900493</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">628384422</span><span class="p">,</span>
@@ -293,14 +285,26 @@ that some values are equal when the aside pentaminoes are miror images
 <td>45 days, (Aug 4th -- Sep 18th, 2015)</td>
 </tr>
 <tr><td>Number of solutions (up to rotations)</td>
-<td>13.366.431.646</td>
+<td>13 366 431 646</td>
 </tr>
-<tr><td>Number of solutions / cpu / s</td>
-<td>859.47</td>
+<tr><td>Number of solutions / cpu / second</td>
+<td>859</td>
 </tr>
 </tbody>
 </table>
 <p>My code will be available on github.</p>
+<p><strong>About the video on wikipedia.</strong></p>
+<p>I must say that the video is not perfect. On wikipedia, the <a class="reference external" href="http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv">file talk page</a>
+of the video says that the <em>Jerky camera movement is distracting</em>. That is
+because <a class="reference external" href="http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/">I managed to make the video</a> out of images created by
+<tt class="docutils literal"><span class="pre">.show(viewer='tachyon')</span></tt> which changes the coordinate system, hardcodes a
+lot of parameters, zoom properly, simplifies stuff to make sure the user don't
+see just a blank image. But, for making a movie, we need access to more
+parameters especially the placement of the camera (to avoid the jerky
+movement). I know that Tachyon allows all of that. It is still a project that I
+have to create a more versatile <tt class="docutils literal">Graphics3D <span class="pre">-&gt;</span> Tachyon</tt> conversion allowing
+to construct nice videos of evolving mathematical objects. That's another
+story.</p>
 </div></div>
 
 
@@ -310,7 +314,7 @@ that some values are equal when the aside pentaminoes are miror images
 
 
 <p class="date">
-<a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">by Sébastien Labbé at September 21, 2015 01:30 PM</a>
+<a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">by Sébastien Labbé at September 21, 2015 02:55 PM</a>
 </p>
 </div>
 </div>
@@ -3587,7 +3591,7 @@ Except this time Laura, lost her crown :)</p></div>
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences" lang="en">
@@ -5033,7 +5037,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
@@ -5045,10 +5049,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -5069,7 +5073,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-September 22, 2015 08:30 AM<br>
+September 22, 2015 09:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
