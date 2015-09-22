@@ -27,7 +27,7 @@ machine:&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sage.games.quantumino&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_solutions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# long time (!)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_solutions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# long time :)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -101,8 +101,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b1.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b1.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;634900493  solutions&lt;/td&gt;
-&lt;td&gt;634900493  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;634 900 493  solutions&lt;/td&gt;
+&lt;td&gt;634 900 493  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;2 days, 6:22:44.883358&lt;/td&gt;
 &lt;td&gt;2 days, 6:19:08.945691&lt;/td&gt;
@@ -112,8 +112,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b3.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b3.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;509560697  solutions&lt;/td&gt;
-&lt;td&gt;509560697  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;509 560 697  solutions&lt;/td&gt;
+&lt;td&gt;509 560 697  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;2 days, 0:01:36.844612&lt;/td&gt;
 &lt;td&gt;2 days, 0:41:59.447773&lt;/td&gt;
@@ -123,8 +123,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b5.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b5.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;628384422  solutions&lt;/td&gt;
-&lt;td&gt;628384422  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;628 384 422  solutions&lt;/td&gt;
+&lt;td&gt;628 384 422  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;2 days, 7:52:31.459247&lt;/td&gt;
 &lt;td&gt;2 days, 8:44:49.465672&lt;/td&gt;
@@ -134,8 +134,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b7.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b7.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;1212362145  solutions&lt;/td&gt;
-&lt;td&gt;1212362145  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;1 212 362 145  solutions&lt;/td&gt;
+&lt;td&gt;1 212 362 145  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;3 days, 17:25:00.346627&lt;/td&gt;
 &lt;td&gt;3 days, 19:10:02.353063&lt;/td&gt;
@@ -145,8 +145,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b9.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b9.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;197325298  solutions&lt;/td&gt;
-&lt;td&gt;556534800  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;197 325 298  solutions&lt;/td&gt;
+&lt;td&gt;556 534 800  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;22:51:54.439932&lt;/td&gt;
 &lt;td&gt;1 day, 19:05:23.908326&lt;/td&gt;
@@ -156,8 +156,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b11.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b11.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;664820756  solutions&lt;/td&gt;
-&lt;td&gt;468206736  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;664 820 756  solutions&lt;/td&gt;
+&lt;td&gt;468 206 736  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;2 days, 8:48:54.767662&lt;/td&gt;
 &lt;td&gt;1 day, 20:14:56.014557&lt;/td&gt;
@@ -167,8 +167,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b13.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b13.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;1385955043  solutions&lt;/td&gt;
-&lt;td&gt;1385955043  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;1 385 955 043  solutions&lt;/td&gt;
+&lt;td&gt;1 385 955 043  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;4 days, 1:40:30.270929&lt;/td&gt;
 &lt;td&gt;4 days, 4:44:05.399367&lt;/td&gt;
@@ -178,8 +178,8 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;td&gt;&lt;img alt=&quot;/Files/2015/b15.png&quot; class=&quot;first last&quot; src=&quot;http://www.slabbe.org/Files/2015/b15.png&quot; /&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;694998374  solutions&lt;/td&gt;
-&lt;td&gt;694998374  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;694 998 374  solutions&lt;/td&gt;
+&lt;td&gt;694 998 374  solutions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;2 days, 11:44:29.631&lt;/td&gt;
 &lt;td&gt;2 days, 6:01:57.946708&lt;/td&gt;
@@ -188,7 +188,7 @@ that some values are equal when the aside pentaminoes are miror images
 &lt;/td&gt;
 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;1347221708  solutions&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;1 347 221 708  solutions&lt;/td&gt;
 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;3 days, 21:51:29.043459&lt;/td&gt;

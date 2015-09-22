@@ -54,7 +54,7 @@
 		<foaf:Agent>
 			<foaf:name>Benjamin Hackl</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://benjamin-hackl.at/tag/gsoc15/">
+				<foaf:Document rdf:about="http://benjamin-hackl.at">
 					<dc:title>Benjamin Hackl » GSoC15</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://benjamin-hackl.at/tag/gsoc15/feed/" />
@@ -431,7 +431,7 @@
 		<foaf:Agent>
 			<foaf:name>Sébastien Labbé</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://www.slabbe.org/blogue/">
+				<foaf:Document rdf:about="http://www.slabbe.org/blogue">
 					<dc:title>Sébastien Labbé</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" />
