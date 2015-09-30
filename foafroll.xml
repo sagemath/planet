@@ -210,7 +210,7 @@
 		<foaf:Agent>
 			<foaf:name>Jonathan Lee</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/">
 					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
@@ -418,7 +418,7 @@
 		<foaf:Agent>
 			<foaf:name>Simon Spicer</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://mathandhats.blogspot.com">
+				<foaf:Document rdf:about="http://mathandhats.blogspot.com/search/label/sage">
 					<dc:title>Math and Hats</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" />
@@ -483,10 +483,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
-					<dc:title>Un peu de math...</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -496,10 +496,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
-					<dc:title>Un peu de math</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
