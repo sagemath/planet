@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-10-01T04:30:14+00:00</updated>
+	<updated>2015-10-01T05:30:15+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">What is SageMath's strategy?</title>
+		<link href="http://sagemath.blogspot.com/2015/09/what-is-sagemaths-strategy.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-8163352558343336284</id>
+		<updated>2015-09-30T21:56:21+00:00</updated>
+		<content type="html">Here is &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SageMath&lt;/a&gt;'s strategy, or at least what my strategy toward SageMath has been for the last 5 years.&lt;br /&gt;&lt;h1 id=&quot;diagnose-the-problem&quot;&gt;Diagnose the problem&lt;/h1&gt;&lt;strong&gt;Statement of problem:&lt;/strong&gt; SageMath is not growing.&lt;br /&gt;&lt;h3 id=&quot;justification&quot;&gt;Justification&lt;/h3&gt;Facts: Growth in the number of active users [1] of SageMath has stalled since about 2011 (as defined by Google analytics on sagemath.org). From 2008 to 2011, year-on-year growth was about 50%, which isn't great. However, from 2011 to now, year-on-year growth is slightly less than 0%. It was maybe -10% from 2013 to 2014. Incidentally, number of monthly active users of sagemath.org is about 68,652 right now, but the raw number isn't as import as the year-to-year rate of change.&lt;br /&gt;&lt;br /&gt;I set an overall mission statement for the Sage project at the outset, which was is to be a viable alternative to Magma, Maple, Mathematica and Matlab. Being a &quot;viable alternative&quot; is something that holds or doesn't for specific people. A useful measure of this mission then is whether or not people use Sage. This is a different metric than trying to argue from &quot;first principles&quot; by making a list of features of each system, comparing benchmarks, etc.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;241&quot; src=&quot;http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s400/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-shXxtJeO9fY/Vgy7IMVWIcI/AAAAAAABWGo/nLJu-40-9Ns/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B10.59.32%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;245&quot; src=&quot;http://4.bp.blogspot.com/-shXxtJeO9fY/Vgy7IMVWIcI/AAAAAAABWGo/nLJu-40-9Ns/s400/Screen%2BShot%2B2015-09-30%2Bat%2B10.59.32%2BAM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png&quot;&gt;&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png&quot;&gt;&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png&quot;&gt;&lt;br /&gt;&lt;/a&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h1 id=&quot;guiding-policies&quot;&gt;Guiding policies&lt;/h1&gt;&lt;strong&gt;Statement of policy:&lt;/strong&gt; focus on undergraduate students in STEM courses (science, tech, engineering, math)&lt;br /&gt;&lt;h3 id=&quot;justification-1&quot;&gt;Justification&lt;/h3&gt;In order for Sage to start growing again, identify groups of people that are not using Sage. Then decide, for each of these groups, who might find value in using Sage, especially if we are able to put work into making it easier for them to benefit from Sage. This is something to re-evaluate periodically. In itself, this is very generic -- it's what any software project that wishes to grow should do. The interesting part is the details.&lt;br /&gt;Some big groups of potential future users of Sage, who use Sage very little now, include&lt;br /&gt;&lt;ul&gt;&lt;li&gt;employees/engineers in various industries (from defense contractors, to finance, to health care to &quot;data science&quot;).&lt;/li&gt;&lt;li&gt;researchers in area of mathematics where Sage is currently not popular&lt;/li&gt;&lt;li&gt;undergraduate students in STEM courses (science, tech, engineering, math)&lt;/li&gt;&lt;/ul&gt;I think by far the most promising group is &quot;undergraduate students in STEM courses&quot;. In many cases they use no software at all or are unhappy with what they do use. They are extremely cost sensitive. Open source provides a unique advantage in education because it is less expensive than closed source software, and having access to source code is something that instructors consider valuable as part of the learning experience. Also, state of the art performance, which often requires enormous dedicated for-pay work, is frequently not a requirement.&lt;br /&gt;&lt;h1 id=&quot;actions&quot;&gt;Actions&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;(a) Make access to Sage as easy as possible.&lt;/li&gt;&lt;li&gt;(b) Encourage the creation of educational resources (books, tutorials, etc.) that make using Sage for particular courses as easy as possible.&lt;/li&gt;&lt;li&gt;(c) Implement missing functionality in Sage that is needed in support of undergraduate teaching.&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;h3 id=&quot;justification-2&quot;&gt;Justification&lt;/h3&gt;Why don't more undergraduates use Sage? For the most part, students use what they are told to use by their instructors. So why don't instructors chose to use Sage? (a) Sage is not trivial to install (in fact it is incredibly hard to install), (b) There are limited resources (books, tutorials, course materials, etc.) for making using Sage really easy, (c) Sage is missing key functionality needed in support undergraduate teaching.&lt;br /&gt;&lt;br /&gt;Regarding (c), in 2008 Sage was utterly useless for most STEM courses. However, over the years things changed for the better, due to the hard work of Rob Beezer, Karl Dieter, Burcin Erocal, and many others. Also, for quite a bit of STEM work, the numerical Python ecosystem (and/or R) provides much of what is needed, and both have evolved enormously in recent years. They are all usable from Sage, and making such use &lt;em&gt;easier&lt;/em&gt; should be an extremely high priority. Related -- Bill Hart wrote &quot;I recently sat down with some serious developers and we discussed symbolics in Sage (which I know nothing about). They argued that Sage is not a viable contender in that area, and we discussed some of the possible reasons for that. &quot; The reason is that the symbolic functionality in Sage is motivated by making Sage useful for undergraduate teaching; it has nothing to do with what serious developers in symbolics would care about.&lt;br /&gt;&lt;br /&gt;Regarding (b), an NSF (called &quot;&lt;a href=&quot;http://utmost.aimath.org/&quot;&gt;UTMOST&lt;/a&gt;&quot;) helped in this direction... Also, Gregory Bard wrote &lt;a href=&quot;http://www.gregorybard.com/SAGE.html&quot;&gt;&quot;Sage for undergraduates&quot;&lt;/a&gt;, which is &lt;em&gt;exactly&lt;/em&gt; the sort of thing we should be very strongly encouraging. This is a book that is published by the AMS and is also freely available. And it squarely addresses exactly this audience. Similarly, &lt;a href=&quot;http://sagebook.gforge.inria.fr/&quot;&gt;the French book that Paul Zimmerman edited&lt;/a&gt; is fantastic for France. Let's make an order of magnitude similar resources along these lines! Let's make vastly more tutorials and reference manuals that are &quot;for undergraduates&quot;.&lt;br /&gt;&lt;br /&gt;Regarding (a), in my opinion the most viable option that fits with current trends in software is a full web application that provides access to Sage. &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud &lt;/a&gt;is what I've been doing in this direction, and it's been growing since 2013 at over 100% year on year, and much is in place so that it could scale up to more users. It still has a huge way to go regarding user friendliness, and it is still &lt;em&gt;losing money every month&lt;/em&gt;. But it is a concrete action toward which nontrivial effort has been invested, and it has the potential to solve problem (a) for a large number of potential STEM users. College students very often have extremely good bandwidth coupled with cheap weak laptops, so a web application is the natural solution for them.&lt;br /&gt;&lt;br /&gt;Though much has been done to make Sage easier to install on individual computers, it's exactly the sort of problem that money could help solve, but for which we have little money. I'm optimistic that &lt;a href=&quot;http://opendreamkit.org/&quot;&gt;OpenDreamKit&lt;/a&gt; will do something in this direction.&lt;br /&gt;&lt;br /&gt;[I've made this post motivated by the&lt;a href=&quot;https://groups.google.com/forum/#!topic/sage-devel/enoyWPdYK_g&quot;&gt; discussion in this thread.&lt;/a&gt;&amp;nbsp; Also, I used the framework from &lt;a href=&quot;http://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239&quot;&gt;this book&lt;/a&gt;.]</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2015-10-01T05:30:08+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">SageMathCloud's poor user retention rate</title>
@@ -24,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -357,7 +377,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -377,7 +397,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -779,7 +799,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -922,7 +942,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1171,7 +1191,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1435,7 +1455,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1454,7 +1474,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1946,7 +1966,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1965,7 +1985,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1984,7 +2004,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-10-01T04:30:14+00:00</updated>
+			<updated>2015-10-01T05:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -2051,7 +2071,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -4040,7 +4060,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -4060,27 +4080,7 @@ The correction has been pencilled in. The original number printed was 1.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Public Sharing in SageMathCloud, Finally</title>
-		<link href="http://sagemath.blogspot.com/2014/10/public-sharing-in-sagemathcloud-finally.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-5655260630534776590</id>
-		<updated>2014-10-16T13:29:42+00:00</updated>
-		<content type="html">&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud (SMC)&lt;/a&gt; is a free (&lt;a href=&quot;http://www.nsf.gov/&quot;&gt;NSF&lt;/a&gt;, &lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt; and &lt;a href=&quot;http://www.washington.edu/&quot;&gt;UW&lt;/a&gt; supported) website that lets you collaboratively work with Sage worksheets, IPython notebooks, LaTeX documents and much, much more. All work is snapshotted every few minutes, and copied out to several data centers, so if something goes wrong with a project running on one machine (right before your lecture begins or homework assignment is due), it will pop up on another machine. We designed the backend architecture from the ground up to be very horizontally scalable and have no single points of failure.&lt;br /&gt;&lt;br /&gt;This post is about an important new feature: &lt;em&gt;&lt;b&gt;You can now mark a folder or file so that all other users can view it, and very easily copy it to their own project.&lt;/b&gt;&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-oV_0xhD4af0/VEAnl6SRVQI/AAAAAAABQ2U/NkKVdh0NbNE/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.15.58%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-oV_0xhD4af0/VEAnl6SRVQI/AAAAAAABQ2U/NkKVdh0NbNE/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.15.58%2BPM.png&quot; height=&quot;308&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;This solves problems:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You create a &quot;template&quot; project, e.g., with pre-installed software, worksheets, IPython notebooks, etc., and want other users to easily be able to clone it as a new project. &lt;strong&gt;Solution:&lt;/strong&gt; Mark the home directory of the project public, and share the link widely.&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-FDT_Z1UD9H0/VEAn9tH3OhI/AAAAAAABQ2c/RQGklZMBiJA/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.17.35%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-FDT_Z1UD9H0/VEAn9tH3OhI/AAAAAAABQ2c/RQGklZMBiJA/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.17.35%2BPM.png&quot; height=&quot;201&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You create a syllabus for a course, an assignment, a worksheet full of 3d images, etc., that you want to share with a group of students. &lt;strong&gt;Solution:&lt;/strong&gt; Make the syllabus or worksheet public, and share the link with your students via an email and on the course website. (Note: You can also use a course document to share files with all students privately.) &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/some%203d%20plots.sagews&quot; target=&quot;_blank&quot;&gt;For example...&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-dMZS2DgsnzY/VEAouDdZu6I/AAAAAAABQ2k/6iPT0OWIomk/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.20.38%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-dMZS2DgsnzY/VEAouDdZu6I/AAAAAAABQ2k/6iPT0OWIomk/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.20.38%2BPM.png&quot; height=&quot;320&quot; width=&quot;286&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-hQIq6QKlzLo/VEApB-yQV8I/AAAAAAABQ2s/o-jx4vjIlj0/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.22.15%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-hQIq6QKlzLo/VEApB-yQV8I/AAAAAAABQ2s/o-jx4vjIlj0/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.22.15%2BPM.png&quot; height=&quot;74&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You run into a problem using &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; and want help. &lt;strong&gt;Solution:&lt;/strong&gt; Make the worksheet or code that isn't working public, and post &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/confused.sagews&quot; target=&quot;_blank&quot;&gt;a link&lt;/a&gt; in a forum asking for help.&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-CdngoQAPCi8/VEApPsnc_8I/AAAAAAABQ20/r6wHP-IMqQ8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.23.13%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-CdngoQAPCi8/VEApPsnc_8I/AAAAAAABQ20/r6wHP-IMqQ8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.23.13%2BPM.png&quot; height=&quot;216&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; You write a blog post explaining how to solve a problem and write related code in an &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; worksheet, which you want your readers to see. &lt;strong&gt;Solution:&lt;/strong&gt; Make that code public and post a link in your blog post.&lt;/li&gt;&lt;/ul&gt;Here's &lt;a href=&quot;http://youtu.be/B4GiyjIXL4Q&quot;&gt;a screencast&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Each &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; project has its own local &quot;project server&quot;, which takes some time to start up, and serves files, coordinates Sage, terminal, and IPython sessions, etc. Public sharing completely avoids having anything to do with the project server -- &lt;strong&gt;it works fine even if the project server is not running&lt;/strong&gt; -- it's always fast and there is no startup time if the project server isn't running. Moreover, public sharing reads the live files from your project, so you can update the files in a public shared directory, add new files, etc., and users will see these changes (when they refresh, since it's not automatic).&lt;br /&gt;As an example, here is the &lt;a href=&quot;https://cloud.sagemath.com/projects/4a5f0542-5873-4eed-a85c-a18c706e8bcd/files/cloud-examples/&quot;&gt;cloud-examples github repo as a share&lt;/a&gt;. If you click on it (and have a SageMathCloud account), you'll see this:&lt;br /&gt;&lt;pre&gt;&lt;br /&gt;&lt;/pre&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-nFbB6EldXxw/VEAph5pthGI/AAAAAAABQ28/cEBiDtyHSf8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.24.21%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-nFbB6EldXxw/VEAph5pthGI/AAAAAAABQ28/cEBiDtyHSf8/s1600/Screen%2BShot%2B2014-10-16%2Bat%2B1.24.21%2BPM.png&quot; height=&quot;280&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;pre&gt;&lt;br /&gt;&lt;/pre&gt;&lt;h2 id=&quot;what-next&quot;&gt;What Next?&lt;/h2&gt;There is an enormous amount of natural additional functionality to build on top of public sharing.&lt;br /&gt;&lt;br /&gt;For example, not all document types can be previewed in read-only mode right now; in particular, IPython notebooks, task lists, LaTeX documents, images, and PDF files must be copied from the public share to another project before people can view them. It is better to release a first usable version of public sharing before systematically going through and implementing the additional features needed to support all of the above. You &lt;em&gt;can&lt;/em&gt; make complicated Sage worksheets with embedded images and 3d graphics, and those can be previewed before copying them to a project.&lt;br /&gt;Right now, the only way to visit a public share is to paste the URL into a browser tab and load it. Soon the projects page will be re-organized so you can search for publicly shared paths, see all public shares that you have previously visited, who shared them, how many +1's they've received, comments, etc.&lt;br /&gt;&lt;br /&gt;Also, I plan to eventually make it so public shares will be visible to people who have not logged in, and when viewing a publicly shared file or directory, there will be an option to start it running in a limited &lt;em&gt;project&lt;/em&gt;, which will vanish from existence after a period of inactivity (say).&lt;br /&gt;&lt;br /&gt;There are also dozens of details that are not yet implemented. For example, it would be nice to be able to directly download files (and directories!) to your computer from a public share. And it's also natural to share a folder or file with a specific list of people, rather than sharing it publicly. If somebody is viewing a public file and you change it, they should likely see the update automatically. Right now when viewing a share, you don't even know who shared it, and if you open a worksheet it can automatically execute Javascript, which is potentially unsafe. &amp;nbsp;Once public content is easily found, if somebody posts &quot;evil&quot; content publicly, there needs to be an easy way for users to report it.&lt;br /&gt;&lt;h2 id=&quot;sharing-will-permeate-everything&quot;&gt;Sharing will permeate everything&lt;/h2&gt;Sharing has been thought about a great deal during the last few years in the context of sites such as Github, Facebook, Google+ and Twitter. With &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt;, we've developed a foundation for interactive collaborative computing in a browser, and will introduce sharing on top of that in a way that is motivated by your problems. For example, as with Github or Google+, when somebody makes a copy of your publicly shared folder, this copy should be listed (under &quot;copies&quot;) and it could start out public by default. There is much to do.&lt;br /&gt;&lt;br /&gt;One reason it took so long to release the first version of public sharing is that I kept imagining that sharing would happen at the level of complete projects, just like sharing in Github. However, when thinking through your problems, it makes way more sense in &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt; to share individual directories and files. Technically, sharing at this level works works well for &lt;em&gt;read-only&lt;/em&gt; access, not for read-write access, since projects are mapped to Linux accounts. Another reason I have been very hesitant to support sharing is that I've had enormous trouble over the years with spammers posting content that gets me in trouble (with my University -- it is illegal for UW to host advertisements). However, by not letting search engines index content, the motivation for spammers to post nasty content is greatly reduced.&lt;br /&gt;&lt;br /&gt;Imagine publicly sharing recipes for automatically gradable homework problems, which use the full power of everything installed in &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SMC&lt;/a&gt;, get forked, improved, used, etc.</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-10-01T04:30:07+00:00</updated>
+			<updated>2015-10-01T05:30:08+00:00</updated>
 		</source>
 	</entry>
 
