@@ -54,6 +54,84 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>October 21, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://matroidunion.org" title="The Matroid Union » Sage">The Matroid Union</a></h3>
+
+
+<div class="entrygroup" id="http://matroidunion.org/?p=1550" lang="en-US">
+<h4><a href="http://matroidunion.org/?p=1550">Google Summer of Code 2015: outcomes</a></h4>
+<div class="entry">
+<div class="content">
+<p><em>Guest post by <a href="http://web.engr.illinois.edu/~chaoxu3/">Chao Xu</a></em></p>
+<p>In the summer, I have extended the SAGE code base for matroids for Google Summer of Code. This post shows a few example of it&#8217;s new capabilities.</p>
+<h1>Connectivity</h1>
+<p>Let $M$ be a matroid with groundset $E$ and rank function $r$. A partition of the groundset $\{E_1,E_2\}$ is a $m$-separation if $|E_1|,|E_2|\geq m$ and $r(E_1)+r(E_2)-r(E)\leq m-1$. $M$ is called $k$-connected if there is no $m$-separation for any $m  k$. 
+
+The Fano matroid is an example of $3$-connected matroid.
+
+
+<div class="sage1"></div>
+<p>The Fano matroid is not $4$-connected. Using the <code>certificate=True</code> field, we can also output a certificate that verify its not-$4$-connectness. The certificate is a $m$-separation where $m  4$. Since we know Fano matroid is $3$-connected, we know the output should be a $3$-separation.
+
+
+<div class="sage1"></div>
+<p>We also have a method for deciding $k$-connectivity, and returning a certificate. </p>
+<div class="sage1"></div>
+<p>There are 3 algorithms for $3$-connectivity. One can pass it as a string to the <code>algorithm</code> field of <code>is_3connected</code>.</p>
+<ol>
+<li><code>"bridges"</code>: The $3$-connectivity algorithm Bixby and Cunningham. [BC79] </li>
+<li><code>"intersection"</code>: the matroid intersection based algorithm</li>
+<li><code>"shifting"</code>: the shifting algorithm. [Raj87] </li></ol></p></p>
+
+<p>The default algorithm is the bridges based algorithm.</p>
+<p>The following is an example to compare the running time of each approach. </p>
+<div class="sage1"></div>
+<p>The new bridges based algorithm is much faster than the previous algorithm in SAGE.</p>
+<p>For $4$-connectivity, we tried to use the shifting approach, which has an running time of $O(n^{4.5}\sqrt{\log n})$, where $n$ is the size of the groundset. The intuitive idea is fixing some elements and tries to grow a separator. In theory, the shifting algorithm should be fast if the graph is not $4$-connected, as we can be lucky and find a separator quickly. In practice, it is still slower than the optimized matroid intersection based algorithm, which have a worst case $O(n^5)$ running time. There might be two reasons: the matroid intersection actually avoids the worst case running time in practice, and the shifting algorithm is not well optimized.</p>
+<div class="sage1"></div>
+<h1>Matroid intersection and union</h1>
+<p>There is a new implementation of matroid intersection algorithm based on Cunningham&#8217;s paper [Cun86].  For people who are familiar with blocking flow algorithms for maximum flows, this is the matroid version. The running time is $O(\sqrt{p}rn)$, where $p$ is the size of the maximum common independent set, $r$ is the rank, and $n$ is the size of the groundset. Here is an example of taking matroid intersection between two randomly generated linear matroids.</p>
+<div class="sage1"></div>
+<p>Using matroid intersection, we have preliminary support for matroid union and matroid sum. Both construction takes a list of matroids.</p>
+<p>The matroid sum operation takes disjoint union of the groundsets. Hence the new ground set will have the first coordinate indicating which matroid it comes from, and second coordinate indicate the element in the matroid. </p>
+<div class="sage1"></div>
+<p>Here is an example of matroid union of two copies of uniform matroid $U(1,5)$ and $U(2,5)$. The output is isomorphic to $U(4,5)$.</p>
+<div class="sage1"></div>
+<p>One of the application of matroid union is <a href="https://en.wikipedia.org/wiki/Matroid_partitioning">matroid partitioning</a>, which partitions the groundset of the matroid to minimum number of independent sets. Here is an example that partitions the edges of a graph to minimum number of forests. </p>
+<div class="sage1"></div>
+<h1>Acknowledgements</h1>
+<p>I would like to thank my mentors Stefan van Zwam and Michael Welsh for helping me with the project. I also like to thank Rudi Pendavingh, who have made various valuable suggestions and implemented many optimizations himself. </p>
+<h1>References</h1>
+<p>[BC79] R.E Bixby, W.H Cunningham. <em>Matroids, graphs and 3-connectivity</em>, J.A Bondy, U.S.R Murty (Eds.), Graph Theory and Related Topics, Academic Press, New York (1979), pp. 91-103.</p>
+<p>[Raj87] Rajan, A. (1987). <em>Algorithmic applications of connectivity and related topics in matroid theory</em>. Northwestern university.</p>
+<p>[Cun86] William H Cunningham. 1986. <em>Improved bounds for matroid partition and intersection algorithms</em>. SIAM J. Comput. 15, 4 (November 1986), 948-957.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://matroidunion.org/?p=1550">by Guest Contributor at October 21, 2015 03:55 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>October 17, 2015</h2>
 
 <div class="channelgroup">
@@ -5205,7 +5283,7 @@ maintainer</a>.
 <a href="http://ncalexan.wordpress.com/tag/sage/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="internal server error">Nick Alexander</a>
 </li>
 <li>
-<a href="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://blog.hav3n.net/?tag=gsoc-2014" class="message" title="no activity in 356 days">Nikhil Peter</a>
+<a href="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://blog.hav3n.net/?tag=gsoc-2014" class="message" title="internal server error">Nikhil Peter</a>
 </li>
 <li>
 <a href="http://ondrejcertik.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://ondrejcertik.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Ondrej Certik</a>
@@ -5232,7 +5310,7 @@ maintainer</a>.
 <a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
-<a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
+<a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" title="The Matroid Union » Sage">The Matroid Union</a>
 </li>
 <li>
 <a href="http://titusnicolae.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://titusnicolae.blogspot.com/" class="message" title="no activity in 356 days">Titus Nicolae</a>
@@ -5241,10 +5319,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" class="message" title="internal server error">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -5265,7 +5343,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-October 21, 2015 03:30 PM<br>
+October 21, 2015 04:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
