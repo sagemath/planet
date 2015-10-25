@@ -2,7 +2,7 @@
 <opml version="1.1">
 	<head>
 		<title>Planet Sage</title>
-		<dateModified>Sun, 25 Oct 2015 05:30:14 +0000</dateModified>
+		<dateModified>Sun, 25 Oct 2015 06:30:12 +0000</dateModified>
 		<ownerName>Harald Schilly</ownerName>
 		<ownerEmail>harald.schilly@gmail.com</ownerEmail>
 	</head>
@@ -44,8 +44,8 @@
 		<outline type="rss" text="The Matroid Union" xmlUrl="http://matroidunion.org/?feed=rss2&amp;cat=7" title="The Matroid Union » Sage" />
 		<outline type="rss" text="Titus Nicolae" xmlUrl="http://titusnicolae.blogspot.com/feeds/posts/default" title="Titus Nicolae" />
 		<outline type="rss" text="Verónica Suaste Morales" xmlUrl="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="Programming Projects" />
-		<outline type="rss" text="Vince Knight" xmlUrl="http://drvinceknight.github.io/unpeudemath/feed.xml" title="Un peu de math" />
 		<outline type="rss" text="Vince Knight" xmlUrl="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="Un peu de math..." />
+		<outline type="rss" text="Vince Knight" xmlUrl="http://drvinceknight.github.io/unpeudemath/feed.xml" title="Un peu de math" />
 		<outline type="rss" text="William Stein" xmlUrl="http://sagemath.blogspot.com/feeds/posts/default" title="Sage: Open Source Mathematics Software" />
 	</body>
 </opml>
