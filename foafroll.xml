@@ -288,7 +288,7 @@
 		<foaf:Agent>
 			<foaf:name>Michele Borassi</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://borassisagemath.blogspot.com/">
+				<foaf:Document rdf:about="http://borassisagemath.blogspot.it/">
 					<dc:title>Performance Improvements for the Graph Module of Sagemath</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://borassisagemath.blogspot.com/feeds/posts/default" />
@@ -418,7 +418,7 @@
 		<foaf:Agent>
 			<foaf:name>Simon Spicer</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://mathandhats.blogspot.com/search/label/sage">
+				<foaf:Document rdf:about="http://mathandhats.blogspot.com">
 					<dc:title>Math and Hats</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" />
@@ -483,10 +483,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
-					<dc:title>Un peu de math...</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
+					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
+						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
@@ -496,10 +496,10 @@
 		<foaf:Agent>
 			<foaf:name>Vince Knight</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
-					<dc:title>Un peu de math</dc:title>
+				<foaf:Document rdf:about="http://drvinceknight.blogspot.com/search/label/Sage">
+					<dc:title>Un peu de math...</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
