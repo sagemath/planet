@@ -5,8 +5,27 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-11-19T07:30:13+00:00</updated>
+	<updated>2015-11-19T08:31:14+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Sage Days 70 - Berkeley - November 2015</title>
+		<link href="http://blog.harald.schil.ly/2015/11/sage-days-70-berkeley-november-2015.html"/>
+		<id>tag:blogger.com,1999:blog-3473399517246044360.post-4871259029930426944</id>
+		<updated>2015-11-19T08:31:08+00:00</updated>
+		<content type="html">&lt;div dir=&quot;ltr&quot;&gt;&lt;div dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;a class=&quot;g-profile&quot; href=&quot;https://plus.google.com/108676679876909469255&quot; target=&quot;_blank&quot;&gt;+Dennis Stein&lt;/a&gt;&amp;nbsp;brought his cameras and tools to Sage Days 70:&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt; &lt;/div&gt;&lt;div&gt;&lt;a href=&quot;https://vimeo.com/146207495&quot;&gt;Sage Days 70 - Berkeley - November 2015&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/dstein&quot;&gt;Dennis Stein&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com/&quot;&gt;Vimeo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</content>
+		<author>
+			<name>Harald Schilly</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://blog.harald.schil.ly/search/label/sage</uri>
+		</author>
+		<source>
+			<title type="html">Harald Schilly</title>
+			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
+			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
+			<updated>2015-11-19T08:31:08+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Visualising Markov Chains with NetworkX</title>
@@ -218,7 +237,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2015-11-19T07:30:12+00:00</updated>
+			<updated>2015-11-19T08:31:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -396,7 +415,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -416,7 +435,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -749,7 +768,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -769,7 +788,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1171,7 +1190,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2443,7 +2462,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-19T07:30:06+00:00</updated>
+			<updated>2015-11-19T08:31:08+00:00</updated>
 		</source>
 	</entry>
 

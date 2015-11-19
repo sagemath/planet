@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="tag:blogger.com,1999:blog-3473399517246044360.post-4871259029930426944" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/11/15/Visualising-markov-chains/" />
 			<rdf:li rdf:resource="http://matroidunion.org/?p=1550" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/other/2015/10/17/Getting-in-to-reddit/" />
@@ -70,6 +71,13 @@
 	</items>
 </channel>
 
+<item rdf:about="tag:blogger.com,1999:blog-3473399517246044360.post-4871259029930426944">
+	<title>Harald Schilly: Sage Days 70 - Berkeley - November 2015</title>
+	<link>http://blog.harald.schil.ly/2015/11/sage-days-70-berkeley-november-2015.html</link>
+	<content:encoded>&lt;div dir=&quot;ltr&quot;&gt;&lt;div dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;a class=&quot;g-profile&quot; href=&quot;https://plus.google.com/108676679876909469255&quot; target=&quot;_blank&quot;&gt;+Dennis Stein&lt;/a&gt;&amp;nbsp;brought his cameras and tools to Sage Days 70:&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt; &lt;/div&gt;&lt;div&gt;&lt;a href=&quot;https://vimeo.com/146207495&quot;&gt;Sage Days 70 - Berkeley - November 2015&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/dstein&quot;&gt;Dennis Stein&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com/&quot;&gt;Vimeo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</content:encoded>
+	<dc:date>2015-11-19T08:31:08+00:00</dc:date>
+	<dc:creator>Harald Schilly</dc:creator>
+</item>
 <item rdf:about="http://drvinceknight.github.io/unpeudemath/code/2015/11/15/Visualising-markov-chains/">
 	<title>Vince Knight: Visualising Markov Chains with NetworkX</title>
 	<link>http://drvinceknight.github.io/unpeudemath/code/2015/11/15/Visualising-markov-chains/</link>
