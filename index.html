@@ -54,6 +54,363 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>November 28, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/gametheory/2015/11/28/Experimenting-with-a-high-performing-evolved-strategy-in-other-environments/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/gametheory/2015/11/28/Experimenting-with-a-high-performing-evolved-strategy-in-other-environments/">Survival of the fittest: Experimenting with a high performing strategy in other environments</a></h4>
+<div class="entry">
+<div class="content">
+<p><a href="http://evolution.berkeley.edu/evolibrary/misconceptions_faq.php#b5">A common misconception about evolution is that “The fittest organisms in a
+population are those that are strongest, healthiest, fastest, and/or
+largest.”</a>
+However, as that link indicates, survival of the fittest is implied at the
+genetic level: and implies that evolution favours genes that are most able to
+continue in the next generation for a given environment. In this post, I’m going
+to take a look at a high performing strategy from the Iterated Prisoner’s
+dilemma that was obtained through an evolutionary algorithm. I want to see how
+well it does in other environments.</p>
+
+<h2 id="background">Background</h2>
+
+<p>This is all based on the <a href="http://axelrod.readthedocs.org/en/latest/">Python Axelrod
+package</a> which makes iterated
+prisoner dilemma research straightforward and <strong>really</strong> is just taking a look
+at <a href="http://mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html">Martin Jones’s blog
+post</a>
+which described the evolutionary analysis performed to get a strategy (<code>EvolvedLookerUp</code>) that is
+currently winning the overall tournament for the Axelrod library (with 108
+strategies):</p>
+
+<p><img src="https://camo.githubusercontent.com/04c9d74a5878e24e8da3c985ea393b5ee7439b3b/687474703a2f2f6178656c726f642d707974686f6e2e6769746875622e696f2f746f75726e616d656e742f6173736574732f737472617465676965735f626f78706c6f742e737667" alt="Results from overall
+tournament" /></p>
+
+<p>The strategy in question is designed to do exactly that and as you can see does
+it really well (with a substantial gap between it’s median score and the runner
+up: <code>DoubleCrosser</code>).</p>
+
+<p>There are some things lacking in the analysis I’m going to present (which
+strategies I’m looking at, number of tournaments etc…) but hopefully the
+numerical analysis is still interesting. In essence I’m taking a look at the
+following question:</p>
+
+<blockquote>
+  <p>If a strategy is good in a big environment, how good is it in any given
+environment?</p>
+</blockquote>
+
+<p>From an evolutionary point of view this is kind of akin to seeing how good a
+predator a shark would be in any random (potentially land based) environment…</p>
+
+<h2 id="generating-the-data"> Generating the data</h2>
+
+<p>Thanks to the Axelrod, library it’s pretty straightforward to quickly experiment
+with a strategy (or group of strategies) in a random tournament:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>  <span class="c"># Import the axelrod library</span>
+
+<span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the rank of the test_strategy in a tournament with given</span>
+<span class="sd">    strategiess&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">:</span>
+        <span class="n">strategies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">())</span>
+    <span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">)</span>
+    <span class="n">tournament</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span>
+                                <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">,</span>
+                                <span class="n">processes</span><span class="o">=</span><span class="n">processes</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">tournament</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">ranking</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">wins</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:]</span></code></pre></div>
+
+<p>This runs a tournament and returns the rankings and wins for the input
+strategies. For example, let’s see how <code>Cooperator</code> and <code>Defector</code> do in a
+random tournament with 2 other strategies:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># A random seed</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span>  <span class="c"># Our 2 random strategies</span>
+<span class="p">[</span><span class="n">Tricky</span> <span class="n">Defector</span><span class="p">,</span> <span class="n">Prober</span> <span class="mi">3</span><span class="p">]</span></code></pre></div>
+
+<p>We can then use the above function to see how <code>Cooperator</code> and <code>Defector</code> do:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">()])</span>
+<span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span></code></pre></div>
+
+<p>We see that cooperator ranks last (getting no wins), and defector just before last (getting 2 wins). This is confirmed by the actual tournament results:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/small_tournament_boxplot.svg" alt="" />
+<img src="http://vknight.org/unpeudemath/assets/images/small_tournament_winplot.svg" alt="" /></p>
+
+<p>The idea is to reproduce the above for a variety of tournament sizes, repeating
+random samples for each size and looking at the wins and ranks for the
+strategies we’re interested in.</p>
+
+<p>This script generates our data:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="n">max_size</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c"># Max size of tournaments considered (maximum size of the sample)</span>
+<span class="n">tournaments</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c"># Number of tournaments of each size to run (number of samples)</span>
+<span class="n">repetitions</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c"># Number of repetitions of each tournament (for a given sample)</span>
+
+<span class="n">test_strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">DoubleCrosser</span><span class="p">]</span>
+<span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span> <span class="k">if</span> <span class="n">axl</span><span class="o">.</span><span class="n">obey_axelrod</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">test_strategies</span><span class="o">=</span><span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the rank of the test_strategy in a tournament with given</span>
+<span class="sd">    strategiess&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">:</span>
+        <span class="n">strategies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">())</span>
+    <span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">)</span>
+    <span class="n">tournament</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="n">processes</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">tournament</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">ranking</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">wins</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:]</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'combined-data'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">f_lookerup</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data-lookerup.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr_lookerup</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_lookerup</span><span class="p">)</span>
+<span class="n">f_titfortat</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data-titfortat.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr_titfortat</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_titfortat</span><span class="p">)</span>
+<span class="n">f_cooperator</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data-cooperator.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr_cooperator</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_cooperator</span><span class="p">)</span>
+<span class="n">f_defector</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data-defector.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr_defector</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_defector</span><span class="p">)</span>
+<span class="n">f_doublcrosser</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data-doublecrosser.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">csvwrtr_doublcrosser</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_doublcrosser</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ind_data</span> <span class="o">=</span> <span class="p">[[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]]</span>
+
+
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">size</span><span class="p">]</span>
+    <span class="n">ind_row</span> <span class="o">=</span> <span class="p">[</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tournaments</span><span class="p">):</span>
+
+        <span class="n">s</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">strategy_labels</span> <span class="o">=</span> <span class="s">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
+
+        <span class="n">trnmt_s</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">test_strategies</span><span class="o">=</span><span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">)</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">strategy_labels</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ts</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">):</span>
+            <span class="n">trnmt_s</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">test_strategies</span><span class="o">=</span><span class="p">[</span><span class="n">ts</span><span class="p">],</span> <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">)</span>
+            <span class="n">ind_row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">strategy_labels</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">csvwrtr</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="n">csvwrtr_lookerup</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">ind_row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">csvwrtr_titfortat</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">ind_row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">csvwrtr_cooperator</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">ind_row</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="n">csvwrtr_defector</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">ind_row</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="n">csvwrtr_doublcrosser</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">ind_row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_lookerup</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_titfortat</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_cooperator</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_defector</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_doublcrosser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></div>
+
+<p>The above creates tournaments up to a size of 25 other strategies, with 20 random tournaments for each size, creating six data files:</p>
+
+<ul>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-lookerup.csv">Data for tournaments with a random strategy sample and <code>EvolvedLookerUp</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-titfortat.csv">Data for tournaments with the random strategy sample and <code>TitForTat</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-cooperator.csv">Data for tournaments with the random strategy sample and <code>Cooperator</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-defector.csv">Data for tournaments with the random strategy sample and <code>Defector</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-doublecrosser.csv">Data for tournaments with the random strategy sample and <code>DoubleCrosser</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/combined-data">Data for tournaments with the random strategy sample as well as the above strategies</a></li>
+</ul>
+
+<h2 id="analysing-the-data">Analysing the data</h2>
+
+<p>I then used <a href="https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb">this JuPyTer notebook</a> to analyse the data.</p>
+
+<p>Here is what we see for the <code>EvolvedTitForTat</code> strategy:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg" alt="" />
+<img src="http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg" alt="" /></p>
+
+<p>The line is fitted to the median rank and number of wins (recall for each
+number of strategies, 20 different sampled tournaments are considered) We see
+that (as expected) as the number of strategies increases both the median rank
+and wins increases, <strong>but what is of interest</strong> is the rate at which that increase happens.</p>
+
+<p>Below is the fitted lines for all the considered strategies:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/rank-regression.svg" alt="" />
+<img src="http://vknight.org/unpeudemath/assets/images/wins-regression.svg" alt="" /></p>
+
+<p>Here are the fits (and corresponding plots)  for the ranks:</p>
+
+<ul>
+  <li><code>EvolvedLookerUp</code>: \(y=0.49x-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg">plot</a></li>
+  <li><code>TitForTat</code>: \(y=0.53-0.45\) <a href="http://vknight.org/unpeudemath/assets/images/rank-titfortat.svg">plot</a></li>
+  <li><code>Cooperator</code>: \(y=0.42x+1.40\) <a href="http://vknight.org/unpeudemath/assets/images/rank-cooperator.svg">plot</a></li>
+  <li><code>Defector</code>: \(y=0.75x-0.33\) <a href="http://vknight.org/unpeudemath/assets/images/rank-defector.svg">plot</a></li>
+  <li><code>DoubleCrosser</code>: \(y=0.51x-0.47\) <a href="http://vknight.org/unpeudemath/assets/images/rank-doublecrosser.svg">plot</a></li>
+</ul>
+
+<p>Here are the fits (and corresponding plots) for the wins:</p>
+
+<ul>
+  <li><code>EvolvedLookerUp</code>: \(y=0.28x+0.06\) <a href="http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg">plot</a></li>
+  <li><code>TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-titfortat.svg">plot</a></li>
+  <li><code>Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-cooperator.svg">plot</a></li>
+  <li><code>Defector</code>: \(y=0.89x+0.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-defector.svg">plot</a></li>
+  <li><code>DoubleCrosser</code>: \(y=0.85-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/wins-doublecrosser.svg">plot</a></li>
+</ul>
+
+<p><strong>It seems that the <code>EvolvedLookerUp</code> strategy does continue to do well (with a
+low coefficient of 0.49) in these random environments</strong>. However what’s
+interesting is that the simple <code>Cooperator</code> strategy also seems to do well
+(this might indicate that the random samples are creating ‘overly nice’
+conditions).</p>
+
+<p><strong>All of the above keeps the 5 strategies considered separated from each, here
+is the analysis repeated when combining the strategies with the random
+sample:</strong></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/rank-combined-lookerup.svg" alt="" />
+<img src="http://vknight.org/unpeudemath/assets/images/wins-combined-lookerup.svg" alt="" /></p>
+
+<p>Below is the fitted lines for all the considered strategies:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/combined-rank-regression.svg" alt="" />
+<img src="http://vknight.org/unpeudemath/assets/images/combined-win-regression.svg" alt="" /></p>
+
+<p>Here are the fits (and corresponding plots)  for the ranks:</p>
+
+<ul>
+  <li><code>EvolvedLookerUp</code>: \(y=0.42x+2.05\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-lookerup.svg">plot</a></li>
+  <li><code>TitForTat</code>: \(y=0.44+1.95\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-titfortat.svg">plot</a></li>
+  <li><code>Cooperator</code>: \(y=0.64+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-cooperator.svg">plot</a></li>
+  <li><code>Defector</code>: \(y=0.47x+1.87\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-defector.svg">plot</a></li>
+  <li><code>DoubleCrosser</code>: \(y=0.63x+1.88\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-doublecrosser.svg">plot</a></li>
+</ul>
+
+<p>Here are the fits (and corresponding plots) for the wins:</p>
+
+<ul>
+  <li><code>EvolvedLookerUp</code>: \(y=0.28x+0.05\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-lookerup.svg">plot</a></li>
+  <li><code>TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-titfortat.svg">plot</a></li>
+  <li><code>Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-cooperator.svg">plot</a></li>
+  <li><code>Defector</code>: \(y=0.89x+4.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-defector.svg">plot</a></li>
+  <li><code>DoubleCrosser</code>: \(y=0.85+2.87\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-doublecrosser.svg">plot</a></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><strong>It looks like the <code>EvolvedLookerUp</code> strategy continues to perform well in
+environments that are not the ones it evolved in.</strong></p>
+
+<p>The Axelrod library makes this analysis possible as you can quickly create
+tournaments from a wide library of strategies. You could also specify the
+analysis further by considering strategies of a particular type. For example
+you could sample only from strategies that act deterministically (no random
+behaviour):</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">()</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="s">'stochastic'</span><span class="p">]]</span></code></pre></div>
+
+<p>It would probably be worth gathering even more data to be able to make
+substantial claims about the performances as well as
+considering other test strategies but ultimately this gives some insight in to
+the performances of the strategies in other environments.</p>
+
+<h2 id="for-fun">For fun</h2>
+
+<p>The latest release of the library
+(<a href="https://pypi.python.org/pypi/Axelrod">v0.0.21</a>) includes the ability to <a href="http://axelrod.readthedocs.org/en/latest/tutorials/further_topics/creating_matches.html">draw
+sparklines</a>
+that give a visual representation of the interactions between pairs of
+strategies. If you’re running python 3 you can include emoji so here goes the
+sparklines for the test strategies considered:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">test_strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">DoubleCrosser</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">matchups</span> <span class="o">=</span> <span class="p">[(</span><span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">](),</span> <span class="n">match</span><span class="p">[</span><span class="mi">1</span><span class="p">]())</span> <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">matchup</span> <span class="ow">in</span> <span class="n">matchups</span><span class="p">:</span>
+<span class="o">....</span>    <span class="n">match</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Match</span><span class="p">(</span><span class="n">matchup</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="o">....</span>    <span class="n">_</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="o">....</span>    <span class="k">print</span><span class="p">(</span><span class="n">matchup</span><span class="p">)</span>
+<span class="o">....</span>    <span class="k">print</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">sparklines</span><span class="p">(</span><span class="n">c_symbol</span><span class="o">=</span><span class="s">' 😀 '</span><span class="p">,</span> <span class="n">d_symbol</span><span class="o">=</span><span class="s">' 😡 '</span><span class="p">))</span>
+<span class="o">...</span>
+<span class="p">(</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">Tit</span> <span class="n">For</span> <span class="n">Tat</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+<span class="p">(</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">Cooperator</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+<span class="p">(</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">Defector</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+ <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">DoubleCrosser</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">Tit</span> <span class="n">For</span> <span class="n">Tat</span><span class="p">,</span> <span class="n">Cooperator</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+<span class="p">(</span><span class="n">Tit</span> <span class="n">For</span> <span class="n">Tat</span><span class="p">,</span> <span class="n">Defector</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+ <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">Tit</span> <span class="n">For</span> <span class="n">Tat</span><span class="p">,</span> <span class="n">DoubleCrosser</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">Cooperator</span><span class="p">,</span> <span class="n">Defector</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">Cooperator</span><span class="p">,</span> <span class="n">DoubleCrosser</span><span class="p">)</span>
+ <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>  <span class="err">😀</span>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+<span class="p">(</span><span class="n">Defector</span><span class="p">,</span> <span class="n">DoubleCrosser</span><span class="p">)</span>
+ <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span></code></pre></div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/gametheory/2015/11/28/Experimenting-with-a-high-performing-evolved-strategy-in-other-environments/">November 28, 2015 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>November 19, 2015</h2>
 
 <div class="channelgroup">
@@ -5458,7 +5815,7 @@ maintainer</a>.
 <a href="http://6dime.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://6dime.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Jens Rasch</a>
 </li>
 <li>
-<a href="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://jonathanleesage.blogspot.com/" class="message" title="no activity in 356 days">Jonathan Lee</a>
+<a href="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://jonathanleesage.blogspot.com/search/label/gsoc" class="message" title="no activity in 356 days">Jonathan Lee</a>
 </li>
 <li>
 <a href="http://leeworden.net/lw/taxonomy/term/25/feed" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://leeworden.net/lw/taxonomy/term/25" class="message" title="no activity in 356 days">Lee Worden</a>
@@ -5521,10 +5878,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -5545,7 +5902,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-November 29, 2015 11:30 AM<br>
+November 29, 2015 12:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
