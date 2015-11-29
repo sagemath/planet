@@ -192,7 +192,7 @@ strategies we’re interested in.&lt;/p&gt;
 
 &lt;p&gt;I then used &lt;a href=&quot;https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb&quot;&gt;this JuPyTer notebook&lt;/a&gt; to analyse the data.&lt;/p&gt;
 
-&lt;p&gt;Here is what we see for the &lt;code&gt;EvolvedTitForTat&lt;/code&gt; strategy:&lt;/p&gt;
+&lt;p&gt;Here is what we see for the &lt;code&gt;EvolvedLookerUp&lt;/code&gt; strategy:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
