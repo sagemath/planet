@@ -54,6 +54,233 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>November 30, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released">slabbe-0.2.spkg released</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>These is a summary of the functionalities present in <a class="reference external" href="http://www.slabbe.org/Sage">slabbe-0.2.spkg</a> optional
+Sage package. It works on version 6.8 of Sage but will work best with sage-6.10
+(it is using the new code for <tt class="docutils literal">cartesian_product</tt> merged the the betas of
+sage-6.10). It contains 7 new modules:</p>
+<blockquote>
+<ul class="simple">
+<li><tt class="docutils literal">finite_word.py</tt></li>
+<li><tt class="docutils literal">language.py</tt></li>
+<li><tt class="docutils literal">lyapunov.py</tt></li>
+<li><tt class="docutils literal">matrix_cocycle.py</tt></li>
+<li><tt class="docutils literal">mult_cont_frac.pyx</tt></li>
+<li><tt class="docutils literal">ranking_scale.py</tt></li>
+<li><tt class="docutils literal">tikz_picture.py</tt></li>
+</ul>
+</blockquote>
+<p><strong>Cheat Sheets</strong></p>
+<p>The best way to have a quick look at what can be computed with the optional
+Sage package <tt class="docutils literal"><span class="pre">slabbe-0.2.spkg</span></tt> is to look at the <a class="reference external" href="http://arxiv.org/abs/1511.08399">3-dimensional Continued
+Fraction Algorithms Cheat Sheets</a> available on the arXiv since today. It
+gathers a handful of informations on different 3-dimensional Continued Fraction
+Algorithms including well-known and old ones (Poincaré, Brun, Selmer, Fully
+Subtractive) and new ones (Arnoux-Rauzy-Poincaré, Reverse, Cassaigne).</p>
+<a class="reference external image-reference" href="http://arxiv.org/abs/1511.08399"><img alt="/Files/2015/arp_cheat_sheet.png" src="http://www.slabbe.org/Files/2015/arp_cheat_sheet.png" /></a>
+<p><strong>Installation</strong></p>
+
+
+<div class="pygments_manni"><pre>sage -i http://www.slabbe.org/Sage/slabbe-0.2.spkg    # on sage 6.8
+sage -p http://www.slabbe.org/Sage/slabbe-0.2.spkg    # on sage 6.9 or beyond
+</pre></div>
+
+
+
+<p><strong>Examples</strong></p>
+<p>Computing the orbit of Brun algorithm on some input in \(\mathbb{R}^3_+\)
+including dual coordinates:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.mult_cont_frac</span> <span class="kn">import</span> <span class="n">Brun</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">algo</span> <span class="o">=</span> <span class="n">Brun</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">algo</span><span class="o">.</span><span class="n">cone_orbit_list</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">[(</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">87.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">321</span><span class="p">),</span>
+ <span class="p">(</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">132</span><span class="p">),</span>
+ <span class="p">(</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">57.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">132</span><span class="p">),</span>
+ <span class="p">(</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">132</span><span class="p">)]</span>
+</pre></div>
+
+
+
+<p>Computing the invariant measure:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">algo</span><span class="o">.</span><span class="n">invariant_measure_wireframe_plot</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">6</span><span class="p">,</span> <span class="n">ndivs</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'a.png'</span><span class="p">)</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2015/brun_invm_wireframe_plot.png"><img alt="/Files/2015/brun_invm_wireframe_plot.png" src="http://www.slabbe.org/Files/2015/brun_invm_wireframe_plot.png" /></a>
+<p>Drawing the cylinders:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">cocycle</span> <span class="o">=</span> <span class="n">algo</span><span class="o">.</span><span class="n">matrix_cocycle</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">cocycle</span><span class="o">.</span><span class="n">tikz_n_cylinders</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">png</span><span class="p">()</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2015/brun_cylinders_3.png"><img alt="/Files/2015/brun_cylinders_3.png" src="http://www.slabbe.org/Files/2015/brun_cylinders_3.png" /></a>
+<p>Computing the Lyapunov exponents of the 3-dimensional Brun algorithm:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.lyapunov</span> <span class="kn">import</span> <span class="n">lyapunov_table</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">lyapunov_table</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+  <span class="mi">30</span> <span class="n">succesfull</span> <span class="n">orbits</span>    <span class="nb">min</span>       <span class="n">mean</span>      <span class="nb">max</span>       <span class="n">std</span>
+<span class="o">+-----------------------+---------+---------+---------+---------+</span>
+  <span class="err">$</span>\<span class="n">theta_1</span><span class="err">$</span>              <span class="mf">0.3026</span>    <span class="mf">0.3045</span>    <span class="mf">0.3051</span>    <span class="mf">0.00046</span>
+  <span class="err">$</span>\<span class="n">theta_2</span><span class="err">$</span>              <span class="o">-</span><span class="mf">0.1125</span>   <span class="o">-</span><span class="mf">0.1122</span>   <span class="o">-</span><span class="mf">0.1115</span>   <span class="mf">0.00020</span>
+  <span class="err">$</span><span class="mi">1</span><span class="o">-</span>\<span class="n">theta_2</span><span class="o">/</span>\<span class="n">theta_1</span><span class="err">$</span>   <span class="mf">1.3680</span>    <span class="mf">1.3684</span>    <span class="mf">1.3689</span>    <span class="mf">0.00024</span>
+</pre></div>
+
+
+
+<p><strong>Dealing with tikzpictures</strong></p>
+<p>Since I create lots of tikzpictures in my code and also because I was unhappy
+at how the <tt class="docutils literal">view</tt> command of Sage handles them (a tikzpicture is not a math
+expression to put inside dollar signs), I decided to create a class for
+tikzpictures. I think this module could be usefull in Sage so I will propose
+its inclusion soon.</p>
+<p>I am using the standalone document class which allows some configurations like
+the border:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe</span> <span class="kn">import</span> <span class="n">TikzPicture</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">g</span> <span class="o">=</span> <span class="n">graphs</span><span class="o">.</span><span class="n">PetersenGraph</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">s</span> <span class="o">=</span> <span class="n">latex</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">TikzPicture</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">standalone_configs</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;border=4mm&quot;</span><span class="p">],</span> <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s">'tkz-graph'</span><span class="p">])</span>
+</pre></div>
+
+
+
+<p>The <tt class="docutils literal">repr</tt> method does not print all of the string since it is often very
+long. Though it shows how many lines are not printed:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">t</span>
+\<span class="n">documentclass</span><span class="p">[</span><span class="n">tikz</span><span class="p">]{</span><span class="n">standalone</span><span class="p">}</span>
+\<span class="n">standaloneconfig</span><span class="p">{</span><span class="n">border</span><span class="o">=</span><span class="mi">4</span><span class="n">mm</span><span class="p">}</span>
+\<span class="n">usepackage</span><span class="p">{</span><span class="n">tkz</span><span class="o">-</span><span class="n">graph</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+<span class="o">%</span>
+\<span class="n">useasboundingbox</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="n">rectangle</span> <span class="p">(</span><span class="mf">5.0</span><span class="n">cm</span><span class="p">,</span><span class="mf">5.0</span><span class="n">cm</span><span class="p">);</span>
+<span class="o">%</span>
+\<span class="n">definecolor</span><span class="p">{</span><span class="n">cv0</span><span class="p">}{</span><span class="n">rgb</span><span class="p">}{</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="o">...</span>
+<span class="o">...</span> <span class="mi">68</span> <span class="n">lines</span> <span class="ow">not</span> <span class="n">printed</span> <span class="p">(</span><span class="mi">3748</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">total</span><span class="p">)</span> <span class="o">...</span>
+<span class="o">...</span>
+\<span class="n">Edge</span><span class="p">[</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.1</span><span class="n">cm</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">cv6v8</span><span class="p">,},](</span><span class="n">v6</span><span class="p">)(</span><span class="n">v8</span><span class="p">)</span>
+\<span class="n">Edge</span><span class="p">[</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.1</span><span class="n">cm</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">cv6v9</span><span class="p">,},](</span><span class="n">v6</span><span class="p">)(</span><span class="n">v9</span><span class="p">)</span>
+\<span class="n">Edge</span><span class="p">[</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.1</span><span class="n">cm</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">cv7v9</span><span class="p">,},](</span><span class="n">v7</span><span class="p">)(</span><span class="n">v9</span><span class="p">)</span>
+<span class="o">%</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</pre></div>
+
+
+
+<p>There is a method to generates a pdf and another for generating a png. Both
+opens the file in a viewer by default unless <tt class="docutils literal">view=False</tt>:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">pathtofile</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">pathtofile</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2015/petersen_graph.png"><img alt="/Files/2015/petersen_graph.png" src="http://www.slabbe.org/Files/2015/petersen_graph.png" /></a>
+<p>Compare this with the output of <tt class="docutils literal">view(s, tightpage=True)</tt> which does not
+allow to control the border and also creates a second empty page on some
+operating system (osx, only one page on ubuntu):</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">view</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">tightpage</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2015/petersen_graph_view.png"><img alt="/Files/2015/petersen_graph_view.png" src="http://www.slabbe.org/Files/2015/petersen_graph_view.png" /></a>
+<p>One can also provide the filename where to save the file in which case the file
+is not open in a viewer:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">_</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="s">'petersen_graph.pdf'</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>Another example with polyhedron code taken from this Sage thematic tutorial
+<a class="reference external" href="http://doc.sagemath.org/html/en/thematic_tutorials/polytope_tikz.html">Draw polytopes in LateX using TikZ</a>:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">V</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">P</span> <span class="o">=</span> <span class="n">Polyhedron</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="n">V</span><span class="p">)</span><span class="o">.</span><span class="n">polar</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">s</span> <span class="o">=</span> <span class="n">P</span><span class="o">.</span><span class="n">projection</span><span class="p">()</span><span class="o">.</span><span class="n">tikz</span><span class="p">([</span><span class="mi">674</span><span class="p">,</span><span class="mi">108</span><span class="p">,</span><span class="o">-</span><span class="mi">731</span><span class="p">],</span><span class="mi">112</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">TikzPicture</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">t</span>
+\<span class="n">documentclass</span><span class="p">[</span><span class="n">tikz</span><span class="p">]{</span><span class="n">standalone</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span><span class="o">%</span>
+        <span class="p">[</span><span class="n">x</span><span class="o">=</span><span class="p">{(</span><span class="mf">0.249656</span><span class="n">cm</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.577639</span><span class="n">cm</span><span class="p">)},</span>
+        <span class="n">y</span><span class="o">=</span><span class="p">{(</span><span class="mf">0.777700</span><span class="n">cm</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.358578</span><span class="n">cm</span><span class="p">)},</span>
+        <span class="n">z</span><span class="o">=</span><span class="p">{(</span><span class="o">-</span><span class="mf">0.576936</span><span class="n">cm</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.733318</span><span class="n">cm</span><span class="p">)},</span>
+        <span class="n">scale</span><span class="o">=</span><span class="mf">2.000000</span><span class="p">,</span>
+<span class="o">...</span>
+<span class="o">...</span> <span class="mi">80</span> <span class="n">lines</span> <span class="ow">not</span> <span class="n">printed</span> <span class="p">(</span><span class="mi">4889</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">total</span><span class="p">)</span> <span class="o">...</span>
+<span class="o">...</span>
+\<span class="n">node</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="n">at</span> <span class="p">(</span><span class="mf">1.00000</span><span class="p">,</span> <span class="mf">1.00000</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.00000</span><span class="p">)</span>     <span class="p">{};</span>
+\<span class="n">node</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="n">at</span> <span class="p">(</span><span class="mf">1.00000</span><span class="p">,</span> <span class="mf">1.00000</span><span class="p">,</span> <span class="mf">1.00000</span><span class="p">)</span>     <span class="p">{};</span>
+<span class="o">%%</span>
+<span class="o">%%</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">_</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2015/polyhedron.png"><img alt="/Files/2015/polyhedron.png" src="http://www.slabbe.org/Files/2015/polyhedron.png" /></a>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released">by Sébastien Labbé at November 30, 2015 11:30 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>November 28, 2015</h2>
 
 <div class="channelgroup">
@@ -1001,7 +1228,7 @@ Here is <a href="http://www.sagemath.org/">SageMath</a>'s strategy, or at least 
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" lang="en">
@@ -4528,7 +4755,7 @@ Except this time Laura, lost her crown :)</p></div>
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences" lang="en">
@@ -5866,7 +6093,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" title="The Matroid Union » Sage">The Matroid Union</a>
@@ -5902,7 +6129,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-November 30, 2015 10:30 AM<br>
+November 30, 2015 11:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
