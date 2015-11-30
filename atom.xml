@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-11-30T01:30:16+00:00</updated>
+	<updated>2015-11-30T02:30:15+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -364,7 +364,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -597,7 +597,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2015-11-30T01:30:12+00:00</updated>
+			<updated>2015-11-30T02:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -775,7 +775,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -795,7 +795,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1128,7 +1128,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1148,7 +1148,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1550,7 +1550,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2822,7 +2822,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-11-30T01:30:06+00:00</updated>
+			<updated>2015-11-30T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -3436,7 +3436,7 @@ So whilst that individual did not get any in, they contributed an important part
 &lt;p&gt;The next post discusses how to do this easily, by making use of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Schur_orthogonality_relations&quot;&gt;Schur orthogonality relations&lt;/a&gt;. These are really cool relations among the rows and columns of the character table. Apart from decomposing representations into irreducibles, we’ll also be able to prove that the character table is always square!&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -3655,7 +3655,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 &lt;p&gt;For more information, checkout the &lt;a href=&quot;http://www.sagemath.org/doc/reference/plotting/sage/plot/animate.html&quot;&gt;Sage reference for animated plots&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4219,7 +4219,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 &lt;p&gt;In the next few posts, I’ll switch gears to &lt;a href=&quot;http://en.wikipedia.org/wiki/Character_theory&quot; target=&quot;_blank&quot;&gt;character theory&lt;/a&gt;, which is a simpler but more powerful way of working with group representations.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4326,7 +4326,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;It turns out that finite groups have finitely many irreducible representations! In the &lt;a href=&quot;http://sheaves.github.io/Group-Ring-Regular-Representation/&quot;&gt;next post&lt;/a&gt;, we’ll construct a representation for any finite group $G$ that contains &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4435,7 +4435,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;I won’t prove this, but note that if $V$ has a decomposition $W_1 \oplus W_2$, then the projection onto either $W_i$ will have the desired properties.  If we have such a $T$, then its eigenspaces will give a decomposition of $(V,\rho)$. This will be the subject of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Decomposing-Representations/&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4523,7 +4523,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;We’ll try to answer this last question and Q1 in the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot;&gt;next few posts&lt;/a&gt;, and see what it means for us when working with representations in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4624,7 +4624,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Sums-Products/&quot;&gt;next post&lt;/a&gt;, I’ll run through two simple ways of combining existing representations to get new ones: the direct sum and the tensor product. I’ll also define &lt;em&gt;irreducible&lt;/em&gt; representations, and state some results that will shed some light on the above questions.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4665,7 +4665,7 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;p&gt;This is the last post on subgroup lattices. My &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;next post&lt;/a&gt; will be the start of a new series on doing represntation theory in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4717,7 +4717,7 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;p&gt;After that, I hope to write a bit about doing some &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;simple representation theory&lt;/a&gt; in Sage.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -4784,7 +4784,7 @@ The correction has been pencilled in. The original number printed was 1.
 &lt;/ul&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
