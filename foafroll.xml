@@ -499,7 +499,7 @@
 				<foaf:Document rdf:about="http://drvinceknight.github.io/unpeudemath/">
 					<dc:title>Un peu de math</dc:title>
 					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://drvinceknight.github.io/unpeudemath/feed.xml" />
+						<rss:channel rdf:about="http://vknight.org/unpeudemath/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>

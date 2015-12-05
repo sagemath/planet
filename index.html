@@ -54,6 +54,195 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>December 05, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/">I think this is how to crawl the history of a git repository</a></h4>
+<div class="entry">
+<div class="content">
+<p>This blog post is a direct application of <a href="https://meta.wikimedia.org/wiki/Cunningham%27s_Law">Cunningham’s
+Law</a>: which is that “the
+best way to get the right answer on the Internet is not to ask a question, it’s
+to post the wrong answer”. With the other core developers of the
+<a href="https://github.com/Axelrod-Python/Axelrod">Axelrod</a> library we’re writing a
+paper and I wanted to see the evolution of a particular property of the library
+through the 2000+ commits (mainly to include a nice graph in the paper). This
+post will detail how I’ve cycled through all the commits and recorded the
+particular property I’m interested in.</p>
+
+<p>The <a href="https://github.com/Axelrod-Python/Axelrod">Axelrod</a> library is a
+collaborative project that allows anyone to submit strategies for the iterated
+prisoner’s dilemma via pull request (read more about this here:
+<a href="https://github.com/Axelrod-Python/Axelrod">axelrod.readthedocs.org/en/latest/</a>).
+When the library was first put on github it had 6 strategies, it currently has
+118. This figure can be obtained by simply running:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">)</span>
+<span class="mi">118</span></code></pre></div>
+
+<p>The goal of this post is to obtain the plot below:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/strategies_over_time.svg" alt="The number of strategies over
+time" /></p>
+
+<p>Here is how I’ve managed that:</p>
+
+<ol>
+  <li>Write a script that imports the library and throws the required data in to a
+file.</li>
+  <li>Write another script that goes through the commits and runs the previous
+script.</li>
+</ol>
+
+<p>So first of all here’s the script that gets the number of strategies:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">))</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">),</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span></code></pre></div>
+
+<p>The (very loose) error handling is because any given commit might or might not
+be able to run at all (for a number of reasons). The command line arguments are
+so that my second script can pass info about the commits (date and hash).</p>
+
+<p><strong>Here is the script that walks the github repository:</strong></p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>  <span class="c"># This imports the necessary class from the gitPython package</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">&quot;~/src/Axelrod/&quot;</span>
+<span class="n">repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="p">(</span><span class="n">path_to_repo</span><span class="p">)</span>
+<span class="n">all_commits</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">repo</span><span class="o">.</span><span class="n">iter_commits</span><span class="p">()]</span>  <span class="c"># Get all the commits</span>
+<span class="n">git</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">git</span>  <span class="c"># This creates an object that I can just use basic git commands with</span>
+
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span>  <span class="c"># Make sure I start at master</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c"># Need to give time for files write</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'data'</span><span class="p">)</span>  <span class="c"># Delete the data file if it already exists</span>
+<span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_commits</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">committed_date</span><span class="p">):</span>  <span class="c"># Go through all commits</span>
+    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/tests/.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/strategies/.DS_Store&quot;</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path_to_repo</span> <span class="o">+</span> <span class="n">rubbish</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c"># Checkout the commit</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c"># Need to let files write</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data'</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">'python2'</span><span class="p">,</span> <span class="s">'number_of_strategies.py'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">),</span> <span class="n">c</span><span class="o">.</span><span class="n">hexsha</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>  <span class="c"># Call the other script and output to the `data` file</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span>  <span class="c"># Go back to HEAD of master</span></code></pre></div>
+
+<p>Now, I am not actually sure if I need the 10 seconds of sleep in there but it
+seems to make things a little more reliable (this is where I’m hoping some
+knowledgeable kind soul will point out something isn’t quite right).</p>
+
+<p>Here is an animated gif of the library as the script checks through the commits
+(I used a sleep of 0.1 second here, and cut if off at the beginning):</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/scraping_repo.gif" alt="Walking through a repository" /></p>
+
+<p>(You can find a video version of the above at the <a href="http://recordit.co/a6UbBfPA5D">record.it site</a>.)</p>
+
+<p>The data set from above looks like this:</p>
+
+<div class="highlight"><pre><code class="language-text">...
+1424259748 6 5774fec6b3029b60c6b1bf4cb5d8bfb5323a1ad3
+1424259799 6 35db17958a93e66cc09a7e7b865127b8d20acd85
+1424261483 6 79c03291a1f0211925755962411d28c932150aaa
+1424264425 7 f4be6bcbe9e122eb036a141f48f5acbf03b9290c
+1424264540 7 6f28c9f8653e39b496c872351bce5a420e474c17
+1424264950 7 456d9d25dbc44e29dde6b39455d10314824479bb
+1424264958 7 0c01b14b5c3180d9e4016b09e532410cafd53992
+1424265660 7 3eeec928cb7261af797044ac3bde1b26e11a7897
+1424266926 7 cf506116005acd5a450894ca67eb0b670d5fd597
+1424268080 8 87aa895089cdb105471280a0c374623ee7f6c9ba
+1424268969 7 d0c36795fd6a69f9a1558b0b1e738d7633eb1b8e
+1424270889 8 d487a97c9327235c4c334b23684583a116cc407a
+1424272151 8 e9cd655661d3cef0a6df20cc509ae5ac2431f896
+...</code></pre></div>
+
+<p>That’s all great and then the <a href="http://vknight.org/unpeudemath/assets/images/strategies_over_time.svg">plot
+above</a> can be drawn
+straightforwardly. The thing is: I’m not convinced it’s worked as I had hoped.
+Indeed:
+<a href="https://github.com/Axelrod-Python/Axelrod/commit/c7dc2d22ff2e300098cd9b29cd03080e01d64879">c7dc2d22ff2e300098cd9b29cd03080e01d64879</a>
+took place on the 18th of June and added 3 strategies but it’s not in the data
+set (or indeed in the plot).</p>
+
+<p>Also, for some reason the data set gets these lines at some point (here be
+gremlins…) ?????:</p>
+
+<div class="highlight"><pre><code class="language-text">...
+&lt;class 'axelrod.strategies.alternator.Alternator'&gt;
+&lt;class 'axelrod.strategies.titfortat.AntiTitForTat'&gt;
+&lt;class 'axelrod.strategies.titfortat.Bully'&gt;
+&lt;class 'axelrod.strategies.cooperator.Cooperator'&gt;
+&lt;class 'axelrod.strategies.cycler.CyclerCCCCCD'&gt;
+&lt;class 'axelrod.strategies.cycler.CyclerCCCD'&gt;
+&lt;class 'axelrod.strategies.cycler.CyclerCCD'&gt;
+&lt;class 'axelrod.strategies.defector.Defector'&gt;
+&lt;class 'axelrod.strategies.gobymajority.GoByMajority'&gt;
+&lt;class 'axelrod.strategies.titfortat.SuspiciousTitForTat'&gt;
+&lt;class 'axelrod.strategies.titfortat.TitForTat'&gt;
+&lt;class 'axelrod.strategies.memoryone.WinStayLoseShift'&gt;
+...</code></pre></div>
+
+<p>What’s more confusing is that it’s not completely wrong because that does
+overall look ‘ok’ (correct number of strategies at the beginning, end and
+various commits are right there). <strong>So does anyone know why the above doesn’t
+work properly?</strong></p>
+
+<p>I’m really hoping this <a href="http://xkcd.com/386/">xkcd comic</a> kicks in and someone
+tells me what’s wrong with what I’ve done:</p>
+
+<p><img src="http://imgs.xkcd.com/comics/duty_calls.png" alt="Duty Calls http://xkcd.com/386/" /></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/">December 05, 2015 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>November 30, 2015</h2>
 
 <div class="channelgroup">
@@ -6108,7 +6297,7 @@ maintainer</a>.
 <a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
-<a href="http://drvinceknight.github.io/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://vknight.org/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -6129,7 +6318,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-December 05, 2015 07:30 PM<br>
+December 05, 2015 08:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
