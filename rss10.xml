@@ -86,7 +86,8 @@ to post the wrong answer”. With the other core developers of the
 paper and I wanted to see the evolution of a particular property of the library
 through the 2000+ commits (mainly to include a nice graph in the paper). This
 post will detail how I’ve cycled through all the commits and recorded the
-particular property I’m interested in.&lt;/p&gt;
+particular property I’m interested in. &lt;strong&gt;EDIT: thanks to Mario for the comments:
+see the edits in bold to see the what I didn’t quite get right.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://github.com/Axelrod-Python/Axelrod&quot;&gt;Axelrod&lt;/a&gt; library is a
 collaborative project that allows anyone to submit strategies for the iterated
@@ -103,6 +104,15 @@ When the library was first put on github it had 6 strategies, it currently has
 
 &lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/strategies_over_time.svg&quot; alt=&quot;The number of strategies over
 time&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;EDIT: here is the correct plot:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/correct_strategies_over_time.svg&quot; alt=&quot;The correct number of strategies over
+time&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;Here is how I’ve managed that:&lt;/p&gt;
 
@@ -231,7 +241,115 @@ work properly?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I’m really hoping this &lt;a href=&quot;http://xkcd.com/386/&quot;&gt;xkcd comic&lt;/a&gt; kicks in and someone
 tells me what’s wrong with what I’ve done:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://imgs.xkcd.com/comics/duty_calls.png&quot; alt=&quot;Duty Calls http://xkcd.com/386/&quot; /&gt;&lt;/p&gt;</content:encoded>
+&lt;p&gt;&lt;img src=&quot;http://imgs.xkcd.com/comics/duty_calls.png&quot; alt=&quot;Duty Calls http://xkcd.com/386/&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;EDIT: Big thanks to Mario Wenzel below in the comments for figuring out
+everythig that wasn’t quite right.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s the script to count the strategies (writing to file instead of piping
+and also with correct error catching to deal with changes within the
+library):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;axelrod&lt;/span&gt;
+
+   &lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;AttributeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ordinary_strategies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ordinary_strategies&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;AttributeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_strategies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_strategies&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;AttributeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cheating_strategies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axelrod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cheating_strategies&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;AttributeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+   &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strategies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+   &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;csvwrtr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;csvwrtr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writerow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is the modified script to roll through the commits (basically the same
+as before but it calls the other script with the &lt;code&gt;-B&lt;/code&gt; flag (to avoid
+importing compiled files) and also without the need to sleep:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Repo&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;axelrod&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;subprocess&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;path_to_repo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../../../Axelrod&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path_to_repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;all_commits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter_commits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;number_of_strategies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dates&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'master'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;OSError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_commits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;committed_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rubbish&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.DS_Store&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;s&quot;&gt;&amp;quot;axelrod/.DS_Store&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;s&quot;&gt;&amp;quot;axelrod/tests/.DS_Store&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;s&quot;&gt;&amp;quot;axelrod/strategies/.DS_Store&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# Having to delete some files that were not in gitignore at the time of the commit&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path_to_repo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rubbish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;OSError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'python2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'-B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'number_of_strategies.py'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;committed_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hexsha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dates&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;committed_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;ne&quot;&gt;ImportError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'master'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It looks like you should delete all &lt;code&gt;pyc&lt;/code&gt; files from the repository in
+question and run the second script with the &lt;code&gt;-B&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;Thanks again Mario!&lt;/p&gt;</content:encoded>
 	<dc:date>2015-12-05T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released">

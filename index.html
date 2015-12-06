@@ -79,7 +79,8 @@ to post the wrong answer”. With the other core developers of the
 paper and I wanted to see the evolution of a particular property of the library
 through the 2000+ commits (mainly to include a nice graph in the paper). This
 post will detail how I’ve cycled through all the commits and recorded the
-particular property I’m interested in.</p>
+particular property I’m interested in. <strong>EDIT: thanks to Mario for the comments:
+see the edits in bold to see the what I didn’t quite get right.</strong></p>
 
 <p>The <a href="https://github.com/Axelrod-Python/Axelrod">Axelrod</a> library is a
 collaborative project that allows anyone to submit strategies for the iterated
@@ -96,6 +97,15 @@ When the library was first put on github it had 6 strategies, it currently has
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/strategies_over_time.svg" alt="The number of strategies over
 time" /></p>
+
+<hr />
+
+<p><strong>EDIT: here is the correct plot:</strong></p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/correct_strategies_over_time.svg" alt="The correct number of strategies over
+time" /></p>
+
+<hr />
 
 <p>Here is how I’ve managed that:</p>
 
@@ -224,7 +234,115 @@ work properly?</strong></p>
 <p>I’m really hoping this <a href="http://xkcd.com/386/">xkcd comic</a> kicks in and someone
 tells me what’s wrong with what I’ve done:</p>
 
-<p><img src="http://imgs.xkcd.com/comics/duty_calls.png" alt="Duty Calls http://xkcd.com/386/" /></p></div>
+<p><img src="http://imgs.xkcd.com/comics/duty_calls.png" alt="Duty Calls http://xkcd.com/386/" /></p>
+
+<hr />
+
+<p><strong>EDIT: Big thanks to Mario Wenzel below in the comments for figuring out
+everythig that wasn’t quite right.</strong></p>
+
+<p>Here’s the script to count the strategies (writing to file instead of piping
+and also with correct error catching to deal with changes within the
+library):</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+   <span class="kn">import</span> <span class="nn">axelrod</span>
+
+   <span class="n">strategies</span> <span class="o">=</span> <span class="p">[]</span>
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+           <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span>
+   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+       <span class="k">pass</span>
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">ordinary_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+           <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">ordinary_strategies</span>
+   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+       <span class="k">pass</span>
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">basic_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+           <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">basic_strategies</span>
+   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+       <span class="k">pass</span>
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">cheating_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+           <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">cheating_strategies</span>
+   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+       <span class="k">pass</span>
+
+   <span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">strategies</span><span class="p">))</span>
+
+   <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">)</span>
+   <span class="n">csvwrtr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+   <span class="n">csvwrtr</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">count</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">except</span><span class="p">:</span>
+   <span class="k">pass</span></code></pre></div>
+
+<p>Here is the modified script to roll through the commits (basically the same
+as before but it calls the other script with the <code>-B</code> flag (to avoid
+importing compiled files) and also without the need to sleep:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>
+<span class="kn">import</span> <span class="nn">axelrod</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+
+<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">&quot;../../../Axelrod&quot;</span>
+<span class="n">repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="p">(</span><span class="n">path_to_repo</span><span class="p">)</span>
+
+<span class="n">all_commits</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">repo</span><span class="o">.</span><span class="n">iter_commits</span><span class="p">()]</span>
+
+<span class="n">git</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">git</span>
+
+
+<span class="n">number_of_strategies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'data'</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_commits</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">committed_date</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/tests/.DS_Store&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;axelrod/strategies/.DS_Store&quot;</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path_to_repo</span> <span class="o">+</span> <span class="n">rubbish</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">'python2'</span><span class="p">,</span> <span class="s">'-B'</span><span class="p">,</span> <span class="s">'number_of_strategies.py'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">),</span> <span class="n">c</span><span class="o">.</span><span class="n">hexsha</span><span class="p">])</span>
+        <span class="n">dates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span></code></pre></div>
+
+<p>It looks like you should delete all <code>pyc</code> files from the repository in
+question and run the second script with the <code>-B</code> tag.</p>
+
+<p>Thanks again Mario!</p></div>
 
 
 
@@ -6318,7 +6436,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-December 06, 2015 01:30 PM<br>
+December 06, 2015 02:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
