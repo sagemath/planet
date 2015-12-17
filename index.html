@@ -54,6 +54,299 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>December 15, 2015</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/">The Dilemma of giving Christmas Gifts</a></h4>
+<div class="entry">
+<div class="content">
+<p>This post gives a game theoretic explanation as to why we exchange gifts. On
+twitter <a href="https://twitter.com/alexip">@alexip</a> tweeted <a href="https://twitter.com/alexip/status/673573450036981762">“‘Let’s agree not to give
+each other presents for Christmas’ is just another case of the prisoner’s
+dilemma #gametheory”</a>.
+This post builds on that and investigates the premise fully in an evolutionary
+context investigating different values of how good it feels to give and receive
+a gift :)</p>
+
+<p><a href="https://twitter.com/alexip/status/673573450036981762"><img src="http://vknight.org/unpeudemath/assets/images/tweet_about_xmas.png" alt="Photo of alex's
+tweet" /></a></p>
+
+<p>To illustrate this consider the situation where Alex and Camille are approaching
+Christmas:</p>
+
+<blockquote>
+  <p>Alex: How about we don’t buy Christmas present for each other this year?</p>
+</blockquote>
+
+<blockquote>
+  <p>Camille: Sounds great.</p>
+</blockquote>
+
+<p><strong>Let us describe how this situation corresponds to a prisoner’s dilemma.</strong></p>
+
+<ul>
+  <li>If Alex and Camille <strong>cooperate</strong> and indeed keep their promise of not getting
+gifts than let us assume they both get a utility of \(R\) (<em>reward</em>).</li>
+  <li>If Alex cooperates but Camille decides to <strong>defect</strong> and nonetheless give a
+gift then Alex will feel a bit bad and Camille will feel good, so Alex gets a
+utility of \(S\) (<em>sucker</em>) and Camille a utility of \(T\) (<em>temptation</em>).</li>
+  <li>Vice versa if Camille cooperates but Alex decides to give a gift.</li>
+  <li>If <strong>both</strong> Alex and Camille go against their promise then they both get a
+utility of \(P\) (<em>punishment</em>).</li>
+</ul>
+
+<p>This looks something like:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/prisonersdilemma.svg" alt="PD" /></p>
+
+<p>If we assume that we feel better when we give gifts and will be keen to ‘cheat’
+a promise of not giving then that corresponds to the following inequality of
+utilities:</p>
+
+
+
+<p>In this case we see that if Camille chooses to cooperate then Alex’s <strong>best
+response</strong> is to play defect (as \(T&gt;R\)):</p>
+
+<blockquote>
+  <p>If Camille is indeed going to not give a gift, then Alex should give a gift.</p>
+</blockquote>
+
+<p><strong>Also</strong> if Camille chooses to defect then Alex’s <strong>best response</strong> is to defect
+once again (as \(P&gt;S\)):</p>
+
+<blockquote>
+  <p>If Camille is going to ‘break the promise’ then Alex should give a gift.</p>
+</blockquote>
+
+<p><strong>So no matter what happens: Alex should defect.</strong></p>
+
+<p>In game theory this is what is called a dominating strategy, and indeed this
+situation is referred to as a <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma">Prisoner’s
+Dilemma</a> and is what Alex
+was referring to in his original tweet.</p>
+
+<h2 id="how-does-reputation-effect-gift-giving">How does reputation effect gift giving?</h2>
+
+<p><strong>So far all we are really modelling is a SINGLE exchange of gifts.</strong>
+If we were to exchange gifts every year we would perhaps learn to trust each
+other, so that when Camille says they are not going to give a gift Alex has
+reason to believe that they will indeed not do so.</p>
+
+<p>This is called an <strong>iterated Prisoner’s dilemma</strong> and has been the subject of a
+great amount of academic work.</p>
+
+<p>Let us consider two types of behaviour that Camille and Alex could choose to
+exhibit, they could be:</p>
+
+<ul>
+  <li>Alternator: give gifts one year and not give gifts the next.</li>
+  <li>TitForTat: do whatever the other does the previous year.</li>
+</ul>
+
+<p>Let us assume that Alex and Camille will be faced with this situation for 10
+years. I’m going to use the Python <a href="http://axelrod.readthedocs.org/en/latest/">Axelrod
+library</a> to illustrate things:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">alex</span><span class="p">,</span> <span class="n">camille</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Alternator</span><span class="p">(),</span> <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">match</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Match</span><span class="p">([</span><span class="n">alex</span><span class="p">,</span> <span class="n">camille</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">sparklines</span><span class="p">(</span><span class="n">c_symbol</span><span class="o">=</span><span class="s">'😀'</span><span class="p">,</span> <span class="n">d_symbol</span><span class="o">=</span><span class="s">'🎁'</span><span class="p">))</span>
+<span class="err">😀🎁😀🎁😀🎁😀🎁😀🎁</span>
+<span class="err">😀😀🎁😀🎁😀🎁😀🎁😀</span></code></pre></div>
+
+<p>We see that Alex and Camille never actually exchange gifts the same year (the 😀
+means that the particular player cooperates, the 🎁 that they don’t and give a
+gift).</p>
+
+<p>Most of the ongoing Iterated Prisoner’s Dilemma research is directly due to a
+computer tournament run by <a href="http://www-personal.umich.edu/~axe/">Robert Axelrod</a>
+in the 1980s. In that work Axelrod invited a variety of computer strategies to
+be submitted and they then played against each other. You can read more about
+that here:
+<a href="http://axelrod.readthedocs.org/en/latest/reference/description.html">axelrod.readthedocs.org/en/latest/reference/description.html</a>
+but the important thing is that there are a bunch of ‘behaviours’ that have been
+well studied and that we will look at here:</p>
+
+<ol>
+  <li>Cooperator: never give gifts</li>
+  <li>Defector: always give gifts</li>
+  <li>Alternator: give gifts one year and not give gifts the next.</li>
+  <li>TitForTat: do whatever the other does the previous year.</li>
+  <li>TwoTitForTat: will start by not giving a gift but if the other player gives a
+  gift will give a gift the next two years.</li>
+  <li>Grudger: start by not giving gifts but if at any time someone else goes
+  against the promise: give a gift no matter what.</li>
+</ol>
+
+<p>What we will now do is see how much utility (how people feel about their gift
+giving behaviour) if we have a situation where 6 people exchange gifts for 50
+years and each person acts according to one of the above behaviours.</p>
+
+<p>For our utility we will use the following values of \(R, P, S, T\):</p>
+
+
+
+<p>Here is how we can do this in python:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span>
+<span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">(),</span>
+<span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">Alternator</span><span class="p">(),</span>
+<span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">(),</span>
+<span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">TwoTitsForTat</span><span class="p">(),</span>
+<span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">Grudger</span><span class="p">()]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">christmas</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">christmas</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">results</span><span class="o">.</span><span class="n">scores</span>
+<span class="p">[[</span><span class="mi">525</span><span class="p">],</span> <span class="p">[</span><span class="mi">562</span><span class="p">],</span> <span class="p">[</span><span class="mi">417</span><span class="p">],</span> <span class="p">[</span><span class="mi">622</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">]]</span></code></pre></div>
+
+<p>We see that the people that do the best are the last two: TwoTitForTat and
+Grudger. These are people who are quick enough to react to people who won’t
+keep their promise but that do give hope to people who will!</p>
+
+<h2 id="at-a-population-level-evolution-of-gift-giving"> At a population level: evolution of gift giving</h2>
+
+<p>We can consider this in an evolutionary context where we see how the behaviour
+is allowed to evolve amongst a whole population of people. This particular type
+of game theoretic analysis is concerned not in micro interactions but long term
+macro stability of the system.</p>
+
+<p>Here is how we can see this using Python:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">evo</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Ecosystem</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">evo</span><span class="o">.</span><span class="n">reproduce</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plot</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plot</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">evo</span><span class="p">)</span></code></pre></div>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/basic_christmas_evo.svg" alt="Basic Christmas
+Evolution" /></p>
+
+<p>What we see is that over time, the population evolves to only Cooperator,
+TitForTat, Grudger and TwoTitsForTat, <strong>but</strong> of course in a population with
+only those strategies everyone is keeping their promise, cooperating and <strong>not
+giving gifts</strong>.</p>
+
+<p>Let us see how this changes for different values of \(R, P, S, T\).</p>
+
+<p>To check if not giving presents is evolutionary stable we just need to see what
+the last population numbers are for the Alternator and Defector. Here is a Python function to do this:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="o">...</span>                                 <span class="n">digits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
+<span class="o">...</span>    <span class="s">&quot;&quot;&quot;Returns a boolean and the last population vector&quot;&quot;&quot;</span>
+<span class="o">...</span>    <span class="n">game</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Game</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+<span class="o">...</span>    <span class="n">christmas</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">game</span><span class="o">=</span><span class="n">game</span><span class="p">)</span>
+<span class="o">...</span>    <span class="n">results</span> <span class="o">=</span> <span class="n">christmas</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="o">...</span>    <span class="n">evo</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Ecosystem</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="o">...</span>    <span class="n">evo</span><span class="o">.</span><span class="n">reproduce</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span>
+<span class="o">...</span>    <span class="n">last_pop</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">digits</span><span class="p">)</span> <span class="k">for</span> <span class="n">pop</span> <span class="ow">in</span> <span class="n">evo</span><span class="o">.</span><span class="n">population_sizes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">...</span>    <span class="k">return</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">last_pop</span></code></pre></div>
+
+<p>We see that for the default values of \(R, P, S, T\) we have:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.16576</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.26105</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">])</span></code></pre></div>
+
+<p>As already seen we have that for these values we end up with everyone keeping to the promise.
+Let us increase the value of \(T\) by a factor of 100:</p>
+
+<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span></code></pre></div>
+
+<p>We here see, that if the utility of giving a gift when the receiver is not giving
+one in return is very large, the overall population will always give a gift:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/t_factor_of_100_christmas_evo.svg" alt="Increasing t by factor of 100" /></p>
+
+<h2 id="seeing-the-effect-of-how-good-giving-gifts-makes-us-feel"> Seeing the effect of how good giving gifts makes us feel</h2>
+
+<p>The final piece of analysis I will carry out is a parameter sweep of the above:</p>
+
+<ul>
+  <li>\(5\leq T \leq 100\)</li>
+  <li>\(3\leq R &lt; T\)</li>
+  <li>\(1\leq P &lt; R\)</li>
+  <li>\(0\leq S &lt; P\)</li>
+</ul>
+
+<p>All of this data sweep is in <a href="http://vknight.org/unpeudemath/assets/code/christmas.csv">this csv
+file</a>. Here is the distribution of
+parameters for which everyone gives a gift (reneging on the promise):</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/parameters_for_which_gifts_are_not_given.svg" alt="Parameters for kept
+promise" /></p>
+
+<p>Here is the distribution of parameters for which everyone keeps their promise
+and does not give gifts:</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/parameters_for_which_gifts_are_given.svg" alt="Parameters for kept
+promise" /></p>
+
+<p>We see that people keep their promise if the \(T\) utility (the utility of
+being tempted to break the promise) is very high compared to all other
+utilities.</p>
+
+<p>Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:</p>
+
+<ul>
+  <li>\(P\): 4.682273</li>
+  <li>\(R\): -4.464960</li>
+  <li>\(S\): -0.030519</li>
+  <li>\(T\): -0.142463</li>
+</ul>
+
+<p>The only parameter that has a positive effect on keeping the promise is \(R\)
+which is the reward for the promise being kept.</p>
+
+<h2 id="tldr">TLDR</h2>
+
+<p>Agreeing to not give gifts at Christmas can be an evolutionary stable strategy,
+but this is only in the specific case where the utility of ‘giving’ is less than
+the utility of ‘not giving’. <strong>Given that in practice this promise is almost always broken
+(that’s my personal experience anyway) this would suggest that people enjoy
+giving gifts a lot more than receiving them.</strong></p>
+
+<p><strong>Merry christmas 🎄🎁⛄️.</strong></p>
+
+<hr />
+
+<ul>
+  <li><a href="https://github.com/drvinceknight/unpeudemath/tree/gh-pages/assets/code/prisoners_dilemma_of_giving_gifts.ipynb">Jupyter notebook to produce graphics for
+this</a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/generate_christmas_data.py">Python script to carry out parameter
+sweep</a></li>
+  <li><a href="http://axelrod.readthedocs.org/en/latest/">The Axelrod library</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/">December 15, 2015 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>December 05, 2015</h2>
 
 <div class="channelgroup">
@@ -6120,159 +6413,6 @@ The correction has been pencilled in. The original number printed was 1.
 </div>
 
 </div>
-<div class="daygroup">
-<h2>December 27, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sheaves.github.io/" title="Sheaves">Liang Ze</a></h3>
-
-
-<div class="entrygroup" id="http://sheaves.github.io/Subgroup-Lattice-Edges/">
-<h4><a href="http://sheaves.github.io/Subgroup-Lattice-Edges/">Lattice of Subgroups III - Coloring Edges</a></h4>
-<div class="entry">
-<div class="content">
-<p>This post will cover the coloring of edges in the lattice of subgroups of a group. </p>
-
-<p><img src="http://sheaves.github.io/images/C3semiC8_2.svg" alt="Lattice of subgroups of $C3:C8$" /></p>
-
-<!--more-->
-
-<h2 id="generating-small-groups">Generating small groups</h2>
-<p>As we’ve done in <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/" target="_blank">previous posts</a>, let’s  choose a group and generate its lattice of subgroups. This can be done by referring to this list of <a href="http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32" target="_blank">constructions for every group of order less than 32 </a>. These instructions allow us to construct every group on Wikipedia’s <a href="http://en.wikipedia.org/wiki/List_of_small_groups" target="_blank">list of small groups</a>! </p>
-
-<p>For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we won’t color the vertices.</p>
-
-<p><em>(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)</em></p>
-
-<div class="linked">
-  
-</div>
-
-<h2 id="coloring-edges">Coloring edges</h2>
-<p>In the <a href="http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/" target="_blank">previous post</a>, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.</p>
-
-<p>However, suppose we want to see the subnormal series of the group. A <a href="http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series" target="_blank">subnormal series</a> is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking <em>pairs</em> of subgroups to see whether one is a normal subgroup of the other. This suggests that we color <em>edges</em> according to whether one of its endpoints is a normal subgroup of the other endpoint.</p>
-
-<p>The edges of the <a href="http://en.wikipedia.org/wiki/Hasse_diagram" target="_blank">Hasse diagram</a> of a poset are the pairs $(h,k)$ where $h$ is <a href="http://en.wikipedia.org/wiki/Covering_relation" target="_blank">covered by</a> $k$ in the poset. This means that $h &lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling <code>P.cover_relations()</code> on the poset $P$.</p>
-
-<p>To color edges of a graph, we create a dictionary <code>edge_colors</code>:</p>
-
-<div class="linked">
-  
-</div>
-
-<h3 id="up-next">Up next…</h3>
-<p>This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the <a href="http://sheaves.github.io/Subgroup-Explorer/">next post</a>, I’ll write code to label edges, but will probably skip explaining it, as doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.</p>
-
-<p>After that, I hope to write a bit about doing some <a href="http://sheaves.github.io/Representation-Theory-Intro/">simple representation theory</a> in Sage.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sheaves.github.io/Subgroup-Lattice-Edges/">December 27, 2014 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>December 25, 2014</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sheaves.github.io/" title="Sheaves">Liang Ze</a></h3>
-
-
-<div class="entrygroup" id="http://sheaves.github.io/Holiday-Harmonograph/">
-<h4><a href="http://sheaves.github.io/Holiday-Harmonograph/">Holiday Harmonograph</a></h4>
-<div class="entry">
-<div class="content">
-<p><em>(Guest post from the Annals of Harmonography)</em>
-<img src="http://sheaves.github.io/images/harmonograph_loop.gif" alt="harmonograph" /></p>
-
-<!--more-->
-
-<p>When it’s snowing outside (or maybe not),</p>
-
-<p>And your feet are cold (or maybe hot),</p>
-
-<p>When it’s dark as day (or bright as night),</p>
-
-<p>And your heart is heavy (and head is light),</p>
-
-<p>What should you do (what should you say)</p>
-
-<p>To make it all right (to make it okay)?</p>
-
-<p>.</p>
-
-<p>Just pick up a pen (a pencil will do),</p>
-
-<p>Set up a swing (or <a href="http://www.karlsims.com/harmonograph/">three</a>, or two),</p>
-
-<p>And while the world spins (or comes to a still),</p>
-
-<p>In your own little room (or on top of a hill),</p>
-
-<p>Let your pendulum sway (in its time, in its way),</p>
-
-<p>And watch as the pen draws your worries away!</p>
-
-<p>.</p>
-
-<p>.</p>
-
-<p><em>(Click inside the colored box to choose a color. Then click outside and watch it update.)</em></p>
-
-<div class="auto_out">
-  
-</div>
-
-<h3 id="related-articles">Related Articles:</h3>
-
-<ul>
-  <li>7 celebrities and their harmonographs</li>
-  <li>What your harmonograph says about you</li>
-  <li>10 tips for a happier harmonograph</li>
-  <li>Harmonograph secrets… revealed!</li>
-</ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sheaves.github.io/Holiday-Harmonograph/">December 25, 2014 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -6436,7 +6576,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-December 17, 2015 06:30 PM<br>
+December 17, 2015 07:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

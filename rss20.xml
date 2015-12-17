@@ -8,6 +8,270 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>Vince Knight: The Dilemma of giving Christmas Gifts</title>
+	<guid>http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/</guid>
+	<link>http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/</link>
+	<description>&lt;p&gt;This post gives a game theoretic explanation as to why we exchange gifts. On
+twitter &lt;a href=&quot;https://twitter.com/alexip&quot;&gt;@alexip&lt;/a&gt; tweeted &lt;a href=&quot;https://twitter.com/alexip/status/673573450036981762&quot;&gt;“‘Let’s agree not to give
+each other presents for Christmas’ is just another case of the prisoner’s
+dilemma #gametheory”&lt;/a&gt;.
+This post builds on that and investigates the premise fully in an evolutionary
+context investigating different values of how good it feels to give and receive
+a gift :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/alexip/status/673573450036981762&quot;&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/tweet_about_xmas.png&quot; alt=&quot;Photo of alex's
+tweet&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To illustrate this consider the situation where Alex and Camille are approaching
+Christmas:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alex: How about we don’t buy Christmas present for each other this year?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Camille: Sounds great.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Let us describe how this situation corresponds to a prisoner’s dilemma.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If Alex and Camille &lt;strong&gt;cooperate&lt;/strong&gt; and indeed keep their promise of not getting
+gifts than let us assume they both get a utility of \(R\) (&lt;em&gt;reward&lt;/em&gt;).&lt;/li&gt;
+  &lt;li&gt;If Alex cooperates but Camille decides to &lt;strong&gt;defect&lt;/strong&gt; and nonetheless give a
+gift then Alex will feel a bit bad and Camille will feel good, so Alex gets a
+utility of \(S\) (&lt;em&gt;sucker&lt;/em&gt;) and Camille a utility of \(T\) (&lt;em&gt;temptation&lt;/em&gt;).&lt;/li&gt;
+  &lt;li&gt;Vice versa if Camille cooperates but Alex decides to give a gift.&lt;/li&gt;
+  &lt;li&gt;If &lt;strong&gt;both&lt;/strong&gt; Alex and Camille go against their promise then they both get a
+utility of \(P\) (&lt;em&gt;punishment&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This looks something like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/prisonersdilemma.svg&quot; alt=&quot;PD&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we assume that we feel better when we give gifts and will be keen to ‘cheat’
+a promise of not giving then that corresponds to the following inequality of
+utilities:&lt;/p&gt;
+
+
+
+&lt;p&gt;In this case we see that if Camille chooses to cooperate then Alex’s &lt;strong&gt;best
+response&lt;/strong&gt; is to play defect (as \(T&amp;gt;R\)):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If Camille is indeed going to not give a gift, then Alex should give a gift.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Also&lt;/strong&gt; if Camille chooses to defect then Alex’s &lt;strong&gt;best response&lt;/strong&gt; is to defect
+once again (as \(P&amp;gt;S\)):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If Camille is going to ‘break the promise’ then Alex should give a gift.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;So no matter what happens: Alex should defect.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In game theory this is what is called a dominating strategy, and indeed this
+situation is referred to as a &lt;a href=&quot;https://en.wikipedia.org/wiki/Prisoner%27s_dilemma&quot;&gt;Prisoner’s
+Dilemma&lt;/a&gt; and is what Alex
+was referring to in his original tweet.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-reputation-effect-gift-giving&quot;&gt;How does reputation effect gift giving?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;So far all we are really modelling is a SINGLE exchange of gifts.&lt;/strong&gt;
+If we were to exchange gifts every year we would perhaps learn to trust each
+other, so that when Camille says they are not going to give a gift Alex has
+reason to believe that they will indeed not do so.&lt;/p&gt;
+
+&lt;p&gt;This is called an &lt;strong&gt;iterated Prisoner’s dilemma&lt;/strong&gt; and has been the subject of a
+great amount of academic work.&lt;/p&gt;
+
+&lt;p&gt;Let us consider two types of behaviour that Camille and Alex could choose to
+exhibit, they could be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alternator: give gifts one year and not give gifts the next.&lt;/li&gt;
+  &lt;li&gt;TitForTat: do whatever the other does the previous year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let us assume that Alex and Camille will be faced with this situation for 10
+years. I’m going to use the Python &lt;a href=&quot;http://axelrod.readthedocs.org/en/latest/&quot;&gt;Axelrod
+library&lt;/a&gt; to illustrate things:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;axelrod&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;axl&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;camille&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Alternator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TitForTat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;camille&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sparklines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c_symbol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'😀'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d_symbol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'🎁'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;😀🎁😀🎁😀🎁😀🎁😀🎁&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;😀😀🎁😀🎁😀🎁😀🎁😀&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that Alex and Camille never actually exchange gifts the same year (the 😀
+means that the particular player cooperates, the 🎁 that they don’t and give a
+gift).&lt;/p&gt;
+
+&lt;p&gt;Most of the ongoing Iterated Prisoner’s Dilemma research is directly due to a
+computer tournament run by &lt;a href=&quot;http://www-personal.umich.edu/~axe/&quot;&gt;Robert Axelrod&lt;/a&gt;
+in the 1980s. In that work Axelrod invited a variety of computer strategies to
+be submitted and they then played against each other. You can read more about
+that here:
+&lt;a href=&quot;http://axelrod.readthedocs.org/en/latest/reference/description.html&quot;&gt;axelrod.readthedocs.org/en/latest/reference/description.html&lt;/a&gt;
+but the important thing is that there are a bunch of ‘behaviours’ that have been
+well studied and that we will look at here:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Cooperator: never give gifts&lt;/li&gt;
+  &lt;li&gt;Defector: always give gifts&lt;/li&gt;
+  &lt;li&gt;Alternator: give gifts one year and not give gifts the next.&lt;/li&gt;
+  &lt;li&gt;TitForTat: do whatever the other does the previous year.&lt;/li&gt;
+  &lt;li&gt;TwoTitForTat: will start by not giving a gift but if the other player gives a
+  gift will give a gift the next two years.&lt;/li&gt;
+  &lt;li&gt;Grudger: start by not giving gifts but if at any time someone else goes
+  against the promise: give a gift no matter what.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What we will now do is see how much utility (how people feel about their gift
+giving behaviour) if we have a situation where 6 people exchange gifts for 50
+years and each person acts according to one of the above behaviours.&lt;/p&gt;
+
+&lt;p&gt;For our utility we will use the following values of \(R, P, S, T\):&lt;/p&gt;
+
+
+
+&lt;p&gt;Here is how we can do this in python:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Cooperator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;           &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Defector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;           &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Alternator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;           &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TitForTat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;           &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TwoTitsForTat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;           &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Grudger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;christmas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Tournament&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;turns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repetitions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;christmas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scores&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;525&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;562&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;417&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;622&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;646&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;646&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that the people that do the best are the last two: TwoTitForTat and
+Grudger. These are people who are quick enough to react to people who won’t
+keep their promise but that do give hope to people who will!&lt;/p&gt;
+
+&lt;h2 id=&quot;at-a-population-level-evolution-of-gift-giving&quot;&gt; At a population level: evolution of gift giving&lt;/h2&gt;
+
+&lt;p&gt;We can consider this in an evolutionary context where we see how the behaviour
+is allowed to evolve amongst a whole population of people. This particular type
+of game theoretic analysis is concerned not in micro interactions but long term
+macro stability of the system.&lt;/p&gt;
+
+&lt;p&gt;Here is how we can see this using Python:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ecosystem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reproduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stackplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/basic_christmas_evo.svg&quot; alt=&quot;Basic Christmas
+Evolution&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What we see is that over time, the population evolves to only Cooperator,
+TitForTat, Grudger and TwoTitsForTat, &lt;strong&gt;but&lt;/strong&gt; of course in a population with
+only those strategies everyone is keeping their promise, cooperating and &lt;strong&gt;not
+giving gifts&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let us see how this changes for different values of \(R, P, S, T\).&lt;/p&gt;
+
+&lt;p&gt;To check if not giving presents is evolutionary stable we just need to see what
+the last population numbers are for the Alternator and Defector. Here is a Python function to do this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;check_if_end_pop_cooperates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;                                 &lt;span class=&quot;n&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;turns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&amp;quot;Returns a boolean and the last population vector&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;game&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;christmas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Tournament&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;turns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repetitions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;christmas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ecosystem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reproduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;turns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;last_pop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;evo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;population_sizes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_pop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that for the default values of \(R, P, S, T\) we have:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check_if_end_pop_cooperates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.16576&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.26105&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.28659&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.28659&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As already seen we have that for these values we end up with everyone keeping to the promise.
+Let us increase the value of \(T\) by a factor of 100:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check_if_end_pop_cooperates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We here see, that if the utility of giving a gift when the receiver is not giving
+one in return is very large, the overall population will always give a gift:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/t_factor_of_100_christmas_evo.svg&quot; alt=&quot;Increasing t by factor of 100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;seeing-the-effect-of-how-good-giving-gifts-makes-us-feel&quot;&gt; Seeing the effect of how good giving gifts makes us feel&lt;/h2&gt;
+
+&lt;p&gt;The final piece of analysis I will carry out is a parameter sweep of the above:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(5\leq T \leq 100\)&lt;/li&gt;
+  &lt;li&gt;\(3\leq R &amp;lt; T\)&lt;/li&gt;
+  &lt;li&gt;\(1\leq P &amp;lt; R\)&lt;/li&gt;
+  &lt;li&gt;\(0\leq S &amp;lt; P\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of this data sweep is in &lt;a href=&quot;http://vknight.org/unpeudemath/assets/code/christmas.csv&quot;&gt;this csv
+file&lt;/a&gt;. Here is the distribution of
+parameters for which everyone gives a gift (reneging on the promise):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/parameters_for_which_gifts_are_not_given.svg&quot; alt=&quot;Parameters for kept
+promise&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the distribution of parameters for which everyone keeps their promise
+and does not give gifts:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/parameters_for_which_gifts_are_given.svg&quot; alt=&quot;Parameters for kept
+promise&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We see that people keep their promise if the \(T\) utility (the utility of
+being tempted to break the promise) is very high compared to all other
+utilities.&lt;/p&gt;
+
+&lt;p&gt;Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(P\): 4.682273&lt;/li&gt;
+  &lt;li&gt;\(R\): -4.464960&lt;/li&gt;
+  &lt;li&gt;\(S\): -0.030519&lt;/li&gt;
+  &lt;li&gt;\(T\): -0.142463&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The only parameter that has a positive effect on keeping the promise is \(R\)
+which is the reward for the promise being kept.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
+
+&lt;p&gt;Agreeing to not give gifts at Christmas can be an evolutionary stable strategy,
+but this is only in the specific case where the utility of ‘giving’ is less than
+the utility of ‘not giving’. &lt;strong&gt;Given that in practice this promise is almost always broken
+(that’s my personal experience anyway) this would suggest that people enjoy
+giving gifts a lot more than receiving them.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Merry christmas 🎄🎁⛄️.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drvinceknight/unpeudemath/tree/gh-pages/assets/code/prisoners_dilemma_of_giving_gifts.ipynb&quot;&gt;Jupyter notebook to produce graphics for
+this&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vknight.org/unpeudemath/assets/code/generate_christmas_data.py&quot;&gt;Python script to carry out parameter
+sweep&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://axelrod.readthedocs.org/en/latest/&quot;&gt;The Axelrod library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Tue, 15 Dec 2015 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Vince Knight: I think this is how to crawl the history of a git repository</title>
 	<guid>http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/</guid>
 	<link>http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/</link>
@@ -4515,101 +4779,6 @@ The correction has been pencilled in. The original number printed was 1.
 
 &lt;p&gt;This is the last post on subgroup lattices. My &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;next post&lt;/a&gt; will be the start of a new series on doing represntation theory in Sage.&lt;/p&gt;</description>
 	<pubDate>Sat, 17 Jan 2015 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Liang Ze: Lattice of Subgroups III - Coloring Edges</title>
-	<guid>http://sheaves.github.io/Subgroup-Lattice-Edges/</guid>
-	<link>http://sheaves.github.io/Subgroup-Lattice-Edges/</link>
-	<description>&lt;p&gt;This post will cover the coloring of edges in the lattice of subgroups of a group. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/images/C3semiC8_2.svg&quot; alt=&quot;Lattice of subgroups of $C3:C8$&quot; /&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;generating-small-groups&quot;&gt;Generating small groups&lt;/h2&gt;
-&lt;p&gt;As we’ve done in &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot; target=&quot;_blank&quot;&gt;previous posts&lt;/a&gt;, let’s  choose a group and generate its lattice of subgroups. This can be done by referring to this list of &lt;a href=&quot;http://www.sagemath.org/doc/constructions/groups.html#construction-instructions-for-every-group-of-order-less-than-32&quot; target=&quot;_blank&quot;&gt;constructions for every group of order less than 32 &lt;/a&gt;. These instructions allow us to construct every group on Wikipedia’s &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_small_groups&quot; target=&quot;_blank&quot;&gt;list of small groups&lt;/a&gt;! &lt;/p&gt;
-
-&lt;p&gt;For this post, we’ll use $G = C_3 \rtimes C_8$ (or $\mathbb{Z}_3 \rtimes \mathbb{Z}_8$). First, we’ll generate $G$ and display it’s poset of subgroups. For simplicity, we won’t color the vertices.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&quot;coloring-edges&quot;&gt;Coloring edges&lt;/h2&gt;
-&lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Color-Vertices/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we colored vertices according to whether the corresponding subgroup was normal (or abelian, or a Sylow subgroup, etc.) These are properties that depend only on each individual subgroup.&lt;/p&gt;
-
-&lt;p&gt;However, suppose we want to see the subnormal series of the group. A &lt;a href=&quot;http://en.wikipedia.org/wiki/Subgroup_series#Normal_series.2C_subnormal_series&quot; target=&quot;_blank&quot;&gt;subnormal series&lt;/a&gt; is a series of subgroups where each subgroup is a normal subgroup of the next group in the series. Checking whether a particular series of subgroups is a subnormal series requires checking &lt;em&gt;pairs&lt;/em&gt; of subgroups to see whether one is a normal subgroup of the other. This suggests that we color &lt;em&gt;edges&lt;/em&gt; according to whether one of its endpoints is a normal subgroup of the other endpoint.&lt;/p&gt;
-
-&lt;p&gt;The edges of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Hasse_diagram&quot; target=&quot;_blank&quot;&gt;Hasse diagram&lt;/a&gt; of a poset are the pairs $(h,k)$ where $h$ is &lt;a href=&quot;http://en.wikipedia.org/wiki/Covering_relation&quot; target=&quot;_blank&quot;&gt;covered by&lt;/a&gt; $k$ in the poset. This means that $h &amp;lt; k$, with nothing else in between. We thus obtain all the edges of a Hasse diagram by calling &lt;code&gt;P.cover_relations()&lt;/code&gt; on the poset $P$.&lt;/p&gt;
-
-&lt;p&gt;To color edges of a graph, we create a dictionary &lt;code&gt;edge_colors&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h3 id=&quot;up-next&quot;&gt;Up next…&lt;/h3&gt;
-&lt;p&gt;This is the last post describing relatively simple things one can do to visualize subgroup lattices (or more generally, posets) in Sage. In the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Explorer/&quot;&gt;next post&lt;/a&gt;, I’ll write code to label edges, but will probably skip explaining it, as doing this requires extracting the Hasse diagram of a poset as a graph and modifying the edge labels. Also, subgroup lattices tend to get unwieldy for large groups. In the next post, we’ll restrict our attention to conjugacy classes of subgroups, rather than all subgroups.&lt;/p&gt;
-
-&lt;p&gt;After that, I hope to write a bit about doing some &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;simple representation theory&lt;/a&gt; in Sage.&lt;/p&gt;</description>
-	<pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Liang Ze: Holiday Harmonograph</title>
-	<guid>http://sheaves.github.io/Holiday-Harmonograph/</guid>
-	<link>http://sheaves.github.io/Holiday-Harmonograph/</link>
-	<description>&lt;p&gt;&lt;em&gt;(Guest post from the Annals of Harmonography)&lt;/em&gt;
-&lt;img src=&quot;http://sheaves.github.io/images/harmonograph_loop.gif&quot; alt=&quot;harmonograph&quot; /&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;When it’s snowing outside (or maybe not),&lt;/p&gt;
-
-&lt;p&gt;And your feet are cold (or maybe hot),&lt;/p&gt;
-
-&lt;p&gt;When it’s dark as day (or bright as night),&lt;/p&gt;
-
-&lt;p&gt;And your heart is heavy (and head is light),&lt;/p&gt;
-
-&lt;p&gt;What should you do (what should you say)&lt;/p&gt;
-
-&lt;p&gt;To make it all right (to make it okay)?&lt;/p&gt;
-
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;p&gt;Just pick up a pen (a pencil will do),&lt;/p&gt;
-
-&lt;p&gt;Set up a swing (or &lt;a href=&quot;http://www.karlsims.com/harmonograph/&quot;&gt;three&lt;/a&gt;, or two),&lt;/p&gt;
-
-&lt;p&gt;And while the world spins (or comes to a still),&lt;/p&gt;
-
-&lt;p&gt;In your own little room (or on top of a hill),&lt;/p&gt;
-
-&lt;p&gt;Let your pendulum sway (in its time, in its way),&lt;/p&gt;
-
-&lt;p&gt;And watch as the pen draws your worries away!&lt;/p&gt;
-
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(Click inside the colored box to choose a color. Then click outside and watch it update.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;auto_out&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h3 id=&quot;related-articles&quot;&gt;Related Articles:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;7 celebrities and their harmonographs&lt;/li&gt;
-  &lt;li&gt;What your harmonograph says about you&lt;/li&gt;
-  &lt;li&gt;10 tips for a happier harmonograph&lt;/li&gt;
-  &lt;li&gt;Harmonograph secrets… revealed!&lt;/li&gt;
-&lt;/ul&gt;</description>
-	<pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
 </item>
 
 </channel>
