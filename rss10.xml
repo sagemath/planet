@@ -307,14 +307,15 @@ utilities.&lt;/p&gt;
 &lt;p&gt;Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;\(P\): 4.682273&lt;/li&gt;
-  &lt;li&gt;\(R\): -4.464960&lt;/li&gt;
-  &lt;li&gt;\(S\): -0.030519&lt;/li&gt;
-  &lt;li&gt;\(T\): -0.142463&lt;/li&gt;
+  &lt;li&gt;\(P\): 3.007720&lt;/li&gt;
+  &lt;li&gt;\(R\): -2.830106&lt;/li&gt;
+  &lt;li&gt;\(S\): 0.010675&lt;/li&gt;
+  &lt;li&gt;\(T\): -0.107508&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The only parameter that has a positive effect on keeping the promise is \(R\)
-which is the reward for the promise being kept.&lt;/p&gt;
+&lt;p&gt;The parameters that have a positive effect on keeping the promise is \(R\) and
+\(S\) which is the reward for the promise being kept and for not giving a gift
+but receiving one.&lt;/p&gt;
 
 &lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
 

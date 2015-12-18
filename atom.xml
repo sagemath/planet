@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2015-12-18T07:30:13+00:00</updated>
+	<updated>2015-12-18T08:30:20+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -243,14 +243,15 @@ utilities.&lt;/p&gt;
 &lt;p&gt;Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;\(P\): 4.682273&lt;/li&gt;
-  &lt;li&gt;\(R\): -4.464960&lt;/li&gt;
-  &lt;li&gt;\(S\): -0.030519&lt;/li&gt;
-  &lt;li&gt;\(T\): -0.142463&lt;/li&gt;
+  &lt;li&gt;\(P\): 3.007720&lt;/li&gt;
+  &lt;li&gt;\(R\): -2.830106&lt;/li&gt;
+  &lt;li&gt;\(S\): 0.010675&lt;/li&gt;
+  &lt;li&gt;\(T\): -0.107508&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The only parameter that has a positive effect on keeping the promise is \(R\)
-which is the reward for the promise being kept.&lt;/p&gt;
+&lt;p&gt;The parameters that have a positive effect on keeping the promise is \(R\) and
+\(S\) which is the reward for the promise being kept and for not giving a gift
+but receiving one.&lt;/p&gt;
 
 &lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
 
@@ -280,7 +281,7 @@ sweep&lt;/a&gt;&lt;/li&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -570,7 +571,7 @@ question and run the second script with the &lt;code&gt;-B&lt;/code&gt; tag.&lt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1120,7 +1121,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1140,7 +1141,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1312,7 +1313,7 @@ code&lt;/a&gt;.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1373,7 +1374,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2015-12-18T07:30:11+00:00</updated>
+			<updated>2015-12-18T08:30:18+00:00</updated>
 		</source>
 	</entry>
 
@@ -1469,7 +1470,7 @@ staying in the right places…).&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1531,7 +1532,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1551,7 +1552,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1571,7 +1572,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1884,7 +1885,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1904,7 +1905,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1924,7 +1925,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2306,7 +2307,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2326,7 +2327,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -2369,7 +2370,7 @@ play (but do let me know how you get on :)).&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2469,7 +2470,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -2557,7 +2558,7 @@ Sage.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2699,7 +2700,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2718,7 +2719,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -2810,7 +2811,7 @@ and characteristic function games will also be briefly discussed.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2900,7 +2901,7 @@ conclusions :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2982,7 +2983,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -3001,7 +3002,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -3239,7 +3240,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3474,7 +3475,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3493,7 +3494,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -3512,7 +3513,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -3531,7 +3532,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2015-12-18T07:30:13+00:00</updated>
+			<updated>2015-12-18T08:30:20+00:00</updated>
 		</source>
 	</entry>
 
@@ -3598,7 +3599,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2015-12-18T07:30:06+00:00</updated>
+			<updated>2015-12-18T08:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -3734,7 +3735,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3902,7 +3903,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4008,7 +4009,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4061,7 +4062,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4124,7 +4125,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4275,7 +4276,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4344,7 +4345,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4407,7 +4408,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4511,7 +4512,7 @@ Except this time Laura, lost her crown :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4895,7 +4896,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2015-12-17T19:30:07+00:00</updated>
+			<updated>2015-12-18T08:30:06+00:00</updated>
 		</source>
 	</entry>
 
