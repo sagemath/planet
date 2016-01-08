@@ -5,15 +5,15 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-01-08T19:30:14+00:00</updated>
+	<updated>2016-01-08T20:30:14+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Mathematics Graduate School: preparation for non-academic employment</title>
 		<link href="http://sagemath.blogspot.com/2016/01/mathematics-graduate-school-preparation.html"/>
 		<id>tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693</id>
-		<updated>2016-01-08T08:36:06+00:00</updated>
-		<content type="html">This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;br /&gt;(Discuss:&amp;nbsp; &lt;a href=&quot;https://news.ycombinator.com/item?id=10866065&quot;&gt;https://news.ycombinator.com/item?id=10866065&lt;/a&gt;)&lt;br /&gt;&lt;h1 id=&quot;mathematics-graduate-school-preparation-for-non-academic-employment&quot;&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“Implementing the graph editor for Sage played a big role in me getting a job at Google.”&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;h3 id=&quot;david-moulton-google-&quot;&gt;David Moulton (Google)&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</content>
+		<updated>2016-01-08T11:53:38+00:00</updated>
+		<content type="html">This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;br /&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“Implementing the graph editor for Sage played a big role in me getting a job at Google.”&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;h3 id=&quot;david-moulton-google-&quot;&gt;David Moulton (Google)&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</content>
 		<author>
 			<name>William Stein</name>
 			<email>noreply@blogger.com</email>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1161,7 +1161,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1394,7 +1394,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-01-08T19:30:13+00:00</updated>
+			<updated>2016-01-08T20:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -1572,7 +1572,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1592,7 +1592,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1925,7 +1925,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1945,7 +1945,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2347,7 +2347,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2490,7 +2490,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -2739,7 +2739,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3003,7 +3003,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3022,7 +3022,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3514,7 +3514,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3533,7 +3533,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3552,7 +3552,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-01-08T19:30:14+00:00</updated>
+			<updated>2016-01-08T20:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -3619,7 +3619,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-08T19:30:07+00:00</updated>
+			<updated>2016-01-08T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
