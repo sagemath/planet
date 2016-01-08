@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/12/05/I-think-this-is-the-way-to-crawl-a-git-repository/" />
 			<rdf:li rdf:resource="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released" />
@@ -67,13 +68,17 @@
 			<rdf:li rdf:resource="http://sheaves.github.io/Group-Ring-Regular-Representation/" />
 			<rdf:li rdf:resource="http://sheaves.github.io/Representation-Theory-Decomposing-Representations/" />
 			<rdf:li rdf:resource="http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/" />
-			<rdf:li rdf:resource="http://sheaves.github.io/Representation-Theory-Sums-Products/" />
-			<rdf:li rdf:resource="http://sheaves.github.io/Representation-Theory-Intro/" />
-			<rdf:li rdf:resource="http://sheaves.github.io/Subgroup-Explorer/" />
 		</rdf:Seq>
 	</items>
 </channel>
 
+<item rdf:about="tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693">
+	<title>William Stein: Mathematics Graduate School: preparation for non-academic employment</title>
+	<link>http://sagemath.blogspot.com/2016/01/mathematics-graduate-school-preparation.html</link>
+	<content:encoded>This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;br /&gt;(Discuss:&amp;nbsp; &lt;a href=&quot;https://news.ycombinator.com/item?id=10866065&quot;&gt;https://news.ycombinator.com/item?id=10866065&lt;/a&gt;)&lt;br /&gt;&lt;h1 id=&quot;mathematics-graduate-school-preparation-for-non-academic-employment&quot;&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“Implementing the graph editor for Sage played a big role in me getting a job at Google.”&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;h3 id=&quot;david-moulton-google-&quot;&gt;David Moulton (Google)&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</content:encoded>
+	<dc:date>2016-01-08T08:36:06+00:00</dc:date>
+	<dc:creator>William Stein</dc:creator>
+</item>
 <item rdf:about="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/">
 	<title>Vince Knight: The Dilemma of giving Christmas Gifts</title>
 	<link>http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/</link>
@@ -4602,197 +4607,6 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 
 &lt;p&gt;I won’t prove this, but note that if $V$ has a decomposition $W_1 \oplus W_2$, then the projection onto either $W_i$ will have the desired properties.  If we have such a $T$, then its eigenspaces will give a decomposition of $(V,\rho)$. This will be the subject of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Decomposing-Representations/&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 	<dc:date>2015-01-26T00:00:00+00:00</dc:date>
-</item>
-<item rdf:about="http://sheaves.github.io/Representation-Theory-Sums-Products/">
-	<title>Liang Ze: Direct Sums and Tensor Products</title>
-	<link>http://sheaves.github.io/Representation-Theory-Sums-Products/</link>
-	<content:encoded>&lt;p&gt;In this short post, we will show two ways of combining existing representations to obtain new representations.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;recall&quot;&gt;Recall&lt;/h2&gt;
-&lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we saw two representations of $D_4$: the permutation representation, and the representation given in this &lt;a href=&quot;http://en.wikipedia.org/wiki/Dihedral_group#Matrix_representation&quot; target=&quot;_blank&quot;&gt;Wikipedia example&lt;/a&gt;. Let’s first define these in Sage:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&quot;direct-sums&quot;&gt;Direct Sums&lt;/h2&gt;
-
-&lt;p&gt;If $(V_1,\rho_1), (V_2,\rho_2)$ are representations of $G$, the &lt;a href=&quot;http://groupprops.subwiki.org/wiki/Direct_sum_of_linear_representations&quot; target=&quot;_blank&quot;&gt;direct sum&lt;/a&gt; of these representations is $(V_1 \oplus V_2, \rho)$, where $\rho$ sends $g \in G$ to the &lt;a href=&quot;http://en.wikipedia.org/wiki/Block_matrix#Block_diagonal_matrices&quot; target=&quot;_blank&quot;&gt;block diagonal matrix&lt;/a&gt; &lt;/p&gt;
-
-
-
-&lt;p&gt;Here $\rho_1(g), \rho_2(g)$ and the “zeros” are all &lt;em&gt;matrices&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s best to illustrate with an example. We can define a function &lt;code&gt;direct_sum&lt;/code&gt; in Sage that takes two representations and returns their direct sum.&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&quot;tensor-products&quot;&gt;Tensor products&lt;/h2&gt;
-&lt;p&gt;We can also form the &lt;a href=&quot;http://groupprops.subwiki.org/wiki/Tensor_product_of_linear_representations&quot; target=&quot;_blank&quot;&gt;tensor product&lt;/a&gt; $(V_1 \otimes V_2,\rho)$, where $\rho$ sends $g \in G$ to the &lt;a href=&quot;http://en.wikipedia.org/wiki/Kronecker_product&quot; target=&quot;_blank&quot;&gt;Kronecker product&lt;/a&gt; of the matrices $\rho_1(g)$ and $\rho_2(g)$.&lt;/p&gt;
-
-&lt;p&gt;We define a function &lt;code&gt;tensor_prod&lt;/code&gt; that takes two representations and returns their tensor product.&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Observe that&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;$\dim V_1 \oplus V_2 = \dim V_1 + \dim V_2$,&lt;/li&gt;
-  &lt;li&gt;$\dim V_1 \otimes V_2 = \dim V_1 \times \dim V_2$,&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;which motivates the terms direct &lt;em&gt;sum&lt;/em&gt; and tensor &lt;em&gt;product&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;We can keep taking direct sums and tensor products of existing representations to obtain new ones:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&quot;decomposing-representations&quot;&gt;Decomposing representations&lt;/h2&gt;
-&lt;p&gt;Now we know how to build new representations out of old ones. One might be interested in the inverse questions: &lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Is a given representation a direct sum of smaller representations?&lt;/li&gt;
-  &lt;li&gt;Is a given representation a tensor product of smaller representations?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It turns out that Q1 is a much more interesting question to ask than Q2.&lt;/p&gt;
-
-&lt;p&gt;A (very poor) analogy of this situation is the problem of “building up” natural numbers. We have two ways of building up new integers from old: we can either add numbers, or multiply them. Given a number $n$, it’s easy (and not very interesting) to find smaller numbers that add up to $n$. However, &lt;a href=&quot;http://en.wikipedia.org/wiki/Integer_factorization&quot; target=&quot;_blank&quot;&gt;finding numbers whose product is $n$&lt;/a&gt; is &lt;em&gt;much much&lt;/em&gt; harder (especially for large $n$) and much more &lt;a href=&quot;http://en.wikipedia.org/wiki/Algebraic_number_theory&quot; target=&quot;_blank&quot;&gt;rewarding&lt;/a&gt;. Prime numbers also play a special role in the latter case: every positive integer has a unique factorization into primes.&lt;/p&gt;
-
-&lt;p&gt;The analogy is a poor one (not least because the roles of “sum” and “product” are switched!). However, it motivates the question &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What are the analogues of “primes” for representations?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We’ll try to answer this last question and Q1 in the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot;&gt;next few posts&lt;/a&gt;, and see what it means for us when working with representations in Sage.&lt;/p&gt;</content:encoded>
-	<dc:date>2015-01-24T00:00:00+00:00</dc:date>
-</item>
-<item rdf:about="http://sheaves.github.io/Representation-Theory-Intro/">
-	<title>Liang Ze: Representation Theory in Sage - Basics</title>
-	<link>http://sheaves.github.io/Representation-Theory-Intro/</link>
-	<content:encoded>&lt;p&gt;This is the first of a series of posts about working with group representations in Sage.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;basic-definitions&quot;&gt;Basic Definitions&lt;/h2&gt;
-
-&lt;p&gt;Given a group $G$, a linear representation of $G$ is a group homomorphism $\rho: G \to \mathrm{GL}(V)$. &lt;/p&gt;
-
-&lt;p&gt;For our purposes, we will assume that $G$ is a finite group and $V$ is an $n$-dimensional vector space over $\mathbb{C}$. Then $\mathrm{GL}(V)$ is isomorphic to the invertible $n \times n$ matrices over $\mathbb{C}$, which we will denote $\mathrm{GL}_n \mathbb{C}$. &lt;/p&gt;
-
-&lt;p&gt;So a representation is just a function that takes group elements and returns invertible matrices, such that&lt;/p&gt;
-
-
-
-&lt;p&gt;where we have matrix multiplication on the right-hand side.&lt;/p&gt;
-
-&lt;p&gt;Various authors refer to the map $\rho$, the vector space $V$, or the tuple $(V,\rho)$ as a representation; this shouldn’t cause any confusion, as it’s usually clear from context whether we are referring to a map or a vector space. When I need to be extra precise, I’ll use $(V,\rho)$.&lt;/p&gt;
-
-&lt;h2 id=&quot;some-simple-examples&quot;&gt;Some simple examples&lt;/h2&gt;
-
-&lt;h3 id=&quot;trivial-representation&quot;&gt;Trivial representation&lt;/h3&gt;
-&lt;p&gt;The simplest representation is just the trivial representation that sends every element of $G$ to the identity matrix (of some fixed dimension $n$). Let’s do this for the symmetric group $S_3$:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;We can verify that this is indeed a group homomorphism (warning: There are 6 elements in $S_3$, which means we have to check $6^2 = 36$ pairs!):&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h3 id=&quot;permutation-representation&quot;&gt;Permutation representation&lt;/h3&gt;
-&lt;p&gt;This isn’t very interesting. However, we also know that $S_3$ is the group of permutations of the 3-element set {$1,2,3$}. We can associate to each permutation a &lt;a href=&quot;http://mathworld.wolfram.com/PermutationMatrix.html&quot; target=&quot;_blank&quot;&gt;permutation matrix&lt;/a&gt;. Sage already has this implemented for us, via the method &lt;code&gt;matrix()&lt;/code&gt; for a group element &lt;code&gt;g&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Qn: From the permutation matrix, can you tell which permutation $g$ corresponds to?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;We can again verify that this is indeed a representation. Let’s not print out all the output; instead, we’ll only print something if it is &lt;em&gt;not&lt;/em&gt; a representation. If nothing pops up, then we’re fine:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h3 id=&quot;defining-a-representation-from-generators&quot;&gt;Defining a representation from generators&lt;/h3&gt;
-&lt;p&gt;We could define permutation representations so easily only because Sage has them built in. But what if we had some other representation that we’d like to work with in Sage? Take the &lt;a href=&quot;http://en.wikipedia.org/wiki/Dihedral_group&quot; target=&quot;_blank&quot;&gt;dihedral group&lt;/a&gt; $D_4$. Wikipedia tells us that this group has &lt;a href=&quot;http://en.wikipedia.org/wiki/Dihedral_group#Matrix_representation&quot; target=&quot;_blank&quot;&gt;a certain matrix representation&lt;/a&gt;. How can we recreate this in Sage?&lt;/p&gt;
-
-&lt;p&gt;We could hard-code the relevant matrices in our function definition. However, typing all these matrices can be time-consuming, especially if the group is large.&lt;/p&gt;
-
-&lt;p&gt;But remember that representations are group homomorphisms. If we’ve defined $\rho(g)$ and $\rho(h)$, then we can get $\rho(gh)$ simply by multiplying the matrices $\rho(g)$ and $\rho(h)$! If we have a &lt;a href=&quot;http://en.wikipedia.org/wiki/Generating_set_of_a_group&quot; target=&quot;_blank&quot;&gt;set of generators&lt;/a&gt; of a group, then we only need to define $\rho$ on these generators. Let’s do that for the generators of $D_4$:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;We see that $D_4$ has a generating set of 2 elements (note: the method &lt;code&gt;gens()&lt;/code&gt; need not return a &lt;em&gt;minimal&lt;/em&gt; generating set, but in this case, we do get a minimal generating set). Let’s call these $r$ and $s$. We know that elements of $D_4$ can be written $r^is^j$, where $i = 0,1,2,3$ and $j = 0,1$. We first run through all such pairs $(i,j)$ to create a &lt;a href=&quot;https://docs.python.org/2/tutorial/datastructures.html#dictionaries&quot; target=&quot;_blank&quot;&gt;dictionary&lt;/a&gt; that tells us which group elements are given by which $(i,j)$:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Now for $g = r^i s^j \in D_4$, we can define $\rho(g) = \rho(r)^i \rho(s)^j$ and we will get a representation of $D_4$. We need only choose the matrices we want for $\rho(r)$ and $\rho(s)$.&lt;/p&gt;
-
-&lt;p&gt;$r$ and $s$ correspond to $R_1$ and $S_0$, resp., in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Dihedral_group#Matrix_representation&quot; target=&quot;_blank&quot;&gt;Wikipedia example&lt;/a&gt;, so let’s use their matrix representations to generate our representation:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;One can verify that this does indeed give the same matrices as the Wikipedia example, albeit in a different order.&lt;/p&gt;
-
-&lt;h2 id=&quot;we-can-do-better&quot;&gt;We can do better!&lt;/h2&gt;
-&lt;p&gt;All the representations we’ve defined so far aren’t very satisfying! For the last example, we required the special property that all elements in $D_4$ have the form $r^i s^j$. In general, it isn’t always easy to express a given group element in terms of the group’s generators (this is known as the &lt;a href=&quot;http://en.wikipedia.org/wiki/Word_problem_for_groups&quot; target=&quot;_blank&quot;&gt;word problem&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;We’ve also been constructing representations in a rather ad-hoc manner. Is there a more general way to construct representations? And how many are representations are there?&lt;/p&gt;
-
-&lt;p&gt;In the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Sums-Products/&quot;&gt;next post&lt;/a&gt;, I’ll run through two simple ways of combining existing representations to get new ones: the direct sum and the tensor product. I’ll also define &lt;em&gt;irreducible&lt;/em&gt; representations, and state some results that will shed some light on the above questions.&lt;/p&gt;</content:encoded>
-	<dc:date>2015-01-20T00:00:00+00:00</dc:date>
-</item>
-<item rdf:about="http://sheaves.github.io/Subgroup-Explorer/">
-	<title>Liang Ze: Subgroup Explorer</title>
-	<link>http://sheaves.github.io/Subgroup-Explorer/</link>
-	<content:encoded>&lt;p&gt;To sum up the subgroup lattice series, I’ve written a subgroup lattice generator. It’s powered by Sage and GAP, and allows you to view the lattice of subgroups or subgroup conjugacy classes of a group from your browser.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;div class=&quot;auto&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Normal_subgroup&quot; target=&quot;_blank&quot;&gt;Normal subgroups&lt;/a&gt; are colored green. Additionally, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Center_%28group_theory%29&quot; target=&quot;_blank&quot;&gt;center&lt;/a&gt; is blue while the &lt;a href=&quot;http://en.wikipedia.org/wiki/Commutator_subgroup&quot; target=&quot;_blank&quot;&gt;commutator subgroup&lt;/a&gt; is pink.&lt;/p&gt;
-
-&lt;p&gt;Showing the full subgroup lattice can get messy for large groups. If the option &lt;code&gt;Conjugacy classes&lt;/code&gt; is selected, the viewer only shows the &lt;a href=&quot;http://en.wikipedia.org/wiki/Conjugacy_class#Conjugacy_of_subgroups_and_general_subsets&quot; target=&quot;_blank&quot;&gt;conjugacy classes of subgroups&lt;/a&gt; (i.e. all subgroups that are conjugate are combined into a single vertex).&lt;/p&gt;
-
-&lt;p&gt;The edge labels indicate how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class &lt;strong&gt;contains&lt;/strong&gt;, or how many subgroups of one conjugacy class a given representative subgroup of another conjugacy class is &lt;strong&gt;contained by&lt;/strong&gt;. The labels are omitted if these numbers are 1. The edge colors indicate whether the subgroups in the “smaller” conjugacy class are normal subgroups of those in “larger” conjugacy class.&lt;/p&gt;
-
-&lt;p&gt;For instance, the group &lt;code&gt;C15 : C4&lt;/code&gt; (of order 60; the colon stands for &lt;a href=&quot;http://en.wikipedia.org/wiki/Semidirect_product&quot; target=&quot;_blank&quot;&gt;semi-direct product&lt;/a&gt; and is usually written $\rtimes$) contains 5 subgroups isomorphic to &lt;code&gt;C3 : C4&lt;/code&gt;, which in turn contains 3 subgroups isomorphic to &lt;code&gt;C4&lt;/code&gt; and 1 subgroup isomorphic to &lt;code&gt;C6&lt;/code&gt; (the 5 belows to another edge). The edge colors indicate that &lt;code&gt;C6&lt;/code&gt; is a normal subgroup of &lt;code&gt;C3 : C3&lt;/code&gt; whereas &lt;code&gt;C4&lt;/code&gt; is not. For further information on group descriptors, click &lt;a href=&quot;http://groupprops.subwiki.org/wiki/GAP:StructureDescription#Aspects_of_structure_description&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As mentioned in the &lt;a href=&quot;http://sheaves.github.io/Subgroup-Lattice-Edges/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, labelling the edges requires taking apart the poset plotting code. I had to extract the Hasse diagram of a poset as a graph and modifying the edge labels directly. This explains why the code is much longer than in previous posts.&lt;/p&gt;
-
-&lt;p&gt;Finally, while verifying the results of this program, I found an error in &lt;a href=&quot;http://www.cambridge.org/us/academic/subjects/mathematics/algebra/representations-groups-computational-approach&quot; target=&quot;_blank&quot;&gt;this book&lt;/a&gt;!
-The correction has been pencilled in. The original number printed was 1.
-&lt;img src=&quot;http://sheaves.github.io/images/A5Lattice_CompareSmall.jpg&quot; alt=&quot;A5 Lattice&quot; title=&quot;A5 Subgroup Lattice&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is the last post on subgroup lattices. My &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot;&gt;next post&lt;/a&gt; will be the start of a new series on doing represntation theory in Sage.&lt;/p&gt;</content:encoded>
-	<dc:date>2015-01-17T00:00:00+00:00</dc:date>
 </item>
 
 </rdf:RDF>
