@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-01-15T16:30:13+00:00</updated>
+	<updated>2016-01-15T17:30:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Thinking of using SageMathCloud in a college course?</title>
+		<link href="http://sagemath.blogspot.com/2016/01/thinking-of-using-sagemathcloud-in.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703</id>
+		<updated>2016-01-15T09:14:07+00:00</updated>
+		<content type="html">&lt;h2&gt;SageMathCloud course subscriptions&lt;/h2&gt;&lt;span&gt;&quot;We are &amp;nbsp;college instructors of the calculus sequence and ODE’s.&amp;nbsp; If the college were to purchase one of the upgrades for us as we use Sage with our students, who gets the benefits of the upgrade? &amp;nbsp;Is is the individual students that are in an instructor’s Sage classroom or is it the &amp;nbsp;collaborators on an instructor’s project?&quot;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;If you were to purchase just the $7/month plan and apply the upgrades&amp;nbsp;&lt;/span&gt;&lt;span&gt;to *one* single project, then all collaborators on that one project&amp;nbsp;&lt;/span&gt;&lt;span&gt;would benefit from those upgrades while using that project.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;If you were to purchase a course plan for say $399/semester, then y&lt;/span&gt;&lt;span&gt;ou could apply the upgrades (network access and members only hosting)&amp;nbsp;&lt;/span&gt;&lt;span&gt;to 70 projects that you might create for a course.&amp;nbsp; &amp;nbsp;When you create a&amp;nbsp;&lt;/span&gt;&lt;span&gt;course by clicking +New, then &quot;Manage a Course&quot;, then add students,&amp;nbsp;&lt;/span&gt;&lt;span&gt;each student has their own project created automatically.&amp;nbsp; All&amp;nbsp;&lt;/span&gt;&lt;span&gt;instructors (anybody who is a collaborator on the project where you&amp;nbsp;&lt;/span&gt;&lt;span&gt;clicked &quot;Manage a course&quot;) is also added to the student's project.&amp;nbsp;&lt;/span&gt;&lt;span&gt;In course settings you can easily apply the upgrades you purchase to&amp;nbsp;&lt;/span&gt;&lt;span&gt;all projects in the course. &amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Also I'm currently working on a new feature where instructors may&amp;nbsp;&lt;/span&gt;&lt;span&gt;choose to require all students in their course to pay for the upgrade&amp;nbsp;&lt;/span&gt;&lt;span&gt;themselves.&amp;nbsp; There's a one time $9/course fee paid by the student and&amp;nbsp;&lt;/span&gt;&lt;span&gt;that's it.&amp;nbsp; At some colleges (in some places) this is ideal, and at&amp;nbsp;&lt;/span&gt;&lt;span&gt;other places it's not an option at all.&amp;nbsp; &amp;nbsp;I anticipate releasing this very soon.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s1600/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;372&quot; src=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s640/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;Getting started with SageMathCloud courses&lt;/h2&gt;&lt;br /&gt;&lt;span&gt;You can &lt;b&gt;&lt;i&gt;fully use&lt;/i&gt;&amp;nbsp;&lt;/b&gt;the SMC course functionality without paying anything in order to get familiar with it and test it out. &amp;nbsp;The main benefit of paying is that you get network access and all projects get moved to members only servers, which are much more robust; also, we greatly prioritize support for paying customers. &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;This blog post is an overview of using SMC courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;This has some screenshots and the second half is about courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Here are some video tutorials made by an instructor that used SMC with&amp;nbsp;&lt;/span&gt;&lt;span&gt;a large class in Iceland recently:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dgTi11ZS3fQ&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=dgTi11ZS3fQ&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nkSdOVE2W0A&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=nkSdOVE2W0A&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0qrhZQ4rjjg&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=0qrhZQ4rjjg&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Note that the above videos show the basics of courses, then talk&amp;nbsp;&lt;/span&gt;&lt;span&gt;specifically about automated grading of Jupyter notebooks.&amp;nbsp; That might&amp;nbsp;&lt;/span&gt;&lt;span&gt;not be at all what you want to do -- &lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/Teaching&quot; target=&quot;_blank&quot;&gt;many math courses &lt;/a&gt;use Sage&amp;nbsp;&lt;/span&gt;&lt;span&gt;worksheets, and probably don't automate the grading yet.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Regarding using Sage itself for teaching your courses, check out the&amp;nbsp;&lt;/span&gt;&lt;span&gt;free pdf book to &quot;Sage for Undergraduates&quot; here, which the American Mathematical Society just published (there is also a very nice print version for about $23):&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.gregorybard.com/SAGE.html&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.gregorybard.com/SAGE.html&lt;/a&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-01-15T17:30:06+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Mathematics Graduate School: preparation for non-academic employment</title>
@@ -24,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1161,7 +1181,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1394,7 +1414,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-01-15T16:30:11+00:00</updated>
+			<updated>2016-01-15T17:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -1572,7 +1592,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1592,7 +1612,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1924,7 +1944,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1944,7 +1964,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2346,7 +2366,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3618,7 +3638,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-01-15T16:30:05+00:00</updated>
+			<updated>2016-01-15T17:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -5120,115 +5140,6 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 &lt;p&gt;Now we know how to test for irreducibility and decompose reducible representations. But we still don’t know how many irreducible representations a group has. &lt;/p&gt;
 
 &lt;p&gt;It turns out that finite groups have finitely many irreducible representations! In the &lt;a href=&quot;http://sheaves.github.io/Group-Ring-Regular-Representation/&quot;&gt;next post&lt;/a&gt;, we’ll construct a representation for any finite group $G$ that contains &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$.&lt;/p&gt;</content>
-		<author>
-			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
-		</author>
-		<source>
-			<title type="html">Sheaves</title>
-			<subtitle type="html">Making math concrete with Sage</subtitle>
-			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
-			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2015-11-30T01:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Irreducible and Indecomposable Representations</title>
-		<link href="http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/"/>
-		<id>http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/</id>
-		<updated>2015-01-26T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Following up from the questions I asked at the end of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Sums-Products/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, I’ll define (ir)reducible and (in)decomposable representations, and discuss how we might detect them. Unlike previous posts, this post will have just text, and no code. This discussion will form the basis of the algorithm in the next post.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;decomposability&quot;&gt;Decomposability&lt;/h2&gt;
-
-&lt;p&gt;In the previous post, I showed how to form the direct sum $(V_1 \oplus V2,\rho)$ of two representations $(V_1,\rho_1)$ and $(V_2,\rho_2)$. The matrices given by $\rho$ looked like this:&lt;/p&gt;
-
-
-
-&lt;p&gt;A representation $(V,\rho)$ is &lt;strong&gt;decomposable&lt;/strong&gt; if there is a basis of $V$ such that each $\rho(g)$ takes this block diagonal form. If $(V,\rho)$ does not admit such a decomposition, it is &lt;strong&gt;indecomposable&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Equivalently, $(V,\rho)$ is decomposable if there is an invertible matrix $P$ such that for all $g\in G$,&lt;/p&gt;
-
-
-
-&lt;p&gt;and indecomposable otherwise. Here, $P$ is a change of basis matrix and conjugating by $P$ changes from the standard basis to the basis given by the columns of $P$. &lt;/p&gt;
-
-&lt;h2 id=&quot;reducibility&quot;&gt;Reducibility&lt;/h2&gt;
-
-&lt;p&gt;Notice that if $\rho(g)$ were block diagonal, then writing $v \in V$ as ${v_1 \choose v_2}$, where $v_1$ and $v_2$ are vectors whose dimensions agree with the blocks of $\rho(g)$, we see that&lt;/p&gt;
-
-
-
-&lt;p&gt;Let $V_1$ be the subspace of $V$ corresponding to vectors of the form ${v_1 \choose 0}$, and $V_2$ be the subspace of vectors of the form ${0 \choose v_2}$. Then for all $g \in G, v \in V_i$,&lt;/p&gt;
-
-
-
-&lt;p&gt;Now suppose instead that for all $g \in G, \rho(g)$ has the block upper-triangular form&lt;/p&gt;
-
-
-
-&lt;p&gt;where $ * $ represents an arbitrary matrix (possibly different for each $g \in G$). If $*$ is not the zero matrix for some $g$, then we will still have $\rho(g) v \in V_1 \,\, \forall v \in V_1$, but we no longer have $\rho(g) v \in V_2 \,\, \forall v \in V_2$. In this case, we say that $V_1$ is a subrepresentation of $V$ whereas $V_2$ is not.&lt;/p&gt;
-
-&lt;p&gt;Formally, if we have a subspace $W \subset V$ such that for all $g \in G, w \in W$,&lt;/p&gt;
-
-
-
-&lt;p&gt;then $W$ is a $G$-&lt;strong&gt;invariant&lt;/strong&gt; subspace of $V$, and $(W,\rho)$ is a  &lt;strong&gt;subrepresentation&lt;/strong&gt; of $(V,\rho)$.&lt;/p&gt;
-
-&lt;p&gt;Any representation $(V,\rho)$ has at least two subrepresentations: $(0,\rho)$ and $(V,\rho)$. If there are no other subrepresentations, then $(V,\rho)$ is &lt;a href=&quot;http://en.wikipedia.org/wiki/Irreducible_representation&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;irreducible&lt;/strong&gt;&lt;/a&gt;. Otherwise, it is &lt;strong&gt;reducible&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Equivalently, $(V,\rho)$ is reducible if there is an invertible matrix $P$ such that for all $g \in G$,&lt;/p&gt;
-
-
-
-&lt;p&gt;and irreducible otherwise.&lt;/p&gt;
-
-&lt;h2 id=&quot;maschkes-theorem&quot;&gt;Maschke’s Theorem&lt;/h2&gt;
-
-&lt;p&gt;Note that a decomposable representation is also reducible, but the converse is not generally true.
-(Equivalently: an irreducible representation is also indecomposable, but the converse is not generally true.)
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Maschke%27s_theorem&quot; target=&quot;_blank&quot;&gt;Maschke’s Theorem&lt;/a&gt; tells us that the converse is true over fields of characteristic zero! In other words:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suppose $V$ is a vector space over a field of characteristic zero, say $\mathbb{C}$, and $(V,\rho)$ has a subrepresentation $(W_1,\rho)$. Then there is a subspace $W_2$ (called the direct complement of $W_1$) such that $V = W_1 \oplus W_2$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Since we will be working over $\mathbb{C}$, we can thus treat (in)decomposability as equivalent to (ir)reducibility. To understand representations of $G$, we need only understand its irreducible representations, because any other representation can be decomposed into a direct sum of irreducibles.&lt;/p&gt;
-
-&lt;h2 id=&quot;schurs-lemma&quot;&gt;Schur’s Lemma&lt;/h2&gt;
-
-&lt;p&gt;How may we detect (ir)reducible representations? We’ll make use of the following linear algebraic properties:&lt;/p&gt;
-
-&lt;p&gt;Given an eigenvalue $\lambda$ of a matrix $A \in \mathbb{C}^{n \times n}$, its $\lambda$-eigenspace is&lt;/p&gt;
-
-
-
-&lt;p&gt;Clearly, each eigenspace is an invariant subspace of $A$. If we have another matrix $B \in \mathbb{C}^{n \times n}$ such that $AB = BA$, then $B$ preserves the eigenspaces of $A$ as well. To see this, take $v \in E_\lambda$, then&lt;/p&gt;
-
-
-
-&lt;p&gt;so $E_\lambda$ is also an invariant subspace of $B$!&lt;/p&gt;
-
-&lt;p&gt;Now suppose we have a representation $(V,\rho)$ and a linear map $T:V \to V$ such that for all $g \in G, v \in V$,&lt;/p&gt;
-
-
-
-&lt;p&gt;Treating $T$ as a matrix, this is equivalent to saying that $\rho(g)T = T\rho(g)$ for all $g \in G$. In that case, the eigenspaces of $T$ are $G$-invariant subspaces, and will yield decompositions of $(V,\rho)$  if they are not the whole of $V$. But if $E_\lambda = V$, then $Tv = \lambda v$ for all $v \in V$, so in fact $T = \lambda I$, where $I$ is the identity matrix. We have thus shown a variant of &lt;a href=&quot;http://en.wikipedia.org/wiki/Schur%27s_lemma&quot; target=&quot;_blank&quot;&gt;Schur’s lemma&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If $(V,\rho)$ is irreducible, and $\rho(g) T = T \rho(g)$ for all $g \in G$, then $T =\lambda I$ for some $\lambda$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;We already know that scalar matrices (i.e. matrices of the form $\lambda I$) commute with all matrices. If $(V,\rho)$ is irreducible, this result says that there are no other matrices that commute with all $\rho(g)$. The converse is also true:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If $(V,\rho)$ is a reducible, then there is some $T \neq \lambda I$ such that $\rho(g) T = T\rho(g)$ for all $g \in G$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I won’t prove this, but note that if $V$ has a decomposition $W_1 \oplus W_2$, then the projection onto either $W_i$ will have the desired properties.  If we have such a $T$, then its eigenspaces will give a decomposition of $(V,\rho)$. This will be the subject of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Decomposing-Representations/&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
 			<uri>http://sheaves.github.io/</uri>
