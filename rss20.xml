@@ -1454,9 +1454,8 @@ which I am proud to say it is now part of the &lt;a class=&quot;reference extern
 the sage code to solve the puzzle, one question was left: how many solutions
 are there? Is the &lt;a class=&quot;reference external&quot; href=&quot;http://familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274&quot;&gt;official website&lt;/a&gt; realist or very prudent when they say
 that &lt;em&gt;there are over 10.000 potential solutions&lt;/em&gt;? Can it be computed in hours?
-days? months? years? ... or light-years!? The only thing I knew was that the
-following computation (letting the 0-th pentamino aside) never finished on my
-machine:&lt;/p&gt;
+days? months? years? The only thing I knew was that the following computation
+(letting the 0-th pentamino aside) never finished on my machine:&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sage.games.quantumino&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QuantuminoSolver&lt;/span&gt;
