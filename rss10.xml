@@ -3665,7 +3665,7 @@ So whilst that individual did not get any in, they contributed an important part
 <item rdf:about="http://sheaves.github.io/Character-Theory/">
 	<title>Liang Ze: Character Theory Basics</title>
 	<link>http://sheaves.github.io/Character-Theory/</link>
-	<content:encoded>&lt;p&gt;This post illustrates some of SageMath’s character theory functionality, as well as some basic results about characters of finite groups. &lt;/p&gt;
+	<content:encoded>&lt;p&gt;This post illustrates some of SageMath’s character theory functionality, as well as some basic results about characters of finite groups.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -3739,7 +3739,7 @@ So whilst that individual did not get any in, they contributed an important part
   
 &lt;/div&gt;
 
-&lt;p&gt;Just as we could decompose every representation of $G$ into a sum of irreducible representations, we can express any character as a sum of irreducible characters. &lt;/p&gt;
+&lt;p&gt;Just as we could decompose every representation of $G$ into a sum of irreducible representations, we can express any character as a sum of irreducible characters.&lt;/p&gt;
 
 &lt;p&gt;The next post discusses how to do this easily, by making use of the &lt;a href=&quot;http://en.wikipedia.org/wiki/Schur_orthogonality_relations&quot;&gt;Schur orthogonality relations&lt;/a&gt;. These are really cool relations among the rows and columns of the character table. Apart from decomposing representations into irreducibles, we’ll also be able to prove that the character table is always square!&lt;/p&gt;</content:encoded>
 	<dc:date>2015-03-20T00:00:00+00:00</dc:date>
@@ -4353,7 +4353,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
   
 &lt;/div&gt;
 
-&lt;p&gt;We can view $v \in FG$ as vector in $F^n$, where $n$ is the size of $G$ : &lt;/p&gt;
+&lt;p&gt;We can view $v \in FG$ as vector in $F^n$, where $n$ is the size of $G$ :&lt;/p&gt;
 
 &lt;div class=&quot;linked&quot;&gt;
   
@@ -4405,7 +4405,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 
 
 
-&lt;p&gt;Then $(FG,\rho_{FG})$ is the &lt;a href=&quot;http://en.wikipedia.org/wiki/Regular_representation&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;regular representation&lt;/strong&gt;&lt;/a&gt; of $G$ over $F$. &lt;/p&gt;
+&lt;p&gt;Then $(FG,\rho_{FG})$ is the &lt;a href=&quot;http://en.wikipedia.org/wiki/Regular_representation&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;regular representation&lt;/strong&gt;&lt;/a&gt; of $G$ over $F$.&lt;/p&gt;
 
 &lt;p&gt;The regular representation of any non-trivial group is not irreducible. In fact, it is a direct sum of &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$! What’s more, if $(V,\rho)$ is an irreducible representation of $G$ and $\dim V = k$, then $V$ occurs $k$ times in the direct-sum decomposition of $FG$!&lt;/p&gt;
 
@@ -4419,7 +4419,7 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 
 &lt;h2 id=&quot;building-character&quot;&gt;Building character&lt;/h2&gt;
 
-&lt;p&gt;We’ve spent a lot of time working directly with representations of a group. While more concrete, the actual matrix representations themselves tend to be a little clumsy, especially when the groups in question get large. &lt;/p&gt;
+&lt;p&gt;We’ve spent a lot of time working directly with representations of a group. While more concrete, the actual matrix representations themselves tend to be a little clumsy, especially when the groups in question get large.&lt;/p&gt;
 
 &lt;p&gt;In the next few posts, I’ll switch gears to &lt;a href=&quot;http://en.wikipedia.org/wiki/Character_theory&quot; target=&quot;_blank&quot;&gt;character theory&lt;/a&gt;, which is a simpler but more powerful way of working with group representations.&lt;/p&gt;</content:encoded>
 	<dc:date>2015-02-15T00:00:00+00:00</dc:date>
@@ -4485,7 +4485,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 
 &lt;h2 id=&quot;using-h-to-decompose-rho&quot;&gt;Using $H$ to decompose $\rho$&lt;/h2&gt;
 
-&lt;p&gt;Our next step is to use the eigenspaces of $H$ to decompose $\rho$. At the end of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we saw that $\rho(g)$ preserves the eigenspaces of $H$, so we need only find the eigenspaces of $H$ to decompose $\rho$. &lt;/p&gt;
+&lt;p&gt;Our next step is to use the eigenspaces of $H$ to decompose $\rho$. At the end of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we saw that $\rho(g)$ preserves the eigenspaces of $H$, so we need only find the eigenspaces of $H$ to decompose $\rho$.&lt;/p&gt;
 
 &lt;p&gt;Since $H$ is hermitian, it is &lt;a href=&quot;http://en.wikipedia.org/wiki/Diagonalizable_matrix&quot; target=&quot;_blank&quot;&gt;diagonalizable&lt;/a&gt;, so its eigenvectors form a basis of $V$. We can find this basis by computing the &lt;a href=&quot;http://en.wikipedia.org/wiki/Jordan_normal_form&quot; target=&quot;_blank&quot;&gt;Jordan decomposition&lt;/a&gt; of $H$:&lt;/p&gt;
 
@@ -4499,11 +4499,11 @@ For $G$ a finite group, all representations can be made unitary under an appropr
   
 &lt;/div&gt;
 
-&lt;p&gt;We have thus decomposed $\rho$ into two 1-dimensional representations and one 2-dimensional one! &lt;/p&gt;
+&lt;p&gt;We have thus decomposed $\rho$ into two 1-dimensional representations and one 2-dimensional one!&lt;/p&gt;
 
 &lt;h2 id=&quot;decomposing-into-irreducibles&quot;&gt;Decomposing into irreducibles&lt;/h2&gt;
 
-&lt;p&gt;Finally, to get a decomposition into irreducibles,  we can apply the algorithm recursively on each of the subrepresentations to see if they further decompose. &lt;/p&gt;
+&lt;p&gt;Finally, to get a decomposition into irreducibles,  we can apply the algorithm recursively on each of the subrepresentations to see if they further decompose.&lt;/p&gt;
 
 &lt;p&gt;Here’s a stand-alone script that decomposes a representation into its irreducible components:&lt;/p&gt;
 
@@ -4513,7 +4513,7 @@ For $G$ a finite group, all representations can be made unitary under an appropr
 
 &lt;h2 id=&quot;getting-all-irreducible-representations&quot;&gt;Getting all irreducible representations&lt;/h2&gt;
 
-&lt;p&gt;Now we know how to test for irreducibility and decompose reducible representations. But we still don’t know how many irreducible representations a group has. &lt;/p&gt;
+&lt;p&gt;Now we know how to test for irreducibility and decompose reducible representations. But we still don’t know how many irreducible representations a group has.&lt;/p&gt;
 
 &lt;p&gt;It turns out that finite groups have finitely many irreducible representations! In the &lt;a href=&quot;http://sheaves.github.io/Group-Ring-Regular-Representation/&quot;&gt;next post&lt;/a&gt;, we’ll construct a representation for any finite group $G$ that contains &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$.&lt;/p&gt;</content:encoded>
 	<dc:date>2015-02-02T00:00:00+00:00</dc:date>
