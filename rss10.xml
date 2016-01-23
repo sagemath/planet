@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/mathematics/2016/01/27/UNAM-Mathematics-Summer-School/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/code/2015/12/15/The-Prisoners-Dilemma-of-Christmas-Gifts/" />
@@ -67,11 +68,106 @@
 			<rdf:li rdf:resource="http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences" />
 			<rdf:li rdf:resource="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/" />
 			<rdf:li rdf:resource="http://sheaves.github.io/Group-Ring-Regular-Representation/" />
-			<rdf:li rdf:resource="http://sheaves.github.io/Representation-Theory-Decomposing-Representations/" />
 		</rdf:Seq>
 	</items>
 </channel>
 
+<item rdf:about="http://drvinceknight.github.io/unpeudemath/mathematics/2016/01/27/UNAM-Mathematics-Summer-School/">
+	<title>Vince Knight: University of Namibia Mathematics Summer School</title>
+	<link>http://drvinceknight.github.io/unpeudemath/mathematics/2016/01/27/UNAM-Mathematics-Summer-School/</link>
+	<content:encoded>&lt;p&gt;I am writing this post just after two extraordinary weeks in Namibia. This is a
+quick personal reflection of what has been an awesome experience. As part of
+Cardiff University’s &lt;a href=&quot;http://www.cardiff.ac.uk/phoenix-project&quot;&gt;Phoenix
+Project&lt;/a&gt;, &lt;a href=&quot;http://www.unam.edu.na/faculty-of-science/mathematics/our-team/?staffid=5042&quot;&gt;Martin
+Mugochi&lt;/a&gt;,
+&lt;a href=&quot;http://www.cardiff.ac.uk/people/view/98670-wilson-robert&quot;&gt;Rob Wilson&lt;/a&gt; and I
+with Cardiff PhD students &lt;a href=&quot;https://twitter.com/geraintpalmer&quot;&gt;Geraint Palmer&lt;/a&gt;
+and Alex MacKay worked with the University of Namibia’s faculty of Mathematics
+to deliver a two week summer school.&lt;/p&gt;
+
+&lt;p&gt;The goal of this joint effort with the University of Namibia was to provide a
+positive experience of mathematics. As Rob said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We want them to concentrate on what they can do rather than what they cannot
+do.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The first week involved inquiry based sessions on both mathematical topics (such
+as Algebra and Geometry) as well as wider skills (such as presenting and reading
+mathematics).&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This side of the course mainly involved students working on through activities
+and presenting them to the class which lead to discussion (and in an IBL way
+ultimately confirmation/verification of the conclusions). This is the point at
+which we (I’m sure Rob, Alex and Geraint would agree) must say that the
+&lt;strong&gt;students were awesome&lt;/strong&gt;. Eager to learn, open to the novel pedagogic ideas, a
+real pleasure to work with.&lt;/p&gt;
+
+&lt;p&gt;Here are some photos of the first week (the only local ones as I write this are
+from the group Alex and I took but things were pretty much the same in Rob and
+Geraint’s group):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_wk1_2.jpg&quot; alt=&quot;Working on activities&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_wk1_3.jpg&quot; alt=&quot;Presenting solutions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_wk1_1.jpg&quot; alt=&quot;Fun&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second week had students work in groups on a variety of projects such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mathematical paradoxes,&lt;/li&gt;
+  &lt;li&gt;Patterns in Pascal’s triangle,&lt;/li&gt;
+  &lt;li&gt;History of mathematics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the intensity of the first week, this lead to a stark contrast in which
+students came to us for support. This lead to us not being in direct contact
+with all the students all the time.&lt;/p&gt;
+
+&lt;p&gt;The culmination of the whole school was a 2 hour closing ceremony in which
+students presented their posters. As we hadn’t seen all the groups we were
+slightly worried that this might fall flat on it’s face but we were very wrong
+and it was such a delight to see each and every group turn up to put their
+awesome poster on the wall.&lt;/p&gt;
+
+&lt;p&gt;Here are some of the posters:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_poster_1.jpg&quot; alt=&quot;Approximations of pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_poster_2.jpg&quot; alt=&quot;Patterns in Pascals triangle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Without any nudge on our part students starting walking around and learning from
+each other’s poster (&lt;strong&gt;I am still smiling about this now&lt;/strong&gt;). This was followed
+by students giving 5 minute presentations, closing remarks from various UNAM
+officials, Martin Mugochi (head of the mathematics department) and ourselves.&lt;/p&gt;
+
+&lt;p&gt;One of my most pleasant memories (of which there are too many to mention) is
+what happened just after that though, we (students and us) came together to
+&lt;strong&gt;thank each other&lt;/strong&gt; for our efforts and get photos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_close_3.jpg&quot; alt=&quot;The inaugural UNAM mathematics summer school&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_close_1.jpg&quot; alt=&quot;A small group photo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_close_2.jpg&quot; alt=&quot;Student selfie with me&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_close_5.jpg&quot; alt=&quot;Student selfie&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was such a great experience, it was fantastic to work and become good
+friends with Martin, get to know the students (seeing the benefits of active
+pedagogic methodologies) and spend two great weeks with Geraint, Alex and Rob:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/UNAM_Summer_close_4.jpg&quot; alt=&quot;Geraint, Alex, Rob and I&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is just one of many &lt;a href=&quot;http://www.cardiff.ac.uk/phoenix-project&quot;&gt;Phoenix project&lt;/a&gt; projects and it’s great to be
+involved.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now I need to put this laptop down, get a good night’s sleep and spend tomorrow
+working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCon Namibia&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+	<dc:date>2016-01-23T20:30:38+00:00</dc:date>
+</item>
 <item rdf:about="tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703">
 	<title>William Stein: Thinking of using SageMathCloud in a college course?</title>
 	<link>http://sagemath.blogspot.com/2016/01/thinking-of-using-sagemathcloud-in.html</link>
@@ -4423,100 +4519,6 @@ You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/ma
 
 &lt;p&gt;In the next few posts, I’ll switch gears to &lt;a href=&quot;http://en.wikipedia.org/wiki/Character_theory&quot; target=&quot;_blank&quot;&gt;character theory&lt;/a&gt;, which is a simpler but more powerful way of working with group representations.&lt;/p&gt;</content:encoded>
 	<dc:date>2015-02-15T00:00:00+00:00</dc:date>
-</item>
-<item rdf:about="http://sheaves.github.io/Representation-Theory-Decomposing-Representations/">
-	<title>Liang Ze: Decomposing Representations</title>
-	<link>http://sheaves.github.io/Representation-Theory-Decomposing-Representations/</link>
-	<content:encoded>&lt;p&gt;In this post, we’ll implement an algorithm for decomposing representations that &lt;a href=&quot;http://www.ams.org/journals/mcom/1970-24-111/S0025-5718-1970-0280611-6/S0025-5718-1970-0280611-6.pdf&quot; target=&quot;_blank&quot;&gt;Dixon published in 1970&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;As a motivating example, I’ll use the permutation matrix representation of $D_4$ that we saw in an &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Intro/&quot; target=&quot;_blank&quot;&gt;earlier post&lt;/a&gt;. To make the code more generally applicable, let’s call the group $G$ and the representation $\rho$:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;We’ll see that this is decomposable, and find out what its irreducible components are.&lt;/p&gt;
-
-&lt;h3 id=&quot;unitary-representations&quot;&gt;Unitary representations&lt;/h3&gt;
-
-&lt;p&gt;A short remark before we begin: The algorithm assumes that $\rho$ is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Unitary_representation&quot; target=&quot;_blank&quot;&gt;unitary representation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;i.e. for all $g \in G$,&lt;/p&gt;
-
-
-
-&lt;p&gt;where $A*$ is the &lt;a href=&quot;http://en.wikipedia.org/wiki/Conjugate_transpose&quot; target=&quot;_blank&quot;&gt;conjugate transpose&lt;/a&gt; of a matrix $A$. 
-For $G$ a finite group, all representations can be made unitary under an appropriate change of basis, so we need not be too concerned about this. In any case, permutation representations are always unitary, so we can proceed with our example.&lt;/p&gt;
-
-&lt;h2 id=&quot;finding-non-scalar-commuting-matrices&quot;&gt;Finding non-scalar, commuting matrices&lt;/h2&gt;
-
-&lt;p&gt;At the end of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt; we saw that in order to decompose a representation $(V,\rho)$, it is enough to find a non-scalar matrix $T$ that commutes with $\rho(g)$ for every $g \in G$.  This first step finds a &lt;a href=&quot;http://en.wikipedia.org/wiki/Hermitian_matrix&quot; target=&quot;_blank&quot;&gt;Hermitian&lt;/a&gt; non-scalar $H$ that commutes with $\rho(G)$ (if there is one to be found).&lt;/p&gt;
-
-&lt;p&gt;Let $E_{rs}$ denote the $n \times n$ matrix with a $1$ in the $(r,s)$th entry and zeros everywhere else. Here $n$ is the dimension of $V$ in the representation $(V,\rho)$. Define&lt;/p&gt;
-
-
-
-&lt;p&gt;then the set of matrices $H_{rs}$ forms a Hermitian basis for the $n \times n$ matrices over $\mathbb{C}$.&lt;/p&gt;
-
-&lt;p&gt;Now for each $r,s$, compute the sum&lt;/p&gt;
-
-
-
-&lt;p&gt;Observe that $H$ has the following properties:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it is hermitian&lt;/li&gt;
-  &lt;li&gt;it commutes with $\rho(g)$ for all $g \in G$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If $\rho$ is irreducible, then $H$ is a scalar matrix for all $r,s$. Otherwise, it turns out that there &lt;strong&gt;will&lt;/strong&gt; be some $r,s$ such that $H$ is non-scalar (this is due to the fact that the $H_{rs}$ matrices form a basis of the $n \times n$ matrices$).&lt;/p&gt;
-
-&lt;p&gt;Let’s test this algorithm on our permutation representation of $D_4$:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;We get a non-scalar $H$! So the permutation representation of $D_4$ is reducible!&lt;/p&gt;
-
-&lt;h2 id=&quot;using-h-to-decompose-rho&quot;&gt;Using $H$ to decompose $\rho$&lt;/h2&gt;
-
-&lt;p&gt;Our next step is to use the eigenspaces of $H$ to decompose $\rho$. At the end of the &lt;a href=&quot;http://sheaves.github.io/Representation-Theory-Irreducibility-Indecomposability/&quot; target=&quot;_blank&quot;&gt;previous post&lt;/a&gt;, we saw that $\rho(g)$ preserves the eigenspaces of $H$, so we need only find the eigenspaces of $H$ to decompose $\rho$.&lt;/p&gt;
-
-&lt;p&gt;Since $H$ is hermitian, it is &lt;a href=&quot;http://en.wikipedia.org/wiki/Diagonalizable_matrix&quot; target=&quot;_blank&quot;&gt;diagonalizable&lt;/a&gt;, so its eigenvectors form a basis of $V$. We can find this basis by computing the &lt;a href=&quot;http://en.wikipedia.org/wiki/Jordan_normal_form&quot; target=&quot;_blank&quot;&gt;Jordan decomposition&lt;/a&gt; of $H$:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Finally, we observe that $P^{-1} \rho(g) P$ has the same block-diagonal form for each $g \in G$:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;We have thus decomposed $\rho$ into two 1-dimensional representations and one 2-dimensional one!&lt;/p&gt;
-
-&lt;h2 id=&quot;decomposing-into-irreducibles&quot;&gt;Decomposing into irreducibles&lt;/h2&gt;
-
-&lt;p&gt;Finally, to get a decomposition into irreducibles,  we can apply the algorithm recursively on each of the subrepresentations to see if they further decompose.&lt;/p&gt;
-
-&lt;p&gt;Here’s a stand-alone script that decomposes a representation into its irreducible components:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&quot;getting-all-irreducible-representations&quot;&gt;Getting all irreducible representations&lt;/h2&gt;
-
-&lt;p&gt;Now we know how to test for irreducibility and decompose reducible representations. But we still don’t know how many irreducible representations a group has.&lt;/p&gt;
-
-&lt;p&gt;It turns out that finite groups have finitely many irreducible representations! In the &lt;a href=&quot;http://sheaves.github.io/Group-Ring-Regular-Representation/&quot;&gt;next post&lt;/a&gt;, we’ll construct a representation for any finite group $G$ that contains &lt;em&gt;all&lt;/em&gt; the irreducible representations of $G$.&lt;/p&gt;</content:encoded>
-	<dc:date>2015-02-02T00:00:00+00:00</dc:date>
 </item>
 
 </rdf:RDF>
