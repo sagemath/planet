@@ -54,7 +54,77 @@
 <div class="bodypadding">
 
 <div class="daygroup">
-<h2>January 23, 2016</h2>
+<h2>February 01, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a></h3>
+
+
+<div class="entrygroup" id="http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/01/introducing-game-theory-to-my-class/">
+<h4><a href="http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/01/introducing-game-theory-to-my-class/">Introducing Game Theory to my class</a></h4>
+<div class="entry">
+<div class="content">
+<p>Here is a blog post that mirrors <a href="http://drvinceknight.blogspot.co.uk/2014/01/matching-pennies-in-class.html">this
+post</a>
+from two years ago and <a href="http://vknight.org/unpeudemath/pedagogy/2015/01/26/introducing-game-theory-to-my-class/">this
+post</a>
+from last year.</p>
+
+<p>As always, I will be using my blog to extend the class meetings my Game Theory
+class and I have.</p>
+
+<p>Here are the results of the strategies played during the first game of matching
+pennies (see the previously mentioned posts for details):</p>
+
+
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/matching_pennies_2015-2016.png" alt="" /></p>
+
+<p>We see that overall everyone seems to be playing randomly.</p>
+
+<p>After that we played a modified version of the game (the row player has more to
+win by playing heads):</p>
+
+
+
+<p>We now see that both players actually play heads less. This is perhaps easier to
+understand from the column player’s point of view.</p>
+
+<p>I will leave an explanation as to what the green and yellow lines represent for
+a little longer…</p>
+
+<p>The main point of this is to make sure that everyone understands the normal form game convention (by breaking the symmetry) and also to make it slightly more interesting (the row player now has more to win/lose by playing Heads).</p>
+
+<p><img src="http://vknight.org/unpeudemath/assets/images/modified_matching_pennies_2015-2016.png" alt="" /></p>
+
+<p>Looking forward to the next class meeting where we will be doing similar things
+as we continue to understand the basics of normal form game representations.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/01/introducing-game-theory-to-my-class/">February 01, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>January 27, 2016</h2>
 
 <div class="channelgroup">
 
@@ -170,7 +240,7 @@ working on final details for <a href="http://na.pycon.org/">PyCon Namibia</a>.</
 
 
 <p class="date">
-<a href="http://drvinceknight.github.io/unpeudemath/mathematics/2016/01/27/UNAM-Mathematics-Summer-School/">January 23, 2016 08:30 PM</a>
+<a href="http://drvinceknight.github.io/unpeudemath/mathematics/2016/01/27/UNAM-Mathematics-Summer-School/">January 27, 2016 12:00 AM</a>
 </p>
 </div>
 </div>
@@ -357,13 +427,13 @@ exhibit, they could be:</p>
 years. I’m going to use the Python <a href="http://axelrod.readthedocs.org/en/latest/">Axelrod
 library</a> to illustrate things:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">alex</span><span class="p">,</span> <span class="n">camille</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Alternator</span><span class="p">(),</span> <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">match</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Match</span><span class="p">([</span><span class="n">alex</span><span class="p">,</span> <span class="n">camille</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">sparklines</span><span class="p">(</span><span class="n">c_symbol</span><span class="o">=</span><span class="s">'😀'</span><span class="p">,</span> <span class="n">d_symbol</span><span class="o">=</span><span class="s">'🎁'</span><span class="p">))</span>
 <span class="err">😀🎁😀🎁😀🎁😀🎁😀🎁</span>
-<span class="err">😀😀🎁😀🎁😀🎁😀🎁😀</span></code></pre></div>
+<span class="err">😀😀🎁😀🎁😀🎁😀🎁😀</span></code></pre>
 
 <p>We see that Alex and Camille never actually exchange gifts the same year (the 😀
 means that the particular player cooperates, the 🎁 that they don’t and give a
@@ -399,7 +469,7 @@ years and each person acts according to one of the above behaviours.</p>
 
 <p>Here is how we can do this in python:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span>
 <span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">(),</span>
 <span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">Alternator</span><span class="p">(),</span>
 <span class="o">...</span>           <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">(),</span>
@@ -408,13 +478,13 @@ years and each person acts according to one of the above behaviours.</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">christmas</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">christmas</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">results</span><span class="o">.</span><span class="n">scores</span>
-<span class="p">[[</span><span class="mi">525</span><span class="p">],</span> <span class="p">[</span><span class="mi">562</span><span class="p">],</span> <span class="p">[</span><span class="mi">417</span><span class="p">],</span> <span class="p">[</span><span class="mi">622</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">]]</span></code></pre></div>
+<span class="p">[[</span><span class="mi">525</span><span class="p">],</span> <span class="p">[</span><span class="mi">562</span><span class="p">],</span> <span class="p">[</span><span class="mi">417</span><span class="p">],</span> <span class="p">[</span><span class="mi">622</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">],</span> <span class="p">[</span><span class="mi">646</span><span class="p">]]</span></code></pre>
 
 <p>We see that the people that do the best are the last two: TwoTitForTat and
 Grudger. These are people who are quick enough to react to people who won’t
 keep their promise but that do give hope to people who will!</p>
 
-<h2 id="at-a-population-level-evolution-of-gift-giving"> At a population level: evolution of gift giving</h2>
+<p>## At a population level: evolution of gift giving</p>
 
 <p>We can consider this in an evolutionary context where we see how the behaviour
 is allowed to evolve amongst a whole population of people. This particular type
@@ -423,10 +493,10 @@ macro stability of the system.</p>
 
 <p>Here is how we can see this using Python:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">evo</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Ecosystem</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">evo</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Ecosystem</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">evo</span><span class="o">.</span><span class="n">reproduce</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">plot</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">plot</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">evo</span><span class="p">)</span></code></pre></div>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plot</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">evo</span><span class="p">)</span></code></pre>
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/basic_christmas_evo.svg" alt="Basic Christmas
 Evolution" /></p>
@@ -441,34 +511,34 @@ giving gifts</strong>.</p>
 <p>To check if not giving presents is evolutionary stable we just need to see what
 the last population numbers are for the Alternator and Defector. Here is a Python function to do this:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <span class="o">...</span>                                 <span class="n">digits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
-<span class="o">...</span>    <span class="s">&quot;&quot;&quot;Returns a boolean and the last population vector&quot;&quot;&quot;</span>
+<span class="o">...</span>    <span class="s">"""Returns a boolean and the last population vector"""</span>
 <span class="o">...</span>    <span class="n">game</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Game</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
 <span class="o">...</span>    <span class="n">christmas</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">turns</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">game</span><span class="o">=</span><span class="n">game</span><span class="p">)</span>
 <span class="o">...</span>    <span class="n">results</span> <span class="o">=</span> <span class="n">christmas</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 <span class="o">...</span>    <span class="n">evo</span> <span class="o">=</span> <span class="n">axl</span><span class="o">.</span><span class="n">Ecosystem</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 <span class="o">...</span>    <span class="n">evo</span><span class="o">.</span><span class="n">reproduce</span><span class="p">(</span><span class="n">turns</span><span class="p">)</span>
 <span class="o">...</span>    <span class="n">last_pop</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">digits</span><span class="p">)</span> <span class="k">for</span> <span class="n">pop</span> <span class="ow">in</span> <span class="n">evo</span><span class="o">.</span><span class="n">population_sizes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
-<span class="o">...</span>    <span class="k">return</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">last_pop</span></code></pre></div>
+<span class="o">...</span>    <span class="k">return</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">last_pop</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">last_pop</span></code></pre>
 
 <p>We see that for the default values of \(R, P, S, T\) we have:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.16576</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.26105</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">])</span></code></pre></div>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.16576</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.26105</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">,</span> <span class="mf">0.28659</span><span class="p">])</span></code></pre>
 
 <p>As already seen we have that for these values we end up with everyone keeping to the promise.
 Let us increase the value of \(T\) by a factor of 100:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span></code></pre></div>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">check_if_end_pop_cooperates</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span></code></pre>
 
 <p>We here see, that if the utility of giving a gift when the receiver is not giving
 one in return is very large, the overall population will always give a gift:</p>
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/t_factor_of_100_christmas_evo.svg" alt="Increasing t by factor of 100" /></p>
 
-<h2 id="seeing-the-effect-of-how-good-giving-gifts-makes-us-feel"> Seeing the effect of how good giving gifts makes us feel</h2>
+<p>## Seeing the effect of how good giving gifts makes us feel</p>
 
 <p>The final piece of analysis I will carry out is a parameter sweep of the above:</p>
 
@@ -581,9 +651,9 @@ prisoner’s dilemma via pull request (read more about this here:
 When the library was first put on github it had 6 strategies, it currently has
 118. This figure can be obtained by simply running:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">)</span>
-<span class="mi">118</span></code></pre></div>
+<span class="mi">118</span></code></pre>
 
 <p>The goal of this post is to obtain the plot below:</p>
 
@@ -610,14 +680,14 @@ script.</li>
 
 <p>So first of all here’s the script that gets the number of strategies:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span>
+<pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span>
 <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">))</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">print</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">),</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="k">pass</span></code></pre></div>
+    <span class="k">pass</span></code></pre>
 
 <p>The (very loose) error handling is because any given commit might or might not
 be able to run at all (for a number of reasons). The command line arguments are
@@ -625,12 +695,12 @@ so that my second script can pass info about the commits (date and hash).</p>
 
 <p><strong>Here is the script that walks the github repository:</strong></p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>  <span class="c"># This imports the necessary class from the gitPython package</span>
+<pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>  <span class="c"># This imports the necessary class from the gitPython package</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">&quot;~/src/Axelrod/&quot;</span>
+<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">"~/src/Axelrod/"</span>
 <span class="n">repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="p">(</span><span class="n">path_to_repo</span><span class="p">)</span>
 <span class="n">all_commits</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">repo</span><span class="o">.</span><span class="n">iter_commits</span><span class="p">()]</span>  <span class="c"># Get all the commits</span>
 <span class="n">git</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">git</span>  <span class="c"># This creates an object that I can just use basic git commands with</span>
@@ -641,27 +711,27 @@ so that my second script can pass info about the commits (date and hash).</p>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'data'</span><span class="p">)</span>  <span class="c"># Delete the data file if it already exists</span>
-<span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+<span class="k">except</span> <span class="nb">OSError</span><span class="p">:</span>
     <span class="k">pass</span>
 
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_commits</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">committed_date</span><span class="p">):</span>  <span class="c"># Go through all commits</span>
-    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/tests/.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/strategies/.DS_Store&quot;</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
+    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">".DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/.DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/tests/.DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/strategies/.DS_Store"</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path_to_repo</span> <span class="o">+</span> <span class="n">rubbish</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+        <span class="k">except</span> <span class="nb">OSError</span><span class="p">:</span>
             <span class="k">pass</span>
 
     <span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c"># Checkout the commit</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c"># Need to let files write</span>
 
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data'</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data'</span><span class="p">,</span> <span class="s">"a"</span><span class="p">)</span>
     <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">'python2'</span><span class="p">,</span> <span class="s">'number_of_strategies.py'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">),</span> <span class="n">c</span><span class="o">.</span><span class="n">hexsha</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>  <span class="c"># Call the other script and output to the `data` file</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span>  <span class="c"># Go back to HEAD of master</span></code></pre></div>
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span>  <span class="c"># Go back to HEAD of master</span></code></pre>
 
 <p>Now, I am not actually sure if I need the 10 seconds of sleep in there but it
 seems to make things a little more reliable (this is where I’m hoping some
@@ -676,7 +746,7 @@ knowledgeable kind soul will point out something isn’t quite right).</p>
 
 <p>The data set from above looks like this:</p>
 
-<div class="highlight"><pre><code class="language-text">...
+<pre><code class="language-text">...
 1424259748 6 5774fec6b3029b60c6b1bf4cb5d8bfb5323a1ad3
 1424259799 6 35db17958a93e66cc09a7e7b865127b8d20acd85
 1424261483 6 79c03291a1f0211925755962411d28c932150aaa
@@ -690,7 +760,7 @@ knowledgeable kind soul will point out something isn’t quite right).</p>
 1424268969 7 d0c36795fd6a69f9a1558b0b1e738d7633eb1b8e
 1424270889 8 d487a97c9327235c4c334b23684583a116cc407a
 1424272151 8 e9cd655661d3cef0a6df20cc509ae5ac2431f896
-...</code></pre></div>
+...</code></pre>
 
 <p>That’s all great and then the <a href="http://vknight.org/unpeudemath/assets/images/strategies_over_time.svg">plot
 above</a> can be drawn
@@ -703,7 +773,7 @@ set (or indeed in the plot).</p>
 <p>Also, for some reason the data set gets these lines at some point (here be
 gremlins…) ?????:</p>
 
-<div class="highlight"><pre><code class="language-text">...
+<pre><code class="language-text">...
 &lt;class 'axelrod.strategies.alternator.Alternator'&gt;
 &lt;class 'axelrod.strategies.titfortat.AntiTitForTat'&gt;
 &lt;class 'axelrod.strategies.titfortat.Bully'&gt;
@@ -716,7 +786,7 @@ gremlins…) ?????:</p>
 &lt;class 'axelrod.strategies.titfortat.SuspiciousTitForTat'&gt;
 &lt;class 'axelrod.strategies.titfortat.TitForTat'&gt;
 &lt;class 'axelrod.strategies.memoryone.WinStayLoseShift'&gt;
-...</code></pre></div>
+...</code></pre>
 
 <p>What’s more confusing is that it’s not completely wrong because that does
 overall look ‘ok’ (correct number of strategies at the beginning, end and
@@ -737,7 +807,7 @@ everythig that wasn’t quite right.</strong></p>
 and also with correct error catching to deal with changes within the
 library):</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<pre><code class="language-python"><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 
 
@@ -749,25 +819,25 @@ library):</p>
    <span class="k">try</span><span class="p">:</span>
        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
            <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">strategies</span>
-   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+   <span class="k">except</span> <span class="p">(</span><span class="nb">AttributeError</span><span class="p">,</span> <span class="nb">TypeError</span><span class="p">):</span>
        <span class="k">pass</span>
 
    <span class="k">try</span><span class="p">:</span>
        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">ordinary_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
            <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">ordinary_strategies</span>
-   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+   <span class="k">except</span> <span class="p">(</span><span class="nb">AttributeError</span><span class="p">,</span> <span class="nb">TypeError</span><span class="p">):</span>
        <span class="k">pass</span>
 
    <span class="k">try</span><span class="p">:</span>
        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">basic_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
            <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">basic_strategies</span>
-   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+   <span class="k">except</span> <span class="p">(</span><span class="nb">AttributeError</span><span class="p">,</span> <span class="nb">TypeError</span><span class="p">):</span>
        <span class="k">pass</span>
 
    <span class="k">try</span><span class="p">:</span>
        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">axelrod</span><span class="o">.</span><span class="n">cheating_strategies</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
            <span class="n">strategies</span> <span class="o">+=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">cheating_strategies</span>
-   <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+   <span class="k">except</span> <span class="p">(</span><span class="nb">AttributeError</span><span class="p">,</span> <span class="nb">TypeError</span><span class="p">):</span>
        <span class="k">pass</span>
 
    <span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">strategies</span><span class="p">))</span>
@@ -778,13 +848,13 @@ library):</p>
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="k">except</span><span class="p">:</span>
-   <span class="k">pass</span></code></pre></div>
+   <span class="k">pass</span></code></pre>
 
 <p>Here is the modified script to roll through the commits (basically the same
-as before but it calls the other script with the <code>-B</code> flag (to avoid
+as before but it calls the other script with the <code class="highlighter-rouge">-B</code> flag (to avoid
 importing compiled files) and also without the need to sleep:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>
+<pre><code class="language-python"><span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>
 <span class="kn">import</span> <span class="nn">axelrod</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">subprocess</span>
@@ -792,7 +862,7 @@ importing compiled files) and also without the need to sleep:</p>
 <span class="kn">import</span> <span class="nn">csv</span>
 
 
-<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">&quot;~/src/Axelrod&quot;</span>
+<span class="n">path_to_repo</span> <span class="o">=</span> <span class="s">"~/src/Axelrod"</span>
 <span class="n">repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="p">(</span><span class="n">path_to_repo</span><span class="p">)</span>
 
 <span class="n">all_commits</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">repo</span><span class="o">.</span><span class="n">iter_commits</span><span class="p">()]</span>
@@ -806,18 +876,18 @@ importing compiled files) and also without the need to sleep:</p>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'data'</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+<span class="k">except</span> <span class="nb">OSError</span><span class="p">:</span>
     <span class="k">pass</span>
 
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_commits</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">committed_date</span><span class="p">):</span>
 
-    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/tests/.DS_Store&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;axelrod/strategies/.DS_Store&quot;</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
+    <span class="k">for</span> <span class="n">rubbish</span> <span class="ow">in</span> <span class="p">[</span><span class="s">".DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/.DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/tests/.DS_Store"</span><span class="p">,</span>
+                    <span class="s">"axelrod/strategies/.DS_Store"</span><span class="p">]:</span>  <span class="c"># Having to delete some files that were not in gitignore at the time of the commit</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path_to_repo</span> <span class="o">+</span> <span class="n">rubbish</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+        <span class="k">except</span> <span class="nb">OSError</span><span class="p">:</span>
             <span class="k">pass</span>
 
     <span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -826,13 +896,13 @@ importing compiled files) and also without the need to sleep:</p>
         <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">'python2'</span><span class="p">,</span> <span class="s">'-B'</span><span class="p">,</span> <span class="s">'number_of_strategies.py'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">),</span> <span class="n">c</span><span class="o">.</span><span class="n">hexsha</span><span class="p">])</span>
         <span class="n">dates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">committed_date</span><span class="p">)</span>
 
-    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
         <span class="k">pass</span>
 
-<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span></code></pre></div>
+<span class="n">git</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">'master'</span><span class="p">)</span></code></pre>
 
-<p>It looks like you should delete all <code>pyc</code> files from the repository in
-question and run the second script with the <code>-B</code> tag.</p>
+<p>It looks like you should delete all <code class="highlighter-rouge">pyc</code> files from the repository in
+question and run the second script with the <code class="highlighter-rouge">-B</code> tag.</p>
 
 <p>Thanks again Mario!</p></div>
 
@@ -1114,7 +1184,7 @@ package</a> which makes iterated
 prisoner dilemma research straightforward and <strong>really</strong> is just taking a look
 at <a href="http://mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html">Martin Jones’s blog
 post</a>
-which described the evolutionary analysis performed to get a strategy (<code>EvolvedLookerUp</code>) that is
+which described the evolutionary analysis performed to get a strategy (<code class="highlighter-rouge">EvolvedLookerUp</code>) that is
 currently winning the overall tournament for the Axelrod library (with 108
 strategies):</p>
 
@@ -1123,7 +1193,7 @@ tournament" /></p>
 
 <p>The strategy in question is designed to do exactly that and as you can see does
 it really well (with a substantial gap between it’s median score and the runner
-up: <code>DoubleCrosser</code>).</p>
+up: <code class="highlighter-rouge">DoubleCrosser</code>).</p>
 
 <p>There are some things lacking in the analysis I’m going to present (which
 strategies I’m looking at, number of tournaments etc…) but hopefully the
@@ -1138,16 +1208,16 @@ environment?</p>
 <p>From an evolutionary point of view this is kind of akin to seeing how good a
 predator a shark would be in any random (potentially land based) environment…</p>
 
-<h2 id="generating-the-data"> Generating the data</h2>
+<p>## Generating the data</p>
 
 <p>Thanks to the Axelrod, library it’s pretty straightforward to quickly experiment
 with a strategy (or group of strategies) in a random tournament:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>  <span class="c"># Import the axelrod library</span>
+<pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>  <span class="c"># Import the axelrod library</span>
 
 <span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the rank of the test_strategy in a tournament with given</span>
-<span class="sd">    strategiess&quot;&quot;&quot;</span>
+    <span class="s">"""Return the rank of the test_strategy in a tournament with given
+    strategiess"""</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">:</span>
         <span class="n">strategies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">())</span>
     <span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">)</span>
@@ -1155,23 +1225,23 @@ with a strategy (or group of strategies) in a random tournament:</p>
                                 <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">,</span>
                                 <span class="n">processes</span><span class="o">=</span><span class="n">processes</span><span class="p">)</span>
     <span class="n">results</span> <span class="o">=</span> <span class="n">tournament</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">ranking</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">wins</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:]</span></code></pre></div>
+    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">ranking</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">wins</span><span class="p">[</span><span class="o">-</span><span class="n">nbr</span><span class="p">:]</span></code></pre>
 
 <p>This runs a tournament and returns the rankings and wins for the input
-strategies. For example, let’s see how <code>Cooperator</code> and <code>Defector</code> do in a
+strategies. For example, let’s see how <code class="highlighter-rouge">Cooperator</code> and <code class="highlighter-rouge">Defector</code> do in a
 random tournament with 2 other strategies:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># A random seed</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span>  <span class="c"># Our 2 random strategies</span>
-<span class="p">[</span><span class="n">Tricky</span> <span class="n">Defector</span><span class="p">,</span> <span class="n">Prober</span> <span class="mi">3</span><span class="p">]</span></code></pre></div>
+<span class="p">[</span><span class="n">Tricky</span> <span class="n">Defector</span><span class="p">,</span> <span class="n">Prober</span> <span class="mi">3</span><span class="p">]</span></code></pre>
 
-<p>We can then use the above function to see how <code>Cooperator</code> and <code>Defector</code> do:</p>
+<p>We can then use the above function to see how <code class="highlighter-rouge">Cooperator</code> and <code class="highlighter-rouge">Defector</code> do:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">()])</span>
-<span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span></code></pre></div>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">(),</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">()])</span>
+<span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span></code></pre>
 
 <p>We see that cooperator ranks last (getting no wins), and defector just before last (getting 2 wins). This is confirmed by the actual tournament results:</p>
 
@@ -1184,7 +1254,7 @@ strategies we’re interested in.</p>
 
 <p>This script generates our data:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
+<pre><code class="language-python"><span class="kn">import</span> <span class="nn">axelrod</span> <span class="kn">as</span> <span class="nn">axl</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">copy</span>
@@ -1197,8 +1267,8 @@ strategies we’re interested in.</p>
 <span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span> <span class="k">if</span> <span class="n">axl</span><span class="o">.</span><span class="n">obey_axelrod</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">test_strategies</span><span class="o">=</span><span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the rank of the test_strategy in a tournament with given</span>
-<span class="sd">    strategiess&quot;&quot;&quot;</span>
+    <span class="s">"""Return the rank of the test_strategy in a tournament with given
+    strategiess"""</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test_strategies</span><span class="p">:</span>
         <span class="n">strategies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">())</span>
     <span class="n">nbr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">)</span>
@@ -1231,7 +1301,7 @@ strategies we’re interested in.</p>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tournaments</span><span class="p">):</span>
 
         <span class="n">s</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
-        <span class="n">strategy_labels</span> <span class="o">=</span> <span class="s">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
+        <span class="n">strategy_labels</span> <span class="o">=</span> <span class="s">";"</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
 
         <span class="n">trnmt_s</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
         <span class="n">results</span> <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">test_strategies</span><span class="o">=</span><span class="n">test_strategies</span><span class="p">,</span> <span class="n">repetitions</span><span class="o">=</span><span class="n">repetitions</span><span class="p">)</span>
@@ -1261,16 +1331,16 @@ strategies we’re interested in.</p>
 <span class="n">f_titfortat</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">f_cooperator</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">f_defector</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">f_doublcrosser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></div>
+<span class="n">f_doublcrosser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre>
 
 <p>The above creates tournaments up to a size of 25 other strategies, with 20 random tournaments for each size, creating six data files:</p>
 
 <ul>
-  <li><a href="http://vknight.org/unpeudemath/assets/code/data-lookerup.csv">Data for tournaments with a random strategy sample and <code>EvolvedLookerUp</code></a></li>
-  <li><a href="http://vknight.org/unpeudemath/assets/code/data-titfortat.csv">Data for tournaments with the random strategy sample and <code>TitForTat</code></a></li>
-  <li><a href="http://vknight.org/unpeudemath/assets/code/data-cooperator.csv">Data for tournaments with the random strategy sample and <code>Cooperator</code></a></li>
-  <li><a href="http://vknight.org/unpeudemath/assets/code/data-defector.csv">Data for tournaments with the random strategy sample and <code>Defector</code></a></li>
-  <li><a href="http://vknight.org/unpeudemath/assets/code/data-doublecrosser.csv">Data for tournaments with the random strategy sample and <code>DoubleCrosser</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-lookerup.csv">Data for tournaments with a random strategy sample and <code class="highlighter-rouge">EvolvedLookerUp</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-titfortat.csv">Data for tournaments with the random strategy sample and <code class="highlighter-rouge">TitForTat</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-cooperator.csv">Data for tournaments with the random strategy sample and <code class="highlighter-rouge">Cooperator</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-defector.csv">Data for tournaments with the random strategy sample and <code class="highlighter-rouge">Defector</code></a></li>
+  <li><a href="http://vknight.org/unpeudemath/assets/code/data-doublecrosser.csv">Data for tournaments with the random strategy sample and <code class="highlighter-rouge">DoubleCrosser</code></a></li>
   <li><a href="http://vknight.org/unpeudemath/assets/code/combined-data">Data for tournaments with the random strategy sample as well as the above strategies</a></li>
 </ul>
 
@@ -1278,7 +1348,7 @@ strategies we’re interested in.</p>
 
 <p>I then used <a href="https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb">this Jupyter notebook</a> to analyse the data.</p>
 
-<p>Here is what we see for the <code>EvolvedLookerUp</code> strategy:</p>
+<p>Here is what we see for the <code class="highlighter-rouge">EvolvedLookerUp</code> strategy:</p>
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg" alt="" />
 <img src="http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg" alt="" /></p>
@@ -1296,26 +1366,26 @@ and wins increases, <strong>but what is of interest</strong> is the rate at whic
 <p>Here are the fits (and corresponding plots)  for the ranks:</p>
 
 <ul>
-  <li><code>EvolvedLookerUp</code>: \(y=0.49x-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg">plot</a></li>
-  <li><code>TitForTat</code>: \(y=0.53-0.45\) <a href="http://vknight.org/unpeudemath/assets/images/rank-titfortat.svg">plot</a></li>
-  <li><code>Cooperator</code>: \(y=0.42x+1.40\) <a href="http://vknight.org/unpeudemath/assets/images/rank-cooperator.svg">plot</a></li>
-  <li><code>Defector</code>: \(y=0.75x-0.33\) <a href="http://vknight.org/unpeudemath/assets/images/rank-defector.svg">plot</a></li>
-  <li><code>DoubleCrosser</code>: \(y=0.51x-0.47\) <a href="http://vknight.org/unpeudemath/assets/images/rank-doublecrosser.svg">plot</a></li>
+  <li><code class="highlighter-rouge">EvolvedLookerUp</code>: \(y=0.49x-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/rank-lookerup.svg">plot</a></li>
+  <li><code class="highlighter-rouge">TitForTat</code>: \(y=0.53-0.45\) <a href="http://vknight.org/unpeudemath/assets/images/rank-titfortat.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Cooperator</code>: \(y=0.42x+1.40\) <a href="http://vknight.org/unpeudemath/assets/images/rank-cooperator.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Defector</code>: \(y=0.75x-0.33\) <a href="http://vknight.org/unpeudemath/assets/images/rank-defector.svg">plot</a></li>
+  <li><code class="highlighter-rouge">DoubleCrosser</code>: \(y=0.51x-0.47\) <a href="http://vknight.org/unpeudemath/assets/images/rank-doublecrosser.svg">plot</a></li>
 </ul>
 
 <p>Here are the fits (and corresponding plots) for the wins:</p>
 
 <ul>
-  <li><code>EvolvedLookerUp</code>: \(y=0.28x+0.06\) <a href="http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg">plot</a></li>
-  <li><code>TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-titfortat.svg">plot</a></li>
-  <li><code>Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-cooperator.svg">plot</a></li>
-  <li><code>Defector</code>: \(y=0.89x+0.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-defector.svg">plot</a></li>
-  <li><code>DoubleCrosser</code>: \(y=0.85-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/wins-doublecrosser.svg">plot</a></li>
+  <li><code class="highlighter-rouge">EvolvedLookerUp</code>: \(y=0.28x+0.06\) <a href="http://vknight.org/unpeudemath/assets/images/wins-lookerup.svg">plot</a></li>
+  <li><code class="highlighter-rouge">TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-titfortat.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-cooperator.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Defector</code>: \(y=0.89x+0.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-defector.svg">plot</a></li>
+  <li><code class="highlighter-rouge">DoubleCrosser</code>: \(y=0.85-0.10\) <a href="http://vknight.org/unpeudemath/assets/images/wins-doublecrosser.svg">plot</a></li>
 </ul>
 
-<p><strong>It seems that the <code>EvolvedLookerUp</code> strategy does continue to do well (with a
+<p><strong>It seems that the <code class="highlighter-rouge">EvolvedLookerUp</code> strategy does continue to do well (with a
 low coefficient of 0.49) in these random environments</strong>. However what’s
-interesting is that the simple <code>Cooperator</code> strategy also seems to do well
+interesting is that the simple <code class="highlighter-rouge">Cooperator</code> strategy also seems to do well
 (this might indicate that the random samples are creating ‘overly nice’
 conditions).</p>
 
@@ -1334,26 +1404,26 @@ sample:</strong></p>
 <p>Here are the fits (and corresponding plots)  for the ranks:</p>
 
 <ul>
-  <li><code>EvolvedLookerUp</code>: \(y=0.42x+2.05\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-lookerup.svg">plot</a></li>
-  <li><code>TitForTat</code>: \(y=0.44+1.95\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-titfortat.svg">plot</a></li>
-  <li><code>Cooperator</code>: \(y=0.64+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-cooperator.svg">plot</a></li>
-  <li><code>Defector</code>: \(y=0.47x+1.87\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-defector.svg">plot</a></li>
-  <li><code>DoubleCrosser</code>: \(y=0.63x+1.88\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-doublecrosser.svg">plot</a></li>
+  <li><code class="highlighter-rouge">EvolvedLookerUp</code>: \(y=0.42x+2.05\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-lookerup.svg">plot</a></li>
+  <li><code class="highlighter-rouge">TitForTat</code>: \(y=0.44+1.95\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-titfortat.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Cooperator</code>: \(y=0.64+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-cooperator.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Defector</code>: \(y=0.47x+1.87\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-defector.svg">plot</a></li>
+  <li><code class="highlighter-rouge">DoubleCrosser</code>: \(y=0.63x+1.88\) <a href="http://vknight.org/unpeudemath/assets/images/rank-combined-doublecrosser.svg">plot</a></li>
 </ul>
 
 <p>Here are the fits (and corresponding plots) for the wins:</p>
 
 <ul>
-  <li><code>EvolvedLookerUp</code>: \(y=0.28x+0.05\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-lookerup.svg">plot</a></li>
-  <li><code>TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-titfortat.svg">plot</a></li>
-  <li><code>Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-cooperator.svg">plot</a></li>
-  <li><code>Defector</code>: \(y=0.89x+4.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-defector.svg">plot</a></li>
-  <li><code>DoubleCrosser</code>: \(y=0.85+2.87\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-doublecrosser.svg">plot</a></li>
+  <li><code class="highlighter-rouge">EvolvedLookerUp</code>: \(y=0.28x+0.05\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-lookerup.svg">plot</a></li>
+  <li><code class="highlighter-rouge">TitForTat</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-titfortat.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Cooperator</code>: \(y=0.00x+0.00\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-cooperator.svg">plot</a></li>
+  <li><code class="highlighter-rouge">Defector</code>: \(y=0.89x+4.14\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-defector.svg">plot</a></li>
+  <li><code class="highlighter-rouge">DoubleCrosser</code>: \(y=0.85+2.87\) <a href="http://vknight.org/unpeudemath/assets/images/wins-combined-doublecrosser.svg">plot</a></li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p><strong>It looks like the <code>EvolvedLookerUp</code> strategy continues to perform well in
+<p><strong>It looks like the <code class="highlighter-rouge">EvolvedLookerUp</code> strategy continues to perform well in
 environments that are not the ones it evolved in.</strong></p>
 
 <p>The Axelrod library makes this analysis possible as you can quickly create
@@ -1362,7 +1432,7 @@ analysis further by considering strategies of a particular type. For example
 you could sample only from strategies that act deterministically (no random
 behaviour):</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">()</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="s">'stochastic'</span><span class="p">]]</span></code></pre></div>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axl</span><span class="o">.</span><span class="n">strategies</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">()</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="s">'stochastic'</span><span class="p">]]</span></code></pre>
 
 <p>It would probably be worth gathering even more data to be able to make
 substantial claims about the performances as well as
@@ -1378,7 +1448,7 @@ that give a visual representation of the interactions between pairs of
 strategies. If you’re running python 3 you can include emoji so here goes the
 sparklines for the test strategies considered:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">test_strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">axl</span><span class="o">.</span><span class="n">EvolvedLookerUp</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">TitForTat</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Cooperator</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">Defector</span><span class="p">,</span> <span class="n">axl</span><span class="o">.</span><span class="n">DoubleCrosser</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">matchups</span> <span class="o">=</span> <span class="p">[(</span><span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">](),</span> <span class="n">match</span><span class="p">[</span><span class="mi">1</span><span class="p">]())</span> <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">(</span><span class="n">test_strategies</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
@@ -1418,7 +1488,7 @@ sparklines for the test strategies considered:</p>
  <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
 <span class="p">(</span><span class="n">Defector</span><span class="p">,</span> <span class="n">DoubleCrosser</span><span class="p">)</span>
  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>
- <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span></code></pre></div></div>
+ <span class="err">😀</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span>  <span class="err">😡</span></code></pre></div>
 
 
 
@@ -1531,9 +1601,9 @@ represent the chains.</p>
 
 <p>For all of this we’re going to need the following three imports:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>  <span class="c"># Only for how I'm writing the transition matrix</span>
+<pre><code class="language-python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>  <span class="c"># Only for how I'm writing the transition matrix</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>  <span class="c"># For the magic</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>  <span class="c"># For plotting</span></code></pre></div>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>  <span class="c"># For plotting</span></code></pre>
 
 <p>Let’s consider the Markov Chain I describe in <a href="http://vknight.org/unpeudemath/code/2014/09/19/the-expected-waiting-time-in-a-tandem-queue-with-blocking-using-sage/">this post about waiting times in
 a tandem
@@ -1544,7 +1614,7 @@ queue</a>. You can see an image of it (drawn in Tikz) below:</p>
 <p>As is described in that post, we’re dealing with a two dimensional chain and
 without going in to the details, the states are given by:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">states</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<pre><code class="language-python"><span class="n">states</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
           <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
           <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
           <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
@@ -1565,11 +1635,11 @@ without going in to the details, the states are given by:</p>
           <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
           <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
           <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
-          <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span></code></pre></div>
+          <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span></code></pre>
 
 <p>and the transition matrix \(Q\) by:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">Q</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<pre><code class="language-python"><span class="n">Q</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -1590,14 +1660,14 @@ without going in to the details, the states are given by:</p>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">27</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">27</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">]]</span></code></pre></div>
+     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span><span class="p">]]</span></code></pre>
 
-<p>To build the <code>networkx</code> graph we will use our states as nodes and have edges
+<p>To build the <code class="highlighter-rouge">networkx</code> graph we will use our states as nodes and have edges
 labeled by the corresponding values of \(Q\) (ignoring edges that would
-correspond to a value of 0). <strong>The neat thing about <code>networkx</code> is that it
+correspond to a value of 0). <strong>The neat thing about <code class="highlighter-rouge">networkx</code> is that it
 allows you to have any Python instance as a node</strong>:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">MultiDiGraph</span><span class="p">()</span>
+<pre><code class="language-python"><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">MultiDiGraph</span><span class="p">()</span>
 <span class="n">labels</span><span class="o">=</span><span class="p">{}</span>
 <span class="n">edge_labels</span><span class="o">=</span><span class="p">{}</span>
 
@@ -1608,18 +1678,18 @@ allows you to have any Python instance as a node</strong>:</p>
             <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">origin_state</span><span class="p">,</span>
                        <span class="n">destination_state</span><span class="p">,</span>
                        <span class="n">weight</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span>
-                       <span class="n">label</span><span class="o">=</span><span class="s">&quot;{:.02f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rate</span><span class="p">))</span>
-            <span class="n">edge_labels</span><span class="p">[(</span><span class="n">origin_state</span><span class="p">,</span> <span class="n">destination_state</span><span class="p">)]</span> <span class="o">=</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;{:.02f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span></code></pre></div>
+                       <span class="n">label</span><span class="o">=</span><span class="s">"{:.02f}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rate</span><span class="p">))</span>
+            <span class="n">edge_labels</span><span class="p">[(</span><span class="n">origin_state</span><span class="p">,</span> <span class="n">destination_state</span><span class="p">)]</span> <span class="o">=</span> <span class="n">label</span><span class="o">=</span><span class="s">"{:.02f}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span></code></pre>
 
 <p>Now we can draw the chain:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<pre><code class="language-python"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 <span class="n">node_size</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">state</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">states</span><span class="p">}</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">);</span></code></pre></div>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">);</span></code></pre>
 
 <p>You can see the result here:</p>
 
@@ -1632,21 +1702,21 @@ allows you to have any Python instance as a node</strong>:</p>
 </blockquote>
 
 <p>So instead I’m going to write this to a
-<a href="http://vknight.org/unpeudemath/assets/images/mc.dot"><code>.dot</code></a> file:</p>
+<a href="http://vknight.org/unpeudemath/assets/images/mc.dot"><code class="highlighter-rouge">.dot</code></a> file:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">nx</span><span class="o">.</span><span class="n">write_dot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s">'mc.dot'</span><span class="p">)</span></code></pre></div>
+<pre><code class="language-python"><span class="n">nx</span><span class="o">.</span><span class="n">write_dot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s">'mc.dot'</span><span class="p">)</span></code></pre>
 
 <p>Once we’ve done that we have a standard network file format, so we can use the
 command line to convert that to whatever format we want, here I’m creating the
 png file below:</p>
 
-<div class="highlight"><pre><code class="language-bash"><span class="nv">$ </span>neato -Tps -Goverlap<span class="o">=</span>scale mc.dot -o mc.ps<span class="p">;</span> convert mc.ps mc.png</code></pre></div>
+<pre><code class="language-bash"><span class="gp">$ </span>neato -Tps -Goverlap<span class="o">=</span>scale mc.dot -o mc.ps; convert mc.ps mc.png</code></pre>
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/mc.png" alt="" /></p>
 
-<p>The <a href="http://vknight.org/unpeudemath/assets/images/mc.dot"><code>.dot</code></a> file is a standard graph
+<p>The <a href="http://vknight.org/unpeudemath/assets/images/mc.dot"><code class="highlighter-rouge">.dot</code></a> file is a standard graph
 format but you can also just open up the
-<a href="http://vknight.org/unpeudemath/assets/images/mc.ps"><code>.ps</code></a> file in whatever you want and
+<a href="http://vknight.org/unpeudemath/assets/images/mc.ps"><code class="highlighter-rouge">.ps</code></a> file in whatever you want and
 modify the image. Here it is in inkscape:</p>
 
 <p><img src="http://vknight.org/unpeudemath/assets/images/mc_in_inkscape.png" alt="" /></p>
@@ -2518,7 +2588,7 @@ to go up against another team that is playing a single jungler/laner.</p>
 is how I got the lists of all the heroes (and the url to their own respective
 page on the wiki):</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://www.vaingloryfire.com/vainglory/wiki/heroes'</span><span class="p">)</span>
+<pre><code class="language-python"><span class="o">&gt;&gt;&gt;</span> <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://www.vaingloryfire.com/vainglory/wiki/heroes'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">root</span> <span class="o">=</span> <span class="s">'/vainglory/wiki/heroes'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'a'</span><span class="p">)]</span>
@@ -2539,7 +2609,7 @@ page on the wiki):</p>
  <span class="s">u'saw'</span><span class="p">:</span> <span class="s">u'/vainglory/wiki/heroes/saw'</span><span class="p">,</span>
  <span class="s">u'skaarf'</span><span class="p">:</span> <span class="s">u'/vainglory/wiki/heroes/skaarf'</span><span class="p">,</span>
  <span class="s">u'taka'</span><span class="p">:</span> <span class="s">u'/vainglory/wiki/heroes/taka'</span><span class="p">,</span>
- <span class="s">u'vox'</span><span class="p">:</span> <span class="s">u'/vainglory/wiki/heroes/vox'</span><span class="p">}</span></code></pre></div>
+ <span class="s">u'vox'</span><span class="p">:</span> <span class="s">u'/vainglory/wiki/heroes/vox'</span><span class="p">}</span></code></pre>
 
 <p>(Note there that I’m removing a brand new hero:
 <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/skye">Skye</a> as she was
@@ -2555,7 +2625,7 @@ taking the first 2 guides, the first 3 guides etc…</p>
 <p>Here for example is the threats data for <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio">Adagio</a> if you only look at <a href="http://www.vaingloryfire.com/vainglory/guide/unbeatable-adagio-130">this
 first guide</a>:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span></code></pre></div>
+<pre><code class="language-python"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span></code></pre>
 
 <p>Cross referencing that with the order given by the list of heroes above we see
 that <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/skaarf">Skaarf</a> ranks a 7 on the threat meter to <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio">Adagio</a>, and <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/ringo">Ringo</a> and
@@ -2567,7 +2637,7 @@ let me know in the comments).</p>
 
 <p>Here is the threats data for <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/krul">Krul</a>:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span></code></pre></div>
+<pre><code class="language-python"><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span></code></pre>
 
 <p>We see that in this case the only heroes that pose no threat to <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/krul">Krul</a> are
 <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress">Fortress</a> and <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/rona">Rona</a>. Thus if your opponent is playing those heroes
@@ -2613,8 +2683,8 @@ basics of game theory and how Sagemath can be used to find Nash equilibria):</p>
 game</a>
 for a given number of guides:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="k">def</span> <span class="nf">build_game</span><span class="p">(</span><span class="n">row_player_file</span><span class="p">,</span> <span class="n">col_player_file</span><span class="p">):</span>
-<span class="o">....</span><span class="p">:</span>    <span class="s">&quot;&quot;&quot;Import the bi matrices and create the game object&quot;&quot;&quot;</span>
+<pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="k">def</span> <span class="nf">build_game</span><span class="p">(</span><span class="n">row_player_file</span><span class="p">,</span> <span class="n">col_player_file</span><span class="p">):</span>
+<span class="o">....</span><span class="p">:</span>    <span class="s">"""Import the bi matrices and create the game object"""</span>
 <span class="o">....</span><span class="p">:</span>    <span class="n">bi_matrices</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="o">....</span><span class="p">:</span>    <span class="k">for</span> <span class="n">fle</span> <span class="ow">in</span> <span class="p">[</span><span class="n">row_player_file</span><span class="p">,</span> <span class="n">col_player_file</span><span class="p">]:</span>
 <span class="o">....</span><span class="p">:</span>        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fle</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
@@ -2623,9 +2693,9 @@ for a given number of guides:</p>
 <span class="o">....</span><span class="p">:</span>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="o">....</span><span class="p">:</span>
 <span class="o">....</span><span class="p">:</span>    <span class="k">return</span> <span class="n">NormalFormGame</span><span class="p">(</span><span class="n">bi_matrices</span><span class="p">)</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">g</span> <span class="o">=</span> <span class="n">build_game</span><span class="p">(</span><span class="s">&quot;A-01.csv&quot;</span><span class="p">,</span> <span class="s">&quot;B-01.csv&quot;</span><span class="p">)</span></code></pre></div>
+<span class="n">sage</span><span class="p">:</span> <span class="n">g</span> <span class="o">=</span> <span class="n">build_game</span><span class="p">(</span><span class="s">"A-01.csv"</span><span class="p">,</span> <span class="s">"B-01.csv"</span><span class="p">)</span></code></pre>
 
-<p>Using this and the <code>best_response</code> method on Sagemath <code>NormalFormGames</code> we can
+<p>Using this and the <code class="highlighter-rouge">best_response</code> method on Sagemath <code class="highlighter-rouge">NormalFormGames</code> we can
 build up all the best responses (according to a given number of guides) go each
 player. The cool thing is that Sagemath has some awesome graph theory written
 in there so we can transform that in to a nice picture (again: all the code for
@@ -2666,9 +2736,9 @@ need not be a pure strategy and so will at times be a probability vector
 indicating how players should randomly pick a hero. Here for example is the 4th
 equilibrium computed by Sagemath:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">obtain_nash</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s">'lrs'</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+<pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">obtain_nash</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s">'lrs'</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
 <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3947</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3194</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8795</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">615</span><span class="o">/</span><span class="mi">5927</span><span class="p">),</span>
- <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3947</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3194</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8795</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">615</span><span class="o">/</span><span class="mi">5927</span><span class="p">)]</span></code></pre></div>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3947</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3194</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8795</span><span class="o">/</span><span class="mi">17781</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">615</span><span class="o">/</span><span class="mi">5927</span><span class="p">)]</span></code></pre>
 
 <p>This particular equilibria has both players playing a mix of: <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress">Fortress</a>,
 <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive">Glaive</a>, <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/petal">Petal</a> and <a href="http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka">Koshka</a>.</p>
@@ -2799,9 +2869,9 @@ balanced. A perfectly balanced game (like <a href="https://en.wikipedia.org/wiki
 Scissor</a> for example) has a
 Nash Equilibria that evenly plays all strategies:</p>
 
-<div class="highlight"><pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="n">g</span> <span class="o">=</span> <span class="n">game_theory</span><span class="o">.</span><span class="n">normal_form_games</span><span class="o">.</span><span class="n">RPS</span><span class="p">()</span>
+<pre><code class="language-python"><span class="n">sage</span><span class="p">:</span> <span class="n">g</span> <span class="o">=</span> <span class="n">game_theory</span><span class="o">.</span><span class="n">normal_form_games</span><span class="o">.</span><span class="n">RPS</span><span class="p">()</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">obtain_nash</span><span class="p">()</span>
-<span class="p">[[(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)]]</span></code></pre></div>
+<span class="p">[[(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)]]</span></code></pre>
 
 <p>Please do take a look at all the code/data at <a href="https://github.com/drvinceknight/vainglory-analysis">this
 repository</a>.</p>
@@ -5956,130 +6026,6 @@ You can see it <a href="https://github.com/drvinceknight/Axelrod/blob/master/axe
 </div>
 
 </div>
-<div class="daygroup">
-<h2>February 15, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sheaves.github.io/" title="Sheaves">Liang Ze</a></h3>
-
-
-<div class="entrygroup" id="http://sheaves.github.io/Group-Ring-Regular-Representation/">
-<h4><a href="http://sheaves.github.io/Group-Ring-Regular-Representation/">The Group Ring and the Regular Representation</a></h4>
-<div class="entry">
-<div class="content">
-<p>In the <a href="http://sheaves.github.io/Representation-Theory-Decomposing-Representations/" target="_blank">previous post</a>, we saw how to decompose a given group representation into irreducibles. But we still don’t know much about the irreducible representations of a (finite) group. What do they look like? How many are there? Infinitely many?</p>
-
-<p>In this post, we’ll construct the <a href="http://en.wikipedia.org/wiki/Group_ring" target="_blank">group ring</a> of a group. Treating this as a vector space, we get the <a href="http://en.wikipedia.org/wiki/Regular_representation" target="_blank">regular representation</a>, which turns out to contain <em>all</em> the irreducible representations of $G$!</p>
-
-<!--more-->
-
-<h2 id="the-group-ring-fg">The group ring $FG$</h2>
-
-<p>Given a (finite) group $G$ and a field $F$, we can treat each element of $G$ as a basis element of a vector space over $F$. The resulting vector space generated by $g \in G$ is</p>
-
-
-
-<p>Let’s do this is Sage with the group $G = D_4$ and the field $F = \mathbb{Q}$:</p>
-
-<p><em>(The Sage cells in this post are linked, so things may not work if you don’t execute them in order.)</em></p>
-
-<div class="linked">
-  
-</div>
-
-<p>We can view $v \in FG$ as vector in $F^n$, where $n$ is the size of $G$ :</p>
-
-<div class="linked">
-  
-</div>
-
-<p>Here, we’re treating each $g \in G$ as a basis element of $FG$</p>
-
-<div class="linked">
-  
-</div>
-
-<p>Vectors in $FG$ are added component-wise:</p>
-
-
-
-<div class="linked">
-  
-</div>
-
-<h2 id="multiplication-as-a-linear-transformation">Multiplication as a linear transformation</h2>
-
-<p>In fact $FG$ is also a  <em>ring</em> (called the <a href="http://en.wikipedia.org/wiki/Group_ring" target="_blank"><strong>group ring</strong></a>), because we can multiply vectors using the multiplication rule of the group $G$:</p>
-
-
-
-<div class="linked">
-  
-</div>
-
-<p>That wasn’t very illuminating. However, treating multiplication by $v \in FG$ as a function</p>
-
-
-
-<p>one can check that each $T_v$ is a linear transformation! We can thus represent $T_v$ as a matrix whose columns are $T_v(g), g \in G$:</p>
-
-<div class="linked">
-  
-</div>
-
-<h2 id="the-regular-representation">The regular representation</h2>
-
-<p>We’re especially interested in $T_g, g \in G$. These are invertible, with inverse $T_{g^{-1}}$, and their matrices are all permutation matrices, because multiplying by $g \in G$ simply permutes elements of $G$:</p>
-
-<div class="linked">
-  
-</div>
-
-<p>Define a function $\rho_{FG}$ which assigns to each $g\in G$ the corresponding $T_g$:</p>
-
-
-
-<p>Then $(FG,\rho_{FG})$ is the <a href="http://en.wikipedia.org/wiki/Regular_representation" target="_blank"><strong>regular representation</strong></a> of $G$ over $F$.</p>
-
-<p>The regular representation of any non-trivial group is not irreducible. In fact, it is a direct sum of <em>all</em> the irreducible representations of $G$! What’s more, if $(V,\rho)$ is an irreducible representation of $G$ and $\dim V = k$, then $V$ occurs $k$ times in the direct-sum decomposition of $FG$!</p>
-
-<p>Let’s apply the decomposition algorithm in the <a href="http://sheaves.github.io/Representation-Theory-Decomposing-Representations/" target="_blank">previous post</a> to $(FG,\rho_{FG})$ (this might take a while to run):</p>
-
-<div class="sage">
-  
-</div>
-
-<p>So the regular representation of $D_4$ decomposes into four (distinct) $1$-dim representations and two (isomorphic) $2$-dim ones.</p>
-
-<h2 id="building-character">Building character</h2>
-
-<p>We’ve spent a lot of time working directly with representations of a group. While more concrete, the actual matrix representations themselves tend to be a little clumsy, especially when the groups in question get large.</p>
-
-<p>In the next few posts, I’ll switch gears to <a href="http://en.wikipedia.org/wiki/Character_theory" target="_blank">character theory</a>, which is a simpler but more powerful way of working with group representations.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sheaves.github.io/Group-Ring-Regular-Representation/">February 15, 2015 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -6243,7 +6189,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-February 02, 2016 01:30 PM<br>
+February 02, 2016 02:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
