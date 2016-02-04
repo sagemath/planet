@@ -4042,7 +4042,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
   
 &lt;/div&gt;
 
-&lt;p&gt;I’m not putting this in a SageCell because this could take quite a while, especially if you increase the number of frames (by changing the parameters in &lt;code&gt;srange&lt;/code&gt;), but feel free to try it out on your own copy of Sage. It saves an animated GIF that loops forever (&lt;code&gt;iterations = 0&lt;/code&gt;) at the location specified by &lt;code&gt;savefile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I’m not putting this in a SageCell because this could take quite a while, especially if you increase the number of frames (by changing the parameters in &lt;code class=&quot;highlighter-rouge&quot;&gt;srange&lt;/code&gt;), but feel free to try it out on your own copy of Sage. It saves an animated GIF that loops forever (&lt;code class=&quot;highlighter-rouge&quot;&gt;iterations = 0&lt;/code&gt;) at the location specified by &lt;code class=&quot;highlighter-rouge&quot;&gt;savefile&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;For more information, checkout the &lt;a href=&quot;http://www.sagemath.org/doc/reference/plotting/sage/plot/animate.html&quot;&gt;Sage reference for animated plots&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 	<dc:date>2015-03-12T00:00:00+00:00</dc:date>
