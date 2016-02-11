@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-02-11T03:30:13+00:00</updated>
+	<updated>2016-02-11T04:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Open source is now ready to compete with Mathematica for use in the classroom</title>
+		<link href="http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813</id>
+		<updated>2016-02-10T20:22:33+00:00</updated>
+		<content type="html">&lt;span&gt;&lt;span&gt;When I think about what makes SageMath different, one of the most fundamental things is that it was created by people who use it every day. &amp;nbsp;It was created by people doing research math, by people teaching math at universities, and by computer programmers and engineers using it for research. &amp;nbsp;It was created by people who really understand computational problems because we live them. &amp;nbsp;We understand the needs of math research, teaching courses, and managing an open source project that users can contribute to and customize to work for their own unique needs.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The tools we were using, like Mathematica, are clunky, very expensive, and just don't do everything we need. &amp;nbsp;And worst of all, they are closed source software, meaning that you can't even see how they work, and can't modify them to do what you really need. &amp;nbsp;For teaching math, professors get bogged down scheduling computer labs and arranging for their students to buy and install expensive software.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I started SageMath as an open source project at Harvard in 2004, to solve the problem that other math software is expensive, closed source, and limited in functionality, and to create a powerful tool for the students in my classes. &amp;nbsp;It wasn't a project that was intended initially as something to be used by hundred of thousands of people. &amp;nbsp;But as I got into the project and as more professors and students started contributing to the project, I could clearly see that these weren't just problems that pissed me off, they were problems that made everyone angry.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The scope of SageMath rapidly expanded. &amp;nbsp;Our mission evolved to create a free open source serious competitor to Mathematica and similar closed software that the mathematics community was collective spending hundreds of millions of dollars on every year. After a decade of work by over 500 contributors, we made huge progress.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;But installing SageMath was more difficult than ever. &amp;nbsp;It was at that point that I decided I needed to do something so that this groundbreaking software that people desperately needed could be shared with the world.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I created SageMathCloud, which is an extremely powerful web-based collaborative way for people to easily use SageMath and other open source software such as LaTeX, R, and Jupyter notebooks easily in their teaching &amp;nbsp;and research. &amp;nbsp; I created SageMathCloud based on nearly two decades of experience using math software in the classroom and online, at Harvard, UC San Diego, and University of Washington.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;SageMathCloud is commercial grade, hosted in Google's cloud, and very large classes are using it heavily right now. &amp;nbsp;It solves the installation problem by avoiding it altogether. &amp;nbsp;It is entirely open source.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;Open source is now ready to directly compete with Mathematica for use&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;in the classroom. &amp;nbsp;They told us we could never make something&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;good enough for mass adoption, but we have made something even better. &amp;nbsp;For the first time, we're making it possible for you to easily use Python and R in your teaching instead of Mathematica; these are industry standard mainstream open source programming languages with strong support from Google, Microsoft and other industry leaders. &amp;nbsp; For the first time, we're making it possible for you to collaborate in real time and manage your course online using the same cutting edge software used by elite mathematicians at the best universities in the world.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;A huge community in academia and in industry are all working together to make open source math software better at a breathtaking pace, and the traditional closed development model just can't keep up.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-02-11T04:30:06+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Playing against a mixed strategy in class</title>
@@ -292,7 +312,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -312,7 +332,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1449,7 +1469,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1682,7 +1702,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-02-11T03:30:11+00:00</updated>
+			<updated>2016-02-11T04:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -1860,7 +1880,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1880,7 +1900,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2212,7 +2232,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2232,7 +2252,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2634,7 +2654,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2777,7 +2797,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3026,7 +3046,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3290,7 +3310,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3309,7 +3329,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3801,7 +3821,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3820,7 +3840,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3839,7 +3859,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-11T03:30:12+00:00</updated>
+			<updated>2016-02-11T04:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3906,7 +3926,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-11T03:30:05+00:00</updated>
+			<updated>2016-02-11T04:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4810,390 +4830,6 @@ We went ahead with this and used \(delta=.25\): so the game had a less chance of
 
 &lt;p&gt;The tie at the end was settled with a game of Rock Paper Scissors Lizard Spock which actually gave place to a rematch of the &lt;a href=&quot;http://vknight.org/unpeudemath/pedagogy/2015/02/13/rock-paper-scissors-lizard-spock/&quot;&gt;Rock Paper Scissors Lizard Spock tournament&lt;/a&gt; we played earlier.
 Except this time Laura, lost her crown :)&lt;/p&gt;</content>
-		<author>
-			<name>Vince Knight</name>
-			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
-		</author>
-		<source>
-			<title type="html">Un peu de math</title>
-			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
-			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
-			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-04T17:30:07+00:00</updated>
-		</source>
-	</entry>
-
-	<entry xml:lang="en">
-		<title type="html">Arnoux-Rauzy-Poincaré sequences</title>
-		<link href="http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences"/>
-		<id>http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences</id>
-		<updated>2015-02-26T16:22:00+00:00</updated>
-		<content type="html">&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;In a recent article with Valérie Berthé &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#bl15&quot; id=&quot;id1&quot;&gt;[BL15]&lt;/a&gt;, we provided a multidimensional
-continued fraction algorithm called Arnoux-Rauzy-Poincaré (ARP) to construct,
-given any vector \(v\in\mathbb{R}_+^3\), an infinite word
-\(w\in\{1,2,3\}^\mathbb{N}\) over a three-letter alphabet such that the
-frequencies of letters in \(w\) exists and are equal to \(v\) and such that
-the number of factors (i.e.  finite block of consecutive letters) of length
-\(n\) appearing in \(w\) is linear and less than \(\frac{5}{2}n+1\). We
-also conjecture that for almost all \(v\) the contructed word describes a
-discrete path in the positive octant staying at a bounded distance from the
-euclidean line of direction \(v\).&lt;/p&gt;
-&lt;p&gt;In Sage, you can construct this word using the next version of my package
-slabbe-0.2 (not released yet, email me to press me to finish it). The one with
-frequencies of letters proportionnal to \((1, e, \pi)\) is:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe.mcf import algo
-sage: D = algo.arp.substitutions()
-sage: it = algo.arp.coding_iterator((1,e,pi))
-sage: w = words.s_adic(it, repeat(1), D)
-word: 1232323123233231232332312323123232312323...
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The factor complexity is close to 2n+1 and the balance is often less or equal
-to three:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: w[:10000].number_of_factors(100)
-202
-sage: w[:100000].number_of_factors(1000)
-2002
-sage: w[:1000].balance()
-3
-sage: w[:2000].balance()
-3
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Note that bounded distance from the euclidean line almost surely was proven in
-&lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#dhs2013&quot; id=&quot;id2&quot;&gt;[DHS2013]&lt;/a&gt; for Brun algorithm, another MCF algorithm.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Other approaches: Standard model and billiard sequences&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Other approaches have been proposed to construct such discrete lines.&lt;/p&gt;
-&lt;p&gt;One of them is the standard model of Eric Andres &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#a03&quot; id=&quot;id3&quot;&gt;[A03]&lt;/a&gt;. It is also equivalent
-to billiard sequences in the cube. It is well known that the factor complexity
-of billiard sequences is quadratic \(p(n)=n^2+n+1\) &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#amst94&quot; id=&quot;id4&quot;&gt;[AMST94]&lt;/a&gt;.
-Experimentally, we can verify this. We first create a billiard word of some
-given direction:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from slabbe import BilliardCube
-sage: v = vector(RR, (1, e, pi))
-sage: b = BilliardCube(v)
-sage: b
-Cubic billiard of direction (1.00000000000000, 2.71828182845905, 3.14159265358979)
-sage: w = b.to_word()
-sage: w
-word: 3231232323123233213232321323231233232132...
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;We create some prefixes of \(w\) that we represent internally as &lt;tt class=&quot;docutils literal&quot;&gt;char*&lt;/tt&gt;.
-The creation is slow because the implementation of billiard words in my
-optional package is in Python and is not that efficient:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3 = Word(w[:10^3], alphabet=[1,2,3], datatype='char')
-sage: p4 = Word(w[:10^4], alphabet=[1,2,3], datatype='char') # takes 3s
-sage: p5 = Word(w[:10^5], alphabet=[1,2,3], datatype='char') # takes 32s
-sage: p6 = Word(w[:10^6], alphabet=[1,2,3], datatype='char') # takes 5min 20s
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;We see below that exactly \(n^2+n+1\) factors of length \(n&amp;lt;20\) appears in
-the prefix of length 1000000 of \(w\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: A = ['n'] + range(30)
-sage: c3 = ['p_(w[:10^3])(n)'] + map(p3.number_of_factors, range(30))
-sage: c4 = ['p_(w[:10^4])(n)'] + map(p4.number_of_factors, range(30))
-sage: c5 = ['p_(w[:10^5])(n)'] + map(p5.number_of_factors, range(30)) # takes 4s
-sage: c6 = ['p_(w[:10^6])(n)'] + map(p6.number_of_factors, range(30)) # takes 49s
-sage: ref = ['n^2+n+1'] + [n^2+n+1 for n in range(30)]
-sage: T = table(columns=[A,c3,c4,c5,c6,ref])
-sage: T
-  n    p_(w[:10^3])(n)   p_(w[:10^4])(n)   p_(w[:10^5])(n)   p_(w[:10^6])(n)   n^2+n+1
-+----+-----------------+-----------------+-----------------+-----------------+---------+
-  0    1                 1                 1                 1                 1
-  1    3                 3                 3                 3                 3
-  2    7                 7                 7                 7                 7
-  3    13                13                13                13                13
-  4    21                21                21                21                21
-  5    31                31                31                31                31
-  6    43                43                43                43                43
-  7    52                55                56                57                57
-  8    63                69                71                73                73
-  9    74                85                88                91                91
-  10   87                103               107               111               111
-  11   100               123               128               133               133
-  12   115               145               151               157               157
-  13   130               169               176               183               183
-  14   144               195               203               211               211
-  15   160               223               232               241               241
-  16   176               253               263               273               273
-  17   192               285               296               307               307
-  18   208               319               331               343               343
-  19   224               355               368               381               381
-  20   239               392               407               421               421
-  21   254               430               448               463               463
-  22   268               470               491               507               507
-  23   282               510               536               553               553
-  24   296               552               583               601               601
-  25   310               596               632               651               651
-  26   324               642               683               703               703
-  27   335               687               734               757               757
-  28   345               734               787               813               813
-  29   355               783               842               871               871
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Billiard sequences generate paths that are at a bounded distance from an
-euclidean line. This is equivalent to say that the balance is finite. The
-balance is defined as the supremum value of difference of the number of
-apparition of a letter in two factors of the same length. For billiard
-sequences, the balance is 2:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: p3.balance()
-2
-sage: p4.balance() # takes 2min 37s
-2
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Other approaches: Melançon and Reutenauer&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Melançon and Reutenauer &lt;a class=&quot;citation-reference&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#mr13&quot; id=&quot;id5&quot;&gt;[MR13]&lt;/a&gt; also suggested a method that generalizes
-Christoffel words in higher dimension. The construction is based on the
-application of two substitutions generalizing the construction of sturmian
-sequences. Below we compute the factor complexity and the balance of some of
-their words over a three-letter alphabet.&lt;/p&gt;
-&lt;p&gt;On a three-letter alphabet, the two morphisms are:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: L = WordMorphism('1-&amp;gt;1,2-&amp;gt;13,3-&amp;gt;2')
-sage: R = WordMorphism('1-&amp;gt;13,2-&amp;gt;2,3-&amp;gt;3')
-sage: L
-WordMorphism: 1-&amp;gt;1, 2-&amp;gt;13, 3-&amp;gt;2
-sage: R
-WordMorphism: 1-&amp;gt;13, 2-&amp;gt;2, 3-&amp;gt;3
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 1: periodic case \(LRLRLRLRLR\dots\). In this example, the factor
-complexity seems to be around \(p(n)=2.76n\) and the balance is at least 28:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: from itertools import repeat, cycle
-sage: W = words.s_adic(cycle((L,R)),repeat('1'))
-sage: W
-word: 1213122121313121312212212131221213131213...
-sage: map(W[:10000].number_of_factors, [10,20,40,80])
-[27, 54, 110, 221]
-sage: [27/10., 54/20., 110/40., 221/80.]
-[2.70000000000000, 2.70000000000000, 2.75000000000000, 2.76250000000000]
-sage: W[:1000].balance()  # takes 1.6s
-21
-sage: W[:2000].balance()  # takes 6.4s
-28
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 2: \(RLR^2LR^4LR^8LR^{16}LR^{32}LR^{64}LR^{128}\dots\) taken from
-the conclusion of their article. In this example, the factor complexity seems
-to be \(p(n)=3n\) and balance at least as high (=bad) as \(122\):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: W = words.s_adic([R,L,R,R,L,R,R,R,R,L]+[R]*8+[L]+[R]*16+[L]+[R]*32+[L]+[R]*64+[L]+[R]*128,'1')
-sage: W.length()
-330312
-sage: map(W.number_of_factors, [10, 20, 100, 200, 300, 1000])
-[29, 57, 295, 595, 895, 2981]
-sage: [29/10., 57/20., 295/100., 595/200., 895/300., 2981/1000.]
-[2.90000000000000,
- 2.85000000000000,
- 2.95000000000000,
- 2.97500000000000,
- 2.98333333333333,
- 2.98100000000000]
-sage: W[:1000].balance()  # takes 1.6s
-122
-sage: W[:2000].balance()  # takes 6s
-122
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Example 3: some random ones. The complexity \(p(n)/n\) occillates between 2
-and 3 for factors of length \(n=1000\) in prefixes of length 100000:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
-....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
-....:     print W[:100000].number_of_factors(1000)/1000.
-2.02700000000000
-2.23600000000000
-2.74000000000000
-2.21500000000000
-2.78700000000000
-2.52700000000000
-2.85700000000000
-2.33300000000000
-2.65500000000000
-2.51800000000000
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;For ten randomly generated words, the balance goes from 6 to 27 which is much
-more than what is obtained for billiard words or by our approach:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage: for _ in range(10):
-....:     W = words.s_adic([choice((L,R)) for _ in range(50)],'1')
-....:     print W[:1000].balance(), W[:2000].balance()
-12 15
-8 24
-14 14
-5 11
-17 17
-14 14
-6 6
-19 27
-9 16
-12 12
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;div class=&quot;section&quot; id=&quot;references&quot;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;bl15&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id1&quot;&gt;[BL15]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;V. Berthé, S. Labbé,
-Factor Complexity of S-adic words generated by the Arnoux-Rauzy-Poincaré Algorithm,
-&lt;em&gt;Advances in Applied Mathematics&lt;/em&gt; 63 (2015) 90-130.
-&lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.aam.2014.11.001&quot;&gt;http://dx.doi.org/10.1016/j.aam.2014.11.001&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;dhs2013&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id2&quot;&gt;[DHS2013]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Delecroix, Vincent, Tomás Hejda, and Wolfgang Steiner. “Balancedness of
-Arnoux-Rauzy and Brun Words.” In Combinatorics on Words, 119–31. Springer,
-2013. &lt;a class=&quot;reference external&quot; href=&quot;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&quot;&gt;http://link.springer.com/chapter/10.1007/978-3-642-40579-2_14&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;a03&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id3&quot;&gt;[A03]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;E. Andres,
-Discrete linear objects in dimension n: the standard model,
-Graphical Models 65 (2003) 92-111.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;amst94&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id4&quot;&gt;[AMST94]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;P. Arnoux, C. Mauduit, I. Shiokawa, J. I. Tamura,
-Complexity of sequences defined by billiards in the cube,
-Bull. Soc. Math. France 122 (1994) 1-12.&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class=&quot;docutils citation&quot; frame=&quot;void&quot; id=&quot;mr13&quot; rules=&quot;none&quot;&gt;
-&lt;colgroup&gt;&lt;col class=&quot;label&quot; /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign=&quot;top&quot;&gt;
-&lt;tr&gt;&lt;td class=&quot;label&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;http://www.slabbe.org/blogue/2015/02/arnoux-rauzy-poincare-sequences#id5&quot;&gt;[MR13]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;G. Melançon, C. Reutenauer,
-On a class of Lyndon words extending Christoffel words and related to a
-multidimensional continued fraction algorithm.
-J. Integer Seq. 16, No. 9, Article 13.9.7, 30 p., electronic only (2013).
-&lt;a class=&quot;reference external&quot; href=&quot;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&quot;&gt;https://cs.uwaterloo.ca/journals/JIS/VOL16/Reutenauer/reut3.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-		<author>
-			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
-		</author>
-		<source>
-			<title type="html">Sébastien Labbé</title>
-			<subtitle type="html">Sébastien Labbé</subtitle>
-			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
-			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2016-02-03T13:30:07+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">This class teaches me to not trust my classmates: An iterated prisoners dilemma in class</title>
-		<link href="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/"/>
-		<id>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/</id>
-		<updated>2015-02-26T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;On Monday, in class we played an iterated prisoner’s dilemma tournament.
-I have done this many times (both in outreach events with &lt;a href=&quot;http://www.profpaulharper.com/&quot;&gt;Paul Harper&lt;/a&gt; and in this class).
-This is always a lot of fun but none more so than last year when Paul’s son Thomas joined us.
-You can read about that one &lt;a href=&quot;http://drvinceknight.blogspot.co.uk/2014/02/iterated-prisoners-dilemma-tournament.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The format of the game is as close to that of Axelrod’s original tournament as I think it can be.
-I split the class in to 4 teams and we create a round robin where each team plays every other team at 8 consecutive rounds of the prisoner’s dilemma:&lt;/p&gt;
-
-
-
-&lt;p&gt;The utilities represent ‘years in prison’ and over the 3 matches that each team will play (against every other team) the goal is to reduce the total amount of time spent in prison.&lt;/p&gt;
-
-&lt;p&gt;Here are some photos from the game:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here are the scores:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_results.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We see that ‘We will take the gun’ acquired the least total score and so they won the collection of cookies etc…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_cookies.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(The names followed a promise from me to let the team with the coolest name have a nerf gun… Can’t say this had the wanted effect…)&lt;/p&gt;
-
-&lt;p&gt;At one point during the tournament, one team actually almost declared a strategy which was cool:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We will cooperate until you defect at which point we will reevaluate&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This was pretty cool as I hadn’t discussed at all what a strategy means in a repeated game (ie I had not discussed the fact that a strategy in a repeated game takes count of both play histories).&lt;/p&gt;
-
-&lt;p&gt;Here are all the actual duels:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/pd_2015_duels.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You’ll also notice at the end that a coalition formed and one team agreed to defect so that they could share the prize.
-This happens about 50% of the time when we play this game but I never cease to be amused by it.
-Hopefully everyone found this fun and perhaps some even already agree with a bit of feedback I received on this course last year:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;‘This class teaches me to not trust my classmates’&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;One of the other really cool things that happened after this class was H asking for a hand to submit a strategy to my Axelrod repository.
-She built a strategy called ‘Once Bitten’ that performs pretty well!
-You can see it &lt;a href=&quot;https://github.com/drvinceknight/Axelrod/blob/master/axelrod/strategies/oncebitten.py&quot;&gt;here&lt;/a&gt; (click on ‘Blame’ and you can see the code that she wrote).&lt;/p&gt;
-
-&lt;p&gt;(Big thanks to Jason for keeping track of the scores and to Geraint for helping and grabbing some nice pictures)&lt;/p&gt;</content>
 		<author>
 			<name>Vince Knight</name>
 			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
