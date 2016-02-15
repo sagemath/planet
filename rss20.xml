@@ -8,6 +8,50 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>Vince Knight: Rock paper scissors lizard spock tournament (2016 edition)</title>
+	<guid>http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/15/rock-paper-scissors-lizard-spock-2016/</guid>
+	<link>http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/15/rock-paper-scissors-lizard-spock-2016/</link>
+	<description>&lt;p&gt;This post is a brief repetition of &lt;a href=&quot;http://vknight.org/unpeudemath/pedagogy/2015/02/13/rock-paper-scissors-lizard-spock/&quot;&gt;this post from last
+year&lt;/a&gt;
+detailing results from the 16 person knock out &lt;a href=&quot;http://bigbangtheory.wikia.com/wiki/Rock_Paper_Scissors_Lizard_Spock&quot;&gt;Rock Paper Scissors Lizard Spock&lt;/a&gt; tournament we played the other day.&lt;/p&gt;
+
+&lt;p&gt;If you are not familiar with &lt;a href=&quot;http://bigbangtheory.wikia.com/wiki/Rock_Paper_Scissors_Lizard_Spock&quot;&gt;Rock Paper Scissors Lizard Spock&lt;/a&gt; this is a good video that explains it:&lt;/p&gt;
+
+&lt;div class=&quot;video&quot;&gt;
+    
+        
+    
+&lt;/div&gt;
+
+&lt;p&gt;Here is how the game went (thanks to Geraint for noting everything down and Saniya for grabbing the pictures!):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/plot_rpsls_2016.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a plot of the strategies played during the 1st, 2nd and 3rd rounds:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/round1_2016.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/round2_2016.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/round3_2016.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The overall strategy profile played is here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/allstrategies_2016.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exactly like last year&lt;/strong&gt; we are not exactly at Nash equilibria.
+In fact it seems that Scissors and Rock are being played a bit more often, so someone entering in to this game should respond by playing Spock (he vaporises Rock and smashes Scissors).&lt;/p&gt;
+
+&lt;p&gt;Here are the strategies that at some point won a duel:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/winningstrategies_2016.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and here are the losing strategies:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/losingstrategies_2016.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hopefully my class found this interesting and fun.&lt;/p&gt;</description>
+	<pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>William Stein: Open source is now ready to compete with Mathematica for use in the classroom</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813</guid>
 	<link>http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html</link>
