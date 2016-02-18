@@ -54,6 +54,127 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>February 18, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring">unsupported operand parent for *, Matrix over number field, vector over symbolic ring</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>Yesterday I received this email (in french):</p>
+
+
+<div class="pygments_manni"><pre>Salut,
+avec Thomas on a une question bête:
+
+K.&lt;x&gt;=NumberField(x*x-x-1)
+
+J'aimerais multiplier une matrice avec des coefficients en x par un vecteur
+contenant des variables a et b.  Il dit &quot;unsupported operand parent for *,
+Matrix over number field, vector over symbolic ring&quot;
+
+Est ce grave ?
+</pre></div>
+
+
+
+<p>Here is my answer. Indeed, in Sage, symbolic variables can't multiply with
+elements in an Number Field in x:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'x'</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">K</span><span class="o">.&lt;</span><span class="n">x</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="n">parent</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="s">'*'</span><span class="p">:</span> <span class="s">'Symbolic Ring'</span> <span class="ow">and</span>
+<span class="s">'Number Field in x with defining polynomial x^2 - x - 1'</span>
+</pre></div>
+
+
+
+<p>But, we can define a polynomial ring with variables in a,b and coefficients in
+the NumberField. Then, we are able to multiply <tt class="docutils literal">a</tt> with <tt class="docutils literal">x</tt>:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'x'</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">K</span><span class="o">.&lt;</span><span class="n">x</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">K</span>
+<span class="n">Number</span> <span class="n">Field</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">with</span> <span class="n">defining</span> <span class="n">polynomial</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">R</span><span class="o">.&lt;</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">R</span>
+<span class="n">Multivariate</span> <span class="n">Polynomial</span> <span class="n">Ring</span> <span class="ow">in</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="n">over</span> <span class="n">Number</span> <span class="n">Field</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">with</span>
+<span class="n">defining</span> <span class="n">polynomial</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span>
+<span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">a</span>
+</pre></div>
+
+
+
+<p>With two square brackets, we obtain powers series:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">R</span><span class="o">.&lt;</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">K</span><span class="p">[[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">]]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">R</span>
+<span class="n">Multivariate</span> <span class="n">Power</span> <span class="n">Series</span> <span class="n">Ring</span> <span class="ow">in</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="n">over</span> <span class="n">Number</span> <span class="n">Field</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">with</span>
+<span class="n">defining</span> <span class="n">polynomial</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">b</span>
+<span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+</pre></div>
+
+
+
+<p>It works with matrices:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">MS</span> <span class="o">=</span> <span class="n">MatrixSpace</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">MS</span>
+<span class="n">Full</span> <span class="n">MatrixSpace</span> <span class="n">of</span> <span class="mi">2</span> <span class="n">by</span> <span class="mi">2</span> <span class="n">dense</span> <span class="n">matrices</span> <span class="n">over</span> <span class="n">Multivariate</span> <span class="n">Power</span>
+<span class="n">Series</span> <span class="n">Ring</span> <span class="ow">in</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="n">over</span> <span class="n">Number</span> <span class="n">Field</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">with</span> <span class="n">defining</span> <span class="n">polynomial</span>
+<span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">MS</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">])</span>
+<span class="p">[</span>  <span class="mi">0</span>   <span class="n">a</span><span class="p">]</span>
+<span class="p">[</span>  <span class="n">b</span> <span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">MS</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">])</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">MS</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">])</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">m1</span> <span class="o">+</span> <span class="n">m2</span> <span class="o">*</span> <span class="n">m1</span>
+<span class="p">[</span>              <span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>       <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">]</span>
+<span class="p">[</span>                <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">b</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+
+
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring">by Sébastien Labbé at February 18, 2016 09:30 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>February 15, 2016</h2>
 
 <div class="channelgroup">
@@ -1165,7 +1286,7 @@ question and run the second script with the <code class="highlighter-rouge">-B</
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/11/slabbe-0.2.spkg-released" lang="en">
@@ -2329,7 +2450,7 @@ Here is <a href="http://www.sagemath.org/">SageMath</a>'s strategy, or at least 
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" lang="en">
@@ -5878,7 +5999,7 @@ maintainer</a>.
 <a href="http://amca01.wordpress.com/category/sage/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="internal server error">Alasdair McAndrew</a>
 </li>
 <li>
-<a href="http://aghitza.org/tags/sage/index.rss" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="408: request timeout">Alex Ghitza</a>
+<a href="http://aghitza.org/tags/sage/index.rss" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="404: not found">Alex Ghitza</a>
 </li>
 <li>
 <a href="http://knotsknotted.wordpress.com/category/gsoc/feed/" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://knotsknotted.wordpress.com/" class="message" title="internal server error">Amit Jamadagni</a>
@@ -5971,7 +6092,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" title="Sage – The Matroid Union">The Matroid Union</a>
@@ -5983,10 +6104,10 @@ maintainer</a>.
 <a href="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://broniks.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Verónica Suaste Morales</a>
 </li>
 <li>
-<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
+<a href="http://vknight.org/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
 </li>
 <li>
-<a href="http://vknight.org/unpeudemath/feed.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.github.io/unpeudemath/" title="Un peu de math">Vince Knight</a>
+<a href="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://drvinceknight.blogspot.com/search/label/Sage" class="message" title="no activity in 356 days">Vince Knight</a>
 </li>
 <li>
 <a href="http://sagemath.blogspot.com/feeds/posts/default" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a>
@@ -6007,7 +6128,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-February 18, 2016 08:32 AM<br>
+February 18, 2016 09:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
