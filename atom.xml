@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-02-19T22:30:12+00:00</updated>
+	<updated>2016-02-19T23:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry xml:lang="en">
@@ -193,14 +193,14 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 &lt;p&gt;In subsequent posts, I’ll talk more about defining other non-commutative algebras in Sage and Singular.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2016-02-18T10:30:09+00:00</updated>
+			<updated>2016-02-19T23:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -276,7 +276,7 @@ In fact it seems that Scissors and Rock are being played a bit more often, so so
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -564,7 +564,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -584,7 +584,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1721,7 +1721,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1954,7 +1954,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-02-19T22:30:11+00:00</updated>
+			<updated>2016-02-19T23:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2132,7 +2132,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2152,7 +2152,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2484,7 +2484,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2504,7 +2504,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2906,7 +2906,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -3049,7 +3049,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3298,7 +3298,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3562,7 +3562,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3581,7 +3581,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4073,7 +4073,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4092,7 +4092,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4111,7 +4111,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-19T22:30:12+00:00</updated>
+			<updated>2016-02-19T23:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4178,7 +4178,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-19T22:30:06+00:00</updated>
+			<updated>2016-02-19T23:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -4794,14 +4794,14 @@ So whilst that individual did not get any in, they contributed an important part
 &lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; The promised “next post” about these topics never happened. Maybe sometime in the far future, I might come back to these topics, but no promises for now!&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2016-02-18T10:30:09+00:00</updated>
+			<updated>2016-02-19T23:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -5013,14 +5013,14 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 &lt;p&gt;For more information, checkout the &lt;a href=&quot;http://www.sagemath.org/doc/reference/plotting/sage/plot/animate.html&quot;&gt;Sage reference for animated plots&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
+			<uri>http://sheaves.github.io</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
 			<subtitle type="html">Making math concrete with Sage</subtitle>
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2016-02-18T10:30:09+00:00</updated>
+			<updated>2016-02-19T23:30:11+00:00</updated>
 		</source>
 	</entry>
 
