@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-02-22T16:30:28+00:00</updated>
+	<updated>2016-02-22T17:30:27+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Open source is now ready to compete with Mathematica for use in the classroom</title>
+		<link href="http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813</id>
+		<updated>2016-02-22T08:49:31+00:00</updated>
+		<content type="html">&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;When I think about what makes SageMath different, one of the most fundamental things is that it was created by people who use it every day. &amp;nbsp;It was created by people doing research math, by people teaching math at universities, and by computer programmers and engineers using it for research. &amp;nbsp;It was created by people who really understand computational problems because we live them. &amp;nbsp;We understand the needs of math research, teaching courses, and managing an open source project that users can contribute to and customize to work for their own unique needs.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The tools we were using, like Mathematica, are clunky, very expensive, and just don't do everything we need. &amp;nbsp;And worst of all, they are closed source software, meaning that you can't even see how they work, and can't modify them to do what you really need. &amp;nbsp;For teaching math, professors get bogged down scheduling computer labs and arranging for their students to buy and install expensive software.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I started SageMath as an open source project at Harvard in 2004, to solve the problem that other math software is expensive, closed source, and limited in functionality, and to create a powerful tool for the students in my classes. &amp;nbsp;It wasn't a project that was intended initially as something to be used by hundred of thousands of people. &amp;nbsp;But as I got into the project and as more professors and students started contributing to the project, I could clearly see that these weren't just problems that pissed me off, they were problems that made everyone angry.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The scope of SageMath rapidly expanded. &amp;nbsp;Our mission evolved to create a free open source serious competitor to Mathematica and similar closed software that the mathematics community was collective spending hundreds of millions of dollars on every year. After a decade of work by over 500 contributors, we made huge progress.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;But installing SageMath was more difficult than ever. &amp;nbsp;It was at that point that I decided I needed to do something so that this groundbreaking software that people desperately needed could be shared with the world.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I created SageMathCloud, which is an extremely powerful web-based collaborative way for people to easily use SageMath and other open source software such as LaTeX, R, and Jupyter notebooks easily in their teaching &amp;nbsp;and research. &amp;nbsp; I created SageMathCloud based on nearly two decades of experience using math software in the classroom and online, at Harvard, UC San Diego, and University of Washington.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;SageMathCloud is commercial grade, hosted in Google's cloud, and very large classes are using it heavily right now. &amp;nbsp;It solves the installation problem by avoiding it altogether. &amp;nbsp;It is entirely open source.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;Open source is now ready to directly compete with Mathematica for use&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;in the classroom. &amp;nbsp;They told us we could never make something&amp;nbsp;&lt;/span&gt;&lt;span&gt;good enough for mass adoption, but we have made something even better. &amp;nbsp;For the first time, we're making it possible for you to easily use Python and R in your teaching instead of Mathematica; these are industry standard mainstream open source programming languages with strong support from Google, Microsoft and other industry leaders. &amp;nbsp; For the first time, we're making it possible for you to collaborate in real time and manage your course online using the same cutting edge software used by elite mathematicians at the best universities in the world.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;A huge community in academia and in industry are all working together to make open source math software better at a breathtaking pace, and the traditional closed development model just can't keep up.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=11078220&quot; target=&quot;_blank&quot;&gt;Hacker News&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/math/comments/45q7j1/sagemath_open_source_is_now_ready_to_compete_with/&quot; target=&quot;_blank&quot;&gt;Reddit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-02-22T17:30:09+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Iterated Prisoners dilemma tournament in class (2016 edition)</title>
@@ -314,26 +334,6 @@ In fact it seems that Scissors and Rock are being played a bit more often, so so
 	</entry>
 
 	<entry>
-		<title type="html">Open source is now ready to compete with Mathematica for use in the classroom</title>
-		<link href="http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813</id>
-		<updated>2016-02-14T15:42:03+00:00</updated>
-		<content type="html">&lt;span&gt;&lt;span&gt;When I think about what makes SageMath different, one of the most fundamental things is that it was created by people who use it every day. &amp;nbsp;It was created by people doing research math, by people teaching math at universities, and by computer programmers and engineers using it for research. &amp;nbsp;It was created by people who really understand computational problems because we live them. &amp;nbsp;We understand the needs of math research, teaching courses, and managing an open source project that users can contribute to and customize to work for their own unique needs.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The tools we were using, like Mathematica, are clunky, very expensive, and just don't do everything we need. &amp;nbsp;And worst of all, they are closed source software, meaning that you can't even see how they work, and can't modify them to do what you really need. &amp;nbsp;For teaching math, professors get bogged down scheduling computer labs and arranging for their students to buy and install expensive software.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I started SageMath as an open source project at Harvard in 2004, to solve the problem that other math software is expensive, closed source, and limited in functionality, and to create a powerful tool for the students in my classes. &amp;nbsp;It wasn't a project that was intended initially as something to be used by hundred of thousands of people. &amp;nbsp;But as I got into the project and as more professors and students started contributing to the project, I could clearly see that these weren't just problems that pissed me off, they were problems that made everyone angry.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;The scope of SageMath rapidly expanded. &amp;nbsp;Our mission evolved to create a free open source serious competitor to Mathematica and similar closed software that the mathematics community was collective spending hundreds of millions of dollars on every year. After a decade of work by over 500 contributors, we made huge progress.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;But installing SageMath was more difficult than ever. &amp;nbsp;It was at that point that I decided I needed to do something so that this groundbreaking software that people desperately needed could be shared with the world.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;So I created SageMathCloud, which is an extremely powerful web-based collaborative way for people to easily use SageMath and other open source software such as LaTeX, R, and Jupyter notebooks easily in their teaching &amp;nbsp;and research. &amp;nbsp; I created SageMathCloud based on nearly two decades of experience using math software in the classroom and online, at Harvard, UC San Diego, and University of Washington.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;SageMathCloud is commercial grade, hosted in Google's cloud, and very large classes are using it heavily right now. &amp;nbsp;It solves the installation problem by avoiding it altogether. &amp;nbsp;It is entirely open source.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;Open source is now ready to directly compete with Mathematica for use&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;in the classroom. &amp;nbsp;They told us we could never make something&amp;nbsp;&lt;/span&gt;&lt;span&gt;good enough for mass adoption, but we have made something even better. &amp;nbsp;For the first time, we're making it possible for you to easily use Python and R in your teaching instead of Mathematica; these are industry standard mainstream open source programming languages with strong support from Google, Microsoft and other industry leaders. &amp;nbsp; For the first time, we're making it possible for you to collaborate in real time and manage your course online using the same cutting edge software used by elite mathematicians at the best universities in the world.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;A huge community in academia and in industry are all working together to make open source math software better at a breathtaking pace, and the traditional closed development model just can't keep up.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=11078220&quot; target=&quot;_blank&quot;&gt;Hacker News&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/math/comments/45q7j1/sagemath_open_source_is_now_ready_to_compete_with/&quot; target=&quot;_blank&quot;&gt;Reddit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
 		<title type="html">Playing against a mixed strategy in class</title>
 		<link href="http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/04/playing_against_a_mixed_strategy_in_class/"/>
 		<id>http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/04/playing_against_a_mixed_strategy_in_class/</id>
@@ -617,7 +617,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -637,7 +637,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -1774,7 +1774,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -1793,7 +1793,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2016-02-22T16:30:08+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -2007,7 +2007,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-02-22T16:30:27+00:00</updated>
+			<updated>2016-02-22T17:30:25+00:00</updated>
 		</source>
 	</entry>
 
@@ -2185,7 +2185,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -2205,7 +2205,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -2537,7 +2537,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -2557,7 +2557,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -2959,7 +2959,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -3102,7 +3102,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -3351,7 +3351,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -3615,7 +3615,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -3634,7 +3634,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -4126,7 +4126,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -4145,7 +4145,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -4164,7 +4164,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T16:30:28+00:00</updated>
+			<updated>2016-02-22T17:30:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -4231,7 +4231,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T16:30:09+00:00</updated>
+			<updated>2016-02-22T17:30:09+00:00</updated>
 		</source>
 	</entry>
 
