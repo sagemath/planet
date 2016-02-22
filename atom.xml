@@ -5,8 +5,61 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-02-22T08:30:19+00:00</updated>
+	<updated>2016-02-22T09:30:17+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Iterated Prisoners dilemma tournament in class (2016 edition)</title>
+		<link href="http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/22/Iterated-prisoners-dilemma-tournament-in-class-2016/"/>
+		<id>http://drvinceknight.github.io/unpeudemath/pedagogy/2016/02/22/Iterated-prisoners-dilemma-tournament-in-class-2016/</id>
+		<updated>2016-02-22T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;Last week we introduced repeated games by playing an iterated prisoners dilemma
+tournament in class. This post, &lt;a href=&quot;http://vknight.org/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/&quot;&gt;mirrors this similar one from last
+year&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The basic idea is for students to split in to 4 teams and play a repeated
+iteration of the following game:&lt;/p&gt;
+
+
+
+&lt;p&gt;The teams play 5 rounds (which is slightly different to last year).&lt;/p&gt;
+
+&lt;p&gt;This year (as very often happens) two coalitions formed at the end of the
+tournament as there was a box of chocolates on offer.&lt;/p&gt;
+
+&lt;p&gt;You can see the results of each duel and overall in the following photo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/lOEgrjz3F79SE_bUN7VN_5frUW7SnBT5IxFsE_j-HEM7ODFgmFeYYCOdhi2NEQE4JkCDyFGLmRAlDvxGVvXSI5Iuh5l1BvwyY64Pf1rdsYMNOLKbsqbhYVwdqeqGo2P4SCZO2kseUCeVgBzg8Q8PnlN_nRXeED136D9x8zd8Hyyfah9YyVZYcP0dyPltGexedxJMyOATI1cPYZKEDZQDCfXCGgBRhH3ltG8Hz3rvpZQ1TdrA4vWmPBYcy1p51KZW5vLD_WB1ZmLVBy5efsNfjWSiALHvd1bV6yyuXax0waXv3r1XZjL_KkUJRcXp8AE8oT2R0KOqDY0rc0cfMwixcEBifq83EwZ5gXlJ5EnF974OiNNzfnX6BUh79Tg6zYpqFsxia5HWGECaSUuMYdPjV7caGojZbEmtGEk5G3jtlDvtNO4_tDPS9GYHllI5NurBYPh-gSp-qzmd46Y_twZPsMBK1H-otnxcfqMkCcaF9AS04FhKVWecDesdztj5twVbnS4z8VYOjufWHs_VgXjUsDM7L-LnriHn-G8vCYjGmt_onYwxNZcBs1qxqb1mWyUC=w834-h625-no&quot; alt=&quot;Results of the
+tournament&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Because of the coalitions we had to use a tie breaker (which you can see in the
+tiny bottom right corner of the board): a game of Rock Paper Scissors Spock
+which A won on behalf of “BatDuck”.&lt;/p&gt;
+
+&lt;p&gt;Some teams told me afterwards that there were planning on playing TitForTat but
+as they didn’t declare this, given the small number of rounds it didn’t have
+time to become evident (I suspect).&lt;/p&gt;
+
+&lt;p&gt;Overall, team “Kev” played rather poorly, seemingly trying to Defect to often
+and winning their duels but getting low schools. In contrast to this team
+“Sheilla” cooperated to help build up their reputation. Sadly their coalition
+(with team “Kev”) lost the tie breaker :)&lt;/p&gt;
+
+&lt;p&gt;This iterated prisoners dilemma tournament in class is closely related to some
+of my ongoing work which is the &lt;a href=&quot;http://axelrod.readthedocs.org/en/latest/&quot;&gt;Axelrod project python
+library&lt;/a&gt;.&lt;/p&gt;</content>
+		<author>
+			<name>Vince Knight</name>
+			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
+		</author>
+		<source>
+			<title type="html">Un peu de math</title>
+			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
+			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
+			<id>http://vknight.org/unpeudemath/feed.xml</id>
+			<updated>2016-02-22T09:30:12+00:00</updated>
+		</source>
+	</entry>
 
 	<entry xml:lang="en">
 		<title type="html">unsupported operand parent for *, Matrix over number field, vector over symbolic ring</title>
@@ -256,7 +309,7 @@ In fact it seems that Scissors and Rock are being played a bit more often, so so
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -276,7 +329,7 @@ In fact it seems that Scissors and Rock are being played a bit more often, so so
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -382,7 +435,7 @@ could/should have expected to play in this final round&lt;/a&gt;.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -435,7 +488,7 @@ as we continue to understand the basics of normal form game representations.&lt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -544,7 +597,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -564,7 +617,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -584,7 +637,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -861,7 +914,7 @@ sweep&lt;/a&gt;&lt;/li&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1151,7 +1204,7 @@ question and run the second script with the &lt;code class=&quot;highlighter-rou
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1701,7 +1754,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1721,7 +1774,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -1740,7 +1793,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -1893,7 +1946,7 @@ code&lt;/a&gt;.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -1954,7 +2007,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-02-22T08:30:17+00:00</updated>
+			<updated>2016-02-22T09:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -2050,7 +2103,7 @@ staying in the right places…).&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -2112,7 +2165,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -2132,7 +2185,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2152,7 +2205,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2464,7 +2517,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -2484,7 +2537,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2504,7 +2557,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2886,7 +2939,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -2906,7 +2959,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -2949,7 +3002,7 @@ play (but do let me know how you get on :)).&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3049,7 +3102,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -3137,7 +3190,7 @@ Sage.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3279,7 +3332,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3298,7 +3351,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -3390,7 +3443,7 @@ and characteristic function games will also be briefly discussed.&lt;/p&gt;</con
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3480,7 +3533,7 @@ conclusions :)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -3562,7 +3615,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -3581,7 +3634,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -3819,7 +3872,7 @@ Cambridge University Press, 2007. &lt;a href=&quot;https://www.google.co.uk/url?
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4054,7 +4107,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4073,7 +4126,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -4092,7 +4145,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -4111,7 +4164,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-22T08:30:18+00:00</updated>
+			<updated>2016-02-22T09:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -4178,7 +4231,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-22T08:30:09+00:00</updated>
+			<updated>2016-02-22T09:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -4314,7 +4367,7 @@ during their exams.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4482,7 +4535,7 @@ comment about them below :)&lt;/em&gt;)&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4588,7 +4641,7 @@ The final piece of code is not what everything is marked on as it is in essence 
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4641,7 +4694,7 @@ Perhaps next year.&lt;/p&gt;</content>
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4704,7 +4757,7 @@ So whilst that individual did not get any in, they contributed an important part
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4857,7 +4910,7 @@ The second random sample was to find out which game we payed next and if we ever
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4926,7 +4979,7 @@ In other words the first letter says what to do if the coin comes up as heads an
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -4989,7 +5042,7 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
 			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
 			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
+			<updated>2016-02-22T09:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -5021,79 +5074,6 @@ You can see this using some Sage code immediately (&lt;a href=&quot;https://www.
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
 			<updated>2016-02-19T23:30:11+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Playing an infinitely repeated game in class</title>
-		<link href="http://drvinceknight.github.io/unpeudemath/pedagogy/2015/03/08/playing-an-infinitely-repeated-game-in-class/"/>
-		<id>http://drvinceknight.github.io/unpeudemath/pedagogy/2015/03/08/playing-an-infinitely-repeated-game-in-class/</id>
-		<updated>2015-03-08T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Following &lt;a href=&quot;http://vknight.org/unpeudemath/pedagogy/2015/02/26/this-class-teaches-me-to-not-trust-my-classmates/&quot;&gt;the iterated Prisoner’s dilemma tournament my class I and I played last week&lt;/a&gt; we went on to play a version of the game where we repeated things infinitely many times.
-This post will briefly describe what we got up to.&lt;/p&gt;
-
-&lt;p&gt;As you can read in the post about this activity from &lt;a href=&quot;http://drvinceknight.blogspot.co.uk/2014/02/iterated-prisoners-dilemma-with-twist.html&quot;&gt;last year&lt;/a&gt;, the way we play for an infinite amount of time (that would take a while) is to apply a discounting factor \(\delta\) to the payoffs &lt;strong&gt;and&lt;/strong&gt; to interpret this factor as the probability with which the game continues.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Before I go any further (and put up pictures with the team names) I need to explain something (for the readers who are not my students).&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;For every class I teach I insist in spending a fair while going over a mid module feedback form that is used at Cardiff University (asking students to detail 3 things they like and don’t like about the class).
-One student wrote (what is probably my favourite piece of feedback ever):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Vince is a dick… but in a good way.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Anyway, I mentioned that to the class during my feedback-feedback session and that explains one of the team names (which I found pretty amusing):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Orange&lt;/li&gt;
-  &lt;li&gt;Where’s the gun&lt;/li&gt;
-  &lt;li&gt;We don’t know&lt;/li&gt;
-  &lt;li&gt;Vince is a good dick&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once we had the team names set up (and I stopped trying to stop laughing) I wrote some quick Python code that we could run after each iteration:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;continue_prob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;continue_prob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Game continues'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Game Over'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We started off by playing with (\delta=.5) and here are the results:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/infinite_pd_2015_results.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see the various duels here:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/infinite_pd_2015_duels.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, very little cooperation happened this way and in fact because everyone could see what everyone else was doing Orange took advantage of the last round to create a coalition and win.
-We also see one particular duel that cost two teams very highly (because the ‘dice rolls’ did not really help).&lt;/p&gt;
-
-&lt;p&gt;After this I suggest to the class that we play again but that no one got to see what was happening to the other teams (this was actually suggested to me by students the year before).
-We went ahead with this and used \(delta=.25\): so the game had a less chance of carrying on.&lt;/p&gt;
-
-&lt;p&gt;You can see the result and duels here (this had to be squeezed on to a board that could be hidden):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://vknight.org/unpeudemath/assets/images/infinite_pd_2015_second_game.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Based on the theory we would expect more cooperation to be likely but as you can see this did not happen.&lt;/p&gt;
-
-&lt;p&gt;The tie at the end was settled with a game of Rock Paper Scissors Lizard Spock which actually gave place to a rematch of the &lt;a href=&quot;http://vknight.org/unpeudemath/pedagogy/2015/02/13/rock-paper-scissors-lizard-spock/&quot;&gt;Rock Paper Scissors Lizard Spock tournament&lt;/a&gt; we played earlier.
-Except this time Laura, lost her crown :)&lt;/p&gt;</content>
-		<author>
-			<name>Vince Knight</name>
-			<uri>http://drvinceknight.github.io/unpeudemath/</uri>
-		</author>
-		<source>
-			<title type="html">Un peu de math</title>
-			<subtitle type="html">I post stuff here about game theory, queueing theory, pedagogy, Sage, Python and other things...</subtitle>
-			<link rel="self" href="http://vknight.org/unpeudemath/feed.xml"/>
-			<id>http://vknight.org/unpeudemath/feed.xml</id>
-			<updated>2016-02-15T16:30:11+00:00</updated>
 		</source>
 	</entry>
 
