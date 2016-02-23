@@ -54,7 +54,7 @@
 		<foaf:Agent>
 			<foaf:name>Benjamin Hackl</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://benjamin-hackl.at/tag/gsoc15/">
+				<foaf:Document rdf:about="http://benjamin-hackl.at">
 					<dc:title>GSoC15 – Benjamin Hackl</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://benjamin-hackl.at/tag/gsoc15/feed/" />
@@ -236,7 +236,7 @@
 		<foaf:Agent>
 			<foaf:name>Liang Ze</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://sheaves.github.io/">
+				<foaf:Document rdf:about="http://sheaves.github.io">
 					<dc:title>Sheaves</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://sheaves.github.io/feed.xml" />
