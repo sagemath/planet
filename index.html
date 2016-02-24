@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>February 24, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-4357444546330326452">
+<h4><a href="http://sagemath.blogspot.com/2016/02/elliptic-curves-magma-versus-sage.html">Elliptic curves: Magma versus Sage</a></h4>
+<div class="entry">
+<div class="content">
+<h3>Elliptic Curves</h3>Elliptic curves are certain types of nonsingular plane cubic curves, e.g., y^2 = x^3&nbsp;+ ax&nbsp;+b, which are central to both number theory and cryptography (e.g., they are used to compute the hash in bitcoin).<br /><br /><div class="separator"><a href="https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s1600/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png"><img border="0" height="227" src="https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s400/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png" width="400" /></a></div><br /><h3>Magma and Sage</h3>If you want to do a wide range of explicit computations with elliptic curves, for research purposes, you will very likely use&nbsp;<a href="http://sagemath.org/" target="_blank">SageMath&nbsp;</a>or&nbsp;<a href="http://magma.maths.usyd.edu.au/magma/" target="_blank">Magma</a>. If you're&nbsp;<strong>really</strong>&nbsp;serious, you'll use both.<br /><br />Both Sage and Magma are far ahead of all other software (e.g., Mathematica, Maple and Matlab) for elliptic curves.<br /><ul><li><a href="https://magma.maths.usyd.edu.au/magma/handbook/part/16">Magma reference manual about elliptic curves.</a></li><li><a href="http://doc.sagemath.org/html/en/reference/plane_curves/index.html#elliptic-curves">Sage reference manual about elliptic curves.</a></li><li><a href="http://pari.math.u-bordeaux.fr/dochtml/html.stable/Functions_related_to_elliptic_curves.html">Pari reference manual about elliptic curves.</a> -- pari is part of Sage and has some unique powerful functionality, e.g., <code>ellheegner</code>...</li></ul><h3 id="history">A Little History</h3>When I started contributing to Magma in 1999, I remember that Magma was way, way behind Pari. I remember having lunch with John Cannon (founder of Magma), and telling him I would no longer have to use Pari if only Magma would have dramatically faster code for computing point counts on elliptic curves.<br /><br />A few years later, John wisely hired Mark Watkins to work fulltime on Magma, and Mark has been working there for over a decade. Mark is definitely one of the top people in the world at implementing (and using) computational number theory algorithms, and he's ensured that Magma can do a lot. Some of that "do a lot" means catching up with (and surpassing!) what was in Pari and Sage for a long time (e.g., point counting, <span class="math"><em>p</em></span>-adic <span class="math"><em>L</em></span>-functions, etc.)<br /><br />However, in addition, many people have visited Sydney and added extremely deep functionality for doing higher descents to Magma, which is <strong>not available in any open source software</strong>. Search for Magma in <a href="http://arxiv.org/abs/1602.01894">this paper</a> to see how, even today, there seems to be no open source way to compute the rank of the curve <span class="math"><em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + 169304<em>x</em> + 25788938</span>. &nbsp;(The rank is 0.)<br /><h3 id="situation-today">Two Codebases</h3>There are several elliptic curves algorithms available <strong>only in Magma</strong> (e.g., higher descents) ... and some available <strong>only in Sage</strong> (<span class="math"><em>L</em></span>-function rank bounds, some overconvergent modular symbols, zeros of <span class="math"><em>L</em></span>-functions, images of Galois representations). I could be wrong about functionality not being in Magma, since almost anything can get implemented in a year...<br /><br />The code bases are almost completely separate, which is a very good thing. Any time something gets implemented in one, it gets (or should get) tested via a big run on elliptic curves up to some bound in the other. This sometimes results in bugs being found. I remember <a href="http://trac.sagemath.org/ticket/3674" target="_blank">refereeing the "integral points" code in Sage</a> by running it against all curves up to some bound and comparing to what Magma output, and getting many discrepancies, which showed that there were bugs in both Sage and Magma.<br />Thus we would be way better off if Sage could do everything Magma does (and vice versa).<br /><br /><br /><br /></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://sagemath.blogspot.com/2016/02/elliptic-curves-magma-versus-sage.html">by William Stein (noreply@blogger.com) at February 24, 2016 12:07 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>February 23, 2016</h2>
 
 <div class="channelgroup">
@@ -6203,7 +6239,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-February 24, 2016 07:30 PM<br>
+February 24, 2016 08:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

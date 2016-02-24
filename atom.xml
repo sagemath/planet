@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-02-24T19:30:14+00:00</updated>
+	<updated>2016-02-24T20:30:17+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Elliptic curves: Magma versus Sage</title>
+		<link href="http://sagemath.blogspot.com/2016/02/elliptic-curves-magma-versus-sage.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4357444546330326452</id>
+		<updated>2016-02-24T12:07:30+00:00</updated>
+		<content type="html">&lt;h3&gt;Elliptic Curves&lt;/h3&gt;Elliptic curves are certain types of nonsingular plane cubic curves, e.g., y^2 = x^3&amp;nbsp;+ ax&amp;nbsp;+b, which are central to both number theory and cryptography (e.g., they are used to compute the hash in bitcoin).&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s1600/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;227&quot; src=&quot;https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s400/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;h3&gt;Magma and Sage&lt;/h3&gt;If you want to do a wide range of explicit computations with elliptic curves, for research purposes, you will very likely use&amp;nbsp;&lt;a href=&quot;http://sagemath.org/&quot; target=&quot;_blank&quot;&gt;SageMath&amp;nbsp;&lt;/a&gt;or&amp;nbsp;&lt;a href=&quot;http://magma.maths.usyd.edu.au/magma/&quot; target=&quot;_blank&quot;&gt;Magma&lt;/a&gt;. If you're&amp;nbsp;&lt;strong&gt;really&lt;/strong&gt;&amp;nbsp;serious, you'll use both.&lt;br /&gt;&lt;br /&gt;Both Sage and Magma are far ahead of all other software (e.g., Mathematica, Maple and Matlab) for elliptic curves.&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://magma.maths.usyd.edu.au/magma/handbook/part/16&quot;&gt;Magma reference manual about elliptic curves.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://doc.sagemath.org/html/en/reference/plane_curves/index.html#elliptic-curves&quot;&gt;Sage reference manual about elliptic curves.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://pari.math.u-bordeaux.fr/dochtml/html.stable/Functions_related_to_elliptic_curves.html&quot;&gt;Pari reference manual about elliptic curves.&lt;/a&gt; -- pari is part of Sage and has some unique powerful functionality, e.g., &lt;code&gt;ellheegner&lt;/code&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;history&quot;&gt;A Little History&lt;/h3&gt;When I started contributing to Magma in 1999, I remember that Magma was way, way behind Pari. I remember having lunch with John Cannon (founder of Magma), and telling him I would no longer have to use Pari if only Magma would have dramatically faster code for computing point counts on elliptic curves.&lt;br /&gt;&lt;br /&gt;A few years later, John wisely hired Mark Watkins to work fulltime on Magma, and Mark has been working there for over a decade. Mark is definitely one of the top people in the world at implementing (and using) computational number theory algorithms, and he's ensured that Magma can do a lot. Some of that &quot;do a lot&quot; means catching up with (and surpassing!) what was in Pari and Sage for a long time (e.g., point counting, &lt;span class=&quot;math&quot;&gt;&lt;em&gt;p&lt;/em&gt;&lt;/span&gt;-adic &lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-functions, etc.)&lt;br /&gt;&lt;br /&gt;However, in addition, many people have visited Sydney and added extremely deep functionality for doing higher descents to Magma, which is &lt;strong&gt;not available in any open source software&lt;/strong&gt;. Search for Magma in &lt;a href=&quot;http://arxiv.org/abs/1602.01894&quot;&gt;this paper&lt;/a&gt; to see how, even today, there seems to be no open source way to compute the rank of the curve &lt;span class=&quot;math&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt; = &lt;em&gt;x&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt; + 169304&lt;em&gt;x&lt;/em&gt; + 25788938&lt;/span&gt;. &amp;nbsp;(The rank is 0.)&lt;br /&gt;&lt;h3 id=&quot;situation-today&quot;&gt;Two Codebases&lt;/h3&gt;There are several elliptic curves algorithms available &lt;strong&gt;only in Magma&lt;/strong&gt; (e.g., higher descents) ... and some available &lt;strong&gt;only in Sage&lt;/strong&gt; (&lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-function rank bounds, some overconvergent modular symbols, zeros of &lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-functions, images of Galois representations). I could be wrong about functionality not being in Magma, since almost anything can get implemented in a year...&lt;br /&gt;&lt;br /&gt;The code bases are almost completely separate, which is a very good thing. Any time something gets implemented in one, it gets (or should get) tested via a big run on elliptic curves up to some bound in the other. This sometimes results in bugs being found. I remember &lt;a href=&quot;http://trac.sagemath.org/ticket/3674&quot; target=&quot;_blank&quot;&gt;refereeing the &quot;integral points&quot; code in Sage&lt;/a&gt; by running it against all curves up to some bound and comparing to what Magma output, and getting many discrepancies, which showed that there were bugs in both Sage and Magma.&lt;br /&gt;Thus we would be way better off if Sage could do everything Magma does (and vice versa).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-02-24T20:30:08+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">&quot;If you were new faculty, would you start something like SageMathCloud sooner?&quot;</title>
@@ -24,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -44,7 +64,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -637,7 +657,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -657,7 +677,7 @@ working on final details for &lt;a href=&quot;http://na.pycon.org/&quot;&gt;PyCo
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1794,7 +1814,7 @@ sparklines for the test strategies considered:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2027,7 +2047,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-02-24T19:30:13+00:00</updated>
+			<updated>2016-02-24T20:30:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -2205,7 +2225,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2225,7 +2245,7 @@ doing a PhD at all, perhaps take a look at the awesome case stories there…&lt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2557,7 +2577,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2577,7 +2597,7 @@ to study game theory.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -2979,7 +2999,7 @@ having a game on the big screen assuming there are 5 players of
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -3122,7 +3142,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3371,7 +3391,7 @@ probabilities in states that are common.&lt;/p&gt;</content>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3635,7 +3655,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -3654,7 +3674,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -4146,7 +4166,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -4165,7 +4185,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -4184,7 +4204,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-02-24T19:30:14+00:00</updated>
+			<updated>2016-02-24T20:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -4251,7 +4271,7 @@ but I’ve also just put the notebook on &lt;a href=&quot;https://cloud.sagemath
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-02-24T19:30:08+00:00</updated>
+			<updated>2016-02-24T20:30:08+00:00</updated>
 		</source>
 	</entry>
 
