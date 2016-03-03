@@ -96,7 +96,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 
 
 
-&lt;p&gt;Let $N,C,S,D$ be the matrices above, in that order, so that $N = CS + D$.&lt;/p&gt;
+&lt;p&gt;where $ * $ denotes element-wise multiplication (so there isn’t any linear algebra going on here; we’re just using matrices to organize the information). Let $N,C,S,D$ be the matrices above, in that order, so that $N = C*S + D$.&lt;/p&gt;
 
 &lt;p&gt;If we let $x_1 = e, x_2 = f, x_3 = h$ (so that $x_i \leq x_j$ if $i \leq j$) then for $i &amp;lt; j$&lt;/p&gt;
 
