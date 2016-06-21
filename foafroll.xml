@@ -13,6 +13,19 @@
 
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name></foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="https://grayjorgenson.wordpress.com/">
+					<dc:title></dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="https://grayjorgenson.wordpress.com/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Alasdair McAndrew</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="">
