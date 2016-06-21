@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-06-21T13:30:09+00:00</updated>
+	<updated>2016-06-21T14:14:57+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -23,7 +23,26 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:57+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">First Week or so</title>
+		<link href="http://extendingmatroidfunctionality.blogspot.com/2016/06/first-week-or-so.html"/>
+		<id>tag:blogger.com,1999:blog-3534817490044613273.post-4168277856882302649</id>
+		<updated>2016-06-03T00:30:00+00:00</updated>
+		<content type="html">Before coding started, I spent some time on &lt;a href=&quot;http://www.codecademy.com/&quot; target=&quot;_blank&quot;&gt;code academy&lt;/a&gt;&amp;nbsp;getting more familiar with the syntax of Python. I was impressed with the setup that they had (I would recommend it to my mom), and it helped me to learn python in a systematic way.&lt;br /&gt;&lt;br /&gt;Since the 23rd I've been working on adding certificated (proof that we gave the right answer to a yes-no question) to some of the functions in the matroid part of Sage. For the first two days, I spent a lot of time trying to get Sage to compile. For a while, the problem was an error in a new release, and then I had some type of trouble on my end. I've also spent a good amount of time figuring out the ins and outs of documentation practices.</content>
+		<author>
+			<name>Tara</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://extendingmatroidfunctionality.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Extending Matroid Functionality Google Summer of Code 2016</title>
+			<link rel="self" href="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss"/>
+			<id>tag:blogger.com,1999:blog-3534817490044613273</id>
+			<updated>2016-06-21T14:14:57+00:00</updated>
 		</source>
 	</entry>
 
@@ -42,7 +61,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:57+00:00</updated>
 		</source>
 	</entry>
 
@@ -60,7 +79,26 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:57+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Getting Started</title>
+		<link href="http://extendingmatroidfunctionality.blogspot.com/2016/05/getting-started.html"/>
+		<id>tag:blogger.com,1999:blog-3534817490044613273.post-5298810881879400292</id>
+		<updated>2016-05-09T17:29:00+00:00</updated>
+		<content type="html">I first heard about Google Summer of Code a little over a year ago. It was something that I wanted to do for several reasons. I only had a chance to take a couple of programing classes in undergrad. (I didn't realized that I liked it till part way through my Junior year.) Since then, I've wanted to grow the length and complexity of projects that I was capable of successfully working on. Secondly, I like the idea of open source resources, because its free, and that lets poor college students use cool resources.&lt;br /&gt;&lt;br /&gt;My project is building and expanding tools in &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;Sage&lt;/a&gt; to be used by people studying matroid theory. A &lt;a href=&quot;https://www.math.lsu.edu/~oxley/survey4.pdf&quot;&gt;matroid&lt;/a&gt; is a notion of independence that generalizes the independence structure that is found in vector spaces and that comes from looking at cycleless subgraphs of &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_theory&quot;&gt;graphs&lt;/a&gt;. Sage already has a lot of &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/matroids/index.html&quot;&gt;tools&lt;/a&gt; that let people work with matroids, mostly created by Stefan van Zwam and Rudi Pendavingh. My &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#4830375092158464&quot;&gt;project&lt;/a&gt; focuses on a small collection of new tools.&lt;br /&gt;&lt;br /&gt;I'll be working with Stefan and Michael on this project.</content>
+		<author>
+			<name>Tara</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://extendingmatroidfunctionality.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Extending Matroid Functionality Google Summer of Code 2016</title>
+			<link rel="self" href="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss"/>
+			<id>tag:blogger.com,1999:blog-3534817490044613273</id>
+			<updated>2016-06-21T14:14:57+00:00</updated>
 		</source>
 	</entry>
 
@@ -80,7 +118,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -268,7 +306,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -288,7 +326,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -504,7 +542,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -524,7 +562,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -754,7 +792,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -773,7 +811,7 @@ is not open in a viewer:&lt;/p&gt;
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2016-06-11T03:30:05+00:00</updated>
+			<updated>2016-06-21T14:14:49+00:00</updated>
 		</source>
 	</entry>
 
@@ -834,7 +872,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-06-21T13:30:08+00:00</updated>
+			<updated>2016-06-21T14:14:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -854,7 +892,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -874,7 +912,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -1146,7 +1184,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -1166,7 +1204,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -1186,7 +1224,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T13:30:04+00:00</updated>
+			<updated>2016-06-21T14:14:50+00:00</updated>
 		</source>
 	</entry>
 
@@ -1286,7 +1324,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:56+00:00</updated>
 		</source>
 	</entry>
 
@@ -1305,7 +1343,7 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:56+00:00</updated>
 		</source>
 	</entry>
 
@@ -1387,7 +1425,7 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-21T13:30:09+00:00</updated>
+			<updated>2016-06-21T14:14:56+00:00</updated>
 		</source>
 	</entry>
 

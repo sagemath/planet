@@ -169,6 +169,19 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Extending Matroid Functionality Google Summer of Code 2016</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://extendingmatroidfunctionality.blogspot.com/">
+					<dc:title>Extending Matroid Functionality Google Summer of Code 2016</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Fredrik Johansson</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://fredrik-j.blogspot.com/search/label/sage">

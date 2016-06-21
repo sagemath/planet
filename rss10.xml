@@ -14,8 +14,10 @@
 	<items>
 		<rdf:Seq>
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/gsoc-week-2-update/" />
+			<rdf:li rdf:resource="tag:blogger.com,1999:blog-3534817490044613273.post-4168277856882302649" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/gsoc-2016/" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/for-love-of-numbers/" />
+			<rdf:li rdf:resource="tag:blogger.com,1999:blog-3534817490044613273.post-5298810881879400292" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813" />
 			<rdf:li rdf:resource="http://sheaves.github.io/Noncommutative-Sage/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-17375596918912545" />
@@ -51,6 +53,13 @@
 I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, which is an open source project managing software. It allows SAGE to track what people are currently working on for SAGE. It does this by are giving a ticket number to each piece of functionality pushed to the server. Peers, who pull them from the server,</content:encoded>
 	<dc:date>2016-06-09T00:00:00+00:00</dc:date>
 </item>
+<item rdf:about="tag:blogger.com,1999:blog-3534817490044613273.post-4168277856882302649">
+	<title>Extending Matroid Functionality Google Summer of Code 2016: First Week or so</title>
+	<link>http://extendingmatroidfunctionality.blogspot.com/2016/06/first-week-or-so.html</link>
+	<content:encoded>Before coding started, I spent some time on &lt;a href=&quot;http://www.codecademy.com/&quot; target=&quot;_blank&quot;&gt;code academy&lt;/a&gt;&amp;nbsp;getting more familiar with the syntax of Python. I was impressed with the setup that they had (I would recommend it to my mom), and it helped me to learn python in a systematic way.&lt;br /&gt;&lt;br /&gt;Since the 23rd I've been working on adding certificated (proof that we gave the right answer to a yes-no question) to some of the functions in the matroid part of Sage. For the first two days, I spent a lot of time trying to get Sage to compile. For a while, the problem was an error in a new release, and then I had some type of trouble on my end. I've also spent a good amount of time figuring out the ins and outs of documentation practices.</content:encoded>
+	<dc:date>2016-06-03T00:30:00+00:00</dc:date>
+	<dc:creator>Tara</dc:creator>
+</item>
 <item rdf:about="http://lifebynumber.org/life-by-blog/gsoc-2016/">
 	<title>Lauren Devitt: GSOC 2016</title>
 	<link>http://lifebynumber.org/life-by-blog/gsoc-2016/</link>
@@ -63,6 +72,13 @@ If you have misread one letter or decoded one word wrong, you will not find th
 	<link>http://lifebynumber.org/life-by-blog/for-love-of-numbers/</link>
 	<content:encoded>My love of mathematics started with a love of numbers. I enjoyed finding all possible ways I could add, subtract, and multiply different numbers in order to find a specific number, say twelve.  Twelve was my favorite number; I loved twelve. We become attached to numbers that have a deeper meaning to us; numbers that make us feel, make us remember. Sesame Street had the “Pinball Song”; this song consisted of counting to twelve with a catchy jingle every child could remember.</content:encoded>
 	<dc:date>2016-05-20T00:00:00+00:00</dc:date>
+</item>
+<item rdf:about="tag:blogger.com,1999:blog-3534817490044613273.post-5298810881879400292">
+	<title>Extending Matroid Functionality Google Summer of Code 2016: Getting Started</title>
+	<link>http://extendingmatroidfunctionality.blogspot.com/2016/05/getting-started.html</link>
+	<content:encoded>I first heard about Google Summer of Code a little over a year ago. It was something that I wanted to do for several reasons. I only had a chance to take a couple of programing classes in undergrad. (I didn't realized that I liked it till part way through my Junior year.) Since then, I've wanted to grow the length and complexity of projects that I was capable of successfully working on. Secondly, I like the idea of open source resources, because its free, and that lets poor college students use cool resources.&lt;br /&gt;&lt;br /&gt;My project is building and expanding tools in &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;Sage&lt;/a&gt; to be used by people studying matroid theory. A &lt;a href=&quot;https://www.math.lsu.edu/~oxley/survey4.pdf&quot;&gt;matroid&lt;/a&gt; is a notion of independence that generalizes the independence structure that is found in vector spaces and that comes from looking at cycleless subgraphs of &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_theory&quot;&gt;graphs&lt;/a&gt;. Sage already has a lot of &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/matroids/index.html&quot;&gt;tools&lt;/a&gt; that let people work with matroids, mostly created by Stefan van Zwam and Rudi Pendavingh. My &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#4830375092158464&quot;&gt;project&lt;/a&gt; focuses on a small collection of new tools.&lt;br /&gt;&lt;br /&gt;I'll be working with Stefan and Michael on this project.</content:encoded>
+	<dc:date>2016-05-09T17:29:00+00:00</dc:date>
+	<dc:creator>Tara</dc:creator>
 </item>
 <item rdf:about="tag:blogger.com,1999:blog-6365588202025292315.post-1537617977036691813">
 	<title>William Stein: Open source is now ready to compete with Mathematica for use in the classroom</title>
