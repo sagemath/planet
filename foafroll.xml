@@ -221,6 +221,19 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Lauren Devitt</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://lifebynumber.org/life-by-blog/">
+					<dc:title>Blog RSS</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://lifebynumber.org/rss.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Lee Worden</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://leeworden.net/lw/taxonomy/term/25">
@@ -288,7 +301,7 @@
 		<foaf:Agent>
 			<foaf:name>Michele Borassi</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://borassisagemath.blogspot.it/">
+				<foaf:Document rdf:about="http://borassisagemath.blogspot.com/">
 					<dc:title>Performance Improvements for the Graph Module of Sagemath</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://borassisagemath.blogspot.com/feeds/posts/default" />

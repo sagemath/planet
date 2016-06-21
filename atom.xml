@@ -5,8 +5,64 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-06-21T12:30:09+00:00</updated>
+	<updated>2016-06-21T13:05:32+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">GSOC Week 2 Update</title>
+		<link href="http://lifebynumber.org/life-by-blog/gsoc-week-2-update/"/>
+		<id>http://lifebynumber.org/life-by-blog/gsoc-week-2-update/</id>
+		<updated>2016-06-09T00:00:00+00:00</updated>
+		<content type="html">Two weeks into GSOC 2016 I’m so grateful that this is how I get to spend my summer. Using my coding muscles has made me stronger and more confident with my code.
+I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, which is an open source project managing software. It allows SAGE to track what people are currently working on for SAGE. It does this by are giving a ticket number to each piece of functionality pushed to the server. Peers, who pull them from the server,</content>
+		<author>
+			<name>Lauren Devitt</name>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
+		</author>
+		<source>
+			<title type="html">Blog RSS</title>
+			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
+			<id>http://lifebynumber.org/rss.xml</id>
+			<updated>2016-06-21T13:05:32+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">GSOC 2016</title>
+		<link href="http://lifebynumber.org/life-by-blog/gsoc-2016/"/>
+		<id>http://lifebynumber.org/life-by-blog/gsoc-2016/</id>
+		<updated>2016-05-21T00:00:00+00:00</updated>
+		<content type="html">What I love about programing is it is akin to solving a logic puzzle. You have all the pieces you need to solve it, you're allowed to search the internet for assistance, but the internet will not give you the answer, you still have to find it on you own.
+If you have misread one letter or decoded one word wrong, you will not find the answer. You can spend twice as much time trying to solve the problem than actually solving the puzzle. That is why in coding, as with logic puzzles,</content>
+		<author>
+			<name>Lauren Devitt</name>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
+		</author>
+		<source>
+			<title type="html">Blog RSS</title>
+			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
+			<id>http://lifebynumber.org/rss.xml</id>
+			<updated>2016-06-21T13:05:32+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">For love of numbers...</title>
+		<link href="http://lifebynumber.org/life-by-blog/for-love-of-numbers/"/>
+		<id>http://lifebynumber.org/life-by-blog/for-love-of-numbers/</id>
+		<updated>2016-05-20T00:00:00+00:00</updated>
+		<content type="html">My love of mathematics started with a love of numbers. I enjoyed finding all possible ways I could add, subtract, and multiply different numbers in order to find a specific number, say twelve.  Twelve was my favorite number; I loved twelve. We become attached to numbers that have a deeper meaning to us; numbers that make us feel, make us remember. Sesame Street had the “Pinball Song”; this song consisted of counting to twelve with a catchy jingle every child could remember.</content>
+		<author>
+			<name>Lauren Devitt</name>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
+		</author>
+		<source>
+			<title type="html">Blog RSS</title>
+			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
+			<id>http://lifebynumber.org/rss.xml</id>
+			<updated>2016-06-21T13:05:32+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Open source is now ready to compete with Mathematica for use in the classroom</title>
@@ -24,7 +80,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -212,7 +268,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -232,7 +288,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -448,7 +504,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -468,7 +524,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -698,7 +754,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -778,7 +834,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-06-21T12:30:08+00:00</updated>
+			<updated>2016-06-21T13:05:29+00:00</updated>
 		</source>
 	</entry>
 
@@ -798,7 +854,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -818,7 +874,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1090,7 +1146,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1110,7 +1166,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1130,7 +1186,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
+			<updated>2016-06-21T13:05:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1224,13 +1280,13 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
+			<uri>http://borassisagemath.blogspot.com/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
+			<updated>2016-06-21T13:05:31+00:00</updated>
 		</source>
 	</entry>
 
@@ -1243,13 +1299,13 @@ sqrt(2*pi) * e^(n*log(n)) * (1/e)^n * n^(1/2) + ...&lt;/pre&gt;&lt;p&gt;which th
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
+			<uri>http://borassisagemath.blogspot.com/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
+			<updated>2016-06-21T13:05:31+00:00</updated>
 		</source>
 	</entry>
 
@@ -1325,183 +1381,13 @@ O(x)&lt;/pre&gt;&lt;p&gt;So far, so good. Our next step is making the &lt;em&gt;
 		<author>
 			<name>Michele Borassi</name>
 			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
+			<uri>http://borassisagemath.blogspot.com/</uri>
 		</author>
 		<source>
 			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
 			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Edge Connectivity through Boost Graph Library</title>
-		<link href="http://borassisagemath.blogspot.com/2015/06/edge-connectivity-through-boost-graph_25.html"/>
-		<id>tag:blogger.com,1999:blog-8558001006126216932.post-7547483421803460595</id>
-		<updated>2015-06-25T00:56:40+00:00</updated>
-		<content type="html">After two weeks, we have managed to interface Boost and Sagemath! &lt;br /&gt;&lt;br /&gt;However, the interface was not as simple as it seemed. The main problem we found is the genericity of Boost: almost all Boost algorithms work with several graph implementations, which differ in the data structures used to store edges and vertices. For instance, the code that implements breadth-first search works if the adjacency list of a vertex v is a vector, a list, a set, etc. This result is accomplished by using templates [1]. Unfortunately, the only way to interface Sagemath with C++ code is Cython, which is not template-friendly, yet. In particular, Cython provides genericity through fused types [2], whose support is still experimental, and which do not offer full integration with templates [3-5].&lt;br /&gt;&lt;br /&gt;After a thorough discussion with David, Nathann, and Martin (thank you very much!), we have found a solution: for the input, we have defined a fused type &quot;BoostGenGraph&quot;, including all Boost graph implementations, and all functions that interface Boost and Sagemath use this fused type. This way, for each algorithm, we may choose the most suitable graph implementation. For the output, whose type might be dependent on the input type, we use C++ to transform it into a &quot;standard&quot; type (vector, or struct).&lt;br /&gt;&lt;br /&gt;We like this solution because it is very clean, and it allows us to exploit Boost genericity without any copy-paste. Still, there are some drawbacks:&lt;br /&gt;1) Cython fused types do not allow nested calls of generic functions;&lt;br /&gt;2) Boost graphs cannot be converted to Python objects: they must be defined and deleted in the same Cython function;&lt;br /&gt;3) No variable can have a generic type, apart from the arguments of generic functions.&lt;br /&gt;&lt;br /&gt;These drawbacks will be overcome as soon as Cython makes templates and generic types interact: this way, we will be able create a much stronger interface, by writing a graph backend based on Boost, so that the user might create, convert, and modify Boost graphs directly from Python. However, for the moment, we will implement all algorithms using the current interface, which already provides genericity, and which has no drawback if the only goal is to &quot;steal&quot; algorithms from Boost.&lt;br /&gt;&lt;br /&gt;As a test, we have computed the edge connectivity of a graph through Boost: the code is available in ticket 18564 [6]. Since the algorithm provided by Sagemath is not optimal (it is based on linear programming), the difference in the running time is impressive, as shown by the following tests:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(100,1000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 1.42 ms per loop&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 11.3 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomBarabasiAlbert(300,3)&lt;br /&gt;sage: %timeit G.edge_connectivity(implementation=&quot;sage&quot;)&lt;br /&gt;1 loops, best of 3: 9.96 s per loop&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;100 loops, best of 3: 3.33 ms per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Basically, on a random Erdos-Renyi graph with 100 vertices and 1000 edges, the new algorithm is 8,000 times faster, and on a random Barabasi-Albert graph with 300 nodes and average degree 3, the new algorithm is 3,000 times faster! This way, we can compute the edge connectivity of much bigger graphs, like a random Erdos-Renyi graph with 5,000 vertices and 50,000 edges:&lt;br /&gt;&lt;br /&gt;&lt;span&gt;sage: G = graphs.RandomGNM(5,000, 50,000)&lt;br /&gt;sage: %timeit G.edge_connectivity()&lt;br /&gt;1 loops, best of 3: 16.2 s per loop&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;The results obtained with this first algorithm are very promising: in the next days, we plan to interface several other algorithms, in order to improve both the number of available routines and the speed of Sagemath graph library!&lt;br /&gt;&lt;br /&gt;[1] https://en.wikipedia.org/wiki/Template_%28C%2B%2B%29&lt;br /&gt;[2] http://docs.cython.org/src/userguide/fusedtypes.html&lt;br /&gt;[3] https://groups.google.com/forum/#!topic/cython-users/qQpMo3hGQqI&lt;br /&gt;[4] https://groups.google.com/forum/#!searchin/cython-users/fused/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[5] https://groups.google.com/forum/#!searchin/cython-users/fused$20template/cython-users/-7cHr6Iz00Y/Z8rS03P7-_4J&lt;br /&gt;[6] http://trac.sagemath.org/ticket/18564</content>
-		<author>
-			<name>Michele Borassi</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
-		</author>
-		<source>
-			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
-			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Performance Comparison of Different Graph Libraries</title>
-		<link href="http://borassisagemath.blogspot.com/2015/06/performance-comparison-of-different.html"/>
-		<id>tag:blogger.com,1999:blog-8558001006126216932.post-517109036063053537</id>
-		<updated>2015-06-09T07:30:46+00:00</updated>
-		<content type="html">As promised in the last post, I have compared the performances of several graph libraries, in order to choose which ones should be deployed with Sagemath. Here, I provide the main results of this analysis, while more details are available on &lt;a href=&quot;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison&quot;&gt;my website&lt;/a&gt; (see also the links below).&lt;br /&gt;The libraries chosen are the most famous graph libraries written in Python, C, or C++ (I have chosen these languages because they are easier to integrate in Sagemath, using Cython). Furthermore, I have excluded NetworkX, which is already deployed with Sagemath.&lt;br /&gt;First of all, I have to enforce that no graph library comparison can be completely fair, and also this comparison can be criticized, due to the large amount of available routines, to the constant evolution of libraries, and to many small differences in the outputs (for instance, one library might compute the value of a maximum s-t flow, another library might actually compute the flow, and a third one might compute all maximum flows). Despite this, I have tried to be as fair as possible, through a deeper and more detailed analysis than previous comparisons (&lt;a href=&quot;https://graph-tool.skewed.de/performance&quot;&gt;https://graph-tool.skewed.de/performance&lt;/a&gt;, &lt;a href=&quot;http://www.programmershare.com/3210372/&quot;&gt;http://www.programmershare.com/3210372/&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/pdf/1403.3005.pdf&quot;&gt;http://arxiv.org/pdf/1403.3005.pdf&lt;/a&gt;).&lt;br /&gt;The first comparison deals with the number of algorithms implemented. I have chosen a set of 107 possible algorithms, trying to cover all possible tasks that a graph library should perform (avoiding easy tasks that are common to all libraries, like outputting the number of nodes, the number of edges, the neighbors of a node, etc). In some cases, two tasks were collapsed in one, if the algorithms solving these tasks are very similar (for instance, computing a maximum flow and computing a minimum cut, computing vertex betweenness and edge betweenness, etc).&lt;br /&gt;The number of routines available for each library is plotted in the following chart, and a table containing all features is available in &lt;a href=&quot;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison/detailed-feature-comparison&quot;&gt;HTML&lt;/a&gt; or as a &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Iu1hkQtRn9J-sgfZbQTu2RoXzyjoMEWP5-cm3nAwnWE/edit?usp=sharing&quot;&gt;Google Sheet&lt;/a&gt;.&lt;br /&gt;        &lt;br /&gt;The results show that Sagemath has more routines than all competitors (66), closely followed by igraph (62). All other libraries are very close to each other, having about 30 routines each. Furthermore, Sagemath could be improved in the fields of neighbor similarity measures (assortativity, bibcoupling, cocitation, etc), community detection, and random graph generators. For instance, igraph contains 29 routines that are not available in Sagemath.&lt;br /&gt;&lt;br /&gt;The second comparison analyzes the running-time of some of the algorithms implemented in the libraries. In particular, I have chosen 8 of the most common tasks in graph analysis: computing the diameter, computing the maximum flow between two vertices, finding connected components and strongly connected components, computing betweenness centrality, computing the clustering coefficient, computing the clique number, and generating a graph with the preferential attachment model. I have run each of these algorithms on 3 inputs, and I have considered the total execution time (excluding the time needed to load the graph). More details on this experiment are available &lt;a href=&quot;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code/library-comparison/detailed-performance-comparison&quot;&gt;here&lt;/a&gt;, and the results are also available in a &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Iu1hkQtRn9J-sgfZbQTu2RoXzyjoMEWP5-cm3nAwnWE/edit?usp=sharing&quot;&gt;Google Sheet&lt;/a&gt;.&lt;br /&gt;In order to make the results more readable, I have plotted the ratio between the time needed by a given library and the minimum time needed by any library. If an algorithm was not implemented, or it needed more than 3 hours to complete, the corresponding bar is not shown.&lt;br /&gt;     &lt;br /&gt;Overall, the results show that NetworKit is the fastest library, or one of the fastest, in all routines that are implemented (apart from the generation of preferential attachment graphs, where it is very slow). Boost graph library is very close to NetworKit, and it also contains more routines. Also Sagemath is quite efficient in all tasks, apart from the computation of strongly connected components and the generation of a preferential attachment graph, where it needed more than 3 hours. However, in the latter case, the main problem was not speed but memory consumption.&lt;br /&gt;&lt;br /&gt;In conclusion, Sagemath can highly benefit from the possibility of using algorithms from other libraries. First of all, it might improve the number of algorithms offered, especially by including igraph, and it also might improve its performance, by including Boost, NetworKit, or other fast graph libraries.</content>
-		<author>
-			<name>Michele Borassi</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
-		</author>
-		<source>
-			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
-			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Comparison of Graph Libraries</title>
-		<link href="http://borassisagemath.blogspot.com/2015/06/comparison-of-graph-libraries.html"/>
-		<id>tag:blogger.com,1999:blog-8558001006126216932.post-5727768572864220659</id>
-		<updated>2015-06-04T02:11:58+00:00</updated>
-		<content type="html">Many times, people asked me &quot;Which is the best available graph library?&quot;, or &quot;Which graph library should I use to compute this, or that?&quot;.&lt;br /&gt;Well, personally I love to use Sage, but there are also several good alternatives. Then, the question becomes &quot;How could we improve Sage, so that people will choose it?&quot;.&lt;br /&gt;&lt;br /&gt;In my opinion, graph libraries are compared according to the following parameters:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;simplicity and documentation: people have little time, and the faster they learn how to use the library, the better;&lt;/li&gt;&lt;li&gt;number of routines available;&lt;/li&gt;&lt;li&gt;speed: sometimes, the input is very big, and the algorithms take much time to finish, so that a fast implementation is fundamental.&lt;/li&gt;&lt;/ol&gt;While it is very difficult to measure the first point, the others can be compared and improved. For this reason, in order to outperform other libraries, we should implement new features, and improve existing ones. You don't say!&lt;br /&gt;&lt;br /&gt;However, this answer is not satisfactory: in principle, we could add all features available in other libraries, but this is a huge translational work, and while we are doing this work the other libraries will change, making this effort a never-ending story.&lt;br /&gt;&lt;br /&gt;My project proposes an alternative: cooperating instead of competing. I will try to interface Sage with other libraries, and to use their algorithms when the Sage counterpart is not available, or less efficient. This way, with an affordable amount of work, we will be able to run all algorithms available in the best graph libraries!&lt;br /&gt;&lt;br /&gt;As a first step, I have compared all the most famous C, C++, and Python graph libraries according to points 2 and 3, in order to choose which libraries should be included. The next posts will analyze the results of this comparison.</content>
-		<author>
-			<name>Michele Borassi</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
-		</author>
-		<source>
-			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
-			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Google Summer of Code: let's start!</title>
-		<link href="http://borassisagemath.blogspot.com/2015/06/google-summer-of-code-lets-start.html"/>
-		<id>tag:blogger.com,1999:blog-8558001006126216932.post-6371615580569256662</id>
-		<updated>2015-06-04T01:10:03+00:00</updated>
-		<content type="html">This blog will follow my Google Summer of Code project, entitled &lt;i&gt;Performance Improvements for the Graph Module of Sagemath&lt;/i&gt;. The complete project is available &lt;a href=&quot;https://sites.google.com/a/imtlucca.it/borassi/unpublished-works/google-summer-of-code&quot;&gt;here&lt;/a&gt;, and related documents with partial results will be available on the same website.&lt;br /&gt;In this first post, I would like to thank my mentor David Coudert and Nathann Cohen, who helped me a lot in writing this project and understanding how the graph module of Sagemath works.&lt;br /&gt;With their help, and with the help of the Sage community, I hope it will be a useful and funny work! Let's start!</content>
-		<author>
-			<name>Michele Borassi</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://borassisagemath.blogspot.it/</uri>
-		</author>
-		<source>
-			<title type="html">Performance Improvements for the Graph Module of Sagemath</title>
-			<link rel="self" href="http://borassisagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-8558001006126216932</id>
-			<updated>2016-06-20T14:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry xml:lang="en-US">
-		<title type="html">Asymptotic Expressions: Motivation</title>
-		<link href="http://benjamin-hackl.at/2015/05/29/asymptotic-expressions-motivation/"/>
-		<id>http://benjamin-hackl.at/?p=244</id>
-		<updated>2015-05-29T01:34:40+00:00</updated>
-		<content type="html">&lt;p&gt;\( \def\R{\mathbb{R}} \)So, as Google Summer of Code started on Monday, May 25th it is time to give a proper motivation for the project I have proposed. The working title of my project is &lt;b&gt;&lt;i&gt;(Multivariate) Asymptotic Expressions&lt;/i&gt;&lt;/b&gt;, and its overall goal is to bring &lt;em&gt;asymptotic expressions&lt;/em&gt; to SageMath.&lt;/p&gt;
-&lt;h3&gt;What are A&lt;em&gt;symptotic Expressions?&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;A motivating answer for this question comes from the theory of &lt;a href=&quot;http://en.wikipedia.org/wiki/Taylor_series&quot;&gt;Taylor series&lt;/a&gt;. Assume that we have a sufficiently nice (in this case meaning smooth) function $f : \R \to \R$ that we want to approximate in a neighborhood of some point $x_0 \in \R$. Taylor&amp;#8217;s theorem allows us to write $f(x) = T_n(x) + R_n(x)$ where&lt;/p&gt;
-&lt;p&gt;\[ T_n(x) = \sum_{j=0}^n \frac{f^{(j)}(x_0)}{j!}\cdot (x-x_0)^j = f(x_0) + f'(x_0)\cdot (x-x_0) + \cdots + \frac{f^{(n)}(x_0)}{n!}\cdot (x-x_0)^n,  \]&lt;/p&gt;
-&lt;p&gt;and $R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \cdot (x-x_0)^{n+1}$, where $\xi$ lies in a neighborhood of $x_0$. Note that for $x\to x_0$, $R_n(x)$ &amp;#8220;behaves like&amp;#8221; $(x-x_0)^{n+1}$. In particular, we can certainly find a constant $C &amp;gt; 0$ such that $|R_n(x)| \leq C\cdot |x-x_0|^{n+1}$, or, in other words: for $x\to x_0$ the growth of the function $R_n(x)$ is bounded from above by the growth of $(x-x_0)^{n+1}$.&lt;/p&gt;
-&lt;p&gt;The idea of bounding the growth of a function by the growth of another function when the argument approaches some number (or $\infty$) is the central idea behind the &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Big_O_notation&quot;&gt;big O notation&lt;/a&gt;. &lt;/em&gt;For function $f, g : \R \to \R$ we write $f(x) = O(g(x))$ for $x\to x_0$ if there is a constant $C &amp;gt; 0$ such that $|f(x)| \leq C\cdot |g(x)|$ for all $x$ in some neighborhood of $x_0$.&lt;/p&gt;
-&lt;p&gt;A case that is particularly important is the case of $x_0 = \infty$, that is if we want to compare and/or characterize the behavior of some function for $x\to\infty$, which is also called the functions &lt;em&gt;asymptotic behavior&lt;/em&gt;. For example, consider the functions $\log x$, $x^3$ and $e^x$. All of them are growing unbounded for $x\to\infty$ &amp;#8212; however, their asymptotic behavior differs. This can be seen by considering pairwise quotients of these functions: $\frac{x^3}{e^x} \to 0$ for $x\to\infty$, and therefore the asymptotic growth of $x^3$ can be bounded above by the growth of $e^x$, meaning $x^3 = O(e^x)$ for $x\to\infty$.&lt;/p&gt;
-&lt;p&gt;The analysis of a functions asymptotic behavior is important for many applications, for example when determining time and space complexity of algorithms in computer science, or for describing the growth of classes of combinatorial objects: take, for example, binary strings of length $2n$ that contain equally many zeros and ones. If $s_n$ denotes the number of such strings, then we have&lt;/p&gt;
-&lt;p&gt;\[ s_n = \binom{2n}{n} = \frac{4^n}{\sqrt{n\pi}} \left(1 + O\left(\frac{1}{n}\right)\right) \quad\text{ for } n\to\infty. \]&lt;/p&gt;
-&lt;p&gt;Expressions like these are &lt;em&gt;asymptotic expressions.&lt;/em&gt; When we consider asymptotic expressions in only one variable, everything works out nicely as a total order is induced. But as soon as multiple variables are involved, we don&amp;#8217;t have a total order any more. Consider, for example, $x^2 y$ and $xy^2$ when $x$ and $y$ approach $\infty$. These two elements cannot be compared to each other, which complicates computing with these expressions as they may contain multiple &amp;#8220;irreducible&amp;#8221; O-terms.&lt;/p&gt;
-&lt;p&gt;The following univariate and multivariate examples shall demonstrate how computing with such expressions looks like (all variables are assumed to go to $\infty$):&lt;/p&gt;
-&lt;p&gt;\[ x + O(x) = O(x),\quad x^2 \cdot (x + O(1)) = x^3 + O(x^2),\quad O(x^2) \cdot O(x^3) = O(x^5),  \]&lt;/p&gt;
-&lt;p&gt;\[ x y + O(x^2 y) = O(x^2y),\quad (y \log y + O(y)) (x^2 y + O(4^x \sqrt{x})) =  x^2 y^2 \log y + O(x^2 y^2) + O(4^x \sqrt{x} y \log y).   \]&lt;/p&gt;
-&lt;p&gt;Our plan is to provide an implementation based on which computations with these and more complicated expressions are possible.&lt;/p&gt;
-&lt;h3&gt;Planned Structure&lt;/h3&gt;
-&lt;p&gt;There are four core concepts of our implementation.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17601&quot;&gt;Asymptotic Growth Groups&lt;/a&gt;&lt;/strong&gt;:&lt;em&gt; &lt;/em&gt;These are multiplicative groups that contain &lt;em&gt;growth elements&lt;/em&gt; like $x^2$, $\log x$, $2^x \cdot x \cdot \log x$. For starters, only univariate power growth groups will be implemented.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17715&quot;&gt;Asymptotic Term Monoids&lt;/a&gt;&lt;/strong&gt;: These monoids contain &lt;em&gt;asymptotic terms &lt;/em&gt;&amp;#8212; in essence, these are summands of asymptotic terms. Apart from exact term monoids (growth elements with a coefficient), we will also implement O-term monoids as well as a term monoid for a deviation of O-terms. Asymptotic terms have (in addition to their group operation, multiplication) &lt;em&gt;absorption &lt;/em&gt;as an additional operation: for example, O-terms are able to absorb all asymptotically &amp;#8220;smaller&amp;#8221; elements.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17693&quot;&gt;Mutable Poset&lt;/a&gt;&lt;/strong&gt;: As we have mentioned above, due to the fact that multivariate asymptotic expressions do not have a total order with respect to their growth, we need a partially ordered set (&amp;#8220;Poset&amp;#8221;) that deals with this structure such that operations like absorbing terms can be performed efficiently. The mutable poset is the central data structure that asymptotic expressions are built upon.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17716&quot;&gt;Asymptotic&lt;/a&gt;&lt;a href=&quot;http://trac.sagemath.org/ticket/17716&quot;&gt; Ring&lt;/a&gt;&lt;/strong&gt;: This is our top-level structure which is also supposed to be the main interaction object for users. The asymptotic ring contains the asymptotic expressions, i.e. intelligently managed sums of asymptotic terms. All common operations shall be possible here. Furthermore, the interface should be intelligent enough such that admissible expressions from the symbolic ring can be directly converted into elements of the asymptotic ring.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Obviously, this &amp;#8220;planned structure&amp;#8221; is rather superficial. However, this is only to supplement the motivation for my project with some ideas on the implementation. I&amp;#8217;ll go a lot more into the details of what I am currently implementing in the next few blog posts!&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
-		<author>
-			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
-		</author>
-		<source>
-			<title type="html">GSoC15 – Benjamin Hackl</title>
-			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
-			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2016-03-04T16:30:22+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Guiding principles for SageMath, Inc.</title>
-		<link href="http://sagemath.blogspot.com/2015/05/guiding-principles-for-sagemath-inc.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-9002226548496308542</id>
-		<updated>2015-05-27T13:03:52+00:00</updated>
-		<content type="html">&lt;div class=&quot;salvus-editor-html-md-preview-content&quot;&gt;In February of this year (2015), I founded a Delaware C Corporation called &quot;SageMath, Inc.&quot;. &amp;nbsp;This is a first stab at the guiding principles for the company. &amp;nbsp; &amp;nbsp;It should help clarify the relationship between the company, the Sage project, and other projects like OpenDreamKit and Jupyter/IPython.&lt;br /&gt;&lt;h3 id=&quot;company-mission-statement-&quot;&gt;Company mission statement:&lt;/h3&gt;&lt;blockquote&gt;Make open source mathematical software ubiquitous.&lt;/blockquote&gt;This involves both creating the SageMathCloud website and supporting the development and distribution of the SageMath and other software, including Jupyter, Octave, Scilab, etc.  Anything open source.&lt;br /&gt;&lt;h3 id=&quot;company-principles-&quot;&gt;Company principles:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Absolutely all company funded software must be open source, under a &lt;strong&gt;GPLv3 &lt;i&gt;compatible&lt;/i&gt;&lt;/strong&gt; license.    We are a 100% open source company.&lt;br /&gt; &lt;/li&gt;&lt;li&gt;Company independence and self-determination is far more important than money.  A core principle is that SMI is not for sale at any price, and will not participate in any partnership (for cost) that would restrict our freedom. This means:&lt;br /&gt; &lt;ul&gt;&lt;li&gt;reject any offers from corp development from big companies to purchase or partner,&lt;/li&gt;&lt;li&gt;do not take any investment money unless absolutely necessary, and then only from the highest quality investors&lt;/li&gt;&lt;li&gt;do not take venture capital ever&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Be as open as possible about everything involving the company.  What should not be open (since it is dangerous):&lt;br /&gt; &lt;ul&gt;&lt;li&gt;security issues, passwords&lt;/li&gt;&lt;li&gt;finances (which could attract trolls)&lt;/li&gt;&lt;li&gt;private user data&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;What should be open:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;aggregate usage data, e.g., number of users.&lt;/li&gt;&lt;li&gt;aggregate data that could help other open source projects improve their development, e.g., common problems we observe with Jupyter notebooks should be provided to their team.&lt;/li&gt;&lt;li&gt;guiding principles&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;business-model&quot;&gt;Business model&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;SageMathCloud is freemium with the expectation that 2-5% of users pay.&lt;br /&gt; &lt;/li&gt;&lt;li&gt;Target audience: all potential users of cloud-based math-related software.&lt;br /&gt; &lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;sagemathcloud-mission&quot;&gt;SageMathCloud mission&lt;/h3&gt;&lt;blockquote&gt;Make it as easy as possible to use open source mathematical software in the cloud.&lt;/blockquote&gt;This means:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Minimize onboard friction, so in less than 1 minute, you can create an account and be using Sage or Jupyter or LaTeX.  Morever, the UI should be simple and streamlined specifically for the tasks, while still having deep functionality to support expert users.  Also, everything persists and can be sorted, searched, used later, etc.&lt;br /&gt; &lt;/li&gt;&lt;li&gt;Minimize support friction, so one click from within SMC leads to a support forum, an easy way for admins to directly help, etc.  This is not at all implemented yet.  Also, a support marketplace where experts get paid to help non-experts (tutoring, etc.).&lt;br /&gt; &lt;/li&gt;&lt;li&gt;Minimize teaching friction, so &lt;em&gt;everything&lt;/em&gt; involving software related to teaching a course is as easy as possible, including managing a list of students, distributing and collecting homework, and automated grading and feedback.&lt;br /&gt; &lt;/li&gt;&lt;li&gt;Minimize pay friction, sign up for a $7 monthly membership, then simple clear pay-as-you-go functionality if you need more power.          &lt;br /&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-06-21T12:30:05+00:00</updated>
-		</source>
-	</entry>
-
-	<entry xml:lang="en-US">
-		<title type="html">Google Summer of Code — Countdown</title>
-		<link href="http://benjamin-hackl.at/2015/05/23/google-summer-of-code-countdown/"/>
-		<id>http://benjamin-hackl.at/?p=109</id>
-		<updated>2015-05-23T01:58:33+00:00</updated>
-		<content type="html">&lt;p&gt;Today I received the welcome package for attending this year&amp;#8217;s &amp;#8220;Google Summer of Code&amp;#8221;! Actually, it&amp;#8217;s pretty cool; the following things were included:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a blue notebook with a monochromatic GSoC 15 logo (in dark blue) printed on it&lt;/li&gt;
-&lt;li&gt;a sticker with a colored GSoC 15 logo&lt;/li&gt;
-&lt;li&gt;a pen that is both a blue ballpoint pen as well as a mechanical pencil (0.5)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here is a photo of all this stuff:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://benjamin-hackl.at/asdf-wp/wp-content/uploads/2015/05/gsoc_welcome.jpg&quot;&gt;&lt;img class=&quot; size-medium wp-image-118 aligncenter&quot; src=&quot;http://benjamin-hackl.at/asdf-wp/wp-content/uploads/2015/05/gsoc_welcome-225x300.jpg&quot; alt=&quot;gsoc_welcome&quot; width=&quot;225&quot; height=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;The work on our project (multivariate) Asymptotic Expressions (in cooperation with &lt;a href=&quot;http://danielkrenn.at&quot;&gt;Daniel Krenn&lt;/a&gt; and &lt;a href=&quot;http://wwwu.aau.at/cheuberg&quot;&gt;Clemens Heuberger&lt;/a&gt;) begins (or rather continues) on Monday, the 25th of May. Over the course of next week (probably in a $\varepsilon$-neighborhood of Monday) I will blog about the status quo, as well as about the motivation for the project. &lt;img src=&quot;http://benjamin-hackl.at/asdf-wp/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:-)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;</content>
-		<author>
-			<name>Benjamin Hackl</name>
-			<uri>http://benjamin-hackl.at/tag/gsoc15/</uri>
-		</author>
-		<source>
-			<title type="html">GSoC15 – Benjamin Hackl</title>
-			<link rel="self" href="http://benjamin-hackl.at/tag/gsoc15/feed/"/>
-			<id>http://benjamin-hackl.at/tag/gsoc15/feed/</id>
-			<updated>2016-03-04T16:30:22+00:00</updated>
+			<updated>2016-06-21T13:05:31+00:00</updated>
 		</source>
 	</entry>
 
