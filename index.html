@@ -54,6 +54,46 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>June 23, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://lifebynumber.org/life-by-blog/" title="Blog RSS">Lauren Devitt</a></h3>
+
+
+<div class="entrygroup" id="http://lifebynumber.org/life-by-blog/gsoc-midterm-update/">
+<h4><a href="http://lifebynumber.org/life-by-blog/gsoc-midterm-update/">GSOC Midterm Update</a></h4>
+<div class="entry">
+<div class="content">
+One of the great joys in life that not all will be able to experience is when your code builds. When you have fixed all the syntax errors you build it, you test it, and you see
+----------------------------------------------------------------------
+All tests passed!
+----------------------------------------------------------------------
+Having to wait for your code to build is agonizing. You pray to some God, magic force, or Steve Jobs to help you in this time of need. Then it works and you feel</div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://lifebynumber.org/life-by-blog/gsoc-midterm-update/">June 23, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>June 09, 2016</h2>
 
 <div class="channelgroup">
@@ -64,7 +104,7 @@
 
 
 
-<h3><a href="http://lifebynumber.org/life-by-blog" title="Blog RSS">Lauren Devitt</a></h3>
+<h3><a href="http://lifebynumber.org/life-by-blog/" title="Blog RSS">Lauren Devitt</a></h3>
 
 
 <div class="entrygroup" id="http://lifebynumber.org/life-by-blog/gsoc-week-2-update/">
@@ -137,7 +177,7 @@ Before coding started, I spent some time on <a href="http://www.codecademy.com/"
 
 
 
-<h3><a href="http://lifebynumber.org/life-by-blog" title="Blog RSS">Lauren Devitt</a></h3>
+<h3><a href="http://lifebynumber.org/life-by-blog/" title="Blog RSS">Lauren Devitt</a></h3>
 
 
 <div class="entrygroup" id="http://lifebynumber.org/life-by-blog/gsoc-2016/">
@@ -174,7 +214,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 
 
 
-<h3><a href="http://lifebynumber.org/life-by-blog" title="Blog RSS">Lauren Devitt</a></h3>
+<h3><a href="http://lifebynumber.org/life-by-blog/" title="Blog RSS">Lauren Devitt</a></h3>
 
 
 <div class="entrygroup" id="http://lifebynumber.org/life-by-blog/for-love-of-numbers/">
@@ -1921,42 +1961,6 @@ O(x)</pre><p>So far, so good. Our next step is making the <em>multivariate growt
 </div>
 
 </div>
-<div class="daygroup">
-<h2>July 09, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://borassisagemath.blogspot.com/" title="Performance Improvements for the Graph Module of Sagemath">Michele Borassi</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-8558001006126216932.post-2595108397440560513">
-<h4><a href="http://borassisagemath.blogspot.com/2015/07/new-boost-algorithms.html">New Boost Algorithms</a></h4>
-<div class="entry">
-<div class="content">
-Hello!<br />My Google Summer of Code project is continuing, and I am currently trying to include more Boost algorithms in Sage. In this post, I will make a list of the main algorithms I'm working on.<br /><br /><h4>Clustering Coefficient</h4><br />If two different people have a friend in common, there is a high chance that they will become friends: this is the property that the clustering coefficient tries to capture. For instance, if I pick two random people, very probably they will not know each other, but if I pick two of my acquaintances, very probably they will know each other. In this setting, the clustering coefficient of a person is the probability that two random acquaintances of this person know each other. In order to quantify this phenomenon, we can formalize everything in  terms of graphs: people are nodes and two people are connected if they  are acquaintances. Hence, we define the clustering coefficient of a vertex \(v\) in a graph  \(G=(V,E)\) as:<br />$$\frac{2|\{(x,y) \in E:x,y \in N_v\}|}{\deg(v)(\deg(v)-1)}$$ where \(N_v\) is the set of neighbors of \(v\) and \(\deg(v)\) is the number of neighbors of \(v\). This is exactly the probability that two random neighbors of \(v\) are linked with an edge.<br />My work has included in Sagemath the Boost algorithm to compute the clustering coefficient, which is more efficient that the previous algorithm, which was based on NetworkX:<br /><br /><span>sage: g = graphs.RandomGNM(20000,100000)</span><br /><span>sage: %timeit g.clustering_coeff(implementation='boost')</span><br /><span>10 loops, best of 3: 258 ms per loop</span><br /><span>sage: %timeit g.clustering_coeff(implementation='networkx')</span><br /><span>1 loops, best of 3: 3.99 s per loop</span><br /><br />But Nathann did better: he implemented a clustering coefficient algorithm from scratch, using Cython, and he managed to outperform the Boost algorithm, at least when the graph is dense. Congratulations, Nathann! However, when the graph is sparse, Boost algorithm still seems to be faster.<br /><br /><h4>Dominator tree</h4><br />Let us consider a road network, that is, a graph where vertices are street intersections, and edges are streets. The question is: if I close an intersection, where am I still able to go, assuming I am at home?<br />The answer to this question can be summarized in a dominator tree. Assume that, in order to go from my home to my workplace, I can choose many different paths, but all these paths pass through the café, then they pass through the square (that is, if either the café or the square is closed, then there is no way I can go to work). In this case, in the dominator tree, the father of my workplace is the square, the father of the square is the café, and the father of the café is my home, that is also the root of the tree. More formally, given a graph \(G\), the dominator tree of \(G\) rooted at a vertex \(v\) is defined by connecting each vertex \(x\) with the last vertex \(y \neq x\) that belongs to each path from \(v\) to \(x\) (note that this vertex always exists, because \(v\) belongs to each path from \(v\) to \(x\)).<br />Until now, Sagemath did not have a routine to compute the dominator tree: I have been able to include the Boost algorithm. Unfortunately, due to several suggestions and improvements in the code, the ticket is not closed, yet. Hopefully, it will be closed very soon!<br /><br /><h4>Cuthill-McKee ordering / King ordering</h4><br />Let us consider a graph \(G=(V,E)\): a matrix \(M\) of size \(|V|\) can be associated to this graph, where \(M_{i,j}=1\) if and only if there is an edge between vertices \(i\) and \(j\).<br />In some cases, this matrix can have specific properties, that can be exploited for many purposes, like speeding-up algorithms. One of this properties is bandwidth, which measures how far the matrix is from a diagonal matrix: it is defined as \(\max_{M_{i,j} \neq 0}|i-j|\). A small bandwidth might help in computing several properties of the graph, like eigenvalues and eigenvectors.<br />Since the bandwidth depends on the order of vertices, we can try to permute them in order to obtain a smaller value: in Sage, we have a routine that performs this task. However, this routine is very slow, and it is prohibitive even for very small graphs (in any case, finding an optimal ordering is NP-hard).<br />Hence, researchers have developed heuristics to compute good orderings: the most important ones are Cuthill-McKee ordering and King ordering. Boost contains both routines, but Sage does not: for this reason, I would like to insert these two functions. The code is almost ready, but part of it depends on the code of the dominator tree: as soon as the dominator tree is reviewed, I will open a ticket on these two routines!<br /><br /><h4>Dijkstra/Bellman-Ford/Johnson shortest paths</h4><br />Let us consider again a road network. In this case, we are building a GPS software, which has to compute the shortest path between the place where we are and the destination. The textbook algorithm that performed this task is Dijkstra algorithm, which computes the distance between the starting point and any other reachable point (of course, there are more efficient algorithms involving a preprocessing, but Dijkstra is the most simple, and its running-time is asymptotically optimal). This algorithm is already implemented in Sagemath.<br />Let's spice things up: what if that there are some streets with negative length? For instance, we like a street so much that we are willing to drive 100km more just to pass from that street, which is 50km long. It is like that street is -50km long!<br />First of all, under these assumptions, a shortest path might not exist: if there is a cycle with negative length, we may drive along that cycle all the times we want, decreasing more and more the distance to the destination. At least, we have to assume that no negative cycle exists.<br />Even with this assumption, Dijkstra algorithm does not work, and we have to perform Bellman-Ford algorithm, which is less efficient, but more general. Now, assume that we want something more: we are trying to compute the distance between all possible pairs of vertices. The first possibility is to run Bellman-Ford algorithm \(n\) times, where \(n\) is the number of nodes in the graph. But there is a better alternative: it is possible to perform Bellman-Ford algorithm only once, and then to modify the lengths of edges, so that all lengths are positive, and shortest paths are not changed. This way, we run Dijkstra algorithm \(n\) times on this modified graph, obtaining a better running time. This is Johnson algorithm.<br />Both Bellman-Ford and Johnson algorithms are implemented in Boost and not in Sagemath. As soon as I manage to create weighted Boost graphs (that is, graphs where edges have a length), I will include also these two algorithm!</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://borassisagemath.blogspot.com/2015/07/new-boost-algorithms.html">by Michele Borassi (noreply@blogger.com) at July 09, 2015 12:51 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -2042,7 +2046,7 @@ maintainer</a>.
 <a href="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://jonathanleesage.blogspot.com/" class="message" title="no activity in 356 days">Jonathan Lee</a>
 </li>
 <li>
-<a href="http://lifebynumber.org/rss.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://lifebynumber.org/life-by-blog" class="message" title="internal server error">Lauren Devitt</a>
+<a href="http://lifebynumber.org/rss.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://lifebynumber.org/life-by-blog/" title="Blog RSS">Lauren Devitt</a>
 </li>
 <li>
 <a href="http://leeworden.net/lw/taxonomy/term/25/feed" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://leeworden.net/lw/taxonomy/term/25" class="message" title="no activity in 356 days">Lee Worden</a>
@@ -2126,7 +2130,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-June 23, 2016 04:30 PM<br>
+June 23, 2016 05:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
