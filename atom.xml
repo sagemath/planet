@@ -5,8 +5,30 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-07-27T21:30:22+00:00</updated>
+	<updated>2016-07-27T22:30:16+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Poetry By Number</title>
+		<link href="http://lifebynumber.org/life-by-blog/poetry-by-number/"/>
+		<id>http://lifebynumber.org/life-by-blog/poetry-by-number/</id>
+		<updated>2016-07-27T00:00:00+00:00</updated>
+		<content type="html">In the 1960’s French writer and poet Raymond Queneau became the most prolific writers of our time by writing over one hundred thousand billion poems.  If you wanted to read all of these poems it would only take you 200 million years of reading 24 hours a day at a rate of about one poem per minute.
+
+ So how could Queneau write so many poems in far less time than it would take to read them all?
+
+The truth is he didn’t actually write that many individual poems. What he did was write ten 14-line</content>
+		<author>
+			<name>Lauren Devitt</name>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
+		</author>
+		<source>
+			<title type="html">Blog RSS</title>
+			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
+			<id>http://lifebynumber.org/rss.xml</id>
+			<updated>2016-07-27T22:30:16+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Jupyter: &quot;take the domain name down immediately&quot;</title>
@@ -24,7 +46,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -44,7 +66,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -85,7 +107,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T21:30:21+00:00</updated>
+			<updated>2016-07-27T22:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -104,7 +126,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T21:30:21+00:00</updated>
+			<updated>2016-07-27T22:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -142,7 +164,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T21:30:21+00:00</updated>
+			<updated>2016-07-27T22:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -160,7 +182,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T21:30:21+00:00</updated>
+			<updated>2016-07-27T22:30:16+00:00</updated>
 		</source>
 	</entry>
 
@@ -199,7 +221,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -387,7 +409,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -407,7 +429,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -623,7 +645,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -643,7 +665,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -873,7 +895,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -953,7 +975,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-07-27T21:30:18+00:00</updated>
+			<updated>2016-07-27T22:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -973,7 +995,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -993,7 +1015,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1265,7 +1287,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1285,7 +1307,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1305,7 +1327,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T21:30:12+00:00</updated>
+			<updated>2016-07-27T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
