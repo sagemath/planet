@@ -5,15 +5,15 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-07-27T02:30:12+00:00</updated>
+	<updated>2016-07-27T03:30:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Jupyter: &quot;take the domain name down immediately&quot;</title>
 		<link href="http://sagemath.blogspot.com/2016/07/jupyter-take-domain-name-down.html"/>
 		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4592324674567336685</id>
-		<updated>2016-07-26T18:42:49+00:00</updated>
-		<content type="html">The &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; is an open source BSD-licensed browser-based code execution environment, inspired by my early work on the Sage Notebook (which we launched in 2007), which was in turn inspired heavily by Mathematica notebooks and Google docs. Jupyter used to be called &lt;a href=&quot;https://www.google.com/trends/explore#q=jupyter%2C%20ipython&amp;cmpt=q&amp;tz=Etc%2FGMT%2B7&quot;&gt;IPython&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; is an open source web-based environment for using Sage worksheets, terminals, LaTeX documents, course management, and Jupyter notebooks. I've put much hard work into making it so that multiple people can simultaneously edit Jupyter notebooks in SageMathCloud, and the history of all changes are recorded and browsable via a slider.&lt;br /&gt;&lt;br /&gt;Many people have written to me asking for there to be a modified version of &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;, which is oriented around Jupyter notebooks instead of Sage worksheets. So the default file type is Jupyter notebooks, the default kernel doesn't involve the extra heft of Sage, etc., and the domain name involves Jupyter instead of &quot;sagemath&quot;. Some people are disuased from using SageMathCloud for Jupyter notebooks because of the &quot;SageMath&quot; name.&lt;br /&gt;&lt;br /&gt;Dozens of web applications (including SageMathCloud) use the word &quot;Jupyter&quot; in various places. However, I was unsure about using &quot;jupyter&quot; in a domain name. I found &lt;a href=&quot;https://github.com/jupyter/governance/issues/12&quot;&gt;this github issue&lt;/a&gt; and requested clarification 6 weeks ago. We've had some back and forth, but they recently made it clear that it would be at least a month until any decision would be considered, since they are too busy with other things. In the meantime, I rented jupytercloud.com, which has a nice ring to it, as the &lt;a href=&quot;https://www.google.com/search?q=jupiter+cloud&amp;safe=off&amp;rlz=1C5CHFA_enUS691US691&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ved=0ahUKEwj-vJubvJLOAhVEwYMKHRLlCCgQsAQIKg&amp;biw=1147&amp;bih=643&quot;&gt;planet Jupiter has clouds.&lt;/a&gt; Yesterday, I made jupytercloud.com point to cloud.sagemath.com to see what it would &quot;feel like&quot; and Tim Clemans started experimenting with customizing the page based on the domain name that the client sees. I did not mention jupytercloud.com publicly anywhere, and there were no links to it.&lt;br /&gt;&lt;br /&gt;Today I received this message:&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;&lt;code&gt;    William,&lt;br /&gt;&lt;br /&gt;    I'm writing this representing the Jupyter project leadership&lt;br /&gt;    and steering council. It has recently come to the Jupyter&lt;br /&gt;    Steering Council's attention that the domain jupytercloud.com&lt;br /&gt;    points to SageMathCloud. Do you own that domain? If so,&lt;br /&gt;    we ask that you take the domain name down immediately, as&lt;br /&gt;    it uses the Jupyter name.&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;br /&gt;&lt;/pre&gt;I of course immediately complied. It is well within their rights to dictate how their name is used, and I am obsessive about scrupulously doing everything I can to respect people's intellectual property; with Sage we have put huge amounts of effort into honoring both the letter and spirit of copyright statements on open source software.&lt;br /&gt;&lt;br /&gt;I'm writing this because it's unclear to me what people really want, and I have no idea what to do here.&lt;br /&gt;&lt;br /&gt;1. Do &lt;strong&gt;you&lt;/strong&gt; want something built on the same technology as SageMathCloud, but much more focused on Jupyter notebooks?&lt;br /&gt;&lt;br /&gt;2. Does the name of the site matter to &lt;strong&gt;you&lt;/strong&gt;?&lt;br /&gt;&lt;br /&gt;3. What model should the Jupyter project use for their trademark? Something like Python? like Git?Like Linux? &amp;nbsp;Like Firefox? &amp;nbsp;Like the email program PINE? &amp;nbsp;Something else entirely?&lt;br /&gt;&lt;br /&gt;4. Should I be worried about using Jupyter at all anywhere? E.g., in this blog post? As the default notebook for the SageMath project?&lt;br /&gt;&lt;br /&gt;I appreciate any feedback.</content>
+		<updated>2016-07-26T19:30:07+00:00</updated>
+		<content type="html">The &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; is an open source BSD-licensed browser-based code execution environment, inspired by my early work on the Sage Notebook (which we launched in 2007), which was in turn inspired heavily by Mathematica notebooks and Google docs. Jupyter used to be called &lt;a href=&quot;https://www.google.com/trends/explore#q=jupyter%2C%20ipython&amp;cmpt=q&amp;tz=Etc%2FGMT%2B7&quot;&gt;IPython&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; is an open source web-based environment for using Sage worksheets, terminals, LaTeX documents, course management, and Jupyter notebooks. I've put much hard work into making it so that multiple people can simultaneously edit Jupyter notebooks in SageMathCloud, and the history of all changes are recorded and browsable via a slider.&lt;br /&gt;&lt;br /&gt;Many people have written to me asking for there to be a modified version of &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;, which is oriented around Jupyter notebooks instead of Sage worksheets. So the default file type is Jupyter notebooks, the default kernel doesn't involve the extra heft of Sage, etc., and the domain name involves Jupyter instead of &quot;sagemath&quot;. Some people are disuased from using SageMathCloud for Jupyter notebooks because of the &quot;SageMath&quot; name.&lt;br /&gt;&lt;br /&gt;Dozens of web applications (including SageMathCloud) use the word &quot;Jupyter&quot; in various places. However, I was unsure about using &quot;jupyter&quot; in a domain name. I found &lt;a href=&quot;https://github.com/jupyter/governance/issues/12&quot;&gt;this github issue&lt;/a&gt; and requested clarification 6 weeks ago. We've had some back and forth, but they recently made it clear that it would be at least a month until any decision would be considered, since they are too busy with other things. In the meantime, I rented jupytercloud.com, which has a nice ring to it, as the &lt;a href=&quot;https://www.google.com/search?q=jupiter+cloud&amp;safe=off&amp;rlz=1C5CHFA_enUS691US691&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ved=0ahUKEwj-vJubvJLOAhVEwYMKHRLlCCgQsAQIKg&amp;biw=1147&amp;bih=643&quot;&gt;planet Jupiter has clouds.&lt;/a&gt; Yesterday, I made jupytercloud.com point to cloud.sagemath.com to see what it would &quot;feel like&quot; and Tim Clemans started experimenting with customizing the page based on the domain name that the client sees. I did not mention jupytercloud.com publicly anywhere, and there were no links to it.&lt;br /&gt;&lt;br /&gt;Today I received this message:&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;&lt;code&gt;    William,&lt;br /&gt;&lt;br /&gt;    I'm writing this representing the Jupyter project leadership&lt;br /&gt;    and steering council. It has recently come to the Jupyter&lt;br /&gt;    Steering Council's attention that the domain jupytercloud.com&lt;br /&gt;    points to SageMathCloud. Do you own that domain? If so,&lt;br /&gt;    we ask that you take the domain name down immediately, as&lt;br /&gt;    it uses the Jupyter name.&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;/pre&gt;I of course immediately complied. It is well within their rights to dictate how their name is used, and I am obsessive about scrupulously doing everything I can to respect people's intellectual property; with Sage we have put huge amounts of effort into honoring both the letter and spirit of copyright statements on open source software.&lt;br /&gt;&lt;br /&gt;I'm writing this because it's unclear to me what people really want, and I have no idea what to do here.&lt;br /&gt;&lt;br /&gt;1. Do &lt;strong&gt;you&lt;/strong&gt; want something built on the same technology as SageMathCloud, but much more focused on Jupyter notebooks?&lt;br /&gt;&lt;br /&gt;2. Does the name of the site matter to &lt;strong&gt;you&lt;/strong&gt;?&lt;br /&gt;&lt;br /&gt;3. What model should the Jupyter project use for their trademark? Something like Python? like Git?Like Linux? &amp;nbsp;Like Firefox? &amp;nbsp;Like the email program PINE? &amp;nbsp;Something else entirely?&lt;br /&gt;&lt;br /&gt;4. Should I be worried about using Jupyter at all anywhere? E.g., in this blog post? As the default notebook for the SageMath project?&lt;br /&gt;&lt;br /&gt;I appreciate any feedback.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=12169979&quot; target=&quot;_blank&quot;&gt;Hacker News Discussion&lt;/a&gt;</content>
 		<author>
 			<name>William Stein</name>
 			<email>noreply@blogger.com</email>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -44,7 +44,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -85,7 +85,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T02:30:12+00:00</updated>
+			<updated>2016-07-27T03:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -104,7 +104,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T02:30:12+00:00</updated>
+			<updated>2016-07-27T03:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -142,7 +142,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T02:30:12+00:00</updated>
+			<updated>2016-07-27T03:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -160,7 +160,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-07-27T02:30:12+00:00</updated>
+			<updated>2016-07-27T03:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -199,7 +199,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -387,7 +387,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -407,7 +407,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -623,7 +623,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -643,7 +643,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -873,7 +873,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -953,7 +953,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-07-27T02:30:09+00:00</updated>
+			<updated>2016-07-27T03:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -973,7 +973,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -993,7 +993,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1265,7 +1265,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1285,7 +1285,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1305,7 +1305,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-07-27T02:30:05+00:00</updated>
+			<updated>2016-07-27T03:30:06+00:00</updated>
 		</source>
 	</entry>
 
