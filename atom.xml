@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-08-22T12:30:13+00:00</updated>
+	<updated>2016-08-22T13:30:12+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -46,7 +46,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-22T12:30:13+00:00</updated>
+			<updated>2016-08-22T13:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -66,7 +66,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -107,7 +107,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-22T12:30:13+00:00</updated>
+			<updated>2016-08-22T13:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -126,7 +126,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-22T12:30:13+00:00</updated>
+			<updated>2016-08-22T13:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -164,7 +164,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-22T12:30:13+00:00</updated>
+			<updated>2016-08-22T13:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -182,7 +182,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-22T12:30:13+00:00</updated>
+			<updated>2016-08-22T13:30:12+00:00</updated>
 		</source>
 	</entry>
 
@@ -221,7 +221,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -409,7 +409,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -429,7 +429,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -645,7 +645,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -665,7 +665,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -895,7 +895,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -975,7 +975,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-08-22T12:30:11+00:00</updated>
+			<updated>2016-08-22T13:30:09+00:00</updated>
 		</source>
 	</entry>
 
@@ -995,7 +995,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1015,7 +1015,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1287,7 +1287,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1307,7 +1307,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1327,7 +1327,7 @@ story.&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-22T12:30:07+00:00</updated>
+			<updated>2016-08-22T13:30:05+00:00</updated>
 		</source>
 	</entry>
 
