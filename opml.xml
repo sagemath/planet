@@ -2,7 +2,7 @@
 <opml version="1.1">
 	<head>
 		<title>Planet Sage</title>
-		<dateModified>Sun, 28 Aug 2016 19:30:17 +0000</dateModified>
+		<dateModified>Sun, 28 Aug 2016 20:09:13 +0000</dateModified>
 		<ownerName>Harald Schilly</ownerName>
 		<ownerEmail>harald.schilly@gmail.com</ownerEmail>
 	</head>
@@ -41,6 +41,7 @@
 		<outline type="rss" text="PolyBoRi Blog" xmlUrl="http://polybori.blogspot.com/feeds/posts/default/" title="The PolyBoRi Blog" />
 		<outline type="rss" text="Rasmi Elasmar" xmlUrl="http://rasmi.io/tag/sage/feed/" title="Rasmi Elasmar" />
 		<outline type="rss" text="Robert Miller" xmlUrl="http://blog.rlmiller.org/feeds/posts/default/-/sage" title="Robert Miller" />
+		<outline type="rss" text="SageMathCloud" xmlUrl="http://blog.sagemath.com/feed.xml" title="SageMathCloud Blog" />
 		<outline type="rss" text="Serge A. Salamanka" xmlUrl="http://sageworldmath.blogspot.com/feeds/posts/default/-/sage" title="SageWorldMath" />
 		<outline type="rss" text="Simon Spicer" xmlUrl="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="Math and Hats" />
 		<outline type="rss" text="Sébastien Labbé" xmlUrl="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="Sébastien Labbé" />
