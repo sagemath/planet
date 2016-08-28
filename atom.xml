@@ -5,14 +5,51 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-08-28T21:30:10+00:00</updated>
+	<updated>2016-08-28T22:30:10+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
+		<title type="html">Overview of what was done</title>
+		<link href="http://extendingmatroidfunctionality.blogspot.com/2016/08/overview-of-what-was-done.html"/>
+		<id>tag:blogger.com,1999:blog-3534817490044613273.post-1079302088510427146</id>
+		<updated>2016-08-22T14:18:00+00:00</updated>
+		<content type="html">My project has been extending the functionality of SageMath in a matroid direction.&lt;br /&gt;As part of my application, and before the summer officially started, I worked on two tickets:&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20290&quot;&gt;https://trac.sagemath.org/ticket/20290&lt;/a&gt; and&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/14666&quot;&gt;https://trac.sagemath.org/ticket/14666&lt;/a&gt;. The first was fixing a typo (and learning how to use the interface), and the second one modified the code to find a maximum weighted basis of a matroid so that a user could also see if there was exactly one maximum weighted basis. These are both currently incorporated into&amp;nbsp;&lt;span&gt;official release version of SageMath&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;At the beginning of the summer, I was focused on adding certificates to the pre written algorithms&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20660&quot;&gt;is_isomorphic()&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20696&quot;&gt;chordal functions&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20689&quot;&gt;has_minor()&lt;/a&gt;, and&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20778&quot;&gt;has_line_minor()&lt;/a&gt;.&amp;nbsp;All of these are closed tickets except the last one, which had a merge conflict. This also enabled me to get a feel for the documentation culture of my organization.&lt;br /&gt;&lt;br /&gt;The bulk of my project has been working on implementing &lt;a href=&quot;http://www.jstor.org/stable/3689867?seq=1#page_scan_tab_contents&quot; target=&quot;&quot;&gt;&lt;i&gt;An Almost Linear-Time Algorithm&lt;/i&gt;&lt;/a&gt; for Graph Realization by Robert Bixby and Donald Wagner. This algorithm was written with data structures that didn't exactly match the code base that I was incorporating the function into, so some changes were made there, and some simple (but not necessarily easy) supporting functions were added. There are still some bugs in the code, whose current version can be found &lt;a href=&quot;https://trac.sagemath.org/ticket/20834&quot;&gt;here&lt;/a&gt;. Much of the rest of this post will be devoted to explaining the data structures that we used for the algorithm. It is aimed mostly at whoever (hopefully future me) is going to finish this function.&lt;br /&gt;&lt;br /&gt;We used two new data structures Node, and Decomposition. The decomposition is composed of nodes and relations between them. In particular, it contains a directed tree, where each vertex corresponds to a node. A decomposition also stores information which is useful to the functions that need it. The root of the tree is stored, as are the nodes which contain the first and last verticies of the hypopath along with these verticies. Also stored are integers to makes sure that we don't double name two verticies or two edges the same thing.&lt;br /&gt;&lt;br /&gt;A node contains a graph, a parent marker edge, and a parent marker vertex. The latter is one of the&amp;nbsp;&lt;span&gt;vertices&lt;/span&gt;&amp;nbsp;of&amp;nbsp;the parent marker edge, and is manipulated so that it is the edge which will end up being included in the path that comes from the hypopath. It also stores an integer T, which depends on the iteration of adding edges, and is stored after being computed.&lt;br /&gt;&lt;br /&gt;The flow structure of the main functions is given below. Each function is a decomposition function.&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-5xvyY925m5Q/V7sIsmAheUI/AAAAAAAABG0/O0RUUuz6o-A4POAGtIuIyD9DXH4iT5e0QCLcB/s1600/Diagram.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;320&quot; src=&quot;https://3.bp.blogspot.com/-5xvyY925m5Q/V7sIsmAheUI/AAAAAAAABG0/O0RUUuz6o-A4POAGtIuIyD9DXH4iT5e0QCLcB/s320/Diagram.png&quot; width=&quot;280&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;div&gt;Here is the list of all the functions and the status of each of them. Most of them are supporting functions, with the exception of &lt;b&gt;relink1&lt;/b&gt;, &lt;b&gt;typing&lt;/b&gt;, &lt;b&gt;relink2&lt;/b&gt;, and &lt;b&gt;hypopath&lt;/b&gt; from section 4 of the paper, &lt;b&gt;squeeze&lt;/b&gt; and &lt;b&gt;update&lt;/b&gt; from section 5, and &lt;b&gt;is_graphic&lt;/b&gt; from section 6.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;Nodes&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_graph(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent_marker(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_named_edge(self, f)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent_marker_edge(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_f(self)  &lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;set_f(self, int n)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;is_polygon(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;s_path(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;is_cycle(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;_T(self, P, Z=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This will correctly give the T value when self is a leaf of the reduced arborescence. It does not correctly compute the T value otherwise.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink1(self, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink2(self, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_T(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;set_T(self, int T)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;CunninghamEdmondsDecomposition&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;relink1(self, Q, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_D_hat(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;T(self, N, P, T)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not done. It needs to be fixed so that it takes into account the types of the children of self.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__typing(self, P, pi)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on T. There are, however, no known deficiencies with the algorithm.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink2(Q, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__hypopath(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on &lt;b&gt;__typing&lt;/b&gt;. The assigning of u_1 and u_2 needs to be fixed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__squeeze(self, N, L)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__update(self, P, C)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on &lt;b&gt;__hypopath&lt;/b&gt;.  It is essentially done, except that the variables u_1, u_2, K_1, and K_2 are not necessarily computed correctly, and U2.4 is not written.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__is_graphic(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not done. G2 and G3 need to be written, and it needs to be tested. This cannot happen until the rest of the problems are fixed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;merge_with_parent(self, N, N_vertex=*, P_vertex=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is done, but it doesn't use the f is N_vertex and P_vertex are undefined. This should probably be changed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;merge_branch(self, N, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is written, but in order to insure that the intersection of P with this graph is always a path if possible, P should be replaced with P_0, and the parent markers of children that intersect P should be added to P_0 initially, and removed, in turn, when that child is merged with N.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__add_cycle(self, cycle)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_arborescence(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_nodes(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_root(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__get_pi(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is done, but it should be changed so that it can take a sub tree of self.arborescence as an input, and give pi on the reduced decomposition.&lt;/div&gt;&lt;div&gt;&lt;b&gt;branch(self, N)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent(self, N)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Done&lt;/div&gt;</content>
+		<author>
+			<name>Tara</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://extendingmatroidfunctionality.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Extending Matroid Functionality Google Summer of Code 2016</title>
+			<link rel="self" href="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss"/>
+			<id>tag:blogger.com,1999:blog-3534817490044613273</id>
+			<updated>2016-08-23T13:30:14+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Final GSOC Report</title>
+		<link href="http://lifebynumber.org/life-by-blog/final-gsoc-report/"/>
+		<id>http://lifebynumber.org/life-by-blog/final-gsoc-report/</id>
+		<updated>2016-08-22T00:00:00+00:00</updated>
+		<content type="html">Over the summer I have been coding for SAGE as part of Google Summer of Code 2016.  I feel this opportunity has strengthened both my skills as a coder and as a mathematician. SAGE is an open source math software system, used to do calculations.  SAGE is made up of code available for free public use and modification. It is a collaborative effort where people from around the world can add new code, update old code, and share the changes that they make. Open source coding is a labor of</content>
+		<author>
+			<name>Lauren Devitt</name>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
+		</author>
+		<source>
+			<title type="html">Blog RSS</title>
+			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
+			<id>http://lifebynumber.org/rss.xml</id>
+			<updated>2016-08-28T22:30:10+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
 		<title type="html">How do I start a Jupyter kernel in a SageMath Worksheet?</title>
-		<link href="http://blog.sagemath.com/smc/2016/09/14/start-jupyter-kernel-in-sagews.html"/>
-		<id>http://blog.sagemath.com/smc/2016/09/14/start-jupyter-kernel-in-sagews</id>
-		<updated>2016-08-28T20:09:12+00:00</updated>
+		<link href="http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews.html"/>
+		<id>http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews</id>
+		<updated>2016-08-14T19:30:00+00:00</updated>
 		<content type="html">&lt;p&gt;For a quick reminder, sample code is available for opening an Anaconda3 session. In the Sage worksheet toolbar, select &lt;strong&gt;Modes &amp;gt; Jupyter bridge&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter&lt;/code&gt; command to launch any installed Jupyter kernel  from a Sage worksheet&lt;/p&gt;
@@ -52,15 +89,35 @@
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T20:09:12+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Jupyter: &quot;take the domain name down immediately&quot;</title>
+		<link href="http://sagemath.blogspot.com/2016/07/jupyter-take-domain-name-down.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4592324674567336685</id>
+		<updated>2016-08-12T10:46:26+00:00</updated>
+		<content type="html">The &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; is an open source BSD-licensed browser-based code execution environment, inspired by my early work on the Sage Notebook (which we launched in 2007), which was in turn inspired heavily by Mathematica notebooks and Google docs. Jupyter used to be called &lt;a href=&quot;https://www.google.com/trends/explore#q=jupyter%2C%20ipython&amp;cmpt=q&amp;tz=Etc%2FGMT%2B7&quot;&gt;IPython&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; is an open source web-based environment for using Sage worksheets, terminals, LaTeX documents, course management, and Jupyter notebooks. I've put much hard work into making it so that multiple people can simultaneously edit Jupyter notebooks in SageMathCloud, and the history of all changes are recorded and browsable via a slider.&lt;br /&gt;&lt;br /&gt;Many people have written to me asking for there to be a modified version of &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;, which is oriented around Jupyter notebooks instead of Sage worksheets. So the default file type is Jupyter notebooks, the default kernel doesn't involve the extra heft of Sage, etc., and the domain name involves Jupyter instead of &quot;sagemath&quot;. Some people are disuased from using SageMathCloud for Jupyter notebooks because of the &quot;SageMath&quot; name.&lt;br /&gt;&lt;br /&gt;Dozens of web applications (including SageMathCloud) use the word &quot;Jupyter&quot; in various places. However, I was unsure about using &quot;jupyter&quot; in a domain name. I found &lt;a href=&quot;https://github.com/jupyter/governance/issues/12&quot;&gt;this github issue&lt;/a&gt; and requested clarification 6 weeks ago. We've had some back and forth, but they recently made it clear that it would be at least a month until any decision would be considered, since they are too busy with other things. In the meantime, I rented jupytercloud.com, which has a nice ring to it, as the &lt;a href=&quot;https://www.google.com/search?q=jupiter+cloud&amp;safe=off&amp;rlz=1C5CHFA_enUS691US691&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ved=0ahUKEwj-vJubvJLOAhVEwYMKHRLlCCgQsAQIKg&amp;biw=1147&amp;bih=643&quot;&gt;planet Jupiter has clouds.&lt;/a&gt; Yesterday, I made jupytercloud.com point to cloud.sagemath.com to see what it would &quot;feel like&quot; and Tim Clemans started experimenting with customizing the page based on the domain name that the client sees. I did not mention jupytercloud.com publicly anywhere, and there were no links to it.&lt;br /&gt;&lt;br /&gt;Today I received this message:&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;&lt;code&gt;    William,&lt;br /&gt;&lt;br /&gt;    I'm writing this representing the Jupyter project leadership&lt;br /&gt;    and steering council. It has recently come to the Jupyter&lt;br /&gt;    Steering Council's attention that the domain jupytercloud.com&lt;br /&gt;    points to SageMathCloud. Do you own that domain? If so,&lt;br /&gt;    we ask that you take the domain name down immediately, as&lt;br /&gt;    it uses the Jupyter name.&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;/pre&gt;I of course immediately complied. It is well within their rights to dictate how their name is used, and I am obsessive about scrupulously doing everything I can to respect people's intellectual property; with Sage we have put huge amounts of effort into honoring both the letter and spirit of copyright statements on open source software.&lt;br /&gt;&lt;br /&gt;I'm writing this because it's unclear to me what people really want, and I have no idea what to do here.&lt;br /&gt;&lt;br /&gt;1. Do &lt;strong&gt;you&lt;/strong&gt; want something built on the same technology as SageMathCloud, but much more focused on Jupyter notebooks?&lt;br /&gt;&lt;br /&gt;2. Does the name of the site matter to &lt;strong&gt;you&lt;/strong&gt;?&lt;br /&gt;&lt;br /&gt;3. What model should the Jupyter project use for their trademark? Something like Python? like Git?Like Linux? &amp;nbsp;Like Firefox? &amp;nbsp;Like the email program PINE? &amp;nbsp;Something else entirely?&lt;br /&gt;&lt;br /&gt;4. Should I be worried about using Jupyter at all anywhere? E.g., in this blog post? As the default notebook for the SageMath project?&lt;br /&gt;&lt;br /&gt;I appreciate any feedback.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=12169979&quot; target=&quot;_blank&quot;&gt;Hacker News Discussion&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;UPDATE (Aug 12, 2016): &lt;/b&gt;The official decision is that I &lt;b&gt;cannot&lt;/b&gt;&amp;nbsp;use the domain jupytercloud.com. &amp;nbsp; They did say I can use &lt;b&gt;jupyter.sagemath.com &lt;/b&gt;or &lt;b&gt;sagemath.com/jupyter&lt;/b&gt;. &amp;nbsp; Needless to say, I'm disappointed, but I fully respect their (very foolish, IMHO) decision.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
 	<entry>
 		<title type="html">Creating Custom “Mode Commands” in Sage Worksheets</title>
-		<link href="http://blog.sagemath.com/smc/2016/09/08/custom-magic-commands.html"/>
-		<id>http://blog.sagemath.com/smc/2016/09/08/custom-magic-commands</id>
-		<updated>2016-08-28T20:09:12+00:00</updated>
+		<link href="http://blog.sagemath.com/smc/2016/08/08/custom-magic-commands.html"/>
+		<id>http://blog.sagemath.com/smc/2016/08/08/custom-magic-commands</id>
+		<updated>2016-08-08T09:30:00+00:00</updated>
 		<content type="html">&lt;h2 id=&quot;what-is-a-mode-command&quot;&gt;What is a Mode Command?&lt;/h2&gt;
 
 &lt;p&gt;By default, running a cell in a Sage worksheet causes the input to be run as Sage commands, with output from Sage written to the output of the cell. Mode commands in a Sage worksheet cause the input to be run through some other process to create cell output. For example,&lt;/p&gt;
@@ -77,7 +134,7 @@
 
 &lt;p&gt;Alternatively, you can make any mode the default for all cells in the worksheet using &lt;code class=&quot;highlighter-rouge&quot;&gt;%default_mode &amp;lt;some_mode&amp;gt;&lt;/code&gt;. Then all cells will be using that chosen mode. If you choose this approach, you may still explicitly use &lt;code class=&quot;highlighter-rouge&quot;&gt;%sage&lt;/code&gt; for cells you want processed by the Sage interpreter (or &lt;code class=&quot;highlighter-rouge&quot;&gt;%foo&lt;/code&gt; to explicitly switch to any non-default mode).&lt;/p&gt;
 
-&lt;p&gt;There is &lt;a href=&quot;http://blog.sagemath.com/smc/2016/09/08/sagews.md#mode-help&quot;&gt;an entire section&lt;/a&gt; of the FAQ page &lt;a href=&quot;http://blog.sagemath.com/smc/2016/09/08/sagews&quot;&gt;SageMathCloud Worksheet (and User Interface) Help&lt;/a&gt; dedicated to questions about the built-in modes. It had 10 questions-and-answers in it as of July 28, 2016.&lt;/p&gt;
+&lt;p&gt;There is &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagews.md#mode-help&quot;&gt;an entire section&lt;/a&gt; of the FAQ page &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagews&quot;&gt;SageMathCloud Worksheet (and User Interface) Help&lt;/a&gt; dedicated to questions about the built-in modes. It had 10 questions-and-answers in it as of July 28, 2016.&lt;/p&gt;
 
 &lt;h2 id=&quot;is-there-a-list-of-all-currently-supported--modes-in-sagemathcloud&quot;&gt;Is there a list of all currently supported % modes in SageMathCloud?&lt;/h2&gt;
 
@@ -225,7 +282,7 @@ This example uses the Sage &lt;a href=&quot;http://doc.sagemath.org/html/en/refe
 
 &lt;p&gt;Suppose you want several bash processes with different working directories or environment variables controlled from the same worksheet. You can use the built-in &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter&lt;/code&gt; command to create several custom modes.&lt;/p&gt;
 
-&lt;p&gt;More information on “the sage-jupyter bridge” is available at &lt;a href=&quot;http://blog.sagemath.com/smc/2016/09/08/sagejupyter&quot;&gt;Sage Jupyter&lt;/a&gt;. Code creating a mode for &lt;em&gt;anaconda3&lt;/em&gt; is available by selecting &lt;em&gt;Modes &amp;gt; Jupyter bridge&lt;/em&gt;. You can view available Jupyter kernels by selecting &lt;em&gt;Help &amp;gt; Jupyter kernels&lt;/em&gt; in the Sage toolbar while cursor is in a sage cell. That will
+&lt;p&gt;More information on “the sage-jupyter bridge” is available at &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagejupyter&quot;&gt;Sage Jupyter&lt;/a&gt;. Code creating a mode for &lt;em&gt;anaconda3&lt;/em&gt; is available by selecting &lt;em&gt;Modes &amp;gt; Jupyter bridge&lt;/em&gt;. You can view available Jupyter kernels by selecting &lt;em&gt;Help &amp;gt; Jupyter kernels&lt;/em&gt; in the Sage toolbar while cursor is in a sage cell. That will
 insert the line &lt;code class=&quot;highlighter-rouge&quot;&gt;print(jupyter.available_kernels())&lt;/code&gt; into the current cell.&lt;/p&gt;
 
 &lt;p&gt;Define the modes:&lt;/p&gt;
@@ -262,7 +319,7 @@ commands to be run on a remote server. The same session is used
 for all cells in the given mode.&lt;/p&gt;
 
 &lt;p&gt;Notes:
-- The SageMathCloud project must have Internet access. This is an upgrade, only available to users with a paid subscription. (See also “&lt;a href=&quot;http://blog.sagemath.com/smc/2016/09/08/Why-should-I-purchase-a-subscription&quot;&gt;Why Should I Purchase a Subscription?”&lt;/a&gt;.)
+- The SageMathCloud project must have Internet access. This is an upgrade, only available to users with a paid subscription. (See also “&lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/Why-should-I-purchase-a-subscription&quot;&gt;Why Should I Purchase a Subscription?”&lt;/a&gt;.)
 - Configure ssh public and private keys with empty passphrase.
 - Set &lt;em&gt;host&lt;/em&gt; and &lt;em&gt;user&lt;/em&gt; for the remote connection.
 - You may want to set &lt;em&gt;IdentityFile&lt;/em&gt; in your ~/.ssh/config file.&lt;/p&gt;
@@ -348,15 +405,15 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T20:09:12+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
 	<entry>
 		<title type="html">Hello World</title>
-		<link href="http://blog.sagemath.com/smc/2016/09/07/hello-world.html"/>
-		<id>http://blog.sagemath.com/smc/2016/09/07/hello-world</id>
-		<updated>2016-08-28T20:09:12+00:00</updated>
+		<link href="http://blog.sagemath.com/smc/2016/08/07/hello-world.html"/>
+		<id>http://blog.sagemath.com/smc/2016/08/07/hello-world</id>
+		<updated>2016-08-07T09:30:00+00:00</updated>
 		<content type="html">&lt;p&gt;We are the &lt;a href=&quot;https://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; developers!&lt;/p&gt;
 
 &lt;p&gt;This is just a test and we love math:&lt;/p&gt;
@@ -373,64 +430,7 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T20:09:12+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Overview of what was done</title>
-		<link href="http://extendingmatroidfunctionality.blogspot.com/2016/08/overview-of-what-was-done.html"/>
-		<id>tag:blogger.com,1999:blog-3534817490044613273.post-1079302088510427146</id>
-		<updated>2016-08-22T14:18:00+00:00</updated>
-		<content type="html">My project has been extending the functionality of SageMath in a matroid direction.&lt;br /&gt;As part of my application, and before the summer officially started, I worked on two tickets:&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20290&quot;&gt;https://trac.sagemath.org/ticket/20290&lt;/a&gt; and&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/14666&quot;&gt;https://trac.sagemath.org/ticket/14666&lt;/a&gt;. The first was fixing a typo (and learning how to use the interface), and the second one modified the code to find a maximum weighted basis of a matroid so that a user could also see if there was exactly one maximum weighted basis. These are both currently incorporated into&amp;nbsp;&lt;span&gt;official release version of SageMath&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;At the beginning of the summer, I was focused on adding certificates to the pre written algorithms&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20660&quot;&gt;is_isomorphic()&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20696&quot;&gt;chordal functions&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20689&quot;&gt;has_minor()&lt;/a&gt;, and&amp;nbsp;&lt;a href=&quot;https://trac.sagemath.org/ticket/20778&quot;&gt;has_line_minor()&lt;/a&gt;.&amp;nbsp;All of these are closed tickets except the last one, which had a merge conflict. This also enabled me to get a feel for the documentation culture of my organization.&lt;br /&gt;&lt;br /&gt;The bulk of my project has been working on implementing &lt;a href=&quot;http://www.jstor.org/stable/3689867?seq=1#page_scan_tab_contents&quot; target=&quot;&quot;&gt;&lt;i&gt;An Almost Linear-Time Algorithm&lt;/i&gt;&lt;/a&gt; for Graph Realization by Robert Bixby and Donald Wagner. This algorithm was written with data structures that didn't exactly match the code base that I was incorporating the function into, so some changes were made there, and some simple (but not necessarily easy) supporting functions were added. There are still some bugs in the code, whose current version can be found &lt;a href=&quot;https://trac.sagemath.org/ticket/20834&quot;&gt;here&lt;/a&gt;. Much of the rest of this post will be devoted to explaining the data structures that we used for the algorithm. It is aimed mostly at whoever (hopefully future me) is going to finish this function.&lt;br /&gt;&lt;br /&gt;We used two new data structures Node, and Decomposition. The decomposition is composed of nodes and relations between them. In particular, it contains a directed tree, where each vertex corresponds to a node. A decomposition also stores information which is useful to the functions that need it. The root of the tree is stored, as are the nodes which contain the first and last verticies of the hypopath along with these verticies. Also stored are integers to makes sure that we don't double name two verticies or two edges the same thing.&lt;br /&gt;&lt;br /&gt;A node contains a graph, a parent marker edge, and a parent marker vertex. The latter is one of the&amp;nbsp;&lt;span&gt;vertices&lt;/span&gt;&amp;nbsp;of&amp;nbsp;the parent marker edge, and is manipulated so that it is the edge which will end up being included in the path that comes from the hypopath. It also stores an integer T, which depends on the iteration of adding edges, and is stored after being computed.&lt;br /&gt;&lt;br /&gt;The flow structure of the main functions is given below. Each function is a decomposition function.&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-5xvyY925m5Q/V7sIsmAheUI/AAAAAAAABG0/O0RUUuz6o-A4POAGtIuIyD9DXH4iT5e0QCLcB/s1600/Diagram.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;320&quot; src=&quot;https://3.bp.blogspot.com/-5xvyY925m5Q/V7sIsmAheUI/AAAAAAAABG0/O0RUUuz6o-A4POAGtIuIyD9DXH4iT5e0QCLcB/s320/Diagram.png&quot; width=&quot;280&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;div&gt;Here is the list of all the functions and the status of each of them. Most of them are supporting functions, with the exception of &lt;b&gt;relink1&lt;/b&gt;, &lt;b&gt;typing&lt;/b&gt;, &lt;b&gt;relink2&lt;/b&gt;, and &lt;b&gt;hypopath&lt;/b&gt; from section 4 of the paper, &lt;b&gt;squeeze&lt;/b&gt; and &lt;b&gt;update&lt;/b&gt; from section 5, and &lt;b&gt;is_graphic&lt;/b&gt; from section 6.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;Nodes&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_graph(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent_marker(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_named_edge(self, f)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent_marker_edge(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_f(self)  &lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;set_f(self, int n)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;is_polygon(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;s_path(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;is_cycle(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;_T(self, P, Z=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This will correctly give the T value when self is a leaf of the reduced arborescence. It does not correctly compute the T value otherwise.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink1(self, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink2(self, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_T(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;set_T(self, int T)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;CunninghamEdmondsDecomposition&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;relink1(self, Q, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_D_hat(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;T(self, N, P, T)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not done. It needs to be fixed so that it takes into account the types of the children of self.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__typing(self, P, pi)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on T. There are, however, no known deficiencies with the algorithm.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__relink2(Q, Z=*, WQ=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__hypopath(self, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on &lt;b&gt;__typing&lt;/b&gt;. The assigning of u_1 and u_2 needs to be fixed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__squeeze(self, N, L)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__update(self, P, C)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not tested as it relies on &lt;b&gt;__hypopath&lt;/b&gt;.  It is essentially done, except that the variables u_1, u_2, K_1, and K_2 are not necessarily computed correctly, and U2.4 is not written.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__is_graphic(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is not done. G2 and G3 need to be written, and it needs to be tested. This cannot happen until the rest of the problems are fixed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;merge_with_parent(self, N, N_vertex=*, P_vertex=*)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is done, but it doesn't use the f is N_vertex and P_vertex are undefined. This should probably be changed.&lt;/div&gt;&lt;div&gt;&lt;b&gt;merge_branch(self, N, P)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is written, but in order to insure that the intersection of P with this graph is always a path if possible, P should be replaced with P_0, and the parent markers of children that intersect P should be added to P_0 initially, and removed, in turn, when that child is merged with N.&lt;/div&gt;&lt;div&gt;&lt;b&gt;__add_cycle(self, cycle)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_arborescence(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_nodes(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_root(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;__get_pi(self)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;This is done, but it should be changed so that it can take a sub tree of self.arborescence as an input, and give pi on the reduced decomposition.&lt;/div&gt;&lt;div&gt;&lt;b&gt;branch(self, N)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Done&lt;/div&gt;&lt;div&gt;&lt;b&gt;get_parent(self, N)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Done&lt;/div&gt;</content>
-		<author>
-			<name>Tara</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://extendingmatroidfunctionality.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Extending Matroid Functionality Google Summer of Code 2016</title>
-			<link rel="self" href="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss"/>
-			<id>tag:blogger.com,1999:blog-3534817490044613273</id>
-			<updated>2016-08-23T13:30:14+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Final GSOC Report</title>
-		<link href="http://lifebynumber.org/life-by-blog/final-gsoc-report/"/>
-		<id>http://lifebynumber.org/life-by-blog/final-gsoc-report/</id>
-		<updated>2016-08-22T00:00:00+00:00</updated>
-		<content type="html">Over the summer I have been coding for SAGE as part of Google Summer of Code 2016.  I feel this opportunity has strengthened both my skills as a coder and as a mathematician. SAGE is an open source math software system, used to do calculations.  SAGE is made up of code available for free public use and modification. It is a collaborative effort where people from around the world can add new code, update old code, and share the changes that they make. Open source coding is a labor of</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Jupyter: &quot;take the domain name down immediately&quot;</title>
-		<link href="http://sagemath.blogspot.com/2016/07/jupyter-take-domain-name-down.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4592324674567336685</id>
-		<updated>2016-08-12T10:46:26+00:00</updated>
-		<content type="html">The &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; is an open source BSD-licensed browser-based code execution environment, inspired by my early work on the Sage Notebook (which we launched in 2007), which was in turn inspired heavily by Mathematica notebooks and Google docs. Jupyter used to be called &lt;a href=&quot;https://www.google.com/trends/explore#q=jupyter%2C%20ipython&amp;cmpt=q&amp;tz=Etc%2FGMT%2B7&quot;&gt;IPython&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; is an open source web-based environment for using Sage worksheets, terminals, LaTeX documents, course management, and Jupyter notebooks. I've put much hard work into making it so that multiple people can simultaneously edit Jupyter notebooks in SageMathCloud, and the history of all changes are recorded and browsable via a slider.&lt;br /&gt;&lt;br /&gt;Many people have written to me asking for there to be a modified version of &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;, which is oriented around Jupyter notebooks instead of Sage worksheets. So the default file type is Jupyter notebooks, the default kernel doesn't involve the extra heft of Sage, etc., and the domain name involves Jupyter instead of &quot;sagemath&quot;. Some people are disuased from using SageMathCloud for Jupyter notebooks because of the &quot;SageMath&quot; name.&lt;br /&gt;&lt;br /&gt;Dozens of web applications (including SageMathCloud) use the word &quot;Jupyter&quot; in various places. However, I was unsure about using &quot;jupyter&quot; in a domain name. I found &lt;a href=&quot;https://github.com/jupyter/governance/issues/12&quot;&gt;this github issue&lt;/a&gt; and requested clarification 6 weeks ago. We've had some back and forth, but they recently made it clear that it would be at least a month until any decision would be considered, since they are too busy with other things. In the meantime, I rented jupytercloud.com, which has a nice ring to it, as the &lt;a href=&quot;https://www.google.com/search?q=jupiter+cloud&amp;safe=off&amp;rlz=1C5CHFA_enUS691US691&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ved=0ahUKEwj-vJubvJLOAhVEwYMKHRLlCCgQsAQIKg&amp;biw=1147&amp;bih=643&quot;&gt;planet Jupiter has clouds.&lt;/a&gt; Yesterday, I made jupytercloud.com point to cloud.sagemath.com to see what it would &quot;feel like&quot; and Tim Clemans started experimenting with customizing the page based on the domain name that the client sees. I did not mention jupytercloud.com publicly anywhere, and there were no links to it.&lt;br /&gt;&lt;br /&gt;Today I received this message:&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;&lt;code&gt;    William,&lt;br /&gt;&lt;br /&gt;    I'm writing this representing the Jupyter project leadership&lt;br /&gt;    and steering council. It has recently come to the Jupyter&lt;br /&gt;    Steering Council's attention that the domain jupytercloud.com&lt;br /&gt;    points to SageMathCloud. Do you own that domain? If so,&lt;br /&gt;    we ask that you take the domain name down immediately, as&lt;br /&gt;    it uses the Jupyter name.&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;/pre&gt;I of course immediately complied. It is well within their rights to dictate how their name is used, and I am obsessive about scrupulously doing everything I can to respect people's intellectual property; with Sage we have put huge amounts of effort into honoring both the letter and spirit of copyright statements on open source software.&lt;br /&gt;&lt;br /&gt;I'm writing this because it's unclear to me what people really want, and I have no idea what to do here.&lt;br /&gt;&lt;br /&gt;1. Do &lt;strong&gt;you&lt;/strong&gt; want something built on the same technology as SageMathCloud, but much more focused on Jupyter notebooks?&lt;br /&gt;&lt;br /&gt;2. Does the name of the site matter to &lt;strong&gt;you&lt;/strong&gt;?&lt;br /&gt;&lt;br /&gt;3. What model should the Jupyter project use for their trademark? Something like Python? like Git?Like Linux? &amp;nbsp;Like Firefox? &amp;nbsp;Like the email program PINE? &amp;nbsp;Something else entirely?&lt;br /&gt;&lt;br /&gt;4. Should I be worried about using Jupyter at all anywhere? E.g., in this blog post? As the default notebook for the SageMath project?&lt;br /&gt;&lt;br /&gt;I appreciate any feedback.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=12169979&quot; target=&quot;_blank&quot;&gt;Hacker News Discussion&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;UPDATE (Aug 12, 2016): &lt;/b&gt;The official decision is that I &lt;b&gt;cannot&lt;/b&gt;&amp;nbsp;use the domain jupytercloud.com. &amp;nbsp; They did say I can use &lt;b&gt;jupyter.sagemath.com &lt;/b&gt;or &lt;b&gt;sagemath.com/jupyter&lt;/b&gt;. &amp;nbsp; Needless to say, I'm disappointed, but I fully respect their (very foolish, IMHO) decision.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -452,7 +452,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -472,7 +472,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -513,7 +513,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -532,7 +532,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -570,7 +570,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -588,7 +588,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-28T21:30:10+00:00</updated>
+			<updated>2016-08-28T22:30:10+00:00</updated>
 		</source>
 	</entry>
 
@@ -627,7 +627,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -815,7 +815,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -835,7 +835,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1051,7 +1051,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1071,7 +1071,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1301,7 +1301,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1381,7 +1381,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-08-28T21:30:08+00:00</updated>
+			<updated>2016-08-28T22:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1401,7 +1401,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1421,7 +1421,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-28T21:30:04+00:00</updated>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1674,6 +1674,26 @@ story.&lt;/p&gt;
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
 			<updated>2016-06-27T10:30:05+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html"></title>
+		<link href="http://sagemath.blogspot.com/2015/09/funding-open-source-mathematical.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753</id>
+		<updated>2015-09-10T19:38:38+00:00</updated>
+		<content type="html">&lt;h1 id=&quot;funding-open-source-mathematical-software-in-the-united-states&quot;&gt;Funding Open Source Mathematical Software in the United States&lt;/h1&gt;I do &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; know how to get funding for open source mathematical software in the United States. However, I'm trying.&lt;br /&gt;&lt;h2 id=&quot;why-because-sage-is-hobbling-along&quot;&gt;Why: Because Sage is Hobbling Along&lt;/h2&gt;Despite what we might think in our Sage-developer bubble, &lt;a href=&quot;http://sagemath.org/&quot;&gt;Sage&lt;/a&gt; is hobbling along, and without an infusion of financial support very soon, I think the project is going to fail in the next few years. I have access to Google analytics data for &lt;a href=&quot;http://sagemath.org/&quot;&gt;sagemath.org&lt;/a&gt; since 2007, and there has been no growth &amp;nbsp;in active users of the website since 2011:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s1600/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;187&quot; src=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s400/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2 id=&quot;something-that-is-missing&quot;&gt;Something that is Missing&lt;/h2&gt;The worse part of all for me, after ten years, is seeing things like &lt;a href=&quot;https://groups.google.com/forum/#!topic/sage-devel/cAFdRb-WKqM&quot;&gt;this email&lt;/a&gt; today from John Palmieri, where he talks about writing &lt;em&gt;slow&lt;/em&gt; but interesting algebraic topology code, and needing help from somebody who knows Cython to actually make his code fast.&lt;br /&gt;&lt;br /&gt;I know from my three visits to the Magma group in Sydney that such assistance is &lt;em&gt;precisely&lt;/em&gt; what having real financial support can provide. Such money makes it possible to have fulltime people who know the tools and how to optimize them well, and they work on this sort of speedup and integration -- this &quot;devil is in the details&quot; work -- for each major contribution (they are sort of like a highly skilled version of a journal copy editor and referee all in one). Doing this makes a massive difference, but also costs on the order of $1 million / year to have any real impact. 1 million is probably the Magma budget to support around 10 people and periodic visitors, and of course like 1% of the budget of Matlab/Mathematica. Magma has this support partly because Magma is closed source, and maintains tight control on who may use it.&lt;br /&gt;&lt;h2 id=&quot;searching-for-a-funding-model&quot;&gt;Searching for a Funding Model&lt;/h2&gt;Sage is open source and freely available to all, so it is of potential huge value to the community by being owned by everybody and changeable. However, those who fund Magma (either directly or indirectly) haven't funded Sage at the same level for some reason. I can't make Sage closed source and copy that very successful funding model. I've tried everything I can think of given the time and resources I have, and the only model left that seems able to support open source is having a company that does &lt;strong&gt;something else&lt;/strong&gt; well and makes money, then using some of the profit to fund open source (&lt;a href=&quot;http://www.neowin.net/news/intel-overtakes-red-hat-to-become-top-linux-kernel-contributor&quot;&gt;Intel is the biggest contributor to Linux&lt;/a&gt;).&lt;br /&gt;&lt;h2 id=&quot;sagemathcloud&quot;&gt;SageMath, Inc.&lt;/h2&gt;Since I failed to find any companies that passionately care about Sage like Intel/Google/RedHat/etc. care about Linux, I started one. I've been working on &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; extremely hard for over 3 years now, with the hopes that at least it could be a way to fund Sage development.</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-08-28T22:30:05+00:00</updated>
 		</source>
 	</entry>
 
