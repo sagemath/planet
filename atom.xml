@@ -5,8 +5,27 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-08-29T06:30:10+00:00</updated>
+	<updated>2016-08-29T07:30:18+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">First Status Update</title>
+		<link href="http://blog.sagemath.com/smc/2016/08/29/first-status-update.html"/>
+		<id>http://blog.sagemath.com/smc/2016/08/29/first-status-update</id>
+		<updated>2016-08-29T07:30:17+00:00</updated>
+		<content type="html">&lt;p&gt;William scripted status reports, organized several things related to billing, and spent hours working on subtle issues related to sync and file saving. Harald worked on the SMC blog, read emails, and triaged tickets. Hal continued experiments with pytest for smc_sagews, resumed work on sagews issues (note &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/823&quot;&gt;PR823&lt;/a&gt; is ready for review), updated MOOC companion for complex variables, and explored supporting &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files and &lt;code class=&quot;highlighter-rouge&quot;&gt;%Rmd&lt;/code&gt; sagews mode. Tim made three pull requests for realtime list of collaborators viewing any file in a project, restoring tabs, and make deletion immediately delete files from disk instead of moving them to the trash, since we have snapshots.&lt;/p&gt;</content>
+		<author>
+			<name>SageMath, Inc.</name>
+			<uri>http://blog.sagemath.com/</uri>
+		</author>
+		<source>
+			<title type="html">SageMathCloud Blog</title>
+			<subtitle type="html">News and updates about SageMathCloud</subtitle>
+			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
+			<id>http://blog.sagemath.com/</id>
+			<updated>2016-08-29T07:30:17+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Overview of what was done</title>
@@ -41,7 +60,7 @@
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -89,7 +108,7 @@
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T22:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -405,7 +424,7 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T22:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -430,7 +449,7 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-08-28T22:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -452,7 +471,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -513,7 +532,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -532,7 +551,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -570,7 +589,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -588,7 +607,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-08-29T06:30:10+00:00</updated>
+			<updated>2016-08-29T07:30:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1381,7 +1400,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-08-29T06:30:08+00:00</updated>
+			<updated>2016-08-29T07:30:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -1674,26 +1693,6 @@ story.&lt;/p&gt;
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
 			<updated>2016-06-27T10:30:05+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html"></title>
-		<link href="http://sagemath.blogspot.com/2015/09/funding-open-source-mathematical.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753</id>
-		<updated>2015-09-10T19:38:38+00:00</updated>
-		<content type="html">&lt;h1 id=&quot;funding-open-source-mathematical-software-in-the-united-states&quot;&gt;Funding Open Source Mathematical Software in the United States&lt;/h1&gt;I do &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; know how to get funding for open source mathematical software in the United States. However, I'm trying.&lt;br /&gt;&lt;h2 id=&quot;why-because-sage-is-hobbling-along&quot;&gt;Why: Because Sage is Hobbling Along&lt;/h2&gt;Despite what we might think in our Sage-developer bubble, &lt;a href=&quot;http://sagemath.org/&quot;&gt;Sage&lt;/a&gt; is hobbling along, and without an infusion of financial support very soon, I think the project is going to fail in the next few years. I have access to Google analytics data for &lt;a href=&quot;http://sagemath.org/&quot;&gt;sagemath.org&lt;/a&gt; since 2007, and there has been no growth &amp;nbsp;in active users of the website since 2011:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s1600/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;187&quot; src=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s400/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2 id=&quot;something-that-is-missing&quot;&gt;Something that is Missing&lt;/h2&gt;The worse part of all for me, after ten years, is seeing things like &lt;a href=&quot;https://groups.google.com/forum/#!topic/sage-devel/cAFdRb-WKqM&quot;&gt;this email&lt;/a&gt; today from John Palmieri, where he talks about writing &lt;em&gt;slow&lt;/em&gt; but interesting algebraic topology code, and needing help from somebody who knows Cython to actually make his code fast.&lt;br /&gt;&lt;br /&gt;I know from my three visits to the Magma group in Sydney that such assistance is &lt;em&gt;precisely&lt;/em&gt; what having real financial support can provide. Such money makes it possible to have fulltime people who know the tools and how to optimize them well, and they work on this sort of speedup and integration -- this &quot;devil is in the details&quot; work -- for each major contribution (they are sort of like a highly skilled version of a journal copy editor and referee all in one). Doing this makes a massive difference, but also costs on the order of $1 million / year to have any real impact. 1 million is probably the Magma budget to support around 10 people and periodic visitors, and of course like 1% of the budget of Matlab/Mathematica. Magma has this support partly because Magma is closed source, and maintains tight control on who may use it.&lt;br /&gt;&lt;h2 id=&quot;searching-for-a-funding-model&quot;&gt;Searching for a Funding Model&lt;/h2&gt;Sage is open source and freely available to all, so it is of potential huge value to the community by being owned by everybody and changeable. However, those who fund Magma (either directly or indirectly) haven't funded Sage at the same level for some reason. I can't make Sage closed source and copy that very successful funding model. I've tried everything I can think of given the time and resources I have, and the only model left that seems able to support open source is having a company that does &lt;strong&gt;something else&lt;/strong&gt; well and makes money, then using some of the profit to fund open source (&lt;a href=&quot;http://www.neowin.net/news/intel-overtakes-red-hat-to-become-top-linux-kernel-contributor&quot;&gt;Intel is the biggest contributor to Linux&lt;/a&gt;).&lt;br /&gt;&lt;h2 id=&quot;sagemathcloud&quot;&gt;SageMath, Inc.&lt;/h2&gt;Since I failed to find any companies that passionately care about Sage like Intel/Google/RedHat/etc. care about Linux, I started one. I've been working on &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; extremely hard for over 3 years now, with the hopes that at least it could be a way to fund Sage development.</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-08-29T05:30:05+00:00</updated>
 		</source>
 	</entry>
 
