@@ -12,7 +12,7 @@
 	<guid>http://blog.sagemath.com/smc/2016/08/29/first-status-update</guid>
 	<link>http://blog.sagemath.com/smc/2016/08/29/first-status-update.html</link>
 	<description>&lt;p&gt;William scripted status reports, organized several things related to billing, and spent hours working on subtle issues related to sync and file saving. Harald worked on the SMC blog, read emails, and triaged tickets. Hal continued experiments with pytest for smc_sagews, resumed work on sagews issues (note &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/823&quot;&gt;PR823&lt;/a&gt; is ready for review), updated MOOC companion for complex variables, and explored supporting &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files and &lt;code class=&quot;highlighter-rouge&quot;&gt;%Rmd&lt;/code&gt; sagews mode. Tim made three pull requests for realtime list of collaborators viewing any file in a project, restoring tabs, and make deletion immediately delete files from disk instead of moving them to the trash, since we have snapshots.&lt;/p&gt;</description>
-	<pubDate>Mon, 29 Aug 2016 07:30:17 +0000</pubDate>
+	<pubDate>Mon, 29 Aug 2016 09:23:00 +0000</pubDate>
 </item>
 <item>
 	<title>Extending Matroid Functionality Google Summer of Code 2016: Overview of what was done</title>
