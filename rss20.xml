@@ -8,10 +8,21 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
-	<title>SageMathCloud: First Status Update</title>
-	<guid>http://blog.sagemath.com/smc/2016/08/29/first-status-update</guid>
-	<link>http://blog.sagemath.com/smc/2016/08/29/first-status-update.html</link>
-	<description>&lt;p&gt;William scripted status reports, organized several things related to billing, and spent hours working on subtle issues related to sync and file saving. Harald worked on the SMC blog, read emails, and triaged tickets. Hal continued experiments with pytest for smc_sagews, resumed work on sagews issues (note &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/823&quot;&gt;PR823&lt;/a&gt; is ready for review), updated MOOC companion for complex variables, and explored supporting &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files and &lt;code class=&quot;highlighter-rouge&quot;&gt;%Rmd&lt;/code&gt; sagews mode. Tim made three pull requests for realtime list of collaborators viewing any file in a project, restoring tabs, and make deletion immediately delete files from disk instead of moving them to the trash, since we have snapshots.&lt;/p&gt;</description>
+	<title>SageMathCloud: First Nightly Changelog</title>
+	<guid>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog</guid>
+	<link>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog.html</link>
+	<description>&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Deleting a file now deletes it instead of moving it to the trash.
+To retrieve deleted files, use snapshots.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved file saving and syncing&lt;/li&gt;
+&lt;/ul&gt;</description>
 	<pubDate>Mon, 29 Aug 2016 09:23:00 +0000</pubDate>
 </item>
 <item>

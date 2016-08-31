@@ -13,7 +13,7 @@
 
 	<items>
 		<rdf:Seq>
-			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/29/first-status-update" />
+			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-3534817490044613273.post-1079302088510427146" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/final-gsoc-report/" />
 			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews" />
@@ -48,10 +48,21 @@
 	</items>
 </channel>
 
-<item rdf:about="http://blog.sagemath.com/smc/2016/08/29/first-status-update">
-	<title>SageMathCloud: First Status Update</title>
-	<link>http://blog.sagemath.com/smc/2016/08/29/first-status-update.html</link>
-	<content:encoded>&lt;p&gt;William scripted status reports, organized several things related to billing, and spent hours working on subtle issues related to sync and file saving. Harald worked on the SMC blog, read emails, and triaged tickets. Hal continued experiments with pytest for smc_sagews, resumed work on sagews issues (note &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/823&quot;&gt;PR823&lt;/a&gt; is ready for review), updated MOOC companion for complex variables, and explored supporting &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files and &lt;code class=&quot;highlighter-rouge&quot;&gt;%Rmd&lt;/code&gt; sagews mode. Tim made three pull requests for realtime list of collaborators viewing any file in a project, restoring tabs, and make deletion immediately delete files from disk instead of moving them to the trash, since we have snapshots.&lt;/p&gt;</content:encoded>
+<item rdf:about="http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog">
+	<title>SageMathCloud: First Nightly Changelog</title>
+	<link>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog.html</link>
+	<content:encoded>&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Deleting a file now deletes it instead of moving it to the trash.
+To retrieve deleted files, use snapshots.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved file saving and syncing&lt;/li&gt;
+&lt;/ul&gt;</content:encoded>
 	<dc:date>2016-08-29T09:23:00+00:00</dc:date>
 	<dc:creator>SageMath, Inc.</dc:creator>
 </item>
