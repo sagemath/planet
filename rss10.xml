@@ -13,8 +13,8 @@
 
 	<items>
 		<rdf:Seq>
-			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2" />
-			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog" />
+			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2" />
+			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-3534817490044613273.post-1079302088510427146" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/final-gsoc-report/" />
 			<rdf:li rdf:resource="http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews" />
@@ -49,31 +49,31 @@
 	</items>
 </channel>
 
-<item rdf:about="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2">
+<item rdf:about="http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2">
 	<title>SageMathCloud: Nightly Changelog #2</title>
-	<link>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2.html</link>
+	<link>http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2.html</link>
 	<content:encoded>&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
 
 &lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking on them takes you to where they were last active in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking one takes you to the file that person viewed last in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;In the Course Manager, “student not found” is replaced by “student already in course” where appropriate to prevent confusion. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In the Course Manager, replaced “&lt;em&gt;student not found&lt;/em&gt;” with “&lt;em&gt;student already in course&lt;/em&gt;” where appropriate to prevent confusion when adding students. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Fixed an issue regarding sagews2pdf. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/855&quot;&gt;#855&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded>
-	<dc:date>2016-08-29T09:23:00+00:00</dc:date>
+	<dc:date>2016-09-01T09:23:00+00:00</dc:date>
 	<dc:creator>SageMath, Inc.</dc:creator>
 </item>
-<item rdf:about="http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog">
-	<title>SageMathCloud: First Nightly Changelog</title>
-	<link>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog.html</link>
+<item rdf:about="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1">
+	<title>SageMathCloud: Nightly Changelog #1</title>
+	<link>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1.html</link>
 	<content:encoded>&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
 
 &lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;

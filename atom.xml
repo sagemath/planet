@@ -5,24 +5,24 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-09-02T01:30:11+00:00</updated>
+	<updated>2016-09-02T02:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Nightly Changelog #2</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2</id>
-		<updated>2016-08-29T09:23:00+00:00</updated>
+		<link href="http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2.html"/>
+		<id>http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2</id>
+		<updated>2016-09-01T09:23:00+00:00</updated>
 		<content type="html">&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
 
 &lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking on them takes you to where they were last active in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking one takes you to the file that person viewed last in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;In the Course Manager, “student not found” is replaced by “student already in course” where appropriate to prevent confusion. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In the Course Manager, replaced “&lt;em&gt;student not found&lt;/em&gt;” with “&lt;em&gt;student already in course&lt;/em&gt;” where appropriate to prevent confusion when adding students. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h3&gt;
@@ -38,14 +38,14 @@
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
 	<entry>
-		<title type="html">First Nightly Changelog</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog</id>
+		<title type="html">Nightly Changelog #1</title>
+		<link href="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1.html"/>
+		<id>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1</id>
 		<updated>2016-08-29T09:23:00+00:00</updated>
 		<content type="html">&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
 
@@ -68,7 +68,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -105,7 +105,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -153,7 +153,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -173,7 +173,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -469,7 +469,7 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -494,7 +494,7 @@ for all cells in the given mode.&lt;/p&gt;
 			<subtitle type="html">News and updates about SageMathCloud</subtitle>
 			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
 			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -516,7 +516,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -536,7 +536,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -577,7 +577,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -596,7 +596,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -634,7 +634,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -652,7 +652,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T01:30:11+00:00</updated>
+			<updated>2016-09-02T02:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -691,7 +691,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -879,7 +879,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -899,7 +899,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -1115,7 +1115,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -1135,7 +1135,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -1365,7 +1365,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -1445,7 +1445,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-09-02T01:30:07+00:00</updated>
+			<updated>2016-09-02T02:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -1465,7 +1465,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -1485,7 +1485,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T01:30:03+00:00</updated>
+			<updated>2016-09-02T02:30:04+00:00</updated>
 		</source>
 	</entry>
 
