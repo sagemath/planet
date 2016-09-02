@@ -442,19 +442,6 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
-			<foaf:name>SageMathCloud</foaf:name>
-			<foaf:weblog>
-				<foaf:Document rdf:about="http://blog.sagemath.com/">
-					<dc:title>SageMathCloud Blog</dc:title>
-					<rdfs:seeAlso>
-						<rss:channel rdf:about="http://blog.sagemath.com/feed.xml" />
-					</rdfs:seeAlso>
-				</foaf:Document>
-			</foaf:weblog>
-		</foaf:Agent>
-	</foaf:member>
-	<foaf:member>
-		<foaf:Agent>
 			<foaf:name>Serge A. Salamanka</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://sageworldmath.blogspot.com/search/label/sage">

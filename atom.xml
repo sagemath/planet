@@ -5,72 +5,8 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-09-02T09:30:14+00:00</updated>
+	<updated>2016-09-02T10:30:08+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
-
-	<entry>
-		<title type="html">Nightly Changelog #2</title>
-		<link href="http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2.html"/>
-		<id>http://blog.sagemath.com/smc/2016/09/01/nightly-changelog-2</id>
-		<updated>2016-09-01T09:23:00+00:00</updated>
-		<content type="html">&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
-
-&lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking one takes you to the file that person viewed last in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In the Course Manager, replaced “&lt;em&gt;student not found&lt;/em&gt;” with “&lt;em&gt;student already in course&lt;/em&gt;” where appropriate to prevent confusion when adding students. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Fixed an issue regarding sagews2pdf. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/855&quot;&gt;#855&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>SageMath, Inc.</name>
-			<uri>http://blog.sagemath.com/</uri>
-		</author>
-		<source>
-			<title type="html">SageMathCloud Blog</title>
-			<subtitle type="html">News and updates about SageMathCloud</subtitle>
-			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
-			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T02:30:11+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Nightly Changelog #1</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-1</id>
-		<updated>2016-08-29T09:23:00+00:00</updated>
-		<content type="html">&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
-
-&lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Deleting a file now deletes it instead of moving it to the trash.
-To retrieve deleted files, use snapshots.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Improved file saving and syncing&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>SageMath, Inc.</name>
-			<uri>http://blog.sagemath.com/</uri>
-		</author>
-		<source>
-			<title type="html">SageMathCloud Blog</title>
-			<subtitle type="html">News and updates about SageMathCloud</subtitle>
-			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
-			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T02:30:11+00:00</updated>
-		</source>
-	</entry>
 
 	<entry>
 		<title type="html">Overview of what was done</title>
@@ -105,55 +41,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">How do I start a Jupyter kernel in a SageMath Worksheet?</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/14/start-jupyter-kernel-in-sagews</id>
-		<updated>2016-08-14T19:30:00+00:00</updated>
-		<content type="html">&lt;p&gt;For a quick reminder, sample code is available for opening an Anaconda3 session. In the Sage worksheet toolbar, select &lt;strong&gt;Modes &amp;gt; Jupyter bridge&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter&lt;/code&gt; command to launch any installed Jupyter kernel  from a Sage worksheet&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;py3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;python3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After that, any cell that begins with &lt;code class=&quot;highlighter-rouge&quot;&gt;%py3&lt;/code&gt; will send statements to the Python3 kernel that you just started. If you want to draw graphics, there is no need to call &lt;code class=&quot;highlighter-rouge&quot;&gt;%matplotlib inline&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;py3&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pylab&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can set the default mode to be your Jupyter kernel for all cells in the worksheet: after putting the following in a cell, click the “restart” button, and you have an anaconda worksheet.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auto&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;anaconda3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'anaconda3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default_mode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anaconda3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Each call to jupyter() launches its own Jupyter kernel, so you can have more than one instance of the same kernel type in the same worksheet session.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'python3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'python3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a = 5'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a = 10'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'print(a)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# prints 5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'print(a)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# prints 10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</content>
-		<author>
-			<name>SageMath, Inc.</name>
-			<uri>http://blog.sagemath.com/</uri>
-		</author>
-		<source>
-			<title type="html">SageMathCloud Blog</title>
-			<subtitle type="html">News and updates about SageMathCloud</subtitle>
-			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
-			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T02:30:11+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -173,328 +61,7 @@ To retrieve deleted files, use snapshots.&lt;/li&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Creating Custom “Mode Commands” in Sage Worksheets</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/08/custom-magic-commands.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/08/custom-magic-commands</id>
-		<updated>2016-08-08T09:30:00+00:00</updated>
-		<content type="html">&lt;h2 id=&quot;what-is-a-mode-command&quot;&gt;What is a Mode Command?&lt;/h2&gt;
-
-&lt;p&gt;By default, running a cell in a Sage worksheet causes the input to be run as Sage commands, with output from Sage written to the output of the cell. Mode commands in a Sage worksheet cause the input to be run through some other process to create cell output. For example,&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Typing &lt;code class=&quot;highlighter-rouge&quot;&gt;%md&lt;/code&gt; at the start of a cell causes cell input to be rendered as markdown in the cell output.&lt;/li&gt;
-  &lt;li&gt;Typing &lt;code class=&quot;highlighter-rouge&quot;&gt;%r&lt;/code&gt; causes cell input to be treated as statements in the R language, with corresponding output.&lt;/li&gt;
-  &lt;li&gt;Typing &lt;code class=&quot;highlighter-rouge&quot;&gt;%HTML&lt;/code&gt; causes cell input to be treated as HTML, rendered as the output.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are many built-in modes (e.g. Cython, GAP, Pari, R, Python, Markdown, HTML, etc…)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If it is not the default mode of your &lt;code class=&quot;highlighter-rouge&quot;&gt;*.sagews&lt;/code&gt; worksheet, a mode command must be the first line of a cell. In other words, make sure the command &lt;code class=&quot;highlighter-rouge&quot;&gt;%md&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;%r&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;%HTML&lt;/code&gt; is the first line of a cell.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, you can make any mode the default for all cells in the worksheet using &lt;code class=&quot;highlighter-rouge&quot;&gt;%default_mode &amp;lt;some_mode&amp;gt;&lt;/code&gt;. Then all cells will be using that chosen mode. If you choose this approach, you may still explicitly use &lt;code class=&quot;highlighter-rouge&quot;&gt;%sage&lt;/code&gt; for cells you want processed by the Sage interpreter (or &lt;code class=&quot;highlighter-rouge&quot;&gt;%foo&lt;/code&gt; to explicitly switch to any non-default mode).&lt;/p&gt;
-
-&lt;p&gt;There is &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagews.md#mode-help&quot;&gt;an entire section&lt;/a&gt; of the FAQ page &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagews&quot;&gt;SageMathCloud Worksheet (and User Interface) Help&lt;/a&gt; dedicated to questions about the built-in modes. It had 10 questions-and-answers in it as of July 28, 2016.&lt;/p&gt;
-
-&lt;h2 id=&quot;is-there-a-list-of-all-currently-supported--modes-in-sagemathcloud&quot;&gt;Is there a list of all currently supported % modes in SageMathCloud?&lt;/h2&gt;
-
-&lt;p&gt;You can view available built-in modes by selecting &lt;em&gt;Help &amp;gt; Mode commands&lt;/em&gt; in the Sage toolbar while cursor is in a sage cell. That will
-insert the line &lt;code class=&quot;highlighter-rouge&quot;&gt;print('\n'.join(modes()))&lt;/code&gt; into the current cell.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-a-custom-mode-command&quot;&gt;What is a Custom Mode Command?&lt;/h2&gt;
-
-&lt;p&gt;Custom mode commands are modes defined by the user. Like any mode
-command, a custom mode command processes the input section of a cell and writes the output. As stated in the help for &lt;em&gt;modes&lt;/em&gt;,&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Create your own mode command by defining a function that takes a string as input and outputs a string. &lt;em&gt;(Yes, it is that simple.)&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;examples-of-custom-mode-commands&quot;&gt;Examples of Custom Mode Commands&lt;/h2&gt;
-
-&lt;p&gt;Custom mode commands can be used to
-- render or compile cell input into cell output
-- send commands to other processes and show the results&lt;/p&gt;
-
-&lt;p&gt;Here are some examples:&lt;/p&gt;
-
-&lt;h4 id=&quot;example-1-view-csv-data-as-a-table&quot;&gt;Example 1: View CSV data as a table&lt;/h4&gt;
-
-&lt;p&gt;Define the mode in a sage cell, as follows:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pd&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;StringIO&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringIO&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;csv_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-csv&quot;&gt;%csv_table
-Sample,start,middle,end
-A,2,5,51
-B,6,8,11
-C,7,22,41&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-csv&quot;&gt;        start  middle  end
-Sample
-A           2       5   51
-B           6       8   11
-C           7      22   41&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;NOTE: Sage’s &lt;code class=&quot;highlighter-rouge&quot;&gt;show&lt;/code&gt; command is also aware of Pandas tables,
-so if you instead define&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;csv_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then &lt;code class=&quot;highlighter-rouge&quot;&gt;%csv_table&lt;/code&gt; will produce nice HTML output.&lt;/p&gt;
-
-&lt;h4 id=&quot;example-2-view-json-converted-to-yaml&quot;&gt;Example 2: View JSON converted to YAML&lt;/h4&gt;
-
-&lt;p&gt;Define the mode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;json&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yaml&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;j2y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yaml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;safe_dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j2y&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&quot;baz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;xyzzy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;plugh&quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;baz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xyzzy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plugh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;example-3-convert-units-of-measure&quot;&gt;Example 3: Convert Units of Measure&lt;/h4&gt;
-
-&lt;p&gt;In this example, each input line is a
-number with units, possibly followed by target units.
-If target units are not specified, SI units are the target.
-This example uses the Sage &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/calculus/sage/symbolic/units.html&quot;&gt;Units of Measurement&lt;/a&gt; package.&lt;/p&gt;
-
-&lt;p&gt;Define the mode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;convert_units&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'units'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;lval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;isinstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convert_units&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# pounds to kilograms&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;175.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pound&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# miles to kilometers&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;3.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometer&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# an adult doing moderate exercise might burn 200 kcal per hour&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# convert to watts&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;200.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;energy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorie&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;si_prefixes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;watt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;mf&quot;&gt;79.37866475&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilogram&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;4.828032&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometer&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;232.6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;watt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;example-4-display-reverse-complement-of-nucleotide-sequences&quot;&gt;Example 4: Display Reverse Complement of Nucleotide Sequences&lt;/h4&gt;
-
-&lt;p&gt;This example uses &lt;a href=&quot;http://biopython.org/wiki/Documentation&quot;&gt;Biopython&lt;/a&gt;, which is already installed on SageMathCloud.&lt;/p&gt;
-
-&lt;p&gt;Define the mode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Bio.Seq&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Seq&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;revcomp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse_complement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;revcomp&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ATGC&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;GCTCCGACACTTT&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;AAAGTGTCGGAGC&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;GCAT&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;example-5-run-multiple-shell-processes&quot;&gt;Example 5: Run Multiple Shell Processes&lt;/h4&gt;
-
-&lt;p&gt;Suppose you want several bash processes with different working directories or environment variables controlled from the same worksheet. You can use the built-in &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter&lt;/code&gt; command to create several custom modes.&lt;/p&gt;
-
-&lt;p&gt;More information on “the sage-jupyter bridge” is available at &lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/sagejupyter&quot;&gt;Sage Jupyter&lt;/a&gt;. Code creating a mode for &lt;em&gt;anaconda3&lt;/em&gt; is available by selecting &lt;em&gt;Modes &amp;gt; Jupyter bridge&lt;/em&gt;. You can view available Jupyter kernels by selecting &lt;em&gt;Help &amp;gt; Jupyter kernels&lt;/em&gt; in the Sage toolbar while cursor is in a sage cell. That will
-insert the line &lt;code class=&quot;highlighter-rouge&quot;&gt;print(jupyter.available_kernels())&lt;/code&gt; into the current cell.&lt;/p&gt;
-
-&lt;p&gt;Define the modes:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sh1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sh2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jupyter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cell 1:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh1&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# show PID of current sh process&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASHPID&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;23723&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cell 2:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh2&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASHPID&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;23727&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cell 3:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASHPID&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;23723&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;example-6-connect-to-remote-server-and-run-shell-commands&quot;&gt;Example 6: Connect to Remote Server and Run Shell Commands&lt;/h4&gt;
-
-&lt;p&gt;In this example, any cell in the custom mode consists of shell
-commands to be run on a remote server. The same session is used
-for all cells in the given mode.&lt;/p&gt;
-
-&lt;p&gt;Notes:
-- The SageMathCloud project must have Internet access. This is an upgrade, only available to users with a paid subscription. (See also “&lt;a href=&quot;http://blog.sagemath.com/smc/2016/08/08/Why-should-I-purchase-a-subscription&quot;&gt;Why Should I Purchase a Subscription?”&lt;/a&gt;.)
-- Configure ssh public and private keys with empty passphrase.
-- Set &lt;em&gt;host&lt;/em&gt; and &lt;em&gt;user&lt;/em&gt; for the remote connection.
-- You may want to set &lt;em&gt;IdentityFile&lt;/em&gt; in your ~/.ssh/config file.&lt;/p&gt;
-
-&lt;p&gt;Define the mode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pexpect&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pxssh&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ansi2html&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ansi2HTMLConverter&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ansi2HTMLConverter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linkify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pxssh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pxssh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'myhost.mydomain.org'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'joe'&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sshexec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&amp;lt;pre style=&quot;font-family:monospace;&quot;&amp;gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;/pre&amp;gt;'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;salvus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sshexec defined; logout with s.logout()'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sshexec setup failed'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sshexec&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;listing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Input in second cell, showing that working directory is retained&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sshexec&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;a-namefricas-example-example-7-nicely-typesetting-output-from-the-fricas-computer-algebra-system&quot;&gt;&lt;a name=&quot;fricas-example&quot;&gt;&lt;/a&gt; Example 7: Nicely typesetting output from the FriCAS computer algebra system&lt;/h4&gt;
-
-&lt;p&gt;The following function takes whatever the cell input is, executes the code in &lt;code class=&quot;highlighter-rouge&quot;&gt;FriCAS&lt;/code&gt;, performs some simple substitutions on the &lt;code class=&quot;highlighter-rouge&quot;&gt;FriCAS&lt;/code&gt; output and then displays it using &lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;Define the mode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fricas_tex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fricas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# mathml overbar&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&amp;amp;#x000AF;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;amp;#x203E;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# cleanup FriCAS LaTeX&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;leqno&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(.*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;sb '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'_'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;sp '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'^'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;md&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With this mode, &lt;code class=&quot;highlighter-rouge&quot;&gt;FriCAS&lt;/code&gt; can generate output that is (almost) compatible with &lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; format.&lt;/p&gt;
-
-&lt;p&gt;For example you can use this new mode in a cell with the following input:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fricas_tex&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;algebra&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;off&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tex&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output: This will evaluate ‘sqrt(2)/2+1’ and display the result in both LaTeX format and MathML formats (in a MathML capable browser).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The current version of Sage (6.6 and earlier) requires a &lt;a href=&quot;https://github.com/billpage/sage/commit/237df92ef4e6b5117654f3a3ff71b4aa10b0aa36#diff-60c84efff9cc620d4d8bbd8110321ffd&quot;&gt;patch&lt;/a&gt; to correct a bug in the fricas/axiom interface.&lt;/p&gt;</content>
-		<author>
-			<name>SageMath, Inc.</name>
-			<uri>http://blog.sagemath.com/</uri>
-		</author>
-		<source>
-			<title type="html">SageMathCloud Blog</title>
-			<subtitle type="html">News and updates about SageMathCloud</subtitle>
-			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
-			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T02:30:11+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Hello World</title>
-		<link href="http://blog.sagemath.com/smc/2016/08/07/hello-world.html"/>
-		<id>http://blog.sagemath.com/smc/2016/08/07/hello-world</id>
-		<updated>2016-08-07T09:30:00+00:00</updated>
-		<content type="html">&lt;p&gt;We are the &lt;a href=&quot;https://cloud.sagemath.com&quot;&gt;SageMathCloud&lt;/a&gt; developers!&lt;/p&gt;
-
-&lt;p&gt;This is just a test and we love math:&lt;/p&gt;
-
-&lt;p&gt;$\Phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^x e^{-\xi^2/2}\; d\xi$&lt;/p&gt;
-
-&lt;p&gt;Expect more soon!&lt;/p&gt;</content>
-		<author>
-			<name>SageMath, Inc.</name>
-			<uri>http://blog.sagemath.com/</uri>
-		</author>
-		<source>
-			<title type="html">SageMathCloud Blog</title>
-			<subtitle type="html">News and updates about SageMathCloud</subtitle>
-			<link rel="self" href="http://blog.sagemath.com/feed.xml"/>
-			<id>http://blog.sagemath.com/</id>
-			<updated>2016-09-02T02:30:11+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -516,7 +83,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -536,7 +103,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -577,7 +144,7 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -596,7 +163,7 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -634,7 +201,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -652,7 +219,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-09-02T09:30:13+00:00</updated>
+			<updated>2016-09-02T10:30:08+00:00</updated>
 		</source>
 	</entry>
 
@@ -691,7 +258,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -879,7 +446,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -899,7 +466,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1115,7 +682,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1135,7 +702,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1365,7 +932,7 @@ is not open in a viewer:&lt;/p&gt;
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1445,7 +1012,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2016-09-02T09:30:11+00:00</updated>
+			<updated>2016-09-02T10:30:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1465,7 +1032,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1485,7 +1052,7 @@ The Fano matroid is an example of $3$-connected matroid.
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-09-02T09:30:04+00:00</updated>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -1738,6 +1305,26 @@ story.&lt;/p&gt;
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
 			<updated>2016-09-01T15:30:05+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html"></title>
+		<link href="http://sagemath.blogspot.com/2015/09/funding-open-source-mathematical.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753</id>
+		<updated>2015-09-10T19:38:38+00:00</updated>
+		<content type="html">&lt;h1 id=&quot;funding-open-source-mathematical-software-in-the-united-states&quot;&gt;Funding Open Source Mathematical Software in the United States&lt;/h1&gt;I do &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; know how to get funding for open source mathematical software in the United States. However, I'm trying.&lt;br /&gt;&lt;h2 id=&quot;why-because-sage-is-hobbling-along&quot;&gt;Why: Because Sage is Hobbling Along&lt;/h2&gt;Despite what we might think in our Sage-developer bubble, &lt;a href=&quot;http://sagemath.org/&quot;&gt;Sage&lt;/a&gt; is hobbling along, and without an infusion of financial support very soon, I think the project is going to fail in the next few years. I have access to Google analytics data for &lt;a href=&quot;http://sagemath.org/&quot;&gt;sagemath.org&lt;/a&gt; since 2007, and there has been no growth &amp;nbsp;in active users of the website since 2011:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s1600/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;187&quot; src=&quot;http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s400/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2 id=&quot;something-that-is-missing&quot;&gt;Something that is Missing&lt;/h2&gt;The worse part of all for me, after ten years, is seeing things like &lt;a href=&quot;https://groups.google.com/forum/#!topic/sage-devel/cAFdRb-WKqM&quot;&gt;this email&lt;/a&gt; today from John Palmieri, where he talks about writing &lt;em&gt;slow&lt;/em&gt; but interesting algebraic topology code, and needing help from somebody who knows Cython to actually make his code fast.&lt;br /&gt;&lt;br /&gt;I know from my three visits to the Magma group in Sydney that such assistance is &lt;em&gt;precisely&lt;/em&gt; what having real financial support can provide. Such money makes it possible to have fulltime people who know the tools and how to optimize them well, and they work on this sort of speedup and integration -- this &quot;devil is in the details&quot; work -- for each major contribution (they are sort of like a highly skilled version of a journal copy editor and referee all in one). Doing this makes a massive difference, but also costs on the order of $1 million / year to have any real impact. 1 million is probably the Magma budget to support around 10 people and periodic visitors, and of course like 1% of the budget of Matlab/Mathematica. Magma has this support partly because Magma is closed source, and maintains tight control on who may use it.&lt;br /&gt;&lt;h2 id=&quot;searching-for-a-funding-model&quot;&gt;Searching for a Funding Model&lt;/h2&gt;Sage is open source and freely available to all, so it is of potential huge value to the community by being owned by everybody and changeable. However, those who fund Magma (either directly or indirectly) haven't funded Sage at the same level for some reason. I can't make Sage closed source and copy that very successful funding model. I've tried everything I can think of given the time and resources I have, and the only model left that seems able to support open source is having a company that does &lt;strong&gt;something else&lt;/strong&gt; well and makes money, then using some of the profit to fund open source (&lt;a href=&quot;http://www.neowin.net/news/intel-overtakes-red-hat-to-become-top-linux-kernel-contributor&quot;&gt;Intel is the biggest contributor to Linux&lt;/a&gt;).&lt;br /&gt;&lt;h2 id=&quot;sagemathcloud&quot;&gt;SageMath, Inc.&lt;/h2&gt;Since I failed to find any companies that passionately care about Sage like Intel/Google/RedHat/etc. care about Linux, I started one. I've been working on &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; extremely hard for over 3 years now, with the hopes that at least it could be a way to fund Sage development.</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2016-09-02T10:30:03+00:00</updated>
 		</source>
 	</entry>
 
