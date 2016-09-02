@@ -8,6 +8,28 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>SageMathCloud: Nightly Changelog #2</title>
+	<guid>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2</guid>
+	<link>http://blog.sagemath.com/smc/2016/08/29/nightly-changelog-2.html</link>
+	<description>&lt;p&gt;Our Nightly Changelog keeps you updated on small feature changes, bugfixes, and quality of life improvements. For upcoming changes, see our weekly progress report column.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-usage&quot;&gt;General Usage&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Added recent activity avatars for collaborators to the file listing page for every project. Clicking on them takes you to where they were last active in the project. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/848&quot;&gt;#848&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;quality-of-life&quot;&gt;Quality of Life&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In the Course Manager, “student not found” is replaced by “student already in course” where appropriate to prevent confusion. &lt;a href=&quot;https://github.com/sagemathinc/smc/issues/851&quot;&gt;#851&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fixed an issue regarding sagews2pdf. &lt;a href=&quot;https://github.com/sagemathinc/smc/pull/855&quot;&gt;#855&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Mon, 29 Aug 2016 09:23:00 +0000</pubDate>
+</item>
+<item>
 	<title>SageMathCloud: First Nightly Changelog</title>
 	<guid>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog</guid>
 	<link>http://blog.sagemath.com/smc/2016/08/29/first-nightly-changelog.html</link>
