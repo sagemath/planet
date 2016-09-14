@@ -236,7 +236,7 @@
 		<foaf:Agent>
 			<foaf:name>Jonathan Lee</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/">
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
 					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
