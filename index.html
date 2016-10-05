@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>October 05, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-1888366452923598573">
+<h4><a href="http://sagemath.blogspot.com/2016/10/sagemath-its-not-research.html">SageMath: "it's not research"</a></h4>
+<div class="entry">
+<div class="content">
+The University of Washington (UW) mathematics department has funding for grad students to "travel to conferences".   What sort of travel funding?  <br /><br /> <ul><li>The department has some money available.</li><li>The UW Graduate school has some money available:  They only provide funding for students giving a talk or presenting a poster.</li><li>The UW GPSS has some money available: contact them directly to apply (they only provide funds for "active conference participation", which I think means giving a talk, presenting a poster, or similar)</li></ul> <br />One of my two Ph.D. students at UW asked our Grad program director: <i>"I'll be going to Joint Mathematics Meetings (JMM) to help out at the SageMath booth. Is this a thing I can get funding for?"</i> <br /><br /><b>ANSWER:</b> Travel funds are primarily meant to support research, so although I appreciate people helping out at the SageMath booth, I think that's not the best use of the department's money.   <br /><br />I think this "it's not research" perspective on the value of mathematical software is unfortunate and shortsighted.  Moreover, it's especially surprising as the person who wrote the above answer has contributed substantially to the algebraic topology functionality of Sage itself, so he knows exactly what Sage is.  <br /><br />Sigh.  Can some blessed person with an NSF grant out there pay for this grad student's travel expenses to help with the Sage booth?    Or do I have to use the handful of $10, $50, etc., donations I've got the last few months for this purpose?</div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://sagemath.blogspot.com/2016/10/sagemath-its-not-research.html">by William Stein (noreply@blogger.com) at October 05, 2016 01:13 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>August 22, 2016</h2>
 
 <div class="channelgroup">
@@ -1381,460 +1417,6 @@ is not open in a viewer:</p>
 </div>
 
 </div>
-<div class="daygroup">
-<h2>October 21, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://matroidunion.org" title="Sage – The Matroid Union">The Matroid Union</a></h3>
-
-
-<div class="entrygroup" id="http://matroidunion.org/?p=1550" lang="en-US">
-<h4><a href="http://matroidunion.org/?p=1550">Google Summer of Code 2015: outcomes</a></h4>
-<div class="entry">
-<div class="content">
-<p><em>Guest post by <a href="http://web.engr.illinois.edu/~chaoxu3/">Chao Xu</a></em></p>
-<p>In the summer, I have extended the SAGE code base for matroids for Google Summer of Code. This post shows a few example of it&#8217;s new capabilities.</p>
-<h1>Connectivity</h1>
-<p>Let $M$ be a matroid with groundset $E$ and rank function $r$. A partition of the groundset $\{E_1,E_2\}$ is a $m$-separation if $|E_1|,|E_2|\geq m$ and $r(E_1)+r(E_2)-r(E)\leq m-1$. $M$ is called $k$-connected if there is no $m$-separation for any $m  k$. 
-
-The Fano matroid is an example of $3$-connected matroid.
-
-
-<div class="sage1"></div>
-<p>The Fano matroid is not $4$-connected. Using the <code>certificate=True</code> field, we can also output a certificate that verify its not-$4$-connectness. The certificate is a $m$-separation where $m  4$. Since we know Fano matroid is $3$-connected, we know the output should be a $3$-separation.
-
-
-<div class="sage1"></div>
-<p>We also have a method for deciding $k$-connectivity, and returning a certificate. </p>
-<div class="sage1"></div>
-<p>There are 3 algorithms for $3$-connectivity. One can pass it as a string to the <code>algorithm</code> field of <code>is_3connected</code>.</p>
-<ol>
-<li><code>"bridges"</code>: The $3$-connectivity algorithm Bixby and Cunningham. [BC79] </li>
-<li><code>"intersection"</code>: the matroid intersection based algorithm</li>
-<li><code>"shifting"</code>: the shifting algorithm. [Raj87] </li></ol></p></p>
-
-<p>The default algorithm is the bridges based algorithm.</p>
-<p>The following is an example to compare the running time of each approach. </p>
-<div class="sage1"></div>
-<p>The new bridges based algorithm is much faster than the previous algorithm in SAGE.</p>
-<p>For $4$-connectivity, we tried to use the shifting approach, which has an running time of $O(n^{4.5}\sqrt{\log n})$, where $n$ is the size of the groundset. The intuitive idea is fixing some elements and tries to grow a separator. In theory, the shifting algorithm should be fast if the graph is not $4$-connected, as we can be lucky and find a separator quickly. In practice, it is still slower than the optimized matroid intersection based algorithm, which have a worst case $O(n^5)$ running time. There might be two reasons: the matroid intersection actually avoids the worst case running time in practice, and the shifting algorithm is not well optimized.</p>
-<div class="sage1"></div>
-<h1>Matroid intersection and union</h1>
-<p>There is a new implementation of matroid intersection algorithm based on Cunningham&#8217;s paper [Cun86].  For people who are familiar with blocking flow algorithms for maximum flows, this is the matroid version. The running time is $O(\sqrt{p}rn)$, where $p$ is the size of the maximum common independent set, $r$ is the rank, and $n$ is the size of the groundset. Here is an example of taking matroid intersection between two randomly generated linear matroids.</p>
-<div class="sage1"></div>
-<p>Using matroid intersection, we have preliminary support for matroid union and matroid sum. Both construction takes a list of matroids.</p>
-<p>The matroid sum operation takes disjoint union of the groundsets. Hence the new ground set will have the first coordinate indicating which matroid it comes from, and second coordinate indicate the element in the matroid. </p>
-<div class="sage1"></div>
-<p>Here is an example of matroid union of two copies of uniform matroid $U(1,5)$ and $U(2,5)$. The output is isomorphic to $U(4,5)$.</p>
-<div class="sage1"></div>
-<p>One of the application of matroid union is <a href="https://en.wikipedia.org/wiki/Matroid_partitioning">matroid partitioning</a>, which partitions the groundset of the matroid to minimum number of independent sets. Here is an example that partitions the edges of a graph to minimum number of forests. </p>
-<div class="sage1"></div>
-<h1>Acknowledgements</h1>
-<p>I would like to thank my mentors Stefan van Zwam and Michael Welsh for helping me with the project. I also like to thank Rudi Pendavingh, who have made various valuable suggestions and implemented many optimizations himself. </p>
-<h1>References</h1>
-<p>[BC79] R.E Bixby, W.H Cunningham. <em>Matroids, graphs and 3-connectivity</em>, J.A Bondy, U.S.R Murty (Eds.), Graph Theory and Related Topics, Academic Press, New York (1979), pp. 91-103.</p>
-<p>[Raj87] Rajan, A. (1987). <em>Algorithmic applications of connectivity and related topics in matroid theory</em>. Northwestern university.</p>
-<p>[Cun86] William H Cunningham. 1986. <em>Improved bounds for matroid partition and intersection algorithms</em>. SIAM J. Comput. 15, 4 (November 1986), 948-957.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://matroidunion.org/?p=1550">by Guest Contributor at October 21, 2015 03:55 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>September 30, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-8163352558343336284">
-<h4><a href="http://sagemath.blogspot.com/2015/09/what-is-sagemaths-strategy.html">What is SageMath's strategy?</a></h4>
-<div class="entry">
-<div class="content">
-Here is <a href="http://www.sagemath.org/">SageMath</a>'s strategy, or at least what my strategy toward SageMath has been for the last 5 years.<br /><h1 id="diagnose-the-problem">Diagnose the problem</h1><strong>Statement of problem:</strong> SageMath is not growing.<br /><h3 id="justification">Justification</h3>Facts: Growth in the number of active users [1] of SageMath has stalled since about 2011 (as defined by Google analytics on sagemath.org). From 2008 to 2011, year-on-year growth was about 50%, which isn't great. However, from 2011 to now, year-on-year growth is slightly less than 0%. It was maybe -10% from 2013 to 2014. Incidentally, number of monthly active users of sagemath.org is about 68,652 right now, but the raw number isn't as import as the year-to-year rate of change.<br /><br />I set an overall mission statement for the Sage project at the outset, which was is to be a viable alternative to Magma, Maple, Mathematica and Matlab. Being a "viable alternative" is something that holds or doesn't for specific people. A useful measure of this mission then is whether or not people use Sage. This is a different metric than trying to argue from "first principles" by making a list of features of each system, comparing benchmarks, etc.<br /><br /><div class="separator"></div><div class="separator"><br /></div><a href="http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png"><img border="0" height="241" src="http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s400/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png" width="400" /></a><br /><div class="separator"><br /></div><br /><a href="http://4.bp.blogspot.com/-shXxtJeO9fY/Vgy7IMVWIcI/AAAAAAABWGo/nLJu-40-9Ns/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B10.59.32%2BAM.png"><img border="0" height="245" src="http://4.bp.blogspot.com/-shXxtJeO9fY/Vgy7IMVWIcI/AAAAAAABWGo/nLJu-40-9Ns/s400/Screen%2BShot%2B2015-09-30%2Bat%2B10.59.32%2BAM.png" width="400" /></a><br /><a href="http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png"><br /></a><a href="http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png"><br /></a><a href="http://1.bp.blogspot.com/-WXt0yL0eZn0/Vgy7ICAimcI/AAAAAAABWGs/MmOurNhORYg/s1600/Screen%2BShot%2B2015-09-30%2Bat%2B11.00.28%2BAM.png"><br /></a><br /><div class="separator"><br /></div><br /><br /><br /><br /><h1 id="guiding-policies">Guiding policies</h1><strong>Statement of policy:</strong> focus on undergraduate students in STEM courses (science, tech, engineering, math)<br /><h3 id="justification-1">Justification</h3>In order for Sage to start growing again, identify groups of people that are not using Sage. Then decide, for each of these groups, who might find value in using Sage, especially if we are able to put work into making it easier for them to benefit from Sage. This is something to re-evaluate periodically. In itself, this is very generic -- it's what any software project that wishes to grow should do. The interesting part is the details.<br />Some big groups of potential future users of Sage, who use Sage very little now, include<br /><ul><li>employees/engineers in various industries (from defense contractors, to finance, to health care to "data science").</li><li>researchers in area of mathematics where Sage is currently not popular</li><li>undergraduate students in STEM courses (science, tech, engineering, math)</li></ul>I think by far the most promising group is "undergraduate students in STEM courses". In many cases they use no software at all or are unhappy with what they do use. They are extremely cost sensitive. Open source provides a unique advantage in education because it is less expensive than closed source software, and having access to source code is something that instructors consider valuable as part of the learning experience. Also, state of the art performance, which often requires enormous dedicated for-pay work, is frequently not a requirement.<br /><h1 id="actions">Actions</h1><ul><li>(a) Make access to Sage as easy as possible.</li><li>(b) Encourage the creation of educational resources (books, tutorials, etc.) that make using Sage for particular courses as easy as possible.</li><li>(c) Implement missing functionality in Sage that is needed in support of undergraduate teaching.</li></ul><br /><h3 id="justification-2">Justification</h3>Why don't more undergraduates use Sage? For the most part, students use what they are told to use by their instructors. So why don't instructors chose to use Sage? (a) Sage is not trivial to install (in fact it is incredibly hard to install), (b) There are limited resources (books, tutorials, course materials, etc.) for making using Sage really easy, (c) Sage is missing key functionality needed in support undergraduate teaching.<br /><br />Regarding (c), in 2008 Sage was utterly useless for most STEM courses. However, over the years things changed for the better, due to the hard work of Rob Beezer, Karl Dieter, Burcin Erocal, and many others. Also, for quite a bit of STEM work, the numerical Python ecosystem (and/or R) provides much of what is needed, and both have evolved enormously in recent years. They are all usable from Sage, and making such use <em>easier</em> should be an extremely high priority. Related -- Bill Hart wrote "I recently sat down with some serious developers and we discussed symbolics in Sage (which I know nothing about). They argued that Sage is not a viable contender in that area, and we discussed some of the possible reasons for that. " The reason is that the symbolic functionality in Sage is motivated by making Sage useful for undergraduate teaching; it has nothing to do with what serious developers in symbolics would care about.<br /><br />Regarding (b), an NSF (called "<a href="http://utmost.aimath.org/">UTMOST</a>") helped in this direction... Also, Gregory Bard wrote <a href="http://www.gregorybard.com/SAGE.html">"Sage for undergraduates"</a>, which is <em>exactly</em> the sort of thing we should be very strongly encouraging. This is a book that is published by the AMS and is also freely available. And it squarely addresses exactly this audience. Similarly, <a href="http://sagebook.gforge.inria.fr/">the French book that Paul Zimmerman edited</a> is fantastic for France. Let's make an order of magnitude similar resources along these lines! Let's make vastly more tutorials and reference manuals that are "for undergraduates".<br /><br />Regarding (a), in my opinion the most viable option that fits with current trends in software is a full web application that provides access to Sage. <a href="https://cloud.sagemath.com/">SageMathCloud </a>is what I've been doing in this direction, and it's been growing since 2013 at over 100% year on year, and much is in place so that it could scale up to more users. It still has a huge way to go regarding user friendliness, and it is still <em>losing money every month</em>. But it is a concrete action toward which nontrivial effort has been invested, and it has the potential to solve problem (a) for a large number of potential STEM users. College students very often have extremely good bandwidth coupled with cheap weak laptops, so a web application is the natural solution for them.<br /><br />Though much has been done to make Sage easier to install on individual computers, it's exactly the sort of problem that money could help solve, but for which we have little money. I'm optimistic that <a href="http://opendreamkit.org/">OpenDreamKit</a> will do something in this direction.<br /><br />[I've made this post motivated by the<a href="https://groups.google.com/forum/#!topic/sage-devel/enoyWPdYK_g"> discussion in this thread.</a>&nbsp; Also, I used the framework from <a href="http://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239">this book</a>.]</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2015/09/what-is-sagemaths-strategy.html">by William Stein (noreply@blogger.com) at September 30, 2015 09:56 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>September 22, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-8312554401315622132">
-<h4><a href="http://sagemath.blogspot.com/2015/09/sagemathclouds-poor-user-retention-rate.html">SageMathCloud's poor user retention rate</a></h4>
-<div class="entry">
-<div class="content">
-<h3>Poor retention rate</h3><span>Many people try <a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a>, but only a small percentage stick around. &nbsp;<b>I definitely don't know why. </b>Recent SageMathCloud rates are below 4%:</span><br /><span><b><i><br /></i></b></span><div class="separator"><a href="http://2.bp.blogspot.com/-5B6ymNMEjAs/VgIFyIi9QXI/AAAAAAABWDE/iTj_M6ejo0A/s1600/Screen%2BShot%2B2015-09-22%2Bat%2B6.51.52%2BPM.png"><img border="0" height="186" src="http://2.bp.blogspot.com/-5B6ymNMEjAs/VgIFyIi9QXI/AAAAAAABWDE/iTj_M6ejo0A/s400/Screen%2BShot%2B2015-09-22%2Bat%2B6.51.52%2BPM.png" width="400" /></a></div><div class="separator"><br /></div><div class="separator"><a href="http://3.bp.blogspot.com/-cTbDI1IZWUY/VgIIn3n9sTI/AAAAAAABWDY/XJ3ihbbh7sg/s1600/Screen%2BShot%2B2015-09-22%2Bat%2B7.03.57%2BPM.png"><img border="0" height="161" src="http://3.bp.blogspot.com/-cTbDI1IZWUY/VgIIn3n9sTI/AAAAAAABWDY/XJ3ihbbh7sg/s400/Screen%2BShot%2B2015-09-22%2Bat%2B7.03.57%2BPM.png" width="400" /></a></div><div class="separator"><br /></div><span><b><i><br /></i></b></span><br /><h2>Is it performance?</h2><span><b>Question:&nbsp;</b>Are the people who try SMC discouraged by</span><span>&nbsp;performance issues?</span><br /><span><br /></span><span>I think it's unlikely many users are leaving due to hitting noticeable performance issues</span><span>.&nbsp; I think I would know, since there's a huge bold messages all over&nbsp;</span><span>the site that say "Email&nbsp;</span><a href="mailto:help@sagemath.com">help@sagemath.com</a><span>: in case of problems, do&nbsp;</span><span>not hesitate to immediately email us. We want to know if anything is&nbsp;</span><span>broken!"</span><span>&nbsp; &nbsp;&nbsp;</span><span>In the past when there have been performance&nbsp;</span><span>or availability issues -- which of course do happen sometimes due to&nbsp;</span><span>bugs or whatever -- I quickly get a lot of emails.&nbsp; I haven't got&nbsp;</span><span>anything that mentioned performance recently.&nbsp; And usage of SMC is at&nbsp;</span><span>an all time high: in the last day there were <a href="https://cloud.sagemath.com/7561f68d-3d97-4530-b97e-68af2fb4ed13/raw/stats.html">676 projects created and&nbsp;</a></span><span><a href="https://cloud.sagemath.com/7561f68d-3d97-4530-b97e-68af2fb4ed13/raw/stats.html">3500 projects modified</a> -- which is significantly higher than ever&nbsp;</span><span>before since the site started.&nbsp; It's also about 2.2x what we had&nbsp;</span><span>exactly a year ago. &nbsp; &nbsp;</span><br /><br /><br /><h2>Is it the user interface?</h2><span><div><span><b>Question: </b>Is the SMC user interface highly discouraging and difficult to use?</span></div><div><span><br /></span></div>My current best guess is that the main reason for attrition of our users is that&nbsp;</span><span>they do not understand how to actually&nbsp;<i>use</i>&nbsp;<a href="https://cloud.sagemath.com/" target="_blank">SageMathCloud</a>&nbsp;(SMC), and the interface doesn't help at all. &nbsp;</span><span>&nbsp;</span><span>I think a large number of users get massively confused and lost when trying&nbsp;</span><span>to use SMC. &nbsp; &nbsp;It's pretty obvious this happens if you just watch what they do... &nbsp; &nbsp;</span><span>In&nbsp;</span><span>order to have a foundation on which to fix that, the plan I came up with in&nbsp;</span><span>May was to at least fix&nbsp;</span><span>the frontend implementation so that it would be &nbsp;</span><span>much easier to do&nbsp;</span><span>development with -- by switching from a confusing &nbsp;</span><span>mess of jQuery soup,&nbsp;</span><span>e.g., 2012-style single page app development --&nbsp;</span><span>to Facebook's new&nbsp;</span><span>React.js approach.&nbsp; This is basically half done and </span><span>deployed, and I'm&nbsp;</span><span>going to work very hard for a while to finish it. &nbsp;&nbsp;</span><span>Once it's done,&nbsp;</span><span>it's going to be much easier to improve the UI to &nbsp;</span><span>make it more user&nbsp;</span><span>friendly.</span><br /><br /><h2>Is it the open source software?</h2><span><div><span><b>Question: </b>Is open source mathematical software not sufficiently user friendly?</span></div><div><span><br /></span></div>Fixing the UI probably won't help so much with improving the underlying <i><b>open&nbsp;</b></i></span><span><i><b>source mathematical software </b></i>to be friendly though.&nbsp; &nbsp; This is a massive, deep, and&nbsp;</span><span>very difficult problem, and might be why growth of Sage stopped in 2011:</span><br /><span><br /></span><div class="separator"><a href="http://4.bp.blogspot.com/-JqBKt-wuS5g/VgIGxB0yKfI/AAAAAAABWDM/okpvMCbWJ-Q/s1600/Screen%2BShot%2B2015-09-22%2Bat%2B6.55.56%2BPM.png"><img border="0" height="161" src="http://4.bp.blogspot.com/-JqBKt-wuS5g/VgIGxB0yKfI/AAAAAAABWDM/okpvMCbWJ-Q/s320/Screen%2BShot%2B2015-09-22%2Bat%2B6.55.56%2BPM.png" width="320" /></a></div><span><br /></span><span><br /></span><span><br /></span><span><br /></span><span><a href="http://sagemath.org/">SageMath</a> (and maybe Numpy/Scipy/IPython/etc.) are not&nbsp;</span><span>as user friendly as Mathematica/Matlab</span><span>. &nbsp; I think they could be even more user friendly, but it's highly&nbsp;</span><span>unlikely as long as the developers are mostly working on SageMath in their&nbsp;</span><span>spare time as part of advanced research projects (which have little&nbsp;</span><span>to do with user friendliness). &nbsp;</span><br /><span><br /></span><span>Analyzing data about mistakes, frustation, and issues people&nbsp;</span><span>actually have with &nbsp;</span><span>real worksheets and notebooks could also help a lot&nbsp;</span><span>with directing our &nbsp;</span><span>effort in improving Sage/Python/Numpy/etc to be&nbsp;</span><span>more user friendly.</span><br /><br /><br /><h2>Is it support?</h2><span><div><b>Question: </b>Are users frustrated by lack of interactive support?</div><div><span><b><br /></b></span></div>Having integrated high-quality support for users inside SMC, in which we help&nbsp;</span><span>them write code, answer questions, etc., could help with&nbsp;</span><span>retention. &nbsp;</span><br /><br /><br /><h2>Why don't you use SageMathCloud?</h2><span>I've been&nbsp;</span><span>watching this &nbsp;</span><span>stuff closely for over a decade most waking moments, and&nbsp;</span><span>everybody&nbsp;</span><span>likes to complain to me. &nbsp; &nbsp;Why don't <b>you</b> use SageMathCloud? &nbsp; Tell me: &nbsp;<a href="mailto:wstein@sagemath.com">wstein@sagemath.com</a>.</span><br /><span><br /></span></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2015/09/sagemathclouds-poor-user-retention-rate.html">by William Stein (noreply@blogger.com) at September 22, 2015 07:52 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>September 21, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
-
-
-<div class="entrygroup" id="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game" lang="en">
-<h4><a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">There are 13.366.431.646 solutions to the Quantumino game</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>Some years ago, I wrote <a class="reference external" href="http://doc.sagemath.org/html/en/reference/games/sage/games/quantumino.html">code</a> in Sage to solve the Quantumino puzzle. I also
-used it to make a one-minute <a class="reference external" href="http://vimeo.com/35348052">video</a> illustrating the Dancing links algorithm
-which I am proud to say it is now part of the <a class="reference external" href="http://en.wikipedia.org/wiki/Dancing_Links">Dancing links</a> wikipedia page.</p>
-<a class="reference external image-reference" href="http://www.familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274"><img alt="/Files/2015/Quantumino.png" src="http://www.slabbe.org/Files/2015/Quantumino.png" /></a>
-<p>Let me recall that the goal of the Quantumino puzzle is to fill a \(2\times
-5\times 8\) box with 16 out of 17 three-dimensional pentaminos. After writing
-the sage code to solve the puzzle, one question was left: how many solutions
-are there? Is the <a class="reference external" href="http://familygamesamerica.com/mainsite/consumers/productview.php?pro_id=274">official website</a> realist or very prudent when they say
-that <em>there are over 10.000 potential solutions</em>? Can it be computed in hours?
-days? months? years? The only thing I knew was that the following computation
-(letting the 0-th pentamino aside) never finished on my machine:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.games.quantumino</span> <span class="kn">import</span> <span class="n">QuantuminoSolver</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">QuantuminoSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span>   <span class="c1"># long time :)</span>
-</pre></div>
-
-
-
-<p>Since I spent already too much time on this side-project, I decided in 2012 to
-stop investing any more time on it and to really focus on finishing writing my
-thesis.</p>
-<p>So before I finish writing my thesis, I knew that the computation was not going
-to take a light-year, since I was able to finish the computation of the number
-of solutions when the 0-th pentamino is put aside and when one pentamino is
-pre-positioned somewhere in the box. That computation completed in 4 hours on
-my old laptop and gave about 5 millions solutions. There are 17 choices of
-pentatminos to put aside, there are 360 distinct positions of that pentamino in
-the box, so I estimated the number of solution to be something like
-\(17\times 360\times 5000000 = 30 \times 10^9\). Most importantly, I
-estimated the computation to take \(17\times 360\times 4= 24480\) hours or
-1020 days. Therefore, I knew I could not do it on my laptop.</p>
-<p>But last year, I received an email from the designer of the Quantumino puzzle:</p>
-
-
-<div class="pygments_manni"><pre>-------- Message transféré --------
-Sujet : quantumino
-Date : Tue, 09 Dec 2014 13:22:30 +0100
-De : Nicolaas Neuwahl
-Pour : Sebastien Labbe
-
-hi sébastien labbé,
-
-i'm the designer of the quantumino puzzle.
-i'm not a mathematician, i'm an architect. i like mathematics.
-i'm quite impressed to see the sage work on quantumino, also i have not the
-knowledge for full understanding.
-
-i have a question for you - can you tell me HOW MANY different quantumino-
-solutions exist?
-
-ty and bye
-
-nicolaas neuwahl
-</pre></div>
-
-
-
-<p>This summer was a good timing to launch the computation on my beautiful Intel®
-Core™ i5-4590 CPU &#64; 3.30GHz × 4 at Université de Liège. First, I improved the
-Sage code to allow a parallel computation of number of solutions in the dancing
-links code (<a class="reference external" href="http://trac.sagemath.org/ticket/18987">#18987</a>, merged in a Sage 6.9.beta6). Secondly, we may remark
-that each tiling of the \(2\times 5\times 8\) box can be rotated in order
-to find 3 other solutions. It is possible to gain a factor 4 by avoiding to
-count 4 times the same solution up to rotations (<a class="reference external" href="http://trac.sagemath.org/ticket/19107">#19107</a>, still needs work
-from myself). Thanks to Vincent Delecroix for doing the review on both ticket.
-Dividing the estimated 1024 days of computation needed by a factor \(4\times
-4=16\) gives an approximation of 64 days to complete the computation. Two
-months, just enough to be tractable!</p>
-<p>With those two tickets (some previous version to be honest) on top of sage-6.8,
-I started the computation on August 4th and the computation finished last week
-on September 18th for a total of 45 days. The computation was stopped only once
-on September 8th (I forgot to close firefox and thunderbird that night...).</p>
-<p>The number of solutions and computation time for each pentamino put aside
-together with the first solution found is shown in the table below.  We remark
-that some values are equal when the aside pentaminoes are miror images
-(why!?:).</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><img alt="/Files/2015/b0.png" class="first last" src="http://www.slabbe.org/Files/2015/b0.png" />
-</td>
-<td><img alt="/Files/2015/b1.png" class="first last" src="http://www.slabbe.org/Files/2015/b1.png" />
-</td>
-</tr>
-<tr><td>634 900 493  solutions</td>
-<td>634 900 493  solutions</td>
-</tr>
-<tr><td>2 days, 6:22:44.883358</td>
-<td>2 days, 6:19:08.945691</td>
-</tr>
-<tr><td><img alt="/Files/2015/b2.png" class="first last" src="http://www.slabbe.org/Files/2015/b2.png" />
-</td>
-<td><img alt="/Files/2015/b3.png" class="first last" src="http://www.slabbe.org/Files/2015/b3.png" />
-</td>
-</tr>
-<tr><td>509 560 697  solutions</td>
-<td>509 560 697  solutions</td>
-</tr>
-<tr><td>2 days, 0:01:36.844612</td>
-<td>2 days, 0:41:59.447773</td>
-</tr>
-<tr><td><img alt="/Files/2015/b4.png" class="first last" src="http://www.slabbe.org/Files/2015/b4.png" />
-</td>
-<td><img alt="/Files/2015/b5.png" class="first last" src="http://www.slabbe.org/Files/2015/b5.png" />
-</td>
-</tr>
-<tr><td>628 384 422  solutions</td>
-<td>628 384 422  solutions</td>
-</tr>
-<tr><td>2 days, 7:52:31.459247</td>
-<td>2 days, 8:44:49.465672</td>
-</tr>
-<tr><td><img alt="/Files/2015/b6.png" class="first last" src="http://www.slabbe.org/Files/2015/b6.png" />
-</td>
-<td><img alt="/Files/2015/b7.png" class="first last" src="http://www.slabbe.org/Files/2015/b7.png" />
-</td>
-</tr>
-<tr><td>1 212 362 145  solutions</td>
-<td>1 212 362 145  solutions</td>
-</tr>
-<tr><td>3 days, 17:25:00.346627</td>
-<td>3 days, 19:10:02.353063</td>
-</tr>
-<tr><td><img alt="/Files/2015/b8.png" class="first last" src="http://www.slabbe.org/Files/2015/b8.png" />
-</td>
-<td><img alt="/Files/2015/b9.png" class="first last" src="http://www.slabbe.org/Files/2015/b9.png" />
-</td>
-</tr>
-<tr><td>197 325 298  solutions</td>
-<td>556 534 800  solutions</td>
-</tr>
-<tr><td>22:51:54.439932</td>
-<td>1 day, 19:05:23.908326</td>
-</tr>
-<tr><td><img alt="/Files/2015/b10.png" class="first last" src="http://www.slabbe.org/Files/2015/b10.png" />
-</td>
-<td><img alt="/Files/2015/b11.png" class="first last" src="http://www.slabbe.org/Files/2015/b11.png" />
-</td>
-</tr>
-<tr><td>664 820 756  solutions</td>
-<td>468 206 736  solutions</td>
-</tr>
-<tr><td>2 days, 8:48:54.767662</td>
-<td>1 day, 20:14:56.014557</td>
-</tr>
-<tr><td><img alt="/Files/2015/b12.png" class="first last" src="http://www.slabbe.org/Files/2015/b12.png" />
-</td>
-<td><img alt="/Files/2015/b13.png" class="first last" src="http://www.slabbe.org/Files/2015/b13.png" />
-</td>
-</tr>
-<tr><td>1 385 955 043  solutions</td>
-<td>1 385 955 043  solutions</td>
-</tr>
-<tr><td>4 days, 1:40:30.270929</td>
-<td>4 days, 4:44:05.399367</td>
-</tr>
-<tr><td><img alt="/Files/2015/b14.png" class="first last" src="http://www.slabbe.org/Files/2015/b14.png" />
-</td>
-<td><img alt="/Files/2015/b15.png" class="first last" src="http://www.slabbe.org/Files/2015/b15.png" />
-</td>
-</tr>
-<tr><td>694 998 374  solutions</td>
-<td>694 998 374  solutions</td>
-</tr>
-<tr><td>2 days, 11:44:29.631</td>
-<td>2 days, 6:01:57.946708</td>
-</tr>
-<tr><td><img alt="/Files/2015/b16.png" class="first last" src="http://www.slabbe.org/Files/2015/b16.png" />
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr><td>1 347 221 708  solutions</td>
-<td>&nbsp;</td>
-</tr>
-<tr><td>3 days, 21:51:29.043459</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>Therefore the total number of solutions up to rotations is 13 366 431 646 which
-is indeed more than 10000:)</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">634900493</span><span class="p">,</span> <span class="mi">634900493</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">509560697</span><span class="p">,</span> <span class="mi">628384422</span><span class="p">,</span>
-<span class="mi">628384422</span><span class="p">,</span> <span class="mi">1212362145</span><span class="p">,</span> <span class="mi">1212362145</span><span class="p">,</span> <span class="mi">197325298</span><span class="p">,</span> <span class="mi">556534800</span><span class="p">,</span> <span class="mi">664820756</span><span class="p">,</span>
-<span class="mi">468206736</span><span class="p">,</span> <span class="mi">1385955043</span><span class="p">,</span> <span class="mi">1385955043</span><span class="p">,</span> <span class="mi">694998374</span><span class="p">,</span> <span class="mi">694998374</span><span class="p">,</span> <span class="mi">1347221708</span><span class="p">]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-<span class="mi">13366431646</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">factor</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="mi">23</span> <span class="o">*</span> <span class="mi">271</span> <span class="o">*</span> <span class="mi">1072231</span>
-</pre></div>
-
-
-
-<table border="1" class="docutils">
-<caption>Summary</caption>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody valign="top">
-<tr><td>The machine (4 cores)</td>
-<td>Intel® Core™ i5-4590 CPU &#64; 3.30GHz × 4 (Université de Liège)</td>
-</tr>
-<tr><td>Computation Time</td>
-<td>45 days, (Aug 4th -- Sep 18th, 2015)</td>
-</tr>
-<tr><td>Number of solutions (up to rotations)</td>
-<td>13 366 431 646</td>
-</tr>
-<tr><td>Number of solutions / cpu / second</td>
-<td>859</td>
-</tr>
-</tbody>
-</table>
-<p>My code will be available on github.</p>
-<p><strong>About the video on wikipedia.</strong></p>
-<p>I must say that the video is not perfect. On wikipedia, the <a class="reference external" href="http://en.wikipedia.org/wiki/File_talk:Dancing_links_Quantumino_puzzle.ogv">file talk page</a>
-of the video says that the <em>Jerky camera movement is distracting</em>. That is
-because <a class="reference external" href="http://www.slabbe.org/blogue/2012/01/faire-une-animation-en-3d-avec-sage/">I managed to make the video</a> out of images created by
-<tt class="docutils literal"><span class="pre">.show(viewer='tachyon')</span></tt> which changes the coordinate system, hardcodes a
-lot of parameters, zoom properly, simplifies stuff to make sure the user don't
-see just a blank image. But, for making a movie, we need access to more
-parameters especially the placement of the camera (to avoid the jerky
-movement). I know that Tachyon allows all of that. It is still a project that I
-have to create a more versatile <tt class="docutils literal">Graphics3D <span class="pre">-&gt;</span> Tachyon</tt> conversion allowing
-to construct nice videos of evolving mathematical objects. That's another
-story.</p>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.slabbe.org/blogue/2015/09/there-are-13.366.431.646-solutions-to-the-quantumino-game">by Sébastien Labbé at September 21, 2015 02:55 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>September 10, 2015</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-7130292345452113753">
-<div class="entry">
-<div class="content">
-<h1 id="funding-open-source-mathematical-software-in-the-united-states">Funding Open Source Mathematical Software in the United States</h1>I do <em><strong>not</strong></em> know how to get funding for open source mathematical software in the United States. However, I'm trying.<br /><h2 id="why-because-sage-is-hobbling-along">Why: Because Sage is Hobbling Along</h2>Despite what we might think in our Sage-developer bubble, <a href="http://sagemath.org/">Sage</a> is hobbling along, and without an infusion of financial support very soon, I think the project is going to fail in the next few years. I have access to Google analytics data for <a href="http://sagemath.org/">sagemath.org</a> since 2007, and there has been no growth &nbsp;in active users of the website since 2011:<br /><br /><div class="separator"><a href="http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s1600/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png"><img border="0" height="187" src="http://1.bp.blogspot.com/-zaHSSBsEAfU/VfI-Q55ar6I/AAAAAAABV-k/STtsAScT1YM/s400/Screen%2BShot%2B2015-09-10%2Bat%2B7.28.14%2BPM.png" width="400" /></a></div><h2 id="something-that-is-missing">Something that is Missing</h2>The worse part of all for me, after ten years, is seeing things like <a href="https://groups.google.com/forum/#!topic/sage-devel/cAFdRb-WKqM">this email</a> today from John Palmieri, where he talks about writing <em>slow</em> but interesting algebraic topology code, and needing help from somebody who knows Cython to actually make his code fast.<br /><br />I know from my three visits to the Magma group in Sydney that such assistance is <em>precisely</em> what having real financial support can provide. Such money makes it possible to have fulltime people who know the tools and how to optimize them well, and they work on this sort of speedup and integration -- this "devil is in the details" work -- for each major contribution (they are sort of like a highly skilled version of a journal copy editor and referee all in one). Doing this makes a massive difference, but also costs on the order of $1 million / year to have any real impact. 1 million is probably the Magma budget to support around 10 people and periodic visitors, and of course like 1% of the budget of Matlab/Mathematica. Magma has this support partly because Magma is closed source, and maintains tight control on who may use it.<br /><h2 id="searching-for-a-funding-model">Searching for a Funding Model</h2>Sage is open source and freely available to all, so it is of potential huge value to the community by being owned by everybody and changeable. However, those who fund Magma (either directly or indirectly) haven't funded Sage at the same level for some reason. I can't make Sage closed source and copy that very successful funding model. I've tried everything I can think of given the time and resources I have, and the only model left that seems able to support open source is having a company that does <strong>something else</strong> well and makes money, then using some of the profit to fund open source (<a href="http://www.neowin.net/news/intel-overtakes-red-hat-to-become-top-linux-kernel-contributor">Intel is the biggest contributor to Linux</a>).<br /><h2 id="sagemathcloud">SageMath, Inc.</h2>Since I failed to find any companies that passionately care about Sage like Intel/Google/RedHat/etc. care about Linux, I started one. I've been working on <a href="https://cloud.sagemath.com/">SageMathCloud</a> extremely hard for over 3 years now, with the hopes that at least it could be a way to fund Sage development.</div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2015/09/funding-open-source-mathematical.html">by William Stein (noreply@blogger.com) at September 10, 2015 07:38 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -2004,7 +1586,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-October 05, 2016 07:30 PM<br>
+October 05, 2016 08:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
