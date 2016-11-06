@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/improbable-by-number/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/quipu/" />
@@ -43,6 +44,14 @@
 	</items>
 </channel>
 
+<item rdf:about="http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/">
+	<title>Lauren Devitt: Logicomix- logic by number</title>
+	<link>http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/</link>
+	<content:encoded>A book review of Logicomix. Written by Apostolos Doxiadis and Christos H. Papadimitriou. Art by Alecos Papadatos and Annie Di Donna. 
+
+This is the first graphic novel I've ever read. I had no idea mathe history graphic novels was a genre. I've justs tarted reading my second about Ada lovelace and Charles Babbage. Logicomix is primarily abourt Bertrand Russell, creator of russells paradox. it is written from the view of the authors and artisits of the novel as well as switching to whats going on</content:encoded>
+	<dc:date>2016-11-06T00:00:00+00:00</dc:date>
+</item>
 <item rdf:about="http://lifebynumber.org/life-by-blog/improbable-by-number/">
 	<title>Lauren Devitt: Improbable by Number</title>
 	<link>http://lifebynumber.org/life-by-blog/improbable-by-number/</link>
