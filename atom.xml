@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2016-11-29T03:30:37+00:00</updated>
+	<updated>2016-11-29T04:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -38,13 +38,13 @@
 This is the first graphic novel I've ever read. I had no idea mathe history graphic novels was a genre. I've justs tarted reading my second about Ada lovelace and Charles Babbage. Logicomix is primarily abourt Bertrand Russell, creator of russells paradox. it is written from the view of the authors and artisits of the novel as well as switching to whats going on</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -58,13 +58,13 @@ This is the first graphic novel I've ever read. I had no idea mathe history grap
 The first book I am Reviewing is The Improbability Principle  by</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -77,13 +77,13 @@ The first book I am Reviewing is The Improbability Principle  by</content>
 The Incan civilization started in modern day</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -103,7 +103,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -123,7 +123,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -154,13 +154,13 @@ The Incan civilization started in modern day</content>
 		<content type="html">Over the summer I have been coding for SAGE as part of Google Summer of Code 2016.  I feel this opportunity has strengthened both my skills as a coder and as a mathematician. SAGE is an open source math software system, used to do calculations.  SAGE is made up of code available for free public use and modification. It is a collaborative effort where people from around the world can add new code, update old code, and share the changes that they make. Open source coding is a labor of</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -180,7 +180,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -196,13 +196,13 @@ The Incan civilization started in modern day</content>
 The truth is he didn’t actually write that many individual poems. What he did was write ten 14-line</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -222,7 +222,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -257,13 +257,13 @@ All tests passed!
 Having to wait for your code to build is agonizing. You pray to some God, magic force, or Steve Jobs to help you in this time of need. Then it works and you feel</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -276,13 +276,13 @@ Having to wait for your code to build is agonizing. You pray to some God, magic 
 I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, which is an open source project managing software. It allows SAGE to track what people are currently working on for SAGE. It does this by are giving a ticket number to each piece of functionality pushed to the server. Peers, who pull them from the server,</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -314,13 +314,13 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 If you have misread one letter or decoded one word wrong, you will not find the answer. You can spend twice as much time trying to solve the problem than actually solving the puzzle. That is why in coding, as with logic puzzles,</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -332,13 +332,13 @@ If you have misread one letter or decoded one word wrong, you will not find th
 		<content type="html">My love of mathematics started with a love of numbers. I enjoyed finding all possible ways I could add, subtract, and multiply different numbers in order to find a specific number, say twelve.  Twelve was my favorite number; I loved twelve. We become attached to numbers that have a deeper meaning to us; numbers that make us feel, make us remember. Sesame Street had the “Pinball Song”; this song consisted of counting to twelve with a catchy jingle every child could remember.</content>
 		<author>
 			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog</uri>
+			<uri>http://lifebynumber.org/life-by-blog/</uri>
 		</author>
 		<source>
 			<title type="html">Blog RSS</title>
 			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
 			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2016-11-29T02:30:10+00:00</updated>
+			<updated>2016-11-29T04:30:11+00:00</updated>
 		</source>
 	</entry>
 
@@ -377,7 +377,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -565,7 +565,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -585,7 +585,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -801,7 +801,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -821,7 +821,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2016-11-29T03:30:03+00:00</updated>
+			<updated>2016-11-29T04:30:05+00:00</updated>
 		</source>
 	</entry>
 
