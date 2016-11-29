@@ -249,7 +249,7 @@
 		<foaf:Agent>
 			<foaf:name>Lauren Devitt</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://lifebynumber.org/life-by-blog/">
+				<foaf:Document rdf:about="http://lifebynumber.org/life-by-blog">
 					<dc:title>Blog RSS</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://lifebynumber.org/rss.xml" />
