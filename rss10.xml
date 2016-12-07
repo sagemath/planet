@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/improbable-by-number/" />
@@ -43,6 +44,12 @@
 	</items>
 </channel>
 
+<item rdf:about="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/">
+	<title>Lauren Devitt: Books by Number- The Number Devil</title>
+	<link>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</link>
+	<content:encoded>This is the post content</content:encoded>
+	<dc:date>2016-12-06T00:00:00+00:00</dc:date>
+</item>
 <item rdf:about="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238">
 	<title>William Stein: RethinkDB, SageMath, Andreessen-Horowitz, Basecamp and Open Source Software</title>
 	<link>http://sagemath.blogspot.com/2016/10/rethinkdb-sagemath-andreessen-horowitz.html</link>
