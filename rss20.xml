@@ -8,6 +8,43 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>Sébastien Labbé: A time evolution picture of packages built in parallel by Sage</title>
+	<guid>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</guid>
+	<link>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</link>
+	<description>&lt;div class=&quot;document&quot;&gt;
+&lt;p&gt;Compiling sage takes a while and does a lot of stuff. Each time I am wondering
+which components takes so much time and which are fast. I wrote a module in my
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/seblabbe/slabbe&quot;&gt;slabbe&lt;/a&gt; version &lt;tt class=&quot;docutils literal&quot;&gt;0.3b2&lt;/tt&gt; package available on &lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/pypi/slabbe&quot;&gt;PyPI&lt;/a&gt; to figure this out.&lt;/p&gt;
+&lt;p&gt;This is after compiling 7.5.beta6 after an upgrade from 7.5.beta4:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;slabbe.analyze_sage_build&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2016/sage_build.png&quot;&gt;&lt;img alt=&quot;/Files/2016/sage_build.png&quot; src=&quot;http://www.slabbe.org/Files/2016/sage_build.png&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;From scratch from a fresh git clone of 7.5.beta6, after running &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;MAKE='make&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;-j4'&lt;/span&gt; make ptestlong&lt;/tt&gt;, I get:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;slabbe.analyze_sage_build&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2016/sage_build_from_scratch.png&quot;&gt;&lt;img alt=&quot;/Files/2016/sage_build_from_scratch.png&quot; src=&quot;http://www.slabbe.org/Files/2016/sage_build_from_scratch.png&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;The picture does not include the start and ptestlong because there was an error
+compiling the documentation.&lt;/p&gt;
+&lt;p&gt;By default, &lt;tt class=&quot;docutils literal&quot;&gt;draw_sage_build&lt;/tt&gt; considers all of the logs files in
+&lt;tt class=&quot;docutils literal&quot;&gt;logs/pkgs&lt;/tt&gt; but options are available to consider only log files created in a
+given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sage_build?&lt;/tt&gt; for more info.&lt;/p&gt;
+&lt;/div&gt;</description>
+	<pubDate>Fri, 16 Dec 2016 16:13:00 +0000</pubDate>
+</item>
+<item>
 	<title>Lauren Devitt: Books by Number- The Number Devil</title>
 	<guid>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</guid>
 	<link>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</link>

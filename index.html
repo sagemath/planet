@@ -54,6 +54,72 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>December 16, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage">A time evolution picture of packages built in parallel by Sage</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>Compiling sage takes a while and does a lot of stuff. Each time I am wondering
+which components takes so much time and which are fast. I wrote a module in my
+<a class="reference external" href="https://github.com/seblabbe/slabbe">slabbe</a> version <tt class="docutils literal">0.3b2</tt> package available on <a class="reference external" href="http://pypi.python.org/pypi/slabbe">PyPI</a> to figure this out.</p>
+<p>This is after compiling 7.5.beta6 after an upgrade from 7.5.beta4:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.analyze_sage_build</span> <span class="kn">import</span> <span class="n">draw_sage_build</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">draw_sage_build</span><span class="p">()</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2016/sage_build.png"><img alt="/Files/2016/sage_build.png" src="http://www.slabbe.org/Files/2016/sage_build.png" /></a>
+<p>From scratch from a fresh git clone of 7.5.beta6, after running <tt class="docutils literal"><span class="pre">MAKE='make</span>
+<span class="pre">-j4'</span> make ptestlong</tt>, I get:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.analyze_sage_build</span> <span class="kn">import</span> <span class="n">draw_sage_build</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">draw_sage_build</span><span class="p">()</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2016/sage_build_from_scratch.png"><img alt="/Files/2016/sage_build_from_scratch.png" src="http://www.slabbe.org/Files/2016/sage_build_from_scratch.png" /></a>
+<p>The picture does not include the start and ptestlong because there was an error
+compiling the documentation.</p>
+<p>By default, <tt class="docutils literal">draw_sage_build</tt> considers all of the logs files in
+<tt class="docutils literal">logs/pkgs</tt> but options are available to consider only log files created in a
+given interval of time. See <tt class="docutils literal">draw_sage_build?</tt> for more info.</p>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage">by Sébastien Labbé at December 16, 2016 04:13 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>December 06, 2016</h2>
 
 <div class="channelgroup">
@@ -1052,7 +1118,7 @@ I was recently asked by a young academic: "If you were a new faculty member agai
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring" lang="en">
@@ -1479,7 +1545,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
@@ -1512,7 +1578,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-December 16, 2016 03:30 PM<br>
+December 16, 2016 04:30 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
