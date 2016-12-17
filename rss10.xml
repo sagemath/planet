@@ -13,8 +13,9 @@
 
 	<items>
 		<rdf:Seq>
-			<rdf:li rdf:resource="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage" />
+			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/grapic-novels-by-number/" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/" />
+			<rdf:li rdf:resource="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/" />
 			<rdf:li rdf:resource="http://lifebynumber.org/life-by-blog/improbable-by-number/" />
@@ -45,6 +46,20 @@
 	</items>
 </channel>
 
+<item rdf:about="http://lifebynumber.org/life-by-blog/grapic-novels-by-number/">
+	<title>Lauren Devitt: Grapic Novels by Number</title>
+	<link>http://lifebynumber.org/life-by-blog/grapic-novels-by-number/</link>
+	<content:encoded>Feynman
+Turing
+Russell- Logicomix</content:encoded>
+	<dc:date>2016-12-17T00:00:00+00:00</dc:date>
+</item>
+<item rdf:about="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/">
+	<title>Lauren Devitt: Books by Number- The Number Devil</title>
+	<link>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</link>
+	<content:encoded>Coming in 253 pages, this is the little book with is full of mathematical gold. Hans Magnus Enzenberger wrote The Number Devil in 1998. Tis was when I was 8, and in 4th grade. How did I miss this gem? I would fallen down the mathematical rabbit hole even sooner.  Disguised as a novel, the math in this book includes: Pascal's Triangle, Fibonacci Numbers, set theory, factorials, math 'tricks', and math history. It even has a brief except of  Russel's proof that 1+1 equals 2 ( although even to most</content:encoded>
+	<dc:date>2016-12-17T00:00:00+00:00</dc:date>
+</item>
 <item rdf:about="http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage">
 	<title>Sébastien Labbé: A time evolution picture of packages built in parallel by Sage</title>
 	<link>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</link>
@@ -81,12 +96,6 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 &lt;/div&gt;</content:encoded>
 	<dc:date>2016-12-16T16:13:00+00:00</dc:date>
 	<dc:creator>Sébastien Labbé</dc:creator>
-</item>
-<item rdf:about="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/">
-	<title>Lauren Devitt: Books by Number- The Number Devil</title>
-	<link>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</link>
-	<content:encoded>Coming in 253 pages, this is the little book with is full of mathematical gold. Hans Magnus Enzenberger wrote The Number Devil in 1998. Tis was when I was 8, and in 4th grade. How did I miss this gem? I would fallen down the mathematical rabbit hole even sooner.  Disguised as a novel, the math in this book includes: Pascal's Triangle, Fibonacci Numbers, set theory, factorials, math 'tricks', and math history. It even has a brief except of  Russel's proof that 1+1 equals 2 ( although even to most</content:encoded>
-	<dc:date>2016-12-06T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238">
 	<title>William Stein: RethinkDB, SageMath, Andreessen-Horowitz, Basecamp and Open Source Software</title>
