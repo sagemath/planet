@@ -8,42 +8,6 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
-	<title>Lauren Devitt: Lovelace and Babbage</title>
-	<guid>http://lifebynumber.org/life-by-blog/lovelace-and-babbage/</guid>
-	<link>http://lifebynumber.org/life-by-blog/lovelace-and-babbage/</link>
-	<description>This is the post summary</description>
-	<pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Gauss by Number</title>
-	<guid>http://lifebynumber.org/life-by-blog/gauss-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/gauss-by-number/</link>
-	<description>This is the post summary</description>
-	<pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Color by Number</title>
-	<guid>http://lifebynumber.org/life-by-blog/color-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/color-by-number/</link>
-	<description>So before I was a mathematician, I was an ABO certified optician. This means I worked  for an optometrist, and had taken the hardest test of my life (Until grad school) all about the eye, eye health, and how light refracts. I still love knowing how many colors we can see, and (as I also used to be a chemistry intern) what gives objects there colors. Even before that I was a 7th grader, who, went home and cried when I learned objects had no color it was just how there molecules reflected the</description>
-	<pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Grapic Novels by Number- Logicomix, Feynman, The Case of Alan Turing</title>
-	<guid>http://lifebynumber.org/life-by-blog/grapic-novels-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/grapic-novels-by-number/</link>
-	<description>As biographies go, you want to be enthralled, you want to hear what you already know and learn more. With graphic novels, and now graphic biographies and memoirs as a growing Genre. I thought a comparison of three I read would be insightfull. I know I have already done an in depth summary of Logicomix, but I just couldn't resist. Special thanks to Steenz, my library friend for turning me on to graphic novels in general. 
-As a preface Yes I know Feynman was a physistist, but phyics has a lot of</description>
-	<pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Books by Number- The Number Devil</title>
-	<guid>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</guid>
-	<link>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</link>
-	<description>Coming in 253 pages, this is the little book with is full of mathematical gold. Hans Magnus Enzenberger wrote The Number Devil in 1998. Tis was when I was 8, and in 4th grade. How did I miss this gem? I would fallen down the mathematical rabbit hole even sooner.  Disguised as a novel, the math in this book includes: Pascal's Triangle, Fibonacci Numbers, set theory, factorials, math 'tricks', and math history. It even has a brief except of  Russel's proof that 1+1 equals 2 ( although even to most</description>
-	<pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Sébastien Labbé: A time evolution picture of packages built in parallel by Sage</title>
 	<guid>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</guid>
 	<link>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</link>
@@ -89,32 +53,6 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 	<author>noreply@blogger.com (William Stein)</author>
 </item>
 <item>
-	<title>Lauren Devitt: Logicomix- Logic by Number</title>
-	<guid>http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/</link>
-	<description>A book review of Logicomix. Written by Apostolos Doxiadis and Christos H. Papadimitriou. Art by Alecos Papadatos and Annie Di Donna. 
-
-This is the first graphic novel I've ever read. I had no idea math history graphic novels was a genre, I realy had no idea that nonfiction graphic novels were a genre.  I've justs tarted reading my second about Ada lovelace and Charles Babbage, I don't for see it being my last. Logicomix  focuses priamily on Bertrand Russell, creator of Russell's Paradox. He is</description>
-	<pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Improbable by Number</title>
-	<guid>http://lifebynumber.org/life-by-blog/improbable-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/improbable-by-number/</link>
-	<description>As a Mathematician I enjoy reading non-fiction that is not too &quot;mathy&quot;, one that makes subjects such as probability approachable. This is the first in a series of reviews of books I've been reading for fun and for my math history course. These reviews will highlight some of the more interesting parts of the book as well as rate how approachable the book made the subject and how educational on the subject the books really are.
-
-The first book I am Reviewing is The Improbability Principle  by</description>
-	<pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: Knots by Number, Quipu</title>
-	<guid>http://lifebynumber.org/life-by-blog/quipu/</guid>
-	<link>http://lifebynumber.org/life-by-blog/quipu/</link>
-	<description>For my undergraduate thesis my focus was in knot theory, a subset of topology and a newer subject in mathematics. These are not the knots we think of in our daily life. The knots I studied had no ends and no thickness. Knots as we know them in everyday life have been around since before the Greeks. The book of Kells is decorated with intricate knot work. Sailors have used them on their ships. The Incas even used them to keep track of their accounting.
-The Incan civilization started in modern day</description>
-	<pubDate>Tue, 11 Oct 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>William Stein: RethinkDB must relicense NOW</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-6758158987467701094</guid>
 	<link>http://sagemath.blogspot.com/2016/10/rethinkdb-must-relicense-now-what-is.html</link>
@@ -139,30 +77,12 @@ The Incan civilization started in modern day</description>
 	<author>noreply@blogger.com (Tara)</author>
 </item>
 <item>
-	<title>Lauren Devitt: Final GSOC Report</title>
-	<guid>http://lifebynumber.org/life-by-blog/final-gsoc-report/</guid>
-	<link>http://lifebynumber.org/life-by-blog/final-gsoc-report/</link>
-	<description>Over the summer I have been coding for SAGE as part of Google Summer of Code 2016.  I feel this opportunity has strengthened both my skills as a coder and as a mathematician. SAGE is an open source math software system, used to do calculations.  SAGE is made up of code available for free public use and modification. It is a collaborative effort where people from around the world can add new code, update old code, and share the changes that they make. Open source coding is a labor of</description>
-	<pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>William Stein: Jupyter: &quot;take the domain name down immediately&quot;</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-4592324674567336685</guid>
 	<link>http://sagemath.blogspot.com/2016/07/jupyter-take-domain-name-down.html</link>
 	<description>The &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; is an open source BSD-licensed browser-based code execution environment, inspired by my early work on the Sage Notebook (which we launched in 2007), which was in turn inspired heavily by Mathematica notebooks and Google docs. Jupyter used to be called &lt;a href=&quot;https://www.google.com/trends/explore#q=jupyter%2C%20ipython&amp;cmpt=q&amp;tz=Etc%2FGMT%2B7&quot;&gt;IPython&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; is an open source web-based environment for using Sage worksheets, terminals, LaTeX documents, course management, and Jupyter notebooks. I've put much hard work into making it so that multiple people can simultaneously edit Jupyter notebooks in SageMathCloud, and the history of all changes are recorded and browsable via a slider.&lt;br /&gt;&lt;br /&gt;Many people have written to me asking for there to be a modified version of &lt;a href=&quot;https://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt;, which is oriented around Jupyter notebooks instead of Sage worksheets. So the default file type is Jupyter notebooks, the default kernel doesn't involve the extra heft of Sage, etc., and the domain name involves Jupyter instead of &quot;sagemath&quot;. Some people are disuased from using SageMathCloud for Jupyter notebooks because of the &quot;SageMath&quot; name.&lt;br /&gt;&lt;br /&gt;Dozens of web applications (including SageMathCloud) use the word &quot;Jupyter&quot; in various places. However, I was unsure about using &quot;jupyter&quot; in a domain name. I found &lt;a href=&quot;https://github.com/jupyter/governance/issues/12&quot;&gt;this github issue&lt;/a&gt; and requested clarification 6 weeks ago. We've had some back and forth, but they recently made it clear that it would be at least a month until any decision would be considered, since they are too busy with other things. In the meantime, I rented jupytercloud.com, which has a nice ring to it, as the &lt;a href=&quot;https://www.google.com/search?q=jupiter+cloud&amp;safe=off&amp;rlz=1C5CHFA_enUS691US691&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ved=0ahUKEwj-vJubvJLOAhVEwYMKHRLlCCgQsAQIKg&amp;biw=1147&amp;bih=643&quot;&gt;planet Jupiter has clouds.&lt;/a&gt; Yesterday, I made jupytercloud.com point to cloud.sagemath.com to see what it would &quot;feel like&quot; and Tim Clemans started experimenting with customizing the page based on the domain name that the client sees. I did not mention jupytercloud.com publicly anywhere, and there were no links to it.&lt;br /&gt;&lt;br /&gt;Today I received this message:&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;&lt;code&gt;    William,&lt;br /&gt;&lt;br /&gt;    I'm writing this representing the Jupyter project leadership&lt;br /&gt;    and steering council. It has recently come to the Jupyter&lt;br /&gt;    Steering Council's attention that the domain jupytercloud.com&lt;br /&gt;    points to SageMathCloud. Do you own that domain? If so,&lt;br /&gt;    we ask that you take the domain name down immediately, as&lt;br /&gt;    it uses the Jupyter name.&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;/pre&gt;I of course immediately complied. It is well within their rights to dictate how their name is used, and I am obsessive about scrupulously doing everything I can to respect people's intellectual property; with Sage we have put huge amounts of effort into honoring both the letter and spirit of copyright statements on open source software.&lt;br /&gt;&lt;br /&gt;I'm writing this because it's unclear to me what people really want, and I have no idea what to do here.&lt;br /&gt;&lt;br /&gt;1. Do &lt;strong&gt;you&lt;/strong&gt; want something built on the same technology as SageMathCloud, but much more focused on Jupyter notebooks?&lt;br /&gt;&lt;br /&gt;2. Does the name of the site matter to &lt;strong&gt;you&lt;/strong&gt;?&lt;br /&gt;&lt;br /&gt;3. What model should the Jupyter project use for their trademark? Something like Python? like Git?Like Linux? &amp;nbsp;Like Firefox? &amp;nbsp;Like the email program PINE? &amp;nbsp;Something else entirely?&lt;br /&gt;&lt;br /&gt;4. Should I be worried about using Jupyter at all anywhere? E.g., in this blog post? As the default notebook for the SageMath project?&lt;br /&gt;&lt;br /&gt;I appreciate any feedback.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=12169979&quot; target=&quot;_blank&quot;&gt;Hacker News Discussion&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;UPDATE (Aug 12, 2016): &lt;/b&gt;The official decision is that I &lt;b&gt;cannot&lt;/b&gt;&amp;nbsp;use the domain jupytercloud.com. &amp;nbsp; They did say I can use &lt;b&gt;jupyter.sagemath.com &lt;/b&gt;or &lt;b&gt;sagemath.com/jupyter&lt;/b&gt;. &amp;nbsp; Needless to say, I'm disappointed, but I fully respect their (very foolish, IMHO) decision.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</description>
 	<pubDate>Fri, 12 Aug 2016 10:46:26 +0000</pubDate>
 	<author>noreply@blogger.com (William Stein)</author>
-</item>
-<item>
-	<title>Lauren Devitt: Poetry By Number</title>
-	<guid>http://lifebynumber.org/life-by-blog/poetry-by-number/</guid>
-	<link>http://lifebynumber.org/life-by-blog/poetry-by-number/</link>
-	<description>In the 1960’s French writer and poet Raymond Queneau became the most prolific writers of our time by writing over one hundred thousand billion poems.  If you wanted to read all of these poems it would only take you 200 million years of reading 24 hours a day at a rate of about one poem per minute.
-
- So how could Queneau write so many poems in far less time than it would take to read them all?
-
-The truth is he didn’t actually write that many individual poems. What he did was write ten 14-line</description>
-	<pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>William Stein: DataDog's pricing: don't make the same mistake I made</title>
@@ -181,46 +101,12 @@ The truth is he didn’t actually write that many individual poems. What he did 
 	<author>noreply@blogger.com (Tara)</author>
 </item>
 <item>
-	<title>Lauren Devitt: GSOC Midterm Update</title>
-	<guid>http://lifebynumber.org/life-by-blog/gsoc-midterm-update/</guid>
-	<link>http://lifebynumber.org/life-by-blog/gsoc-midterm-update/</link>
-	<description>One of the great joys in life that not all will be able to experience is when your code builds. When you have fixed all the syntax errors you build it, you test it, and you see
-----------------------------------------------------------------------
-All tests passed!
-----------------------------------------------------------------------
-Having to wait for your code to build is agonizing. You pray to some God, magic force, or Steve Jobs to help you in this time of need. Then it works and you feel</description>
-	<pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: GSOC Week 2 Update</title>
-	<guid>http://lifebynumber.org/life-by-blog/gsoc-week-2-update/</guid>
-	<link>http://lifebynumber.org/life-by-blog/gsoc-week-2-update/</link>
-	<description>Two weeks into GSOC 2016 I’m so grateful that this is how I get to spend my summer. Using my coding muscles has made me stronger and more confident with my code.
-I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, which is an open source project managing software. It allows SAGE to track what people are currently working on for SAGE. It does this by are giving a ticket number to each piece of functionality pushed to the server. Peers, who pull them from the server,</description>
-	<pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Extending Matroid Functionality Google Summer of Code 2016: First Week or so</title>
 	<guid>tag:blogger.com,1999:blog-3534817490044613273.post-4168277856882302649</guid>
 	<link>http://extendingmatroidfunctionality.blogspot.com/2016/06/first-week-or-so.html</link>
 	<description>Before coding started, I spent some time on &lt;a href=&quot;http://www.codecademy.com/&quot; target=&quot;_blank&quot;&gt;code academy&lt;/a&gt;&amp;nbsp;getting more familiar with the syntax of Python. I was impressed with the setup that they had (I would recommend it to my mom), and it helped me to learn python in a systematic way.&lt;br /&gt;&lt;br /&gt;Since the 23rd I've been working on adding certificated (proof that we gave the right answer to a yes-no question) to some of the functions in the matroid part of Sage. For the first two days, I spent a lot of time trying to get Sage to compile. For a while, the problem was an error in a new release, and then I had some type of trouble on my end. I've also spent a good amount of time figuring out the ins and outs of documentation practices.</description>
 	<pubDate>Fri, 03 Jun 2016 00:30:00 +0000</pubDate>
 	<author>noreply@blogger.com (Tara)</author>
-</item>
-<item>
-	<title>Lauren Devitt: GSOC 2016</title>
-	<guid>http://lifebynumber.org/life-by-blog/gsoc-2016/</guid>
-	<link>http://lifebynumber.org/life-by-blog/gsoc-2016/</link>
-	<description>What I love about programing is it is akin to solving a logic puzzle. You have all the pieces you need to solve it, you're allowed to search the internet for assistance, but the internet will not give you the answer, you still have to find it on you own.
-If you have misread one letter or decoded one word wrong, you will not find the answer. You can spend twice as much time trying to solve the problem than actually solving the puzzle. That is why in coding, as with logic puzzles,</description>
-	<pubDate>Sat, 21 May 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Lauren Devitt: For love of numbers...</title>
-	<guid>http://lifebynumber.org/life-by-blog/for-love-of-numbers/</guid>
-	<link>http://lifebynumber.org/life-by-blog/for-love-of-numbers/</link>
-	<description>My love of mathematics started with a love of numbers. I enjoyed finding all possible ways I could add, subtract, and multiply different numbers in order to find a specific number, say twelve.  Twelve was my favorite number; I loved twelve. We become attached to numbers that have a deeper meaning to us; numbers that make us feel, make us remember. Sesame Street had the “Pinball Song”; this song consisted of counting to twelve with a catchy jingle every child could remember.</description>
-	<pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Extending Matroid Functionality Google Summer of Code 2016: Getting Started</title>
@@ -581,6 +467,22 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 
 &lt;p&gt;In subsequent posts, I’ll talk more about defining other non-commutative algebras in Sage and Singular.&lt;/p&gt;</description>
 	<pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>William Stein: Thinking of using SageMathCloud in a college course?</title>
+	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703</guid>
+	<link>http://sagemath.blogspot.com/2016/01/thinking-of-using-sagemathcloud-in.html</link>
+	<description>&lt;h2&gt;SageMathCloud course subscriptions&lt;/h2&gt;&lt;span&gt;&quot;We are &amp;nbsp;college instructors of the calculus sequence and ODE’s.&amp;nbsp; If the college were to purchase one of the upgrades for us as we use Sage with our students, who gets the benefits of the upgrade? &amp;nbsp;Is is the individual students that are in an instructor’s Sage classroom or is it the &amp;nbsp;collaborators on an instructor’s project?&quot;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;If you were to purchase just the $7/month plan and apply the upgrades&amp;nbsp;&lt;/span&gt;&lt;span&gt;to *one* single project, then all collaborators on that one project&amp;nbsp;&lt;/span&gt;&lt;span&gt;would benefit from those upgrades while using that project.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;If you were to purchase a course plan for say $399/semester, then y&lt;/span&gt;&lt;span&gt;ou could apply the upgrades (network access and members only hosting)&amp;nbsp;&lt;/span&gt;&lt;span&gt;to 70 projects that you might create for a course.&amp;nbsp; &amp;nbsp;When you create a&amp;nbsp;&lt;/span&gt;&lt;span&gt;course by clicking +New, then &quot;Manage a Course&quot;, then add students,&amp;nbsp;&lt;/span&gt;&lt;span&gt;each student has their own project created automatically.&amp;nbsp; All&amp;nbsp;&lt;/span&gt;&lt;span&gt;instructors (anybody who is a collaborator on the project where you&amp;nbsp;&lt;/span&gt;&lt;span&gt;clicked &quot;Manage a course&quot;) is also added to the student's project.&amp;nbsp;&lt;/span&gt;&lt;span&gt;In course settings you can easily apply the upgrades you purchase to&amp;nbsp;&lt;/span&gt;&lt;span&gt;all projects in the course. &amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Also I'm currently working on a new feature where instructors may&amp;nbsp;&lt;/span&gt;&lt;span&gt;choose to require all students in their course to pay for the upgrade&amp;nbsp;&lt;/span&gt;&lt;span&gt;themselves.&amp;nbsp; There's a one time $9/course fee paid by the student and&amp;nbsp;&lt;/span&gt;&lt;span&gt;that's it.&amp;nbsp; At some colleges (in some places) this is ideal, and at&amp;nbsp;&lt;/span&gt;&lt;span&gt;other places it's not an option at all.&amp;nbsp; &amp;nbsp;I anticipate releasing this very soon.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s1600/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;372&quot; src=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s640/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;Getting started with SageMathCloud courses&lt;/h2&gt;&lt;br /&gt;&lt;span&gt;You can &lt;b&gt;&lt;i&gt;fully use&lt;/i&gt;&amp;nbsp;&lt;/b&gt;the SMC course functionality without paying anything in order to get familiar with it and test it out. &amp;nbsp;The main benefit of paying is that you get network access and all projects get moved to members only servers, which are much more robust; also, we greatly prioritize support for paying customers. &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;This blog post is an overview of using SMC courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;This has some screenshots and the second half is about courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Here are some video tutorials made by an instructor that used SMC with&amp;nbsp;&lt;/span&gt;&lt;span&gt;a large class in Iceland recently:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dgTi11ZS3fQ&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=dgTi11ZS3fQ&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nkSdOVE2W0A&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=nkSdOVE2W0A&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0qrhZQ4rjjg&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=0qrhZQ4rjjg&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Note that the above videos show the basics of courses, then talk&amp;nbsp;&lt;/span&gt;&lt;span&gt;specifically about automated grading of Jupyter notebooks.&amp;nbsp; That might&amp;nbsp;&lt;/span&gt;&lt;span&gt;not be at all what you want to do -- &lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/Teaching&quot; target=&quot;_blank&quot;&gt;many math courses &lt;/a&gt;use Sage&amp;nbsp;&lt;/span&gt;&lt;span&gt;worksheets, and probably don't automate the grading yet.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Regarding using Sage itself for teaching your courses, check out the&amp;nbsp;&lt;/span&gt;&lt;span&gt;free pdf book to &quot;Sage for Undergraduates&quot; here, which the American Mathematical Society just published (there is also a very nice print version for about $23):&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.gregorybard.com/SAGE.html&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.gregorybard.com/SAGE.html&lt;/a&gt;</description>
+	<pubDate>Fri, 15 Jan 2016 09:14:07 +0000</pubDate>
+	<author>noreply@blogger.com (William Stein)</author>
+</item>
+<item>
+	<title>William Stein: Mathematics Graduate School: preparation for non-academic employment</title>
+	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693</guid>
+	<link>http://sagemath.blogspot.com/2016/01/mathematics-graduate-school-preparation.html</link>
+	<description>This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;br /&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;br /&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“&lt;span&gt;Robert Bradshaw said it before me, but I have to repeat. L&lt;/span&gt;&lt;span&gt;arge scale software development requires exposure to a lot of tooling and process beyond just writing code - version control, code reviews, bug tracking, code&amp;nbsp;&lt;/span&gt;&lt;span&gt;maintenance&lt;/span&gt;&lt;span&gt;, release process, coordinating with collaborators. Contributing to an active open-source project with a large number of&amp;nbsp;contributors like Sage, is a great way to experience all that and see if you would like to make it your profession. A lot of mathematicians write clever code for their research, but if less than 10 people see it and use it, it is not a&amp;nbsp;&lt;/span&gt;&lt;span&gt;realistic&lt;/span&gt;&lt;span&gt;&amp;nbsp;representation of what working as a software engineer feels like.&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;The software industry is in large demand of developers and hiring straight from&amp;nbsp;&lt;/span&gt;&lt;span&gt;academia is very common&lt;/span&gt;&lt;span&gt;. B&lt;/span&gt;&lt;span&gt;efore I got hired by Google, the only software development experience on my resume&lt;/span&gt;&lt;span&gt;&amp;nbsp;was the&amp;nbsp;Sage graph editor. Along with solid understanding of algorithms and data structures that was enough to get in.&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;&lt;span&gt;David Moulton (Google)&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</description>
+	<pubDate>Fri, 08 Jan 2016 22:25:16 +0000</pubDate>
+	<author>noreply@blogger.com (William Stein)</author>
 </item>
 
 </channel>

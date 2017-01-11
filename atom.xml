@@ -5,99 +5,8 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-01-11T18:30:13+00:00</updated>
+	<updated>2017-01-11T19:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
-
-	<entry>
-		<title type="html">Lovelace and Babbage</title>
-		<link href="http://lifebynumber.org/life-by-blog/lovelace-and-babbage/"/>
-		<id>http://lifebynumber.org/life-by-blog/lovelace-and-babbage/</id>
-		<updated>2017-01-09T00:00:00+00:00</updated>
-		<content type="html">This is the post summary</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Gauss by Number</title>
-		<link href="http://lifebynumber.org/life-by-blog/gauss-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/gauss-by-number/</id>
-		<updated>2017-01-09T00:00:00+00:00</updated>
-		<content type="html">This is the post summary</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Color by Number</title>
-		<link href="http://lifebynumber.org/life-by-blog/color-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/color-by-number/</id>
-		<updated>2017-01-09T00:00:00+00:00</updated>
-		<content type="html">So before I was a mathematician, I was an ABO certified optician. This means I worked  for an optometrist, and had taken the hardest test of my life (Until grad school) all about the eye, eye health, and how light refracts. I still love knowing how many colors we can see, and (as I also used to be a chemistry intern) what gives objects there colors. Even before that I was a 7th grader, who, went home and cried when I learned objects had no color it was just how there molecules reflected the</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Grapic Novels by Number- Logicomix, Feynman, The Case of Alan Turing</title>
-		<link href="http://lifebynumber.org/life-by-blog/grapic-novels-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/grapic-novels-by-number/</id>
-		<updated>2016-12-17T00:00:00+00:00</updated>
-		<content type="html">As biographies go, you want to be enthralled, you want to hear what you already know and learn more. With graphic novels, and now graphic biographies and memoirs as a growing Genre. I thought a comparison of three I read would be insightfull. I know I have already done an in depth summary of Logicomix, but I just couldn't resist. Special thanks to Steenz, my library friend for turning me on to graphic novels in general. 
-As a preface Yes I know Feynman was a physistist, but phyics has a lot of</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Books by Number- The Number Devil</title>
-		<link href="http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/"/>
-		<id>http://lifebynumber.org/life-by-blog/books-by-number-the-number-devil/</id>
-		<updated>2016-12-17T00:00:00+00:00</updated>
-		<content type="html">Coming in 253 pages, this is the little book with is full of mathematical gold. Hans Magnus Enzenberger wrote The Number Devil in 1998. Tis was when I was 8, and in 4th grade. How did I miss this gem? I would fallen down the mathematical rabbit hole even sooner.  Disguised as a novel, the math in this book includes: Pascal's Triangle, Fibonacci Numbers, set theory, factorials, math 'tricks', and math history. It even has a brief except of  Russel's proof that 1+1 equals 2 ( although even to most</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
 
 	<entry xml:lang="en">
 		<title type="html">A time evolution picture of packages built in parallel by Sage</title>
@@ -164,66 +73,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Logicomix- Logic by Number</title>
-		<link href="http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/logicomix-logic-by-number/</id>
-		<updated>2016-11-06T00:00:00+00:00</updated>
-		<content type="html">A book review of Logicomix. Written by Apostolos Doxiadis and Christos H. Papadimitriou. Art by Alecos Papadatos and Annie Di Donna. 
-
-This is the first graphic novel I've ever read. I had no idea math history graphic novels was a genre, I realy had no idea that nonfiction graphic novels were a genre.  I've justs tarted reading my second about Ada lovelace and Charles Babbage, I don't for see it being my last. Logicomix  focuses priamily on Bertrand Russell, creator of Russell's Paradox. He is</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Improbable by Number</title>
-		<link href="http://lifebynumber.org/life-by-blog/improbable-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/improbable-by-number/</id>
-		<updated>2016-11-05T00:00:00+00:00</updated>
-		<content type="html">As a Mathematician I enjoy reading non-fiction that is not too &quot;mathy&quot;, one that makes subjects such as probability approachable. This is the first in a series of reviews of books I've been reading for fun and for my math history course. These reviews will highlight some of the more interesting parts of the book as well as rate how approachable the book made the subject and how educational on the subject the books really are.
-
-The first book I am Reviewing is The Improbability Principle  by</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Knots by Number, Quipu</title>
-		<link href="http://lifebynumber.org/life-by-blog/quipu/"/>
-		<id>http://lifebynumber.org/life-by-blog/quipu/</id>
-		<updated>2016-10-11T00:00:00+00:00</updated>
-		<content type="html">For my undergraduate thesis my focus was in knot theory, a subset of topology and a newer subject in mathematics. These are not the knots we think of in our daily life. The knots I studied had no ends and no thickness. Knots as we know them in everyday life have been around since before the Greeks. The book of Kells is decorated with intricate knot work. Sailors have used them on their ships. The Incas even used them to keep track of their accounting.
-The Incan civilization started in modern day</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -243,7 +93,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -263,7 +113,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -287,24 +137,6 @@ The Incan civilization started in modern day</content>
 	</entry>
 
 	<entry>
-		<title type="html">Final GSOC Report</title>
-		<link href="http://lifebynumber.org/life-by-blog/final-gsoc-report/"/>
-		<id>http://lifebynumber.org/life-by-blog/final-gsoc-report/</id>
-		<updated>2016-08-22T00:00:00+00:00</updated>
-		<content type="html">Over the summer I have been coding for SAGE as part of Google Summer of Code 2016.  I feel this opportunity has strengthened both my skills as a coder and as a mathematician. SAGE is an open source math software system, used to do calculations.  SAGE is made up of code available for free public use and modification. It is a collaborative effort where people from around the world can add new code, update old code, and share the changes that they make. Open source coding is a labor of</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
 		<title type="html">Jupyter: &quot;take the domain name down immediately&quot;</title>
 		<link href="http://sagemath.blogspot.com/2016/07/jupyter-take-domain-name-down.html"/>
 		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4592324674567336685</id>
@@ -320,29 +152,7 @@ The Incan civilization started in modern day</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Poetry By Number</title>
-		<link href="http://lifebynumber.org/life-by-blog/poetry-by-number/"/>
-		<id>http://lifebynumber.org/life-by-blog/poetry-by-number/</id>
-		<updated>2016-07-27T00:00:00+00:00</updated>
-		<content type="html">In the 1960’s French writer and poet Raymond Queneau became the most prolific writers of our time by writing over one hundred thousand billion poems.  If you wanted to read all of these poems it would only take you 200 million years of reading 24 hours a day at a rate of about one poem per minute.
-
- So how could Queneau write so many poems in far less time than it would take to read them all?
-
-The truth is he didn’t actually write that many individual poems. What he did was write ten 14-line</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -362,7 +172,7 @@ The truth is he didn’t actually write that many individual poems. What he did 
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -386,47 +196,6 @@ The truth is he didn’t actually write that many individual poems. What he did 
 	</entry>
 
 	<entry>
-		<title type="html">GSOC Midterm Update</title>
-		<link href="http://lifebynumber.org/life-by-blog/gsoc-midterm-update/"/>
-		<id>http://lifebynumber.org/life-by-blog/gsoc-midterm-update/</id>
-		<updated>2016-06-23T00:00:00+00:00</updated>
-		<content type="html">One of the great joys in life that not all will be able to experience is when your code builds. When you have fixed all the syntax errors you build it, you test it, and you see
-----------------------------------------------------------------------
-All tests passed!
-----------------------------------------------------------------------
-Having to wait for your code to build is agonizing. You pray to some God, magic force, or Steve Jobs to help you in this time of need. Then it works and you feel</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">GSOC Week 2 Update</title>
-		<link href="http://lifebynumber.org/life-by-blog/gsoc-week-2-update/"/>
-		<id>http://lifebynumber.org/life-by-blog/gsoc-week-2-update/</id>
-		<updated>2016-06-09T00:00:00+00:00</updated>
-		<content type="html">Two weeks into GSOC 2016 I’m so grateful that this is how I get to spend my summer. Using my coding muscles has made me stronger and more confident with my code.
-I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, which is an open source project managing software. It allows SAGE to track what people are currently working on for SAGE. It does this by are giving a ticket number to each piece of functionality pushed to the server. Peers, who pull them from the server,</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
 		<title type="html">First Week or so</title>
 		<link href="http://extendingmatroidfunctionality.blogspot.com/2016/06/first-week-or-so.html"/>
 		<id>tag:blogger.com,1999:blog-3534817490044613273.post-4168277856882302649</id>
@@ -442,43 +211,6 @@ I am ready to create my first ticket in SAGE relating to GSOC. Sage uses Trac, w
 			<link rel="self" href="http://extendingmatroidfunctionality.blogspot.com/feeds/posts/default?alt=rss"/>
 			<id>tag:blogger.com,1999:blog-3534817490044613273</id>
 			<updated>2017-01-05T12:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">GSOC 2016</title>
-		<link href="http://lifebynumber.org/life-by-blog/gsoc-2016/"/>
-		<id>http://lifebynumber.org/life-by-blog/gsoc-2016/</id>
-		<updated>2016-05-21T00:00:00+00:00</updated>
-		<content type="html">What I love about programing is it is akin to solving a logic puzzle. You have all the pieces you need to solve it, you're allowed to search the internet for assistance, but the internet will not give you the answer, you still have to find it on you own.
-If you have misread one letter or decoded one word wrong, you will not find the answer. You can spend twice as much time trying to solve the problem than actually solving the puzzle. That is why in coding, as with logic puzzles,</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">For love of numbers...</title>
-		<link href="http://lifebynumber.org/life-by-blog/for-love-of-numbers/"/>
-		<id>http://lifebynumber.org/life-by-blog/for-love-of-numbers/</id>
-		<updated>2016-05-20T00:00:00+00:00</updated>
-		<content type="html">My love of mathematics started with a love of numbers. I enjoyed finding all possible ways I could add, subtract, and multiply different numbers in order to find a specific number, say twelve.  Twelve was my favorite number; I loved twelve. We become attached to numbers that have a deeper meaning to us; numbers that make us feel, make us remember. Sesame Street had the “Pinball Song”; this song consisted of counting to twelve with a catchy jingle every child could remember.</content>
-		<author>
-			<name>Lauren Devitt</name>
-			<uri>http://lifebynumber.org/life-by-blog/</uri>
-		</author>
-		<source>
-			<title type="html">Blog RSS</title>
-			<link rel="self" href="http://lifebynumber.org/rss.xml"/>
-			<id>http://lifebynumber.org/rss.xml</id>
-			<updated>2017-01-11T18:30:13+00:00</updated>
 		</source>
 	</entry>
 
@@ -517,7 +249,7 @@ If you have misread one letter or decoded one word wrong, you will not find th
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -705,7 +437,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -725,7 +457,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-01-11T18:30:04+00:00</updated>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -922,6 +654,46 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
 			<id>http://sheaves.github.io/feed.xml</id>
 			<updated>2016-07-07T07:30:12+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Thinking of using SageMathCloud in a college course?</title>
+		<link href="http://sagemath.blogspot.com/2016/01/thinking-of-using-sagemathcloud-in.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703</id>
+		<updated>2016-01-15T09:14:07+00:00</updated>
+		<content type="html">&lt;h2&gt;SageMathCloud course subscriptions&lt;/h2&gt;&lt;span&gt;&quot;We are &amp;nbsp;college instructors of the calculus sequence and ODE’s.&amp;nbsp; If the college were to purchase one of the upgrades for us as we use Sage with our students, who gets the benefits of the upgrade? &amp;nbsp;Is is the individual students that are in an instructor’s Sage classroom or is it the &amp;nbsp;collaborators on an instructor’s project?&quot;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;If you were to purchase just the $7/month plan and apply the upgrades&amp;nbsp;&lt;/span&gt;&lt;span&gt;to *one* single project, then all collaborators on that one project&amp;nbsp;&lt;/span&gt;&lt;span&gt;would benefit from those upgrades while using that project.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;If you were to purchase a course plan for say $399/semester, then y&lt;/span&gt;&lt;span&gt;ou could apply the upgrades (network access and members only hosting)&amp;nbsp;&lt;/span&gt;&lt;span&gt;to 70 projects that you might create for a course.&amp;nbsp; &amp;nbsp;When you create a&amp;nbsp;&lt;/span&gt;&lt;span&gt;course by clicking +New, then &quot;Manage a Course&quot;, then add students,&amp;nbsp;&lt;/span&gt;&lt;span&gt;each student has their own project created automatically.&amp;nbsp; All&amp;nbsp;&lt;/span&gt;&lt;span&gt;instructors (anybody who is a collaborator on the project where you&amp;nbsp;&lt;/span&gt;&lt;span&gt;clicked &quot;Manage a course&quot;) is also added to the student's project.&amp;nbsp;&lt;/span&gt;&lt;span&gt;In course settings you can easily apply the upgrades you purchase to&amp;nbsp;&lt;/span&gt;&lt;span&gt;all projects in the course. &amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Also I'm currently working on a new feature where instructors may&amp;nbsp;&lt;/span&gt;&lt;span&gt;choose to require all students in their course to pay for the upgrade&amp;nbsp;&lt;/span&gt;&lt;span&gt;themselves.&amp;nbsp; There's a one time $9/course fee paid by the student and&amp;nbsp;&lt;/span&gt;&lt;span&gt;that's it.&amp;nbsp; At some colleges (in some places) this is ideal, and at&amp;nbsp;&lt;/span&gt;&lt;span&gt;other places it's not an option at all.&amp;nbsp; &amp;nbsp;I anticipate releasing this very soon.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s1600/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;372&quot; src=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s640/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;Getting started with SageMathCloud courses&lt;/h2&gt;&lt;br /&gt;&lt;span&gt;You can &lt;b&gt;&lt;i&gt;fully use&lt;/i&gt;&amp;nbsp;&lt;/b&gt;the SMC course functionality without paying anything in order to get familiar with it and test it out. &amp;nbsp;The main benefit of paying is that you get network access and all projects get moved to members only servers, which are much more robust; also, we greatly prioritize support for paying customers. &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;This blog post is an overview of using SMC courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;This has some screenshots and the second half is about courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Here are some video tutorials made by an instructor that used SMC with&amp;nbsp;&lt;/span&gt;&lt;span&gt;a large class in Iceland recently:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dgTi11ZS3fQ&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=dgTi11ZS3fQ&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nkSdOVE2W0A&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=nkSdOVE2W0A&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0qrhZQ4rjjg&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=0qrhZQ4rjjg&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Note that the above videos show the basics of courses, then talk&amp;nbsp;&lt;/span&gt;&lt;span&gt;specifically about automated grading of Jupyter notebooks.&amp;nbsp; That might&amp;nbsp;&lt;/span&gt;&lt;span&gt;not be at all what you want to do -- &lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/Teaching&quot; target=&quot;_blank&quot;&gt;many math courses &lt;/a&gt;use Sage&amp;nbsp;&lt;/span&gt;&lt;span&gt;worksheets, and probably don't automate the grading yet.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Regarding using Sage itself for teaching your courses, check out the&amp;nbsp;&lt;/span&gt;&lt;span&gt;free pdf book to &quot;Sage for Undergraduates&quot; here, which the American Mathematical Society just published (there is also a very nice print version for about $23):&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.gregorybard.com/SAGE.html&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.gregorybard.com/SAGE.html&lt;/a&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2017-01-11T19:30:04+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Mathematics Graduate School: preparation for non-academic employment</title>
+		<link href="http://sagemath.blogspot.com/2016/01/mathematics-graduate-school-preparation.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693</id>
+		<updated>2016-01-08T22:25:16+00:00</updated>
+		<content type="html">This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;br /&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;br /&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“&lt;span&gt;Robert Bradshaw said it before me, but I have to repeat. L&lt;/span&gt;&lt;span&gt;arge scale software development requires exposure to a lot of tooling and process beyond just writing code - version control, code reviews, bug tracking, code&amp;nbsp;&lt;/span&gt;&lt;span&gt;maintenance&lt;/span&gt;&lt;span&gt;, release process, coordinating with collaborators. Contributing to an active open-source project with a large number of&amp;nbsp;contributors like Sage, is a great way to experience all that and see if you would like to make it your profession. A lot of mathematicians write clever code for their research, but if less than 10 people see it and use it, it is not a&amp;nbsp;&lt;/span&gt;&lt;span&gt;realistic&lt;/span&gt;&lt;span&gt;&amp;nbsp;representation of what working as a software engineer feels like.&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;The software industry is in large demand of developers and hiring straight from&amp;nbsp;&lt;/span&gt;&lt;span&gt;academia is very common&lt;/span&gt;&lt;span&gt;. B&lt;/span&gt;&lt;span&gt;efore I got hired by Google, the only software development experience on my resume&lt;/span&gt;&lt;span&gt;&amp;nbsp;was the&amp;nbsp;Sage graph editor. Along with solid understanding of algorithms and data structures that was enough to get in.&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;&lt;span&gt;David Moulton (Google)&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2017-01-11T19:30:04+00:00</updated>
 		</source>
 	</entry>
 
