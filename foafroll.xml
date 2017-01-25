@@ -444,7 +444,7 @@
 		<foaf:Agent>
 			<foaf:name>Simon Spicer</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://mathandhats.blogspot.com">
+				<foaf:Document rdf:about="http://mathandhats.blogspot.com/search/label/sage">
 					<dc:title>Math and Hats</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" />
