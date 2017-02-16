@@ -277,7 +277,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 
 &lt;p&gt;This is suprising, because one can easily define $\mathbb{Q}(q)$ and non-commutative $\mathbb{Q}(q)$-algebras in Singular/Plural, which is what Sage is using. It seems that the problem is in Sage’s wrapper for Singular/Plural, because Sage can’t even pass the ring $\mathbb{Q}(q)$ to Singular.&lt;/p&gt;
 
-&lt;p&gt;There’s a &lt;a href=&quot;http://trac.sagemath.org/ticket/14886&quot; target=&quot;_blank&quot;&gt;trac ticket&lt;/a&gt; for this problem, but until it gets resolved, we’ll just have to define such rings directly in Singular/Plural. Thanks to the amazing capabilities of the &lt;a href=&quot;https://sagecell.sagemath.org/&quot; target=&quot;_blank&quot;&gt;Sage Cell Server&lt;/a&gt;, we’ll do this in the next post!&lt;/p&gt;</description>
+&lt;p&gt;There’s a &lt;a href=&quot;http://trac.sagemath.org/ticket/14886&quot; target=&quot;_blank&quot;&gt;trac ticket&lt;/a&gt; for this problem, but until it gets resolved, we’ll just have to define such rings directly in Singular/Plural. Thanks to the amazing capabilities of the &lt;a href=&quot;https://sagecell.sagemath.org/&quot; target=&quot;_blank&quot;&gt;Sage Cell Server&lt;/a&gt;, &lt;del&gt;we’ll do this in the next post&lt;/del&gt;!&lt;/p&gt;</description>
 	<pubDate>Thu, 03 Mar 2016 00:00:00 +0000</pubDate>
 </item>
 <item>
