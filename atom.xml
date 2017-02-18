@@ -5,8 +5,33 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-02-18T08:30:08+00:00</updated>
+	<updated>2017-02-18T09:30:09+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Distributive Laws</title>
+		<link href="http://sheaves.github.io/Distributive-Laws/"/>
+		<id>http://sheaves.github.io/Distributive-Laws/</id>
+		<updated>2017-02-18T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;I’ve been participating in the &lt;a href=&quot;http://www.math.jhu.edu/~eriehl/kanII/&quot;&gt;Kan Extension Seminar II&lt;/a&gt;, and this week it’s my turn to &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;post about Jon Beck’s “Distributive Laws”&lt;/a&gt; at the &lt;a href=&quot;https://golem.ph.utexas.edu/category/&quot;&gt;n-Category Cafe&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The post uses lots of string diagrams for monads, resulting in pictures like the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/distributive/comp_assoc.png&quot; alt=&quot;&quot; title=&quot;Associativity of the composite monad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See you &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;there&lt;/a&gt;!&lt;/p&gt;</content>
+		<author>
+			<name>Liang Ze</name>
+			<uri>http://sheaves.github.io</uri>
+		</author>
+		<source>
+			<title type="html">Sheaves</title>
+			<subtitle type="html">Making math concrete with Sage</subtitle>
+			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
+			<id>http://sheaves.github.io/feed.xml</id>
+			<updated>2017-02-18T09:30:08+00:00</updated>
+		</source>
+	</entry>
 
 	<entry xml:lang="en">
 		<title type="html">A time evolution picture of packages built in parallel by Sage</title>
@@ -73,7 +98,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -93,7 +118,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -113,7 +138,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -152,7 +177,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -172,7 +197,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -249,451 +274,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Noncommutative Algebras in Sage</title>
-		<link href="http://sheaves.github.io/Noncommutative-Sage/"/>
-		<id>http://sheaves.github.io/Noncommutative-Sage/</id>
-		<updated>2016-03-03T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;In this post, I’ll demonstrate 3 ways to define non-commutative rings in Sage. They’re essentially different ways of expressing the non-commutative relations in the ring:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://doc.sagemath.org/html/en/reference/algebras/sage/algebras/free_algebra.html#sage.algebras.free_algebra.FreeAlgebra_generic.g_algebra&quot; target=&quot;_blank&quot;&gt;Via &lt;code class=&quot;highlighter-rouge&quot;&gt;g_algebra&lt;/code&gt;&lt;/a&gt;: define the relations directly&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.sagemath.org/documentation/html/en/reference/polynomial_rings/sage/rings/polynomial/plural.html&quot; target=&quot;_blank&quot;&gt;Via &lt;code class=&quot;highlighter-rouge&quot;&gt;NCPolynomialRing_plural&lt;/code&gt;&lt;/a&gt;: define a pair of structural matrices&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://doc.sagemath.org/html/en/reference/rings/sage/rings/quotient_ring.html&quot; target=&quot;_blank&quot;&gt;Via a quotient of a letterplace ring&lt;/a&gt;: define the ideal generated by the relations (only works for homogeneous relations)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;As far as I know, all 3 methods rely on Sage’s interface with &lt;a href=&quot;https://www.singular.uni-kl.de/index.php&quot; target=&quot;_blank&quot;&gt;Singular&lt;/a&gt; and its non-commutative extension &lt;a href=&quot;https://www.singular.uni-kl.de/Manual/4-0-2/sing_469.htm&quot; target=&quot;_blank&quot;&gt;Plural&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In addition to all the documentation linked above, I also relied heavily on  Greuel and Pfister’s &lt;a href=&quot;http://www.cimpa-icpam.org/archivesecoles/20130130100834/singularbuch1-210.pdf&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;A Singular Introduction to
-Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pretty substantial section (1.9) devoted to non-commutative $G$-algebras.&lt;/p&gt;
-
-&lt;h2 id=&quot;umathfraksl_2-and-its-homogenization&quot;&gt;$U(\mathfrak{sl}_2)$ and its homogenization&lt;/h2&gt;
-
-&lt;p&gt;The running example throughout this post will be the universal enveloping algebra $U(\mathfrak{sl}_2)$ over $\mathbb{Q}$.&lt;/p&gt;
-
-&lt;p&gt;We’ll define this to be the (non-commutative) $\mathbb{Q}$-algebra $U$ with generators $e,f,h$ subject to the relations&lt;/p&gt;
-
-
-
-&lt;p&gt;If we set $e,f,h$ to have degree 1, these relations are not homogeneous. Their left-hand sides only have degree 2 terms, while their right-hand sides have degree 1 terms as well. This is fine with the first two methods, but won’t work for method 3 (which requires homogeneous relations).&lt;/p&gt;
-
-&lt;p&gt;To demonstrate the third method, we’ll define the $\mathbb{Q}$-algebra $H$ with generators $e,f,h,t$ subject to the homogeneous relations&lt;/p&gt;
-
-
-
-
-
-&lt;p&gt;We can obtain $U$ both as a quotient and a localization of $H$:&lt;/p&gt;
-
-
-
-&lt;h2 id=&quot;g-algebras&quot;&gt;$G$-algebras&lt;/h2&gt;
-&lt;p&gt;Using the  &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/algebras/sage/algebras/free_algebra.html#sage.algebras.free_algebra.FreeAlgebra_generic.g_algebra&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;g_algebra&lt;/code&gt;&lt;/a&gt; method of Sage’s &lt;code class=&quot;highlighter-rouge&quot;&gt;FreeAlgebra&lt;/code&gt; class, we can simply plug our noncommutative relations in, and get our non-commutative ring. This is about as easy as it gets:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Let’s unravel what’s going on here.&lt;/p&gt;
-
-&lt;h3 id=&quot;monomial-orderings-and-pbw-basis&quot;&gt;Monomial orderings and PBW basis&lt;/h3&gt;
-&lt;p&gt;Most algorithms for commutative and non-commutative rings require an ordering on the generators. In our case, let’s use the ordering&lt;/p&gt;
-
-
-
-&lt;p&gt;This is implicitly stated in our code: we wrote &lt;code class=&quot;highlighter-rouge&quot;&gt;F.&amp;lt;e,f,h&amp;gt;&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;F.&amp;lt;h,e,f&amp;gt;&lt;/code&gt;, for example.&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;standard word&lt;/em&gt; is a monomial of the form&lt;/p&gt;
-
-
-
-&lt;p&gt;In the polynomial ring $\mathbb{Q}[e,f,h]$, every monomial can be expressed in this form, so the set of standard words forms a $\mathbb{Q}$-basis for $\mathbb{Q}[e,f,h]$.&lt;/p&gt;
-
-&lt;p&gt;In a non-commutative ring, whether or not the standard words form a basis depends on what relations we have. Such a basis, if it exists, is called a &lt;a href=&quot;https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem&quot; target=&quot;_blank&quot;&gt;PBW basis&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The free algebra $F = \mathbb{Q}\langle e,f,h\rangle$ has no relations, so does not have a PBW basis. Fortunately, our algebra $U$ does have a PBW basis.&lt;/p&gt;
-
-&lt;p&gt;This means that we can always express a non-standard monomial (e.g. $fe$) as a sum of standard monomials (e.g. $ef - h$). The non-commutative relations that define $U$ can thus be thought of as an algorithm for turning non-standard words into sums of standard words.&lt;/p&gt;
-
-&lt;p&gt;To do this in Sage, we define a &lt;a href=&quot;https://docs.python.org/2/tutorial/datastructures.html#dictionaries&quot; target=&quot;_blank&quot;&gt;dictionary&lt;/a&gt; whose keys are non-standard words and values are the standard words they become.&lt;/p&gt;
-
-&lt;p&gt;In the above example, our dictionary was short enough to fit into one line, but we could also define a dictionary separately and pass it into &lt;code class=&quot;highlighter-rouge&quot;&gt;g_algebra&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;It’s very important that the keys are non-standard words and the values are sums of standard words. Mathematically, the relation $fe = ef - h$ is the same as $ef = fe + h$, but if we replace &lt;code class=&quot;highlighter-rouge&quot;&gt;f*e : e*f - h&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;e*f : f*e + h&lt;/code&gt; in the code, we’ll get an error (try it!).&lt;/p&gt;
-
-&lt;h3 id=&quot;what-are-g-algebras&quot;&gt;What are $G$-algebras?&lt;/h3&gt;
-&lt;p&gt;The reason why $U$ has a PBW basis is because it is a $G$-algebra. Briefly, $G$-algebras are algebras whose relations satisfy certain non-degeneracy conditions that make the algebra nice to work with.&lt;/p&gt;
-
-&lt;p&gt;For a full definition of $G$-algebras, refer to &lt;a href=&quot;http://www.cimpa-icpam.org/archivesecoles/20130130100834/singularbuch1-210.pdf&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;A Singular Introduction to Commutative Algebra&lt;/em&gt;&lt;/a&gt; or the &lt;a href=&quot;https://www.singular.uni-kl.de/Manual/4-0-2/sing_534.htm#SEC573&quot; target=&quot;_blank&quot;&gt;Plural manual&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If $A$ is a $G$-algebra, then it has a PBW basis, is left and right Noetherian, and is an integral domain. More importantly (for this site at least!), it means that we can define $A$ in Singular/Plural, and hence in Sage.&lt;/p&gt;
-
-&lt;h2 id=&quot;structural-matrices-for-a-g-algebra&quot;&gt;Structural matrices for a $G$-algebra&lt;/h2&gt;
-&lt;p&gt;Another way of writing our non-commutative relations is&lt;/p&gt;
-
-
-
-&lt;p&gt;where $ * $ denotes element-wise multiplication (so there isn’t any linear algebra going on here; we’re just using matrices to organize the information). Let $N,C,S,D$ be the matrices above, in that order, so that $N = C*S + D$.&lt;/p&gt;
-
-&lt;p&gt;If we let $x_1 = e, x_2 = f, x_3 = h$ (so that $x_i \leq x_j$ if $i \leq j$) then for $i &amp;lt; j$&lt;/p&gt;
-
-
-
-&lt;p&gt;In other words, $N$ contains the non-standard words that we’re trying to express in terms of the standard words in $S$.&lt;/p&gt;
-
-&lt;p&gt;The matrices $C$ and $D$ are called the &lt;em&gt;structural matrices&lt;/em&gt; of the $G$-algebra, and their entries are such that our relations may be written&lt;/p&gt;
-
-
-
-&lt;p&gt;with zeros everywhere else ($i \geq j$). If $C = D = 0$, the resulting algebra will be commutative.&lt;/p&gt;
-
-&lt;p&gt;We can use the structural matrices $C$ and $D$ to define our algebra via Sage’s  &lt;a href=&quot;http://www.sagemath.org/documentation/html/en/reference/polynomial_rings/sage/rings/polynomial/plural.html&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NCPolynomialRing_plural&lt;/code&gt;&lt;/a&gt; function (note that Python uses zero-indexing for matrices):&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Note that &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; is a commutative polynomial ring. In fact, up till the point where we call &lt;code class=&quot;highlighter-rouge&quot;&gt;NCPolynomialRing_plural&lt;/code&gt;, even the variables &lt;code class=&quot;highlighter-rouge&quot;&gt;e,f,h&lt;/code&gt; are treated as commutative variables.&lt;/p&gt;
-
-&lt;p&gt;This method of defining $U$ is considerably longer and more prone to mistakes than using &lt;code class=&quot;highlighter-rouge&quot;&gt;g_algebra&lt;/code&gt;. As stated in the &lt;a href=&quot;http://www.sagemath.org/documentation/html/en/reference/polynomial_rings/sage/rings/polynomial/plural.html&quot; target=&quot;_blank&quot;&gt;documentation&lt;/a&gt;, this is not intended for use! I’m including it here because this is essentially how one would go about defining a $G$-algebra in Singular. In fact, the Sage method &lt;code class=&quot;highlighter-rouge&quot;&gt;g_algebra&lt;/code&gt; calls &lt;code class=&quot;highlighter-rouge&quot;&gt;NCPolynomialRing_plural&lt;/code&gt;, which in turn calls Singular.&lt;/p&gt;
-
-&lt;h2 id=&quot;quotients-of-letterplace-rings&quot;&gt;Quotients of letterplace rings&lt;/h2&gt;
-&lt;p&gt;Our final method for defining non-commutative rings makes use of &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/algebras/sage/algebras/letterplace/free_algebra_letterplace.html&quot; target=&quot;_blank&quot;&gt;Sage’s implementation of Singular’s letterplace rings&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As mentioned at the start of this post, this method requires the relations to be homogeneous, so we’ll work with $H$ instead of $U$.&lt;/p&gt;
-
-&lt;p&gt;Let $\mathbb{Q}\langle e,f,h,t \rangle$ be the free algebra on 4 variables. Consider the two-sided ideal $I$ generated by the relations for $H$:&lt;/p&gt;
-
-
-
-&lt;p&gt;Then&lt;/p&gt;
-
-
-
-&lt;p&gt;This can be expressed Sage-ly:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;The expression &lt;code class=&quot;highlighter-rouge&quot;&gt;F*I*F&lt;/code&gt; is the two-sided ideal generated by elements in the list &lt;code class=&quot;highlighter-rouge&quot;&gt;I&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Although $U$ cannot be defined using this method, $H$ can be defined using all three methods. As a (fun?) exercise, try defining $H$ using the other two methods.&lt;/p&gt;
-
-&lt;h2 id=&quot;difficulties&quot;&gt;Difficulties&lt;/h2&gt;
-&lt;p&gt;These methods can be used to define many non-commutative algebras such as the Weyl algebra and various enveloping algebras of Lie algebras. One can also define these algebras over fields other than $\mathbb{Q}$, such as $\mathbb{C}$ or $\mathbb{F}_p$.&lt;/p&gt;
-
-&lt;p&gt;However, we cannot define algebras over $\mathbb{Q}(q)$, the fraction field of $\mathbb{Q}[q]$:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;This is a problem if we want to define rings with relations such as&lt;/p&gt;
-
-
-
-&lt;p&gt;Such relations occur frequently when studying quantum groups, for example.&lt;/p&gt;
-
-&lt;p&gt;This is suprising, because one can easily define $\mathbb{Q}(q)$ and non-commutative $\mathbb{Q}(q)$-algebras in Singular/Plural, which is what Sage is using. It seems that the problem is in Sage’s wrapper for Singular/Plural, because Sage can’t even pass the ring $\mathbb{Q}(q)$ to Singular.&lt;/p&gt;
-
-&lt;p&gt;There’s a &lt;a href=&quot;http://trac.sagemath.org/ticket/14886&quot; target=&quot;_blank&quot;&gt;trac ticket&lt;/a&gt; for this problem, but until it gets resolved, we’ll just have to define such rings directly in Singular/Plural. Thanks to the amazing capabilities of the &lt;a href=&quot;https://sagecell.sagemath.org/&quot; target=&quot;_blank&quot;&gt;Sage Cell Server&lt;/a&gt;, &lt;del&gt;we’ll do this in the next post&lt;/del&gt;!&lt;/p&gt;</content>
-		<author>
-			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
-		</author>
-		<source>
-			<title type="html">Sheaves</title>
-			<subtitle type="html">Making math concrete with Sage</subtitle>
-			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
-			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2017-02-18T06:30:07+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">&quot;If you were new faculty, would you start something like SageMathCloud sooner?&quot;</title>
-		<link href="http://sagemath.blogspot.com/2016/02/if-you-were-new-faculty-member-again.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-17375596918912545</id>
-		<updated>2016-02-25T15:14:04+00:00</updated>
-		<content type="html">I was recently asked by a young academic: &quot;If you were a new faculty member again, would you start something like SageMathCloud sooner or simply leave for industry?&quot;  The academic goes on to say &quot;I am increasingly frustrated by continual evidence that it is more valuable to publish a litany of computational papers with no source code than to do the thankless task of developing a niche open source library; deep mathematical software is not appreciated by either mathematicians or the public.&quot;&lt;br /&gt;&lt;br /&gt;I wanted to answer that &quot;things have gotten better&quot; since back in 2000 when I started as an academic who does computation.  Unfortunately, I think they have gotten worse.  I do not understand why.   In fact, this evening I just received the most recent in a &lt;a href=&quot;http://wstein.org/grants/&quot; target=&quot;_blank&quot;&gt;long string of rejections by the NSF&lt;/a&gt;.  &lt;br /&gt;&lt;br /&gt;Regarding a company versus taking a job in industry, for me personally there is no point in starting a company unless you have a goal that can only be accomplished via a company, since building a business from scratch is extremely hard and has little to do with math or research.  I do have such a goal: &quot;create a viable open source alternative to Mathematica, etc...&quot;.   I was very clearly told by Michael Monagan (co-founder of Maplesoft) in 2006 that this goal could not be accomplished in academia, and I spent the last 10 years trying to prove him wrong.  &lt;br /&gt;&lt;br /&gt;On the other hand, leaving for a job in industry means that your focus will switch from &quot;pure&quot; research to solving concrete problems that make products better for customers.  That said, many of the mathematicians who work on open source math software do so because they care so much about making the experience of using math software much better for the math community.  What often drives Sage developers is exactly the sort of passionate care for &quot;consumer focus&quot; and products that also makes one successful in industry.  I'm sure you know exactly what I mean, since it probably partly motivates your work.  It is sad that the math community turns its back on such people.   If the community were to systematically embrace them, instead of losing all these $300K+/year engineers to mathematics entirely -- which is exactly what we do constantly -- the experience of doing mathematics could be massively improved into the future.  But that is not what the community has chosen to do.  We are shooting ourselves in the foot.  &lt;br /&gt;&lt;br /&gt;Now that I have seen how academia works from the inside over 15 years I'm starting to understand a little why these things change very slowly, if ever.  In the mathematics department I'm at, there are a small handful of research areas in pure math, and due to how hiring works (voting system, culture, etc.) we have spent the last 10 years hiring in those areas little by little (to replace people who die/retire/leave).   I imagine most mathematics departments are very similar.   &quot;Open source software&quot; is not one of those traditional areas.   Nobody will win a Fields Medal in it.  &lt;br /&gt;&lt;br /&gt;Overall, the mathematical community does not value open source mathematical software in proportion to its value, and doesn't understand its importance to mathematical research and education.  I would like to say that things have got a lot better over the last decade, but I don't think they have. My personal experience is that much of the &quot;next generation&quot; of mathematicians who would have changed how the math community approaches open source software are now in industry, or soon will be, and hence they have no impact on academic mathematical culture.   Every one of my Ph.D. students are now at Google/Facebook/etc.  &lt;br /&gt;&lt;br /&gt;We as a community overall would be better off if, when considering how we build departments, we put &quot;mathematical software writers&quot; on an equal footing with &quot;algebraic geometers&quot;.   We should systematically consider quality open source software contributions on a potentially equal footing with publications in journals.  &lt;br /&gt;&lt;br /&gt;To answer the original question, &lt;b&gt;YES&lt;/b&gt;, knowing what I know now, I really wish I had started something like SageMathCloud sooner. In fact, here's the &lt;a href=&quot;https://groups.google.com/forum/#!forum/sage-dotcom&quot; target=&quot;_blank&quot;&gt;previously private discussion&lt;/a&gt; from eight years ago when I almost did.   &lt;br /&gt;&lt;br /&gt;--&lt;br /&gt;&lt;br /&gt;- There is a&amp;nbsp;&lt;a href=&quot;https://docs.google.com/document/d/1UxEE5GjSeA07xJy_SUDy-rDia8tzFPGS6kMIkMPHh8E/edit&quot; target=&quot;_blank&quot;&gt;community generated followup ...&lt;/a&gt;&lt;br /&gt;&lt;div&gt;- Relevant blog post:&amp;nbsp;&lt;a href=&quot;http://martin.softf1.com/g/yellow_soap_opera_blog/about-software-development-in-companies-communities-and-the-academia&quot; target=&quot;_blank&quot;&gt;About Software Development in Companies, Communities and the Academia&lt;/a&gt;&lt;/div&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Elliptic curves: Magma versus Sage</title>
-		<link href="http://sagemath.blogspot.com/2016/02/elliptic-curves-magma-versus-sage.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-4357444546330326452</id>
-		<updated>2016-02-24T12:07:30+00:00</updated>
-		<content type="html">&lt;h3&gt;Elliptic Curves&lt;/h3&gt;Elliptic curves are certain types of nonsingular plane cubic curves, e.g., y^2 = x^3&amp;nbsp;+ ax&amp;nbsp;+b, which are central to both number theory and cryptography (e.g., they are used to compute the hash in bitcoin).&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s1600/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;227&quot; src=&quot;https://4.bp.blogspot.com/-qW1pKO63Xfs/Vs4NUYQVtbI/AAAAAAABXIE/Nw6-KGy31-0/s400/Screen%2BShot%2B2016-02-24%2Bat%2B12.06.23%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;h3&gt;Magma and Sage&lt;/h3&gt;If you want to do a wide range of explicit computations with elliptic curves, for research purposes, you will very likely use&amp;nbsp;&lt;a href=&quot;http://sagemath.org/&quot; target=&quot;_blank&quot;&gt;SageMath&amp;nbsp;&lt;/a&gt;or&amp;nbsp;&lt;a href=&quot;http://magma.maths.usyd.edu.au/magma/&quot; target=&quot;_blank&quot;&gt;Magma&lt;/a&gt;. If you're&amp;nbsp;&lt;strong&gt;really&lt;/strong&gt;&amp;nbsp;serious, you'll use both.&lt;br /&gt;&lt;br /&gt;Both Sage and Magma are far ahead of all other software (e.g., Mathematica, Maple and Matlab) for elliptic curves.&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://magma.maths.usyd.edu.au/magma/handbook/part/16&quot;&gt;Magma reference manual about elliptic curves.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://doc.sagemath.org/html/en/reference/plane_curves/index.html#elliptic-curves&quot;&gt;Sage reference manual about elliptic curves.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://pari.math.u-bordeaux.fr/dochtml/html.stable/Functions_related_to_elliptic_curves.html&quot;&gt;Pari reference manual about elliptic curves.&lt;/a&gt; -- pari is part of Sage and has some unique powerful functionality, e.g., &lt;code&gt;ellheegner&lt;/code&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;history&quot;&gt;A Little History&lt;/h3&gt;When I started contributing to Magma in 1999, I remember that Magma was way, way behind Pari. I remember having lunch with John Cannon (founder of Magma), and telling him I would no longer have to use Pari if only Magma would have dramatically faster code for computing point counts on elliptic curves.&lt;br /&gt;&lt;br /&gt;A few years later, John wisely hired Mark Watkins to work fulltime on Magma, and Mark has been working there for over a decade. Mark is definitely one of the top people in the world at implementing (and using) computational number theory algorithms, and he's ensured that Magma can do a lot. Some of that &quot;do a lot&quot; means catching up with (and surpassing!) what was in Pari and Sage for a long time (e.g., point counting, &lt;span class=&quot;math&quot;&gt;&lt;em&gt;p&lt;/em&gt;&lt;/span&gt;-adic &lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-functions, etc.)&lt;br /&gt;&lt;br /&gt;However, in addition, many people have visited Sydney and added extremely deep functionality for doing higher descents to Magma, which is &lt;strong&gt;not available in any open source software&lt;/strong&gt;. Search for Magma in &lt;a href=&quot;http://arxiv.org/abs/1602.01894&quot;&gt;this paper&lt;/a&gt; to see how, even today, there seems to be no open source way to compute the rank of the curve &lt;span class=&quot;math&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt; = &lt;em&gt;x&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt; + 169304&lt;em&gt;x&lt;/em&gt; + 25788938&lt;/span&gt;. &amp;nbsp;(The rank is 0.)&lt;br /&gt;&lt;h3 id=&quot;situation-today&quot;&gt;Two Codebases&lt;/h3&gt;There are several elliptic curves algorithms available &lt;strong&gt;only in Magma&lt;/strong&gt; (e.g., higher descents) ... and some available &lt;strong&gt;only in Sage&lt;/strong&gt; (&lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-function rank bounds, some overconvergent modular symbols, zeros of &lt;span class=&quot;math&quot;&gt;&lt;em&gt;L&lt;/em&gt;&lt;/span&gt;-functions, images of Galois representations). I could be wrong about functionality not being in Magma, since almost anything can get implemented in a year...&lt;br /&gt;&lt;br /&gt;The code bases are almost completely separate, which is a very good thing. Any time something gets implemented in one, it gets (or should get) tested via a big run on elliptic curves up to some bound in the other. This sometimes results in bugs being found. I remember &lt;a href=&quot;http://trac.sagemath.org/ticket/3674&quot; target=&quot;_blank&quot;&gt;refereeing the &quot;integral points&quot; code in Sage&lt;/a&gt; by running it against all curves up to some bound and comparing to what Magma output, and getting many discrepancies, which showed that there were bugs in both Sage and Magma.&lt;br /&gt;Thus we would be way better off if Sage could do everything Magma does (and vice versa).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
-		</source>
-	</entry>
-
-	<entry xml:lang="en">
-		<title type="html">unsupported operand parent for *, Matrix over number field, vector over symbolic ring</title>
-		<link href="http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring"/>
-		<id>http://www.slabbe.org/blogue/2016/02/unsupported-operand-parent-for-matrix-over-number-field-vector-over-symbolic-ring</id>
-		<updated>2016-02-18T10:17:00+00:00</updated>
-		<content type="html">&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Yesterday I received this email (in french):&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;Salut,
-avec Thomas on a une question bête:
-
-K.&amp;lt;x&amp;gt;=NumberField(x*x-x-1)
-
-J'aimerais multiplier une matrice avec des coefficients en x par un vecteur
-contenant des variables a et b.  Il dit &amp;quot;unsupported operand parent for *,
-Matrix over number field, vector over symbolic ring&amp;quot;
-
-Est ce grave ?
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Here is my answer. Indeed, in Sage, symbolic variables can't multiply with
-elements in an Number Field in x:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NumberField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unsupported&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;operand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Symbolic Ring'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;'Number Field in x with defining polynomial x^2 - x - 1'&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;But, we can define a polynomial ring with variables in a,b and coefficients in
-the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils literal&quot;&gt;a&lt;/tt&gt; with &lt;tt class=&quot;docutils literal&quot;&gt;x&lt;/tt&gt;:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NumberField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;polynomial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Multivariate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Polynomial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ring&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;over&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;polynomial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;With two square brackets, we obtain powers series:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Multivariate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Power&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ring&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;over&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;polynomial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;It works with matrices:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MatrixSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MS&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Full&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MatrixSpace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dense&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrices&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;over&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Multivariate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Power&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ring&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;over&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;polynomial&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;              &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;                &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;</content>
-		<author>
-			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
-		</author>
-		<source>
-			<title type="html">Sébastien Labbé</title>
-			<subtitle type="html">Sébastien Labbé</subtitle>
-			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
-			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2016-12-16T16:30:04+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">The Weyl Algebra and $\mathfrak{sl}_2$</title>
-		<link href="http://sheaves.github.io/Weyl-Algebra/"/>
-		<id>http://sheaves.github.io/Weyl-Algebra/</id>
-		<updated>2016-02-17T00:00:00+00:00</updated>
-		<content type="html">&lt;!--more--&gt;
-
-&lt;p&gt;I’ve been away from this blog for quite a while - almost a year, in fact! My excuses are my wedding and the prelims (a.k.a. quals), as well as all the preparation that had to go into them (although, to be honest, those things only occupied me till September last year!).&lt;/p&gt;
-
-&lt;p&gt;Looking back at my previous posts, I’ve realized that in attempting to teach &lt;em&gt;both&lt;/em&gt; math and code, I probably ended up doing neither. This is really not the best place to learn representation theory (for example) - there are better books and blogs out there. Also, most of the code that I wrote to illustrate those posts feels contrived, and neither highlights Sage’s strengths nor reflects how I normally use Sage for my assignments and projects.&lt;/p&gt;
-
-&lt;p&gt;I’ve thus decided to write shorter posts with code that I actually use (on &lt;a href=&quot;https://cloud.sagemath.com/&quot; target=&quot;_blank&quot;&gt;SageMathCloud&lt;/a&gt;), along with some explanations of the code. Lately, I’ve been writing code for non-commutative algebra and combinatorics, so today I’ll start with a simple example of a non-commutative algebra.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-weyl-algebra&quot;&gt;The Weyl Algebra&lt;/h2&gt;
-&lt;p&gt;The $1$-dim. Weyl algebra is the (non-commutative) algebra generated by $x, \partial_x$ subject to the relations&lt;/p&gt;
-
-
-
-&lt;p&gt;If we treat $x$ as “multiplication by $x$” and $\partial_x$ as  “differentiation w.r.t. $x$”, this relation is really just an application of the chain rule:&lt;/p&gt;
-
-
-
-&lt;p&gt;We can generalize to higher dimensions: the $n$-dim. Weyl algebra is the algebra generated by  $x_1,\dots,x_n,\partial_{x_1},\dots,\partial_{x_n}$ quotiented by the relations that arise from treating them as the obvious operators on $\mathbb{F}[x_1,\dots,x_n]$.&lt;/p&gt;
-
-&lt;h3 id=&quot;weyl-algebras-in-sage&quot;&gt;Weyl algebras in Sage&lt;/h3&gt;
-&lt;p&gt;It’s easy to &lt;a href=&quot;http://doc.sagemath.org/html/en/reference/algebras/sage/algebras/weyl_algebra.html&quot; target=&quot;_blank&quot;&gt;define the Weyl algebra in Sage&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Calling &lt;code class=&quot;highlighter-rouge&quot;&gt;inject_variables&lt;/code&gt; allows us to use the operators &lt;code class=&quot;highlighter-rouge&quot;&gt;x,y,z,dx,dy,dz&lt;/code&gt; in subsequent code (where &lt;code class=&quot;highlighter-rouge&quot;&gt;dx&lt;/code&gt; denotes $\partial_x$, etc).&lt;/p&gt;
-
-&lt;p&gt;One can do rather complicated computations:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;By default, Sage chooses to represent monomials with &lt;code class=&quot;highlighter-rouge&quot;&gt;x,y,z&lt;/code&gt; in front of &lt;code class=&quot;highlighter-rouge&quot;&gt;dx,dy,dz&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;linked&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Keep in mind that &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; does not refer to the polynomial $x \in \mathbb{F}[x]$, so one should not expect &lt;code class=&quot;highlighter-rouge&quot;&gt;dx*x&lt;/code&gt; to be &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;(For some reason &lt;code class=&quot;highlighter-rouge&quot;&gt;show&lt;/code&gt; does not give the right output. Try &lt;code class=&quot;highlighter-rouge&quot;&gt;show(x)&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;show(x*dx)&lt;/code&gt;, for example.)&lt;/p&gt;
-
-&lt;h2 id=&quot;representations-of-mathfraksl_2&quot;&gt;Representations of $\mathfrak{sl}_2$&lt;/h2&gt;
-&lt;p&gt;It turns out that the $1$-dim. Weyl algebra gives a representation of $\mathfrak{sl}_2(\mathbb{F})$.&lt;/p&gt;
-
-&lt;p&gt;The Lie algebra $\mathfrak{sl}_2(\mathbb{F})$ is generated by $E,F,H$ subject to the relations&lt;/p&gt;
-
-
-
-&lt;p&gt;Define the following elements of the $1$-dim. Weyl algebra:&lt;/p&gt;
-
-
-
-&lt;p&gt;We can use Sage to quickly verify that these elements indeed satisfy the relations for $\mathfrak{sl}_2$ (using the commutator as the Lie bracket i.e. $[A,B] = AB - BA$):&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;Working over $\mathbb{C}$, this action of $\mathfrak{sl}_2(\mathbb{C})$ makes $\mathbb{C}[x]$ a Verma module of highest weight $0$.&lt;/p&gt;
-
-&lt;p&gt;In fact, we can make $\mathbb{C}[x]$ a Verma module of highest weight $c$ for any $c \in \mathbb{C}$ by using:&lt;/p&gt;
-
-
-
-&lt;p&gt;We verify this again in Sage:&lt;/p&gt;
-
-&lt;div class=&quot;sage&quot;&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;In subsequent posts, I’ll talk more about defining other non-commutative algebras in Sage and Singular.&lt;/p&gt;</content>
-		<author>
-			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
-		</author>
-		<source>
-			<title type="html">Sheaves</title>
-			<subtitle type="html">Making math concrete with Sage</subtitle>
-			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
-			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2017-02-18T06:30:07+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Thinking of using SageMathCloud in a college course?</title>
-		<link href="http://sagemath.blogspot.com/2016/01/thinking-of-using-sagemathcloud-in.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-1296147941689942703</id>
-		<updated>2016-01-15T09:14:07+00:00</updated>
-		<content type="html">&lt;h2&gt;SageMathCloud course subscriptions&lt;/h2&gt;&lt;span&gt;&quot;We are &amp;nbsp;college instructors of the calculus sequence and ODE’s.&amp;nbsp; If the college were to purchase one of the upgrades for us as we use Sage with our students, who gets the benefits of the upgrade? &amp;nbsp;Is is the individual students that are in an instructor’s Sage classroom or is it the &amp;nbsp;collaborators on an instructor’s project?&quot;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;If you were to purchase just the $7/month plan and apply the upgrades&amp;nbsp;&lt;/span&gt;&lt;span&gt;to *one* single project, then all collaborators on that one project&amp;nbsp;&lt;/span&gt;&lt;span&gt;would benefit from those upgrades while using that project.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;If you were to purchase a course plan for say $399/semester, then y&lt;/span&gt;&lt;span&gt;ou could apply the upgrades (network access and members only hosting)&amp;nbsp;&lt;/span&gt;&lt;span&gt;to 70 projects that you might create for a course.&amp;nbsp; &amp;nbsp;When you create a&amp;nbsp;&lt;/span&gt;&lt;span&gt;course by clicking +New, then &quot;Manage a Course&quot;, then add students,&amp;nbsp;&lt;/span&gt;&lt;span&gt;each student has their own project created automatically.&amp;nbsp; All&amp;nbsp;&lt;/span&gt;&lt;span&gt;instructors (anybody who is a collaborator on the project where you&amp;nbsp;&lt;/span&gt;&lt;span&gt;clicked &quot;Manage a course&quot;) is also added to the student's project.&amp;nbsp;&lt;/span&gt;&lt;span&gt;In course settings you can easily apply the upgrades you purchase to&amp;nbsp;&lt;/span&gt;&lt;span&gt;all projects in the course. &amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Also I'm currently working on a new feature where instructors may&amp;nbsp;&lt;/span&gt;&lt;span&gt;choose to require all students in their course to pay for the upgrade&amp;nbsp;&lt;/span&gt;&lt;span&gt;themselves.&amp;nbsp; There's a one time $9/course fee paid by the student and&amp;nbsp;&lt;/span&gt;&lt;span&gt;that's it.&amp;nbsp; At some colleges (in some places) this is ideal, and at&amp;nbsp;&lt;/span&gt;&lt;span&gt;other places it's not an option at all.&amp;nbsp; &amp;nbsp;I anticipate releasing this very soon.&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s1600/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;372&quot; src=&quot;http://3.bp.blogspot.com/-og6MM4q8B9M/VpkoWB952vI/AAAAAAABW1w/ObaqmjhbpGM/s640/Screen%2BShot%2B2016-01-15%2Bat%2B9.11.15%2BAM.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;Getting started with SageMathCloud courses&lt;/h2&gt;&lt;br /&gt;&lt;span&gt;You can &lt;b&gt;&lt;i&gt;fully use&lt;/i&gt;&amp;nbsp;&lt;/b&gt;the SMC course functionality without paying anything in order to get familiar with it and test it out. &amp;nbsp;The main benefit of paying is that you get network access and all projects get moved to members only servers, which are much more robust; also, we greatly prioritize support for paying customers. &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;This blog post is an overview of using SMC courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.beezers.org/blog/bb/2015/09/grading-in-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;This has some screenshots and the second half is about courses:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://blog.ouseful.info/2015/11/24/course-management-and-collaborative-jupyter-notebooks-via-sagemathcloud/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Here are some video tutorials made by an instructor that used SMC with&amp;nbsp;&lt;/span&gt;&lt;span&gt;a large class in Iceland recently:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dgTi11ZS3fQ&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=dgTi11ZS3fQ&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nkSdOVE2W0A&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=nkSdOVE2W0A&lt;/a&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0qrhZQ4rjjg&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=0qrhZQ4rjjg&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Note that the above videos show the basics of courses, then talk&amp;nbsp;&lt;/span&gt;&lt;span&gt;specifically about automated grading of Jupyter notebooks.&amp;nbsp; That might&amp;nbsp;&lt;/span&gt;&lt;span&gt;not be at all what you want to do -- &lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/Teaching&quot; target=&quot;_blank&quot;&gt;many math courses &lt;/a&gt;use Sage&amp;nbsp;&lt;/span&gt;&lt;span&gt;worksheets, and probably don't automate the grading yet.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;Regarding using Sage itself for teaching your courses, check out the&amp;nbsp;&lt;/span&gt;&lt;span&gt;free pdf book to &quot;Sage for Undergraduates&quot; here, which the American Mathematical Society just published (there is also a very nice print version for about $23):&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.gregorybard.com/SAGE.html&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;http://www.gregorybard.com/SAGE.html&lt;/a&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Mathematics Graduate School: preparation for non-academic employment</title>
-		<link href="http://sagemath.blogspot.com/2016/01/mathematics-graduate-school-preparation.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-3741348850330137693</id>
-		<updated>2016-01-08T22:25:16+00:00</updated>
-		<content type="html">This is about my personal experience as a mathematics professor whose students all have non-academic jobs that they love.  This is in preparation for a panel at the Joint Mathematics Meetings in Seattle.&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span&gt;My students and industry&lt;/span&gt;&lt;br /&gt;&lt;div&gt;My graduated Ph.D. students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;3 at Google&lt;/li&gt;&lt;li&gt;1 at Facebook&lt;/li&gt;&lt;li&gt;1 at CCR&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;My graduating student (Hao Chen):&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Applying for many postdocs&lt;/li&gt;&lt;li&gt;But just did summer internship at Microsoft Research with Kristin. (I’ve had four students do summer internships with Kristin)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;All my students:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Have done a lot of Software development, maybe having little to do with math, e.g., “developing the Cython compiler”, “transition the entire Sage project to git”, etc.&lt;/li&gt;&lt;li&gt;Did a thesis squarely in number theory, with significant theoretical content.&lt;/li&gt;&lt;li&gt;Guilt (or guilty pleasure?) spending time on some programming tasks instead of doing what they are “supposed” to do as math grad students.&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;me-academia-and-industry&quot;&gt;Me: academia and industry&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Math Ph.D. from Berkeley in 2000; many students of my advisor (Lenstra) went to work at CCR after graduating…&lt;/li&gt;&lt;li&gt;Academia: I’m a tenured math professor (since 2005) – number theory.&lt;/li&gt;&lt;li&gt;Industry: I founded a Delaware C Corp (SageMath, Inc.) one year ago to “commercialize Sage” due to VERY intense frustration trying to get grant funding for Sage development. Things have got so bad, with so many painful stupid missed opportunities over so many years, that I’ve given up on academia as a place to build Sage.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span&gt;Reality check:&lt;/span&gt;&amp;nbsp;Academia values basic research, not products. Industry builds concrete&amp;nbsp;&lt;em&gt;valuable&lt;/em&gt;&amp;nbsp;products. Not understanding this is a recipe for pain (at least it has been for me).&lt;/div&gt;&lt;h2 id=&quot;advice-for-students-from-students&quot;&gt;Advice for students from students&lt;/h2&gt;&lt;h3 id=&quot;robert-miller-google-&quot;&gt;Robert Miller (Google)&lt;/h3&gt;&lt;div&gt;My student Robert Miller’s post on Facebook yesterday: &lt;b&gt;“I LOVE MY JOB”&lt;/b&gt;. Why: “Today I gave the first talk in a seminar I organized to discuss this result: ‘Graph Isomorphism in Quasipolynomial Time’. Dozens of people showed up, it was awesome!”&lt;/div&gt;&lt;div&gt;Background: When he was my number theory student, working on elliptic curves, he gave a talk about graph theory in Sage at a Sage Days (at IPAM). His interest there was mainly in helping an undergrad (Emily Kirkman) with a Sage dev project I hired her to work on. David Harvey asked: “what’s so hard about implementing graph isomorphism”, and Robert wanted to find out, so he spent months doing a full implementation of Brendan McKay’s algorithm (the only other one). This had absolutely nothing to do with his Ph.D. thesis work on the Birch and Swinnerton-Dyer conjecture, but I was very supportive.&lt;/div&gt;&lt;h3 id=&quot;craig-citro-google-&quot;&gt;Craig Citro (Google)&lt;/h3&gt;&lt;div&gt;Craig Citro did a Ph.D. in number theory (with Hida), but also worked on Sage a&lt;em&gt;LOT&lt;/em&gt;&amp;nbsp;as a grad student and postdoc. He’s done a lot of hiring at Google. He says: “My main piece of advice to potential google applicants is ‘start writing as much code as you can, right now.’ Find out whether you’d actually&amp;nbsp;&lt;em&gt;enjoy&lt;/em&gt;working for a company like Google, where a large chunk of your job may be coding in front of a screen. I’ve had several friends from math discover (the hard way) that they don’t really enjoy full-time programming (any more than they enjoy full-time teaching?).”&lt;/div&gt;&lt;div&gt;“Start throwing things on github now. Potential interviewers are&amp;nbsp;&lt;em&gt;going&lt;/em&gt;&amp;nbsp;to check out your github profile; having some cool stuff at the top is great, but seeing a regular stream of commits is also a useful signal.”&lt;br /&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;Robert Bradshaw (Google)&lt;/h3&gt;&lt;div&gt;“A lot of mathematicians are good at (and enjoy) programming. Many of them aren’t (and don’t). Find out. Being involved in Sage is significantly more than just having taken a suite of programming courses or hacking personal scripts on your own: code reviews, managing bugs, testing, large-scale design, working with others’ code, seeing projects through to completion, and collaborating with others, local and remote, on large, technical projects are all important. It demonstrates your passion.”&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;rado-kirov-google-&quot;&gt;Rado Kirov (Google)&lt;/h3&gt;&lt;div&gt;“&lt;span&gt;Robert Bradshaw said it before me, but I have to repeat. L&lt;/span&gt;&lt;span&gt;arge scale software development requires exposure to a lot of tooling and process beyond just writing code - version control, code reviews, bug tracking, code&amp;nbsp;&lt;/span&gt;&lt;span&gt;maintenance&lt;/span&gt;&lt;span&gt;, release process, coordinating with collaborators. Contributing to an active open-source project with a large number of&amp;nbsp;contributors like Sage, is a great way to experience all that and see if you would like to make it your profession. A lot of mathematicians write clever code for their research, but if less than 10 people see it and use it, it is not a&amp;nbsp;&lt;/span&gt;&lt;span&gt;realistic&lt;/span&gt;&lt;span&gt;&amp;nbsp;representation of what working as a software engineer feels like.&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;div&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;The software industry is in large demand of developers and hiring straight from&amp;nbsp;&lt;/span&gt;&lt;span&gt;academia is very common&lt;/span&gt;&lt;span&gt;. B&lt;/span&gt;&lt;span&gt;efore I got hired by Google, the only software development experience on my resume&lt;/span&gt;&lt;span&gt;&amp;nbsp;was the&amp;nbsp;Sage graph editor. Along with solid understanding of algorithms and data structures that was enough to get in.&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 id=&quot;robert-bradshaw-google-&quot;&gt;&lt;span&gt;David Moulton (Google)&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;“Google hires mathematicians now as quantitative analysts = data engineers. Google is very flexible for a tech company about the backgrounds of its employees. We have a long-standing reading group on category theory, and we’re about to start one on Babai’s recent quasi- polynomial-time algorithm for graph isomorphism. And we have a math discussion group with lots of interesting math on it.”&lt;/div&gt;&lt;h2 id=&quot;advice-for-departments&quot;&gt;My advice for math professors&lt;/h2&gt;&lt;div&gt;Obviously, encourage your students to get involved in open source projects like Sage, even if it appears to be a waste of time or distraction from their thesis work (this will likely feel very counterintuitive you’ll hate it).&lt;/div&gt;&lt;div&gt;At Univ of Washington, a few years ago I taught a graduate-level course on Sage development. The department then refused to run it again as a grad course, which was frankly&amp;nbsp;&lt;span&gt;very&lt;/span&gt;&amp;nbsp;frustrating to me. This is exactly the wrong thing to do if you want to increase the options of your Ph.D. students for industry jobs. Maybe quit trying to train our students to be only math professors, and instead give them a much wider range of options.&lt;/div&gt;</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T08:30:03+00:00</updated>
+			<updated>2017-02-18T09:30:03+00:00</updated>
 		</source>
 	</entry>
 
