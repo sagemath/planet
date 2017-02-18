@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-02-18T04:30:08+00:00</updated>
+	<updated>2017-02-18T05:30:09+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry xml:lang="en">
@@ -73,7 +73,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -93,7 +93,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -113,7 +113,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -152,7 +152,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -172,7 +172,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -249,7 +249,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -410,7 +410,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 &lt;p&gt;There’s a &lt;a href=&quot;http://trac.sagemath.org/ticket/14886&quot; target=&quot;_blank&quot;&gt;trac ticket&lt;/a&gt; for this problem, but until it gets resolved, we’ll just have to define such rings directly in Singular/Plural. Thanks to the amazing capabilities of the &lt;a href=&quot;https://sagecell.sagemath.org/&quot; target=&quot;_blank&quot;&gt;Sage Cell Server&lt;/a&gt;, &lt;del&gt;we’ll do this in the next post&lt;/del&gt;!&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -437,7 +437,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -457,7 +457,7 @@ Commutative Algebra&lt;/em&gt;&lt;/a&gt;. Despite the title, it does have a pret
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -646,7 +646,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 &lt;p&gt;In subsequent posts, I’ll talk more about defining other non-commutative algebras in Sage and Singular.&lt;/p&gt;</content>
 		<author>
 			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io</uri>
+			<uri>http://sheaves.github.io/</uri>
 		</author>
 		<source>
 			<title type="html">Sheaves</title>
@@ -673,7 +673,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -693,7 +693,7 @@ the NumberField. Then, we are able to multiply &lt;tt class=&quot;docutils liter
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-02-18T04:30:03+00:00</updated>
+			<updated>2017-02-18T05:30:04+00:00</updated>
 		</source>
 	</entry>
 
