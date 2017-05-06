@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-05-06T03:30:10+00:00</updated>
+	<updated>2017-05-06T04:30:11+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -23,7 +23,7 @@
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:03+00:00</updated>
 		</source>
 	</entry>
 
@@ -117,7 +117,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -137,7 +137,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -157,7 +157,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -196,7 +196,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -216,7 +216,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-05-06T03:30:04+00:00</updated>
+			<updated>2017-05-06T04:30:04+00:00</updated>
 		</source>
 	</entry>
 
