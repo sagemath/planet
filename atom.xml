@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-06-03T10:30:08+00:00</updated>
+	<updated>2017-06-03T11:30:09+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -110,14 +110,14 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
+			<uri>http://www.slabbe.org/blogue</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
 			<subtitle type="html">Sébastien Labbé</subtitle>
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2017-03-17T09:30:04+00:00</updated>
+			<updated>2017-06-03T11:30:05+00:00</updated>
 		</source>
 	</entry>
 
