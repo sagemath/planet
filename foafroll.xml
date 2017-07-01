@@ -236,7 +236,7 @@
 		<foaf:Agent>
 			<foaf:name>Jonathan Lee</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/search/label/gsoc">
+				<foaf:Document rdf:about="http://jonathanleesage.blogspot.com/">
 					<dc:title>Jonathan Lee's Google Summer of Code Blog</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://jonathanleesage.blogspot.com/feeds/posts/default/-/gsoc" />
@@ -314,7 +314,7 @@
 		<foaf:Agent>
 			<foaf:name>Michele Borassi</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://borassisagemath.blogspot.com/">
+				<foaf:Document rdf:about="http://borassisagemath.blogspot.it/">
 					<dc:title>Performance Improvements for the Graph Module of Sagemath</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://borassisagemath.blogspot.com/feeds/posts/default" />
@@ -444,7 +444,7 @@
 		<foaf:Agent>
 			<foaf:name>Simon Spicer</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://mathandhats.blogspot.com">
+				<foaf:Document rdf:about="http://mathandhats.blogspot.com/search/label/sage">
 					<dc:title>Math and Hats</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" />
