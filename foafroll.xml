@@ -262,7 +262,7 @@
 		<foaf:Agent>
 			<foaf:name>Liang Ze</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://sheaves.github.io">
+				<foaf:Document rdf:about="http://sheaves.github.io/">
 					<dc:title>Sheaves</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://sheaves.github.io/feed.xml" />
@@ -314,7 +314,7 @@
 		<foaf:Agent>
 			<foaf:name>Michele Borassi</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://borassisagemath.blogspot.it/">
+				<foaf:Document rdf:about="http://borassisagemath.blogspot.com/">
 					<dc:title>Performance Improvements for the Graph Module of Sagemath</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://borassisagemath.blogspot.com/feeds/posts/default" />
