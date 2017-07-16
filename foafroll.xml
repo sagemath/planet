@@ -262,7 +262,7 @@
 		<foaf:Agent>
 			<foaf:name>Liang Ze</foaf:name>
 			<foaf:weblog>
-				<foaf:Document rdf:about="http://sheaves.github.io/">
+				<foaf:Document rdf:about="http://sheaves.github.io">
 					<dc:title>Sheaves</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://sheaves.github.io/feed.xml" />
