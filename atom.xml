@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-09-10T17:01:26+00:00</updated>
+	<updated>2017-09-10T18:02:41+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -110,7 +110,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue</uri>
+			<uri>http://www.slabbe.org/blogue/</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
