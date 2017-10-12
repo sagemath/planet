@@ -377,6 +377,19 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>OpenDreamKit</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://opendreamkit.org/">
+					<dc:title>OpenDreamKit</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://opendreamkit.org/atom.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Oscar Lazo</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="">

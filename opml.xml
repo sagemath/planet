@@ -2,7 +2,7 @@
 <opml version="1.1">
 	<head>
 		<title>Planet Sage</title>
-		<dateModified>Thu, 12 Oct 2017 18:23:59 +0000</dateModified>
+		<dateModified>Thu, 12 Oct 2017 18:25:23 +0000</dateModified>
 		<ownerName>Harald Schilly</ownerName>
 		<ownerEmail>harald.schilly@gmail.com</ownerEmail>
 	</head>
@@ -36,6 +36,7 @@
 		<outline type="rss" text="Nick Alexander" xmlUrl="http://ncalexan.wordpress.com/tag/sage/feed/" title="Nick Alexander" />
 		<outline type="rss" text="Nikhil Peter" xmlUrl="http://blog.hav3n.net/?feed=rss2&amp;tag=gsoc-2014" title="Nikhil's GSoC Blog » GSoC 2014" />
 		<outline type="rss" text="Ondrej Certik" xmlUrl="http://ondrejcertik.blogspot.com/feeds/posts/default/-/sage" title="Ondřej Čertík" />
+		<outline type="rss" text="OpenDreamKit" xmlUrl="http://opendreamkit.org/atom.xml" title="OpenDreamKit" />
 		<outline type="rss" text="Oscar Lazo" xmlUrl="http://phisycsandgnulinux.site11.com/?tag=sage&amp;feed=rss2" title="Oscar Lazo" />
 		<outline type="rss" text="PolyBoRi Blog" xmlUrl="http://polybori.blogspot.com/feeds/posts/default/" title="The PolyBoRi Blog" />
 		<outline type="rss" text="Rasmi Elasmar" xmlUrl="http://rasmi.io/tag/sage/feed/" title="Rasmi Elasmar" />

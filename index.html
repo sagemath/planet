@@ -54,6 +54,407 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>October 11, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/10/11/SageWindows">
+<h4><a href="http://opendreamkit.org/2017/10/11/SageWindows/">Release: SageMath for Windows</a></h4>
+<div class="entry">
+<div class="content">
+<h1 id="introduction">Introduction</h1>
+
+<p>One of the main tasks for OpenDreamKit
+(<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/50">T.31</a>]) is
+improving portability of mathematical software across hardware platforms and
+operating systems.</p>
+
+<p>One particular such challenge, which has dogged the SageMath project
+practically since its inception, is getting a fully working port of Sage on
+Windows (and by extension this would mean working Windows versions of all
+the CAS’s and other software Sage depends on, such as GAP, Singular, etc.)</p>
+
+<p>This is particularly challenging, not so much because of the Sage Python
+library (which has some, but relatively little system-specific code).
+Rather, the challenge is in porting all of Sage’s 150+ standard
+dependencies, and ensuring that they integrate well on Windows, with a
+passing test suite.</p>
+
+<p>Although UNIX-like systems are popular among open source software developers
+and some academics, the desktop and laptop market share of Windows computers
+is estimated to be <a href="https://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Desktop_and_laptop_computers">more than
+75%</a>
+and is an important source of potential users, especially students.</p>
+
+<p>However, for most of its existence, the only way to “install” Sage on
+Windows was to run a Linux virtual machine that came pre-installed with
+Sage, which is made available on Sage’s downloads page.  This is clumsy and
+onerous for users–it forces them to work within an unfamiliar OS, and it
+can be difficult and confusing to connect files and directories in their
+host OS to files and directories inside the VM, and likewise for web-based
+applications like the notebook.  Because of this Windows users can feel like
+second-class citizens in the Sage ecosystem, and this may turn them away
+from Sage.</p>
+
+<p>Attempts at Windows support almost as old as Sage itself (initial Sage
+release in 2005). Microsoft offered funding to work on Windows version <a href="https://groups.google.com/d/msg/sage-devel/LTWgQ_24cPs/WW25BGe7KjwJ">as
+far back as
+2007</a>
+but was far too little for the amount of effort needed.</p>
+
+<p>Additional work done was done off and on through 2012, and partial support
+was possible at times. This included admirable work to try to support
+building with the native Windows development toolchain (e.g. MSVC).  There
+was even at one time an earlier version of a Sage installer for Windows, but
+long since abandoned.</p>
+
+<p>However, Sage development (and more importantly Sage’s dependencies)
+continued to advance faster than there were resources for the work on
+Windows support to keep up, and work mostly stalled after 2013.
+OpenDreamKit has provided a unique opportunity to fund the kind of sustained
+effort needed for Sage’s Windows support to catch up.</p>
+
+<h1 id="sage-for-windows-overview">Sage for Windows overview</h1>
+
+<p>As of SageMath version 8.0, Sage will be available for 64-bit versions of
+Windows 7 and up.  It can be downloaded through the <a href="https://www.sagemath.org/download-windows.html">SageMath
+website</a>, and up-to-date
+installation instructions are being developed at the <a href="http://wiki.sagemath.org/SageWindows">SageMath
+wiki</a>.  A 32-bit version had been
+planned as well, but is on hold due to technical limitations that will be
+discussed later.</p>
+
+<p>The installer contains all software and documentation making up the standard
+Sage distribution, all libraries needed for Cygwin support, a bash shell,
+numerous standard UNIX command-line utilities, and the
+<a href="https://mintty.github.io/">Mintty</a> terminal emulator, which is generally
+more user-friendly and better suited for Cygwin software than the standard
+Windows console.</p>
+
+<p>It is distributed in the form of a single-file executable installer, with a
+familiar install wizard interface (built with the venerable
+<a href="http://www.jrsoftware.org/isinfo.php">InnoSetup</a>.  The installer comes in
+at just under a gigabyte, but unpacks to more than 4.5 GB in version 8.0.</p>
+
+<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/installer1.png" alt="Sage for Windows Installer" class="img-responsive" /></p>
+
+<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/installer2.png" alt="Sage for Windows Installer" class="img-responsive" /></p>
+
+<p>Because of the large number of files comprising the complete SageMath
+distribution, and the heavy compression of the installer, installation can
+take a fair amount of time even on a recent system.  On my Intel i7 laptop
+it takes about ten minutes, but results will vary.  Fortunately, this has
+not yet been a source of complaints–beta testers have been content to run
+the installer in the background while doing other work–on a modern
+multi-core machine the installer itself does not use overly many resources.</p>
+
+<p>If you don’t like it, there’s also a standard uninstall:</p>
+
+<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/uninstall.png" alt="Sage for Windows Uninstaller" class="img-responsive" /></p>
+
+<p>The installer include three desktop and/or start menu shortcuts:</p>
+
+<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/shortcuts.png" alt="Sage for Windows start menu shortcuts" class="img-responsive" /></p>
+
+<p>The shortcut titled just “SageMath 8.0” launches the standard Sage command
+prompt in a text-based console. In general it integrates well enough with
+the Windows shell to launch files with the default viewer for those file
+types. For example, plots are saved to files and displayed automatically
+with the default image viewer registered on the computer.</p>
+
+<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/console.png" alt="Sage for Windows console" class="img-responsive" /></p>
+
+<p>(Because Mintty supports <a href="https://en.wikipedia.org/wiki/Sixel">SIXEL</a> mode
+graphics, it may also be possible to embed plots and equations directly in
+the console, but this has not been made to work yet with Sage.)</p>
+
+<p>“SageMath Shell” runs a bash shell with the environment set up to
+run software in the Sage distribution.  More advanced users, or users who
+wish to directly use other software included in the Sage distribution (e.g.
+GAP, Singular) without going through the Sage interface.  Finally,
+“SageMath Notebook” starts a Jupyter Notebook server with Sage configured as
+the default kernel and, where possible, opens the Notebook interface in the
+user’s browser.</p>
+
+<p>In principle this could also be used as a development environment for doing
+development of Sage and/or Sage extensions on Windows, but the current
+installer is geared primarily just for users.</p>
+
+<h1 id="rationale-for-cygwin-and-possible-alternatives">Rationale for Cygwin and possible alternatives</h1>
+
+<p>There are a few possible routes to supporting Sage on Windows, of which
+Cygwin is just one.  For example, before restarting work on the Cygwin port
+I experimented with a solution that would run Sage on Windows using
+<a href="https://www.docker.com/">Docker</a>.  I built an installer for Sage that would
+install Docker for Windows if it was not already installed, install and
+configure a pre-build Sage image for Docker, and install some desktop
+shortcuts that attempted to launch Sage in Docker as transparently as
+possible to the user.  That is, it would ensure that Docker was running,
+that a container for the Sage image was running, and then would redirect I/O
+to the Docker container.</p>
+
+<p>This approach “worked”, but was still fairly clumsy and error-prone.  In
+order to make the experience as transparent as possible a fair amount of
+automation of Docker was needed.  This could get particularly tricky in
+cases where the user also uses Docker directly, and accidentally interferes
+with the Sage Docker installation.  Handling issues like file system and
+network port mapping, while possible, was even more complicated.  What’s
+worse, running Linux images in Docker for Windows still requires
+virtualization.  On older versions this meant running VirtualBox in the
+background, while newer versions require the Hyper-V hypervisor (which is
+not available on all versions of Windows–particularly “Home” versions).
+Furthermore, this requires hardware-assisted virtualization (HAV) to be
+enabled in the user’s BIOS.  This typically does not come enabled by default
+on home PCs, and users must manually enable it in their BIOS menu.  We did
+not consider this a reasonable step to ask of users merely to “install
+Sage”.</p>
+
+<p>Another approach, which was looked at in the early efforts to port Sage to
+Windows, would be to get Sage and all its dependencies building with the
+standard Microsoft toolchain (MSVC, etc.).  This would mean both porting the
+code to work natively on Windows, using the MSVC runtime, as well as
+developing build systems compatible with MSVC.  There was a time when,
+remarkably, many of Sage’s dependencies did meet these requirements.  But
+since then the number of dependencies has grown too much, and Sage itself
+become too dependent on the GNU toolchain, that this would be an almost
+impossible undertaking.</p>
+
+<p>A middle ground between MSVC and Cygwin would be to build Sage using the
+MinGW toolchain, which is a port of GNU build tools (including binutils,
+gcc, make, autoconf, etc.) as well as some other common UNIX tools like the
+bash shell to Windows.  Unlike Cygwin, MinGW does not provide emulation of
+POSIX or Linux system APIs–it just provides a Windows-native port of the
+development tools.  Many of Sage’s dependencies would still need to be
+updated in order to work natively on Windows, but at the very least their
+build systems would require relatively little updating–not much more than
+is required for Cygwin.  This would actually be my preferred approach, and
+with enough time and resources it could probably work.  However, it would
+still require a significant amount of work to port some of Sage’s more
+non-trivial dependencies, such as GAP and Singular, to work on Windows
+without some POSIX emulation.</p>
+
+<p>So Cygwin is the path of least resistance.  Although bugs and shortcomings
+in Cygwin itself occasionally require some effort to work around (as a
+developer–users should not have to think about it), for the most part it
+<em>just works</em> with software written for UNIX-like systems.  It also has the
+advantage of providing a full UNIX-like shell experience, so shell scripts
+and scripts that use UNIX shell tools will work even on Windows.  However,
+since it works directly on the native filesystem, there is less opportunity
+for confusion regarding where files and folders are saved.  In fact, Cygwin
+supports both Windows-style paths (starting with <code class="highlighter-rouge">C:\\</code>) and UNIX-style
+paths (in this case starting with <code class="highlighter-rouge">C:/</code>).</p>
+
+<p>Finally, a note on the Windows Subsystem for Linux (WSL), which debuted
+shortly after I began my Cygwin porting efforts, as I often get asked about
+this: “Why not ‘just’ use the ‘bash for Windows’?”  The WSL is a new effort
+by Microsoft to allow running executables built for Linux directly on
+Windows, with full support from the Windows kernel for emulation of Linux
+system calls (including ones like <code class="highlighter-rouge">fork()</code>).  Basically, it aims to provide
+all the functionality of Cygwin, but with full support from the kernel, and
+the ability to run Linux binaries directly, without having to recompile
+them.  This is great of course. So the question is asked if Sage can run in
+this environment, and experiments suggest that it works pretty well
+(although the WSL is still under active development and has room for
+improvement).</p>
+
+<p>I wrote more about the WSL in a <a href="http://opendreamkit.org/2016/10/04/emerging-technologies-wsl/">blog
+post</a> last
+year, which also addresses why we can’t “just” use it for Sage for Windows.
+But in short: 1) The WSL is currently only intended as a developer tool:
+There’s no way to package Windows software for end users such that it uses
+the WSL transparently.  And 2) It’s only available on recent updates of
+Windows 10–it will never be available on older Windows versions.  So to
+reach the most users, and provide the most hassle-free user experience, the
+WSL is not currently a solution.  However, it may still prove useful for
+developers as a way to do Sage <em>development</em> on Windows. And in the future
+it may be the easiest way to install UNIX-based software on Windows as well,
+especially if Microsoft ever expands its scope.</p>
+
+<h1 id="development-challenges">Development challenges</h1>
+
+<p>The main challenge with porting Sage to Windows/Cygwin has relatively little
+to do with the Sage library itself, which is written almost entirely in
+Python/Cython and involves relatively few system interfaces (a notable
+exception to this is the advanced signal handling provided by
+<a href="https://github.com/sagemath/cysignals">Cysignals</a>, but this has been found
+to work almost flawlessly on Cygwin thanks to the Cygwin developers’ heroic
+efforts in emulating POSIX signal handling on Windows).  Rather, most of the
+effort has gone into build and portability issues with Sage’s more than 150
+dependencies.</p>
+
+<p>The majority of issues have been build-related issues.  Runtime issues are
+less common, as many of Sage’s dependencies are primarily mathematical,
+numerical code–mostly CPU-bound algorithms that have little use of
+platform-specific APIs.  Another reason is that, although there are some
+anomalous cases, Cygwin’s emulation of POSIX (and some Linux) interfaces is
+good enough that most existing code just works as-is.  However, because
+applications built in Cygwin are native Windows applications and DLLs, there
+are Windows-specific subtleties that come up when building some non-trivial
+software.  So most of the challenge has been getting all of Sage’s
+dependencies building cleanly on Cygwin, and then <em>maintaining</em> that support
+(as the maintainers of most of these dependencies are not themselves testing
+against Cygwin regularly).</p>
+
+<p>In fact, maintenance was the most difficult aspect of the Cygwin port (and
+this is one of the main reasons past efforts failed–without a sustained
+effort it was not possible to keep up with the pace of Sage development).  I
+had a snapshot of Sage that was fully working on Cygwin, with all tests
+passing, as soon as the end of summer in 2016.  That is, I started with one
+version of Sage and added to it all the fixes needed for that version to
+work.  However, by the time that work was done, there were many new
+developments to Sage that I had to redo my work on top of, and there were
+many new issues to fix.  This cycle repeated itself a number of times.</p>
+
+<h2 id="continuous-integration">Continuous integration</h2>
+
+<p>The critical component that was missing for creating a sustainable Cygwin
+port of Sage was a <em>patchbot</em> for Cygwin.  The Sage developers maintain a
+(volunteer) army of patchbots–computers running a number of different OS
+and hardware platforms that perform continuous integration testing of all
+proposed software changes to Sage.  The patchbots are able, ideally, to
+catch changes that break Sage–possibly only on specific platforms–before
+they are merged into the main development branch.  Without a patchbot
+testing changes on Cygwin, there was no way to stop changes from being
+merged that broke Cygwin.  With some effort I managed to get a Windows VM
+with Cygwin running reliably on UPSud’s OpenStack infrastructure, that
+could run a Cygwin patchbot for Sage.  By continuing to monitor this
+patchbot the Sage community can now receive prior warning if/when a change
+will break the Cygwin port.  I expect this will impact only a small number
+of changes–in particular those that update one of Sage’s dependencies.</p>
+
+<p>In so doing we are, indirectly, providing continuous integration on Cygwin
+for Sage’s many dependencies–something most of those projects do not have
+the resources to do on their own.  So this should be considered a service to
+the open source software community at large. (I am also planning to
+piggyback on the work I did for Sage to provide a Cygwin buildbot for
+Python–this will be important moving forward as the official Python source
+tree has been broken on Cygwin for some time, but is one of the most
+critical dependencies for Sage).</p>
+
+<h2 id="runtime-bugs">Runtime bugs</h2>
+
+<p>All that said, a few of the runtime bugs that come up are non-trivial as
+well.  One particular source of bugs is subtle synchronization issues in
+multi-process code, that arise primarily due to the large overhead of
+creating, destroying, and signalling processes on Cygwin, as compared to
+most UNIXes.  Other problems arise in areas of behavior that are not
+specified by the POSIX standard, and assumptions are made that might hold on,
+say, Linux, but that do not hold on Cygwin (but that are still
+POSIX-compliant!)  For example, a difference in (undocumented, in both
+cases) memory management between Linux and Cygwin made for a particularly
+challenging <a href="https://trac.sagemath.org/ticket/22633">bug in PARI</a>.
+Another <a href="https://trac.sagemath.org/ticket/21388">interesting bug</a> came up in
+a test that invoked a stack overflow bug in Python, which only came up on
+Cygwin due to the smaller default stack size of programs compiled for
+Windows.  There are also occasional bugs due to small differences in
+numerical results, due to the different implementation of the standard C
+math routines on Cygwin, versus GNU libc.  So one should not come away with
+the impression that porting software as complex as Sage and its dependencies
+to Cygwin is completely trivial, nor that similar bugs might not arise in
+the future.</p>
+
+<h2 id="challenges-with-32-bit-windowscygwin">Challenges with 32-bit Windows/Cygwin</h2>
+
+<p>The original work of porting Sage to Cygwin focused on the 32-bit version of
+Cygwin.  In fact, at the time that was the only version of Cygwin–the first
+release of the 64-bit version of Cygwin was not until 2013.  When I picked
+up work on this again I focused on 64-bit Cygwin–most software developers
+today are working primarily on 64-bit systems, and so from many projects
+I’ve worked on the past my experience has been that they have been more
+stable on 64-bit systems.  I figured this would likely be true for Sage and
+its dependencies as well.</p>
+
+<p>In fact, after getting Sage working on 64-bit Cygwin, when it came time to
+test on 32-bit Cygwin I hit some significant snags.  Without going into too
+many technical details, the main problem is that 32-bit Windows applications
+have a user address space limited to just 2 GB (or 3 GB with a special boot
+flag).  This is in fact not enough to fit all of Sage into memory at once.
+The good news is that for most cases one would never try to use all of Sage
+at once–this is only an issue if one tries to load every library in both
+Sage, and all its dependencies, into the same address space.  In practical
+use this is rare, though this limit can be hit while running the Sage test
+suite.</p>
+
+<p>With some care, such as reserving address space for the most likely to be
+used (especially simultaneously) libraries in Sage, we can work around this
+problem for the average user.  But the result may still not be 100% stable.</p>
+
+<p>It becomes a valid question whether it’s worth the effort.  There are
+unfortunately few publicly available statistics on the current market share
+of 64-bit versus 32-bit Windows versions among desktop users.  Very few new
+desktops and laptops sold anymore to the consumer market include 32-bit
+OSes, but it is still not too uncommon to find on some older, lower-end
+laptops.  In particular, some laptops sold not too long ago with Windows 7
+were 32-bit.  According to <a href="https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=10&qpcustomd=0">Net Market
+Share</a>,
+as of writing Windows 7 still makes up nearly 50% of all desktop operating
+system installments.  This still does not tell us about 32-bit versus
+64-bit.  The popular (<a href="http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/">12.5 million concurrent
+users</a>)
+Steam PC gaming platform publishes the results of their <a href="http://store.steampowered.com/hwsurvey/">usage statistics
+survey</a>, which as of writing shows
+barely over 5% of users with 32-bit versions of Windows.  However, computer
+gamers are not likely to be representative of the overall market, being more
+likely to upgrade their software and hardware.</p>
+
+<p>So until some specific demand for a 32-bit version of SageMath for Windows
+is heard, we will not likely invest more effort into it.</p>
+
+<h1 id="conclusion-and-future-work">Conclusion and future work</h1>
+
+<p>Focusing on Cygwin for porting Sage to Windows was definitely the right way
+to go.  It took me only a few months in the summer of 2016 to get the vast
+majority of the work done.  The rest was just a question of keeping up with
+changes to Sage and fixing more bugs (this required enough constant effort
+that it’s no wonder nobody managed to quite do it before).  Now, however,
+enough issues have been addressed that the Windows version has remained
+fairly stable, even in the face of ongoing updates to Sage.</p>
+
+<p>Porting more of Sage’s dependencies to build with MinGW and without Cygwin
+might still be a worthwhile effort, as Cygwin adds some overhead in a few
+areas, but if we had started with that it would have been too much effort.</p>
+
+<p>In the near future, however, the priority needs to be improvements to user
+experience of the Windows Installer.  In particular, a better solution is
+needed for installing Sage’s optional packages on Windows (preferably
+without needing to compile them). And an improved experience for using Sage
+in the Jupyter Notebook, such that the Notebook server can run in the
+background as a Windows Service, would be nice. This feature would not be
+specific to Sage either, and could benefit all users of the Jupyter Notebook
+on Windows.</p>
+
+<p>Finally, I need to better document the process of doing Sage development on
+Cygwin, including the typical kinds of problems that arise.  I also need to
+better document how to set up and maintain the Cygwin patchbot, and how to
+build releases of the Sage on Windows installer so that its maintenance does
+not fall solely on my shoulders.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/10/11/SageWindows/">October 11, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>September 22, 2017</h2>
 
 <div class="channelgroup">
@@ -102,6 +503,341 @@ This is a followup to <a href="http://sagemath.blogspot.com/2016/07/datadogs-pri
 
 <p class="date">
 <a href="http://sagemath.blogspot.com/2017/09/datadog-dont-make-same-mistake-i-did.html">by William Stein (noreply@blogger.com) at September 22, 2017 12:32 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>August 26, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/08/26/live-documents-workshop">
+<h4><a href="http://opendreamkit.org/2017/08/26/live-documents-workshop/">Workshop on live structured documents</a></h4>
+<div class="entry">
+<div class="content">
+<p><a href="http://opendreamkit.org">OpenDreamKit</a> is hosting a workshop on live structured documents
+to take place at Simula Research Laboratory in Oslo, Norway
+from Monday 16. October to Friday 20. October.</p>
+
+<p>The workshop is dedicated to various aspects of live documents, including:</p>
+
+<ul>
+  <li>Authoring language and tools (ReST, XML, latex, …),</li>
+  <li>Converters (Sphinx, pandoc, docbook, …),</li>
+  <li>Infrastructure for rendering documents,</li>
+  <li>Infrastructure for interacting with the computing backends (e.g.  <a href="https://github.com/oreillymedia/thebe">Thebe</a> based on the Jupyter protocol, <a href="https://github.com/sympy/sympy-live/">sympy live</a>, …),</li>
+  <li>Online services providing computing backends (e.g. <a href="http://opendreamkit.org/try.jupyter.org">tmpnb</a>, <a href="https://sagecell.sagemath.org/">sagecell</a>, <a href="http://opendreamkit.org/mybinder.org">binder</a>, …),</li>
+  <li>Integrated collaborative authoring environments (sharelatex, SMC, texmacs, …)</li>
+</ul>
+
+<p>Participants can register <a href="https://www.eventbrite.com/e/opendreamkit-workshop-on-live-structured-documents-tickets-37364670736">via eventbrite</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/08/26/live-documents-workshop/">August 26, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>July 29, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/07/29/GroupsStAndrews">
+<h4><a href="http://opendreamkit.org/2017/07/29/GroupsStAndrews/">OpenDreamKit at Groups St Andrews in Birmingham</a></h4>
+<div class="entry">
+<div class="content">
+<h2 id="opendreamkit-at-groups-st-andrews-in-birmingham">OpenDreamKit at Groups St Andrews in Birmingham</h2>
+
+<p><a href="http://www.groupsstandrews.org/">Groups St Andrews</a> is a conference series with
+a conference every four years. This year’s Groups St Andrews will be in
+Birmingham, and I will attend, bring
+a <a href="http://opendreamkit.org/public/groups-st-andrews-2017.pdf">poster</a>, give a contributed talk
+about computing in permutation groups, and teach a course on GAP.</p>
+
+<p>This post serves the main purpose of providing a page on the OpenDreamKit website
+that can hold all the links that will appear on the poster, and possible further
+information.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li>
+    <p><a href="http://opendreamkit.org">OpenDreamKit</a></p>
+  </li>
+  <li>
+    <p><a href="https://jupyter.org">Jupyter</a></p>
+  </li>
+  <li><a href="http://www.gap-system.org">GAP</a>, <a href="http://opendreamkit.org/GAP GitHub">https://github.com/gap-system</a>, <a href="http://opendreamkit.org/GAP Packages on GitHub">https://github.com/gap-packages/</a></li>
+  <li>
+    <p><a href="https://github.com/gap-packages/jupyter-kernel-gap">GAP Jupyter Kernel</a></p>
+  </li>
+  <li><a href="https://sagemath.org">SageMath</a></li>
+  <li>
+    <p><a href="https://cocalc.com">CoCalc (formerly SageMathCloud</a>)</p>
+  </li>
+  <li><a href="https://openmath.github.io">OpenMath</a></li>
+  <li><a href="https://mathhub.info">MathHub</a></li>
+  <li><a href="https://uniformal.github.io">MMT</a></li>
+  <li><a href="https://mathhub.info/MitM">Maths in the Middle</a></li>
+  <li>
+    <p><a href="https://mathhub.info/mh/mmt/graphs/tgview.html">Theory Graphs</a></p>
+  </li>
+  <li><a href="https://lmfdb.org">L-Functions and Modular Forms Database</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/07/29/GroupsStAndrews/">July 29, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>June 09, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/06/09/CythonSphinx">
+<h4><a href="http://opendreamkit.org/2017/06/09/CythonSphinx/">Sphinx documentation of Cython code using "binding=True"</a></h4>
+<div class="entry">
+<div class="content">
+<p>One of the deliverables (<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/87">D4.13</a>)
+of the OpenDreamKit project is refactoring the documentation system of <a href="http://www.sagemath.org/">SageMath</a>.
+The SageMath documentation is built using a heavily customized <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a>.
+Many of the customizations are neccessary to support autodoc
+(automatically generated documentation from docstrings) for <a href="http://cython.org/">Cython</a> files.</p>
+
+<p>Thanks to some changes I made to Sphinx, autodoc for Cython now works provided that:</p>
+
+<ol>
+  <li>
+    <p>You use Sphinx version 1.6 or later.</p>
+  </li>
+  <li>
+    <p>The Cython code is compiled with the <code class="highlighter-rouge">binding=True</code>
+<a href="http://cython.readthedocs.io/en/latest/src/reference/compilation.html#compiler-directives">directive</a>.
+See <a href="http://cython.readthedocs.io/en/latest/src/reference/compilation.html#how-to-set-directives">How to set directives</a>
+in the Cython documentation.</p>
+  </li>
+  <li>
+    <p>A small monkey-patch is applied to <code class="highlighter-rouge">inspect.isfunction</code>.
+You can put this in your Sphinx <code class="highlighter-rouge">conf.py</code> for example:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> def isfunction(obj):
+     return hasattr(type(obj), "__code__")
+
+ import inspect
+ inspect.isfunction = isfunction
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>This was used successfully for the documentation of
+<a href="http://cysignals.readthedocs.io/en/latest/">cysignals</a>
+and <a href="http://fpylll.readthedocs.io/en/latest/">fpylll</a>.
+There is <a href="https://trac.sagemath.org/ticket/22747">ongoing work</a> to do the same for SageMath.</p>
+
+<h2 id="implementation-of-functions-in-python">Implementation of functions in Python</h2>
+
+<p>To understand why items 2 and 3 on the above list are needed,
+we need to look at how Python implements functions.
+In Python, there are two kinds of functions
+(we really mean functions here, not methods or other callables):</p>
+
+<ol>
+  <li>
+    <p>User-defined functions, defined with <code class="highlighter-rouge">def</code> or <code class="highlighter-rouge">lambda</code>:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> &gt;&gt;&gt; def foo(): pass
+ &gt;&gt;&gt; type(foo)
+ &lt;class 'function'&gt;
+ &gt;&gt;&gt; type(lambda x: x)
+ &lt;class 'function'&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Built-in functions such as <code class="highlighter-rouge">len</code>, <code class="highlighter-rouge">repr</code> or <code class="highlighter-rouge">isinstance</code>:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> &gt;&gt;&gt; type(len)
+ &lt;class 'builtin_function_or_method'&gt;
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>In the CPython implementation, these are completely independent classes
+with different behaviours.</p>
+
+<h2 id="user-defined-functions-binding-as-methods">User-defined functions binding as methods</h2>
+
+<p>Just to give one example, built-in functions do not have a
+<code class="highlighter-rouge">__get__</code> method, which means that they do not become methods when used in a class.</p>
+
+<p>Let’s consider this class:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class X(object):
+    def printme(self):
+        return repr(self)
+</code></pre>
+</div>
+
+<p>This is essentially equivalent to</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class X(object):
+    printme = (lambda self: repr(self))
+
+&gt;&gt;&gt; X().printme()
+'&lt;__main__.X object at 0x7fb342f960b8&gt;'
+</code></pre>
+</div>
+
+<p>However, directly putting the built-in function <code class="highlighter-rouge">repr</code> in the class
+does not work as expected:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Y(object):
+    printme = repr
+
+&gt;&gt;&gt; Y().printme()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: repr() takes exactly one argument (0 given)
+</code></pre>
+</div>
+
+<p>This is simply something that built-in functions do not support.</p>
+
+<h2 id="user-defined-vs-built-in-functions">User-defined vs. built-in functions</h2>
+
+<p>Here is a list of the main differences between user-defined and built-in functions:</p>
+
+<ul>
+  <li>
+    <p>User-defined functions are implemented in Python,
+built-in functions are implemented in C.</p>
+  </li>
+  <li>
+    <p>Only user-defined functions support <code class="highlighter-rouge">__get__</code> and can become methods
+(see above).</p>
+  </li>
+  <li>
+    <p>Only user-defined functions support introspection such as
+<code class="highlighter-rouge">inspect.getargspec()</code> and <code class="highlighter-rouge">inspect.getsourcefile()</code>.</p>
+  </li>
+  <li>
+    <p>CPython has specific optimizations for calling built-in functions.</p>
+  </li>
+  <li>
+    <p>The <code class="highlighter-rouge">inspect</code> module and profiling make
+a difference between the two kinds of functions.</p>
+  </li>
+</ul>
+
+<p>Cython generates C code, so Cython functions must be built-in functions.
+This has unfortunate disadvantages, such as the lack of introspection support,
+which is particularly important for Sphinx.</p>
+
+<h2 id="the-cython-function-type-cyfunction">The Cython function type: cyfunction</h2>
+
+<p>Luckily, the Cython developers came up with a solution:
+they invented a completely new function type (called <code class="highlighter-rouge">cyfunction</code>),
+which is implemented like built-in functions
+but which behaves as much as possible like user-defined functions.</p>
+
+<p>By default, functions in Cython are built-in functions.
+With the directive <code class="highlighter-rouge">binding=True</code>, functions in Cython become cyfunctions.
+Since cyfunctions are not specifically optimized by CPython,
+this comes with a performance penalty.
+More precisely, calling cyfunctions from Python is slower than
+calling built-in functions from Python.
+The slowdown can be significant for simple functions.
+Within Cython, cyfunctions are as fast as built-in functions.</p>
+
+<p>Since a <code class="highlighter-rouge">cyfunction</code> is not a built-in function
+nor a user-defined function (those two types are not subclassable),
+the <code class="highlighter-rouge">inspect</code> module (and hence Sphinx) does not recognize it as being a function.
+So, to have full inspect support for Cython functions,
+we need to change <code class="highlighter-rouge">inspect.isfunction</code>.
+After various attempts, I came up with <code class="highlighter-rouge">hasattr(type(obj), "__code__")</code>
+to test whether the object <code class="highlighter-rouge">obj</code> is a function (for introspection purposes).
+This will match user-defined functions and cyfunctions
+but not built-in functions, nor any other Python type that I know of.</p>
+
+<h2 id="the-future-a-pep-to-change-the-function-types">The future: a PEP to change the function types?</h2>
+
+<p>I have some vague plans for a Python Enhancement Proposal (PEP)
+to change the implementation of the Python function types.
+The goal is that Cython functions can be implemented
+on top of some standard Python function type,
+with all features that cyfunctions currently have,
+the performance of built-in functions
+and introspection support of user-defined functions.</p>
+
+<p>At this point, it is too early to say anything about the implementation
+of this hypothetical future Python function type.
+If anything happens, I will surely post an update.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/06/09/CythonSphinx/">June 09, 2017 12:00 AM</a>
 </p>
 </div>
 </div>
@@ -179,6 +915,1064 @@ This is a followup to <a href="http://sagemath.blogspot.com/2016/07/datadogs-pri
 </div>
 
 
+
+</div>
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/05/05/nbdime-0.3.0">
+<h4><a href="http://opendreamkit.org/2017/05/05/nbdime-0.3.0/">Release: nbdime 0.3.0</a></h4>
+<div class="entry">
+<div class="content">
+<p>We are happy to announce release 0.3.0 of <a href="https://nbdime.readthedocs.io">nbdime</a>,
+continuing to improve the process of working with Jupyter notebooks in version control.</p>
+
+<p>The highlight of 0.3 is much improved integration with git, making it easier than ever
+to get started with nbdime in git:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install --upgrade nbdime # install nbdime
+nbdime config-git --global --enable # tell git to use nbdime when it sees notebooks
+</code></pre>
+</div>
+
+<p>and you can get nice GUI diffs directly from git refs on the command-line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nbdiff-web master mynotebook.ipynb
+</code></pre>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/05/05/nbdime-0.3.0/">May 05, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>April 26, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/04/26/first-project-review-debriefing">
+<h4><a href="http://opendreamkit.org/2017/04/26/first-project-review-debriefing/">Debriefing from a successful Formal Project Review by the EU Commission</a></h4>
+<div class="entry">
+<div class="content">
+<p>On April 26th, OpenDreamKit underwent its first formal review by the
+European Commission. We presented the achievements of the first 18
+months of the project, including
+<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues?q=label%3AReportingPeriod1">30 deliverables</a>
+(<a href="http://opendreamkit.org/events_activities/reports/">reports</a>, <a href="http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/">slides</a>).
+Overall, <strong>the feedback was very positive</strong>, with language such as
+“enthusiast”, “brilliant”, “amazing job”, or “things have come along
+fantastically”. We made a strong point in our reports and
+presentations that a vast majority of what’s happening comes from the
+ecosystem we support. All we do is exploit the special resources the
+EU is entrusting us to knock down some tough hurdles that are
+preventing the ball to roll. <strong>Kudos to our communities!</strong></p>
+
+<h2 id="debriefing-notes-i-sent-to-the-opendreamkit-participants">Debriefing notes I sent to the OpenDreamKit participants</h2>
+
+<p>About twenty of us were in Brussels early this week for the
+OpenDreamKit Month 18 formal review. After two days of intensive
+preparation, we presented our work on Wednesday to our project officer
+and reviewers.</p>
+
+<p>There are a few points that we need to think about (not unexpected).
+But otherwise the hard work we all put since the beginning of the
+project came out as quite a show. The panel gave very constructive
+feedback and were overall really happy. They appreciate our approach,
+our work, our spirit.</p>
+
+<p>Now is the time to enjoy that appreciation and build on that energy to
+do even better in the coming years. Pass this on to our communities!</p>
+
+<p>Speaking of funding: the reviewers made a strong point that we bear a
+big responsibility: apparently mathematics does not have a good press
+in the high spheres these days. We were <em>very lucky</em>, as a math
+project, to be funded; it’s really because they appreciated so much
+the strength of the proposal and our “clever and creative
+interpretation of the call” that we made it through. “No other math
+project is being funded” (this quote obviously does not apply to
+ERCs; the scope is plausibly that of H2020 projects).</p>
+
+<p>They now need strong ammunition to make sure that future calls leave
+room for mathematics. So not only do we have to succeed because we
+care so much about our aims (and should investigate followups to
+pursue them further), but also for the sake of other projects
+elsewhere in mathematics. We also need to proactively explain and
+highlight to a wider audience what we do in collaboration with our
+communities. There is very good stuff going on, let it be seen.</p>
+
+<p>Some further thoughts needs to be put in how to achieve that. For now,
+the take home message is simple: <strong><em>If you witness something nice
+happening, from a technical achievement with a wow factor to a thought
+provoking anecdote, write a blog post about it</em></strong>. See the
+<a href="https://github.com/OpenDreamKit/OpenDreamKit.github.io/blob/master/_posts/README.md">instructions</a>,
+or even just send a brief draft text by e-mail to
+<a href="mailto:m.croucher@sheffield.ac.uk">Mike Croucher</a> with
+<a href="mailto:Nicolas.Thiery@u-psud.fr">me</a> in CC.</p>
+
+<p>Let me conclude by thanking the whole band that came to Brussels (with
+a special nod to the presenters on which we dumped the most delicate
+presentations). I was frustrated as you all were spending all this
+time together without tackling what we all really care most. However
+we built on our image in the Commission, and used the occasion to
+strengthen our group around a joint vision. This is a worthwhile long
+term investment.</p>
+
+<p>Thank you everybody for all the enthusiastic, dedicated and beautiful
+work. It’s an honor and a pleasure to be working with such a team.</p>
+
+<p>Remember: pass it on to those supporting you and to your communities.</p>
+
+<p>Cheers,
+		Nicolas</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/04/26/first-project-review-debriefing/">April 26, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>April 24, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/04/24/first-project-review">
+<h4><a href="http://opendreamkit.org/2017/04/24/first-project-review/">Formal Project Review for OpenDreamKit's first reporting period (Sept. 2015 to Feb. 2017)</a></h4>
+<div class="entry">
+<div class="content">
+<p>At the occasion of its first
+(<a href="http://opendreamkit.org/2017/04/26/first-project-review-debriefing/">very successful</a>!)
+<a href="http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/">formal review</a>
+by the EU commission, twenty OpenDreamKit participants met on the last
+week of April 2017 at the <a href="http://www.clora.eu/en/accueil">CLORA</a>
+(Club of associated research organisations) headquarters in Brussels.</p>
+
+<h2 id="monday-24-tuesday-25">Monday 24, Tuesday 25</h2>
+
+<ul>
+  <li>Brief Steering Committee (<a href="http://opendreamkit.org/2017/04/24/brussels-steering-committee/">Agenda &amp; Minutes</a> and <a href="https://mensuel.framapad.org/p/vQTnSyplRr">Pad</a>)</li>
+  <li><a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/222">Preparation for the review</a></li>
+</ul>
+
+<h2 id="wednesday-26">Wednesday 26</h2>
+
+<ul>
+  <li><a href="http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/">Formal review</a> (<a href="http://opendreamkit.org/2017/04/26/first-project-review-debriefing/">debriefing notes</a>)</li>
+</ul>
+
+<h2 id="thursday-27-friday-28">Thursday 27, Friday 28</h2>
+
+<ul>
+  <li><a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/223">Coding sprints</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/04/24/first-project-review/">April 24, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/04/24/brussels-steering-committee">
+<h4><a href="http://opendreamkit.org/2017/04/24/brussels-steering-committee/">Steering Committee meeting before the 1st Project Review</a></h4>
+<div class="entry">
+<div class="content">
+<h2 id="participants">Participants</h2>
+
+<p>A framadate <a href="https://framadate.org/MPxYiQTu1JZjHuJp">poll</a> was created</p>
+
+<h3 id="were-present-on-the-steering-committee-day">Were present on the steering committee day:</h3>
+<p>Nicolas THIERY; Benoît PILORGET; Erik BRAY; Viviane PONS; Vincent DELECROIX; Michael KOHLHASE; Dennis MUELLER; Florian RABE; Tom WIESING; Clément PERNET; Wolfram DECKER; William HART; Dmitrii PASECHNIK; Marcin KOSTUR; Mike CROUCHER; Hans FANGOHR; Alexander KONOVALOV; Stephen LINTON; Luca DE FEO; John CREMONA; Paul-Olivier DEHAYE; Benjamin RAGAN-KELLEY; Jeroen DEMEYER; Konrad HINSEN</p>
+
+<h2 id="agenda">Agenda</h2>
+
+<ul>
+  <li>Second amendment to the Grant</li>
+  <li>WP7: overview of the situation and of the measures taken and to be planned</li>
+  <li>Overview of the deliverables due for M18</li>
+  <li>Best practice for the Project Review</li>
+</ul>
+
+<h2 id="minutes">Minutes</h2>
+
+<h3 id="second-amendment-to-the-grant">Second amendment to the Grant</h3>
+
+<p>Benoît Pilorget (BP) announced that the Second Amendment should be over in April-May. All the modifications concerning deliverables and the scientific context were accepted. The remaining blocking points were purely administrative and require some time. At the moment these notes are being written (19/05/2017), the Commission seems to have fully agreed on all terms and is about to sign the amendment.</p>
+
+<p>Related to this amendment, the consortium expressed their congratulations to Hans Fangohr (HF) for his new position at XFEL, in Hamburg.
+All points of the amendment can be found on the github issue <a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/193">#193</a></p>
+
+<h3 id="wp7-overview-of-the-situation-and-of-the-measures-taken-and-to-be-planned">WP7: overview of the situation and of the measures taken and to be planned:</h3>
+
+<p>An open brainstorming session took place.
+Resulting from the retirement of Ursula Martin, it appears that some aspects of WP7 that require research-grade  expertise in sociology will be hardly achievable as it is organised today with the current consortium. Therefore solutions must be found so that we don’t just tick the boxes but actually deliver high quality material.</p>
+
+<p>Several options have been discussed:</p>
+
+<p>1) Hire new staff specialised in sociology or likewise field. This solution would probably lead to the transfer of some funding within the consortium, unless it turns out enough Person-Months are planned at UOXF</p>
+
+<p>2) Subcontract the planned work not feasible. For this solution to work out, one must find an adequate subcontractor (providing enough funds are available within UOXF or the consortium) and sign an amendment to the Grant with the Commission</p>
+
+<p>3) Rethink the scientific content (objectives, tasks, deliverables), to take into account all we have learned since the writing of the proposal, and make the best use of the available ressources and consortium expertise. This of course would require a negotiation with the EU and probably a new amendment to the grant agreement.</p>
+
+<p>The consortium is expecting official feedback from the Project Officer and reviewers after the formal review. In the meantime, the Coordinator and Principal Investigators of WP7 will be informally brainstorming all possibilities. Were an amendment necessary, it will be written after the current amendment for the addition of FAU Erlangen and XFEL is signed by the Commission.</p>
+
+<h3 id="overview-of-the-deliverables-due-for-m18-and-24">Overview of the deliverables due for <a href="https://github.com/OpenDreamKit/OpenDreamKit/milestone/62?closed=1">M18</a> and <a href="https://github.com/OpenDreamKit/OpenDreamKit/milestone/65">24</a></h3>
+
+<p>After a tour de table, the Coordinator ensured that all deliverables due for Month 24 (31/08/2017) have a leader and a definite working plan.</p>
+
+<h3 id="best-practice-for-the-project-review">Best practice for the Project Review:</h3>
+
+<p>BP reminded the consortium of the <a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/Review-presentation/">support slides</a> for the Review that were presentend at the Edinburgh steering committee meeting.</p>
+
+<h3 id="feedback-from-the-quality-review-board">Feedback from the Quality Review Board</h3>
+
+<p>HF, the chair of the Quality Review Board (QRB), expressed rough positive feedback from the first QRB meeting. A full report will be made available for all participants.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/04/24/brussels-steering-committee/">April 24, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>April 06, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/04/06/website">
+<h4><a href="http://opendreamkit.org/2017/04/06/website/">The story behind our website</a></h4>
+<div class="entry">
+<div class="content">
+<p>OpenDreamKit uses a <em>static website</em> powered by Jekyll and GitHub. Ever wondered
+what it means? <a href="http://openpyviv.com/2017/04/05/static/">Read this post</a> to discover.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/04/06/website/">April 06, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/04/06/WomenInSage">
+<h4><a href="http://opendreamkit.org/2017/04/06/WomenInSage/">Report on WomenInSage</a></h4>
+<div class="entry">
+<div class="content">
+<p>Last January, Viviane Pons, Jessica Striker and Jennifer Balakrishnan organized 
+ the first <a href="https://wiki.sagemath.org/days82">WomenInSage</a>
+ event in Europe with OpenDreamKit. 20 women spent a week together coding and learning in a rented
+house in the Paris area.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/group_photo.jpg" alt="Group picture" class="img-responsive" /></p>
+
+<h1 id="the-workshop">The Workshop</h1>
+
+<h2 id="opening-event">Opening event</h2>
+
+<p>To open the workshop, Viviane, Jessica, and Jennifer gave a series of <a href="https://wiki.sagemath.org/days82_sageintro">introduction 
+to Sage</a> lectures at the Institut Henri Poincaré in Paris,
+covering combinatorics and number theory.</p>
+
+<h2 id="the-week">The Week</h2>
+
+<p>The workshop then moved to the rented house. There, we organized
+<em>short talk sessions</em> to get to know our respective research fields and expectations
+for the week. After that, we were able to split into small groups to work on many different
+projects: STL export, Krummer surfaces, Kuznyechik cipher, Motzkin words, Shioda invariants,
+and more. We also had presentations on <em>How to contribute to Sage</em> (with a crash course 
+on git) and <em>How to write a Sage package</em>. Every evening, we had a <em>Status report</em>
+session to share our progress with the group. You can read our program and final status
+reports on <a href="https://wiki.sagemath.org/days82">the event wikipage</a>.</p>
+
+<h2 id="special-pyladies-coding-cafe">Special PyLadies coding cafe</h2>
+
+<p>Viviane Pons is one of the organizer of the local Paris chapter for <a href="http://www.pyladies.com/">PyLadies</a>.
+She organized a meeting between the WomenInSage mathematician and the PyLadies developers.
+We were welcomed by Algolia for an afternoon of coding-and-chatting with the PyLadies.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/pyladies-WIS.jpg" alt="Group picture with PyLadies" class="img-responsive" /></p>
+
+<h1 id="impact">Impact</h1>
+
+<p><em>The data presented here come from a post-event questionnaire sent to the participants.</em></p>
+
+<p>The gender gap is very important in the mathematic development community. In the 
+OpenDreamKit project, among the 54 participants we are only 3 women. This reflects
+the global situation in the field. Many mathematician women are still hesitant to join
+our community and lack confidence in their abilities as developers. Organizing a
+women targeted event is a way to motivate them and building up self-confidence in a safe
+and casual atmosphere.</p>
+
+<p>The women who attended the conference had various level of programming experience
+ranging from 1 (no experience) to 5 (a lot of experience).</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/programming-knowledge.png" alt="1: 1 people, 2: 7 people, 3: 3 people , 4: 5 people, 5: 1 people" class="img-responsive" /></p>
+
+<p>This disparity also reflected in their knowledge of Sage.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/sage-knowledge.png" alt="1: 1 people, 2: 8 people, 3: 3 people , 4: 3 people, 5: 2 people" class="img-responsive" /></p>
+
+<p>As for contributions, only 4 participants had contributed to Sage in the past 
+which included the 3 organizers. Also, a majority of participants had never attended
+a Sage Days before. Actually, 6 of them had never even heard of Sage Days and 2 
+of them said they did not think it was “for them”.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/sage-days-attendance.png" alt="" /></p>
+
+<p>To the question “How did the fact that the event was targeted to women impact your decision to come?  (Would you have participated in a classical SageDays)”,
+Many participants answered that it was indeed a factor a their decision.</p>
+
+<p><cite>Yes, but it helped. I didn´t feel so sure about my skills and being surrounded by women made things easier.</cite></p>
+
+<p><cite>It was a new experience that I don’t regret at all.</cite></p>
+
+<p><cite>I might have participated, but would have been less confident.</cite></p>
+
+<p><cite>I have participated in and benefited from classical SageDays, but found this event to be even better at creating an atmosphere where everyone felt empowered to learn and contribute.</cite></p>
+
+<p><cite>I made a special effort I would not have done for regular sage days.</cite></p>
+
+<p>One of the participant said she would not have felt comfortable sharing a house
+with men but that this event was such positive experience that she would now consider
+it for other Sage days. The event helped building up the confidence of the participants, 9 of them said 
+they felt more confident to attend classical Sage Days after the event.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/future_sage_days.png" alt="What are the chances you attend a " /></p>
+
+<p>We took advantage of the diverse knowledge background of our group to work together
+and learn from each other. It was an occasion for many “first times” among participants
+who had very little experience with Sage:</p>
+
+<ul>
+  <li>5 participants installed a source version of Sage for the first time (so that they could edit the source).</li>
+  <li>3 used git for the first time.</li>
+  <li>5 used git within Sage for the first time.</li>
+  <li>11 got their first Trac account .</li>
+  <li>5 got their first contribution to a Sage ticket.</li>
+  <li>8 are in the process of getting their first code integrated to Sage.</li>
+</ul>
+
+<p>We worked on <a href="https://trac.sagemath.org/search?q=days82">14 tickets</a> during the week, 
+6 of those which have been merged since the conference. All participants said they
+had learned new things and it would impact their careers.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/learn_new_things.png" alt="Did you learn new things at this conference? 1:0 people, 2: 0 people, 3: 2 people, 4: 6 people, 5: 9 people" class="img-responsive" /></p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/impact.png" alt="Did you think what you learned will have an impact on your future research/career? 1:0 people, 2: 0 people, 3: 1 people, 4: 10 people, 5: 6 people" class="img-responsive" /></p>
+
+<p>This also was an occasion to start projects and form more research and development collaborations for future.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/people.png" alt="Did you meet interesting people? 1:0 people, 2: 0 people, 3: 0 people, 4: 2 people, 5: 15 people" class="img-responsive" /></p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/projects.png" alt="Have you started (or carried on) any project that could lead to more research and development in the future? I have started things and will try to follow up: 38.8%. I have started things and willdefinitely follow up: 35.3%. Nothing: 5.3%." class="img-responsive" /></p>
+
+<p>All of this happened in a very casual and welcoming atmosphere. We used the common
+rooms of the house to work. We cooked international, vegetarian friendly meals (some
+participants had brought food and recipes from their home countries). We got to know
+each other and shared more than code. All participants agreed that it was a very 
+positive experience. When asked to rate the general atmosphere of the conference,
+all of them gave a 5.</p>
+
+<p><img src="http://opendreamkit.org/public/images/womenInSage/atmosphere.png" alt="How did you like the general atmosphere of the conference? 1:0 people, 2: 0 people, 3: 0 people, 4: 0 people, 5: 17 people" class="img-responsive" /></p>
+
+<p>As an organizer, it was also very rewarding and it motivates me to do it again. To
+the question: “Any other comment you might have?”, we only got one answer.</p>
+
+<p><cite>All three organizers were so very generous with their time and expertise, and created a wonderful supportive environment. Thank-you!</cite></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/04/06/WomenInSage/">April 06, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>March 25, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/03/25/Sage-MMT-export">
+<h4><a href="http://opendreamkit.org/2017/03/25/Sage-MMT-export/">Exporting mathematical knowledge from Sage</a></h4>
+<div class="entry">
+<div class="content">
+<p><br /></p>
+
+<h2 id="berlin-workshop">Berlin workshop</h2>
+
+<p>This week the KWARC team (Michael Kohlhase, Florian Rabe, Dennis Müller) and myself met in Berlin at the <a href="https://www.wias-berlin.de/">WIAS</a>. The goal was to meet some of the modelers working there, who are very interested in the <a href="https://uniformal.github.io/doc/">MMT system</a> and the work in <a href="http://www.opendreamkit.org">OpenDreamKit</a>. Their entry point is <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP6">Work Package 6</a> (interoperability), motivated by the benefits they would get intrinsically from formalizing the mathematical work they do into the OMDoc/MMT language (<em>e.g.</em> addressability of mathematical models), but also with an eye on all the other work packages from OpenDreamKit (<em>e.g.</em> <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4">interactive documents</a>). Personally, I was focused on working out what I could of a semantic interchange between Sage and GAP of mathematical objects.</p>
+
+<h2 id="formalization-of-mathematical-concepts">Formalization of mathematical concepts</h2>
+
+<p>To start, we decided to do a bit of prototyping around transitive groups. The first step in the Math-in-the-Middle methodology for interoperability between computer algebra systems is to formalize the mathematical concept itself. Recent progress on the MMT language has actually made this very practical (see also <a href="https://gl.mathhub.info/MitM/smglom/blob/master/source/permutation-group.mmt">here</a>):</p>
+
+<center><img src="http://opendreamkit.org/assets/transitive_groups.jpg" alt="MMT syntax for transitive groups" /></center>
+<p><br /></p>
+
+<p>A mathematician should be able to point to this and get near universal agreement in the community on what that means.</p>
+
+<p>Line 24 is of course critical to the definition, but one can see that the rest is well structured and readable. I have omitted here the first five lines, which consist of <code class="highlighter-rouge">include</code> statements, and make the whole thing a completely formal definition yet implemented at a very high level of abstraction. You could slim down those <code class="highlighter-rouge">include</code>s and build the same thing on flexiformal foundations, <em>e.g.</em> not bother with the logic “deep down”.</p>
+
+<p>Overall, not many mathematicians might be able to write this, but almost any mathematician can navigate her way through it. It also helps that the jEdit editor and the MathHub webserver have drastically improved, especially in ease of use (work done as part of <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4">Work Package 4</a>), but also installation and resilience (work done as part of <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP3">Work Package 3</a>).</p>
+
+<h2 id="math-in-the-middle-methodology">Math-in-the-Middle methodology</h2>
+<p><br /></p>
+<center><img src="http://opendreamkit.org/assets/mitm.jpg" alt="MitM paradigm" /></center>
+<p><br /></p>
+
+<p>Now that we have a target formalization, the idea is to separately make Sage and GAP interact with it. In the <a href="https://arxiv.org/abs/1603.06424">Math-in-the-Middle (MitM) formalism</a> adopted for Work Package 6, we think of having in the “center” a system-independent flexiformalization of the mathematical domains (represented in this diagram in blue; replace in your head EC for elliptic curves with TG for transitive groups).</p>
+
+<p>The next step is to work on the reddish clouds, which are the interface theories between this center and the other systems. These interface theories mainly flexiformalize the system-specific aspects of the domain.</p>
+
+<p>On the GAP side, GAP generates for those interfaces OMDoc/MMT Content Dictionaries (CDs) that contain name, type, and documentation for all API functions (constructors, predicates, methods, …). This is automated, has good coverage and is very rich semantically (more on that towards the end of the post). The next step of the plan is then to align the generated system CDs with the MitM formalization by the MMT <code class="highlighter-rouge">implements</code> relation of aligment (<em>e.g.</em> an aligment could be: GAP-<code class="highlighter-rouge">transitive_group</code> MMT-<code class="highlighter-rouge">implements</code> MitM-<code class="highlighter-rouge">transitive group</code>). If equivalent Sage CDs were available, as well as Sage alignments, we would get a semantic crosswalk between GAP and Sage by composing the MitM alignments between all those different CDs. This would provide the necessary framework for interoperability.</p>
+
+<p>At the moment Sage does export some of its knowledge into CDs, thanks to what was implemented by Nicolas Thiéry, leveraging his <code class="highlighter-rouge">category</code> framework. This is unfortunately not enough to cover transitive groups, which have rich structure as category objects (but the “Category of Transitive Groups” does not exist in Sage). Given the circumstances of this workshop, I thus decided to focus on the Sage side, and see what information I could extract about transitive groups.</p>
+
+<h2 id="exporting-knowledge-from-sage">Exporting knowledge from Sage</h2>
+
+<p>If you look at Sage’s <code class="highlighter-rouge">TransitiveGroup</code>, a lot of mathematical knowledge is acquired from elsewhere through the class hierarchy lying above <code class="highlighter-rouge">TransitiveGroup</code>, and the category framework that instruments that hierarchy. This lead me to first try to build a model of how the Sage class <code class="highlighter-rouge">TransitiveGroup</code> was actually implemented and what it was doing, but this was a mistake. Indeed, it was very difficult, as I got lost between meta-logics and what I was actually trying to do: modeling Sage? modeling how Sage models math? how python uses Sage to model math? I was trying to do too much, too early and was probably the wrong person to do that.</p>
+
+<p>If you look back at the methodology, the MitM CDs don’t need to link up to the Math-in-the-Middle content dictionary right away. This is actually up to the alignments, that come later (and could be done by a different person). I was trying to do both at once, while my focus should really have been: “how do I export, but not align, as much of the math knowledge as possible embedded into Sage into a language that can easily be processed by the KWARC team?” (for the <code class="highlighter-rouge">categories</code> export built by Nicolas Thiéry, the export went through JSON).</p>
+
+<p>OK then, the question now becomes: “where is math knowledge embedded in Sage that is relevant to the mathematical concept of transitive group?” The first response is of course still “Everywhere!”, but where are actually the low hanging fruits?</p>
+
+<h3 id="a-math-skeleton">A math skeleton</h3>
+
+<p>I found that the best way to communicate around this issue with the KWARC team is by extracting from Sage code a “math skeleton”. For this, the Sage-specific module <code class="highlighter-rouge">sageinspect</code> was very useful. I thus introspected the sage object corresponding to the class <code class="highlighter-rouge">TransitiveGroup</code>, and related objects:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># sage/src/sage/structure/sage_object.pyx
+cdef class SageObject:
+
+# sage/local/lib/python2.7/site-packages/sage/categories/category.py
+class Category(UniqueRepresentation, SageObject):
+
+# sage/src/sage/structure/category_object.pyx
+cdef class CategoryObject(SageObject):
+
+# sage/local/lib/python2.7/site-packages/sage/structure/parent.pyx
+cdef class Parent(category_object.CategoryObject):
+
+# sage/src/sage/groups/group.pyx
+cdef class Group(Parent):
+
+# sage/src/sage/groups/group.pyx
+cdef class FiniteGroup(Group):
+
+# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
+class PermutationGroup_generic(group.FiniteGroup):
+
+# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
+class PermutationGroup_unique(CachedRepresentation, PermutationGroup_generic):
+
+# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
+class TransitiveGroup(PermutationGroup_unique):
+</code></pre>
+</div>
+<p>What is mathematical here? Clearly, just about everything, but that is because I was selective in the printout given above: I worked up the class hierarchy from <code class="highlighter-rouge">TransitiveGroup</code> by hand, but excluded all the python objects that <em>don’t</em> inherit from <code class="highlighter-rouge">SageObject</code>. For instance, you don’t see in that list:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code># sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
+class CachedRepresentation:
+</code></pre>
+</div>
+<p><code class="highlighter-rouge">CachedRepresentation</code> is only relevant, from a mathematical standpoint, in <em>where</em> it appears as a superclass. Its own internals are pure design decisions for CAS software, not mathematics.</p>
+
+<p>The criterion to use for “related objects” is thus that only objects inheriting from <code class="highlighter-rouge">SageObject</code> need to be navigated. So we are navigatin in the class hierarchy diamond between <code class="highlighter-rouge">TransitiveGroup</code> and <code class="highlighter-rouge">SageObject</code>, collecting classes, which I manually imported from the <code class="highlighter-rouge">sage</code> library (obviously this could be automated):</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>from sage.structure.sage_object import SageObject
+from sage.structure.category_object import Category     # not strictly in the class hierarchy, but included to facilitate discussion
+from sage.structure.category_object import CategoryObject
+from sage.structure.parent import Parent
+from sage.groups.group import Group
+from sage.groups.group import FiniteGroup
+from sage.groups.perm_gps.permgroup import PermutationGroup_generic
+from sage.groups.perm_gps.permgroup_named import PermutationGroup_unique
+from sage.groups.perm_gps.permgroup_named import TransitiveGroup
+</code></pre>
+</div>
+
+<p>This is how I selected the objects from which I wanted to extract more information, producing the list of class definitions above.</p>
+
+<p>[Note by the way the weird changes in the path to <code class="highlighter-rouge">sageinspect.sage_getsource</code> in the listing above (why??? because of interactions between <code class="highlighter-rouge">import</code> statements?)]</p>
+
+<h3 id="more-flesh-on-the-skeleton">More flesh on the skeleton</h3>
+
+<p>The next step is to add a bit of flesh to that skeleton export. Obviously this is going to be more intricate. I have included <a href="https://gl.mathhub.info/ODK/Sage/blob/master/sage/transitive_group_example.py">here</a> what you get when you look at all the methods <em>coming out of the source code</em> for <code class="highlighter-rouge">TransitiveGroup</code>, <code class="highlighter-rouge">PermutationGroup_unique</code>, etc. In other words, a completely static navigation to the specific methods. This was the right thing to do for communicating with the KWARC team, but is wrong for our ultimate purpose. It was the right thing to do to communicate with KWARC (or in a blog post) as it distilled Sage to its most interesting bits, and we could fill the gaps relying on comment concepts (like “class hierarchy”). However, as a quicker way to get more consistent and richer Sage output, I could have navigated dynamically to the relevant classes, and extracted all the methods available from the live objects. This is of course because tons of methods get added when the object gets created, with a lot of mathematics packed into that. The same math could be reconstructed from the source code, but obviously that would be harder to do as we would be re-emulating a lot of what python does.</p>
+
+<p>In any case, here is the full printout of what I get for just the method declarations for <code class="highlighter-rouge">PermutationGroup_generic</code>, the <code class="highlighter-rouge">Parent</code> that is most interesting:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
+class PermutationGroup_generic(group.FiniteGroup):
+    def __init__(self, gens=None, gap_group=None, canonicalize=True, domain=None, category=None):
+    def construction(self):
+    def _has_natural_domain(self):
+    def _gap_init_(self):
+    def _magma_init_(self, magma):
+    def __cmp__(self, right):
+    def _element_class(self):
+    def __call__(self, x, check=True):
+    def _coerce_impl(self, x):
+    def list(self):
+    def __contains__(self, item):
+    def has_element(self, item):
+    def __iter__(self):
+    def gens(self):
+    def gens_small(self):
+    def gen(self, i=None):
+    def identity(self):
+    def exponent(self):
+    def largest_moved_point(self):
+    def degree(self):
+    def domain(self):
+    def _domain_gap(self, domain=None):
+    def smallest_moved_point(self):
+    def representative_action(self,x,y):
+    def orbits(self):
+    def orbit(self, point, action="OnPoints"):
+    def transversals(self, point):
+    def stabilizer(self, point, action="OnPoints"):
+    def base(self, seed=None):
+    def strong_generating_system(self, base_of_group=None):
+    def _repr_(self):
+    def _latex_(self):
+    def _order(self):
+    def order(self):
+    def random_element(self):
+    def group_id(self):
+    def id(self):
+    def group_primitive_id(self):
+    def center(self):
+    def socle(self):
+    def frattini_subgroup(self):
+    def fitting_subgroup(self):
+    def solvable_radical(self):
+    def intersection(self, other):
+    def conjugacy_class(self, g):
+    def conjugacy_classes(self):
+    def conjugate(self, g):
+    def direct_product(self, other, maps=True):
+    def semidirect_product(self, N, mapping, check=True):
+    def holomorph(self):
+    def subgroup(self, gens=None, gap_group=None, domain=None, category=None, canonicalize=True, check=True):
+    def as_finitely_presented_group(self, reduced=False):
+    def quotient(self, N):
+    def commutator(self, other=None):
+    def cohomology(self, n, p = 0):
+    def cohomology_part(self, n, p = 0):
+    def homology(self, n, p = 0):
+    def homology_part(self, n, p = 0):
+    def character_table(self):
+    def irreducible_characters(self):
+    def trivial_character(self):
+    def character(self, values):
+    def conjugacy_classes_representatives(self):
+    def conjugacy_classes_subgroups(self):
+    def subgroups(self):
+    def _regular_subgroup_gap(self):
+    def has_regular_subgroup(self, return_group = False):
+    def blocks_all(self, representatives = True):
+    def cosets(self, S, side='right'):
+    def minimal_generating_set(self):
+    def normalizer(self, g):
+    def centralizer(self, g):
+    def isomorphism_type_info_simple_group(self):
+    def is_abelian(self):
+    def is_commutative(self):
+    def is_cyclic(self):
+    def is_elementary_abelian(self):
+    def isomorphism_to(self, right):
+    def is_isomorphic(self, right):
+    def is_monomial(self):
+    def is_nilpotent(self):
+    def is_normal(self, other):
+    def is_perfect(self):
+    def is_pgroup(self):
+    def is_polycyclic(self):
+    def is_simple(self):
+    def is_solvable(self):
+    def is_subgroup(self, other):
+    def is_supersolvable(self):
+    def non_fixed_points(self):
+    def fixed_points(self):
+    def is_transitive(self, domain=None):
+    def is_primitive(self, domain=None):
+    def is_semi_regular(self, domain=None):
+    def is_regular(self, domain=None):
+    def normalizes(self, other):
+    def composition_series(self):
+    def derived_series(self):
+    def lower_central_series(self):
+    def molien_series(self):
+    def normal_subgroups(self):
+    def poincare_series(self, p=2, n=10):
+    def sylow_subgroup(self, p):
+    def upper_central_series(self):
+</code></pre>
+</div>
+
+<p>Here are things a semi-intelligent mathematician can deduce from this fleshed-out skeleton, and that we might be able to export automatically:</p>
+<ul>
+  <li>The arity of all those functions is useful. Unfortunately, this being python (2.x), the type cannot simply be read. Michael Kohlhase has some interesting ideas regarding mathematicians, types and the modeling necessary for MMT. I think he is right, partly, and there is much to look forward to in the services MMT can provide around type inference. Note that it will be core to this process that MMT allows for flexiformalisation as well!</li>
+  <li>I omitted docstrings in this export, but of course this is also useful for semantic information in natural language. Often the docstring contains structured information too, for instance some typing information (see above).</li>
+  <li>There is, as often, a method called <code class="highlighter-rouge">__init__</code> that specifies a constructor. In other words, some combination of maps from some parameter space into the object modeled by <code class="highlighter-rouge">PermutationGroup_generic</code>. That relationship is messy though, most of the time. Note that the GAP team took the opportunity over last summer to have an intern refactor/regularize the way they did constructors into a more “semantic” way”: essentially instead of using the elementary <code class="highlighter-rouge">__init__</code>, they made a <code class="highlighter-rouge">defconstructor</code> and gave it documentation, type information,… as parameters. Of course <code class="highlighter-rouge">defconstructor</code> elaborates to a call to <code class="highlighter-rouge">__init__</code> but the parameters can be used in the CD generation (and for static type-based optimizations later; ask Markus Pfeiffer @ St. Andrews if you are interested in the details).</li>
+  <li><code class="highlighter-rouge">_gap_xxxx</code> and <code class="highlighter-rouge">_magma_xxxx</code> indicate that the relevant “stuff” exists in the corresponding CASes. This is thus indicating a good place to bootstrap the alignment process between <code class="highlighter-rouge">gap</code> and <code class="highlighter-rouge">sage</code>, and therefore extract KPIs and generally optimize our progress. This would be best done by instrumenting at the <code class="highlighter-rouge">SageObject</code> level, since this is where all those <code class="highlighter-rouge">_other-computer-algebra-system_xxxx</code> methods are first located, as abstract methods.</li>
+  <li>the presence of magic methods <code class="highlighter-rouge">__xxxxxxx__</code> indicates the existence of a relation of some kind on the elements of <code class="highlighter-rouge">PermutationGroup_generic</code>, which is a Sage <code class="highlighter-rouge">Parent</code>. However, this information is best extracted from the categories export itself, presumably all(?) the time.</li>
+  <li><code class="highlighter-rouge">is_xxxx</code> methods indicate the existence of a test and thus a property.</li>
+  <li>after some very basic pruning, all the other methods indicate the existence of clear mathematical objects, often relatively simple maps.</li>
+</ul>
+
+<p>Many of the deductions made above will be done in the same way for all <code class="highlighter-rouge">Parent</code>s (at least if we go for the easiest information to grab), so that’s where the instrumentation should go. Most of that instrumentation actually makes sense to have in a CAS, beceause it exposes mathematically relevant concepts. It would simply be used by the exporter generating the Content Dictionary.</p>
+
+<p><strong>Remark:</strong> Ultimately we want to extract information from live objects. It should not be lost, however, that what we are trying to do is partly a social process (the study of this process is itself the topic of <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP7">Work Package 7</a>). Humans have built the code from which we are trying to extract information, and now we want to communicate that with other humans so they can in turn code on top of that. Those other humans are familiar with different tools. For instance the KWARC team uses MMT related tools, like MathHub, but not Sage. Presumably other CAS developers or even “plain” mathematicians will just see Sage through an interface built on top of MMT. So I would advocate that we:</p>
+
+<ol>
+  <li>Make sure to export <em>all</em> the information containing math from Sage into MMT, even that which is not readable beyond text by the system we export to;</li>
+  <li>Devise methods to make this informal export as addressable as possible from within MMT, but not necessarily runnable.</li>
+</ol>
+
+<p>Step 1. could be useful for instance if one is working in GAP and asking “How does Sage do that?”. We should be able to access Sage source code from within GAP, and it will be useful for automating some tasks.</p>
+
+<p>Step 2. would be useful for students in the KWARC group, for instance, who would then be able to extract semantically richer information from a system like Sage with just verbal instructions from domain specific experts, because the data is now in MMT format. It splits the step in two: MMT extraction and semantic extraction, and requires different skills.</p>
+
+<p>The process could be further accelerated, I bet, by exposing also deep sage introspection tools into MMT.</p>
+
+<p>At this stage self-preservation instincts kick in and I don’t want to think deeper at this proposal from a logical standpoint.</p>
+
+<p><br /> <em>I wish to thank Michael Kohlhase for suggestions that have improved the first draft of this post.</em></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/03/25/Sage-MMT-export/">March 25, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>March 24, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/03/24/WIAS">
+<h4><a href="http://opendreamkit.org/2017/03/24/WIAS/">Report on the WP6-WIAS Workshop on Math-in-the-Middle Content</a></h4>
+<div class="entry">
+<div class="content">
+<p>WP6 participants JacU (Florian Rabe), FAU (Dennis Müller, Michael Kohlhase) and UZH (Paul
+Olivier Dehaye) came together with members of the
+<a href="http://wias-berlin.de/">Weierstrass Institute for Applied Analysis and Stochastics</a>
+(WIAS: Thomas Koprucki and Carsten Tabelow) for a one-week code (20. 3. – 24. 3.)  sprint
+on the Math-in-the-Middle Content and Logic and the encoding of mathematical Models. The
+result of this was a significant extension of the MitM ontology (in particular for the
+meta-theories for Sage) and a
+<a href="http://dx.doi.org/10.20347/WIAS.PREPRINT.2385">WIAS preprint on formalizations of Models</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/03/24/WIAS/">March 24, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>March 08, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/03/08/SMC">
+<h4><a href="http://opendreamkit.org/2017/03/08/SMC/">SageMathCloud for OpenDreamKit</a></h4>
+<div class="entry">
+<div class="content">
+<p>Part of OpenDreamKit’s mission is to work on <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4">user interfaces</a>
+for better collaboration and also <a href="https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP3">component architectures</a>.
+This is why the <a href="http://cloud.sagemath.com/">SageMathCloud</a> platform is of special
+interest for us. One of our tasks is even to <a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/55">have a deeper look into its code base</a>.
+In this post, as part of our <em>Review on emerging technologies</em>, we propose an overview
+of the platform.</p>
+
+<h2 id="what-is-sagemathcloud">What is SageMathCloud?</h2>
+
+<p>SageMathCloud is an online platform which allows the creation of <strong>collaborative scientific projects</strong>
+including many scientific softwares and tools like <a href="http://www.sagemath.org/">SageMath</a>,
+<a href="http://jupyter.org/">Jupyter</a>, <a href="https://www.scipy.org/">SciPy</a>, <a href="http://julialang.org/">Julia</a>,
+<a href="https://fr.wikipedia.org/wiki/LaTeX">Latex</a>, and more.</p>
+
+<p>Its codebase is <a href="https://github.com/sagemathinc/smc">open-source</a>, distributed under the GNU General Public
+License. The platform is run by a private company (SageMath Inc.) created by William Stein
+who is also the initiator of the SageMath software. The platform offers both free
+and paying premium accounts.</p>
+
+<h3 id="projects">Projects</h3>
+
+<p>The main tool of the SageMathCloud platform is the possibility to create <strong>projects</strong>
+from which you can access the many features. A single user can create as many
+projects as needed. Each project is an <strong>independant Linux virtual machine</strong>. It
+thus comes with a full file system and an <strong>online terminal</strong> that allows you to
+run Linux commands. The storage of each project is limited by default but can be
+extended on premium accounts. You can access the files through the SageMathCloud
+web interface or also through ssh.</p>
+
+<p>One key feature is that each project can be <strong>shared by multiple users</strong>. This allows
+sharing access to the files and also <strong>real time editing</strong> though the platform. Single
+files or folders can also be made <strong>public</strong>. A link is then provided which allows
+either viewing or downloading the files (even without a SageMathCloud account) and
+also an easy way to copy onto a different SageMathCloud project owned by the viewer.</p>
+
+<h3 id="softwares">Softwares</h3>
+
+<p>When you create a SageMathCloud project, your Linux virtual machine comes with many
+softwares and tools especially useful for mathematicians and scientists in general.
+We list here the most important ones.</p>
+
+<ul>
+  <li>
+    <p><strong>Sage</strong> and <strong>Sage worksheets</strong>. As the name indicates, the platform was primarily
+ developed as a replacement for the old Sage notebook server to allow collaborative
+ online work using Sage. The <strong>SageMath</strong> software is of course installed by default
+ on the virtual machine and one can run Sage through the online terminal. The platform
+ also offers its own <strong>Sage worksheet filetype</strong> to edit and run Sage code in a cell-type
+ system (as in the Jupyter notebook or the old Sage notebook) mixed with other cell types
+ like text and HTML. This is used to create interactive worksheets that can be easily
+ shared and copied.</p>
+  </li>
+  <li>
+    <p><strong>Jupyter</strong>. SageMathCloud includes a Jupyter notebook interface with many kernel
+ options (Python 2, Python 3, Anaconda, Sage, R, Julia, and more). On top of the usual
+ interface, SageMathCloud’s Jupyter offers <strong>real time</strong> synchronization among
+ multi users.</p>
+  </li>
+  <li>
+    <p><strong>Latex</strong>. The common document preparation system Latex is installed on the virtual
+ machine. It also offers a multi user editor with real time synchronization and
+ a dual view of both the Latex source code and pdf output.</p>
+  </li>
+</ul>
+
+<h3 id="notebooks-smc-sage-and-jupyter">Notebooks: SMC, Sage and Jupyter</h3>
+
+<p>SageMathCloud offers very inovative features in terms of notebooks which should be studied
+both on technichal and usability aspects.</p>
+
+<ul>
+  <li>
+    <p><strong>Real time notebooks</strong>. Real time multi user synchronization
+ is a key aspect of SageMathCloud development. In particulatr, it has been a motivation
+ for the development of SageMathCloud homemade Sage worksheet. More recently, it has
+ also been added to the <strong>Jupyer notebook</strong> by <em>enhancing</em> the original
+ software. This enhancement is of particular interest for OpenDreamKit as this could
+ benefit all Jupyer users.</p>
+  </li>
+  <li>
+    <p><strong>Muli-kernel, multi-client</strong>. The multi-kernel philosophy is an inherent part
+ of Jupyer development. Indeed, Jupyer is a notebook interface that can be used
+ with many different language kernels (python, Sage, Julia, and more). SageMathCloud
+ follows the same spirit and offers a variety of kernels on the Sage worksheet. One advantage
+ of the Sage worksheet is that it allows for <strong>many kernels</strong> to be used in different
+ cells of one single worksheet (in Jupyer, the kernel has to be chosen once and for all
+ for the entire worksheet). Furthermore, SageMathCloud has developed what they call the <strong>Jupyer
+ bridge</strong>: allowing user to run a Jupyer kernel from within a Sage worksheet. In this
+ sense, the Sage worksheet could be seen as alternative client to Jupyer the same way one
+ can develop alternative kernels. More on this question can be read on the <a href="https://github.com/sagemathinc/smc/wiki/sagejupyter">github page</a> of SageMathInc.</p>
+  </li>
+</ul>
+
+<h2 id="sharing-and-teaching-with-sagemathcloud">Sharing and teaching with SageMathCloud</h2>
+
+<h3 id="accessibility">Accessibility</h3>
+
+<p>The great advantage of SageMathCloud is that it offers a <strong>complete scientific environment</strong>
+without the usual setting up hassle. It makes the different software very easy to access
+independently of the user personal system as long as there is an access to a good Internet
+connexion. As an example, a mathematician can share a demo of code (in a Jupyter
+or a Sage notebook) that could be used directly by its collaborators. Of course,
+the Internet access is itself a limit. Given poor network access, for example but not only
+in some developing countries where bandwidth is sometimes limited.</p>
+
+<h3 id="teaching">Teaching</h3>
+
+<p>When teaching is concerned, the sharing facilities of SageMathCloud come very useful.
+Moreover, the platform offers a course managing system. The principle is as follows:
+the teacher has acces to a “main project” containing the class material; every student
+has its own project which is shared with the teacher. The course management system
+allows for automatic actions like:</p>
+
+<ul>
+  <li>Create all the student projects where the teacher is automatically added as a
+ collaborator.</li>
+  <li>Create assignments by copying some material from the main project to the students
+ projects.</li>
+  <li>Collecting, grading, and returning assignments by copying back and forth between
+ the students projects and the main project.</li>
+</ul>
+
+<p>An <em>assignment</em> is just a folder. It can have multiple content depending on the class.
+Of course, the system is especially interesting when the assignment is given within
+an <strong>interactive worksheet</strong> and can then be achieved by the student directly on the
+interface. SageMathCloud then becomes a very good interface to initiate students
+to the many scientific softwares it offers.</p>
+
+<h2 id="sagemathcloud-and-opendreamkit">SageMathCloud and OpenDreamKit</h2>
+
+<p>The many features of SageMathCloud make it a very interesting project for OpenDreamKit
+to look at. Indeed, it offers one of the leading technologies for scientists in terms of cloud
+project management, teaching and sharing facilities. In particular it showcases a collection of
+<strong>features</strong> that have been selected and adopted by a wide
+community.It also has some limits which
+we would like to address through our project:</p>
+
+<ul>
+  <li>
+    <p><strong>Accessibility</strong>. As previously mentioned, the cloud based interface can not be easily
+ accessed in places where the Internet connexion is not good enough. One solution
+ would be to have clear easy-to-follow instructions on how to install a SageMathCloud
+ platform in a local institution or on a personal machine. This is to be taken care of in D3.2 and D3.4.</p>
+  </li>
+  <li>
+    <p><strong>Interoperability and file formats</strong>. At the moment, the SageMathCloud platform
+ offers two file formats for interactive worksheet: the Jupyter one and a home-made
+ Sage worksheet one. It is not possible to run the Sage worksheets elsewhere than
+ on the platform. Especially, there is no way to run a Sage worksheet on a local
+ Sage installation. It is not yet clear what a long term unified worksheet solution
+ would be and it is part of the OpenDreamKit project to work on this question. The
+ technical choices made for the Sage worksheets are interesting to investigate in this
+ regard, as well as, file conversions and so on.</p>
+  </li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="http://sagemath.blogspot.fr/2015/05/guiding-principles-for-sagemath-inc.html">Guiding principles for SageMath Inc.</a></li>
+  <li><a href="http://wstein.org/talks/2016-06-sage-bp/bp.pdf">The origin of SageMath</a> by William Stein</li>
+  <li><a href="http://sagemath.blogspot.fr/2014/08/what-is-sagemathcloud-lets-clear-some.html">What is SageMathCloud</a> by William Stein</li>
+  <li><a href="https://github.com/sagemathinc/smc/wiki/sagejupyter">Jupyter and Sage on SageMathCloud</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/03/08/SMC/">March 08, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>March 01, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/03/01/jupyter-cse">
+<h4><a href="http://opendreamkit.org/2017/03/01/jupyter-cse/">Jupyter Notebooks Facilitating Productivity, Sustainability, and Accessibility of Data Science</a></h4>
+<div class="entry">
+<div class="content">
+<p>Min Ragan-Kelley presented a poster on Jupyter notebooks facilitating
+productivity, sustainability, and accessibility of data science and computational science in general.
+The poster included the role of OpenDreamKit-supported projects,
+such as nbdime and nbval in facilitating reproducible science.</p>
+
+<p><a href="https://figshare.com/articles/Jupyter_Notebooks_Facilitating_Productivity_Sustainability_and_Accessibility_of_Data_Science/4696414">PDF of Poster</a></p>
+
+<p><a href="https://doi.org/10.6084/m9.figshare.4696414.v1">DOI: 10.6084/m9.figshare.4696414.v1</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/03/01/jupyter-cse/">March 01, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>February 28, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/02/28/SMCTutorial">
+<h4><a href="http://opendreamkit.org/2017/02/28/SMCTutorial/">SageMathCloud tutorial</a></h4>
+<div class="entry">
+<div class="content">
+<p>We just released <a href="https://mikecroucher.github.io/SMC_tutorial/">a tutorial for teachers using SageMathCloud</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/02/28/SMCTutorial/">February 28, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
 </div>
 
 </div>
@@ -216,6 +2010,469 @@ This is a followup to <a href="http://sagemath.blogspot.com/2016/07/datadogs-pri
 
 <p class="date">
 <a href="http://sheaves.github.io/Distributive-Laws/">February 18, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>February 15, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/02/15/JupyterICMS">
+<h4><a href="http://opendreamkit.org/2017/02/15/JupyterICMS/">Reports from "Computational Mathematics with Jupyter" workshop</a></h4>
+<div class="entry">
+<div class="content">
+<p>Jointly with the Collaborative Computational Project <a href="http://www.codima.ac.uk/">“CoDiMa - CCP
+in the area of Computational Discrete Mathematics”</a>,
+we have organised the workshop
+<a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">“Computational Mathematics with Jupyter”</a>,
+which took place at the <a href="http://www.icms.org.uk/">International Centre for Mathematical Sciences</a>
+in Edinburgh on 16-20 January 2017. You can find some reports from the workshop here:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.software.ac.uk/blog/2017-02-07-computational-mathematics-jupyter"><strong>Computational Mathematics with Jupyter</strong></a>
+by Raniere Silva (Software Sustainability Institute) and Hans Fangohr (University of Southampton)</p>
+  </li>
+  <li>
+    <p><a href="https://www.software.ac.uk/blog/2017-02-13-computational-mathematics-jupyter-sprint"><strong>Computational Mathematics with Jupyter: Sprint</strong></a>
+by Raniere Silva (Software Sustainability Institute)</p>
+  </li>
+  <li>
+    <p>Storify of <a href="https://storify.com/CIRCA_StAndrews/computational-mathematics-with-jupyter"><strong>#JupyterICMS</strong></a> tweets</p>
+  </li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/02/15/JupyterICMS/">February 15, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>January 20, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/01/20/Journee-Runtime">
+<h4><a href="http://opendreamkit.org/2017/01/20/Journee-Runtime/">Task based parallelization of recursive linear algebra routines using Kaapi</a></h4>
+<div class="entry">
+<div class="content">
+<p>Clément Pernet gave a talk at the <a href="http://calcul.math.cnrs.fr/spip.php?article275">Journée Runtime</a>, on the work of the <a href="http://opendreamkit.org/partners/">UGA partner</a> (formerly UJF) on the parallelization of exact linear algebra using recursive tasks.</p>
+
+<p><a href="http://calcul.math.cnrs.fr/Documents/Journees/janv2017/runtime_pernet.pdf">Pdf slides of Talk</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/01/20/Journee-Runtime/">January 20, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/01/20/JOOMMF-intro">
+<h4><a href="http://opendreamkit.org/2017/01/20/JOOMMF-intro/">A case study of computational science in Jupyter notebooks: JOOMMF</a></h4>
+<div class="entry">
+<div class="content">
+<p>Hans Fangohr gave an introduction to computational micromagnetics and
+the current workflow that is used by thousands of scientists across
+the planet. He then introduced a new Python interface to the
+computational tool (OOMMF), and demonstrate how this can be driven
+from within a Jupyter Notebook. Through the notebook, work can be
+carried out more effectively, and more reproducibly. A roadmap and
+update for the Jupyter-OOMMF project was presented as well.</p>
+
+<p><a href="http://joommf.github.io/assets/2017-01-20-Edinburgh-Jupyter-workshop-joommf.pdf">Pdf slides of Talk</a></p>
+
+<p><a href="https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-standard_problem3.ipynb">Notebook of micromagnetic simulation (standard problem 3)</a></p>
+
+<p><a href="https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-micromagneticmodel.ipynb">Notebook of micromagnetic model</a></p>
+
+<p><a href="https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter">Blog entry mentioning the presentation</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/01/20/JOOMMF-intro/">January 20, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>January 19, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee">
+<h4><a href="http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee/">Biannual ODK Steering Committee meeting</a></h4>
+<div class="entry">
+<div class="content">
+<p>The biannual OpenDreamKit Steering Committee meeting is taking place in Edinburgh at the occasion of the <a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">Computational Mathematics with Jupyter</a> workshop.</p>
+
+<ul>
+  <li>Date: 19/01/2017</li>
+  <li>Location: <a href="http://www.icms.org.uk/">ICMS</a>, Edinburgh, United-Kingdom</li>
+  <li>10am-12am (local time), lecture hall on the 4th room</li>
+  <li><a href="https://framadate.org/IsCZEQqctimhKiHU">Participants</a></li>
+  <li><a href="https://mensuel.framapad.org/p/odk-sc">Pad</a></li>
+  <li><a href="https://gitter.im/OpenDreamKit">Gitter chat</a></li>
+  <li><a href="https://appear.in/odk-sc">Appear.in chat room</a> (backup in case videoconference would fail)</li>
+</ul>
+
+<h2 id="brief-agenda">Brief agenda</h2>
+
+<ul>
+  <li>Preparation for the formal review</li>
+  <li>Progress reports per site</li>
+  <li>Advisory Board and Quality Review Board</li>
+  <li>Amendment to the grant agreement</li>
+  <li>Key Performance Indicators</li>
+  <li>Deliverables due Month 18</li>
+  <li>WP7 topics in view of personnel changes</li>
+  <li>Future funding</li>
+</ul>
+
+<h2 id="detailed-agenda-and-minutes">Detailed <a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/steering-minutes/">agenda and minutes</a></h2>
+
+<h2 id="progress-reports-per-site">Progress reports per site</h2>
+
+<ul>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/ParisSud">Université Paris Sud</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/CNRS">CNRS</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/JacU">Jacobs University Bremen</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UJF">Université Joseph Fourier</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Kaiserslautern">University of Kaiserslautern</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Oxford">University of Oxford</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Silesia">University of Silesia</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Sheffield">University of Sheffield</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/southampton.pdf">University of Southampton</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/StAndrews">University of St Andrews</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UVersailles">Université Versailles Saint-Quentin</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Warwick">University of Warwick</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Zurich">Universität Zürich</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Logilab">Logilab</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Simula">Simula Research Laboratory</a></li>
+  <li><a href="http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UGent/ugent.pdf">Universiteit Gent</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee/">January 19, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>January 16, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter">
+<h4><a href="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter/">Workshop: Computational Mathematics with Jupyter</a></h4>
+<div class="entry">
+<div class="content">
+<p>Jointly with the Collaborative Computational Project <a href="http://www.codima.ac.uk/">“CoDiMa - CCP
+in the area of Computational Discrete Mathematics”</a>,
+we are currently organising a workshop
+<a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">“Computational Mathematics with Jupyter”</a>.</p>
+
+<p>It will take place at the <a href="http://www.icms.org.uk/">International Centre for Mathematical Sciences</a>
+in Edinburgh on 16-20 January 2017. Please see the <a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">workshop website</a> for further details.</p>
+
+<p>The <a href="https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter">Software Sustainability Institute blog</a>
+is hosting a summary of the event.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter/">January 16, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>January 13, 2017</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2017/01/13/nbdime">
+<h4><a href="http://opendreamkit.org/2017/01/13/nbdime/">nbdime released</a></h4>
+<div class="entry">
+<div class="content">
+<p><a href="https://nbdime.readthedocs.io">nbdime</a> has had its first stable release.
+nbdime provides tools for diffing and merging Jupyter notebooks,
+and integrating notebooks into git workflow.
+nbdime aims to alleviate some common difficulties when working with  Jupyter notebooks.</p>
+
+<p>Particular features of nbdime:</p>
+
+<ul>
+  <li>recognizing binary outputs that cannot be reasonably interpreted in the terminal</li>
+  <li>recognizing transient fields and eliminating them from merge conflicts</li>
+  <li>ensuring that merged notebooks are always valid</li>
+  <li>integration with git as <code class="highlighter-rouge">drivers</code> for passive diff/merge integration and <code class="highlighter-rouge">tools</code> for interactive GUI integration</li>
+</ul>
+
+<p>Tools provided by nbdime:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">nbshow</code>: show a legible formatting of a notebook on the command-line</li>
+  <li><code class="highlighter-rouge">nbdiff</code>: command-line diff of notebooks, eliding outputs that are known to not be renderable in a terminal. <code class="highlighter-rouge">nbdiff</code> can be integrated into git as a diff driver</li>
+  <li><code class="highlighter-rouge">nbdiff-web</code>: create a rich, rendered web view of the changes between two notebooks</li>
+  <li><code class="highlighter-rouge">nbmerge</code>: three-way merge with automatic conflict resolution, which can be integrated into git as a merge driver, ensuring always-valid notebooks and eliminating merge conflicts on transient fields</li>
+  <li><code class="highlighter-rouge">nbmerge-web</code>: interactive three-way merge tool for manually resolving merge conflicts</li>
+</ul>
+
+<p>More info <a href="https://nbdime.readthedocs.io">on nbdime</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2017/01/13/nbdime/">January 13, 2017 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>December 28, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/12/28/pythran-typing">
+<h4><a href="http://opendreamkit.org/2016/12/28/pythran-typing/">From pythran import typing</a></h4>
+<div class="entry">
+<div class="content">
+<p>As part of its OpenDreamKit deliverable <a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/117">D5.4 (Make Pythran typing better to improve error information)</a>, the Pythran team has written an in-depth <a href="http://serge-sans-paille.github.io/pythran-stories/from-pythran-import-typing.html">article about an unsound type checker</a>.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/12/28/pythran-typing/">December 28, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>December 22, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/12/22/RSE-position-warwick">
+<h4><a href="http://opendreamkit.org/2016/12/22/RSE-position-warwick/">Full-time open-ended research software engineer position</a></h4>
+<div class="entry">
+<div class="content">
+<p>We are seeking a full-time research software engineer at Warwick to
+work with Professor John Cremona on those parts of the OpenDreamKit
+project connected with the LMFDB in relation to Work Package 6.  The
+position is open-ended.  The post holder will be employed within the
+Scientific Computing Research Technology Platform (RTP) at Warwick,
+initially under secondment to Professor Cremona for the duration of
+the ODK project, together with longer-term responsibilities for the
+development and support of research software across the University.</p>
+
+<h1 id="job-advertisement">Job advertisement</h1>
+
+<p>The full advertisement may be found <a href="https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&ownertype=fair&jcode=1625541&vt_template=1457&adminview=1">here</a>.</p>
+
+<h1 id="deadline">Deadline</h1>
+
+<p>Deadline for applications: 26 January 2017.</p>
+
+<h1 id="location">Location</h1>
+
+<p>The developer will work at the <a href="http://www2.warwick.ac.uk/">University of Warwick</a>, UK.</p>
+
+<h1 id="mission-and-activities">Mission and activities</h1>
+
+<p>Initially, to work as part of the OpenDreamKit collaboration, on those
+parts of WP6 related to the LMFDB project.  Longer term, to play a
+leading role in the development of research software support at
+Warwick.</p>
+
+<h1 id="skills-requirements">Skills requirements</h1>
+
+<p>See the See the full <a href="https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&ownertype=fair&jcode=1625541&vt_template=1457&adminview=1">job
+advertisement</a>
+for a detailed job description, and a list f essential and desirable
+criteria for the person to be appointed.</p>
+
+<h1 id="context">Context</h1>
+
+<p>Until 31 August 2019, the position will be mainly funded by</p>
+
+<p><a href="http://opendreamkit.org">OpenDreamKit</a>, a
+<a href="https://ec.europa.eu/programmes/horizon2020/">Horizon 2020</a>
+European <a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures">Research Infrastructure</a>
+project that will run for four years, starting from September</p>
+<ol>
+  <li>This project brings together the open-source computational
+mathematics ecosystem – and in particular
+<a href="http://linalg.org/">LinBox</a>,
+<a href="http://mpir.org">MPIR</a>,
+<a href="http://sagemath.org/">SageMath</a>,
+<a href="http://www.gap-system.org/">GAP</a>,
+<a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a>,
+<a href="http://lmfdb.org/">LMFDB</a>,
+<a href="http://www.singular.uni-kl.de/">Singular</a>,
+<a href="https://mathhub.info/">MathHub</a>,
+and the
+<a href="http://jupyter.org/">IPython/Jupyter</a> interactive computing
+environment.
+– toward building a
+flexible toolkit for
+<a href="http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html">Virtual Research Environments</a>
+for mathematics. Lead by Université Paris-Sud, this project involves
+about 50 people spread over 15 sites in Europe, with a total budget of
+about 7.6 million euros.</li>
+</ol>
+
+<p>From 1 September 2019 the post will be funded by the University of Warwick.</p>
+
+<h1 id="further-particulars">Further particulars</h1>
+
+<p>See the full <a href="https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&ownertype=fair&jcode=1625541&vt_template=1457&adminview=1">job
+advertisement</a>.</p>
+
+<h1 id="expressions-of-interest">Expressions of interest</h1>
+
+<p>Interested candidates should send an email to Professor John Cremona
+(j.e.cremona@warwick.ac.uk) for further information about the
+position, as soon as possible.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/12/22/RSE-position-warwick/">December 22, 2016 12:00 AM</a>
 </p>
 </div>
 </div>
@@ -287,6 +2544,179 @@ given interval of time. See <tt class="docutils literal">draw_sage_build?</tt> f
 </div>
 
 
+
+</div>
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/12/16/nbdime-release-0.1.0">
+<h4><a href="http://opendreamkit.org/2016/12/16/nbdime-release-0.1.0/">nbdime 0.1.0</a></h4>
+<div class="entry">
+<div class="content">
+<p>nbdime 0.1.0 has been released, implementing tools for diffing and merging Jupyter notebooks</p>
+
+<p>Key features:</p>
+
+<ul>
+  <li>nbdiff for diffing notebooks in the terminal</li>
+  <li>nbdiff-web for viewing a rich, rendered diff of two notebooks</li>
+  <li>nbmerge for merging three notebooks, with automatic conflict resolution that should always guarantee a valid notebook, even with unresolved conflicts</li>
+  <li>nbmerge-web for manually resolving conflicts when merging notebooks</li>
+  <li>nbshow for quickly viewing a notebook in the terminal</li>
+  <li>
+    <p>git integration for using the diff and merge tools on notebook files by default</p>
+  </li>
+  <li><a href="https://nbdime.readthedocs.io">Read the docs!</a></li>
+  <li><a href="https://github.com/jupyter/nbdime">Contribute!</a></li>
+  <li><a href="https://pypi.python.org/pypi/nbdime">Download!</a></li>
+</ul></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/12/16/nbdime-release-0.1.0/">December 16, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>December 15, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/12/15/developer-position-kaiserslautern">
+<h4><a href="http://opendreamkit.org/2016/12/15/developer-position-kaiserslautern/">Full-time mathematical software developer position at TU Kaiserslautern</a></h4>
+<div class="entry">
+<div class="content">
+<p>We are seeking a full-time mathematical software developer at TU Kaiserslautern to work with Prof. Wolfram Decker on the Singular contribution to the OpenDreamKit project.</p>
+
+<h1 id="deadline">Deadline</h1>
+
+<p>Deadline for applications: TBA.</p>
+
+<h1 id="location">Location</h1>
+
+<p>The developer will work at TU Kaiserslautern in the city of Kaiserslautern Germany. Kaiserslautern is next to one of the largest contiguous forests in Europe.</p>
+
+<h1 id="mission">Mission</h1>
+
+<p>To work as part of the OpenDreamKit collaboration, to implement improvements via parallelisation of components of Singular.</p>
+
+<h1 id="activities">Activities</h1>
+
+<p>To implement parallel algorithms in Singular in C/C++.</p>
+
+<p>Particular deliverables include:</p>
+
+<ul>
+  <li>
+    <p>Improving the quadratic sieve for integer factorisation.</p>
+  </li>
+  <li>
+    <p>Parallelising the new polynomial arithmetic functionality in Singular.</p>
+  </li>
+</ul>
+
+<p>Depending on the skills of the applicant, the developer may also wish to contribute to other aspects of the Singular project and mathematical research in Kaiserslautern.</p>
+
+<h1 id="skills-requirements">Skills requirements</h1>
+
+<ul>
+  <li>
+    <p>C/C++ programming experience</p>
+  </li>
+  <li>
+    <p>Interest in either:</p>
+
+    <ul>
+      <li>algebra/number theory/algebraic geometry</li>
+      <li>fast arithmetic</li>
+      <li>the design and development of computer algebra systems</li>
+    </ul>
+  </li>
+  <li>
+    <p>Fluency in English</p>
+  </li>
+  <li>
+    <p>Must have an Masters degree in Mathematics fully certificated</p>
+  </li>
+  <li>
+    <p>Experience in Open Source development and tooling (GitHub)</p>
+  </li>
+</ul>
+
+<h1 id="context">Context</h1>
+
+<p>The position will be funded by</p>
+
+<p><a href="http://opendreamkit.org">OpenDreamKit</a>, a
+<a href="https://ec.europa.eu/programmes/horizon2020/">Horizon 2020</a>
+European <a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures">Research Infrastructure</a>
+project that will run for four years, starting from September</p>
+<ol>
+  <li>This project brings together the open-source computational
+mathematics ecosystem – and in particular
+<a href="http://linalg.org/">LinBox</a>,
+<a href="http://mpir.org">MPIR</a>,
+<a href="http://sagemath.org/">SageMath</a>,
+<a href="http://www.gap-system.org/">GAP</a>,
+<a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a>,
+<a href="http://lmfdb.org/">LMFDB</a>,
+<a href="http://www.singular.uni-kl.de/">Singular</a>,
+<a href="https://mathhub.info/">MathHub</a>,
+and the
+<a href="http://jupyter.org/">IPython/Jupyter</a> interactive computing
+environment.
+– toward building a
+flexible toolkit for
+<a href="http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html">Virtual Research Environments</a>
+for mathematics. Lead by Université Paris-Sud, this project involves
+about 50 people spread over 15 sites in Europe, with a total budget of
+about 7.6 million euros.</li>
+</ol>
+
+<h1 id="applications">Applications</h1>
+
+<p>Interested candidates should send an email to both decker {at} mathematik dot uni-kl dot de and goodwillhart {at} googlemail dot com with a CV and short letter of application, as soon as possible.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/12/15/developer-position-kaiserslautern/">December 15, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
 </div>
 
 </div>
@@ -318,6 +2748,192 @@ given interval of time. See <tt class="docutils literal">draw_sage_build?</tt> f
 
 <p class="date">
 <a href="http://sagemath.blogspot.com/2016/10/rethinkdb-sagemath-andreessen-horowitz.html">by William Stein (noreply@blogger.com) at November 17, 2016 03:57 PM</a>
+</p>
+</div>
+</div>
+
+
+
+</div>
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/17/OpenScience-conference">
+<h4><a href="http://opendreamkit.org/2016/11/17/OpenScience-conference/">OpenDreamKit Virtual Research Environment</a></h4>
+<div class="entry">
+<div class="content">
+<p><a href="http://joommf.github.io/assets/2016-11-17-openscience-ljubljana.pdf">Pdf slides of Talk</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/17/OpenScience-conference/">November 17, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>November 04, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/04/jupyterday-orsay">
+<h4><a href="http://opendreamkit.org/2016/11/04/jupyterday-orsay/">Jupyter Day in Orsay:</a></h4>
+<div class="entry">
+<div class="content">
+<h1 id="-subscriptions-are-closed">!!! SUBSCRIPTIONS ARE CLOSED</h1>
+
+<p>The LoOPS network, DevLog and OpenDreamKit are organising a day for the various tools available in the <a href="http://jupyter.org/">Jupyter environment</a>.
+Notebooks are more and more used among research communities thanks to their ease of use and their interactivity. They allow
+an easy access to class documentation and appealing practical exercises for students, to share ideas between colleagues and
+to initiate a reflexion to allow reproducible research works.</p>
+
+<ul>
+  <li>Where: Room 1-2-3 of the <a href="http://www.ias.u-psud.fr/">Institut d’Astrophysique Spatiale</a>, Orsay, France</li>
+  <li>When: 6th of December 2016</li>
+  <li>Who: four core developers of Jupyter tools will be present (S. Corlay, A, Darian, T. Kluyver, B. Ragan-Kelley) and V. Pons who is working on SageMathCloud.</li>
+  <li>Event organisation: Loïc Gouarin</li>
+</ul>
+
+<p><a href="https://indico.lal.in2p3.fr/event/3319/registration/register#/register">Subscriptions</a> are free but mandatory. Most of
+talks and workshops will be given in English. You may need to bring your own training materials, in which case we will
+warn you in advance.</p>
+
+<h2 id="agenda">Agenda:</h2>
+
+<ul>
+  <li>9h15-9h45: Welcome</li>
+  <li>9h45-12h45 Presentations
+    <ul>
+      <li>A. Darian et S. Corlay : JupyterLab and third-party extensions, featuring ipywidgets: the next generation of Jupyter notebooks.</li>
+      <li>B. Ragan-Kelley : JupyterHub: Deploying Jupyter Notebooks for students and researchers.</li>
+      <li>V Fauske : nbdime: diffing and merging notebooks.</li>
+      <li>V. Pons : the SageMathCloud platform</li>
+    </ul>
+  </li>
+  <li>12h45-14h00 Buffet</li>
+  <li>14h00-14h30 T. Kluyver: Nbconvert: make things from notebooks</li>
+  <li>14h30-17h30 Workshops run in parallel</li>
+</ul>
+
+<h2 id="presentations">Presentations:</h2>
+<p>1) A. Darian et S. Corlay : JupyterLab and third-party extensions, featuring ipywidgets: the next generation of Jupyter notebooks</p>
+
+<p>This talk will consist of an architectural overview and the current state of affairs of the new JupyterLab and ipywidgets.
+It will feature demos of the master branch of these projects, reflecting the latest developments</p>
+
+<p>2) B. Ragan-Kelley : JupyterHub: Deploying Jupyter Notebooks for students and researchers</p>
+
+<p>Since the Jupyter notebook is a web-based environment, the notebook server can be run remotely, not just on your local
+machine. JupyterHub is a multi-user server, aimed at helping research groups and instructors host notebook servers for
+their users or students. By default, JupyterHub uses the local system users and PAM authentication, but it can be
+customized to use any authentication system, including GitHub, CILogon, Shibboleth, and more. The way single-user
+servers are spawned can also be customized to use services such as Docker, Kubernetes, or HPC cluster queuing systems.
+The tutorial will cover a basic deployment of JupyterHub on a single machine, then extending it to use docker and GitHub
+authentication, as well as general best practices for JupyterHub deployment.</p>
+
+<p>3) V. Fauske : nbdime: diffing and merging notebooks</p>
+
+<p>Jupyter notebooks are JSON documents containing a combination of code, prose, and output. These outputs may be rich
+media, such as HTML or images. The use of JSON and including output can present challenges when working with version
+control systems and code review. The JSON structure significantly impedes the readability of diffs, and simple line-based
+merge tools can produce invalid results. nbdime aims to provide diff and merge tools specifically for notebooks. For diffs,
+nbdime shows rendered diffs of notebooks, so that the content can be compared efficiently, rather than the raw JSON. Merges
+performed with nbdime will guarantee a valid notebook as a result, even in the event of conflicts. nbdime integrates with
+existing tools, such as git, so you shouldn’t need to change how you work.</p>
+
+<p>4) V. Pons : the SageMathCloud platform</p>
+
+<p>We will present the open-source interactive platform SageMathCloud and its many useful aspects for research collaboration
+and teaching:</p>
+
+<ul>
+  <li>creation of a collaborative project;</li>
+  <li>sharing files and worksheets;</li>
+  <li>using Jupyter in SageMathCloud;</li>
+  <li>multi-user real time editing;</li>
+  <li>course management with Jupyter and SageMathCloud</li>
+</ul>
+
+<p>5) T. Kluyver : Nbconvert: make things from notebooks</p>
+
+<p>Nbconvert is a set of tools to convert notebooks to other file types, such as HTML,
+Latex, or executable scripts. We’ll cover how to use it at the command line and in the
+notebook interface, along with an overview of how it works. Nbconvert is also designed to be highly extensible,
+and we’ll describe some of the things that can be done by building on nbconvert, such as extra converters, reports
+based on input, and cross-linking between converted notebooks.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/04/jupyterday-orsay/">November 04, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>November 02, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016">
+<h4><a href="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016/">OOMMF Python interface presentation</a></h4>
+<div class="entry">
+<div class="content">
+<p>Hans Fangohr presented the first prototype of the Python OOMMF interface at the 61st international meeting on magnetism and magnetic materials in New Orleans (US).</p>
+
+<p><a href="http://joommf.github.io/assets/2016-11-02-MMM2016-CF-03-Python-OOMMF.pdf">Pdf slides of Talk</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016/">November 02, 2016 12:00 AM</a>
 </p>
 </div>
 </div>
@@ -441,6 +3057,9 @@ maintainer</a>.
 <a href="http://ondrejcertik.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://ondrejcertik.blogspot.com/search/label/sage" class="message" title="no activity in 356 days">Ondrej Certik</a>
 </li>
 <li>
+<a href="http://opendreamkit.org/atom.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a>
+</li>
+<li>
 <a href="http://phisycsandgnulinux.site11.com/?tag=sage&amp;feed=rss2" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a class="message" title="no activity in 356 days">Oscar Lazo</a>
 </li>
 <li>
@@ -492,7 +3111,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-October 12, 2017 06:23 PM<br>
+October 12, 2017 06:25 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
