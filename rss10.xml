@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/15/WP6-Usecase" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/11/SageWindows" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-6949985998313614355" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-8893535883917863217" />
@@ -52,6 +53,17 @@
 	</items>
 </channel>
 
+<item rdf:about="http://opendreamkit.org/2017/10/15/WP6-Usecase">
+	<title>OpenDreamKit: WP6 Math-in-the-Middle Integration Use Case to be Published at MACIS-2017 (two papers)</title>
+	<link>http://opendreamkit.org/2017/10/15/WP6-Usecase/</link>
+	<content:encoded>&lt;p&gt;OpenDreamKit WP6 (Data/Knowledge/Software-Bases) has reported on the first use cases in
+two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org/&quot;&gt;MACIS 2017&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/blob/master/WP6/MACIS17-interop/crc.pdf&quot;&gt;Knowledge-Based Interoperability for Mathematical Software Systems&lt;/a&gt; (Michael Kohlhase, Luca Defeo, Dennis Müller, Markus Pfeiffer, Florian Rabe, Nicolas Thiery, Victor Vasilyxev, and Tom Wiesing) develops the Math-in-the-Middle Ontology for computational group theory and shows a three-system use case (Sage, GAP, Singular).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/blob/master/WP6/MACIS17-vt/crc.pdf&quot;&gt;Virtual Theories - A Uniform Interface to Mathematical Knowledge Bases&lt;/a&gt; (Tom Wiesing, Michael Kohlhase, and Florian Rabe) extends the MMT theories to “Virtual theories”, which do not have the “load-into-memory-fully” restrictions of “concrete theories” and are therefore suited for very large data sources like the &lt;a href=&quot;http://lmfdb.org&quot;&gt;LMFDB&lt;/a&gt; or &lt;a href=&quot;http://opendreamkit.org/oeis.org&quot;&gt;OEIS&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded>
+	<dc:date>2017-10-15T00:00:00+00:00</dc:date>
+</item>
 <item rdf:about="http://opendreamkit.org/2017/10/11/SageWindows">
 	<title>OpenDreamKit: Release: SageMath for Windows</title>
 	<link>http://opendreamkit.org/2017/10/11/SageWindows/</link>
