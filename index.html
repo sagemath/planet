@@ -716,13 +716,12 @@ in the Cython documentation.</p>
     <p>A small monkey-patch is applied to <code class="highlighter-rouge">inspect.isfunction</code>.
 You can put this in your Sphinx <code class="highlighter-rouge">conf.py</code> for example:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> def isfunction(obj):
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> def isfunction(obj):
      return hasattr(type(obj), "__code__")
 
  import inspect
  inspect.isfunction = isfunction
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -742,21 +741,19 @@ In Python, there are two kinds of functions
   <li>
     <p>User-defined functions, defined with <code class="highlighter-rouge">def</code> or <code class="highlighter-rouge">lambda</code>:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> &gt;&gt;&gt; def foo(): pass
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt;&gt;&gt; def foo(): pass
  &gt;&gt;&gt; type(foo)
  &lt;class 'function'&gt;
  &gt;&gt;&gt; type(lambda x: x)
  &lt;class 'function'&gt;
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Built-in functions such as <code class="highlighter-rouge">len</code>, <code class="highlighter-rouge">repr</code> or <code class="highlighter-rouge">isinstance</code>:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> &gt;&gt;&gt; type(len)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt;&gt;&gt; type(len)
  &lt;class 'builtin_function_or_method'&gt;
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -770,34 +767,31 @@ with different behaviours.</p>
 
 <p>Let’s consider this class:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class X(object):
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class X(object):
     def printme(self):
         return repr(self)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is essentially equivalent to</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class X(object):
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class X(object):
     printme = (lambda self: repr(self))
 
 &gt;&gt;&gt; X().printme()
 '&lt;__main__.X object at 0x7fb342f960b8&gt;'
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>However, directly putting the built-in function <code class="highlighter-rouge">repr</code> in the class
 does not work as expected:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Y(object):
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Y(object):
     printme = repr
 
 &gt;&gt;&gt; Y().printme()
 Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 TypeError: repr() takes exactly one argument (0 given)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is simply something that built-in functions do not support.</p>
 
@@ -979,16 +973,14 @@ continuing to improve the process of working with Jupyter notebooks in version c
 <p>The highlight of 0.3 is much improved integration with git, making it easier than ever
 to get started with nbdime in git:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>pip install --upgrade nbdime # install nbdime
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install --upgrade nbdime # install nbdime
 nbdime config-git --global --enable # tell git to use nbdime when it sees notebooks
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and you can get nice GUI diffs directly from git refs on the command-line:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nbdiff-web master mynotebook.ipynb
-</code></pre>
-</div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nbdiff-web master mynotebook.ipynb
+</code></pre></div></div></div>
 
 
 
@@ -1482,7 +1474,7 @@ the question: “Any other comment you might have?”, we only got one answer.</
 
 <p>I found that the best way to communicate around this issue with the KWARC team is by extracting from Sage code a “math skeleton”. For this, the Sage-specific module <code class="highlighter-rouge">sageinspect</code> was very useful. I thus introspected the sage object corresponding to the class <code class="highlighter-rouge">TransitiveGroup</code>, and related objects:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># sage/src/sage/structure/sage_object.pyx
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sage/src/sage/structure/sage_object.pyx
 cdef class SageObject:
 
 # sage/local/lib/python2.7/site-packages/sage/categories/category.py
@@ -1508,17 +1500,15 @@ class PermutationGroup_unique(CachedRepresentation, PermutationGroup_generic):
 
 # sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
 class TransitiveGroup(PermutationGroup_unique):
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>What is mathematical here? Clearly, just about everything, but that is because I was selective in the printout given above: I worked up the class hierarchy from <code class="highlighter-rouge">TransitiveGroup</code> by hand, but excluded all the python objects that <em>don’t</em> inherit from <code class="highlighter-rouge">SageObject</code>. For instance, you don’t see in that list:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code># sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
 class CachedRepresentation:
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><code class="highlighter-rouge">CachedRepresentation</code> is only relevant, from a mathematical standpoint, in <em>where</em> it appears as a superclass. Its own internals are pure design decisions for CAS software, not mathematics.</p>
 
 <p>The criterion to use for “related objects” is thus that only objects inheriting from <code class="highlighter-rouge">SageObject</code> need to be navigated. So we are navigatin in the class hierarchy diamond between <code class="highlighter-rouge">TransitiveGroup</code> and <code class="highlighter-rouge">SageObject</code>, collecting classes, which I manually imported from the <code class="highlighter-rouge">sage</code> library (obviously this could be automated):</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>from sage.structure.sage_object import SageObject
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from sage.structure.sage_object import SageObject
 from sage.structure.category_object import Category     # not strictly in the class hierarchy, but included to facilitate discussion
 from sage.structure.category_object import CategoryObject
 from sage.structure.parent import Parent
@@ -1527,8 +1517,7 @@ from sage.groups.group import FiniteGroup
 from sage.groups.perm_gps.permgroup import PermutationGroup_generic
 from sage.groups.perm_gps.permgroup_named import PermutationGroup_unique
 from sage.groups.perm_gps.permgroup_named import TransitiveGroup
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is how I selected the objects from which I wanted to extract more information, producing the list of class definitions above.</p>
 
@@ -1540,7 +1529,7 @@ from sage.groups.perm_gps.permgroup_named import TransitiveGroup
 
 <p>In any case, here is the full printout of what I get for just the method declarations for <code class="highlighter-rouge">PermutationGroup_generic</code>, the <code class="highlighter-rouge">Parent</code> that is most interesting:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 # sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
 class PermutationGroup_generic(group.FiniteGroup):
     def __init__(self, gens=None, gap_group=None, canonicalize=True, domain=None, category=None):
@@ -1647,8 +1636,7 @@ class PermutationGroup_generic(group.FiniteGroup):
     def poincare_series(self, p=2, n=10):
     def sylow_subgroup(self, p):
     def upper_central_series(self):
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Here are things a semi-intelligent mathematician can deduce from this fleshed-out skeleton, and that we might be able to export automatically:</p>
 <ul>
@@ -3152,7 +3140,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-October 22, 2017 07:15 AM<br>
+October 22, 2017 08:16 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-10-22T07:15:21+00:00</updated>
+	<updated>2017-10-22T08:16:17+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -28,7 +28,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -412,7 +412,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -486,7 +486,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -542,7 +542,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -573,13 +573,12 @@ in the Cython documentation.&lt;/p&gt;
     &lt;p&gt;A small monkey-patch is applied to &lt;code class=&quot;highlighter-rouge&quot;&gt;inspect.isfunction&lt;/code&gt;.
 You can put this in your Sphinx &lt;code class=&quot;highlighter-rouge&quot;&gt;conf.py&lt;/code&gt; for example:&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; def isfunction(obj):
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; def isfunction(obj):
      return hasattr(type(obj), &quot;__code__&quot;)
 
  import inspect
  inspect.isfunction = isfunction
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -599,21 +598,19 @@ In Python, there are two kinds of functions
   &lt;li&gt;
     &lt;p&gt;User-defined functions, defined with &lt;code class=&quot;highlighter-rouge&quot;&gt;def&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;lambda&lt;/code&gt;:&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; def foo(): pass
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; def foo(): pass
  &amp;gt;&amp;gt;&amp;gt; type(foo)
  &amp;lt;class 'function'&amp;gt;
  &amp;gt;&amp;gt;&amp;gt; type(lambda x: x)
  &amp;lt;class 'function'&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Built-in functions such as &lt;code class=&quot;highlighter-rouge&quot;&gt;len&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;repr&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;isinstance&lt;/code&gt;:&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; type(len)
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt;&amp;gt;&amp;gt; type(len)
  &amp;lt;class 'builtin_function_or_method'&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -627,34 +624,31 @@ with different behaviours.&lt;/p&gt;
 
 &lt;p&gt;Let’s consider this class:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class X(object):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class X(object):
     def printme(self):
         return repr(self)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is essentially equivalent to&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class X(object):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class X(object):
     printme = (lambda self: repr(self))
 
 &amp;gt;&amp;gt;&amp;gt; X().printme()
 '&amp;lt;__main__.X object at 0x7fb342f960b8&amp;gt;'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;However, directly putting the built-in function &lt;code class=&quot;highlighter-rouge&quot;&gt;repr&lt;/code&gt; in the class
 does not work as expected:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Y(object):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Y(object):
     printme = repr
 
 &amp;gt;&amp;gt;&amp;gt; Y().printme()
 Traceback (most recent call last):
   File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
 TypeError: repr() takes exactly one argument (0 given)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is simply something that built-in functions do not support.&lt;/p&gt;
 
@@ -736,7 +730,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -790,16 +784,14 @@ continuing to improve the process of working with Jupyter notebooks in version c
 &lt;p&gt;The highlight of 0.3 is much improved integration with git, making it easier than ever
 to get started with nbdime in git:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install --upgrade nbdime # install nbdime
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install --upgrade nbdime # install nbdime
 nbdime config-git --global --enable # tell git to use nbdime when it sees notebooks
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;and you can get nice GUI diffs directly from git refs on the command-line:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nbdiff-web master mynotebook.ipynb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content>
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nbdiff-web master mynotebook.ipynb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 		<author>
 			<name>The OpenDreamKit consortium</name>
 			<email>contact@opendreamkit.org</email>
@@ -809,7 +801,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -897,7 +889,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -940,7 +932,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1009,7 +1001,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1029,7 +1021,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1168,7 +1160,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1221,7 +1213,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 
 &lt;p&gt;I found that the best way to communicate around this issue with the KWARC team is by extracting from Sage code a “math skeleton”. For this, the Sage-specific module &lt;code class=&quot;highlighter-rouge&quot;&gt;sageinspect&lt;/code&gt; was very useful. I thus introspected the sage object corresponding to the class &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt;, and related objects:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/src/sage/structure/sage_object.pyx
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/src/sage/structure/sage_object.pyx
 cdef class SageObject:
 
 # sage/local/lib/python2.7/site-packages/sage/categories/category.py
@@ -1247,17 +1239,15 @@ class PermutationGroup_unique(CachedRepresentation, PermutationGroup_generic):
 
 # sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
 class TransitiveGroup(PermutationGroup_unique):
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;What is mathematical here? Clearly, just about everything, but that is because I was selective in the printout given above: I worked up the class hierarchy from &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt; by hand, but excluded all the python objects that &lt;em&gt;don’t&lt;/em&gt; inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt;. For instance, you don’t see in that list:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
 class CachedRepresentation:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CachedRepresentation&lt;/code&gt; is only relevant, from a mathematical standpoint, in &lt;em&gt;where&lt;/em&gt; it appears as a superclass. Its own internals are pure design decisions for CAS software, not mathematics.&lt;/p&gt;
 
 &lt;p&gt;The criterion to use for “related objects” is thus that only objects inheriting from &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt; need to be navigated. So we are navigatin in the class hierarchy diamond between &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt;, collecting classes, which I manually imported from the &lt;code class=&quot;highlighter-rouge&quot;&gt;sage&lt;/code&gt; library (obviously this could be automated):&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sage.structure.sage_object import SageObject
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sage.structure.sage_object import SageObject
 from sage.structure.category_object import Category     # not strictly in the class hierarchy, but included to facilitate discussion
 from sage.structure.category_object import CategoryObject
 from sage.structure.parent import Parent
@@ -1266,8 +1256,7 @@ from sage.groups.group import FiniteGroup
 from sage.groups.perm_gps.permgroup import PermutationGroup_generic
 from sage.groups.perm_gps.permgroup_named import PermutationGroup_unique
 from sage.groups.perm_gps.permgroup_named import TransitiveGroup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is how I selected the objects from which I wanted to extract more information, producing the list of class definitions above.&lt;/p&gt;
 
@@ -1279,7 +1268,7 @@ from sage.groups.perm_gps.permgroup_named import TransitiveGroup
 
 &lt;p&gt;In any case, here is the full printout of what I get for just the method declarations for &lt;code class=&quot;highlighter-rouge&quot;&gt;PermutationGroup_generic&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Parent&lt;/code&gt; that is most interesting:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 # sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
 class PermutationGroup_generic(group.FiniteGroup):
     def __init__(self, gens=None, gap_group=None, canonicalize=True, domain=None, category=None):
@@ -1386,8 +1375,7 @@ class PermutationGroup_generic(group.FiniteGroup):
     def poincare_series(self, p=2, n=10):
     def sylow_subgroup(self, p):
     def upper_central_series(self):
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here are things a semi-intelligent mathematician can deduce from this fleshed-out skeleton, and that we might be able to export automatically:&lt;/p&gt;
 &lt;ul&gt;
@@ -1427,7 +1415,7 @@ class PermutationGroup_generic(group.FiniteGroup):
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1453,7 +1441,7 @@ meta-theories for Sage) and a
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1635,7 +1623,7 @@ we would like to address through our project:&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1661,7 +1649,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1680,7 +1668,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1743,7 +1731,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1764,7 +1752,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1797,7 +1785,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1862,7 +1850,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1890,7 +1878,7 @@ is hosting a summary of the event.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1933,7 +1921,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -1952,7 +1940,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2047,7 +2035,7 @@ position, as soon as possible.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2131,7 +2119,7 @@ given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sa
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2239,7 +2227,7 @@ about 7.6 million euros.&lt;/li&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2278,7 +2266,7 @@ about 7.6 million euros.&lt;/li&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2377,7 +2365,7 @@ based on input, and cross-linking between converted notebooks.&lt;/p&gt;</conten
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
@@ -2398,7 +2386,7 @@ based on input, and cross-linking between converted notebooks.&lt;/p&gt;</conten
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-10-17T17:06:20+00:00</updated>
+			<updated>2017-10-22T08:16:17+00:00</updated>
 		</source>
 	</entry>
 
