@@ -54,275 +54,6 @@
 <div class="bodypadding">
 
 <div class="daygroup">
-<h2>November 02, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud">
-<h4><a href="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud/">post doc position opening at Université Paris-Sud</a></h4>
-<div class="entry">
-<div class="content">
-<p>This is an announcement for a postdoc position opening at Université
-Paris-Sud, working on the interplay between Data, Knowledge, and
-Software in Mathematics, and in particular the exploitation of
-mathematical knowledge for increased interoperability across
-computational mathematics software and mathematical databases.</p>
-
-<h1 id="time-line">Time line</h1>
-
-<p>Interviews in early december, for a recruitment from early 2018 to
-Fall 2019. Since we have a strong candidate for a half time position,
-we will also consider candidates interested in a half-time or shorter
-duration position.</p>
-
-<p>A second full-time developer will be hired later on, presumably in Fall 2016.</p>
-
-<h1 id="salary">Salary</h1>
-
-<p>Depending on the applicant’s past experience, between 2000€ and 3000€
-of monthly “salaire net” (salary after non-wage labour cost but before
-income tax). Equivalently, this is a “salaire brut” of up to 46200€
-yearly, or a “salaire brut chargé” (total cost for the project) of up
-to 5500€ monthly.</p>
-
-<h1 id="location">Location</h1>
-
-<p>The postdoc will work at the
-<a href="http://www.lri.fr">Laboratoire de Recherche en Informatique</a> of
-<a href="http://www.u-psud.fr">Université Paris Sud</a>, in the
-Orsay-Bures-Gif-Saclay campus, 25 km South-West of Paris city centre.</p>
-
-<h1 id="mission-and-activities">Mission and activities</h1>
-
-<p>OpenDreamKit’s Work Package 6 explores the interplay between Data,
-Knowledge and Software in Mathematics. In particular, it aims at
-exploiting mathematical knowledge for increased interoperability
-across computational mathematics software and mathematical databases
-(known as the Math-In-The-Middle approach). See e.g. the <a href="http://127.0.0.1:4000/2017/10/15/WP6-Usecase/">recent
-publications</a> on that
-topic, and Section 3.1.6 ``Workpackage Description’’ of the
-<a href="https://github.com/OpenDreamKit/OpenDreamKit/raw/master/Proposal/proposal-www.pdf">OpenDreamKit
-Proposal</a>.</p>
-
-<p>A successful candidate will be expected to do significant progress, in
-close collaboration with the other OpenDreamKit participants and the
-community, on some of the tasks of this Work Package:</p>
-
-<ul>
-  <li>
-    <p>D6.8: Currated Math-in-the-Middle Ontology and Alignments for GAP /
-Sage / LMFDB</p>
-  </li>
-  <li>
-    <p>T6.5: Knowledge-based code infrastructure</p>
-
-    <p>Over the last decades, computational components, and in particular
-Axiom, MuPAD, \GAP, or \Sage, have embedded more and more
-mathematical knowledge directly inside the code, as a way to better
-structure it for expressiveness, flexibility, composability,
-documentation, and robustness. In this task we will review the
-various approaches taken in these software (e.g. categories and
-dynamic class hierarchies) and in proof assistants like Coq
-(e.g. static type systems), and compare their respective strength
-and weaknesses on concrete case studies. We will also explore
-whether paradigms offered by recent programming languages like Julia
-or Scala could enable a better implementation. Based on this we will
-suggest and experiment with design improvements, and explore
-challenges such as the compilation, verification, or
-interoperability of such code.</p>
-  </li>
-</ul>
-
-<p>The candidate will be welcome to work on closely related though more
-technical tasks:</p>
-
-<ul>
-  <li>
-    <p>T4.5: Dynamic documentation and exploration system</p>
-
-    <p>Introspection has become a critical tool in interactive computation,
-allowing user to explore, on the fly, the properties and
-capabilities of the objects under manipulation. This challenge
-becomes particularly acute in systems like Sage where large parts of
-the class hierarchy is built dynamically, and static documentation
-builders like Sphinx cannot anymore render all the available
-information.</p>
-
-    <p>In this task, we will investigate how to further enhance the user
-experience. This will include:</p>
-
-    <ul>
-      <li>
-        <p>On the fly generation of Javadoc style documentation, through
-introspection, allowing e.g. the exploration of the class
-hierarchy, available methods, etc.</p>
-      </li>
-      <li>
-        <p>Widgets based on the HTML5 and web component standards to display
-graphical views of the results of SPARQL queries, as well as populating data
-structures with the results of such queries,</p>
-      </li>
-      <li>
-        <p>D4.16: Exploratory support for semantic-aware interactive widgets
-providing views on objects of the underlying computational or
-database components. Preliminary steps are demonstrated in the
-<a href="http://www.larchenvironment.com/">Larch Environment</a> project (see
-demo videos) and
-<a href="https://github.com/jbandlow/sage-explorer">sage-explorer</a>. The
-ultimate aim would be to automatically generate LMFDB-style
-interfaces.</p>
-      </li>
-    </ul>
-
-    <p>Whenever possible, those features will be implemented generically
-for any computation kernel by extending the Jupyter protocol with
-introspection and documentation queries.</p>
-  </li>
-  <li>
-    <p>T6.9: Memoisation and production of new data</p>
-
-    <p>Many CAS users run large and intensive computations, for which they
-want to collect the results while simultaneously working on software
-improvements. GAP retains computed attribute values of objects
-within a session; Sage currently has a limited <code class="highlighter-rouge">cached_method</code>.
-Neither offers storage that is persistent across sessions or
-supports publication of the result or sharing within a
-collaboration. We will use, extend and contribute back to, an
-appropriate established persistent memoisation infrastructure, such
-as <code class="highlighter-rouge">python-joblib</code>, <code class="highlighter-rouge">redis-simple-cache</code> or <code class="highlighter-rouge">dogpile.cache</code>, adding
-features needed for storage and use of results in mathematical
-research. We will design something that is simple to deploy and
-configure, and makes it easy to share results in a controlled
-manner, but provides enough assurance to enable the user to rely on
-the data, give proper credit to the original computation and rerun
-the computation if they want to.</p>
-  </li>
-</ul>
-
-<h1 id="skills-and-background-requirements">Skills and background requirements</h1>
-
-<ul>
-  <li>
-    <p>Strong experience in the design and practical implementation of
-mathematics software: computational mathematics software (e.g.
-<a href="http://sagemath.org">SageMath</a>), knowledge management systems, or
-proof systems;</p>
-  </li>
-  <li>
-    <p>PhD in mathematics or computer science;</p>
-  </li>
-  <li>
-    <p>Experience in open-source development (collaborative development
-tools, interaction with the community, …);</p>
-  </li>
-  <li>
-    <p>Fluency in programming languages such as Scala, Python, Julia, etc
-appreciated;</p>
-  </li>
-  <li>
-    <p>Strong communication skills;</p>
-  </li>
-  <li>
-    <p>Fluency in oral and written English; speaking French is not a
-prerequisite.</p>
-  </li>
-</ul>
-
-<h1 id="context">Context</h1>
-
-<p>The position will be funded by</p>
-
-<p><a href="http://opendreamkit.org">OpenDreamKit</a>, a
-<a href="https://ec.europa.eu/programmes/horizon2020/">Horizon 2020</a>
-European <a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures">Research Infrastructure</a>
-project that will run for four years, starting from September</p>
-<ol>
-  <li>This project brings together the open-source computational
-mathematics ecosystem – and in particular
-<a href="http://linalg.org/">LinBox</a>,
-<a href="http://mpir.org">MPIR</a>,
-<a href="http://sagemath.org/">SageMath</a>,
-<a href="http://www.gap-system.org/">GAP</a>,
-<a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a>,
-<a href="http://lmfdb.org/">LMFDB</a>,
-<a href="http://www.singular.uni-kl.de/">Singular</a>,
-<a href="https://mathhub.info/">MathHub</a>,
-and the
-<a href="http://jupyter.org/">IPython/Jupyter</a> interactive computing
-environment.
-– toward building a
-flexible toolkit for
-<a href="http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html">Virtual Research Environments</a>
-for mathematics. Lead by Université Paris-Sud, this project involves
-about 50 people spread over 15 sites in Europe, with a total budget of
-about 7.6 million euros.</li>
-</ol>
-
-<p>Within this ecosystem, the developer will work primarily on the free
-open-source mathematics software system
-<a href="http://sagemath.org">Sagemath</a>. Based on the
-<a href="http://www.python.org">Python</a> language and many existing open-source
-math libraries, SageMath is developed since 10 years by a worldwide
-community of 300 researchers, teachers and engineers, and has reached
-1.5M lines of code.</p>
-
-<p>The developer will work within one of the largest teams of SageMath
-developers, composed essentially of researchers in mathematics and
-computer science, at the <a href="http://www.lri.fr/">Laboratoire de Recherche en
-Informatique</a> (LRI) and in nearby institutions.
-The LRI also hosts a strong team working on proof systems.</p>
-
-<h1 id="applications">Applications</h1>
-
-<p>To apply for this position, please send an e-mail to Nicolas.Thiery at
-u-psud.fr before December 1st, with the following documents attached:</p>
-
-<ul>
-  <li>
-    <p>cover_letter.pdf: a cover letter, in English (why are you interested in this particular position);</p>
-  </li>
-  <li>
-    <p>CV.pdf: a CV, highlighting among other things your skills and
-background and your contributions to open source software;</p>
-  </li>
-  <li>
-    <p>phd_reports.pdf: PhD reports (when applicable);</p>
-  </li>
-  <li>
-    <p>reference letters (each named reference_letter_.pdf),
-or alternatively reference contact information.</p>
-  </li>
-</ul>
-
-<p>Applications sent after December 1st will be considered until the
-position is filled.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud/">November 02, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
 <h2>October 15, 2017</h2>
 
 <div class="channelgroup">
@@ -3018,6 +2749,228 @@ about 7.6 million euros.</li>
 </div>
 
 </div>
+<div class="daygroup">
+<h2>November 17, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-2555982827403411238">
+<h4><a href="http://sagemath.blogspot.com/2016/10/rethinkdb-sagemath-andreessen-horowitz.html">RethinkDB, SageMath, Andreessen-Horowitz, Basecamp and Open Source Software</a></h4>
+<div class="entry">
+<div class="content">
+<h2 id="rethinkdb-and-sustainable-business-models">RethinkDB and sustainable business models</h2>Three weeks ago, I spent the evening of Sept 12, 2016 with Daniel Mewes, who is the lead engineer of RethinkDB (an open source database). I was also supposed to meet with the co-founders, Slava and Michael, but they were too busy fundraising and couldn't join us. I pestered Daniel the whole evening about what RethinkDB's business model actually was. Yesterday, on October 6, 2016, <a href="https://rethinkdb.com/blog/rethinkdb-shutdown/" target="_blank">RethinkDB shut down.</a><br /><br />I met with some RethinkDB devs because an investor who runs a fund at the VC firm Andreessen-Horowitz (A16Z) had kindly invited me there to explain my commercialization plans for SageMath, Inc., and RethinkDB is one of the companies that <a href="https://mattermark.com/companies/rethinkdb.com">A16Z has invested in</a>. At first, I wasn't going to take the meeting with A16Z, since I have never met with Venture Capitalists before, and do not intend to raise VC. However, some of my advisors convinced me that VC's can be very helpful even if you never intend to take their investment, so I accepted the meeting.<br /><br />In the first draft of my slides for my presentation to A16Z, I had a slide with the question: "Why do you fund open source companies like RethinkDB and CoreOS, which have no clear (to me) business model? Is it out of some sense of charity to support the open source software ecosystem?" After talking with people at Google and the RethinkDB devs, I removed that slide, since charity is clearly not the answer (I don't know if there is a better answer than "by accident").<br /><br />I have used RethinkDB intensely for nearly two years, and I might be their biggest user in some sense. My product <a href="https://cloud.sagemath.com/">SageMathCloud</a>, which provides web-based course management, Python, R, Latex, etc., uses RethinkDB for everything. For example, every single time you enter some text in a realtime synchronized document, a RethinkDB table gets an entry inserted in it. I have RethinkDB tables with nearly 100 million records. I gave <a href="https://www.youtube.com/watch?v=WU6eSckPR7E">a talk at a RethinkDB meetup</a>, filed numerous bug reports, and have been described by them as "their most unlucky user". In short, in 2015 I bet big on RethinkDB, just like I bet big on Python back in 2004 when starting SageMath. And when visiting the RethinkDB devs in San Francisco (this year and also last year), I have said to them many times "I have a very strong vested interest in you guys not failing." My company SageMath, Inc. also pays RethinkDB for a support contract.<br /><br />Sustainable business models were very much on my mind, because of my upcoming meeting at A16Z and the upcoming board meeting for my company. &nbsp;SageMath, Inc.'s business model involves making money from subscriptions to SageMathCloud (which is hosted on Google Cloud Platform); of course, there are tons of details about exactly how our business works, which we've been refining based on customer feedback. Though absolutely all of our software is open source, what we sell is convenience, easy of access and use, and we provide value by hosting <a href="https://github.com/sagemathinc/smc/wiki/Teaching">hundreds of courses</a> on shared infrastructure, so it is much cheaper and easier for universities to pay us rather than hosting our software themselves (which is also <a href="https://github.com/sagemathinc/smc/blob/master/src/dev/docker/README.md">fairly easy</a>). So that's our business model, and I would argue that it is working; at least our MRR is steadily increasing and is more than twice our hosting costs (we are not cash flow positive yet due to developer costs).<br /><br />So far as I can determine, the business model of RethinkDB was to make money in the following ways: 1. Sell support contracts to companies (I bought one). 2. Sell a closed-source proprietary version of RethinkDB with extra features that were of interest to enterprise (they had a handful of such features, e.g., audit logs for queries). 3. Horizon would become a cloud-hosted competitor to Firebase, with unique advantages that users have the option to migrate from the cloud to their own private data center, and more customizability. This strategy depends on a trend for users to migrate <em>away</em> from the cloud, rather than to it, which some people at RethinkDB thought was a real trend (I disagree).<br /><br />I don't know of anything else they were seriously trying right now. The closed-source proprietary version of RethinkDB also seemed like a very recent last ditch effort that had only just begun; perhaps it directly contradicted a desire to be a 100% open source company?<br /><br />With enough users, it's easier to make certain business models work. I suspect RethinkDB does not have a lot of <strong>real users</strong>. Number of users tends to be roughly linearly related to mailing list traffic, and the <a href="https://groups.google.com/forum/#!forum/rethinkdb" target="_blank">RethinkDB mailing list</a> has an order of magnitude less traffic compared to the SageMath mailing lists, and SageMath has around 50,000 users. RethinkDB wasn't even advertised to be production ready until just over a year ago, so even they were telling people not to use it seriously until relatively recently. The adoption cycle for database technology is slow -- people wisely wait for <a href="https://aphyr.com/posts/330-jepsen-rethinkdb-2-2-3-reconfiguration" target="_blank">Aphyr's tests</a>, benchmarks comparing with similar technology, etc. I was unusual in that I chose RethinkDB much earlier than most people would, since I <strong>love the design of RethinkDB so much</strong>. It's the first database I loved, having seen a lot over many decades.<br /><br /><strong>Conclusion:</strong> RethinkDB wasn't a real business, and wouldn't become one without year(s) more runway.<br /><br />I'm also very worried about the future of RethinkDB <a href="https://docs.google.com/document/d/1Fy-drBGDTyibwEBBAX6G5otqtWiKOD2sBXmL2uVTFtE/edit" target="_blank">as an open source project</a>. I don't know if the developers have experience growing an open source community of volunteers; it's incredibly hard and its unclear they are even going to be involved. At a bare minimum, I think they must switch to a very liberal license (Apache instead of AGPL), and make everything (e.g., automated testing code, documentation, etc) open source. It's insanely hard getting any support for open source infrastructure work -- support mostly comes from small government grants (for research software) or contributions from employees at companies (that use the software). Relicensing in a company friendly way is thus critical.<br /><h2 id="company-incentives">Company Incentives</h2>Companies can be incentived in various ways, including:<br /><ul><li>to get to the next round of <strong>VC funding</strong></li><li>to be a <strong>sustainable profitable business</strong> by making more money from customers than they spend, or</li><li>to <strong>grow</strong> to have a very large number of users and somehow pivot to making money later.</li></ul>When founding a company, you have a chance to choose how your company will be incentived based on how much risk you are willing to take, the resources you have, the sort of business you are building, the current state of the market, and your model of what will happen in the future.<br /><br />For me, <a href="http://sagemath.org/">SageMath</a> is an open source project I started in 2004, and I'm in it for the long haul. I will make the business I'm building around SageMathCloud succeed, or I will die trying -- therefore I have <strong>very, very little tolerance</strong> for risk. Failure is not an option, and I am not looking for an exit. For me, the strategy that best matches my values is to incentive my company to build a profitable business, since that is most likely to survive, and also to give us the freedom to maintain our longterm support for open source and pure mathematics software.<br /><br />Thus for my company, neither optimizing for raising the next round of VC or growing at all costs makes sense. You would be surprised how many people think I'm completely wrong for concluding this.<br /><h2 id="andreessen-horowitz">Andreessen-Horowitz</h2>I spent the evening with RethinkDB developers, which scared the hell out of me regarding their business prospects. They are probably the most open source friendly VC-funded company I know of, and they had given me hope that it is possible to build a successful VC-funded tech startup around open source. I prepared for my meeting at A16Z, and deleted my slide about RethinkDB.<br /><br />I arrived at A16Z, and was greeted by incredibly friendly people. I was a little shocked when I saw their nuclear bomb art in the entry room, then went to a nice little office to wait. The meeting time arrived, and we went over my slides, and I explained my business model, goals, etc. They said there was no place for A16Z to invest directly in what I was planning to do, since I was very explicit that I'm not looking for an exit, and my plan about how big I wanted the company to grow in the next 5 years wasn't sufficiently ambitious. They were also worried about how small the total market cap of Mathematica and Matlab is (only a few hundred million?!). However, they generously and repeatedly offered to introduce me to more potential angel investors.<br /><br />We argued about the value of outside investment to the company I am trying to build. I had hoped to get some insight or introductions related to their portfolio companies that are of interest to my company (e.g., Udacity, GitHub), but they deflected all such questions. There was also some confusion, since I showed them slides about what I'm doing, but was quite clear that I was not asking for money, which is not what they are used to. In any case, I greatly appreciated the meeting, and it really made me think. They were crystal clear that they believed I was completely wrong to not be trying to do everything possible to raise investor money.<br /><h2 id="basecamp">Basecamp</h2>During the first year of SageMath, Inc., I was planning to raise a round of VC, and was doing everything to prepare for that. I then read some of <a href="https://medium.com/@dhh">DHH's books</a> about Basecamp, and realized many of those arguments applied to my situation, given my values, and -- after a lot of reflection -- I changed my mind. I think Basecamp itself is mostly closed source, so they may have an advantage &nbsp;in building a business. SageMathCloud (and SageMath) really are 100% open source, and building a completely open source business might be harder. Our open source IP is considered worthless by investors. Witness: RethinkDB just shut down and <a href="https://stripe.com/">Stripe</a> hired just the engineers -- all the IP, customers, etc., of RethinkDB was evidently considered worthless by investors.<br /><br />The day after the A16Z meeting, I met with my board, which went well (we discussed a huge range of topics over several hours). Some of the board members also tried hard to convince me that I should raise a lot more investor money.<br /><h2 id="will-poole-youre-doomed">Will Poole: you're doomed</h2>Two weeks ago I met with Will Poole, who is a friend of a friend, and we talked about my company and plans. I described what I was doing, that everything was open source, that I was incentivizing the company around building a business rather than raising investor money. He listened and asked a lot of follow up questions, making it very clear he understands building a company very, very well.<br /><br />His feedback was discouraging -- I said "So, you're saying that I'm basically doomed." He responded that I wasn't doomed, but might be able to run a small "lifestyle business" at best via my approach, but there was absolutely no way that what I was doing would have any impact or pay for my kids college tuition. If this was feedback from some random person, it might not have been so disturbing, but Will Poole joined Microsoft in 1996, where he went on to <strong>run Microsoft's multibillion dollar Windows business</strong>. Will Poole is like a retired four-star general that executed a successful campaign to conquer the world; he been around the block a few times. He tried pretty hard to convince me to make as much of SageMathCloud closed source as possible, and to try to convince my users to make content they create in SMC something that I can reuse however I want. I felt pretty shaken and convinced that I needed to close parts of SMC, e.g., the new Kubernetes-based backend that we spent all summer implementing. (Will: if you read this, though our discussion was really disturbing to me, I really appreciate it and respect you.)<br /><br /><a href="http://www.wallstreetoasis.com/forums/tomato-jos-the-extra-alternative-career-for-top-mba-grads" target="_blank">My friend</a>, who introduced me to Will Poole, introduced me to some other people and described me as that really frustrating sort of entrepreneur who doesn't want investor money. He then remarked that one of the things he learned in business school, which really surprised him, was that it is <strong>good</strong> for a company to have a lot of debt. I gave him a funny look, and he added "of course, I've never run a company".<br /><br />I left that meeting with Will convinced that I would close source parts of SageMathCloud, to make things much more defensible. However, after thinking things through for several days, and talking this over with other people involved in the company, I have chosen not to close anything. This just makes our job harder. Way harder. But I'm not going to make any decisions based purely on fear. I don't care what anybody says, I do not think it is impossible to build an open source business (I think <a href="https://wordpress.org/about/">Wordpress</a> is an example), and I do not need to raise VC.<br /><br />Hacker News Discussion:&nbsp;<a href="https://news.ycombinator.com/item?id=12663599">https://news.ycombinator.com/item?id=12663599</a><br /><br />Chinese version:&nbsp;<a href="http://www.infoq.com/cn/news/2016/10/Reflection-sustainable-profit-co" target="_blank">http://www.infoq.com/cn/news/2016/10/Reflection-sustainable-profit-co</a></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://sagemath.blogspot.com/2016/10/rethinkdb-sagemath-andreessen-horowitz.html">by William Stein (noreply@blogger.com) at November 17, 2016 03:57 PM</a>
+</p>
+</div>
+</div>
+
+
+
+</div>
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/17/OpenScience-conference">
+<h4><a href="http://opendreamkit.org/2016/11/17/OpenScience-conference/">OpenDreamKit Virtual Research Environment</a></h4>
+<div class="entry">
+<div class="content">
+<p><a href="http://joommf.github.io/assets/2016-11-17-openscience-ljubljana.pdf">Pdf slides of Talk</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/17/OpenScience-conference/">November 17, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>November 04, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/04/jupyterday-orsay">
+<h4><a href="http://opendreamkit.org/2016/11/04/jupyterday-orsay/">Jupyter Day in Orsay:</a></h4>
+<div class="entry">
+<div class="content">
+<h1 id="-subscriptions-are-closed">!!! SUBSCRIPTIONS ARE CLOSED</h1>
+
+<p>The LoOPS network, DevLog and OpenDreamKit are organising a day for the various tools available in the <a href="http://jupyter.org/">Jupyter environment</a>.
+Notebooks are more and more used among research communities thanks to their ease of use and their interactivity. They allow
+an easy access to class documentation and appealing practical exercises for students, to share ideas between colleagues and
+to initiate a reflexion to allow reproducible research works.</p>
+
+<ul>
+  <li>Where: Room 1-2-3 of the <a href="http://www.ias.u-psud.fr/">Institut d’Astrophysique Spatiale</a>, Orsay, France</li>
+  <li>When: 6th of December 2016</li>
+  <li>Who: four core developers of Jupyter tools will be present (S. Corlay, A, Darian, T. Kluyver, B. Ragan-Kelley) and V. Pons who is working on SageMathCloud.</li>
+  <li>Event organisation: Loïc Gouarin</li>
+</ul>
+
+<p><a href="https://indico.lal.in2p3.fr/event/3319/registration/register#/register">Subscriptions</a> are free but mandatory. Most of
+talks and workshops will be given in English. You may need to bring your own training materials, in which case we will
+warn you in advance.</p>
+
+<h2 id="agenda">Agenda:</h2>
+
+<ul>
+  <li>9h15-9h45: Welcome</li>
+  <li>9h45-12h45 Presentations
+    <ul>
+      <li>A. Darian et S. Corlay : JupyterLab and third-party extensions, featuring ipywidgets: the next generation of Jupyter notebooks.</li>
+      <li>B. Ragan-Kelley : JupyterHub: Deploying Jupyter Notebooks for students and researchers.</li>
+      <li>V Fauske : nbdime: diffing and merging notebooks.</li>
+      <li>V. Pons : the SageMathCloud platform</li>
+    </ul>
+  </li>
+  <li>12h45-14h00 Buffet</li>
+  <li>14h00-14h30 T. Kluyver: Nbconvert: make things from notebooks</li>
+  <li>14h30-17h30 Workshops run in parallel</li>
+</ul>
+
+<h2 id="presentations">Presentations:</h2>
+<p>1) A. Darian et S. Corlay : JupyterLab and third-party extensions, featuring ipywidgets: the next generation of Jupyter notebooks</p>
+
+<p>This talk will consist of an architectural overview and the current state of affairs of the new JupyterLab and ipywidgets.
+It will feature demos of the master branch of these projects, reflecting the latest developments</p>
+
+<p>2) B. Ragan-Kelley : JupyterHub: Deploying Jupyter Notebooks for students and researchers</p>
+
+<p>Since the Jupyter notebook is a web-based environment, the notebook server can be run remotely, not just on your local
+machine. JupyterHub is a multi-user server, aimed at helping research groups and instructors host notebook servers for
+their users or students. By default, JupyterHub uses the local system users and PAM authentication, but it can be
+customized to use any authentication system, including GitHub, CILogon, Shibboleth, and more. The way single-user
+servers are spawned can also be customized to use services such as Docker, Kubernetes, or HPC cluster queuing systems.
+The tutorial will cover a basic deployment of JupyterHub on a single machine, then extending it to use docker and GitHub
+authentication, as well as general best practices for JupyterHub deployment.</p>
+
+<p>3) V. Fauske : nbdime: diffing and merging notebooks</p>
+
+<p>Jupyter notebooks are JSON documents containing a combination of code, prose, and output. These outputs may be rich
+media, such as HTML or images. The use of JSON and including output can present challenges when working with version
+control systems and code review. The JSON structure significantly impedes the readability of diffs, and simple line-based
+merge tools can produce invalid results. nbdime aims to provide diff and merge tools specifically for notebooks. For diffs,
+nbdime shows rendered diffs of notebooks, so that the content can be compared efficiently, rather than the raw JSON. Merges
+performed with nbdime will guarantee a valid notebook as a result, even in the event of conflicts. nbdime integrates with
+existing tools, such as git, so you shouldn’t need to change how you work.</p>
+
+<p>4) V. Pons : the SageMathCloud platform</p>
+
+<p>We will present the open-source interactive platform SageMathCloud and its many useful aspects for research collaboration
+and teaching:</p>
+
+<ul>
+  <li>creation of a collaborative project;</li>
+  <li>sharing files and worksheets;</li>
+  <li>using Jupyter in SageMathCloud;</li>
+  <li>multi-user real time editing;</li>
+  <li>course management with Jupyter and SageMathCloud</li>
+</ul>
+
+<p>5) T. Kluyver : Nbconvert: make things from notebooks</p>
+
+<p>Nbconvert is a set of tools to convert notebooks to other file types, such as HTML,
+Latex, or executable scripts. We’ll cover how to use it at the command line and in the
+notebook interface, along with an overview of how it works. Nbconvert is also designed to be highly extensible,
+and we’ll describe some of the things that can be done by building on nbconvert, such as extra converters, reports
+based on input, and cross-linking between converted notebooks.</p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/04/jupyterday-orsay/">November 04, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
+<h2>November 02, 2016</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
+
+
+<div class="entrygroup" id="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016">
+<h4><a href="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016/">OOMMF Python interface presentation</a></h4>
+<div class="entry">
+<div class="content">
+<p>Hans Fangohr presented the first prototype of the Python OOMMF interface at the 61st international meeting on magnetism and magnetic materials in New Orleans (US).</p>
+
+<p><a href="http://joommf.github.io/assets/2016-11-02-MMM2016-CF-03-Python-OOMMF.pdf">Pdf slides of Talk</a></p></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://opendreamkit.org/2016/11/02/oommf-python-mmm2016/">November 02, 2016 12:00 AM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
 
 </div>
 <div class="body-corner">
@@ -3187,7 +3140,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-November 03, 2017 10:29 AM<br>
+November 03, 2017 11:30 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
