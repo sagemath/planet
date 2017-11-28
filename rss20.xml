@@ -21,6 +21,59 @@ functionalities of open source packages concerning Lie groups and their subgroup
 	<pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
 </item>
 <item>
+	<title>OpenDreamKit: Use case: Publishing reproducible notebooks (draft)</title>
+	<guid>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks</guid>
+	<link>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/</link>
+	<description>&lt;p&gt;This document is part of a collection of &lt;a href=&quot;http://opendreamkit.org/tag/use-case&quot;&gt;use cases&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;scenario&quot;&gt;Scenario:&lt;/h2&gt;
+
+&lt;p&gt;Jane has written a (math) paper based on experimentations. She would
+like anyone to be able to reproduce her calculations.&lt;/p&gt;
+
+&lt;h2 id=&quot;suggestion-of-solution&quot;&gt;Suggestion of solution:&lt;/h2&gt;
+
+&lt;p&gt;Describe the experimentation as Jupyter notebooks, mixing prose, code,
+and outputs (think of them as logbooks). Publish them on a public
+repository (e.g. on &lt;a href=&quot;http://github.com&quot;&gt;github&lt;/a&gt;, and make that
+repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;binder-ready&lt;/a&gt;. Make the paper itself active
+(TODO: latexml+thebe?).&lt;/p&gt;
+
+&lt;h2 id=&quot;instances&quot;&gt;Instances&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;TODO: links to favorite instances&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TODO: estimate of the number of such instances.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;time-and-expertise-required&quot;&gt;Time and expertise required&lt;/h2&gt;
+
+&lt;p&gt;Assuming Jane is familiar with version control and Jupyter (basic lab
+skills taught at Software Carpentry), and that the experiments were
+prepared as notebooks, the publishing part could take two hours the
+first time, and half an hour later on.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;expansion of the Jupyter technology&lt;/li&gt;
+  &lt;li&gt;apparition of binder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;opendreamkit-contribution&quot;&gt;OpenDreamKit contribution&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uniform Jupyter interface to math software #xxx&lt;/li&gt;
+  &lt;li&gt;early adoption of binder&lt;/li&gt;
+  &lt;li&gt;advertising, training, providing a template (TODO!), …&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>OpenDreamKit: Post doc position opening at Université Paris-Sud</title>
 	<guid>http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud</guid>
 	<link>http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud/</link>

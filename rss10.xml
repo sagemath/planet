@@ -14,6 +14,7 @@
 	<items>
 		<rdf:Seq>
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups" />
+			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/15/WP6-Usecase" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/11/SageWindows" />
@@ -62,6 +63,58 @@ functionalities of open source packages concerning Lie groups and their subgroup
 
 &lt;p&gt;The organization page of the event is &lt;a href=&quot;https://wiki.sagemath.org/days93&quot;&gt;https://wiki.sagemath.org/days93&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 	<dc:date>2017-11-15T00:00:00+00:00</dc:date>
+</item>
+<item rdf:about="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks">
+	<title>OpenDreamKit: Use case: Publishing reproducible notebooks (draft)</title>
+	<link>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/</link>
+	<content:encoded>&lt;p&gt;This document is part of a collection of &lt;a href=&quot;http://opendreamkit.org/tag/use-case&quot;&gt;use cases&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;scenario&quot;&gt;Scenario:&lt;/h2&gt;
+
+&lt;p&gt;Jane has written a (math) paper based on experimentations. She would
+like anyone to be able to reproduce her calculations.&lt;/p&gt;
+
+&lt;h2 id=&quot;suggestion-of-solution&quot;&gt;Suggestion of solution:&lt;/h2&gt;
+
+&lt;p&gt;Describe the experimentation as Jupyter notebooks, mixing prose, code,
+and outputs (think of them as logbooks). Publish them on a public
+repository (e.g. on &lt;a href=&quot;http://github.com&quot;&gt;github&lt;/a&gt;, and make that
+repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;binder-ready&lt;/a&gt;. Make the paper itself active
+(TODO: latexml+thebe?).&lt;/p&gt;
+
+&lt;h2 id=&quot;instances&quot;&gt;Instances&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;TODO: links to favorite instances&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TODO: estimate of the number of such instances.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;time-and-expertise-required&quot;&gt;Time and expertise required&lt;/h2&gt;
+
+&lt;p&gt;Assuming Jane is familiar with version control and Jupyter (basic lab
+skills taught at Software Carpentry), and that the experiments were
+prepared as notebooks, the publishing part could take two hours the
+first time, and half an hour later on.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;expansion of the Jupyter technology&lt;/li&gt;
+  &lt;li&gt;apparition of binder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;opendreamkit-contribution&quot;&gt;OpenDreamKit contribution&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uniform Jupyter interface to math software #xxx&lt;/li&gt;
+  &lt;li&gt;early adoption of binder&lt;/li&gt;
+  &lt;li&gt;advertising, training, providing a template (TODO!), …&lt;/li&gt;
+&lt;/ul&gt;</content:encoded>
+	<dc:date>2017-11-02T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud">
 	<title>OpenDreamKit: Post doc position opening at Université Paris-Sud</title>
