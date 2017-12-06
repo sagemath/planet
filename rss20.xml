@@ -8,6 +8,113 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>OpenDreamKit: State of the European Open Science Cloud and strategy of OpenDreamKit</title>
+	<guid>http://opendreamkit.org/2017/12/06/EOSC</guid>
+	<link>http://opendreamkit.org/2017/12/06/EOSC/</link>
+	<description>&lt;p&gt;During the last week of November two events related to the European Open Science Cloud (EOSC) took place in Brussels: the &lt;a href=&quot;https://eoscpilot.eu/eosc-stakeholder-forum-shaping-future-eosc&quot;&gt;EOSC stakeholder forum&lt;/a&gt; on 28-29 November and the 2017 edition of the &lt;a href=&quot;https://www.digitalinfrastructures.eu/&quot;&gt;DI4R (Digital Infrastructures for Research)&lt;/a&gt;. These two events were closely related in regard with the momentum period 2018-2020 for the Scientific Community and the advancement of open and digital science.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-vision&quot;&gt;The vision&lt;/h2&gt;
+
+&lt;p&gt;The European Open Science Cloud (EOSC) is currently a process to build a digital platform that is inspired by the F.A.I.R. principle. &lt;strong&gt;F.A.I.R. stands for: Findable, Accessible, Interoperable and Reusable.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FAIR is the idea between the recent actions taken by the European Commission and various funding agencies in favour of open data and open science.
+The EOSC platform, also called the EOSC-Hub, intends &lt;em&gt;in fine&lt;/em&gt; to make possible to the whole European scientific Community and beyond: exchange of data, easy access to knowledge and access to all useful infrastructures for all scientific disciplines.&lt;/p&gt;
+
+&lt;p&gt;The word “Open” in EOSC must be understood in every possible way. It means (not exhaustively) that the platform will :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;promote open source&lt;/strong&gt; software and open access culture&lt;/li&gt;
+  &lt;li&gt;make data &lt;strong&gt;as open as possible but as closed as necessary&lt;/strong&gt; in regard with confidentiality and IPR (Intellectual Property Rights) concerns,&lt;/li&gt;
+  &lt;li&gt;be a &lt;strong&gt;mix of paid and free services and/or software&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;be open to &lt;strong&gt;all users&lt;/strong&gt;: research centres, public bodies, companies, citizens&lt;/li&gt;
+  &lt;li&gt;be accessible &lt;strong&gt;worldwide&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;gather all infrastructures and technologies that are of help for scientists from &lt;strong&gt;all possible disciplines&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Technically speaking, the general idea is to federate existing and yet to appear services, and to make these services &lt;strong&gt;interoperable with one another&lt;/strong&gt;. Services and software can concern for example data and computation hosting, authentication, indexing, collaborative tools, data and service catalogues, etc. Thanks to the interoperability the researchers will be able to discover, navigate, use and re-use, data and combine them suing a various number of infrastructures. The interpretation of data is (or at last should be in our reading) quite broad here: it includes metadata and provenance, data models, tools and generally knowledge required to make sense of the data.&lt;/p&gt;
+
+&lt;p&gt;The core role of EOSC-Hub is to coordinate, foster interoperability, develop glue services, and generally speaking steer the efforts toward the needs of researchers. The outcome of the process is still unknown but the ambition is grand. Indeed, an EU official compared the EOSC to the internet. The WWW has been and still is a process, and it has changed the face of the Earth. The ambition of the EOSC is to change the way we do Science.
+An explanatory video is &lt;a href=&quot;https://www.youtube.com/watch?time_continue=141&amp;v=SC4-O8BmI4I&quot;&gt;available here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The EOSC will eventually be linked to the future pan-European HPC, as well as with the future European Data Infrastructure (EDI) which are funded alongsie the EOSC by the European Commission. The EDI and the EOSC may at the end of the day merge, since differences of purpose for each is not yet fully clear.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://opendreamkit.org/public/images/EOSC-sketch.jpg&quot; alt=&quot;EOSC sketch&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;political-support-and-public-funding&quot;&gt;Political support and public funding&lt;/h2&gt;
+
+&lt;p&gt;The EOSC is part of two strategies of the European Commission: the &lt;a href=&quot;https://ec.europa.eu/digital-single-market/en/policies/shaping-digital-single-market&quot;&gt;Digital Single Market&lt;/a&gt; on one hand and the &lt;a href=&quot;http://ec.europa.eu/research/era/index_en.htm&quot;&gt;European Research Area&lt;/a&gt; on the other hand.&lt;/p&gt;
+
+&lt;p&gt;The EOSC is the combination of the two, as it aims at creating a single research community without country or technical barriers (interoperability between software and services).&lt;/p&gt;
+
+&lt;p&gt;In its &lt;a href=&quot;http://ec.europa.eu/research/participants/data/ref/h2020/wp/2018-2020/main/h2020-wp1820-infrastructures_en.pdf&quot;&gt;Work Programme 2018-2020 for European Research Infrastructures&lt;/a&gt;, the European Commission has put 375 million Euros on the table for “implementing the European Open Science Cloud”. It was initially planned to open a topic of 79M€ for adding other services and infrastructures to the EOSC, but it was postponed after 2020 for the 9th Framework Programme for research and Innovation. According to Augusto Burgueño Arjon, Head of the Unit “eInfrastructure &amp;amp; Science Cloud” at the DG Communication and Networks at the European Commission, it is not yet decided what this fund will be sued for as it will depend on the evolution of the EOSC-Hub. AS according to the Commission and main supporters there is no room for failure, the next 3 years will be crucial. If EOSC implementation is a success, the first half of FP9 will focus on aggregating remaining infrastructures and services while the second half of FP9 will focus on sustaining and scaling the EOSC.&lt;/p&gt;
+
+&lt;p&gt;Member States are pushing forward the EOSC as well. Germany and the Netherlands issued in May 2017 a &lt;a href=&quot;https://www.government.nl/documents/reports/2017/05/30/joint-position-paper-on-the-european-open-science-cloud&quot;&gt;joint position paper&lt;/a&gt; on the EOSC, which France &lt;a href=&quot;https://twitter.com/VidalFrederique/status/936650264899178497&quot;&gt;officially joined&lt;/a&gt; on the 01/12/2017. Furthermore 13 Member States have of to date signed an agreement to start a pan-European HPC programme. This new infrastructure will follow Prace and will be closely connected to EOSC.&lt;/p&gt;
+
+&lt;h2 id=&quot;infrastructures-involved&quot;&gt;Infrastructures involved&lt;/h2&gt;
+
+&lt;p&gt;Outside of public institutions there are 6 major players pushing forward the EOSC:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.egi.eu/&quot;&gt;EGI&lt;/a&gt; (federation of cloud providers and data centres)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eudat.eu/&quot;&gt;EUDAT&lt;/a&gt; (data services),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.openaire.eu/&quot;&gt;OpenAire&lt;/a&gt; (open publication services),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geant.org/&quot;&gt;Géant&lt;/a&gt; (network services)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.indigo-datacloud.eu/&quot;&gt;Indigo Data-Cloud&lt;/a&gt; (cloud services for science)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Together they formed a consortium of 74 partners coordinated by EGI, in order to answer the call H2020-EINFRA-12-2017(a) within the Work Programme 2018-2020. This project named “EOSC-Hub project” will receive 30M€ by the Commission for the 2018-2020 period. Beneficiaries include Research Infrastructures, national e-Infrastructure providers, SMEs and academic institutions. This consortium will be focused on and addressing issues of the EOSC such as interoperability, adoption of open standards and protocols, governance structure etc&lt;/p&gt;
+
+&lt;p&gt;Indeed, our impression is that - while the vision is clear - the design and realisation of this vision has no clear shape yet: many ideas and components are floating around, some fully or half realised but simultaneously many questions remain unanswered or have not even been asked yet. This state of affairs is not surprising: the vision is grand and has the potential to disrupt (positively) the way in which research is carried out today; the actors are human beings, scientists, institutes, funding bodies and states all with their own priorities and constraints.
+Furthermore, there are real technical challenges in putting this “Cloud” together, and there are also cultural challenges to move more and more research activities towards Open Science. Existing metrics for academics and research institutions do not generally incentivise open science; which makes change of behaviour difficult. The biggest challenge for the EOSC is then maybe the challenge of skills and habit because as it was heard from an EU official: “if we do all this and no one is using it, it will be worthless”.&lt;/p&gt;
+
+&lt;p&gt;Some infrastructures and services were presented during the DI4R conference as “EOSC building blocks”. The presentations are all available following &lt;a href=&quot;https://indico.egi.eu/indico/event/3455/timetable/#all&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Two presentations attracted our attention:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.hubzero.org/&quot;&gt;Hubzero&lt;/a&gt; &lt;a href=&quot;https://indico.egi.eu/indico/event/3455/session/7/contribution/137/material/slides/0.pdf&quot;&gt;presentation&lt;/a&gt;: open source platform for scientific and educational collaboration&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://indico.egi.eu/indico/event/3455/session/7/contribution/137/material/slides/0.pdf&quot;&gt;Presentation&lt;/a&gt; introducing to FAIR: nothing new but explains principles for EOSC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contributions are open on Github to &lt;a href=&quot;https://github.com/FAIRMetrics/Metrics&quot;&gt;help develop FAIR metrics&lt;/a&gt; for EOSC.&lt;/p&gt;
+
+&lt;h2 id=&quot;opendreamkit-and-the-eosc&quot;&gt;OpenDreamKit and the EOSC&lt;/h2&gt;
+
+&lt;p&gt;It seems that no e-infrastructure or service presented at the events specifically targets math-based research and teaching, so there could be some room for components of the OpendreamKit VRE.&lt;/p&gt;
+
+&lt;h3 id=&quot;partnership-with-egi&quot;&gt;Partnership with EGI&lt;/h3&gt;
+
+&lt;p&gt;Indeed there is an existing collaboration between EGI and OpenDreamKit for the deployment of JupyterHub in EGI services. This collaboration will become official in the next weeks with the signature of a Memorandum of Understanding between the two parties.
+Depending on the success of this joint work and of the need of the EOSC post-2020, the collaboration could be extended.&lt;/p&gt;
+
+&lt;h3 id=&quot;lobby&quot;&gt;Lobby&lt;/h3&gt;
+
+&lt;p&gt;OpenDreamKit as a consortium promoting Open Source software and Open Data in the name of large communities can take lobbying actions to have an impact on the shape of the future EOSC. The following actions can and will be taken:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Become a stakeholder of the &lt;a href=&quot;https://ec.europa.eu/research/openscience/index.cfm?pg=open-science-cloud&quot;&gt;EOSC&lt;/a&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1) Endorse the principles of the &lt;a href=&quot;https://ec.europa.eu/research/openscience/pdf/eosc_declaration.pdf#view=fit&amp;pagemode=none&quot;&gt;EOSC declaration&lt;/a&gt; by sending an official statement by mail&lt;/p&gt;
+
+&lt;p&gt;2) Commit to take some of the specific actions forward&lt;/p&gt;
+
+&lt;p&gt;Endorsement and commitment must be sent at &lt;a href=&quot;mailto:RTD-EOSC@EC.EUROPA.EU&quot;&gt;RTD-EOSC@EC.EUROPA.EU&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Contact experts implied in the EOSC:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;From External Board of EOSC working for the Commission: several experts including Jean-François ABRAMATIC (INRIA) and the chairperson John Womersley (European Spallation Source)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;From the External Advisory Board of the EOSC-pilot project (launched in preparation of EOSC-Hub project): the list is available &lt;a href=&quot;https://eoscpilot.eu/about/external-advisory-board&quot;&gt;on their website&lt;/a&gt;. One expert, Françoise GENOVA, is also member of the OpenDreamKit Advisory Board.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The European Commission Project Officer for OpenDreamKit is also deeply implied in the talks for the EOSC implementation, and the Coordinator will be in close relation with her in the next months and years.&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>OpenDreamKit: Subgroups and lattices of Lie groups</title>
 	<guid>http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups</guid>
 	<link>http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups/</link>
@@ -1912,245 +2019,6 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 	<link>http://opendreamkit.org/2016/12/28/pythran-typing/</link>
 	<description>&lt;p&gt;As part of its OpenDreamKit deliverable &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/117&quot;&gt;D5.4 (Make Pythran typing better to improve error information)&lt;/a&gt;, the Pythran team has written an in-depth &lt;a href=&quot;http://serge-sans-paille.github.io/pythran-stories/from-pythran-import-typing.html&quot;&gt;article about an unsound type checker&lt;/a&gt;.&lt;/p&gt;</description>
 	<pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Full-time open-ended research software engineer position</title>
-	<guid>http://opendreamkit.org/2016/12/22/RSE-position-warwick</guid>
-	<link>http://opendreamkit.org/2016/12/22/RSE-position-warwick/</link>
-	<description>&lt;p&gt;We are seeking a full-time research software engineer at Warwick to
-work with Professor John Cremona on those parts of the OpenDreamKit
-project connected with the LMFDB in relation to Work Package 6.  The
-position is open-ended.  The post holder will be employed within the
-Scientific Computing Research Technology Platform (RTP) at Warwick,
-initially under secondment to Professor Cremona for the duration of
-the ODK project, together with longer-term responsibilities for the
-development and support of research software across the University.&lt;/p&gt;
-
-&lt;h1 id=&quot;job-advertisement&quot;&gt;Job advertisement&lt;/h1&gt;
-
-&lt;p&gt;The full advertisement may be found &lt;a href=&quot;https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&amp;ownertype=fair&amp;jcode=1625541&amp;vt_template=1457&amp;adminview=1&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;deadline&quot;&gt;Deadline&lt;/h1&gt;
-
-&lt;p&gt;Deadline for applications: 26 January 2017.&lt;/p&gt;
-
-&lt;h1 id=&quot;location&quot;&gt;Location&lt;/h1&gt;
-
-&lt;p&gt;The developer will work at the &lt;a href=&quot;http://www2.warwick.ac.uk/&quot;&gt;University of Warwick&lt;/a&gt;, UK.&lt;/p&gt;
-
-&lt;h1 id=&quot;mission-and-activities&quot;&gt;Mission and activities&lt;/h1&gt;
-
-&lt;p&gt;Initially, to work as part of the OpenDreamKit collaboration, on those
-parts of WP6 related to the LMFDB project.  Longer term, to play a
-leading role in the development of research software support at
-Warwick.&lt;/p&gt;
-
-&lt;h1 id=&quot;skills-requirements&quot;&gt;Skills requirements&lt;/h1&gt;
-
-&lt;p&gt;See the See the full &lt;a href=&quot;https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&amp;ownertype=fair&amp;jcode=1625541&amp;vt_template=1457&amp;adminview=1&quot;&gt;job
-advertisement&lt;/a&gt;
-for a detailed job description, and a list f essential and desirable
-criteria for the person to be appointed.&lt;/p&gt;
-
-&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
-
-&lt;p&gt;Until 31 August 2019, the position will be mainly funded by&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt;, a
-&lt;a href=&quot;https://ec.europa.eu/programmes/horizon2020/&quot;&gt;Horizon 2020&lt;/a&gt;
-European &lt;a href=&quot;https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures&quot;&gt;Research Infrastructure&lt;/a&gt;
-project that will run for four years, starting from September&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;This project brings together the open-source computational
-mathematics ecosystem – and in particular
-&lt;a href=&quot;http://linalg.org/&quot;&gt;LinBox&lt;/a&gt;,
-&lt;a href=&quot;http://mpir.org&quot;&gt;MPIR&lt;/a&gt;,
-&lt;a href=&quot;http://sagemath.org/&quot;&gt;SageMath&lt;/a&gt;,
-&lt;a href=&quot;http://www.gap-system.org/&quot;&gt;GAP&lt;/a&gt;,
-&lt;a href=&quot;http://pari.math.u-bordeaux.fr/&quot;&gt;PARI/GP&lt;/a&gt;,
-&lt;a href=&quot;http://lmfdb.org/&quot;&gt;LMFDB&lt;/a&gt;,
-&lt;a href=&quot;http://www.singular.uni-kl.de/&quot;&gt;Singular&lt;/a&gt;,
-&lt;a href=&quot;https://mathhub.info/&quot;&gt;MathHub&lt;/a&gt;,
-and the
-&lt;a href=&quot;http://jupyter.org/&quot;&gt;IPython/Jupyter&lt;/a&gt; interactive computing
-environment.
-– toward building a
-flexible toolkit for
-&lt;a href=&quot;http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html&quot;&gt;Virtual Research Environments&lt;/a&gt;
-for mathematics. Lead by Université Paris-Sud, this project involves
-about 50 people spread over 15 sites in Europe, with a total budget of
-about 7.6 million euros.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;From 1 September 2019 the post will be funded by the University of Warwick.&lt;/p&gt;
-
-&lt;h1 id=&quot;further-particulars&quot;&gt;Further particulars&lt;/h1&gt;
-
-&lt;p&gt;See the full &lt;a href=&quot;https://atsv7.wcn.co.uk/search_engine/jobs.cgi?owner=5062452&amp;ownertype=fair&amp;jcode=1625541&amp;vt_template=1457&amp;adminview=1&quot;&gt;job
-advertisement&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;expressions-of-interest&quot;&gt;Expressions of interest&lt;/h1&gt;
-
-&lt;p&gt;Interested candidates should send an email to Professor John Cremona
-(j.e.cremona@warwick.ac.uk) for further information about the
-position, as soon as possible.&lt;/p&gt;</description>
-	<pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Sébastien Labbé: A time evolution picture of packages built in parallel by Sage</title>
-	<guid>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</guid>
-	<link>http://www.slabbe.org/blogue/2016/12/a-time-evolution-picture-of-packages-built-in-parallel-by-sage</link>
-	<description>&lt;div class=&quot;document&quot;&gt;
-&lt;p&gt;Compiling sage takes a while and does a lot of stuff. Each time I am wondering
-which components takes so much time and which are fast. I wrote a module in my
-&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/seblabbe/slabbe&quot;&gt;slabbe&lt;/a&gt; version &lt;tt class=&quot;docutils literal&quot;&gt;0.3b2&lt;/tt&gt; package available on &lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/pypi/slabbe&quot;&gt;PyPI&lt;/a&gt; to figure this out.&lt;/p&gt;
-&lt;p&gt;This is after compiling 7.5.beta6 after an upgrade from 7.5.beta4:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;slabbe.analyze_sage_build&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2016/sage_build.png&quot;&gt;&lt;img alt=&quot;/Files/2016/sage_build.png&quot; src=&quot;http://www.slabbe.org/Files/2016/sage_build.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;From scratch from a fresh git clone of 7.5.beta6, after running &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;MAKE='make&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;-j4'&lt;/span&gt; make ptestlong&lt;/tt&gt;, I get:&lt;/p&gt;
-
-
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;slabbe.analyze_sage_build&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;draw_sage_build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2016/sage_build_from_scratch.png&quot;&gt;&lt;img alt=&quot;/Files/2016/sage_build_from_scratch.png&quot; src=&quot;http://www.slabbe.org/Files/2016/sage_build_from_scratch.png&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;The picture does not include the start and ptestlong because there was an error
-compiling the documentation.&lt;/p&gt;
-&lt;p&gt;By default, &lt;tt class=&quot;docutils literal&quot;&gt;draw_sage_build&lt;/tt&gt; considers all of the logs files in
-&lt;tt class=&quot;docutils literal&quot;&gt;logs/pkgs&lt;/tt&gt; but options are available to consider only log files created in a
-given interval of time. See &lt;tt class=&quot;docutils literal&quot;&gt;draw_sage_build?&lt;/tt&gt; for more info.&lt;/p&gt;
-&lt;/div&gt;</description>
-	<pubDate>Fri, 16 Dec 2016 16:13:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: nbdime 0.1.0</title>
-	<guid>http://opendreamkit.org/2016/12/16/nbdime-release-0.1.0</guid>
-	<link>http://opendreamkit.org/2016/12/16/nbdime-release-0.1.0/</link>
-	<description>&lt;p&gt;nbdime 0.1.0 has been released, implementing tools for diffing and merging Jupyter notebooks&lt;/p&gt;
-
-&lt;p&gt;Key features:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;nbdiff for diffing notebooks in the terminal&lt;/li&gt;
-  &lt;li&gt;nbdiff-web for viewing a rich, rendered diff of two notebooks&lt;/li&gt;
-  &lt;li&gt;nbmerge for merging three notebooks, with automatic conflict resolution that should always guarantee a valid notebook, even with unresolved conflicts&lt;/li&gt;
-  &lt;li&gt;nbmerge-web for manually resolving conflicts when merging notebooks&lt;/li&gt;
-  &lt;li&gt;nbshow for quickly viewing a notebook in the terminal&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;git integration for using the diff and merge tools on notebook files by default&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nbdime.readthedocs.io&quot;&gt;Read the docs!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jupyter/nbdime&quot;&gt;Contribute!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/nbdime&quot;&gt;Download!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-	<pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Full-time mathematical software developer position at TU Kaiserslautern</title>
-	<guid>http://opendreamkit.org/2016/12/15/developer-position-kaiserslautern</guid>
-	<link>http://opendreamkit.org/2016/12/15/developer-position-kaiserslautern/</link>
-	<description>&lt;p&gt;We are seeking a full-time mathematical software developer at TU Kaiserslautern to work with Prof. Wolfram Decker on the Singular contribution to the OpenDreamKit project.&lt;/p&gt;
-
-&lt;h1 id=&quot;deadline&quot;&gt;Deadline&lt;/h1&gt;
-
-&lt;p&gt;Deadline for applications: TBA.&lt;/p&gt;
-
-&lt;h1 id=&quot;location&quot;&gt;Location&lt;/h1&gt;
-
-&lt;p&gt;The developer will work at TU Kaiserslautern in the city of Kaiserslautern Germany. Kaiserslautern is next to one of the largest contiguous forests in Europe.&lt;/p&gt;
-
-&lt;h1 id=&quot;mission&quot;&gt;Mission&lt;/h1&gt;
-
-&lt;p&gt;To work as part of the OpenDreamKit collaboration, to implement improvements via parallelisation of components of Singular.&lt;/p&gt;
-
-&lt;h1 id=&quot;activities&quot;&gt;Activities&lt;/h1&gt;
-
-&lt;p&gt;To implement parallel algorithms in Singular in C/C++.&lt;/p&gt;
-
-&lt;p&gt;Particular deliverables include:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Improving the quadratic sieve for integer factorisation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Parallelising the new polynomial arithmetic functionality in Singular.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Depending on the skills of the applicant, the developer may also wish to contribute to other aspects of the Singular project and mathematical research in Kaiserslautern.&lt;/p&gt;
-
-&lt;h1 id=&quot;skills-requirements&quot;&gt;Skills requirements&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;C/C++ programming experience&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Interest in either:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;algebra/number theory/algebraic geometry&lt;/li&gt;
-      &lt;li&gt;fast arithmetic&lt;/li&gt;
-      &lt;li&gt;the design and development of computer algebra systems&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fluency in English&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Must have an Masters degree in Mathematics fully certificated&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Experience in Open Source development and tooling (GitHub)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
-
-&lt;p&gt;The position will be funded by&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt;, a
-&lt;a href=&quot;https://ec.europa.eu/programmes/horizon2020/&quot;&gt;Horizon 2020&lt;/a&gt;
-European &lt;a href=&quot;https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures&quot;&gt;Research Infrastructure&lt;/a&gt;
-project that will run for four years, starting from September&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;This project brings together the open-source computational
-mathematics ecosystem – and in particular
-&lt;a href=&quot;http://linalg.org/&quot;&gt;LinBox&lt;/a&gt;,
-&lt;a href=&quot;http://mpir.org&quot;&gt;MPIR&lt;/a&gt;,
-&lt;a href=&quot;http://sagemath.org/&quot;&gt;SageMath&lt;/a&gt;,
-&lt;a href=&quot;http://www.gap-system.org/&quot;&gt;GAP&lt;/a&gt;,
-&lt;a href=&quot;http://pari.math.u-bordeaux.fr/&quot;&gt;PARI/GP&lt;/a&gt;,
-&lt;a href=&quot;http://lmfdb.org/&quot;&gt;LMFDB&lt;/a&gt;,
-&lt;a href=&quot;http://www.singular.uni-kl.de/&quot;&gt;Singular&lt;/a&gt;,
-&lt;a href=&quot;https://mathhub.info/&quot;&gt;MathHub&lt;/a&gt;,
-and the
-&lt;a href=&quot;http://jupyter.org/&quot;&gt;IPython/Jupyter&lt;/a&gt; interactive computing
-environment.
-– toward building a
-flexible toolkit for
-&lt;a href=&quot;http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html&quot;&gt;Virtual Research Environments&lt;/a&gt;
-for mathematics. Lead by Université Paris-Sud, this project involves
-about 50 people spread over 15 sites in Europe, with a total budget of
-about 7.6 million euros.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;applications&quot;&gt;Applications&lt;/h1&gt;
-
-&lt;p&gt;Interested candidates should send an email to both decker {at} mathematik dot uni-kl dot de and goodwillhart {at} googlemail dot com with a CV and short letter of application, as soon as possible.&lt;/p&gt;</description>
-	<pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
 </item>
 
 </channel>
