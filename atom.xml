@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-12-06T15:17:23+00:00</updated>
+	<updated>2017-12-06T16:18:27+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -34,20 +34,20 @@ The EOSC platform, also called the EOSC-Hub, intends &lt;em&gt;in fine&lt;/em&gt
 
 &lt;p&gt;Technically speaking, the general idea is to federate existing and yet to appear services, and to make these services &lt;strong&gt;interoperable with one another&lt;/strong&gt;. Services and software can concern for example data and computation hosting, authentication, indexing, collaborative tools, data and service catalogues, etc. Thanks to the interoperability the researchers will be able to discover, navigate, use and re-use, data and combine them suing a various number of infrastructures. The interpretation of data is (or at last should be in our reading) quite broad here: it includes metadata and provenance, data models, tools and generally knowledge required to make sense of the data.&lt;/p&gt;
 
-&lt;p&gt;The core role of EOSC-Hub is to coordinate, foster interoperability, develop glue services, and generally speaking steer the efforts toward the needs of researchers. The outcome of the process is still unknown but the ambition is grand. Indeed, an EU official compared the EOSC to the internet. The WWW has been and still is a process, and it has changed the face of the Earth. The ambition of the EOSC is to change the way we do Science.
+&lt;p&gt;The core role of EOSC-Hub is to coordinate, foster interoperability, develop glue services, and generally speaking steer the efforts toward the needs of researchers. The outcome of the process is still unknown but the ambition is grand. Indeed, an EU official compared the EOSC to the internet. The WWW has been and still is a process, and it has changed the face of the Earth. &lt;strong&gt;The ambition of the EOSC is to change the way we do Science.&lt;/strong&gt;
 An explanatory video is &lt;a href=&quot;https://www.youtube.com/watch?time_continue=141&amp;v=SC4-O8BmI4I&quot;&gt;available here.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The EOSC will eventually be linked to the future pan-European HPC, as well as with the future European Data Infrastructure (EDI) which are funded alongsie the EOSC by the European Commission. The EDI and the EOSC may at the end of the day merge, since differences of purpose for each is not yet fully clear.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://opendreamkit.org/public/images/EOSC-sketch.jpg&quot; alt=&quot;EOSC sketch&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://opendreamkit.org/public/images/EOSC-sketch.JPG&quot; alt=&quot;EOSC sketch&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;political-support-and-public-funding&quot;&gt;Political support and public funding&lt;/h2&gt;
 
 &lt;p&gt;The EOSC is part of two strategies of the European Commission: the &lt;a href=&quot;https://ec.europa.eu/digital-single-market/en/policies/shaping-digital-single-market&quot;&gt;Digital Single Market&lt;/a&gt; on one hand and the &lt;a href=&quot;http://ec.europa.eu/research/era/index_en.htm&quot;&gt;European Research Area&lt;/a&gt; on the other hand.&lt;/p&gt;
 
-&lt;p&gt;The EOSC is the combination of the two, as it aims at creating a single research community without country or technical barriers (interoperability between software and services).&lt;/p&gt;
+&lt;p&gt;The EOSC is the combination of the two, as &lt;strong&gt;it aims at creating a single research community without country or technical barriers&lt;/strong&gt; (interoperability between software and services).&lt;/p&gt;
 
-&lt;p&gt;In its &lt;a href=&quot;http://ec.europa.eu/research/participants/data/ref/h2020/wp/2018-2020/main/h2020-wp1820-infrastructures_en.pdf&quot;&gt;Work Programme 2018-2020 for European Research Infrastructures&lt;/a&gt;, the European Commission has put 375 million Euros on the table for “implementing the European Open Science Cloud”. It was initially planned to open a topic of 79M€ for adding other services and infrastructures to the EOSC, but it was postponed after 2020 for the 9th Framework Programme for research and Innovation. According to Augusto Burgueño Arjon, Head of the Unit “eInfrastructure &amp;amp; Science Cloud” at the DG Communication and Networks at the European Commission, it is not yet decided what this fund will be sued for as it will depend on the evolution of the EOSC-Hub. AS according to the Commission and main supporters there is no room for failure, the next 3 years will be crucial. If EOSC implementation is a success, the first half of FP9 will focus on aggregating remaining infrastructures and services while the second half of FP9 will focus on sustaining and scaling the EOSC.&lt;/p&gt;
+&lt;p&gt;In its &lt;a href=&quot;http://ec.europa.eu/research/participants/data/ref/h2020/wp/2018-2020/main/h2020-wp1820-infrastructures_en.pdf&quot;&gt;Work Programme 2018-2020 for European Research Infrastructures&lt;/a&gt;, the European Commission has put 375 million Euros on the table for “implementing the European Open Science Cloud”. It was initially planned to open a topic of &lt;strong&gt;79M€ for adding other services and infrastructures to the EOSC, but it was postponed after 2020&lt;/strong&gt; for the 9th Framework Programme for research and Innovation. According to Augusto Burgueño Arjon, Head of the Unit “eInfrastructure &amp;amp; Science Cloud” at the DG Communication and Networks at the European Commission, &lt;strong&gt;it is not yet decided what this fund will be used for as it will depend on the evolution of the EOSC-Hub&lt;/strong&gt;. AS according to the Commission and main supporters &lt;strong&gt;there is no room for failure&lt;/strong&gt;, the next 3 years will be crucial. If EOSC implementation is a success, the first half of FP9 will focus on aggregating remaining infrastructures and services while the second half of FP9 will focus on sustaining and scaling the EOSC.&lt;/p&gt;
 
 &lt;p&gt;Member States are pushing forward the EOSC as well. Germany and the Netherlands issued in May 2017 a &lt;a href=&quot;https://www.government.nl/documents/reports/2017/05/30/joint-position-paper-on-the-european-open-science-cloud&quot;&gt;joint position paper&lt;/a&gt; on the EOSC, which France &lt;a href=&quot;https://twitter.com/VidalFrederique/status/936650264899178497&quot;&gt;officially joined&lt;/a&gt; on the 01/12/2017. Furthermore 13 Member States have of to date signed an agreement to start a pan-European HPC programme. This new infrastructure will follow Prace and will be closely connected to EOSC.&lt;/p&gt;
 
@@ -62,10 +62,10 @@ An explanatory video is &lt;a href=&quot;https://www.youtube.com/watch?time_cont
   &lt;li&gt;&lt;a href=&quot;https://www.indigo-datacloud.eu/&quot;&gt;Indigo Data-Cloud&lt;/a&gt; (cloud services for science)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Together they formed a consortium of 74 partners coordinated by EGI, in order to answer the call H2020-EINFRA-12-2017(a) within the Work Programme 2018-2020. This project named “EOSC-Hub project” will receive 30M€ by the Commission for the 2018-2020 period. Beneficiaries include Research Infrastructures, national e-Infrastructure providers, SMEs and academic institutions. This consortium will be focused on and addressing issues of the EOSC such as interoperability, adoption of open standards and protocols, governance structure etc&lt;/p&gt;
+&lt;p&gt;Together they built a consortium of 74 partners coordinated by EGI, in order to answer the call H2020-EINFRA-12-2017(a) within the Work Programme 2018-2020. This project named “EOSC-Hub project” will receive 30M€ by the Commission for the 2018-2020 period. Beneficiaries include Research Infrastructures, national e-Infrastructure providers, SMEs and academic institutions. This consortium will be focused on and addressing issues of the EOSC such as interoperability, adoption of open standards and protocols, governance structure etc&lt;/p&gt;
 
-&lt;p&gt;Indeed, our impression is that - while the vision is clear - the design and realisation of this vision has no clear shape yet: many ideas and components are floating around, some fully or half realised but simultaneously many questions remain unanswered or have not even been asked yet. This state of affairs is not surprising: the vision is grand and has the potential to disrupt (positively) the way in which research is carried out today; the actors are human beings, scientists, institutes, funding bodies and states all with their own priorities and constraints.
-Furthermore, there are real technical challenges in putting this “Cloud” together, and there are also cultural challenges to move more and more research activities towards Open Science. Existing metrics for academics and research institutions do not generally incentivise open science; which makes change of behaviour difficult. The biggest challenge for the EOSC is then maybe the challenge of skills and habit because as it was heard from an EU official: “if we do all this and no one is using it, it will be worthless”.&lt;/p&gt;
+&lt;p&gt;Indeed, our impression is that - while the vision is clear - &lt;strong&gt;the design and realisation of this vision has no clear shape yet&lt;/strong&gt;: many ideas and components are floating around, some fully or half realised but simultaneously many questions remain unanswered or have not even been asked yet. This state of affairs is not surprising: the vision is grand and has the potential to disrupt (positively) the way in which research is carried out today; the actors are human beings, scientists, institutes, funding bodies and states all with their own priorities and constraints.
+Furthermore, &lt;strong&gt;there are real technical challenges in putting this “Cloud” together, and there are also cultural challenges to move more and more research activities towards Open Science&lt;/strong&gt;. Existing metrics for academics and research institutions do not generally incentivise open science; which makes change of behaviour difficult. The biggest challenge for the EOSC is then maybe the challenge of skills and habit because as it was heard from an EU official: &lt;strong&gt;“if we do all this and no one is using it, it will be worthless”.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Some infrastructures and services were presented during the DI4R conference as “EOSC building blocks”. The presentations are all available following &lt;a href=&quot;https://indico.egi.eu/indico/event/3455/timetable/#all&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
 
@@ -84,7 +84,7 @@ Furthermore, there are real technical challenges in putting this “Cloud” tog
 
 &lt;h3 id=&quot;partnership-with-egi&quot;&gt;Partnership with EGI&lt;/h3&gt;
 
-&lt;p&gt;Indeed there is an existing collaboration between EGI and OpenDreamKit for the deployment of JupyterHub in EGI services. This collaboration will become official in the next weeks with the signature of a Memorandum of Understanding between the two parties.
+&lt;p&gt;Indeed there is an &lt;strong&gt;existing collaboration between EGI and OpenDreamKit&lt;/strong&gt; for the deployment of JupyterHub in EGI services. This collaboration will become official in the next weeks with the signature of a Memorandum of Understanding between the two parties.
 Depending on the success of this joint work and of the need of the EOSC post-2020, the collaboration could be extended.&lt;/p&gt;
 
 &lt;h3 id=&quot;lobby&quot;&gt;Lobby&lt;/h3&gt;
@@ -92,7 +92,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 &lt;p&gt;OpenDreamKit as a consortium promoting Open Source software and Open Data in the name of large communities can take lobbying actions to have an impact on the shape of the future EOSC. The following actions can and will be taken:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Become a stakeholder of the &lt;a href=&quot;https://ec.europa.eu/research/openscience/index.cfm?pg=open-science-cloud&quot;&gt;EOSC&lt;/a&gt;:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Become a stakeholder of the &lt;a href=&quot;https://ec.europa.eu/research/openscience/index.cfm?pg=open-science-cloud&quot;&gt;EOSC&lt;/a&gt;:&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;1) Endorse the principles of the &lt;a href=&quot;https://ec.europa.eu/research/openscience/pdf/eosc_declaration.pdf#view=fit&amp;pagemode=none&quot;&gt;EOSC declaration&lt;/a&gt; by sending an official statement by mail&lt;/p&gt;
@@ -102,7 +102,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 &lt;p&gt;Endorsement and commitment must be sent at &lt;a href=&quot;mailto:RTD-EOSC@EC.EUROPA.EU&quot;&gt;RTD-EOSC@EC.EUROPA.EU&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Contact experts implied in the EOSC:
+  &lt;li&gt;&lt;strong&gt;Contact experts implied in the EOSC:&lt;/strong&gt;
     &lt;ul&gt;
       &lt;li&gt;
         &lt;p&gt;From External Board of EOSC working for the Commission: several experts including Jean-François ABRAMATIC (INRIA) and the chairperson John Womersley (European Spallation Source)&lt;/p&gt;
@@ -112,8 +112,10 @@ Depending on the success of this joint work and of the need of the EOSC post-202
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;The European Commission Project Officer for OpenDreamKit is also deeply implied in the talks for the EOSC implementation, and the Coordinator will be in close relation with her in the next months and years.&lt;/li&gt;
-&lt;/ul&gt;</content>
+  &lt;li&gt;The European Commission &lt;strong&gt;Project Officer for OpenDreamKit is also deeply implied in the talks for the EOSC implementation&lt;/strong&gt;, and the Coordinator will be in close relation with her in the next months and years.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Reference: Hans fangohr’s &lt;a href=&quot;https://fangohr.github.io/blog/towards-the-european-open-science-cloud.html&quot;&gt;blogpost&lt;/a&gt; on his group page&lt;/em&gt;&lt;/p&gt;</content>
 		<author>
 			<name>The OpenDreamKit consortium</name>
 			<email>contact@opendreamkit.org</email>
@@ -123,7 +125,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -148,7 +150,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -213,7 +215,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -464,7 +466,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -488,7 +490,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -872,7 +874,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -946,7 +948,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1002,7 +1004,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1190,7 +1192,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1261,7 +1263,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1349,7 +1351,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1392,7 +1394,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1461,7 +1463,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1481,7 +1483,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1620,7 +1622,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1875,7 +1877,7 @@ class PermutationGroup_generic(group.FiniteGroup):
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1901,7 +1903,7 @@ meta-theories for Sage) and a
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2083,7 +2085,7 @@ we would like to address through our project:&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2109,7 +2111,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2128,7 +2130,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2191,7 +2193,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2212,7 +2214,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2245,7 +2247,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2310,7 +2312,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2338,7 +2340,7 @@ is hosting a summary of the event.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2381,7 +2383,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2400,7 +2402,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-06T15:17:23+00:00</updated>
+			<updated>2017-12-06T16:18:26+00:00</updated>
 		</source>
 	</entry>
 
