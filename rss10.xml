@@ -185,15 +185,24 @@ like anyone to be able to reproduce her calculations.&lt;/p&gt;
 
 &lt;p&gt;Describe the experimentation as Jupyter notebooks, mixing prose, code,
 and outputs (think of them as logbooks). Publish them on a public
-repository (e.g. on &lt;a href=&quot;http://github.com&quot;&gt;github&lt;/a&gt;, and make that
+repository (e.g. on &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and make that
 repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;binder-ready&lt;/a&gt;. Make the paper itself active
 (TODO: latexml+thebe?).&lt;/p&gt;
+
+&lt;p&gt;If executing the examples requires a non-trivial instal/build step,
+also consider &lt;a href=&quot;http://mybinder.readthedocs.io/en/latest/dockerfile.html&quot;&gt;using a
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/a&gt;,
+and auto-building the Docker image on &lt;a href=&quot;https://hub.docker.com/&quot;&gt;https://hub.docker.com/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;instances&quot;&gt;Instances&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;TODO: links to favorite instances&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/defeo/ffisom&quot;&gt;https://github.com/defeo/ffisom&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;TODO: estimate of the number of such instances.&lt;/p&gt;
@@ -210,6 +219,7 @@ first time, and half an hour later on.&lt;/p&gt;
 &lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started:&lt;/h2&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;SageMath packaged in Debian/Ubuntu&lt;/li&gt;
   &lt;li&gt;expansion of the Jupyter technology&lt;/li&gt;
   &lt;li&gt;apparition of binder&lt;/li&gt;
 &lt;/ul&gt;

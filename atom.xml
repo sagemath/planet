@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2017-12-19T16:45:07+00:00</updated>
+	<updated>2017-12-19T17:46:19+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -127,7 +127,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -152,7 +152,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -172,15 +172,24 @@ like anyone to be able to reproduce her calculations.&lt;/p&gt;
 
 &lt;p&gt;Describe the experimentation as Jupyter notebooks, mixing prose, code,
 and outputs (think of them as logbooks). Publish them on a public
-repository (e.g. on &lt;a href=&quot;http://github.com&quot;&gt;github&lt;/a&gt;, and make that
+repository (e.g. on &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and make that
 repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;binder-ready&lt;/a&gt;. Make the paper itself active
 (TODO: latexml+thebe?).&lt;/p&gt;
+
+&lt;p&gt;If executing the examples requires a non-trivial instal/build step,
+also consider &lt;a href=&quot;http://mybinder.readthedocs.io/en/latest/dockerfile.html&quot;&gt;using a
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/a&gt;,
+and auto-building the Docker image on &lt;a href=&quot;https://hub.docker.com/&quot;&gt;https://hub.docker.com/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;instances&quot;&gt;Instances&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;TODO: links to favorite instances&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/defeo/ffisom&quot;&gt;https://github.com/defeo/ffisom&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;TODO: estimate of the number of such instances.&lt;/p&gt;
@@ -197,6 +206,7 @@ first time, and half an hour later on.&lt;/p&gt;
 &lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started:&lt;/h2&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;SageMath packaged in Debian/Ubuntu&lt;/li&gt;
   &lt;li&gt;expansion of the Jupyter technology&lt;/li&gt;
   &lt;li&gt;apparition of binder&lt;/li&gt;
 &lt;/ul&gt;
@@ -217,7 +227,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -468,7 +478,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -492,7 +502,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -876,7 +886,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -950,7 +960,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1006,7 +1016,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1194,7 +1204,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1265,7 +1275,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1353,7 +1363,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1396,7 +1406,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1465,7 +1475,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1485,7 +1495,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1624,7 +1634,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1879,7 +1889,7 @@ class PermutationGroup_generic(group.FiniteGroup):
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -1905,7 +1915,7 @@ meta-theories for Sage) and a
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2087,7 +2097,7 @@ we would like to address through our project:&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2113,7 +2123,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2132,7 +2142,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2195,7 +2205,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2216,7 +2226,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2249,7 +2259,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2314,7 +2324,7 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2342,7 +2352,7 @@ is hosting a summary of the event.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2385,7 +2395,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
@@ -2404,7 +2414,7 @@ nbdime aims to alleviate some common difficulties when working with  Jupyter not
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-07T10:37:23+00:00</updated>
+			<updated>2017-12-19T17:46:19+00:00</updated>
 		</source>
 	</entry>
 
