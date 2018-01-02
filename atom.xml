@@ -5,8 +5,28 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-01-02T05:42:20+00:00</updated>
+	<updated>2018-01-02T06:43:20+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Low latency local CoCalc and SageMath on the Google Pixelbook: playing with Crouton, Gallium OS, Rkt, Docker</title>
+		<link href="http://sagemath.blogspot.com/2018/01/low-latency-local-cocalc-and-sagemath.html"/>
+		<id>tag:blogger.com,1999:blog-6365588202025292315.post-2384880310944100833</id>
+		<updated>2018-01-01T22:29:07+00:00</updated>
+		<content type="html">I just got &lt;a href=&quot;https://cocalc.com/&quot;&gt;CoCalc&lt;/a&gt; fully working locally on my Google Pixelbook Chromebook! I want this, since (1) I was inspired by a recent &lt;a href=&quot;https://danluu.com/input-lag/&quot;&gt;blog post about computer latency&lt;/a&gt;, and (2) I'm going to be traveling a lot next week (the &lt;a href=&quot;http://jointmathematicsmeetings.org/jmm&quot;&gt;JMM in San Diego&lt;/a&gt;&amp;nbsp;-- come see me at the Sage booth), and may have times without Internet during which I want to work on &lt;a href=&quot;https://github.com/sagemathinc/cocalc&quot;&gt;CoCalc's development&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;267&quot; src=&quot;https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;I first tried &lt;a href=&quot;https://termux.com/&quot;&gt;Termux&lt;/a&gt;, which is a &quot;Linux in Android&quot; userland that runs on the Pixelbook (via Android), but there were way, way too many problems for CoCalc, which is a very complicated application, so this was out. The only option was to enable ChromeOS dev mode.&lt;br /&gt;&lt;br /&gt;I next considered partitioning the hard drive, installing Linux natively (in addition to ChromeOS), and dual booting. However, it seems the canonical option is &lt;a href=&quot;https://galliumos.org/&quot;&gt;Gallium OS&lt;/a&gt; and it nobody has got that to work with Pixelbook yet (?). In fact, it appears that Gallium OS development made have stopped a year ago (?). Bummer. So I gave up on that approach...&lt;br /&gt;&lt;br /&gt;The next option was to try &lt;a href=&quot;https://github.com/dnschneid/crouton&quot;&gt;Crouton&lt;/a&gt; + Docker, since we have a &lt;a href=&quot;https://hub.docker.com/u/sagemathinc/&quot;&gt;CoCalc Docker image&lt;/a&gt;. Unfortunately, it seems currently impossible to use Docker with the standard ChromeOS kernel.&amp;nbsp; The next thing I considered was to use Crouton + &lt;a href=&quot;https://coreos.com/rkt/&quot;&gt;Rkt&lt;/a&gt;, since there are &lt;a href=&quot;https://blog.vantol.org/running-docker-containers-on-a-chromebook-with-rkt/&quot;&gt;blog posts&lt;/a&gt; claiming Rkt can run vanilla Docker containers on Crouton.&lt;br /&gt;&lt;br /&gt;I setup Crouton, installed the cli-extra chroot, and easily &lt;a href=&quot;https://coreos.com/rkt/docs/latest/distributions.html#deb-based&quot;&gt;installed Rkt&lt;/a&gt;. I learned how &lt;a href=&quot;https://medium.com/@adriaandejonge/moving-from-docker-to-rkt-310dc9aec938&quot;&gt;Rkt is different than Docker&lt;/a&gt;, and tried a bunch of simple standard Docker containers, which worked. However, when I tried running the &lt;a href=&quot;https://hub.docker.com/r/sagemathinc/cocalc-dev/&quot;&gt;(huge) CoCalc Docker container&lt;/a&gt;, I hit major performance issues, and things broke down. If I had the 16GB Chromebook and more patience, maybe this would have worked. But with only 8GB RAM, it really wasn't feasible.&lt;br /&gt;&lt;br /&gt;The next idea was to just use Crouton Linux directly (so no containers), and fix whatever issues arose. I did this, and it worked well, with CoCalc giving me a very nice local browser-based interface to my Crouton environment. Also, since we've spent so much time optimizing CoCalc to be fast over the web, it feels REALLY fast when used locally. I made some changes to the CoCalc sources and added &lt;a href=&quot;https://github.com/sagemathinc/cocalc/tree/master/src/dev/minimal&quot;&gt;a directory&lt;/a&gt;, to hopefully make this easier if anybody else tries. This is definitely not a 1-click solution.&lt;br /&gt;&lt;br /&gt;Finally, for &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SageMath&lt;/a&gt; I first tried &lt;a href=&quot;https://launchpad.net/~aims/+archive/ubuntu/sagemath&quot;&gt;the Ubuntu PPA&lt;/a&gt;, but realized it is hopelessly out of date. I then downloaded and extracted the &lt;a href=&quot;http://www.sagemath.org/download-linux.html&quot;&gt;Ubuntu 16.04 binary&lt;/a&gt; and it worked fine. Of course, I'm also building Sage from source (I'm the founder of SageMath after all), but that takes a long time...&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;258&quot; src=&quot;https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;Anyway, Crouton works really, really well on the Pixelbook, especially if you do not need to run Docker containers.</content>
+		<author>
+			<name>William Stein</name>
+			<email>noreply@blogger.com</email>
+			<uri>http://sagemath.blogspot.com/</uri>
+		</author>
+		<source>
+			<title type="html">Sage: Open Source Mathematics Software</title>
+			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
+			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
+			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
+			<updated>2018-01-02T06:43:14+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">State of the European Open Science Cloud and strategy of OpenDreamKit (draft)</title>
@@ -906,7 +926,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-10-10T19:05:18+00:00</updated>
+			<updated>2018-01-02T06:43:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -926,7 +946,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-10-10T19:05:18+00:00</updated>
+			<updated>2018-01-02T06:43:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -1224,7 +1244,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2017-10-10T19:05:18+00:00</updated>
+			<updated>2018-01-02T06:43:14+00:00</updated>
 		</source>
 	</entry>
 
@@ -2315,96 +2335,6 @@ update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Simula&quot;&gt;Simula Research Laboratory&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UGent/ugent.pdf&quot;&gt;Universiteit Gent&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-19T17:46:19+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Workshop: Computational Mathematics with Jupyter</title>
-		<link href="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter/"/>
-		<id>http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter</id>
-		<updated>2017-01-16T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Jointly with the Collaborative Computational Project &lt;a href=&quot;http://www.codima.ac.uk/&quot;&gt;“CoDiMa - CCP
-in the area of Computational Discrete Mathematics”&lt;/a&gt;,
-we are currently organising a workshop
-&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;“Computational Mathematics with Jupyter”&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It will take place at the &lt;a href=&quot;http://www.icms.org.uk/&quot;&gt;International Centre for Mathematical Sciences&lt;/a&gt;
-in Edinburgh on 16-20 January 2017. Please see the &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;workshop website&lt;/a&gt; for further details.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter&quot;&gt;Software Sustainability Institute blog&lt;/a&gt;
-is hosting a summary of the event.&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-19T17:46:19+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">nbdime released</title>
-		<link href="http://opendreamkit.org/2017/01/13/nbdime/"/>
-		<id>http://opendreamkit.org/2017/01/13/nbdime</id>
-		<updated>2017-01-13T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;https://nbdime.readthedocs.io&quot;&gt;nbdime&lt;/a&gt; has had its first stable release.
-nbdime provides tools for diffing and merging Jupyter notebooks,
-and integrating notebooks into git workflow.
-nbdime aims to alleviate some common difficulties when working with  Jupyter notebooks.&lt;/p&gt;
-
-&lt;p&gt;Particular features of nbdime:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;recognizing binary outputs that cannot be reasonably interpreted in the terminal&lt;/li&gt;
-  &lt;li&gt;recognizing transient fields and eliminating them from merge conflicts&lt;/li&gt;
-  &lt;li&gt;ensuring that merged notebooks are always valid&lt;/li&gt;
-  &lt;li&gt;integration with git as &lt;code class=&quot;highlighter-rouge&quot;&gt;drivers&lt;/code&gt; for passive diff/merge integration and &lt;code class=&quot;highlighter-rouge&quot;&gt;tools&lt;/code&gt; for interactive GUI integration&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tools provided by nbdime:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nbshow&lt;/code&gt;: show a legible formatting of a notebook on the command-line&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nbdiff&lt;/code&gt;: command-line diff of notebooks, eliding outputs that are known to not be renderable in a terminal. &lt;code class=&quot;highlighter-rouge&quot;&gt;nbdiff&lt;/code&gt; can be integrated into git as a diff driver&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nbdiff-web&lt;/code&gt;: create a rich, rendered web view of the changes between two notebooks&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nbmerge&lt;/code&gt;: three-way merge with automatic conflict resolution, which can be integrated into git as a merge driver, ensuring always-valid notebooks and eliminating merge conflicts on transient fields&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nbmerge-web&lt;/code&gt;: interactive three-way merge tool for manually resolving merge conflicts&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More info &lt;a href=&quot;https://nbdime.readthedocs.io&quot;&gt;on nbdime&lt;/a&gt;.&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2017-12-19T17:46:19+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">From pythran import typing</title>
-		<link href="http://opendreamkit.org/2016/12/28/pythran-typing/"/>
-		<id>http://opendreamkit.org/2016/12/28/pythran-typing</id>
-		<updated>2016-12-28T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;As part of its OpenDreamKit deliverable &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/117&quot;&gt;D5.4 (Make Pythran typing better to improve error information)&lt;/a&gt;, the Pythran team has written an in-depth &lt;a href=&quot;http://serge-sans-paille.github.io/pythran-stories/from-pythran-import-typing.html&quot;&gt;article about an unsound type checker&lt;/a&gt;.&lt;/p&gt;</content>
 		<author>
 			<name>The OpenDreamKit consortium</name>
 			<email>contact@opendreamkit.org</email>

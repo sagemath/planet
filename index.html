@@ -54,6 +54,42 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>January 01, 2018</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
+
+
+<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-2384880310944100833">
+<h4><a href="http://sagemath.blogspot.com/2018/01/low-latency-local-cocalc-and-sagemath.html">Low latency local CoCalc and SageMath on the Google Pixelbook: playing with Crouton, Gallium OS, Rkt, Docker</a></h4>
+<div class="entry">
+<div class="content">
+I just got <a href="https://cocalc.com/">CoCalc</a> fully working locally on my Google Pixelbook Chromebook! I want this, since (1) I was inspired by a recent <a href="https://danluu.com/input-lag/">blog post about computer latency</a>, and (2) I'm going to be traveling a lot next week (the <a href="http://jointmathematicsmeetings.org/jmm">JMM in San Diego</a>&nbsp;-- come see me at the Sage booth), and may have times without Internet during which I want to work on <a href="https://github.com/sagemathinc/cocalc">CoCalc's development</a>.<br /><br /><div class="separator"><a href="https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png"><img border="0" height="267" src="https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png" width="400" /></a></div><br />I first tried <a href="https://termux.com/">Termux</a>, which is a "Linux in Android" userland that runs on the Pixelbook (via Android), but there were way, way too many problems for CoCalc, which is a very complicated application, so this was out. The only option was to enable ChromeOS dev mode.<br /><br />I next considered partitioning the hard drive, installing Linux natively (in addition to ChromeOS), and dual booting. However, it seems the canonical option is <a href="https://galliumos.org/">Gallium OS</a> and it nobody has got that to work with Pixelbook yet (?). In fact, it appears that Gallium OS development made have stopped a year ago (?). Bummer. So I gave up on that approach...<br /><br />The next option was to try <a href="https://github.com/dnschneid/crouton">Crouton</a> + Docker, since we have a <a href="https://hub.docker.com/u/sagemathinc/">CoCalc Docker image</a>. Unfortunately, it seems currently impossible to use Docker with the standard ChromeOS kernel.&nbsp; The next thing I considered was to use Crouton + <a href="https://coreos.com/rkt/">Rkt</a>, since there are <a href="https://blog.vantol.org/running-docker-containers-on-a-chromebook-with-rkt/">blog posts</a> claiming Rkt can run vanilla Docker containers on Crouton.<br /><br />I setup Crouton, installed the cli-extra chroot, and easily <a href="https://coreos.com/rkt/docs/latest/distributions.html#deb-based">installed Rkt</a>. I learned how <a href="https://medium.com/@adriaandejonge/moving-from-docker-to-rkt-310dc9aec938">Rkt is different than Docker</a>, and tried a bunch of simple standard Docker containers, which worked. However, when I tried running the <a href="https://hub.docker.com/r/sagemathinc/cocalc-dev/">(huge) CoCalc Docker container</a>, I hit major performance issues, and things broke down. If I had the 16GB Chromebook and more patience, maybe this would have worked. But with only 8GB RAM, it really wasn't feasible.<br /><br />The next idea was to just use Crouton Linux directly (so no containers), and fix whatever issues arose. I did this, and it worked well, with CoCalc giving me a very nice local browser-based interface to my Crouton environment. Also, since we've spent so much time optimizing CoCalc to be fast over the web, it feels REALLY fast when used locally. I made some changes to the CoCalc sources and added <a href="https://github.com/sagemathinc/cocalc/tree/master/src/dev/minimal">a directory</a>, to hopefully make this easier if anybody else tries. This is definitely not a 1-click solution.<br /><br />Finally, for <a href="http://www.sagemath.org/">SageMath</a> I first tried <a href="https://launchpad.net/~aims/+archive/ubuntu/sagemath">the Ubuntu PPA</a>, but realized it is hopelessly out of date. I then downloaded and extracted the <a href="http://www.sagemath.org/download-linux.html">Ubuntu 16.04 binary</a> and it worked fine. Of course, I'm also building Sage from source (I'm the founder of SageMath after all), but that takes a long time...<br /><br /><div class="separator"><a href="https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png"><img border="0" height="258" src="https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png" width="400" /></a></div><div class="separator"><br /></div>Anyway, Crouton works really, really well on the Pixelbook, especially if you do not need to run Docker containers.</div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://sagemath.blogspot.com/2018/01/low-latency-local-cocalc-and-sagemath.html">by William Stein (noreply@blogger.com) at January 01, 2018 10:29 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>December 06, 2017</h2>
 
 <div class="channelgroup">
@@ -2784,147 +2820,6 @@ update for the Jupyter-OOMMF project was presented as well.</p>
 </div>
 
 </div>
-<div class="daygroup">
-<h2>January 16, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter">
-<h4><a href="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter/">Workshop: Computational Mathematics with Jupyter</a></h4>
-<div class="entry">
-<div class="content">
-<p>Jointly with the Collaborative Computational Project <a href="http://www.codima.ac.uk/">“CoDiMa - CCP
-in the area of Computational Discrete Mathematics”</a>,
-we are currently organising a workshop
-<a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">“Computational Mathematics with Jupyter”</a>.</p>
-
-<p>It will take place at the <a href="http://www.icms.org.uk/">International Centre for Mathematical Sciences</a>
-in Edinburgh on 16-20 January 2017. Please see the <a href="http://opendreamkit.org/meetings/2017-01-16-ICMS/">workshop website</a> for further details.</p>
-
-<p>The <a href="https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter">Software Sustainability Institute blog</a>
-is hosting a summary of the event.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/01/16/Computational_Mathematics_with_Jupyter/">January 16, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>January 13, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/01/13/nbdime">
-<h4><a href="http://opendreamkit.org/2017/01/13/nbdime/">nbdime released</a></h4>
-<div class="entry">
-<div class="content">
-<p><a href="https://nbdime.readthedocs.io">nbdime</a> has had its first stable release.
-nbdime provides tools for diffing and merging Jupyter notebooks,
-and integrating notebooks into git workflow.
-nbdime aims to alleviate some common difficulties when working with  Jupyter notebooks.</p>
-
-<p>Particular features of nbdime:</p>
-
-<ul>
-  <li>recognizing binary outputs that cannot be reasonably interpreted in the terminal</li>
-  <li>recognizing transient fields and eliminating them from merge conflicts</li>
-  <li>ensuring that merged notebooks are always valid</li>
-  <li>integration with git as <code class="highlighter-rouge">drivers</code> for passive diff/merge integration and <code class="highlighter-rouge">tools</code> for interactive GUI integration</li>
-</ul>
-
-<p>Tools provided by nbdime:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">nbshow</code>: show a legible formatting of a notebook on the command-line</li>
-  <li><code class="highlighter-rouge">nbdiff</code>: command-line diff of notebooks, eliding outputs that are known to not be renderable in a terminal. <code class="highlighter-rouge">nbdiff</code> can be integrated into git as a diff driver</li>
-  <li><code class="highlighter-rouge">nbdiff-web</code>: create a rich, rendered web view of the changes between two notebooks</li>
-  <li><code class="highlighter-rouge">nbmerge</code>: three-way merge with automatic conflict resolution, which can be integrated into git as a merge driver, ensuring always-valid notebooks and eliminating merge conflicts on transient fields</li>
-  <li><code class="highlighter-rouge">nbmerge-web</code>: interactive three-way merge tool for manually resolving merge conflicts</li>
-</ul>
-
-<p>More info <a href="https://nbdime.readthedocs.io">on nbdime</a>.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/01/13/nbdime/">January 13, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>December 28, 2016</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2016/12/28/pythran-typing">
-<h4><a href="http://opendreamkit.org/2016/12/28/pythran-typing/">From pythran import typing</a></h4>
-<div class="entry">
-<div class="content">
-<p>As part of its OpenDreamKit deliverable <a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/117">D5.4 (Make Pythran typing better to improve error information)</a>, the Pythran team has written an in-depth <a href="http://serge-sans-paille.github.io/pythran-stories/from-pythran-import-typing.html">article about an unsound type checker</a>.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2016/12/28/pythran-typing/">December 28, 2016 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -3094,7 +2989,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-January 02, 2018 05:42 AM<br>
+January 02, 2018 06:43 AM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
