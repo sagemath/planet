@@ -8,6 +8,18 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>OpenDreamKit: Expérimentation mathématique et combinatoire avec Sage</title>
+	<guid>http://opendreamkit.org/2018/01/23/ENS</guid>
+	<link>http://opendreamkit.org/2018/01/23/ENS/</link>
+	<description>&lt;p&gt;Viviane Pons gave a two hours lecture on mathematical experimentation, research and open-source mathematical software development for a seminar organized by the students of the prestigious school &lt;em&gt;Ecole Normale supérieure de Lyon&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lri.fr/~pons/docs/2018_ENS.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/VivianePons/public-notebooks/blob/master/2018-01-22-ENSLyon.ipynb&quot;&gt;Sage Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>William Stein: Low latency local CoCalc and SageMath on the Google Pixelbook: playing with Crouton, Gallium OS, Rkt, Docker</title>
 	<guid>tag:blogger.com,1999:blog-6365588202025292315.post-2384880310944100833</guid>
 	<link>http://sagemath.blogspot.com/2018/01/low-latency-local-cocalc-and-sagemath.html</link>
@@ -1913,89 +1925,6 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</description>
 	<pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Task based parallelization of recursive linear algebra routines using Kaapi</title>
-	<guid>http://opendreamkit.org/2017/01/20/Journee-Runtime</guid>
-	<link>http://opendreamkit.org/2017/01/20/Journee-Runtime/</link>
-	<description>&lt;p&gt;Clément Pernet gave a talk at the &lt;a href=&quot;http://calcul.math.cnrs.fr/spip.php?article275&quot;&gt;Journée Runtime&lt;/a&gt;, on the work of the &lt;a href=&quot;http://opendreamkit.org/partners/&quot;&gt;UGA partner&lt;/a&gt; (formerly UJF) on the parallelization of exact linear algebra using recursive tasks.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://calcul.math.cnrs.fr/Documents/Journees/janv2017/runtime_pernet.pdf&quot;&gt;Pdf slides of Talk&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: A case study of computational science in Jupyter notebooks: JOOMMF</title>
-	<guid>http://opendreamkit.org/2017/01/20/JOOMMF-intro</guid>
-	<link>http://opendreamkit.org/2017/01/20/JOOMMF-intro/</link>
-	<description>&lt;p&gt;Hans Fangohr gave an introduction to computational micromagnetics and
-the current workflow that is used by thousands of scientists across
-the planet. He then introduced a new Python interface to the
-computational tool (OOMMF), and demonstrate how this can be driven
-from within a Jupyter Notebook. Through the notebook, work can be
-carried out more effectively, and more reproducibly. A roadmap and
-update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://joommf.github.io/assets/2017-01-20-Edinburgh-Jupyter-workshop-joommf.pdf&quot;&gt;Pdf slides of Talk&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-standard_problem3.ipynb&quot;&gt;Notebook of micromagnetic simulation (standard problem 3)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-micromagneticmodel.ipynb&quot;&gt;Notebook of micromagnetic model&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter&quot;&gt;Blog entry mentioning the presentation&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Biannual ODK Steering Committee meeting</title>
-	<guid>http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee</guid>
-	<link>http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee/</link>
-	<description>&lt;p&gt;The biannual OpenDreamKit Steering Committee meeting is taking place in Edinburgh at the occasion of the &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;Computational Mathematics with Jupyter&lt;/a&gt; workshop.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Date: 19/01/2017&lt;/li&gt;
-  &lt;li&gt;Location: &lt;a href=&quot;http://www.icms.org.uk/&quot;&gt;ICMS&lt;/a&gt;, Edinburgh, United-Kingdom&lt;/li&gt;
-  &lt;li&gt;10am-12am (local time), lecture hall on the 4th room&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://framadate.org/IsCZEQqctimhKiHU&quot;&gt;Participants&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mensuel.framapad.org/p/odk-sc&quot;&gt;Pad&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitter.im/OpenDreamKit&quot;&gt;Gitter chat&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://appear.in/odk-sc&quot;&gt;Appear.in chat room&lt;/a&gt; (backup in case videoconference would fail)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;brief-agenda&quot;&gt;Brief agenda&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preparation for the formal review&lt;/li&gt;
-  &lt;li&gt;Progress reports per site&lt;/li&gt;
-  &lt;li&gt;Advisory Board and Quality Review Board&lt;/li&gt;
-  &lt;li&gt;Amendment to the grant agreement&lt;/li&gt;
-  &lt;li&gt;Key Performance Indicators&lt;/li&gt;
-  &lt;li&gt;Deliverables due Month 18&lt;/li&gt;
-  &lt;li&gt;WP7 topics in view of personnel changes&lt;/li&gt;
-  &lt;li&gt;Future funding&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;detailed-agenda-and-minutes&quot;&gt;Detailed &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/steering-minutes/&quot;&gt;agenda and minutes&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;progress-reports-per-site&quot;&gt;Progress reports per site&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/ParisSud&quot;&gt;Université Paris Sud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/CNRS&quot;&gt;CNRS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/JacU&quot;&gt;Jacobs University Bremen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UJF&quot;&gt;Université Joseph Fourier&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Kaiserslautern&quot;&gt;University of Kaiserslautern&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Oxford&quot;&gt;University of Oxford&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Silesia&quot;&gt;University of Silesia&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Sheffield&quot;&gt;University of Sheffield&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/southampton.pdf&quot;&gt;University of Southampton&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/StAndrews&quot;&gt;University of St Andrews&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UVersailles&quot;&gt;Université Versailles Saint-Quentin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Warwick&quot;&gt;University of Warwick&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Zurich&quot;&gt;Universität Zürich&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Logilab&quot;&gt;Logilab&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Simula&quot;&gt;Simula Research Laboratory&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UGent/ugent.pdf&quot;&gt;Universiteit Gent&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-	<pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
 </item>
 
 </channel>

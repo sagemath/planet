@@ -5,8 +5,32 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-02-06T17:06:35+00:00</updated>
+	<updated>2018-02-06T18:07:45+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Expérimentation mathématique et combinatoire avec Sage</title>
+		<link href="http://opendreamkit.org/2018/01/23/ENS/"/>
+		<id>http://opendreamkit.org/2018/01/23/ENS</id>
+		<updated>2018-01-23T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;Viviane Pons gave a two hours lecture on mathematical experimentation, research and open-source mathematical software development for a seminar organized by the students of the prestigious school &lt;em&gt;Ecole Normale supérieure de Lyon&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lri.fr/~pons/docs/2018_ENS.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/VivianePons/public-notebooks/blob/master/2018-01-22-ENSLyon.ipynb&quot;&gt;Sage Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-02-06T18:07:44+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Low latency local CoCalc and SageMath on the Google Pixelbook: playing with Crouton, Gallium OS, Rkt, Docker</title>
@@ -147,7 +171,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -172,7 +196,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -247,7 +271,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -498,7 +522,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -522,7 +546,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -906,7 +930,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -967,7 +991,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1001,7 +1025,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1057,7 +1081,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1245,7 +1269,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1316,7 +1340,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1404,7 +1428,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1447,7 +1471,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1516,7 +1540,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1536,7 +1560,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1675,7 +1699,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1930,7 +1954,7 @@ class PermutationGroup_generic(group.FiniteGroup):
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -1956,7 +1980,7 @@ meta-theories for Sage) and a
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -2138,7 +2162,7 @@ we would like to address through our project:&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -2164,7 +2188,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -2183,7 +2207,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
@@ -2246,126 +2270,7 @@ by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Task based parallelization of recursive linear algebra routines using Kaapi</title>
-		<link href="http://opendreamkit.org/2017/01/20/Journee-Runtime/"/>
-		<id>http://opendreamkit.org/2017/01/20/Journee-Runtime</id>
-		<updated>2017-01-20T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Clément Pernet gave a talk at the &lt;a href=&quot;http://calcul.math.cnrs.fr/spip.php?article275&quot;&gt;Journée Runtime&lt;/a&gt;, on the work of the &lt;a href=&quot;http://opendreamkit.org/partners/&quot;&gt;UGA partner&lt;/a&gt; (formerly UJF) on the parallelization of exact linear algebra using recursive tasks.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://calcul.math.cnrs.fr/Documents/Journees/janv2017/runtime_pernet.pdf&quot;&gt;Pdf slides of Talk&lt;/a&gt;&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">A case study of computational science in Jupyter notebooks: JOOMMF</title>
-		<link href="http://opendreamkit.org/2017/01/20/JOOMMF-intro/"/>
-		<id>http://opendreamkit.org/2017/01/20/JOOMMF-intro</id>
-		<updated>2017-01-20T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Hans Fangohr gave an introduction to computational micromagnetics and
-the current workflow that is used by thousands of scientists across
-the planet. He then introduced a new Python interface to the
-computational tool (OOMMF), and demonstrate how this can be driven
-from within a Jupyter Notebook. Through the notebook, work can be
-carried out more effectively, and more reproducibly. A roadmap and
-update for the Jupyter-OOMMF project was presented as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://joommf.github.io/assets/2017-01-20-Edinburgh-Jupyter-workshop-joommf.pdf&quot;&gt;Pdf slides of Talk&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-standard_problem3.ipynb&quot;&gt;Notebook of micromagnetic simulation (standard problem 3)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/joommf/joommf.github.io/blob/master/assets/2017-01-20-Edinburgh-Jupyter-workshop-micromagneticmodel.ipynb&quot;&gt;Notebook of micromagnetic model&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-02-computational-mathematics-jupyter&quot;&gt;Blog entry mentioning the presentation&lt;/a&gt;&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Biannual ODK Steering Committee meeting</title>
-		<link href="http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee/"/>
-		<id>http://opendreamkit.org/2017/01/19/EdinburghSteeringCommittee</id>
-		<updated>2017-01-19T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;The biannual OpenDreamKit Steering Committee meeting is taking place in Edinburgh at the occasion of the &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;Computational Mathematics with Jupyter&lt;/a&gt; workshop.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Date: 19/01/2017&lt;/li&gt;
-  &lt;li&gt;Location: &lt;a href=&quot;http://www.icms.org.uk/&quot;&gt;ICMS&lt;/a&gt;, Edinburgh, United-Kingdom&lt;/li&gt;
-  &lt;li&gt;10am-12am (local time), lecture hall on the 4th room&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://framadate.org/IsCZEQqctimhKiHU&quot;&gt;Participants&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mensuel.framapad.org/p/odk-sc&quot;&gt;Pad&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitter.im/OpenDreamKit&quot;&gt;Gitter chat&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://appear.in/odk-sc&quot;&gt;Appear.in chat room&lt;/a&gt; (backup in case videoconference would fail)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;brief-agenda&quot;&gt;Brief agenda&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preparation for the formal review&lt;/li&gt;
-  &lt;li&gt;Progress reports per site&lt;/li&gt;
-  &lt;li&gt;Advisory Board and Quality Review Board&lt;/li&gt;
-  &lt;li&gt;Amendment to the grant agreement&lt;/li&gt;
-  &lt;li&gt;Key Performance Indicators&lt;/li&gt;
-  &lt;li&gt;Deliverables due Month 18&lt;/li&gt;
-  &lt;li&gt;WP7 topics in view of personnel changes&lt;/li&gt;
-  &lt;li&gt;Future funding&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;detailed-agenda-and-minutes&quot;&gt;Detailed &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/steering-minutes/&quot;&gt;agenda and minutes&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;progress-reports-per-site&quot;&gt;Progress reports per site&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/ParisSud&quot;&gt;Université Paris Sud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/CNRS&quot;&gt;CNRS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/JacU&quot;&gt;Jacobs University Bremen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UJF&quot;&gt;Université Joseph Fourier&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Kaiserslautern&quot;&gt;University of Kaiserslautern&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Oxford&quot;&gt;University of Oxford&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Silesia&quot;&gt;University of Silesia&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Sheffield&quot;&gt;University of Sheffield&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/southampton.pdf&quot;&gt;University of Southampton&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/StAndrews&quot;&gt;University of St Andrews&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UVersailles&quot;&gt;Université Versailles Saint-Quentin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Warwick&quot;&gt;University of Warwick&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Zurich&quot;&gt;Universität Zürich&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Logilab&quot;&gt;Logilab&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/Simula&quot;&gt;Simula Research Laboratory&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/ProgressReports/UGent/ugent.pdf&quot;&gt;Universiteit Gent&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T17:06:34+00:00</updated>
+			<updated>2018-02-06T18:07:44+00:00</updated>
 		</source>
 	</entry>
 
