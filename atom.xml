@@ -5,8 +5,31 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-02-06T22:11:48+00:00</updated>
+	<updated>2018-02-06T23:12:33+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry>
+		<title type="html">Remote project meeting</title>
+		<link href="http://opendreamkit.org/2018/02/06/project-meeting/"/>
+		<id>http://opendreamkit.org/2018/02/06/project-meeting</id>
+		<updated>2018-02-06T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;This is a remote project meeting to reveiew all achievments since March 2017.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2018-02-01-SteeringCommitteeMeeting/ProgressReports/&quot;&gt;Progress reports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-02-06T23:12:33+00:00</updated>
+		</source>
+	</entry>
 
 	<entry>
 		<title type="html">Expérimentation mathématique et combinatoire avec Sage</title>
@@ -28,7 +51,7 @@
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -171,7 +194,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -196,7 +219,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -271,7 +294,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -522,7 +545,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -545,7 +568,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -569,7 +592,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -953,7 +976,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1014,7 +1037,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1048,7 +1071,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1104,7 +1127,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1292,7 +1315,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1363,7 +1386,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1451,7 +1474,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1494,7 +1517,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1563,7 +1586,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1583,7 +1606,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1722,7 +1745,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -1977,7 +2000,7 @@ class PermutationGroup_generic(group.FiniteGroup):
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -2003,7 +2026,7 @@ meta-theories for Sage) and a
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -2185,7 +2208,7 @@ we would like to address through our project:&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -2211,7 +2234,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 
@@ -2230,70 +2253,7 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Distributive Laws</title>
-		<link href="http://sheaves.github.io/Distributive-Laws/"/>
-		<id>http://sheaves.github.io/Distributive-Laws/</id>
-		<updated>2017-02-18T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;I’ve been participating in the &lt;a href=&quot;http://www.math.jhu.edu/~eriehl/kanII/&quot;&gt;Kan Extension Seminar II&lt;/a&gt;, and this week it’s my turn to &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;post about Jon Beck’s “Distributive Laws”&lt;/a&gt; at the &lt;a href=&quot;https://golem.ph.utexas.edu/category/&quot;&gt;n-Category Cafe&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;The post uses lots of string diagrams for monads, resulting in pictures like the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/distributive/comp_assoc.png&quot; alt=&quot;&quot; title=&quot;Associativity of the composite monad&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;See you &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;there&lt;/a&gt;!&lt;/p&gt;</content>
-		<author>
-			<name>Liang Ze</name>
-			<uri>http://sheaves.github.io/</uri>
-		</author>
-		<source>
-			<title type="html">Sheaves</title>
-			<subtitle type="html">Making math concrete with Sage</subtitle>
-			<link rel="self" href="http://sheaves.github.io/feed.xml"/>
-			<id>http://sheaves.github.io/feed.xml</id>
-			<updated>2018-01-19T19:55:33+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Reports from &quot;Computational Mathematics with Jupyter&quot; workshop</title>
-		<link href="http://opendreamkit.org/2017/02/15/JupyterICMS/"/>
-		<id>http://opendreamkit.org/2017/02/15/JupyterICMS</id>
-		<updated>2017-02-15T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Jointly with the Collaborative Computational Project &lt;a href=&quot;http://www.codima.ac.uk/&quot;&gt;“CoDiMa - CCP
-in the area of Computational Discrete Mathematics”&lt;/a&gt;,
-we have organised the workshop
-&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;“Computational Mathematics with Jupyter”&lt;/a&gt;,
-which took place at the &lt;a href=&quot;http://www.icms.org.uk/&quot;&gt;International Centre for Mathematical Sciences&lt;/a&gt;
-in Edinburgh on 16-20 January 2017. You can find some reports from the workshop here:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-07-computational-mathematics-jupyter&quot;&gt;&lt;strong&gt;Computational Mathematics with Jupyter&lt;/strong&gt;&lt;/a&gt;
-by Raniere Silva (Software Sustainability Institute) and Hans Fangohr (University of Southampton)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-13-computational-mathematics-jupyter-sprint&quot;&gt;&lt;strong&gt;Computational Mathematics with Jupyter: Sprint&lt;/strong&gt;&lt;/a&gt;
-by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Storify of &lt;a href=&quot;https://storify.com/CIRCA_StAndrews/computational-mathematics-with-jupyter&quot;&gt;&lt;strong&gt;#JupyterICMS&lt;/strong&gt;&lt;/a&gt; tweets&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-02-06T22:11:47+00:00</updated>
+			<updated>2018-02-06T23:12:33+00:00</updated>
 		</source>
 	</entry>
 

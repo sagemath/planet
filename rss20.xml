@@ -8,6 +8,17 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>OpenDreamKit: Remote project meeting</title>
+	<guid>http://opendreamkit.org/2018/02/06/project-meeting</guid>
+	<link>http://opendreamkit.org/2018/02/06/project-meeting/</link>
+	<description>&lt;p&gt;This is a remote project meeting to reveiew all achievments since March 2017.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2018-02-01-SteeringCommitteeMeeting/ProgressReports/&quot;&gt;Progress reports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>OpenDreamKit: Expérimentation mathématique et combinatoire avec Sage</title>
 	<guid>http://opendreamkit.org/2018/01/23/ENS</guid>
 	<link>http://opendreamkit.org/2018/01/23/ENS/</link>
@@ -1897,45 +1908,6 @@ such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
 	<link>http://opendreamkit.org/2017/02/28/SMCTutorial/</link>
 	<description>&lt;p&gt;We just released &lt;a href=&quot;https://mikecroucher.github.io/SMC_tutorial/&quot;&gt;a tutorial for teachers using SageMathCloud&lt;/a&gt;.&lt;/p&gt;</description>
 	<pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Liang Ze: Distributive Laws</title>
-	<guid>http://sheaves.github.io/Distributive-Laws/</guid>
-	<link>http://sheaves.github.io/Distributive-Laws/</link>
-	<description>&lt;p&gt;I’ve been participating in the &lt;a href=&quot;http://www.math.jhu.edu/~eriehl/kanII/&quot;&gt;Kan Extension Seminar II&lt;/a&gt;, and this week it’s my turn to &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;post about Jon Beck’s “Distributive Laws”&lt;/a&gt; at the &lt;a href=&quot;https://golem.ph.utexas.edu/category/&quot;&gt;n-Category Cafe&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;The post uses lots of string diagrams for monads, resulting in pictures like the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://sheaves.github.io/distributive/comp_assoc.png&quot; alt=&quot;&quot; title=&quot;Associativity of the composite monad&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;See you &lt;a href=&quot;https://golem.ph.utexas.edu/category/2017/02/distributive_laws.html&quot;&gt;there&lt;/a&gt;!&lt;/p&gt;</description>
-	<pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Reports from &quot;Computational Mathematics with Jupyter&quot; workshop</title>
-	<guid>http://opendreamkit.org/2017/02/15/JupyterICMS</guid>
-	<link>http://opendreamkit.org/2017/02/15/JupyterICMS/</link>
-	<description>&lt;p&gt;Jointly with the Collaborative Computational Project &lt;a href=&quot;http://www.codima.ac.uk/&quot;&gt;“CoDiMa - CCP
-in the area of Computational Discrete Mathematics”&lt;/a&gt;,
-we have organised the workshop
-&lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-16-ICMS/&quot;&gt;“Computational Mathematics with Jupyter”&lt;/a&gt;,
-which took place at the &lt;a href=&quot;http://www.icms.org.uk/&quot;&gt;International Centre for Mathematical Sciences&lt;/a&gt;
-in Edinburgh on 16-20 January 2017. You can find some reports from the workshop here:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-07-computational-mathematics-jupyter&quot;&gt;&lt;strong&gt;Computational Mathematics with Jupyter&lt;/strong&gt;&lt;/a&gt;
-by Raniere Silva (Software Sustainability Institute) and Hans Fangohr (University of Southampton)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.software.ac.uk/blog/2017-02-13-computational-mathematics-jupyter-sprint&quot;&gt;&lt;strong&gt;Computational Mathematics with Jupyter: Sprint&lt;/strong&gt;&lt;/a&gt;
-by Raniere Silva (Software Sustainability Institute)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Storify of &lt;a href=&quot;https://storify.com/CIRCA_StAndrews/computational-mathematics-with-jupyter&quot;&gt;&lt;strong&gt;#JupyterICMS&lt;/strong&gt;&lt;/a&gt; tweets&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</description>
-	<pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
 </item>
 
 </channel>
