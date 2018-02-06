@@ -19,6 +19,7 @@
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud" />
+			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/19/Netmath" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/15/WP6-Usecase" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2017/10/11/SageWindows" />
 			<rdf:li rdf:resource="tag:blogger.com,1999:blog-6365588202025292315.post-6949985998313614355" />
@@ -485,6 +486,16 @@ or alternatively reference contact information.&lt;/p&gt;
 &lt;p&gt;Applications sent after December 1st will be considered until the
 position is filled.&lt;/p&gt;</content:encoded>
 	<dc:date>2017-11-02T00:00:00+00:00</dc:date>
+</item>
+<item rdf:about="http://opendreamkit.org/2017/10/19/Netmath">
+	<title>OpenDreamKit: Presentation of OpenDreamKit</title>
+	<link>http://opendreamkit.org/2017/10/19/Netmath/</link>
+	<content:encoded>&lt;p&gt;Viviane Pons presented the OpenDreamKit project and its impact for teaching to the &lt;a href=&quot;https://www.netmath.de/&quot;&gt;Netmath community&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lri.fr/~pons/docs/2017_Kaiserslautern.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded>
+	<dc:date>2017-10-19T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2017/10/15/WP6-Usecase">
 	<title>OpenDreamKit: WP6 Math-in-the-Middle Integration Use Case to be Published at MACIS-2017 (two papers)</title>
