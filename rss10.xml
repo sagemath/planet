@@ -924,7 +924,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
   &lt;li&gt;Converters (Sphinx, pandoc, docbook, …),&lt;/li&gt;
   &lt;li&gt;Infrastructure for rendering documents,&lt;/li&gt;
   &lt;li&gt;Infrastructure for interacting with the computing backends (e.g.  &lt;a href=&quot;https://github.com/oreillymedia/thebe&quot;&gt;Thebe&lt;/a&gt; based on the Jupyter protocol, &lt;a href=&quot;https://github.com/sympy/sympy-live/&quot;&gt;sympy live&lt;/a&gt;, …),&lt;/li&gt;
-  &lt;li&gt;Online services providing computing backends (e.g. &lt;a href=&quot;http://opendreamkit.org/try.jupyter.org&quot;&gt;tmpnb&lt;/a&gt;, &lt;a href=&quot;https://sagecell.sagemath.org/&quot;&gt;sagecell&lt;/a&gt;, &lt;a href=&quot;http://opendreamkit.org/mybinder.org&quot;&gt;binder&lt;/a&gt;, …),&lt;/li&gt;
+  &lt;li&gt;Online services providing computing backends (e.g. &lt;a href=&quot;https://try.jupyter.org&quot;&gt;tmpnb&lt;/a&gt;, &lt;a href=&quot;https://sagecell.sagemath.org/&quot;&gt;sagecell&lt;/a&gt;, &lt;a href=&quot;https://mybinder.org&quot;&gt;binder&lt;/a&gt;, …),&lt;/li&gt;
   &lt;li&gt;Integrated collaborative authoring environments (sharelatex, SMC, texmacs, …)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -955,7 +955,7 @@ information.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://jupyter.org&quot;&gt;Jupyter&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gap-system.org&quot;&gt;GAP&lt;/a&gt;, &lt;a href=&quot;http://opendreamkit.org/GAP GitHub&quot;&gt;https://github.com/gap-system&lt;/a&gt;, &lt;a href=&quot;http://opendreamkit.org/GAP Packages on GitHub&quot;&gt;https://github.com/gap-packages/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gap-system.org&quot;&gt;GAP&lt;/a&gt;, &lt;a href=&quot;https://github.com/gap-system&quot;&gt;GAP GitHub&lt;/a&gt;, &lt;a href=&quot;https://github.com/gap-packages/&quot;&gt;GAP Packages on GitHub&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://github.com/gap-packages/jupyter-kernel-gap&quot;&gt;GAP Jupyter Kernel&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
