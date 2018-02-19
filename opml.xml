@@ -2,7 +2,7 @@
 <opml version="1.1">
 	<head>
 		<title>Planet Sage</title>
-		<dateModified>Mon, 19 Feb 2018 15:11:33 +0000</dateModified>
+		<dateModified>Mon, 19 Feb 2018 16:12:21 +0000</dateModified>
 		<ownerName>Harald Schilly</ownerName>
 		<ownerEmail>harald.schilly@gmail.com</ownerEmail>
 	</head>
@@ -44,7 +44,7 @@
 		<outline type="rss" text="Serge A. Salamanka" xmlUrl="http://sageworldmath.blogspot.com/feeds/posts/default/-/sage" title="SageWorldMath" />
 		<outline type="rss" text="Simon Spicer" xmlUrl="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="Math and Hats" />
 		<outline type="rss" text="Sébastien Labbé" xmlUrl="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="Sébastien Labbé" />
-		<outline type="rss" text="The Matroid Union" xmlUrl="http://matroidunion.org/?feed=rss2&amp;cat=7" title="Sage – The Matroid Union" />
+		<outline type="rss" text="The Matroid Union" xmlUrl="http://matroidunion.org/?feed=rss2&amp;cat=7" title="SageMath – The Matroid Union" />
 		<outline type="rss" text="Titus Nicolae" xmlUrl="http://titusnicolae.blogspot.com/feeds/posts/default" title="Titus Nicolae" />
 		<outline type="rss" text="Verónica Suaste Morales" xmlUrl="http://broniks.blogspot.mx/feeds/posts/default/-/sage" title="Programming Projects" />
 		<outline type="rss" text="Vince Knight" xmlUrl="http://drvinceknight.blogspot.co.uk/feeds/posts/default/-/Sage" title="Un peu de math..." />

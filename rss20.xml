@@ -8,6 +8,15 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
+	<title>The Matroid Union: Google Summer of Code</title>
+	<guid>http://matroidunion.org/?p=2319</guid>
+	<link>http://matroidunion.org/?p=2319</link>
+	<description>&lt;p&gt;As you might know, &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SageMath&lt;/a&gt; is a software system for mathematical computation. Built on Python, it has extensive libraries for numerous areas of mathematics. One of these areas is Matroid Theory, as has been exhibited &lt;a href=&quot;http://matroidunion.org/?cat=7&quot;&gt;several times&lt;/a&gt; on this blog.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com&quot;&gt;Google Summer of Code&lt;/a&gt; is a program where Google pays students to work on open-source software during the summer.&lt;/p&gt;
+&lt;p&gt;Once again, SageMath has been selected as a mentoring organization for the Google Summer of Code. We&amp;#8217;ve had students work on aspects of the Matroid Theory functionality for the past four years. Maybe this year, YOU can join those illustrious ranks! Check out the &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/6294052148871168/&quot;&gt;call for proposals&lt;/a&gt; and &lt;a href=&quot;https://wiki.sagemath.org/GSoC/2018&quot;&gt;ideas list&lt;/a&gt;. Read the instructions on both pages carefully. Applications open on March 12, so it&amp;#8217;s a good idea to start talking to potential mentors and begin writing your proposal!&lt;/p&gt;</description>
+	<pubDate>Mon, 19 Feb 2018 14:52:39 +0000</pubDate>
+</item>
+<item>
 	<title>OpenDreamKit: Remote project meeting</title>
 	<guid>http://opendreamkit.org/2018/02/06/project-meeting</guid>
 	<link>http://opendreamkit.org/2018/02/06/project-meeting/</link>
@@ -1717,197 +1726,6 @@ result of this was a significant extension of the MitM ontology (in particular f
 meta-theories for Sage) and a
 &lt;a href=&quot;http://dx.doi.org/10.20347/WIAS.PREPRINT.2385&quot;&gt;WIAS preprint on formalizations of Models&lt;/a&gt;.&lt;/p&gt;</description>
 	<pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: SageMathCloud for OpenDreamKit</title>
-	<guid>http://opendreamkit.org/2017/03/08/SMC</guid>
-	<link>http://opendreamkit.org/2017/03/08/SMC/</link>
-	<description>&lt;p&gt;Part of OpenDreamKit’s mission is to work on &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4&quot;&gt;user interfaces&lt;/a&gt;
-for better collaboration and also &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP3&quot;&gt;component architectures&lt;/a&gt;.
-This is why the &lt;a href=&quot;http://cloud.sagemath.com/&quot;&gt;SageMathCloud&lt;/a&gt; platform is of special
-interest for us. One of our tasks is even to &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/55&quot;&gt;have a deeper look into its code base&lt;/a&gt;.
-In this post, as part of our &lt;em&gt;Review on emerging technologies&lt;/em&gt;, we propose an overview
-of the platform.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-sagemathcloud&quot;&gt;What is SageMathCloud?&lt;/h2&gt;
-
-&lt;p&gt;SageMathCloud is an online platform which allows the creation of &lt;strong&gt;collaborative scientific projects&lt;/strong&gt;
-including many scientific softwares and tools like &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SageMath&lt;/a&gt;,
-&lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt;, &lt;a href=&quot;https://www.scipy.org/&quot;&gt;SciPy&lt;/a&gt;, &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt;,
-&lt;a href=&quot;https://fr.wikipedia.org/wiki/LaTeX&quot;&gt;Latex&lt;/a&gt;, and more.&lt;/p&gt;
-
-&lt;p&gt;Its codebase is &lt;a href=&quot;https://github.com/sagemathinc/smc&quot;&gt;open-source&lt;/a&gt;, distributed under the GNU General Public
-License. The platform is run by a private company (SageMath Inc.) created by William Stein
-who is also the initiator of the SageMath software. The platform offers both free
-and paying premium accounts.&lt;/p&gt;
-
-&lt;h3 id=&quot;projects&quot;&gt;Projects&lt;/h3&gt;
-
-&lt;p&gt;The main tool of the SageMathCloud platform is the possibility to create &lt;strong&gt;projects&lt;/strong&gt;
-from which you can access the many features. A single user can create as many
-projects as needed. Each project is an &lt;strong&gt;independant Linux virtual machine&lt;/strong&gt;. It
-thus comes with a full file system and an &lt;strong&gt;online terminal&lt;/strong&gt; that allows you to
-run Linux commands. The storage of each project is limited by default but can be
-extended on premium accounts. You can access the files through the SageMathCloud
-web interface or also through ssh.&lt;/p&gt;
-
-&lt;p&gt;One key feature is that each project can be &lt;strong&gt;shared by multiple users&lt;/strong&gt;. This allows
-sharing access to the files and also &lt;strong&gt;real time editing&lt;/strong&gt; though the platform. Single
-files or folders can also be made &lt;strong&gt;public&lt;/strong&gt;. A link is then provided which allows
-either viewing or downloading the files (even without a SageMathCloud account) and
-also an easy way to copy onto a different SageMathCloud project owned by the viewer.&lt;/p&gt;
-
-&lt;h3 id=&quot;softwares&quot;&gt;Softwares&lt;/h3&gt;
-
-&lt;p&gt;When you create a SageMathCloud project, your Linux virtual machine comes with many
-softwares and tools especially useful for mathematicians and scientists in general.
-We list here the most important ones.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Sage&lt;/strong&gt; and &lt;strong&gt;Sage worksheets&lt;/strong&gt;. As the name indicates, the platform was primarily
- developed as a replacement for the old Sage notebook server to allow collaborative
- online work using Sage. The &lt;strong&gt;SageMath&lt;/strong&gt; software is of course installed by default
- on the virtual machine and one can run Sage through the online terminal. The platform
- also offers its own &lt;strong&gt;Sage worksheet filetype&lt;/strong&gt; to edit and run Sage code in a cell-type
- system (as in the Jupyter notebook or the old Sage notebook) mixed with other cell types
- like text and HTML. This is used to create interactive worksheets that can be easily
- shared and copied.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;. SageMathCloud includes a Jupyter notebook interface with many kernel
- options (Python 2, Python 3, Anaconda, Sage, R, Julia, and more). On top of the usual
- interface, SageMathCloud’s Jupyter offers &lt;strong&gt;real time&lt;/strong&gt; synchronization among
- multi users.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Latex&lt;/strong&gt;. The common document preparation system Latex is installed on the virtual
- machine. It also offers a multi user editor with real time synchronization and
- a dual view of both the Latex source code and pdf output.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;notebooks-smc-sage-and-jupyter&quot;&gt;Notebooks: SMC, Sage and Jupyter&lt;/h3&gt;
-
-&lt;p&gt;SageMathCloud offers very inovative features in terms of notebooks which should be studied
-both on technichal and usability aspects.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Real time notebooks&lt;/strong&gt;. Real time multi user synchronization
- is a key aspect of SageMathCloud development. In particulatr, it has been a motivation
- for the development of SageMathCloud homemade Sage worksheet. More recently, it has
- also been added to the &lt;strong&gt;Jupyer notebook&lt;/strong&gt; by &lt;em&gt;enhancing&lt;/em&gt; the original
- software. This enhancement is of particular interest for OpenDreamKit as this could
- benefit all Jupyer users.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Muli-kernel, multi-client&lt;/strong&gt;. The multi-kernel philosophy is an inherent part
- of Jupyer development. Indeed, Jupyer is a notebook interface that can be used
- with many different language kernels (python, Sage, Julia, and more). SageMathCloud
- follows the same spirit and offers a variety of kernels on the Sage worksheet. One advantage
- of the Sage worksheet is that it allows for &lt;strong&gt;many kernels&lt;/strong&gt; to be used in different
- cells of one single worksheet (in Jupyer, the kernel has to be chosen once and for all
- for the entire worksheet). Furthermore, SageMathCloud has developed what they call the &lt;strong&gt;Jupyer
- bridge&lt;/strong&gt;: allowing user to run a Jupyer kernel from within a Sage worksheet. In this
- sense, the Sage worksheet could be seen as alternative client to Jupyer the same way one
- can develop alternative kernels. More on this question can be read on the &lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/sagejupyter&quot;&gt;github page&lt;/a&gt; of SageMathInc.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sharing-and-teaching-with-sagemathcloud&quot;&gt;Sharing and teaching with SageMathCloud&lt;/h2&gt;
-
-&lt;h3 id=&quot;accessibility&quot;&gt;Accessibility&lt;/h3&gt;
-
-&lt;p&gt;The great advantage of SageMathCloud is that it offers a &lt;strong&gt;complete scientific environment&lt;/strong&gt;
-without the usual setting up hassle. It makes the different software very easy to access
-independently of the user personal system as long as there is an access to a good Internet
-connexion. As an example, a mathematician can share a demo of code (in a Jupyter
-or a Sage notebook) that could be used directly by its collaborators. Of course,
-the Internet access is itself a limit. Given poor network access, for example but not only
-in some developing countries where bandwidth is sometimes limited.&lt;/p&gt;
-
-&lt;h3 id=&quot;teaching&quot;&gt;Teaching&lt;/h3&gt;
-
-&lt;p&gt;When teaching is concerned, the sharing facilities of SageMathCloud come very useful.
-Moreover, the platform offers a course managing system. The principle is as follows:
-the teacher has acces to a “main project” containing the class material; every student
-has its own project which is shared with the teacher. The course management system
-allows for automatic actions like:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Create all the student projects where the teacher is automatically added as a
- collaborator.&lt;/li&gt;
-  &lt;li&gt;Create assignments by copying some material from the main project to the students
- projects.&lt;/li&gt;
-  &lt;li&gt;Collecting, grading, and returning assignments by copying back and forth between
- the students projects and the main project.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An &lt;em&gt;assignment&lt;/em&gt; is just a folder. It can have multiple content depending on the class.
-Of course, the system is especially interesting when the assignment is given within
-an &lt;strong&gt;interactive worksheet&lt;/strong&gt; and can then be achieved by the student directly on the
-interface. SageMathCloud then becomes a very good interface to initiate students
-to the many scientific softwares it offers.&lt;/p&gt;
-
-&lt;h2 id=&quot;sagemathcloud-and-opendreamkit&quot;&gt;SageMathCloud and OpenDreamKit&lt;/h2&gt;
-
-&lt;p&gt;The many features of SageMathCloud make it a very interesting project for OpenDreamKit
-to look at. Indeed, it offers one of the leading technologies for scientists in terms of cloud
-project management, teaching and sharing facilities. In particular it showcases a collection of
-&lt;strong&gt;features&lt;/strong&gt; that have been selected and adopted by a wide
-community.It also has some limits which
-we would like to address through our project:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Accessibility&lt;/strong&gt;. As previously mentioned, the cloud based interface can not be easily
- accessed in places where the Internet connexion is not good enough. One solution
- would be to have clear easy-to-follow instructions on how to install a SageMathCloud
- platform in a local institution or on a personal machine. This is to be taken care of in D3.2 and D3.4.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Interoperability and file formats&lt;/strong&gt;. At the moment, the SageMathCloud platform
- offers two file formats for interactive worksheet: the Jupyter one and a home-made
- Sage worksheet one. It is not possible to run the Sage worksheets elsewhere than
- on the platform. Especially, there is no way to run a Sage worksheet on a local
- Sage installation. It is not yet clear what a long term unified worksheet solution
- would be and it is part of the OpenDreamKit project to work on this question. The
- technical choices made for the Sage worksheets are interesting to investigate in this
- regard, as well as, file conversions and so on.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sagemath.blogspot.fr/2015/05/guiding-principles-for-sagemath-inc.html&quot;&gt;Guiding principles for SageMath Inc.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wstein.org/talks/2016-06-sage-bp/bp.pdf&quot;&gt;The origin of SageMath&lt;/a&gt; by William Stein&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sagemath.blogspot.fr/2014/08/what-is-sagemathcloud-lets-clear-some.html&quot;&gt;What is SageMathCloud&lt;/a&gt; by William Stein&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/sagemathinc/smc/wiki/sagejupyter&quot;&gt;Jupyter and Sage on SageMathCloud&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-	<pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: Jupyter Notebooks Facilitating Productivity, Sustainability, and Accessibility of Data Science</title>
-	<guid>http://opendreamkit.org/2017/03/01/jupyter-cse</guid>
-	<link>http://opendreamkit.org/2017/03/01/jupyter-cse/</link>
-	<description>&lt;p&gt;Min Ragan-Kelley presented a poster on Jupyter notebooks facilitating
-productivity, sustainability, and accessibility of data science and computational science in general.
-The poster included the role of OpenDreamKit-supported projects,
-such as nbdime and nbval in facilitating reproducible science.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://figshare.com/articles/Jupyter_Notebooks_Facilitating_Productivity_Sustainability_and_Accessibility_of_Data_Science/4696414&quot;&gt;PDF of Poster&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://doi.org/10.6084/m9.figshare.4696414.v1&quot;&gt;DOI: 10.6084/m9.figshare.4696414.v1&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>OpenDreamKit: SageMathCloud tutorial</title>
-	<guid>http://opendreamkit.org/2017/02/28/SMCTutorial</guid>
-	<link>http://opendreamkit.org/2017/02/28/SMCTutorial/</link>
-	<description>&lt;p&gt;We just released &lt;a href=&quot;https://mikecroucher.github.io/SMC_tutorial/&quot;&gt;a tutorial for teachers using SageMathCloud&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
 </item>
 
 </channel>

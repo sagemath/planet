@@ -484,7 +484,7 @@
 			<foaf:name>The Matroid Union</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://matroidunion.org">
-					<dc:title>Sage – The Matroid Union</dc:title>
+					<dc:title>SageMath – The Matroid Union</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://matroidunion.org/?feed=rss2&amp;cat=7" />
 					</rdfs:seeAlso>
