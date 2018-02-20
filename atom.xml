@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-02-20T03:23:35+00:00</updated>
+	<updated>2018-02-20T04:24:44+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry xml:lang="en-US">
@@ -25,7 +25,7 @@
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-02-20T03:23:33+00:00</updated>
+			<updated>2018-02-20T04:24:42+00:00</updated>
 		</source>
 	</entry>
 
