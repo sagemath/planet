@@ -13,6 +13,7 @@
 
 	<items>
 		<rdf:Seq>
+			<rdf:li rdf:resource="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference" />
 			<rdf:li rdf:resource="http://matroidunion.org/?p=2319" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2018/02/06/project-meeting" />
 			<rdf:li rdf:resource="http://opendreamkit.org/2018/01/23/ENS" />
@@ -44,6 +45,12 @@
 	</items>
 </channel>
 
+<item rdf:about="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference">
+	<title>OpenDreamKit: Conference on Free computational mathematics at the CIRM</title>
+	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
+	<content:encoded>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.&lt;/p&gt;</content:encoded>
+	<dc:date>2018-02-20T13:33:02+00:00</dc:date>
+</item>
 <item rdf:about="http://matroidunion.org/?p=2319">
 	<title>The Matroid Union: Google Summer of Code</title>
 	<link>http://matroidunion.org/?p=2319</link>
