@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-02-20T23:43:54+00:00</updated>
+	<updated>2018-02-21T00:44:49+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -38,14 +38,14 @@
 &lt;p&gt;Once again, SageMath has been selected as a mentoring organization for the Google Summer of Code. We&amp;#8217;ve had students work on aspects of the Matroid Theory functionality for the past four years. Maybe this year, YOU can join those illustrious ranks! Check out the &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/6294052148871168/&quot;&gt;call for proposals&lt;/a&gt; and &lt;a href=&quot;https://wiki.sagemath.org/GSoC/2018&quot;&gt;ideas list&lt;/a&gt;. Read the instructions on both pages carefully. Applications open on March 12, so it&amp;#8217;s a good idea to start talking to potential mentors and begin writing your proposal!&lt;/p&gt;</content>
 		<author>
 			<name>The Matroid Union</name>
-			<uri>http://matroidunion.org/</uri>
+			<uri>http://matroidunion.org</uri>
 		</author>
 		<source>
 			<title type="html">SageMath – The Matroid Union</title>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-02-20T22:42:51+00:00</updated>
+			<updated>2018-02-21T00:44:47+00:00</updated>
 		</source>
 	</entry>
 
