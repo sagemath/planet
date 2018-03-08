@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-03-08T14:20:58+00:00</updated>
+	<updated>2018-03-08T15:22:18+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -284,7 +284,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-03-08T14:20:54+00:00</updated>
+			<updated>2018-03-08T15:22:15+00:00</updated>
 		</source>
 	</entry>
 
@@ -1634,7 +1634,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">Harald Schilly</title>
 			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
 			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2017-12-31T14:55:14+00:00</updated>
+			<updated>2018-03-08T15:22:10+00:00</updated>
 		</source>
 	</entry>
 
