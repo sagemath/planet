@@ -5,14 +5,14 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-03-15T18:21:38+00:00</updated>
+	<updated>2018-03-15T19:22:41+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Conference on Free computational mathematics at the CIRM</title>
 		<link href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/"/>
 		<id>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</id>
-		<updated>2018-03-05T11:41:31+00:00</updated>
+		<updated>2018-03-15T19:22:40+00:00</updated>
 		<content type="html">&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content>
 		<author>
@@ -24,7 +24,467 @@
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
+		<link href="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence/"/>
+		<id>http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence</id>
+		<updated>2018-03-15T00:00:00+00:00</updated>
+		<content type="html">&lt;h1 id=&quot;about-this-document&quot;&gt;About this document&lt;/h1&gt;
+
+&lt;p&gt;Nowadays, many institutions run a &lt;a href=&quot;http://jupyterhub.org&quot;&gt;JupyterHub&lt;/a&gt;
+server, providing their members with easy access to Jupyter-based
+virtual environments (a.k.a. notebook servers), preinstalled with a
+stack of computational software, tailored to the typical needs of the
+institution’s members. Meanwhile, since a few years,
+&lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt; lets any user on the internet define,
+run, and share temporary virtual environments equipped with an
+arbitrary software stack.&lt;/p&gt;
+
+&lt;p&gt;In Fall 2017, Binder was revamped as BinderHub, a lightweight layer on
+top of JupyterHub. The next step in this convergence is to bring
+together the best of both worlds: think persistent authenticated
+&lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt;; or
+&lt;a href=&quot;https://github.com/jupyter/repo2docker&quot;&gt;repo2docker&lt;/a&gt; enabled
+&lt;a href=&quot;http://jupyterhub.org&quot;&gt;JupyterHub&lt;/a&gt;. For now, let’s call them &lt;em&gt;versatile
+JupyterHub deployments&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This document brainstorms about this convergence: it sets up the
+ground with a scenario and assumptions for a typical institution-wide
+JupyterHub deployment, propose specifications from a user perspective,
+and describes some typical use cases that would be enabled by such
+specifications. It further discuss security aspects and what remains
+to be implemented, before concluding with more advanced features and
+open questions.&lt;/p&gt;
+
+&lt;p&gt;This document started as a collection of notes of Nicolas M. Thiéry,
+reflecting on in-development JupyterHub deployment at Paris-Saclay and
+EGI respectively. They were largely informed by many discussions at
+March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
+of those deployments and two of the main JupyterHub and BinderHub
+devs: Min Ragan Kelley and Chris Holdgraf. It was also inspired by
+some of &lt;a href=&quot;https://cocalc.com&quot;&gt;cocalc&lt;/a&gt; features. Thank you all!!!&lt;/p&gt;
+
+&lt;p&gt;This document is meant for brainstorming; please
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/tree/master/_posts/2018-03-15-jupyterhub-binder-convergence.md&quot;&gt;hop in and edit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;typical-scenario&quot;&gt;Typical scenario&lt;/h1&gt;
+
+&lt;p&gt;An institution – typically a university, a national lab, or maybe
+even a transnational infrastructure provider like EGI – wishes to
+provide to its members with a Jupyter service.&lt;/p&gt;
+
+&lt;p&gt;The service lets user spawn and access a personal or collaborative
+virtual environments: namely a web interface to a light weight virtual
+machine, in which they can use Jupyter notebooks, run calculations,
+etc. In the sequel we will use JupyterHub’s terminology and call such
+virtual environments &lt;em&gt;notebook servers&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;To cater for a large variety of use cases in teaching and research,
+the main aim of the upcoming specifications is to make the service as
+versatile as possible. In particular, it should empower the users to
+customize the service (available software stack, storage setup, …),
+without a need for administrator intervention.&lt;/p&gt;
+
+&lt;h1 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h1&gt;
+
+&lt;p&gt;The institution has access to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;an authentication service (Single Sign-On)&lt;/p&gt;
+
+    &lt;p&gt;Examples: Paris-Sud’ Adonis internal SSO, the federated “Recherche
+et Enseignement Supérieur” authentication service of Renater, EGI
+CheckIn, …&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;computing resources&lt;/p&gt;
+
+    &lt;p&gt;Examples: a local cluster, access to a externalized cloud (GC, AWS,
+Azure, …)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a shared volume service using the above authentication service&lt;/p&gt;
+
+    &lt;p&gt;E.g. a local NextCloud service, or …&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(optional) a forge&lt;/p&gt;
+
+    &lt;p&gt;Examples: a local gitlab service, github, … if private
+repositories are needed, the forge presumably will need the same
+authentication service&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;specifications--user-story&quot;&gt;Specifications / User Story&lt;/h1&gt;
+
+&lt;h2 id=&quot;main-page-of-the-service&quot;&gt;Main page of the service&lt;/h2&gt;
+
+&lt;p&gt;After authentication, the user faces a page that is similar to
+binder’s main page:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A form to describe and launch the desired persistent notebook
+server.&lt;/p&gt;
+
+    &lt;p&gt;For the sake of simplicity, the form could optionally start hidden,
+and be replaced by two items: “Choose preconfigured notebook server”
+/ “Create my own notebook server”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Links to documentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Warnings about potential security concerns, to inform the user
+choices.&lt;/p&gt;
+
+    &lt;p&gt;Alternatively, such warnings could be displayed in a later security
+confirmation dialog “with the given configuration, a malicious
+image/collaborator could …; do you trust it? Proceed/Edit
+Configuration/Cancel/Don’t ask again”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Institutional credits (service provided by …)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The form consists of:&lt;/p&gt;
+
+&lt;p&gt;. The usal binder items:
+    - the description of the computing environment: a repo-to-docker-style git repo+branch+…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- the file/url to open on startup
+
+- ...
+
+- a UI to get a URL/badge referencing the machine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;. Persistence and access options:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- server_name: name to give to the server
+
+  If server_name is not specified, create a random server name?
+
+- mount options: [[mount point, volume url], [...]]
+
+  This assumes that the user has appropriate credentials to access
+  the given volumes through the authentication service
+
+- collaborators=[....]: (optional) a white list of other users of this jupyterhub that can access this server
+
+- credentials: whether to pass the user credentials into the container (as environment variable, or file)
+
+- resources scaling (optional): memory, number of processors,
+  duration (time or time of inactivity after which the server will
+  be automatically stopped / destroyed)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;behavior-upon-clicking-launch&quot;&gt;Behavior upon clicking Launch:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a notebook server with the given name already exists and the
+ parameters are not change (or not set): connect to that server,
+ restarting it if needed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the parameters have been changed, update the existing server when
+possible? Or should the user just delete the server?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Otherwise, create and launch&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;behavior-upon-following-a-server-urlbadge&quot;&gt;Behavior upon following a server URL/badge:&lt;/h2&gt;
+
+&lt;p&gt;.  Display the authentication page (if not yet authenticated)&lt;/p&gt;
+
+&lt;p&gt;.  Display a security confirmation dialog as above (if origin is not within the
+    jupyterhub), with a description of the configuration and origin.&lt;/p&gt;
+
+&lt;p&gt;.  As above after clicking “Launch”&lt;/p&gt;
+
+&lt;h1 id=&quot;some-use-cases&quot;&gt;Some use cases&lt;/h1&gt;
+
+&lt;h2 id=&quot;local-binder-better-name&quot;&gt;Local binder (better name?)&lt;/h2&gt;
+
+&lt;p&gt;Scenario: Luc, a researcher, discovered a nice computing environment
+on Binder. Maybe a notebook demonstrating an interesting workflow to
+analyze data. He wants to use it more intensively on his own data.&lt;/p&gt;
+
+&lt;p&gt;Setup: Luc recreates the same environment on his local server by just
+changing the server name in the binder URL.&lt;/p&gt;
+
+&lt;h2 id=&quot;easy-sharing-of-computational-environments&quot;&gt;Easy sharing of computational environments&lt;/h2&gt;
+
+&lt;p&gt;Scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sarah, a power user, is using some specialized stack of software on
+a daily basis; maybe she authored some of it. She wants her
+colleagues in her lab to try out that software.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Paul organizes a training session for his colleagues.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Alice has authored notebooks that she wants to share with her
+colleagues. Maybe the notebooks automatize some complicated
+processes and present them in the form of interactive web
+applications built using Jupyter widgets. Think of a wizard to setup
+parameters and data, run a computation, and visualize the results.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setup:&lt;/p&gt;
+
+&lt;p&gt;They prepare a notebook server with the appropriate software stack
+installed configured and access to the user’s shared home directory.
+Maybe they provide some document. They then just have to share the URL
+with their colleagues. No lengthy software installation. The
+colleagues can then start working right away, in their own
+environment, using their own data, saving their work in their home
+directory.&lt;/p&gt;
+
+&lt;p&gt;In all cases, the explicit description of the computing environment
+(and the use of open source software!) eases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the publication of the same computational environment / notebooks
+elsewhere, e.g. on a public Binder;&lt;/li&gt;
+  &lt;li&gt;the installation the same software on the user’s personal computer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;collaboration&quot;&gt;Collaboration&lt;/h2&gt;
+
+&lt;p&gt;Scenario: Alice and Bob want to collaborate on some data analysis.&lt;/p&gt;
+
+&lt;p&gt;Setup:&lt;/p&gt;
+
+&lt;p&gt;They create a shared volume. Then either:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;They set up each their own notebook server, and let them share the
+same volume.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Alice sets up a single server, with Bob as collaborator. Within the
+server, they are considered as the same user.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this stage, they should not edit the same notebook simultaneously.
+However the stable version of JupyterLab, due sometime in 2018, should
+enable real-time collaboration in both setups, thanks to
+a &lt;a href=&quot;https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type&quot;&gt;CRDT&lt;/a&gt;
+file format for notebooks.&lt;/p&gt;
+
+&lt;h2 id=&quot;class-management&quot;&gt;Class management&lt;/h2&gt;
+
+&lt;p&gt;Scenario: using the server for a class’ computer labs and assignments&lt;/p&gt;
+
+&lt;p&gt;Desired features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Full customizability of the computing environment by the teacher&lt;/li&gt;
+  &lt;li&gt;Support for live manipulation of the class notes&lt;/li&gt;
+  &lt;li&gt;Support for submission, collection and auto-grading of assignments&lt;/li&gt;
+  &lt;li&gt;Access from the computer labs or from home&lt;/li&gt;
+  &lt;li&gt;Possibility to use either the labs local computers or the server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Prerequisites:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A JupyterHub instance, configured as above, accessible from the teachers and students;&lt;/li&gt;
+  &lt;li&gt;A forge such as gitlab or github, accessible from JupyterHub&lt;/li&gt;
+  &lt;li&gt;A shared drive service (e.g. next cloud/nsf/…), serving home directories,
+and letting teachers setup shared volumes&lt;/li&gt;
+  &lt;li&gt;A shared authentication (e.g. SSO), so that notebook servers in JupyterHub can access
+the shared drive.&lt;/li&gt;
+  &lt;li&gt;Some web server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Procedure for the teacher(s):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set up a shared volume for the whole class&lt;/li&gt;
+  &lt;li&gt;Prepare a computing environment in a git repository on the forge
+Typically includes: computational software, [nbgrader] + configuration, …&lt;/li&gt;
+  &lt;li&gt;Prepare the course material typically in a git repository on the forge
+(the same one or another)&lt;/li&gt;
+  &lt;li&gt;Use JupyterHub’s form UI to setup (and test) a full description of the student’s
+notebook servers, with mounting of the home directory (or subdirectory thereof?) and shared volume.
+Possibly add the teacher(s) as collaborator(s) ???
+Get the corresponding URL.&lt;/li&gt;
+  &lt;li&gt;Possibly prepare a variant thereof for teachers of the class.&lt;/li&gt;
+  &lt;li&gt;Set up a web page for the class, with hyperlink(s) to the above URL
+There can typically be an hyperlink for each session pointing directly
+to the exercises for that particular session.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fetching the class material:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Option 1: manually download from the web (wget in the terminal, or web upload, …) or shared volume&lt;/li&gt;
+  &lt;li&gt;Option 2: use &lt;a href=&quot;https://github.com/data-8/nbgitpuller&quot;&gt;nbgitpuller&lt;/a&gt; from the command line&lt;/li&gt;
+  &lt;li&gt;Option 3: use &lt;a href=&quot;https://github.com/jupyter/nbgrader&quot;&gt;nbgrader&lt;/a&gt;, either from the command line or with the UI to get the files from the shared volume&lt;/li&gt;
+  &lt;li&gt;Option 4: automatize the above using a notebook server extension such as that for nbgitpuller&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Submitting assignments:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use nbgrader, either from the command line or with the UI to push the files to the shared volume&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To explore: integration with local e-learning platforms like Moodle,
+in particular for the class members management and grades reporting.&lt;/p&gt;
+
+&lt;h1 id=&quot;security-concerns&quot;&gt;Security concerns&lt;/h1&gt;
+
+&lt;p&gt;A malicious image description, image, or collaborator can:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take any action within the image being built or within the notebook server&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Waste computing resources (cpu/memory);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;With internet: connect to any website, without specific priviledges
+(e.g. participate to a DOS attack); abuse computing resources, e.g.
+for bitcoining. The image building almost certainly needs internet
+access.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;With persistent storage and internet access: access and leak
+information from the storage; e.g. private information from the user;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;With read-write persistent storage: corrupt the storage (e.g. the user’s home directory)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;With credentials: take any action on behalf of the user in any
+service that use the same authentication..&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;implementation-status&quot;&gt;Implementation status&lt;/h1&gt;
+
+&lt;p&gt;Most of the features are already there. Here are some of the missing steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extending binder’s form as described above;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Implementing the logic to mount shared volumes;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Instructions / scripts for setting up a local docker registry;&lt;/p&gt;
+
+    &lt;p&gt;The current Binder installation tutorial assumes that a docker
+registry is already available; e.g. that provided by google cloud
+services.&lt;/p&gt;
+
+    &lt;p&gt;For a smaller setup using the same host for both building images and
+running notebook servers, no docker registry is needed. In this
+case, JupyterHub could just run repo2docker locally before launching
+the notebook server. repo2docker however does not implement image
+caching; so a simplified version of the image cache mechanism of
+Binder needs to be implemented.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;alternatives&quot;&gt;Alternatives&lt;/h1&gt;
+
+&lt;p&gt;It should be noted that there is basically no coupling between
+JupyterHub/Binder and Jupyter. The former is merely a general purpose
+web service for provisioning web-based virtual environments. For
+example, JupyterHub/Binder has also been used to serve R-Studio based
+virtual environments. Reciprocally, there are alternative services to
+do such provisioning from which to get inspiration, like
+&lt;a href=&quot;https://www.simulagora.com/&quot;&gt;Simulagora&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;advanced-features--open-questions&quot;&gt;Advanced features &amp;amp; open questions&lt;/h1&gt;
+
+&lt;h2 id=&quot;redirection&quot;&gt;Redirection&lt;/h2&gt;
+
+&lt;p&gt;The main form could contain an additional item:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;URL input / dropdown menu to choose another jupyterhub instances to
+redirect to.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Use cases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A user finds a nice image on binder; he wants to customize it to
+run it on his institution’s jupyterhub; possibly adding persistent
+storage to it. Or reciprocally: a user wants to share on binder a
+local image of his.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An institution wants to advertise other jupyterhub instances; this
+could e.g. be used by a single entry point for federating a
+collection of instances (e.g. all French academic JupyterHub’s).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;marketplace-of-images&quot;&gt;Marketplace of images&lt;/h2&gt;
+
+&lt;p&gt;With the URL mechanism, any (power) user can prepare a dedicated image
+and share it with his collaborators. Images can be more or less
+specific: from just a computing environment to a fully specified
+machine, with mount points, …&lt;/p&gt;
+
+&lt;p&gt;Thanks to the above there is no need for a tightly coupled Marketplace.
+Nevertheless it may be useful to have one location (or more) for
+collecting and publicizing links to popular images. Some minimal
+coupling may be needed if one would want to sort the images according
+to their popularity.&lt;/p&gt;
+
+&lt;p&gt;Note: at this stage, a user cannot produce an image by setting up a
+machine “by hand” and save its state. The construction must be fully
+scripted. On the plus side, this encourages users to script their
+images, making them more reproducible.&lt;/p&gt;
+
+&lt;h2 id=&quot;default-volume-configuration&quot;&gt;Default volume configuration&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Choose good defaults, if at all possible compatible with binder.
+Main question: where should the files provided by the binder
+environment be copied? In a subdirectory of the persistent home? In
+the home directory, with the persistent home being mounted in a
+subdirectory thereof?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;intensive-use-and-resource-management--accounting&quot;&gt;Intensive use and resource management / accounting&lt;/h2&gt;
+
+&lt;p&gt;The above has been written with casual use in mind. For extensive use,
+some form of accounting of the resources used would be needed. For
+example, for LAL’s cloud we may want to have some form of bridge
+between the OpenStack dashboard and the hub. UI to be designed. Could
+the user provision a machine using the dashboard, and then specify on
+JupyterHub that the container shall be run on that machine?&lt;/p&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -263,7 +723,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -284,7 +744,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-03-15T18:21:35+00:00</updated>
+			<updated>2018-03-15T19:22:37+00:00</updated>
 		</source>
 	</entry>
 
@@ -307,7 +767,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -331,7 +791,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -474,7 +934,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -499,7 +959,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -574,7 +1034,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -825,7 +1285,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -848,7 +1308,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -872,7 +1332,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1256,7 +1716,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1317,7 +1777,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1351,7 +1811,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1407,7 +1867,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1595,7 +2055,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1666,7 +2126,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1754,7 +2214,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1797,7 +2257,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1866,7 +2326,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -1886,7 +2346,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -2025,288 +2485,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Exporting mathematical knowledge from Sage</title>
-		<link href="http://opendreamkit.org/2017/03/25/Sage-MMT-export/"/>
-		<id>http://opendreamkit.org/2017/03/25/Sage-MMT-export</id>
-		<updated>2017-03-25T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;berlin-workshop&quot;&gt;Berlin workshop&lt;/h2&gt;
-
-&lt;p&gt;This week the KWARC team (Michael Kohlhase, Florian Rabe, Dennis Müller) and myself met in Berlin at the &lt;a href=&quot;https://www.wias-berlin.de/&quot;&gt;WIAS&lt;/a&gt;. The goal was to meet some of the modelers working there, who are very interested in the &lt;a href=&quot;https://uniformal.github.io/doc/&quot;&gt;MMT system&lt;/a&gt; and the work in &lt;a href=&quot;http://www.opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt;. Their entry point is &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP6&quot;&gt;Work Package 6&lt;/a&gt; (interoperability), motivated by the benefits they would get intrinsically from formalizing the mathematical work they do into the OMDoc/MMT language (&lt;em&gt;e.g.&lt;/em&gt; addressability of mathematical models), but also with an eye on all the other work packages from OpenDreamKit (&lt;em&gt;e.g.&lt;/em&gt; &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4&quot;&gt;interactive documents&lt;/a&gt;). Personally, I was focused on working out what I could of a semantic interchange between Sage and GAP of mathematical objects.&lt;/p&gt;
-
-&lt;h2 id=&quot;formalization-of-mathematical-concepts&quot;&gt;Formalization of mathematical concepts&lt;/h2&gt;
-
-&lt;p&gt;To start, we decided to do a bit of prototyping around transitive groups. The first step in the Math-in-the-Middle methodology for interoperability between computer algebra systems is to formalize the mathematical concept itself. Recent progress on the MMT language has actually made this very practical (see also &lt;a href=&quot;https://gl.mathhub.info/MitM/smglom/blob/master/source/permutation-group.mmt&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;http://opendreamkit.org/assets/transitive_groups.jpg&quot; alt=&quot;MMT syntax for transitive groups&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;A mathematician should be able to point to this and get near universal agreement in the community on what that means.&lt;/p&gt;
-
-&lt;p&gt;Line 24 is of course critical to the definition, but one can see that the rest is well structured and readable. I have omitted here the first five lines, which consist of &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; statements, and make the whole thing a completely formal definition yet implemented at a very high level of abstraction. You could slim down those &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt;s and build the same thing on flexiformal foundations, &lt;em&gt;e.g.&lt;/em&gt; not bother with the logic “deep down”.&lt;/p&gt;
-
-&lt;p&gt;Overall, not many mathematicians might be able to write this, but almost any mathematician can navigate her way through it. It also helps that the jEdit editor and the MathHub webserver have drastically improved, especially in ease of use (work done as part of &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP4&quot;&gt;Work Package 4&lt;/a&gt;), but also installation and resilience (work done as part of &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP3&quot;&gt;Work Package 3&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;math-in-the-middle-methodology&quot;&gt;Math-in-the-Middle methodology&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;img src=&quot;http://opendreamkit.org/assets/mitm.jpg&quot; alt=&quot;MitM paradigm&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that we have a target formalization, the idea is to separately make Sage and GAP interact with it. In the &lt;a href=&quot;https://arxiv.org/abs/1603.06424&quot;&gt;Math-in-the-Middle (MitM) formalism&lt;/a&gt; adopted for Work Package 6, we think of having in the “center” a system-independent flexiformalization of the mathematical domains (represented in this diagram in blue; replace in your head EC for elliptic curves with TG for transitive groups).&lt;/p&gt;
-
-&lt;p&gt;The next step is to work on the reddish clouds, which are the interface theories between this center and the other systems. These interface theories mainly flexiformalize the system-specific aspects of the domain.&lt;/p&gt;
-
-&lt;p&gt;On the GAP side, GAP generates for those interfaces OMDoc/MMT Content Dictionaries (CDs) that contain name, type, and documentation for all API functions (constructors, predicates, methods, …). This is automated, has good coverage and is very rich semantically (more on that towards the end of the post). The next step of the plan is then to align the generated system CDs with the MitM formalization by the MMT &lt;code class=&quot;highlighter-rouge&quot;&gt;implements&lt;/code&gt; relation of aligment (&lt;em&gt;e.g.&lt;/em&gt; an aligment could be: GAP-&lt;code class=&quot;highlighter-rouge&quot;&gt;transitive_group&lt;/code&gt; MMT-&lt;code class=&quot;highlighter-rouge&quot;&gt;implements&lt;/code&gt; MitM-&lt;code class=&quot;highlighter-rouge&quot;&gt;transitive group&lt;/code&gt;). If equivalent Sage CDs were available, as well as Sage alignments, we would get a semantic crosswalk between GAP and Sage by composing the MitM alignments between all those different CDs. This would provide the necessary framework for interoperability.&lt;/p&gt;
-
-&lt;p&gt;At the moment Sage does export some of its knowledge into CDs, thanks to what was implemented by Nicolas Thiéry, leveraging his &lt;code class=&quot;highlighter-rouge&quot;&gt;category&lt;/code&gt; framework. This is unfortunately not enough to cover transitive groups, which have rich structure as category objects (but the “Category of Transitive Groups” does not exist in Sage). Given the circumstances of this workshop, I thus decided to focus on the Sage side, and see what information I could extract about transitive groups.&lt;/p&gt;
-
-&lt;h2 id=&quot;exporting-knowledge-from-sage&quot;&gt;Exporting knowledge from Sage&lt;/h2&gt;
-
-&lt;p&gt;If you look at Sage’s &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt;, a lot of mathematical knowledge is acquired from elsewhere through the class hierarchy lying above &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt;, and the category framework that instruments that hierarchy. This lead me to first try to build a model of how the Sage class &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt; was actually implemented and what it was doing, but this was a mistake. Indeed, it was very difficult, as I got lost between meta-logics and what I was actually trying to do: modeling Sage? modeling how Sage models math? how python uses Sage to model math? I was trying to do too much, too early and was probably the wrong person to do that.&lt;/p&gt;
-
-&lt;p&gt;If you look back at the methodology, the MitM CDs don’t need to link up to the Math-in-the-Middle content dictionary right away. This is actually up to the alignments, that come later (and could be done by a different person). I was trying to do both at once, while my focus should really have been: “how do I export, but not align, as much of the math knowledge as possible embedded into Sage into a language that can easily be processed by the KWARC team?” (for the &lt;code class=&quot;highlighter-rouge&quot;&gt;categories&lt;/code&gt; export built by Nicolas Thiéry, the export went through JSON).&lt;/p&gt;
-
-&lt;p&gt;OK then, the question now becomes: “where is math knowledge embedded in Sage that is relevant to the mathematical concept of transitive group?” The first response is of course still “Everywhere!”, but where are actually the low hanging fruits?&lt;/p&gt;
-
-&lt;h3 id=&quot;a-math-skeleton&quot;&gt;A math skeleton&lt;/h3&gt;
-
-&lt;p&gt;I found that the best way to communicate around this issue with the KWARC team is by extracting from Sage code a “math skeleton”. For this, the Sage-specific module &lt;code class=&quot;highlighter-rouge&quot;&gt;sageinspect&lt;/code&gt; was very useful. I thus introspected the sage object corresponding to the class &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt;, and related objects:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/src/sage/structure/sage_object.pyx
-cdef class SageObject:
-
-# sage/local/lib/python2.7/site-packages/sage/categories/category.py
-class Category(UniqueRepresentation, SageObject):
-
-# sage/src/sage/structure/category_object.pyx
-cdef class CategoryObject(SageObject):
-
-# sage/local/lib/python2.7/site-packages/sage/structure/parent.pyx
-cdef class Parent(category_object.CategoryObject):
-
-# sage/src/sage/groups/group.pyx
-cdef class Group(Parent):
-
-# sage/src/sage/groups/group.pyx
-cdef class FiniteGroup(Group):
-
-# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
-class PermutationGroup_generic(group.FiniteGroup):
-
-# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
-class PermutationGroup_unique(CachedRepresentation, PermutationGroup_generic):
-
-# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup_named.py
-class TransitiveGroup(PermutationGroup_unique):
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;What is mathematical here? Clearly, just about everything, but that is because I was selective in the printout given above: I worked up the class hierarchy from &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt; by hand, but excluded all the python objects that &lt;em&gt;don’t&lt;/em&gt; inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt;. For instance, you don’t see in that list:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sage/local/lib/python2.7/site-packages/sage/structure/unique_representation.py
-class CachedRepresentation:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CachedRepresentation&lt;/code&gt; is only relevant, from a mathematical standpoint, in &lt;em&gt;where&lt;/em&gt; it appears as a superclass. Its own internals are pure design decisions for CAS software, not mathematics.&lt;/p&gt;
-
-&lt;p&gt;The criterion to use for “related objects” is thus that only objects inheriting from &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt; need to be navigated. So we are navigatin in the class hierarchy diamond between &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt;, collecting classes, which I manually imported from the &lt;code class=&quot;highlighter-rouge&quot;&gt;sage&lt;/code&gt; library (obviously this could be automated):&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sage.structure.sage_object import SageObject
-from sage.structure.category_object import Category     # not strictly in the class hierarchy, but included to facilitate discussion
-from sage.structure.category_object import CategoryObject
-from sage.structure.parent import Parent
-from sage.groups.group import Group
-from sage.groups.group import FiniteGroup
-from sage.groups.perm_gps.permgroup import PermutationGroup_generic
-from sage.groups.perm_gps.permgroup_named import PermutationGroup_unique
-from sage.groups.perm_gps.permgroup_named import TransitiveGroup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how I selected the objects from which I wanted to extract more information, producing the list of class definitions above.&lt;/p&gt;
-
-&lt;p&gt;[Note by the way the weird changes in the path to &lt;code class=&quot;highlighter-rouge&quot;&gt;sageinspect.sage_getsource&lt;/code&gt; in the listing above (why??? because of interactions between &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; statements?)]&lt;/p&gt;
-
-&lt;h3 id=&quot;more-flesh-on-the-skeleton&quot;&gt;More flesh on the skeleton&lt;/h3&gt;
-
-&lt;p&gt;The next step is to add a bit of flesh to that skeleton export. Obviously this is going to be more intricate. I have included &lt;a href=&quot;https://gl.mathhub.info/ODK/Sage/blob/master/sage/transitive_group_example.py&quot;&gt;here&lt;/a&gt; what you get when you look at all the methods &lt;em&gt;coming out of the source code&lt;/em&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;TransitiveGroup&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PermutationGroup_unique&lt;/code&gt;, etc. In other words, a completely static navigation to the specific methods. This was the right thing to do for communicating with the KWARC team, but is wrong for our ultimate purpose. It was the right thing to do to communicate with KWARC (or in a blog post) as it distilled Sage to its most interesting bits, and we could fill the gaps relying on comment concepts (like “class hierarchy”). However, as a quicker way to get more consistent and richer Sage output, I could have navigated dynamically to the relevant classes, and extracted all the methods available from the live objects. This is of course because tons of methods get added when the object gets created, with a lot of mathematics packed into that. The same math could be reconstructed from the source code, but obviously that would be harder to do as we would be re-emulating a lot of what python does.&lt;/p&gt;
-
-&lt;p&gt;In any case, here is the full printout of what I get for just the method declarations for &lt;code class=&quot;highlighter-rouge&quot;&gt;PermutationGroup_generic&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Parent&lt;/code&gt; that is most interesting:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-# sage/local/lib/python2.7/site-packages/sage/groups/perm_gps/permgroup.py
-class PermutationGroup_generic(group.FiniteGroup):
-    def __init__(self, gens=None, gap_group=None, canonicalize=True, domain=None, category=None):
-    def construction(self):
-    def _has_natural_domain(self):
-    def _gap_init_(self):
-    def _magma_init_(self, magma):
-    def __cmp__(self, right):
-    def _element_class(self):
-    def __call__(self, x, check=True):
-    def _coerce_impl(self, x):
-    def list(self):
-    def __contains__(self, item):
-    def has_element(self, item):
-    def __iter__(self):
-    def gens(self):
-    def gens_small(self):
-    def gen(self, i=None):
-    def identity(self):
-    def exponent(self):
-    def largest_moved_point(self):
-    def degree(self):
-    def domain(self):
-    def _domain_gap(self, domain=None):
-    def smallest_moved_point(self):
-    def representative_action(self,x,y):
-    def orbits(self):
-    def orbit(self, point, action=&quot;OnPoints&quot;):
-    def transversals(self, point):
-    def stabilizer(self, point, action=&quot;OnPoints&quot;):
-    def base(self, seed=None):
-    def strong_generating_system(self, base_of_group=None):
-    def _repr_(self):
-    def _latex_(self):
-    def _order(self):
-    def order(self):
-    def random_element(self):
-    def group_id(self):
-    def id(self):
-    def group_primitive_id(self):
-    def center(self):
-    def socle(self):
-    def frattini_subgroup(self):
-    def fitting_subgroup(self):
-    def solvable_radical(self):
-    def intersection(self, other):
-    def conjugacy_class(self, g):
-    def conjugacy_classes(self):
-    def conjugate(self, g):
-    def direct_product(self, other, maps=True):
-    def semidirect_product(self, N, mapping, check=True):
-    def holomorph(self):
-    def subgroup(self, gens=None, gap_group=None, domain=None, category=None, canonicalize=True, check=True):
-    def as_finitely_presented_group(self, reduced=False):
-    def quotient(self, N):
-    def commutator(self, other=None):
-    def cohomology(self, n, p = 0):
-    def cohomology_part(self, n, p = 0):
-    def homology(self, n, p = 0):
-    def homology_part(self, n, p = 0):
-    def character_table(self):
-    def irreducible_characters(self):
-    def trivial_character(self):
-    def character(self, values):
-    def conjugacy_classes_representatives(self):
-    def conjugacy_classes_subgroups(self):
-    def subgroups(self):
-    def _regular_subgroup_gap(self):
-    def has_regular_subgroup(self, return_group = False):
-    def blocks_all(self, representatives = True):
-    def cosets(self, S, side='right'):
-    def minimal_generating_set(self):
-    def normalizer(self, g):
-    def centralizer(self, g):
-    def isomorphism_type_info_simple_group(self):
-    def is_abelian(self):
-    def is_commutative(self):
-    def is_cyclic(self):
-    def is_elementary_abelian(self):
-    def isomorphism_to(self, right):
-    def is_isomorphic(self, right):
-    def is_monomial(self):
-    def is_nilpotent(self):
-    def is_normal(self, other):
-    def is_perfect(self):
-    def is_pgroup(self):
-    def is_polycyclic(self):
-    def is_simple(self):
-    def is_solvable(self):
-    def is_subgroup(self, other):
-    def is_supersolvable(self):
-    def non_fixed_points(self):
-    def fixed_points(self):
-    def is_transitive(self, domain=None):
-    def is_primitive(self, domain=None):
-    def is_semi_regular(self, domain=None):
-    def is_regular(self, domain=None):
-    def normalizes(self, other):
-    def composition_series(self):
-    def derived_series(self):
-    def lower_central_series(self):
-    def molien_series(self):
-    def normal_subgroups(self):
-    def poincare_series(self, p=2, n=10):
-    def sylow_subgroup(self, p):
-    def upper_central_series(self):
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here are things a semi-intelligent mathematician can deduce from this fleshed-out skeleton, and that we might be able to export automatically:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The arity of all those functions is useful. Unfortunately, this being python (2.x), the type cannot simply be read. Michael Kohlhase has some interesting ideas regarding mathematicians, types and the modeling necessary for MMT. I think he is right, partly, and there is much to look forward to in the services MMT can provide around type inference. Note that it will be core to this process that MMT allows for flexiformalisation as well!&lt;/li&gt;
-  &lt;li&gt;I omitted docstrings in this export, but of course this is also useful for semantic information in natural language. Often the docstring contains structured information too, for instance some typing information (see above).&lt;/li&gt;
-  &lt;li&gt;There is, as often, a method called &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt; that specifies a constructor. In other words, some combination of maps from some parameter space into the object modeled by &lt;code class=&quot;highlighter-rouge&quot;&gt;PermutationGroup_generic&lt;/code&gt;. That relationship is messy though, most of the time. Note that the GAP team took the opportunity over last summer to have an intern refactor/regularize the way they did constructors into a more “semantic” way”: essentially instead of using the elementary &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt;, they made a &lt;code class=&quot;highlighter-rouge&quot;&gt;defconstructor&lt;/code&gt; and gave it documentation, type information,… as parameters. Of course &lt;code class=&quot;highlighter-rouge&quot;&gt;defconstructor&lt;/code&gt; elaborates to a call to &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt; but the parameters can be used in the CD generation (and for static type-based optimizations later; ask Markus Pfeiffer @ St. Andrews if you are interested in the details).&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_gap_xxxx&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_magma_xxxx&lt;/code&gt; indicate that the relevant “stuff” exists in the corresponding CASes. This is thus indicating a good place to bootstrap the alignment process between &lt;code class=&quot;highlighter-rouge&quot;&gt;gap&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;sage&lt;/code&gt;, and therefore extract KPIs and generally optimize our progress. This would be best done by instrumenting at the &lt;code class=&quot;highlighter-rouge&quot;&gt;SageObject&lt;/code&gt; level, since this is where all those &lt;code class=&quot;highlighter-rouge&quot;&gt;_other-computer-algebra-system_xxxx&lt;/code&gt; methods are first located, as abstract methods.&lt;/li&gt;
-  &lt;li&gt;the presence of magic methods &lt;code class=&quot;highlighter-rouge&quot;&gt;__xxxxxxx__&lt;/code&gt; indicates the existence of a relation of some kind on the elements of &lt;code class=&quot;highlighter-rouge&quot;&gt;PermutationGroup_generic&lt;/code&gt;, which is a Sage &lt;code class=&quot;highlighter-rouge&quot;&gt;Parent&lt;/code&gt;. However, this information is best extracted from the categories export itself, presumably all(?) the time.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_xxxx&lt;/code&gt; methods indicate the existence of a test and thus a property.&lt;/li&gt;
-  &lt;li&gt;after some very basic pruning, all the other methods indicate the existence of clear mathematical objects, often relatively simple maps.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Many of the deductions made above will be done in the same way for all &lt;code class=&quot;highlighter-rouge&quot;&gt;Parent&lt;/code&gt;s (at least if we go for the easiest information to grab), so that’s where the instrumentation should go. Most of that instrumentation actually makes sense to have in a CAS, beceause it exposes mathematically relevant concepts. It would simply be used by the exporter generating the Content Dictionary.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Remark:&lt;/strong&gt; Ultimately we want to extract information from live objects. It should not be lost, however, that what we are trying to do is partly a social process (the study of this process is itself the topic of &lt;a href=&quot;https://github.com/OpenDreamKit//OpenDreamKit/tree/master/WP7&quot;&gt;Work Package 7&lt;/a&gt;). Humans have built the code from which we are trying to extract information, and now we want to communicate that with other humans so they can in turn code on top of that. Those other humans are familiar with different tools. For instance the KWARC team uses MMT related tools, like MathHub, but not Sage. Presumably other CAS developers or even “plain” mathematicians will just see Sage through an interface built on top of MMT. So I would advocate that we:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Make sure to export &lt;em&gt;all&lt;/em&gt; the information containing math from Sage into MMT, even that which is not readable beyond text by the system we export to;&lt;/li&gt;
-  &lt;li&gt;Devise methods to make this informal export as addressable as possible from within MMT, but not necessarily runnable.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Step 1. could be useful for instance if one is working in GAP and asking “How does Sage do that?”. We should be able to access Sage source code from within GAP, and it will be useful for automating some tasks.&lt;/p&gt;
-
-&lt;p&gt;Step 2. would be useful for students in the KWARC group, for instance, who would then be able to extract semantically richer information from a system like Sage with just verbal instructions from domain specific experts, because the data is now in MMT format. It splits the step in two: MMT extraction and semantic extraction, and requires different skills.&lt;/p&gt;
-
-&lt;p&gt;The process could be further accelerated, I bet, by exposing also deep sage introspection tools into MMT.&lt;/p&gt;
-
-&lt;p&gt;At this stage self-preservation instincts kick in and I don’t want to think deeper at this proposal from a logical standpoint.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt; &lt;em&gt;I wish to thank Michael Kohlhase for suggestions that have improved the first draft of this post.&lt;/em&gt;&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Report on the WP6-WIAS Workshop on Math-in-the-Middle Content</title>
-		<link href="http://opendreamkit.org/2017/03/24/WIAS/"/>
-		<id>http://opendreamkit.org/2017/03/24/WIAS</id>
-		<updated>2017-03-24T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;WP6 participants JacU (Florian Rabe), FAU (Dennis Müller, Michael Kohlhase) and UZH (Paul
-Olivier Dehaye) came together with members of the
-&lt;a href=&quot;http://wias-berlin.de/&quot;&gt;Weierstrass Institute for Applied Analysis and Stochastics&lt;/a&gt;
-(WIAS: Thomas Koprucki and Carsten Tabelow) for a one-week code (20. 3. – 24. 3.)  sprint
-on the Math-in-the-Middle Content and Logic and the encoding of mathematical Models. The
-result of this was a significant extension of the MitM ontology (in particular for the
-meta-theories for Sage) and a
-&lt;a href=&quot;http://dx.doi.org/10.20347/WIAS.PREPRINT.2385&quot;&gt;WIAS preprint on formalizations of Models&lt;/a&gt;.&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-05T11:41:31+00:00</updated>
+			<updated>2018-03-15T19:22:40+00:00</updated>
 		</source>
 	</entry>
 
