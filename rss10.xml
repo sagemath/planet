@@ -50,7 +50,7 @@
 	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
 	<content:encoded>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-15T21:24:54+00:00</dc:date>
+	<dc:date>2018-03-15T22:26:01+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence">
 	<title>OpenDreamKit: Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
@@ -58,13 +58,13 @@
 	<content:encoded>&lt;h1 id=&quot;about-this-document&quot;&gt;About this document&lt;/h1&gt;
 
 &lt;p&gt;Nowadays, many institutions run a &lt;a href=&quot;http://jupyterhub.org&quot;&gt;JupyterHub&lt;/a&gt;
-server, providing their members with easy access to Jupyter-based
+server, providing their members with easy access to &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter&lt;/a&gt;-based
 virtual environments (a.k.a. notebook servers), preinstalled with a
 stack of computational software, tailored to the typical needs of the
 institution’s members. Meanwhile, since a few years,
 &lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt; lets any user on the internet define,
 run, and share temporary virtual environments equipped with an
-arbitrary software stack.&lt;/p&gt;
+arbitrary software stack (&lt;a href=&quot;https://jupyter.org/try&quot;&gt;examples&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;In Fall 2017, Binder was revamped as BinderHub, a lightweight layer on
 top of JupyterHub. The next step in this convergence is to bring
@@ -83,8 +83,10 @@ to be implemented, before concluding with more advanced features and
 open questions.&lt;/p&gt;
 
 &lt;p&gt;This document started as a collection of notes of Nicolas M. Thiéry,
-reflecting on in-development JupyterHub deployment at Paris-Saclay and
-EGI respectively. They were largely informed by many discussions at
+reflecting on in-development
+&lt;a href=&quot;http://jupytercloud.lal.in2p3.fr/&quot;&gt;JupyterHub deployment at Paris-Saclay&lt;/a&gt;
+ and &lt;a href=&quot;https://jupyterhub.fedcloud-tf.fedcloud.eu/&quot;&gt;EGI&lt;/a&gt; respectively.
+They were largely informed by many discussions at
 March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
 of those deployments and two of the main JupyterHub and BinderHub
 devs: Min Ragan Kelley and Chris Holdgraf. It was also inspired by
@@ -262,8 +264,10 @@ colleagues in her lab to try out that software.&lt;/p&gt;
     &lt;p&gt;Alice has authored notebooks that she wants to share with her
 colleagues. Maybe the notebooks automatize some complicated
 processes and present them in the form of interactive web
-applications built using Jupyter widgets. Think of a wizard to setup
-parameters and data, run a computation, and visualize the results.&lt;/p&gt;
+applications built using &lt;a href=&quot;http://jupyter.org/widgets&quot;&gt;Jupyter widgets&lt;/a&gt;
+(&lt;a href=&quot;https://mybinder.org/v2/gh/binder-examples/appmode/master?urlpath=apps%2Findex.ipynb&quot;&gt;demo&lt;/a&gt;).
+Think of a wizard to setup parameters and data, run a computation,
+and visualize the results.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
