@@ -5,14 +5,14 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-03-15T20:23:36+00:00</updated>
+	<updated>2018-03-15T21:24:55+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Conference on Free computational mathematics at the CIRM</title>
 		<link href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/"/>
 		<id>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</id>
-		<updated>2018-03-15T19:22:40+00:00</updated>
+		<updated>2018-03-15T21:24:54+00:00</updated>
 		<content type="html">&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content>
 		<author>
@@ -24,7 +24,7 @@
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -343,7 +343,9 @@ to the exercises for that particular session.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;To explore: integration with local e-learning platforms like Moodle,
-in particular for the class members management and grades reporting.&lt;/p&gt;
+typically using &lt;a href=&quot;https://www.imsglobal.org/activity/learning-tools-interoperability&quot;&gt;LTI&lt;/a&gt;,
+in particular for class management and grades reporting.
+There already exists an &lt;a href=&quot;https://github.com/jupyterhub/ltiauthenticator&quot;&gt;LTI authenticator for Jupyter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;security-concerns&quot;&gt;Security concerns&lt;/h1&gt;
 
@@ -484,7 +486,7 @@ JupyterHub that the container shall be run on that machine?&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -723,7 +725,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -744,7 +746,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-03-15T20:23:33+00:00</updated>
+			<updated>2018-03-15T21:24:51+00:00</updated>
 		</source>
 	</entry>
 
@@ -767,7 +769,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -791,7 +793,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -934,7 +936,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -959,7 +961,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1034,7 +1036,7 @@ first time, and half an hour later on.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1285,7 +1287,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1308,7 +1310,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1332,7 +1334,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1716,7 +1718,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1777,7 +1779,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1811,7 +1813,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -1867,7 +1869,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2055,7 +2057,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2126,7 +2128,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2214,7 +2216,7 @@ work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2257,7 +2259,7 @@ week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2326,7 +2328,7 @@ Resulting from the retirement of Ursula Martin, it appears that some aspects of 
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2346,7 +2348,7 @@ what it means? &lt;a href=&quot;http://openpyviv.com/2017/04/05/static/&quot;&gt
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 
@@ -2485,7 +2487,7 @@ the question: “Any other comment you might have?”, we only got one answer.&l
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-15T19:22:40+00:00</updated>
+			<updated>2018-03-15T21:24:54+00:00</updated>
 		</source>
 	</entry>
 

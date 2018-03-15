@@ -50,7 +50,7 @@
 	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
 	<content:encoded>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-15T19:22:40+00:00</dc:date>
+	<dc:date>2018-03-15T21:24:54+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence">
 	<title>OpenDreamKit: Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
@@ -365,7 +365,9 @@ to the exercises for that particular session.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;To explore: integration with local e-learning platforms like Moodle,
-in particular for the class members management and grades reporting.&lt;/p&gt;
+typically using &lt;a href=&quot;https://www.imsglobal.org/activity/learning-tools-interoperability&quot;&gt;LTI&lt;/a&gt;,
+in particular for class management and grades reporting.
+There already exists an &lt;a href=&quot;https://github.com/jupyterhub/ltiauthenticator&quot;&gt;LTI authenticator for Jupyter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;security-concerns&quot;&gt;Security concerns&lt;/h1&gt;
 
