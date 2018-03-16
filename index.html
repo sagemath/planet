@@ -81,7 +81,7 @@
 
 
 <p class="date">
-<a href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/">March 16, 2018 09:48 PM</a>
+<a href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/">March 16, 2018 10:49 PM</a>
 </p>
 </div>
 </div>
@@ -135,15 +135,18 @@ specifications. It further discusses security aspects and what remains
 to be implemented, before concluding with more advanced features and
 open questions.</p>
 
-<p>This document started as a collection of notes of Nicolas M. Thiéry,
+<p>This document started as a collection of private notes
 reflecting on in-development
 <a href="http://jupytercloud.lal.in2p3.fr/">JupyterHub deployment at Paris-Saclay</a>
- and <a href="https://jupyterhub.fedcloud-tf.fedcloud.eu/">EGI</a> respectively, with <a href="https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md">some additional contributions</a>.
+and <a href="https://jupyterhub.fedcloud-tf.fedcloud.eu/">EGI</a> respectively,
+with <a href="https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md">some additional contributions</a>.
 They were largely informed by many discussions at
-March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
+March 2018’s <a href="https://pad.unistra.fr/p/jupyterhub-dev">JupyterHub coding sprint in Orsay</a>
+that involved dev-ops
 of those deployments and two of the main JupyterHub and BinderHub
 devs: Min Ragan Kelley and Chris Holdgraf. It was also inspired by
-some of <a href="https://cocalc.com">cocalc</a> features. Thank you all!!!</p>
+some of <a href="https://cocalc.com">cocalc</a> features. Silly ideas reflecting
+here are mine, hard work is theirs; thank you all!!!</p>
 
 <p>This document is meant for brainstorming; please
 <a href="https://github.com/OpenDreamKit/OpenDreamKit.github.io/tree/master/_posts/2018-03-15-jupyterhub-binder-convergence.md">hop in and edit</a>.</p>
@@ -151,7 +154,7 @@ some of <a href="https://cocalc.com">cocalc</a> features. Thank you all!!!</p>
 <h1 id="typical-scenario">Typical scenario</h1>
 
 <p>An institution – typically a university, a national lab, a
-transnational research infrastructure such <a href="http://xfel.eu">European
+transnational research infrastructure such as the <a href="http://xfel.eu">European
 XFEL</a>, or transational infrastructure provider like
 <a href="http://egi.eu">EGI</a> – wishes to provide its members and users with a
 Jupyter service.</p>
@@ -274,7 +277,10 @@ the given volumes through the authentication service</p>
         <p>collaborators=[….]: (optional) a white list of other users of this jupyterhub that can access this server</p>
       </li>
       <li>
-        <p>a flag allowing public ‘read-only’ access [read-only meaning that the container and all changes are thrown away at the end of the session; and that any ‘mounted’ data sources are read-only during the session]</p>
+        <p>a flag allowing public ‘temporary read-only’ access (meaning
+that the container and all changes are thrown away at the end of
+the session; and that any ‘mounted’ data sources are read-only
+during the session)</p>
       </li>
       <li>
         <p>credentials: whether to pass the user credentials into the container (as environment variable, or file)</p>
@@ -333,19 +339,23 @@ on Binder. Maybe a notebook demonstrating an interesting workflow to
 analyze data. He wants to use it more intensively on his own data.</p>
   </li>
   <li>
-    <p>Lucy has found a notebook &amp; binder environment published
-with a paper, and he wants to re-execute the notebook to reproduce the
-published results and start his research in the field. However, no
-binder (compute) resources are available in the cloud. The computation
-takes 20 minutes on a standard PC and he would like to run this
-calculation on his Desktop PC because that resources is readily
-available and idle 99% of the time.</p>
+    <p>Lucy has found a notebook &amp; binder environment published with a
+paper, and she wants to re-execute the notebook to reproduce the
+published results and start her research in the field. However, no
+binder (compute) resources are available in the cloud. The
+computation takes 20 minutes on a standard PC and she would like to
+run this calculation on her local server.</p>
   </li>
 </ul>
 
 <p>Setup:</p>
 
-<p>They recreate the same environment on his local server (for example by just changing the server name in the binder URL).</p>
+<p>They recreate the same environment on their local server (for example
+by just changing the server name in the binder URL).</p>
+
+<p>More advanced scenario to explore: Lucy would like to use her Desktop
+PC because that resource is readily available and idles 99% of the
+time.</p>
 
 <h2 id="easy-sharing-of-computational-environments">Easy sharing of computational environments</h2>
 
@@ -420,11 +430,13 @@ file format for notebooks.</p>
 
 <p>Desired features:</p>
 <ul>
-  <li>Full customizability of the computing environment by the teacher</li>
-  <li>Support for live manipulation of the class notes</li>
-  <li>Support for submission, collection and auto-grading of assignments</li>
-  <li>Access from the computer labs or from home, needing only a web browser</li>
-  <li>Possibility to use either the laboratory’s local computers or the server (if the server is used, the students only need a web-brower on their computer/laptop/tablet, i.e. no further software installation required)</li>
+  <li>Full customizability of the computing environment by the teacher;</li>
+  <li>Support for live manipulation of the class notes;</li>
+  <li>Support for submission, collection and auto-grading of assignments;</li>
+  <li>Access from the computer labs or outside (home, …);</li>
+  <li>Possibility to either use the server, needing only a web browser (no
+software installation required; supports phones, tablets, …), or
+install and run the software locally.</li>
 </ul>
 
 <p>Prerequisites:</p>
@@ -591,9 +603,9 @@ machine “by hand” and save its state. The construction must be fully
 scripted. On the plus side, this encourages users to script their
 images, making them more reproducible.</p>
 
-<p>National and international iniatitives such as the <a href="http://opendreamkit.org/2017/12/06/EOSC/">European Open
+<p>National and international initiatives such as the <a href="http://opendreamkit.org/2017/12/06/EOSC/">European Open
 Science Cloud</a> may help
-providing such a catalog of relevant jupyter notebooks/images.</p>
+providing such a catalog of relevant Jupyter notebooks/images.</p>
 
 <h2 id="default-volume-configuration">Default volume configuration</h2>
 
@@ -3174,7 +3186,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-March 16, 2018 09:48 PM<br>
+March 16, 2018 10:49 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>

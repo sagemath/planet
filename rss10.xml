@@ -50,7 +50,7 @@
 	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
 	<content:encoded>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-16T21:48:51+00:00</dc:date>
+	<dc:date>2018-03-16T22:49:47+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence">
 	<title>OpenDreamKit: Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
@@ -82,15 +82,18 @@ specifications. It further discusses security aspects and what remains
 to be implemented, before concluding with more advanced features and
 open questions.&lt;/p&gt;
 
-&lt;p&gt;This document started as a collection of notes of Nicolas M. Thiéry,
+&lt;p&gt;This document started as a collection of private notes
 reflecting on in-development
 &lt;a href=&quot;http://jupytercloud.lal.in2p3.fr/&quot;&gt;JupyterHub deployment at Paris-Saclay&lt;/a&gt;
- and &lt;a href=&quot;https://jupyterhub.fedcloud-tf.fedcloud.eu/&quot;&gt;EGI&lt;/a&gt; respectively, with &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md&quot;&gt;some additional contributions&lt;/a&gt;.
+and &lt;a href=&quot;https://jupyterhub.fedcloud-tf.fedcloud.eu/&quot;&gt;EGI&lt;/a&gt; respectively,
+with &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md&quot;&gt;some additional contributions&lt;/a&gt;.
 They were largely informed by many discussions at
-March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
+March 2018’s &lt;a href=&quot;https://pad.unistra.fr/p/jupyterhub-dev&quot;&gt;JupyterHub coding sprint in Orsay&lt;/a&gt;
+that involved dev-ops
 of those deployments and two of the main JupyterHub and BinderHub
 devs: Min Ragan Kelley and Chris Holdgraf. It was also inspired by
-some of &lt;a href=&quot;https://cocalc.com&quot;&gt;cocalc&lt;/a&gt; features. Thank you all!!!&lt;/p&gt;
+some of &lt;a href=&quot;https://cocalc.com&quot;&gt;cocalc&lt;/a&gt; features. Silly ideas reflecting
+here are mine, hard work is theirs; thank you all!!!&lt;/p&gt;
 
 &lt;p&gt;This document is meant for brainstorming; please
 &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/tree/master/_posts/2018-03-15-jupyterhub-binder-convergence.md&quot;&gt;hop in and edit&lt;/a&gt;.&lt;/p&gt;
@@ -98,7 +101,7 @@ some of &lt;a href=&quot;https://cocalc.com&quot;&gt;cocalc&lt;/a&gt; features. 
 &lt;h1 id=&quot;typical-scenario&quot;&gt;Typical scenario&lt;/h1&gt;
 
 &lt;p&gt;An institution – typically a university, a national lab, a
-transnational research infrastructure such &lt;a href=&quot;http://xfel.eu&quot;&gt;European
+transnational research infrastructure such as the &lt;a href=&quot;http://xfel.eu&quot;&gt;European
 XFEL&lt;/a&gt;, or transational infrastructure provider like
 &lt;a href=&quot;http://egi.eu&quot;&gt;EGI&lt;/a&gt; – wishes to provide its members and users with a
 Jupyter service.&lt;/p&gt;
@@ -221,7 +224,10 @@ the given volumes through the authentication service&lt;/p&gt;
         &lt;p&gt;collaborators=[….]: (optional) a white list of other users of this jupyterhub that can access this server&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;a flag allowing public ‘read-only’ access [read-only meaning that the container and all changes are thrown away at the end of the session; and that any ‘mounted’ data sources are read-only during the session]&lt;/p&gt;
+        &lt;p&gt;a flag allowing public ‘temporary read-only’ access (meaning
+that the container and all changes are thrown away at the end of
+the session; and that any ‘mounted’ data sources are read-only
+during the session)&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;credentials: whether to pass the user credentials into the container (as environment variable, or file)&lt;/p&gt;
@@ -280,19 +286,23 @@ on Binder. Maybe a notebook demonstrating an interesting workflow to
 analyze data. He wants to use it more intensively on his own data.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Lucy has found a notebook &amp;amp; binder environment published
-with a paper, and he wants to re-execute the notebook to reproduce the
-published results and start his research in the field. However, no
-binder (compute) resources are available in the cloud. The computation
-takes 20 minutes on a standard PC and he would like to run this
-calculation on his Desktop PC because that resources is readily
-available and idle 99% of the time.&lt;/p&gt;
+    &lt;p&gt;Lucy has found a notebook &amp;amp; binder environment published with a
+paper, and she wants to re-execute the notebook to reproduce the
+published results and start her research in the field. However, no
+binder (compute) resources are available in the cloud. The
+computation takes 20 minutes on a standard PC and she would like to
+run this calculation on her local server.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Setup:&lt;/p&gt;
 
-&lt;p&gt;They recreate the same environment on his local server (for example by just changing the server name in the binder URL).&lt;/p&gt;
+&lt;p&gt;They recreate the same environment on their local server (for example
+by just changing the server name in the binder URL).&lt;/p&gt;
+
+&lt;p&gt;More advanced scenario to explore: Lucy would like to use her Desktop
+PC because that resource is readily available and idles 99% of the
+time.&lt;/p&gt;
 
 &lt;h2 id=&quot;easy-sharing-of-computational-environments&quot;&gt;Easy sharing of computational environments&lt;/h2&gt;
 
@@ -367,11 +377,13 @@ file format for notebooks.&lt;/p&gt;
 
 &lt;p&gt;Desired features:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Full customizability of the computing environment by the teacher&lt;/li&gt;
-  &lt;li&gt;Support for live manipulation of the class notes&lt;/li&gt;
-  &lt;li&gt;Support for submission, collection and auto-grading of assignments&lt;/li&gt;
-  &lt;li&gt;Access from the computer labs or from home, needing only a web browser&lt;/li&gt;
-  &lt;li&gt;Possibility to use either the laboratory’s local computers or the server (if the server is used, the students only need a web-brower on their computer/laptop/tablet, i.e. no further software installation required)&lt;/li&gt;
+  &lt;li&gt;Full customizability of the computing environment by the teacher;&lt;/li&gt;
+  &lt;li&gt;Support for live manipulation of the class notes;&lt;/li&gt;
+  &lt;li&gt;Support for submission, collection and auto-grading of assignments;&lt;/li&gt;
+  &lt;li&gt;Access from the computer labs or outside (home, …);&lt;/li&gt;
+  &lt;li&gt;Possibility to either use the server, needing only a web browser (no
+software installation required; supports phones, tablets, …), or
+install and run the software locally.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Prerequisites:&lt;/p&gt;
@@ -538,9 +550,9 @@ machine “by hand” and save its state. The construction must be fully
 scripted. On the plus side, this encourages users to script their
 images, making them more reproducible.&lt;/p&gt;
 
-&lt;p&gt;National and international iniatitives such as the &lt;a href=&quot;http://opendreamkit.org/2017/12/06/EOSC/&quot;&gt;European Open
+&lt;p&gt;National and international initiatives such as the &lt;a href=&quot;http://opendreamkit.org/2017/12/06/EOSC/&quot;&gt;European Open
 Science Cloud&lt;/a&gt; may help
-providing such a catalog of relevant jupyter notebooks/images.&lt;/p&gt;
+providing such a catalog of relevant Jupyter notebooks/images.&lt;/p&gt;
 
 &lt;h2 id=&quot;default-volume-configuration&quot;&gt;Default volume configuration&lt;/h2&gt;
 
