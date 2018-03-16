@@ -50,7 +50,7 @@
 	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
 	<content:encoded>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
 &lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-15T22:26:01+00:00</dc:date>
+	<dc:date>2018-03-16T21:48:51+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence">
 	<title>OpenDreamKit: Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
@@ -61,7 +61,7 @@
 server, providing their members with easy access to &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter&lt;/a&gt;-based
 virtual environments (a.k.a. notebook servers), preinstalled with a
 stack of computational software, tailored to the typical needs of the
-institution’s members. Meanwhile, since a few years,
+institution’s members. Meanwhile, since a few years ago,
 &lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt; lets any user on the internet define,
 run, and share temporary virtual environments equipped with an
 arbitrary software stack (&lt;a href=&quot;https://jupyter.org/try&quot;&gt;examples&lt;/a&gt;).&lt;/p&gt;
@@ -74,18 +74,18 @@ together the best of both worlds: think persistent authenticated
 &lt;a href=&quot;http://jupyterhub.org&quot;&gt;JupyterHub&lt;/a&gt;. For now, let’s call them &lt;em&gt;versatile
 JupyterHub deployments&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;This document brainstorms about this convergence: it sets up the
+&lt;p&gt;This document brainstorms this convergence process: it sets up the
 ground with a scenario and assumptions for a typical institution-wide
-JupyterHub deployment, propose specifications from a user perspective,
+JupyterHub deployment, proposes specifications from a user perspective,
 and describes some typical use cases that would be enabled by such
-specifications. It further discuss security aspects and what remains
+specifications. It further discusses security aspects and what remains
 to be implemented, before concluding with more advanced features and
 open questions.&lt;/p&gt;
 
 &lt;p&gt;This document started as a collection of notes of Nicolas M. Thiéry,
 reflecting on in-development
 &lt;a href=&quot;http://jupytercloud.lal.in2p3.fr/&quot;&gt;JupyterHub deployment at Paris-Saclay&lt;/a&gt;
- and &lt;a href=&quot;https://jupyterhub.fedcloud-tf.fedcloud.eu/&quot;&gt;EGI&lt;/a&gt; respectively.
+ and &lt;a href=&quot;https://jupyterhub.fedcloud-tf.fedcloud.eu/&quot;&gt;EGI&lt;/a&gt; respectively, with &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md&quot;&gt;some additional contributions&lt;/a&gt;.
 They were largely informed by many discussions at
 March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
 of those deployments and two of the main JupyterHub and BinderHub
@@ -97,14 +97,17 @@ some of &lt;a href=&quot;https://cocalc.com&quot;&gt;cocalc&lt;/a&gt; features. 
 
 &lt;h1 id=&quot;typical-scenario&quot;&gt;Typical scenario&lt;/h1&gt;
 
-&lt;p&gt;An institution – typically a university, a national lab, or maybe
-even a transnational infrastructure provider like EGI – wishes to
-provide to its members with a Jupyter service.&lt;/p&gt;
+&lt;p&gt;An institution – typically a university, a national lab, a
+transnational research infrastructure such &lt;a href=&quot;http://xfel.eu&quot;&gt;European
+XFEL&lt;/a&gt;, or transational infrastructure provider like
+&lt;a href=&quot;http://egi.eu&quot;&gt;EGI&lt;/a&gt; – wishes to provide its members and users with a
+Jupyter service.&lt;/p&gt;
 
-&lt;p&gt;The service lets user spawn and access a personal or collaborative
+&lt;p&gt;The service lets user spawn and access personal or collaborative
 virtual environments: namely a web interface to a light weight virtual
 machine, in which they can use Jupyter notebooks, run calculations,
-etc. In the sequel we will use JupyterHub’s terminology and call such
+etc. In the remainder of this document we will use JupyterHub’s
+terminology and call such
 virtual environments &lt;em&gt;notebook servers&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;To cater for a large variety of use cases in teaching and research,
@@ -119,25 +122,25 @@ without a need for administrator intervention.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;an authentication service (Single Sign-On)&lt;/p&gt;
+    &lt;p&gt;An authentication service (Single Sign-On)&lt;/p&gt;
 
     &lt;p&gt;Examples: Paris-Sud’ Adonis internal SSO, the federated “Recherche
 et Enseignement Supérieur” authentication service of Renater, EGI
 CheckIn, …&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;computing resources&lt;/p&gt;
+    &lt;p&gt;Computing resources&lt;/p&gt;
 
     &lt;p&gt;Examples: a local cluster, access to a externalized cloud (GC, AWS,
 Azure, …)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;a shared volume service using the above authentication service&lt;/p&gt;
+    &lt;p&gt;A shared volume service using the above authentication service&lt;/p&gt;
 
     &lt;p&gt;E.g. a local NextCloud service, or …&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;(optional) a forge&lt;/p&gt;
+    &lt;p&gt;(Optional) a forge&lt;/p&gt;
 
     &lt;p&gt;Examples: a local gitlab service, github, … if private
 repositories are needed, the forge presumably will need the same
@@ -180,42 +183,64 @@ Configuration/Cancel/Don’t ask again”&lt;/p&gt;
 
 &lt;p&gt;The form consists of:&lt;/p&gt;
 
-&lt;p&gt;. The usal binder items:
-    - the description of the computing environment: a repo-to-docker-style git repo+branch+…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The usual binder items:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- the file/url to open on startup
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;the description of the computing environment: a repo-to-docker-style git repo+branch+…&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;the file/url to open on startup&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;…&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;a UI to get a URL/badge referencing the machine&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Persistence and access options:&lt;/p&gt;
 
-- ...
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;server_name: name to give to the server&lt;/p&gt;
 
-- a UI to get a URL/badge referencing the machine
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;If server_name is not specified, create a random server name?&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;mount options: [[mount point, volume url], […]]&lt;/p&gt;
 
-&lt;p&gt;. Persistence and access options:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- server_name: name to give to the server
-
-  If server_name is not specified, create a random server name?
-
-- mount options: [[mount point, volume url], [...]]
-
-  This assumes that the user has appropriate credentials to access
-  the given volumes through the authentication service
-
-- collaborators=[....]: (optional) a white list of other users of this jupyterhub that can access this server
-
-- credentials: whether to pass the user credentials into the container (as environment variable, or file)
-
-- resources scaling (optional): memory, number of processors,
-  duration (time or time of inactivity after which the server will
-  be automatically stopped / destroyed)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;This assumes that the user has appropriate credentials to access
+the given volumes through the authentication service&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;collaborators=[….]: (optional) a white list of other users of this jupyterhub that can access this server&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;a flag allowing public ‘read-only’ access [read-only meaning that the container and all changes are thrown away at the end of the session; and that any ‘mounted’ data sources are read-only during the session]&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;credentials: whether to pass the user credentials into the container (as environment variable, or file)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;resources scaling (optional): memory, number of processors,
+duration (time or time of inactivity after which the server will
+be automatically stopped / destroyed)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;behavior-upon-clicking-launch&quot;&gt;Behavior upon clicking Launch:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;If a notebook server with the given name already exists and the
- parameters are not change (or not set): connect to that server,
+ parameters are not changed (or not set): connect to that server,
  restarting it if needed&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -229,23 +254,45 @@ possible? Or should the user just delete the server?&lt;/p&gt;
 
 &lt;h2 id=&quot;behavior-upon-following-a-server-urlbadge&quot;&gt;Behavior upon following a server URL/badge:&lt;/h2&gt;
 
-&lt;p&gt;.  Display the authentication page (if not yet authenticated)&lt;/p&gt;
-
-&lt;p&gt;.  Display a security confirmation dialog as above (if origin is not within the
-    jupyterhub), with a description of the configuration and origin.&lt;/p&gt;
-
-&lt;p&gt;.  As above after clicking “Launch”&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Display the authentication page (if not yet authenticated)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Display a security confirmation dialog as above (if origin is not within the
+ jupyterhub), with a description of the configuration and origin.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As above after clicking “Launch”&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;some-use-cases&quot;&gt;Some use cases&lt;/h1&gt;
 
-&lt;h2 id=&quot;local-binder-better-name&quot;&gt;Local binder (better name?)&lt;/h2&gt;
+&lt;h2 id=&quot;local-binder-better-name-binderhome&quot;&gt;Local binder (better name? [Binder@home?])&lt;/h2&gt;
 
-&lt;p&gt;Scenario: Luc, a researcher, discovered a nice computing environment
+&lt;p&gt;Scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Luc, a researcher, discovered a nice computing environment
 on Binder. Maybe a notebook demonstrating an interesting workflow to
 analyze data. He wants to use it more intensively on his own data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lucy has found a notebook &amp;amp; binder environment published
+with a paper, and he wants to re-execute the notebook to reproduce the
+published results and start his research in the field. However, no
+binder (compute) resources are available in the cloud. The computation
+takes 20 minutes on a standard PC and he would like to run this
+calculation on his Desktop PC because that resources is readily
+available and idle 99% of the time.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Setup: Luc recreates the same environment on his local server by just
-changing the server name in the binder URL.&lt;/p&gt;
+&lt;p&gt;Setup:&lt;/p&gt;
+
+&lt;p&gt;They recreate the same environment on his local server (for example by just changing the server name in the binder URL).&lt;/p&gt;
 
 &lt;h2 id=&quot;easy-sharing-of-computational-environments&quot;&gt;Easy sharing of computational environments&lt;/h2&gt;
 
@@ -323,8 +370,8 @@ file format for notebooks.&lt;/p&gt;
   &lt;li&gt;Full customizability of the computing environment by the teacher&lt;/li&gt;
   &lt;li&gt;Support for live manipulation of the class notes&lt;/li&gt;
   &lt;li&gt;Support for submission, collection and auto-grading of assignments&lt;/li&gt;
-  &lt;li&gt;Access from the computer labs or from home&lt;/li&gt;
-  &lt;li&gt;Possibility to use either the labs local computers or the server&lt;/li&gt;
+  &lt;li&gt;Access from the computer labs or from home, needing only a web browser&lt;/li&gt;
+  &lt;li&gt;Possibility to use either the laboratory’s local computers or the server (if the server is used, the students only need a web-brower on their computer/laptop/tablet, i.e. no further software installation required)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Prerequisites:&lt;/p&gt;
@@ -341,8 +388,11 @@ the shared drive.&lt;/li&gt;
 &lt;p&gt;Procedure for the teacher(s):&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Set up a shared volume for the whole class&lt;/li&gt;
-  &lt;li&gt;Prepare a computing environment in a git repository on the forge
-Typically includes: computational software, [nbgrader] + configuration, …&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prepare a computing environment in a git repository on the forge.&lt;/p&gt;
+
+    &lt;p&gt;Typically includes: computational software, [nbgrader] + configuration, …&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Prepare the course material typically in a git repository on the forge
 (the same one or another)&lt;/li&gt;
   &lt;li&gt;Use JupyterHub’s form UI to setup (and test) a full description of the student’s
@@ -350,9 +400,12 @@ notebook servers, with mounting of the home directory (or subdirectory thereof?)
 Possibly add the teacher(s) as collaborator(s) ???
 Get the corresponding URL.&lt;/li&gt;
   &lt;li&gt;Possibly prepare a variant thereof for teachers of the class.&lt;/li&gt;
-  &lt;li&gt;Set up a web page for the class, with hyperlink(s) to the above URL
-There can typically be an hyperlink for each session pointing directly
-to the exercises for that particular session.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set up a web page for the class, with hyperlink(s) to the above URL.&lt;/p&gt;
+
+    &lt;p&gt;There can typically be an hyperlink for each session pointing directly
+to the exercises for that particular session.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Fetching the class material:&lt;/p&gt;
@@ -399,7 +452,7 @@ information from the storage; e.g. private information from the user;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;With credentials: take any action on behalf of the user in any
-service that use the same authentication..&lt;/p&gt;
+service that use the same authentication.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -485,6 +538,10 @@ machine “by hand” and save its state. The construction must be fully
 scripted. On the plus side, this encourages users to script their
 images, making them more reproducible.&lt;/p&gt;
 
+&lt;p&gt;National and international iniatitives such as the &lt;a href=&quot;http://opendreamkit.org/2017/12/06/EOSC/&quot;&gt;European Open
+Science Cloud&lt;/a&gt; may help
+providing such a catalog of relevant jupyter notebooks/images.&lt;/p&gt;
+
 &lt;h2 id=&quot;default-volume-configuration&quot;&gt;Default volume configuration&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -498,7 +555,7 @@ subdirectory thereof?&lt;/li&gt;
 &lt;h2 id=&quot;intensive-use-and-resource-management--accounting&quot;&gt;Intensive use and resource management / accounting&lt;/h2&gt;
 
 &lt;p&gt;The above has been written with casual use in mind. For extensive use,
-some form of accounting of the resources used would be needed. For
+some form of accounting and controlling of the resources used would be needed. For
 example, for LAL’s cloud we may want to have some form of bridge
 between the OpenStack dashboard and the hub. UI to be designed. Could
 the user provision a machine using the dashboard, and then specify on

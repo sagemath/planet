@@ -54,7 +54,7 @@
 <div class="bodypadding">
 
 <div class="daygroup">
-<h2>March 15, 2018</h2>
+<h2>March 16, 2018</h2>
 
 <div class="channelgroup">
 
@@ -81,12 +81,27 @@
 
 
 <p class="date">
-<a href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/">March 15, 2018 10:26 PM</a>
+<a href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/">March 16, 2018 09:48 PM</a>
 </p>
 </div>
 </div>
 
 
+</div>
+
+</div>
+<div class="daygroup">
+<h2>March 15, 2018</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
 
 
 <div class="entrygroup" id="http://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence">
@@ -99,7 +114,7 @@
 server, providing their members with easy access to <a href="http://jupyter.org">Jupyter</a>-based
 virtual environments (a.k.a. notebook servers), preinstalled with a
 stack of computational software, tailored to the typical needs of the
-institution’s members. Meanwhile, since a few years,
+institution’s members. Meanwhile, since a few years ago,
 <a href="http://mybinder.org">Binder</a> lets any user on the internet define,
 run, and share temporary virtual environments equipped with an
 arbitrary software stack (<a href="https://jupyter.org/try">examples</a>).</p>
@@ -112,18 +127,18 @@ together the best of both worlds: think persistent authenticated
 <a href="http://jupyterhub.org">JupyterHub</a>. For now, let’s call them <em>versatile
 JupyterHub deployments</em>.</p>
 
-<p>This document brainstorms about this convergence: it sets up the
+<p>This document brainstorms this convergence process: it sets up the
 ground with a scenario and assumptions for a typical institution-wide
-JupyterHub deployment, propose specifications from a user perspective,
+JupyterHub deployment, proposes specifications from a user perspective,
 and describes some typical use cases that would be enabled by such
-specifications. It further discuss security aspects and what remains
+specifications. It further discusses security aspects and what remains
 to be implemented, before concluding with more advanced features and
 open questions.</p>
 
 <p>This document started as a collection of notes of Nicolas M. Thiéry,
 reflecting on in-development
 <a href="http://jupytercloud.lal.in2p3.fr/">JupyterHub deployment at Paris-Saclay</a>
- and <a href="https://jupyterhub.fedcloud-tf.fedcloud.eu/">EGI</a> respectively.
+ and <a href="https://jupyterhub.fedcloud-tf.fedcloud.eu/">EGI</a> respectively, with <a href="https://github.com/OpenDreamKit/OpenDreamKit.github.io/commits/master/_posts/2018-03-15-jupyterhub-binder-convergence.md">some additional contributions</a>.
 They were largely informed by many discussions at
 March 2018’s JupyterHub coding sprint in Orsay that involved dev-ops
 of those deployments and two of the main JupyterHub and BinderHub
@@ -135,14 +150,17 @@ some of <a href="https://cocalc.com">cocalc</a> features. Thank you all!!!</p>
 
 <h1 id="typical-scenario">Typical scenario</h1>
 
-<p>An institution – typically a university, a national lab, or maybe
-even a transnational infrastructure provider like EGI – wishes to
-provide to its members with a Jupyter service.</p>
+<p>An institution – typically a university, a national lab, a
+transnational research infrastructure such <a href="http://xfel.eu">European
+XFEL</a>, or transational infrastructure provider like
+<a href="http://egi.eu">EGI</a> – wishes to provide its members and users with a
+Jupyter service.</p>
 
-<p>The service lets user spawn and access a personal or collaborative
+<p>The service lets user spawn and access personal or collaborative
 virtual environments: namely a web interface to a light weight virtual
 machine, in which they can use Jupyter notebooks, run calculations,
-etc. In the sequel we will use JupyterHub’s terminology and call such
+etc. In the remainder of this document we will use JupyterHub’s
+terminology and call such
 virtual environments <em>notebook servers</em>.</p>
 
 <p>To cater for a large variety of use cases in teaching and research,
@@ -157,25 +175,25 @@ without a need for administrator intervention.</p>
 
 <ul>
   <li>
-    <p>an authentication service (Single Sign-On)</p>
+    <p>An authentication service (Single Sign-On)</p>
 
     <p>Examples: Paris-Sud’ Adonis internal SSO, the federated “Recherche
 et Enseignement Supérieur” authentication service of Renater, EGI
 CheckIn, …</p>
   </li>
   <li>
-    <p>computing resources</p>
+    <p>Computing resources</p>
 
     <p>Examples: a local cluster, access to a externalized cloud (GC, AWS,
 Azure, …)</p>
   </li>
   <li>
-    <p>a shared volume service using the above authentication service</p>
+    <p>A shared volume service using the above authentication service</p>
 
     <p>E.g. a local NextCloud service, or …</p>
   </li>
   <li>
-    <p>(optional) a forge</p>
+    <p>(Optional) a forge</p>
 
     <p>Examples: a local gitlab service, github, … if private
 repositories are needed, the forge presumably will need the same
@@ -218,42 +236,64 @@ Configuration/Cancel/Don’t ask again”</p>
 
 <p>The form consists of:</p>
 
-<p>. The usal binder items:
-    - the description of the computing environment: a repo-to-docker-style git repo+branch+…</p>
+<ul>
+  <li>
+    <p>The usual binder items:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- the file/url to open on startup
+    <ul>
+      <li>
+        <p>the description of the computing environment: a repo-to-docker-style git repo+branch+…</p>
+      </li>
+      <li>
+        <p>the file/url to open on startup</p>
+      </li>
+      <li>
+        <p>…</p>
+      </li>
+      <li>
+        <p>a UI to get a URL/badge referencing the machine</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Persistence and access options:</p>
 
-- ...
+    <ul>
+      <li>
+        <p>server_name: name to give to the server</p>
 
-- a UI to get a URL/badge referencing the machine
-</code></pre></div></div>
+        <p>If server_name is not specified, create a random server name?</p>
+      </li>
+      <li>
+        <p>mount options: [[mount point, volume url], […]]</p>
 
-<p>. Persistence and access options:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- server_name: name to give to the server
-
-  If server_name is not specified, create a random server name?
-
-- mount options: [[mount point, volume url], [...]]
-
-  This assumes that the user has appropriate credentials to access
-  the given volumes through the authentication service
-
-- collaborators=[....]: (optional) a white list of other users of this jupyterhub that can access this server
-
-- credentials: whether to pass the user credentials into the container (as environment variable, or file)
-
-- resources scaling (optional): memory, number of processors,
-  duration (time or time of inactivity after which the server will
-  be automatically stopped / destroyed)
-</code></pre></div></div>
+        <p>This assumes that the user has appropriate credentials to access
+the given volumes through the authentication service</p>
+      </li>
+      <li>
+        <p>collaborators=[….]: (optional) a white list of other users of this jupyterhub that can access this server</p>
+      </li>
+      <li>
+        <p>a flag allowing public ‘read-only’ access [read-only meaning that the container and all changes are thrown away at the end of the session; and that any ‘mounted’ data sources are read-only during the session]</p>
+      </li>
+      <li>
+        <p>credentials: whether to pass the user credentials into the container (as environment variable, or file)</p>
+      </li>
+      <li>
+        <p>resources scaling (optional): memory, number of processors,
+duration (time or time of inactivity after which the server will
+be automatically stopped / destroyed)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="behavior-upon-clicking-launch">Behavior upon clicking Launch:</h2>
 
 <ul>
   <li>
     <p>If a notebook server with the given name already exists and the
- parameters are not change (or not set): connect to that server,
+ parameters are not changed (or not set): connect to that server,
  restarting it if needed</p>
   </li>
   <li>
@@ -267,23 +307,45 @@ possible? Or should the user just delete the server?</p>
 
 <h2 id="behavior-upon-following-a-server-urlbadge">Behavior upon following a server URL/badge:</h2>
 
-<p>.  Display the authentication page (if not yet authenticated)</p>
-
-<p>.  Display a security confirmation dialog as above (if origin is not within the
-    jupyterhub), with a description of the configuration and origin.</p>
-
-<p>.  As above after clicking “Launch”</p>
+<ul>
+  <li>
+    <p>Display the authentication page (if not yet authenticated)</p>
+  </li>
+  <li>
+    <p>Display a security confirmation dialog as above (if origin is not within the
+ jupyterhub), with a description of the configuration and origin.</p>
+  </li>
+  <li>
+    <p>As above after clicking “Launch”</p>
+  </li>
+</ul>
 
 <h1 id="some-use-cases">Some use cases</h1>
 
-<h2 id="local-binder-better-name">Local binder (better name?)</h2>
+<h2 id="local-binder-better-name-binderhome">Local binder (better name? [Binder@home?])</h2>
 
-<p>Scenario: Luc, a researcher, discovered a nice computing environment
+<p>Scenarios:</p>
+
+<ul>
+  <li>
+    <p>Luc, a researcher, discovered a nice computing environment
 on Binder. Maybe a notebook demonstrating an interesting workflow to
 analyze data. He wants to use it more intensively on his own data.</p>
+  </li>
+  <li>
+    <p>Lucy has found a notebook &amp; binder environment published
+with a paper, and he wants to re-execute the notebook to reproduce the
+published results and start his research in the field. However, no
+binder (compute) resources are available in the cloud. The computation
+takes 20 minutes on a standard PC and he would like to run this
+calculation on his Desktop PC because that resources is readily
+available and idle 99% of the time.</p>
+  </li>
+</ul>
 
-<p>Setup: Luc recreates the same environment on his local server by just
-changing the server name in the binder URL.</p>
+<p>Setup:</p>
+
+<p>They recreate the same environment on his local server (for example by just changing the server name in the binder URL).</p>
 
 <h2 id="easy-sharing-of-computational-environments">Easy sharing of computational environments</h2>
 
@@ -361,8 +423,8 @@ file format for notebooks.</p>
   <li>Full customizability of the computing environment by the teacher</li>
   <li>Support for live manipulation of the class notes</li>
   <li>Support for submission, collection and auto-grading of assignments</li>
-  <li>Access from the computer labs or from home</li>
-  <li>Possibility to use either the labs local computers or the server</li>
+  <li>Access from the computer labs or from home, needing only a web browser</li>
+  <li>Possibility to use either the laboratory’s local computers or the server (if the server is used, the students only need a web-brower on their computer/laptop/tablet, i.e. no further software installation required)</li>
 </ul>
 
 <p>Prerequisites:</p>
@@ -379,8 +441,11 @@ the shared drive.</li>
 <p>Procedure for the teacher(s):</p>
 <ul>
   <li>Set up a shared volume for the whole class</li>
-  <li>Prepare a computing environment in a git repository on the forge
-Typically includes: computational software, [nbgrader] + configuration, …</li>
+  <li>
+    <p>Prepare a computing environment in a git repository on the forge.</p>
+
+    <p>Typically includes: computational software, [nbgrader] + configuration, …</p>
+  </li>
   <li>Prepare the course material typically in a git repository on the forge
 (the same one or another)</li>
   <li>Use JupyterHub’s form UI to setup (and test) a full description of the student’s
@@ -388,9 +453,12 @@ notebook servers, with mounting of the home directory (or subdirectory thereof?)
 Possibly add the teacher(s) as collaborator(s) ???
 Get the corresponding URL.</li>
   <li>Possibly prepare a variant thereof for teachers of the class.</li>
-  <li>Set up a web page for the class, with hyperlink(s) to the above URL
-There can typically be an hyperlink for each session pointing directly
-to the exercises for that particular session.</li>
+  <li>
+    <p>Set up a web page for the class, with hyperlink(s) to the above URL.</p>
+
+    <p>There can typically be an hyperlink for each session pointing directly
+to the exercises for that particular session.</p>
+  </li>
 </ul>
 
 <p>Fetching the class material:</p>
@@ -437,7 +505,7 @@ information from the storage; e.g. private information from the user;</p>
   </li>
   <li>
     <p>With credentials: take any action on behalf of the user in any
-service that use the same authentication..</p>
+service that use the same authentication.</p>
   </li>
 </ul>
 
@@ -523,6 +591,10 @@ machine “by hand” and save its state. The construction must be fully
 scripted. On the plus side, this encourages users to script their
 images, making them more reproducible.</p>
 
+<p>National and international iniatitives such as the <a href="http://opendreamkit.org/2017/12/06/EOSC/">European Open
+Science Cloud</a> may help
+providing such a catalog of relevant jupyter notebooks/images.</p>
+
 <h2 id="default-volume-configuration">Default volume configuration</h2>
 
 <ul>
@@ -536,7 +608,7 @@ subdirectory thereof?</li>
 <h2 id="intensive-use-and-resource-management--accounting">Intensive use and resource management / accounting</h2>
 
 <p>The above has been written with casual use in mind. For extensive use,
-some form of accounting of the resources used would be needed. For
+some form of accounting and controlling of the resources used would be needed. For
 example, for LAL’s cloud we may want to have some form of bridge
 between the OpenStack dashboard and the hub. UI to be designed. Could
 the user provision a machine using the dashboard, and then specify on
@@ -3102,7 +3174,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-March 16, 2018 08:47 PM<br>
+March 16, 2018 09:48 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
