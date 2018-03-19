@@ -55,7 +55,7 @@ With OpenDreamKit approaching its end (august 2019), this will our
 main public closing event.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-19T20:59:20+00:00</dc:date>
+	<dc:date>2018-03-19T22:00:20+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/19/cernay-2018">
 	<title>OpenDreamKit: Interfacing (math) software with low level libraries</title>
@@ -972,12 +972,12 @@ functionalities of open source packages concerning Lie groups and their subgroup
 <item rdf:about="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks">
 	<title>OpenDreamKit: Publishing reproducible logbooks</title>
 	<link>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/</link>
-	<content:encoded>&lt;p&gt;This document is part of a collection of &lt;a href=&quot;http://opendreamkit.org/tag/use-case&quot;&gt;use cases&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
+	<content:encoded>&lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
 
 &lt;p&gt;Jane has written a (math) paper based on experimentations. She would
 like anyone to be able to reproduce her calculations.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org/public/images/use-cases-binder-logbook.png&quot;&gt; &lt;img src=&quot;http://opendreamkit.org/public/images/use-cases-binder-logbook.png&quot; alt=&quot;a binder logbook screenshot&quot; class=&quot;small-screenshot&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;suggestion-of-solution&quot;&gt;Suggestion of solution&lt;/h2&gt;
 
@@ -998,7 +998,7 @@ software stack required; for details, see the
   &lt;li&gt;
     &lt;p&gt;Bonus: make the paper itself active&lt;/p&gt;
 
-    &lt;p&gt;TODO: explore using e.g. &lt;a href=&quot;https://dlmf.nist.gov/LaTeXML/&quot;&gt;latexml&lt;/a&gt;+&lt;a href=&quot;https://github.com/minrk/thebelab&quot;&gt;thebe&lt;/a&gt;?).&lt;/p&gt;
+    &lt;p&gt;To do: explore using e.g. &lt;a href=&quot;https://dlmf.nist.gov/LaTeXML/&quot;&gt;latexml&lt;/a&gt;+&lt;a href=&quot;https://github.com/minrk/thebelab&quot;&gt;thebe&lt;/a&gt;?.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
