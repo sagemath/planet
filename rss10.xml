@@ -55,7 +55,7 @@ With OpenDreamKit approaching its end (august 2019), this will our
 main public closing event.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-03-19T22:00:20+00:00</dc:date>
+	<dc:date>2018-03-19T23:01:26+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/19/cernay-2018">
 	<title>OpenDreamKit: Interfacing (math) software with low level libraries</title>
@@ -1026,8 +1026,8 @@ Hivert and Gay
 &lt;h2 id=&quot;to-do&quot;&gt;To do&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Estimate the number of such instances&lt;/li&gt;
-  &lt;li&gt;Provide a template&lt;/li&gt;
+  &lt;li&gt;Estimate the number of such instances;&lt;/li&gt;
+  &lt;li&gt;Provide a template.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;time-and-expertise-required&quot;&gt;Time and expertise required&lt;/h2&gt;
@@ -1042,9 +1042,9 @@ later on.&lt;/p&gt;
 &lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Apparition of &lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Expansion of the &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter&lt;/a&gt; technology&lt;/li&gt;
-  &lt;li&gt;Better packaging and interfacing of math software&lt;/li&gt;
+  &lt;li&gt;Apparition of &lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Expansion of the &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter&lt;/a&gt; technology;&lt;/li&gt;
+  &lt;li&gt;Better packaging and interfacing of math software.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;opendreamkit-contribution&quot;&gt;OpenDreamKit contribution&lt;/h2&gt;
@@ -1057,10 +1057,10 @@ see &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/96&quot
 SageMath, Singular, …); see
 &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/58&quot;&gt;D3.1&lt;/a&gt;
 and
-&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/59&quot;&gt;D3.10&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Early adoption of Binder&lt;/li&gt;
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/59&quot;&gt;D3.10&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Early adoption of Binder;&lt;/li&gt;
   &lt;li&gt;Contributions to the
-&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/238&quot;&gt;deployment of new Binder instances&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/238&quot;&gt;deployment of new Binder instances&lt;/a&gt;;&lt;/li&gt;
   &lt;li&gt;Advertising, training, providing a template (TODO!), …&lt;/li&gt;
 &lt;/ul&gt;</content:encoded>
 	<dc:date>2017-11-02T00:00:00+00:00</dc:date>
