@@ -8,12 +8,24 @@
 	<description>Planet Sage - http://planet.sagemath.org</description>
 
 <item>
-	<title>OpenDreamKit: Conference on Free computational mathematics at the CIRM</title>
+	<title>OpenDreamKit: Free Computational Mathematics</title>
 	<guid>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</guid>
 	<link>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/</link>
-	<description>&lt;p&gt;This is an announcement for the one-week conference organised by OpenDreamKit at the CIRM premises in Marseille, France.
-&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Sat, 17 Mar 2018 08:59:37 +0000</pubDate>
+	<description>&lt;p&gt;This is an announcement for a large one week dissemination conference
+organized by OpenDreamKit at the CIRM premises near Marseille, France.
+With OpenDreamKit approaching its end (august 2019), this will our
+main public closing event.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</description>
+	<pubDate>Mon, 19 Mar 2018 14:53:03 +0000</pubDate>
+</item>
+<item>
+	<title>OpenDreamKit: Interfacing (math) software with low level libraries</title>
+	<guid>http://opendreamkit.org/2018/03/19/cernay-2018</guid>
+	<link>http://opendreamkit.org/2018/03/19/cernay-2018/</link>
+	<description>&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt; is organizing a
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/251&quot;&gt;workshop on Interfacing (math) software with low level libraries&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>OpenDreamKit: Toward versatile JupyterHub deployments, with the Binder and JupyterHub convergence</title>
@@ -192,6 +204,8 @@ the given volumes through the authentication service&lt;/p&gt;
 that the container and all changes are thrown away at the end of
 the session; and that any ‘mounted’ data sources are read-only
 during the session)&lt;/p&gt;
+
+        &lt;p&gt;alternatively&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;credentials: whether to pass the user credentials into the container (as environment variable, or file)&lt;/p&gt;
@@ -549,18 +563,15 @@ systems and databases.&lt;/p&gt;
 
 &lt;h1 id=&quot;time-line&quot;&gt;Time line&lt;/h1&gt;
 
-&lt;p&gt;Interviews in early Spring 2018 for a recruitment as soon as possible.&lt;/p&gt;
+&lt;p&gt;Interviews in March 2018 for a recruitment as soon as possible.&lt;/p&gt;
 
 &lt;h1 id=&quot;salary&quot;&gt;Salary&lt;/h1&gt;
 
 &lt;p&gt;For a full-time position, and depending on the applicant’s past
 experience, between 2000€ and 3000€ of monthly “salaire net” (salary
 after non-wage labour cost but before income tax). Equivalently, what
-this salary represents for is a “salaire brut” of up to 46200€ yearly.&lt;/p&gt;
-
-&lt;p&gt;At this stage, we have secured funding for at least 9 months of
-full-time salary. We hope to be able to extend this up to the end of
-the project (August 2019). Part time positions are negotiable.&lt;/p&gt;
+this salary represents for is a “salaire brut” of up to 46200€ yearly.
+We have secured funding until the end of the project (August 2019).&lt;/p&gt;
 
 &lt;h1 id=&quot;location&quot;&gt;Location&lt;/h1&gt;
 
@@ -922,7 +933,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 	<link>http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups/</link>
 	<description>&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt; is hosting a workshop on “Subgroups and lattices of Lie groups”
 to take place at the &lt;a href=&quot;http://faberresidency.cat/&quot;&gt;Faber residency&lt;/a&gt; in Olot, Spain from monday 19th
-of February to Saturday 3rd of March. The aim is to bring together experts in the geometry, algebra
+of February to Saturday 3rd of March 2018. The aim is to bring together experts in the geometry, algebra
 and combinatorics together with software developers in order to improve algorithms and
 functionalities of open source packages concerning Lie groups and their subgroups.&lt;/p&gt;
 
@@ -930,65 +941,99 @@ functionalities of open source packages concerning Lie groups and their subgroup
 	<pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
 </item>
 <item>
-	<title>OpenDreamKit: Use case: Publishing reproducible notebooks (draft)</title>
+	<title>OpenDreamKit: Publishing reproducible logbooks</title>
 	<guid>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks</guid>
 	<link>http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/</link>
 	<description>&lt;p&gt;This document is part of a collection of &lt;a href=&quot;http://opendreamkit.org/tag/use-case&quot;&gt;use cases&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;scenario&quot;&gt;Scenario:&lt;/h2&gt;
+&lt;h2 id=&quot;scenario&quot;&gt;Scenario&lt;/h2&gt;
 
 &lt;p&gt;Jane has written a (math) paper based on experimentations. She would
 like anyone to be able to reproduce her calculations.&lt;/p&gt;
 
-&lt;h2 id=&quot;suggestion-of-solution&quot;&gt;Suggestion of solution:&lt;/h2&gt;
+&lt;h2 id=&quot;suggestion-of-solution&quot;&gt;Suggestion of solution&lt;/h2&gt;
 
-&lt;p&gt;Describe the experimentation as Jupyter notebooks, mixing prose, code,
-and outputs (think of them as logbooks). Publish them on a public
-repository (e.g. on &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and make that
-repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;binder-ready&lt;/a&gt;. Make the paper itself active
-(TODO: latexml+thebe?).&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Describe the experimentation as &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter notebooks&lt;/a&gt;,
+mixing prose, code, and outputs (think of them as logbooks);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Publish them on a public repository (e.g. on
+&lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make that repository &lt;a href=&quot;http://opendreamkit.org/tag/binder&quot;&gt;Binder-ready&lt;/a&gt; by describing the
+software stack required; for details, see the
+&lt;a href=&quot;https://mybinder.readthedocs.io/en/latest/using.html#preparing-a-repository-for-binder&quot;&gt;Binder documentation&lt;/a&gt;;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bonus: make the paper itself active&lt;/p&gt;
 
-&lt;p&gt;If executing the examples requires a non-trivial instal/build step,
-also consider &lt;a href=&quot;http://mybinder.readthedocs.io/en/latest/dockerfile.html&quot;&gt;using a
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/a&gt;,
-and auto-building the Docker image on &lt;a href=&quot;https://hub.docker.com/&quot;&gt;https://hub.docker.com/&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;TODO: explore using e.g. &lt;a href=&quot;https://dlmf.nist.gov/LaTeXML/&quot;&gt;latexml&lt;/a&gt;+&lt;a href=&quot;https://github.com/minrk/thebelab&quot;&gt;thebe&lt;/a&gt;?).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&quot;instances&quot;&gt;Instances&lt;/h2&gt;
+&lt;!-- If executing the examples requires a non-trivial install/build step,
+also consider
+[using a `Dockerfile`](http://mybinder.readthedocs.io/en/latest/dockerfile.html),
+and auto-building the Docker image on &lt;https://hub.docker.com&gt;&lt;/https://hub.docker.com&gt;. !--&gt;
+
+&lt;h2 id=&quot;some-instances&quot;&gt;Some instances&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;TODO: links to favorite instances&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/defeo/ffisom&quot;&gt;https://github.com/defeo/ffisom&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/defeo/ffisom&quot;&gt;Computing isomorphisms and embeddings of finite fields&lt;/a&gt;,
+Ludovic Brieulle, Luca De Feo, Javad Doliskani, Jean-Pierre Flori and Éric Schost,
+&lt;a href=&quot;https://arxiv.org/abs/1705.01221&quot;&gt;arXiv:1705.01221 [cs.SC]&lt;/a&gt;
+&lt;a href=&quot;https://mybinder.org/v2/gh/defeo/ffisom/master?filepath=notebooks&quot;&gt;&lt;img src=&quot;https://mybinder.org/badge.svg&quot; alt=&quot;launch binder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;TODO: estimate of the number of such instances.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/hivert/Jupyter-Notebooks&quot;&gt;The 0-Rook monoid and its representation theory&lt;/a&gt;,
+Hivert and Gay
+&lt;a href=&quot;https://mybinder.org/v2/gh/hivert/Jupyter-Notebooks/master?filepath=rook-0.ipynb&quot;&gt;&lt;img src=&quot;https://mybinder.org/badge.svg&quot; alt=&quot;launch binder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;to-do&quot;&gt;To do&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estimate the number of such instances&lt;/li&gt;
+  &lt;li&gt;Provide a template&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;time-and-expertise-required&quot;&gt;Time and expertise required&lt;/h2&gt;
 
 &lt;p&gt;Assuming Jane is familiar with version control and Jupyter (basic lab
-skills taught at Software Carpentry), and that the experiments were
-prepared as notebooks, the publishing part could take two hours the
-first time, and half an hour later on.&lt;/p&gt;
+skills taught at &lt;a href=&quot;http://software-carpentry.org/&quot;&gt;Software Carpentry&lt;/a&gt;,
+that the experiments were prepared as notebooks, and the software
+required is packaged (conda, debian, docker container, …), the
+publishing part could take two hours the first time, and half an hour
+later on.&lt;/p&gt;
 
-&lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started:&lt;/h2&gt;
+&lt;h2 id=&quot;whats-new-since-opendreamkit-started&quot;&gt;What’s new since OpenDreamKit started&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;SageMath packaged in Debian/Ubuntu&lt;/li&gt;
-  &lt;li&gt;expansion of the Jupyter technology&lt;/li&gt;
-  &lt;li&gt;apparition of binder&lt;/li&gt;
+  &lt;li&gt;Apparition of &lt;a href=&quot;http://mybinder.org&quot;&gt;Binder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Expansion of the &lt;a href=&quot;http://jupyter.org&quot;&gt;Jupyter&lt;/a&gt; technology&lt;/li&gt;
+  &lt;li&gt;Better packaging and interfacing of math software&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;opendreamkit-contribution&quot;&gt;OpenDreamKit contribution&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Uniform Jupyter interface to math software #xxx&lt;/li&gt;
-  &lt;li&gt;early adoption of binder&lt;/li&gt;
-  &lt;li&gt;advertising, training, providing a template (TODO!), …&lt;/li&gt;
+  &lt;li&gt;Development and contributions to Jupyter interfaces (kernels) for
+math software (GAP, Pari/GP, SageMath, Singular) and C++;
+see &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/96&quot;&gt;D.47&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Contributions to the packaging of math software (GAP, Pari/GP,
+SageMath, Singular, …); see
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/58&quot;&gt;D3.1&lt;/a&gt;
+and
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/59&quot;&gt;D3.10&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Early adoption of Binder&lt;/li&gt;
+  &lt;li&gt;Contributions to the
+&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/238&quot;&gt;deployment of new Binder instances&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Advertising, training, providing a template (TODO!), …&lt;/li&gt;
 &lt;/ul&gt;</description>
 	<pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
 </item>
