@@ -5,14 +5,14 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-04-09T14:31:44+00:00</updated>
+	<updated>2018-04-09T15:33:03+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Free Computational Mathematics</title>
 		<link href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/"/>
 		<id>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</id>
-		<updated>2018-03-22T22:12:10+00:00</updated>
+		<updated>2018-04-09T15:33:02+00:00</updated>
 		<content type="html">&lt;p&gt;This is an announcement for a large one week dissemination conference
 organized by OpenDreamKit at the CIRM premises near Marseille, France.
 With OpenDreamKit approaching its end (august 2019), this will our
@@ -28,7 +28,7 @@ main public closing event.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -48,7 +48,7 @@ main public closing event.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -585,7 +585,78 @@ JupyterHub that the container shall be run on that machine?&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">OpenDreamKit at the RSE conference</title>
+		<link href="http://opendreamkit.org/2018/03/07/opendreamkit-at-the-rse-conference/"/>
+		<id>http://opendreamkit.org/2018/03/07/opendreamkit-at-the-rse-conference</id>
+		<updated>2018-03-07T00:00:00+00:00</updated>
+		<content type="html">&lt;h1 id=&quot;open-dream-kit-presence-at-the-second-rse-conference&quot;&gt;Open Dream Kit presence at the second RSE conference&lt;/h1&gt;
+
+&lt;p&gt;The Manchester Museum of Science and Industry (MOSI) saw the &lt;a href=&quot;http://rse.shef.ac.uk/blog/a-successful-2nd-rse-conference/&quot;&gt;second Research
+Software Engineering (RSE) conference&lt;/a&gt; on September 7-8th, 2017.
+Over 200 attendees gathered to discuss ways to better support and advance science via software, innovative computational tools, and policy making.
+There were more than 40 talks and 15 workshops covering a diverse range of topics, from community building to imposter syndrome, data visualization, and High-Performance Computing.&lt;/p&gt;
+
+&lt;p&gt;Attending the conference is an excellent opportunity to integrate within the international &lt;a href=&quot;http://rse.ac.uk/&quot;&gt;RSE
+community&lt;/a&gt; and appreciate how much this has grown over the last few years.
+All thanks to the great work done by RSEs within their institutions and their efforts
+to make software a valuable research asset.
+It will be, for certain, interesting to see how this will continue to grow and
+evolve as policy changes take place and more research councils, funding bodies,
+and research institutions acknowledge the importance of research software and
+its scientific impact.&lt;/p&gt;
+
+&lt;p&gt;OpenDreamKit member, Tania Allard, ran a hands-on workshop on &lt;strong&gt;Jupyter notebooks
+for reproducible research&lt;/strong&gt;. This workshop focused on the use of Jupyter notebooks
+as a means to disseminate reproducible analysis workflows and how this can be
+leveraged using tools
+such as &lt;a href=&quot;https://github.com/jupyter/nbdime&quot;&gt;nbdime&lt;/a&gt; and &lt;a href=&quot;https://github.com/computationalmodelling/nbval&quot;&gt;nbval&lt;/a&gt;. Both nbdime and nbval
+were developed by members of the OpenDreamKit project as a response to the
+growing popularity of the Jupyter notebooks and the lack of native integration
+between these technologies and existing version control and validation/testing tools.&lt;/p&gt;
+
+&lt;p&gt;An exceptional win was that this workshop was, in fact, &lt;strong&gt;one of the most popular
+events of the conference and we were asked to run it twice as it was massively
+oversubscribed&lt;/strong&gt;.
+This reflects, on one hand, the popularity of Jupyter notebooks due to the boom of
+literate programming and its focus on human-readable code. Allowing
+researchers to share their findings and the code they used along the way in a
+compelling narrative. On the other hand, it demonstrates the importance of
+reproducible science and the need for tools that help RSE and researchers to
+achieve this goal, which aligns perfectly with the goals of OpenDreamKit.&lt;/p&gt;
+
+&lt;p&gt;The workshop revolved around 3 main topics:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Version control of the Jupyter notebooks&lt;/li&gt;
+  &lt;li&gt;Notebooks validation&lt;/li&gt;
+  &lt;li&gt;The basics of reproducible software practices.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The main focus was on how tools like nbdime and nbval can support people already using
+Jupyter notebooks but have struggled to integrate these with software best development
+practices due to a number of limitations on the existing tools. Then, we followed on
+other actions that can be taken to ensure that their data analysis workflows were
+reproducible and sustainable.
+This lead to a number of interesting discussions about the topic and allowed for
+the attendees to share their previous experiences regarding reproducibility and/or the lack
+thereof in different research areas.&lt;/p&gt;
+
+&lt;p&gt;We plan to run a set or workshops around reproducibility over the duration of the
+ODK project and we’ll make sure to report on them here too.&lt;/p&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -824,7 +895,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -845,7 +916,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-04-09T14:31:42+00:00</updated>
+			<updated>2018-04-09T15:32:40+00:00</updated>
 		</source>
 	</entry>
 
@@ -868,7 +939,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -892,7 +963,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1035,7 +1106,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1060,7 +1131,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1169,7 +1240,7 @@ and
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1420,7 +1491,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1443,7 +1514,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1467,7 +1538,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1851,7 +1922,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1912,7 +1983,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -1946,7 +2017,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -2002,7 +2073,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -2190,7 +2261,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
@@ -2261,207 +2332,7 @@ nbdime config-git --global --enable # tell git to use nbdime when it sees notebo
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Debriefing from a successful Formal Project Review by the EU Commission</title>
-		<link href="http://opendreamkit.org/2017/04/26/first-project-review-debriefing/"/>
-		<id>http://opendreamkit.org/2017/04/26/first-project-review-debriefing</id>
-		<updated>2017-04-26T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;On April 26th, OpenDreamKit underwent its first formal review by the
-European Commission. We presented the achievements of the first 18
-months of the project, including
-&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues?q=label%3AReportingPeriod1&quot;&gt;30 deliverables&lt;/a&gt;
-(&lt;a href=&quot;http://opendreamkit.org/events_activities/reports/&quot;&gt;reports&lt;/a&gt;, &lt;a href=&quot;http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/&quot;&gt;slides&lt;/a&gt;).
-Overall, &lt;strong&gt;the feedback was very positive&lt;/strong&gt;, with language such as
-“enthusiast”, “brilliant”, “amazing job”, or “things have come along
-fantastically”. We made a strong point in our reports and
-presentations that a vast majority of what’s happening comes from the
-ecosystem we support. All we do is exploit the special resources the
-EU is entrusting us to knock down some tough hurdles that are
-preventing the ball to roll. &lt;strong&gt;Kudos to our communities!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;debriefing-notes-i-sent-to-the-opendreamkit-participants&quot;&gt;Debriefing notes I sent to the OpenDreamKit participants&lt;/h2&gt;
-
-&lt;p&gt;About twenty of us were in Brussels early this week for the
-OpenDreamKit Month 18 formal review. After two days of intensive
-preparation, we presented our work on Wednesday to our project officer
-and reviewers.&lt;/p&gt;
-
-&lt;p&gt;There are a few points that we need to think about (not unexpected).
-But otherwise the hard work we all put since the beginning of the
-project came out as quite a show. The panel gave very constructive
-feedback and were overall really happy. They appreciate our approach,
-our work, our spirit.&lt;/p&gt;
-
-&lt;p&gt;Now is the time to enjoy that appreciation and build on that energy to
-do even better in the coming years. Pass this on to our communities!&lt;/p&gt;
-
-&lt;p&gt;Speaking of funding: the reviewers made a strong point that we bear a
-big responsibility: apparently mathematics does not have a good press
-in the high spheres these days. We were &lt;em&gt;very lucky&lt;/em&gt;, as a math
-project, to be funded; it’s really because they appreciated so much
-the strength of the proposal and our “clever and creative
-interpretation of the call” that we made it through. “No other math
-project is being funded” (this quote obviously does not apply to
-ERCs; the scope is plausibly that of H2020 projects).&lt;/p&gt;
-
-&lt;p&gt;They now need strong ammunition to make sure that future calls leave
-room for mathematics. So not only do we have to succeed because we
-care so much about our aims (and should investigate followups to
-pursue them further), but also for the sake of other projects
-elsewhere in mathematics. We also need to proactively explain and
-highlight to a wider audience what we do in collaboration with our
-communities. There is very good stuff going on, let it be seen.&lt;/p&gt;
-
-&lt;p&gt;Some further thoughts needs to be put in how to achieve that. For now,
-the take home message is simple: &lt;strong&gt;&lt;em&gt;If you witness something nice
-happening, from a technical achievement with a wow factor to a thought
-provoking anecdote, write a blog post about it&lt;/em&gt;&lt;/strong&gt;. See the
-&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit.github.io/blob/master/_posts/README.md&quot;&gt;instructions&lt;/a&gt;,
-or even just send a brief draft text by e-mail to
-&lt;a href=&quot;mailto:m.croucher@sheffield.ac.uk&quot;&gt;Mike Croucher&lt;/a&gt; with
-&lt;a href=&quot;mailto:Nicolas.Thiery@u-psud.fr&quot;&gt;me&lt;/a&gt; in CC.&lt;/p&gt;
-
-&lt;p&gt;Let me conclude by thanking the whole band that came to Brussels (with
-a special nod to the presenters on which we dumped the most delicate
-presentations). I was frustrated as you all were spending all this
-time together without tackling what we all really care most. However
-we built on our image in the Commission, and used the occasion to
-strengthen our group around a joint vision. This is a worthwhile long
-term investment.&lt;/p&gt;
-
-&lt;p&gt;Thank you everybody for all the enthusiastic, dedicated and beautiful
-work. It’s an honor and a pleasure to be working with such a team.&lt;/p&gt;
-
-&lt;p&gt;Remember: pass it on to those supporting you and to your communities.&lt;/p&gt;
-
-&lt;p&gt;Cheers,
-		Nicolas&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Formal Project Review for OpenDreamKit's first reporting period (Sept. 2015 to Feb. 2017)</title>
-		<link href="http://opendreamkit.org/2017/04/24/first-project-review/"/>
-		<id>http://opendreamkit.org/2017/04/24/first-project-review</id>
-		<updated>2017-04-24T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;At the occasion of its first
-(&lt;a href=&quot;http://opendreamkit.org/2017/04/26/first-project-review-debriefing/&quot;&gt;very successful&lt;/a&gt;!)
-&lt;a href=&quot;http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/&quot;&gt;formal review&lt;/a&gt;
-by the EU commission, twenty OpenDreamKit participants met on the last
-week of April 2017 at the &lt;a href=&quot;http://www.clora.eu/en/accueil&quot;&gt;CLORA&lt;/a&gt;
-(Club of associated research organisations) headquarters in Brussels.&lt;/p&gt;
-
-&lt;h2 id=&quot;monday-24-tuesday-25&quot;&gt;Monday 24, Tuesday 25&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Brief Steering Committee (&lt;a href=&quot;http://opendreamkit.org/2017/04/24/brussels-steering-committee/&quot;&gt;Agenda &amp;amp; Minutes&lt;/a&gt; and &lt;a href=&quot;https://mensuel.framapad.org/p/vQTnSyplRr&quot;&gt;Pad&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/222&quot;&gt;Preparation for the review&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;wednesday-26&quot;&gt;Wednesday 26&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2017-04-26-ProjectReviewPresentations/&quot;&gt;Formal review&lt;/a&gt; (&lt;a href=&quot;http://opendreamkit.org/2017/04/26/first-project-review-debriefing/&quot;&gt;debriefing notes&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;thursday-27-friday-28&quot;&gt;Thursday 27, Friday 28&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/223&quot;&gt;Coding sprints&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Steering Committee meeting before the 1st Project Review</title>
-		<link href="http://opendreamkit.org/2017/04/24/brussels-steering-committee/"/>
-		<id>http://opendreamkit.org/2017/04/24/brussels-steering-committee</id>
-		<updated>2017-04-24T00:00:00+00:00</updated>
-		<content type="html">&lt;h2 id=&quot;participants&quot;&gt;Participants&lt;/h2&gt;
-
-&lt;p&gt;A framadate &lt;a href=&quot;https://framadate.org/MPxYiQTu1JZjHuJp&quot;&gt;poll&lt;/a&gt; was created&lt;/p&gt;
-
-&lt;h3 id=&quot;were-present-on-the-steering-committee-day&quot;&gt;Were present on the steering committee day:&lt;/h3&gt;
-&lt;p&gt;Nicolas THIERY; Benoît PILORGET; Erik BRAY; Viviane PONS; Vincent DELECROIX; Michael KOHLHASE; Dennis MUELLER; Florian RABE; Tom WIESING; Clément PERNET; Wolfram DECKER; William HART; Dmitrii PASECHNIK; Marcin KOSTUR; Mike CROUCHER; Hans FANGOHR; Alexander KONOVALOV; Stephen LINTON; Luca DE FEO; John CREMONA; Paul-Olivier DEHAYE; Benjamin RAGAN-KELLEY; Jeroen DEMEYER; Konrad HINSEN&lt;/p&gt;
-
-&lt;h2 id=&quot;agenda&quot;&gt;Agenda&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Second amendment to the Grant&lt;/li&gt;
-  &lt;li&gt;WP7: overview of the situation and of the measures taken and to be planned&lt;/li&gt;
-  &lt;li&gt;Overview of the deliverables due for M18&lt;/li&gt;
-  &lt;li&gt;Best practice for the Project Review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;minutes&quot;&gt;Minutes&lt;/h2&gt;
-
-&lt;h3 id=&quot;second-amendment-to-the-grant&quot;&gt;Second amendment to the Grant&lt;/h3&gt;
-
-&lt;p&gt;Benoît Pilorget (BP) announced that the Second Amendment should be over in April-May. All the modifications concerning deliverables and the scientific context were accepted. The remaining blocking points were purely administrative and require some time. At the moment these notes are being written (19/05/2017), the Commission seems to have fully agreed on all terms and is about to sign the amendment.&lt;/p&gt;
-
-&lt;p&gt;Related to this amendment, the consortium expressed their congratulations to Hans Fangohr (HF) for his new position at XFEL, in Hamburg.
-All points of the amendment can be found on the github issue &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/issues/193&quot;&gt;#193&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;wp7-overview-of-the-situation-and-of-the-measures-taken-and-to-be-planned&quot;&gt;WP7: overview of the situation and of the measures taken and to be planned:&lt;/h3&gt;
-
-&lt;p&gt;An open brainstorming session took place.
-Resulting from the retirement of Ursula Martin, it appears that some aspects of WP7 that require research-grade  expertise in sociology will be hardly achievable as it is organised today with the current consortium. Therefore solutions must be found so that we don’t just tick the boxes but actually deliver high quality material.&lt;/p&gt;
-
-&lt;p&gt;Several options have been discussed:&lt;/p&gt;
-
-&lt;p&gt;1) Hire new staff specialised in sociology or likewise field. This solution would probably lead to the transfer of some funding within the consortium, unless it turns out enough Person-Months are planned at UOXF&lt;/p&gt;
-
-&lt;p&gt;2) Subcontract the planned work not feasible. For this solution to work out, one must find an adequate subcontractor (providing enough funds are available within UOXF or the consortium) and sign an amendment to the Grant with the Commission&lt;/p&gt;
-
-&lt;p&gt;3) Rethink the scientific content (objectives, tasks, deliverables), to take into account all we have learned since the writing of the proposal, and make the best use of the available ressources and consortium expertise. This of course would require a negotiation with the EU and probably a new amendment to the grant agreement.&lt;/p&gt;
-
-&lt;p&gt;The consortium is expecting official feedback from the Project Officer and reviewers after the formal review. In the meantime, the Coordinator and Principal Investigators of WP7 will be informally brainstorming all possibilities. Were an amendment necessary, it will be written after the current amendment for the addition of FAU Erlangen and XFEL is signed by the Commission.&lt;/p&gt;
-
-&lt;h3 id=&quot;overview-of-the-deliverables-due-for-m18-and-24&quot;&gt;Overview of the deliverables due for &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/milestone/62?closed=1&quot;&gt;M18&lt;/a&gt; and &lt;a href=&quot;https://github.com/OpenDreamKit/OpenDreamKit/milestone/65&quot;&gt;24&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;After a tour de table, the Coordinator ensured that all deliverables due for Month 24 (31/08/2017) have a leader and a definite working plan.&lt;/p&gt;
-
-&lt;h3 id=&quot;best-practice-for-the-project-review&quot;&gt;Best practice for the Project Review:&lt;/h3&gt;
-
-&lt;p&gt;BP reminded the consortium of the &lt;a href=&quot;http://opendreamkit.org/meetings/2017-01-19-EdinburghSteeringCommittee/Review-presentation/&quot;&gt;support slides&lt;/a&gt; for the Review that were presentend at the Edinburgh steering committee meeting.&lt;/p&gt;
-
-&lt;h3 id=&quot;feedback-from-the-quality-review-board&quot;&gt;Feedback from the Quality Review Board&lt;/h3&gt;
-
-&lt;p&gt;HF, the chair of the Quality Review Board (QRB), expressed rough positive feedback from the first QRB meeting. A full report will be made available for all participants.&lt;/p&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-03-22T22:12:10+00:00</updated>
+			<updated>2018-04-09T15:33:02+00:00</updated>
 		</source>
 	</entry>
 
