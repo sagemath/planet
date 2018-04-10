@@ -51,7 +51,7 @@ With OpenDreamKit approaching its end (august 2019), this will our
 main public closing event.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</content:encoded>
-	<dc:date>2018-04-09T15:33:02+00:00</dc:date>
+	<dc:date>2018-04-10T16:20:54+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/03/19/cernay-2018">
 	<title>OpenDreamKit: Interfacing (math) software with low level libraries</title>
@@ -639,7 +639,8 @@ the attendees to share their previous experiences regarding reproducibility and/
 thereof in different research areas.&lt;/p&gt;
 
 &lt;p&gt;We plan to run a set or workshops around reproducibility over the duration of the
-ODK project and we’ll make sure to report on them here too.&lt;/p&gt;</content:encoded>
+ODK project and we’ll make sure to report on them here too. Finally, all the materials are licensed under
+CC-BY and can be found &lt;a href=&quot;https://github.com/trallard/JNB_reproducible&quot;&gt;in this GitHub repository&lt;/a&gt; .&lt;/p&gt;</content:encoded>
 	<dc:date>2018-03-07T00:00:00+00:00</dc:date>
 </item>
 <item rdf:about="http://opendreamkit.org/2018/02/21/position-paris-sud">
