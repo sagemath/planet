@@ -5,14 +5,14 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-04-20T11:57:31+00:00</updated>
+	<updated>2018-04-20T12:58:32+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Free Computational Mathematics</title>
 		<link href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/"/>
 		<id>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</id>
-		<updated>2018-04-16T14:44:40+00:00</updated>
+		<updated>2018-04-20T12:58:32+00:00</updated>
 		<content type="html">&lt;p&gt;This is an announcement for a large one week dissemination conference
 organized by OpenDreamKit at the CIRM premises near Marseille, France.
 With OpenDreamKit approaching its end (august 2019), this will our
@@ -28,7 +28,31 @@ main public closing event.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html"></title>
+		<link href="http://opendreamkit.org/2018/04/20/2018-04-18-saint_flour-2018/"/>
+		<id>http://opendreamkit.org/2018/04/20/2018-04-18-saint_flour-2018</id>
+		<updated>2018-04-20T12:46:10+00:00</updated>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;http://opendreamkit.org&quot;&gt;OpenDreamKit&lt;/a&gt; is organizing a
+&lt;a href=&quot;https://mathexp2018.sciencesconf.org/&quot;&gt;spring school on experimental mathematics (“Mathématiques Expérimentales”)&lt;/a&gt;.
+The first week will focus on learning tools (4 courses given by expert in computer
+science and mathematics as well as programming exercises). During the second week
+each participant is asked to work on a programming project related to his or her
+research.&lt;/p&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -48,7 +72,7 @@ main public closing event.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -585,7 +609,7 @@ JupyterHub that the container shall be run on that machine?&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -657,7 +681,7 @@ CC-BY and can be found &lt;a href=&quot;https://github.com/trallard/JNB_reproduc
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -897,7 +921,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -918,7 +942,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-04-20T11:57:29+00:00</updated>
+			<updated>2018-04-20T12:58:29+00:00</updated>
 		</source>
 	</entry>
 
@@ -941,7 +965,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -965,7 +989,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1108,7 +1132,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1133,7 +1157,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1242,7 +1266,7 @@ and
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1493,7 +1517,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1516,7 +1540,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1540,7 +1564,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1924,7 +1948,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -1985,7 +2009,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -2019,7 +2043,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -2075,7 +2099,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -2263,7 +2287,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
+			<updated>2018-04-20T12:58:32+00:00</updated>
 		</source>
 	</entry>
 
@@ -2284,57 +2308,6 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
 			<updated>2018-03-08T00:05:15+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">SageMath GSoC 2017 Projects</title>
-		<link href="http://blog.harald.schil.ly/2017/05/sagemath-gsoc-2017-projects.html"/>
-		<id>tag:blogger.com,1999:blog-3473399517246044360.post-5304490995105111973</id>
-		<updated>2017-05-05T18:03:53+00:00</updated>
-		<content type="html">&lt;div dir=&quot;ltr&quot;&gt;&lt;h2&gt;&lt;span&gt;6 GSoC SageMath Projects&lt;/span&gt;&lt;/h2&gt;&lt;span&gt;During the past couple of summers, SageMath successfully managed many &lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; projects. This year we are again &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/5790079692832768/&quot;&gt;&lt;b&gt;happy to have six projects&lt;/b&gt;&lt;/a&gt;:&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;h3&gt;&lt;span&gt;Implementing matroid classes and plotting improvements&lt;/span&gt;&lt;/h3&gt;&lt;span&gt;(Zachary Gershkoff /&amp;nbsp;Stefan van Zwam)&lt;/span&gt;&lt;br /&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;&lt;span&gt;This project seeks to implement several common matroid classes in SageMath, along with algorithms for their display and relevant computations. The graphic matroid class in particular will be implemented with a representative graph with methods for Whitney switching and minor operations. This will be accompanied by improvements to the graph theory library, with methods relevant to matroids enabled to support multigraphs. Other modules for this project include improved plotting of rank 3 matroids to eliminate false colinearities, computation of a matroid's automorphism group using SageMath's group theory libraries, and faster minor testing based on an existing trac ticket.&lt;/span&gt;&lt;/blockquote&gt;&lt;h3&gt;&lt;span&gt;Expanding the Functionality of Dynamical Systems&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;&lt;span&gt;(&lt;/span&gt;Rebecca Lauren Miller / Paul Fili and Ben Hutz)&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;As a member of the sage-dynamics community, researchers have compiled a wishlist for algorithms and functionality they would like added. I would like to shorten the wish list for us.For my project I will be completing some desired additions to SAGE from the Sage Dynamics Wiki. I will implement Well’s Algorithm, strengthen the numerical precision in cannonical_height, as well as implement reduced_form for higher dimensions.&lt;/blockquote&gt;&lt;/div&gt;&lt;div&gt;&lt;h3&gt;Improvement of Complex Dynamics in Sage&lt;/h3&gt;&lt;/div&gt;&lt;div&gt;(Ben Barros / Adam Towsley and Ben Hutz)&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;There are three major things that I would like to implement to improve the functionality of Sage in the area Complex Dynamics. The details of the project are summarized in the following list:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Complex Dynamics Graphical package: &lt;/b&gt;Integrate or implement a complex dynamics software such as Mandel into Sage. This will be done by creating an optional package for Sage. If there is enough demand, the package may become a standard package for Sage at some point.&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Spider Algorithm:&lt;/b&gt; The object of the Spider Algorithm is to construct polynomials with assigned combinatorics. For example, we may want to find a polynomial that has a periodic orbit of period 7. The Spider Algorithm provides a way for us to compute this polynomial efficiently. I plan to implement this algorithm into Sage.&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Coercion: &lt;/b&gt;If you have a map defined over Q, you should be able to take the image of a point over C (i.e. somewhere you have a well-defined embedding) without having to use the command &quot;change_ring()&quot;. Something similar works for polynomials in Sage but it does not work for morphisms/schemes.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;div&gt;&lt;h3&gt;Linear-time Implementation of Modular Decomposition of Undirected and Directed Graphs&lt;/h3&gt;&lt;div&gt;(Lokesh Jain / Dima Pasechnik)&lt;/div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;This project is aimed at providing linear time implementation for modular decomposition of graphs and digraphs. Modular decomposition is decomposition of graph into modules. A module is a subset of vertices and it is a generalization of connected component in graph. Let us take for example a module X. For any vertex v ∉ X it is either connected or not connected to every vertex of X. Another property of module is that a module can be subset of another module. There are various algorithms which have been published for modular decomposition of graphs. The focus in this project is on linear time complexity algorithms which can be practically implemented. The project further aims to use the modules developed for modular decomposition to implement other functionality like skew partitions. Skew partition is partition of graph into two sets of vertices such that induced graph formed by one set is disconnected and induced graph formed by other set is complement of the first. Modular decomposition is a very important concept in Graph Theory and it has a number of use cases. For instance it has been an important tool for solving optimization and combinatorics problems.&lt;/blockquote&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;h3&gt;Modular Decomposition of graphs and digraphs&lt;/h3&gt;&lt;div&gt;(Maria Ioanna Spyrakoy /&amp;nbsp;Dima Pasechnik)&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;Modular decomposition of (di)graphs is a generalization of the concept of the decomposition of (di)graphs into connected components. Its current implementation in Sage relies on badly broken abandoned C code, and badly needs to be replaced by something that works and is not too slow. However, the only open-source implementations of some of these procedures are either in Java or in Perl, and thus aren't really useful for Sage.&lt;/blockquote&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Note:&lt;/b&gt; A attentive reader might notice the similarity between those projects. They will be split regarding the type of graph and be coordinated to not overlap but to augment each other.&lt;/div&gt;&lt;h3&gt;Visualizing constructs in cluster algebras and quiver representations&lt;/h3&gt;&lt;div&gt;(Bryan Wang / Travis Scrimshaw)&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;I aim to implement visualizations of several key constructs in cluster algebras and quiver representations. The first is Auslander-Reiten quivers, for at least the A_n and D_n cases. The second is labelled endomorphism quivers and mutations within a cluster category, focusing on the A_n case. The third is posets of down-mutations for the A_n case. These features will be useful not only for research purposes, but also as nice examples to play around with and learn from. Aside from these features, I am interested in implementing features for the Quantum Cluster Algebras project.&lt;/blockquote&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;All the best for this summer, thank you to Google for making this possible, and sorry to all those candidates who didn't make it ...&lt;/div&gt;&lt;/div&gt;</content>
-		<author>
-			<name>Harald Schilly</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://blog.harald.schil.ly/search/label/sage</uri>
-		</author>
-		<source>
-			<title type="html">Harald Schilly</title>
-			<link rel="self" href="http://blog.harald.schil.ly/feeds/posts/default/-/sage"/>
-			<id>tag:blogger.com,1999:blog-3473399517246044360</id>
-			<updated>2018-03-08T15:22:10+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Release: nbdime 0.3.0</title>
-		<link href="http://opendreamkit.org/2017/05/05/nbdime-0.3.0/"/>
-		<id>http://opendreamkit.org/2017/05/05/nbdime-0.3.0</id>
-		<updated>2017-05-05T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;We are happy to announce release 0.3.0 of &lt;a href=&quot;https://nbdime.readthedocs.io&quot;&gt;nbdime&lt;/a&gt;,
-continuing to improve the process of working with Jupyter notebooks in version control.&lt;/p&gt;
-
-&lt;p&gt;The highlight of 0.3 is much improved integration with git, making it easier than ever
-to get started with nbdime in git:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install --upgrade nbdime # install nbdime
-nbdime config-git --global --enable # tell git to use nbdime when it sees notebooks
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and you can get nice GUI diffs directly from git refs on the command-line:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nbdiff-web master mynotebook.ipynb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-04-16T14:44:40+00:00</updated>
 		</source>
 	</entry>
 
