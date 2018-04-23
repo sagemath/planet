@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-04-23T15:11:32+00:00</updated>
+	<updated>2018-04-23T16:12:32+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -942,7 +942,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-04-23T15:11:30+00:00</updated>
+			<updated>2018-04-23T16:12:30+00:00</updated>
 		</source>
 	</entry>
 
@@ -1009,7 +1009,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2018-03-08T00:05:15+00:00</updated>
+			<updated>2018-04-23T16:12:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1968,7 +1968,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2018-03-08T00:05:15+00:00</updated>
+			<updated>2018-04-23T16:12:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -1988,7 +1988,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2018-03-08T00:05:15+00:00</updated>
+			<updated>2018-04-23T16:12:26+00:00</updated>
 		</source>
 	</entry>
 
@@ -2307,7 +2307,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2018-03-08T00:05:15+00:00</updated>
+			<updated>2018-04-23T16:12:26+00:00</updated>
 		</source>
 	</entry>
 
