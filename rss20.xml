@@ -17,7 +17,32 @@ With OpenDreamKit approaching its end (august 2019), this will our
 main public closing event.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://conferences.cirm-math.fr/1978.html&quot;&gt;Webpage on the CIRM website for registrations&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Tue, 01 May 2018 00:12:54 +0000</pubDate>
+	<pubDate>Wed, 02 May 2018 23:01:06 +0000</pubDate>
+</item>
+<item>
+	<title>OpenDreamKit: Jupyter receives the ACM Software System Award!</title>
+	<guid>http://opendreamkit.org/2018/05/02/jupyter-acm</guid>
+	<link>http://opendreamkit.org/2018/05/02/jupyter-acm/</link>
+	<description>&lt;p&gt;&lt;a href=&quot;https://blog.jupyter.org/jupyter-receives-the-acm-software-system-award-d433b0dfe3a2&quot;&gt;Project Jupyter has been awarded&lt;/a&gt;
+the 2017
+&lt;a href=&quot;https://awards.acm.org/software-system&quot;&gt;ACM Software System Award&lt;/a&gt;,
+joining an illustrious list of projects that contains major highlights
+of computing history, including
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Unix&quot;&gt;Unix&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/TeX&quot;&gt;TeX&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/S_%28programming_language%29&quot;&gt;S&lt;/a&gt; (R’s
+predecessor), the &lt;a href=&quot;https://en.wikipedia.org/wiki/World_Wide_Web&quot;&gt;Web&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/NCSA_Mosaic&quot;&gt;Mosaic&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_%28programming_language%29&quot;&gt;Java&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Ingres_(database)&quot;&gt;INGRES&lt;/a&gt; (modern
+databases) and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/ACM_Software_System_Award&quot;&gt;more&lt;/a&gt;.
+We are delighted of this strong recognition of a major piece
+of the ecosystem OpenDreamKit is based upon and contributing to.&lt;/p&gt;
+
+&lt;p&gt;Congratulations to the Jupyter team, including our fellows Min
+Ragan-Kelley and Thomas Kluyver!&lt;/p&gt;</description>
+	<pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Harald Schilly: SageMath GSoC 2018 Projects</title>

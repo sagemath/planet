@@ -5,14 +5,14 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2018-05-02T22:00:12+00:00</updated>
+	<updated>2018-05-02T23:01:07+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
 		<title type="html">Free Computational Mathematics</title>
 		<link href="http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference/"/>
 		<id>http://opendreamkit.org/2019/02/11/FreeComputationalMathematicsConference</id>
-		<updated>2018-05-01T00:12:54+00:00</updated>
+		<updated>2018-05-02T23:01:06+00:00</updated>
 		<content type="html">&lt;p&gt;This is an announcement for a large one week dissemination conference
 organized by OpenDreamKit at the CIRM premises near Marseille, France.
 With OpenDreamKit approaching its end (august 2019), this will our
@@ -28,7 +28,44 @@ main public closing event.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
+		</source>
+	</entry>
+
+	<entry>
+		<title type="html">Jupyter receives the ACM Software System Award!</title>
+		<link href="http://opendreamkit.org/2018/05/02/jupyter-acm/"/>
+		<id>http://opendreamkit.org/2018/05/02/jupyter-acm</id>
+		<updated>2018-05-02T00:00:00+00:00</updated>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;https://blog.jupyter.org/jupyter-receives-the-acm-software-system-award-d433b0dfe3a2&quot;&gt;Project Jupyter has been awarded&lt;/a&gt;
+the 2017
+&lt;a href=&quot;https://awards.acm.org/software-system&quot;&gt;ACM Software System Award&lt;/a&gt;,
+joining an illustrious list of projects that contains major highlights
+of computing history, including
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Unix&quot;&gt;Unix&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/TeX&quot;&gt;TeX&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/S_%28programming_language%29&quot;&gt;S&lt;/a&gt; (R’s
+predecessor), the &lt;a href=&quot;https://en.wikipedia.org/wiki/World_Wide_Web&quot;&gt;Web&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/NCSA_Mosaic&quot;&gt;Mosaic&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_%28programming_language%29&quot;&gt;Java&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Ingres_(database)&quot;&gt;INGRES&lt;/a&gt; (modern
+databases) and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/ACM_Software_System_Award&quot;&gt;more&lt;/a&gt;.
+We are delighted of this strong recognition of a major piece
+of the ecosystem OpenDreamKit is based upon and contributing to.&lt;/p&gt;
+
+&lt;p&gt;Congratulations to the Jupyter team, including our fellows Min
+Ragan-Kelley and Thomas Kluyver!&lt;/p&gt;</content>
+		<author>
+			<name>The OpenDreamKit consortium</name>
+			<email>contact@opendreamkit.org</email>
+			<uri>http://opendreamkit.org/</uri>
+		</author>
+		<source>
+			<title type="html">OpenDreamKit</title>
+			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
+			<id>http://opendreamkit.org/</id>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -71,7 +108,7 @@ research.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -91,7 +128,7 @@ research.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -628,7 +665,7 @@ JupyterHub that the container shall be run on that machine?&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -700,7 +737,7 @@ CC-BY and can be found &lt;a href=&quot;https://github.com/trallard/JNB_reproduc
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -940,7 +977,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -961,7 +998,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2018-05-02T22:00:09+00:00</updated>
+			<updated>2018-05-02T23:01:04+00:00</updated>
 		</source>
 	</entry>
 
@@ -984,7 +1021,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1008,7 +1045,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1151,7 +1188,7 @@ Depending on the success of this joint work and of the need of the EOSC post-202
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1176,7 +1213,7 @@ functionalities of open source packages concerning Lie groups and their subgroup
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1285,7 +1322,7 @@ and
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1536,7 +1573,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1559,7 +1596,7 @@ position is filled.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1583,7 +1620,7 @@ two papers to be publised at &lt;a href=&quot;https://macis2017.sba-research.org
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -1967,7 +2004,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2028,7 +2065,7 @@ not fall solely on my shoulders.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2062,7 +2099,7 @@ from Monday 16. October to Friday 20. October.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2118,7 +2155,7 @@ information.&lt;/p&gt;
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
@@ -2306,7 +2343,7 @@ If anything happens, I will surely post an update.&lt;/p&gt;</content>
 			<title type="html">OpenDreamKit</title>
 			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
 			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-01T00:12:54+00:00</updated>
+			<updated>2018-05-02T23:01:06+00:00</updated>
 		</source>
 	</entry>
 
