@@ -54,6 +54,244 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>September 06, 2018</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles">Wooden laser-cut Jeandel-Rao tiles</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>I have been working on Jeandel-Rao tiles <a class="reference external" href="https://arxiv.org/abs/1808.07768">lately</a>.</p>
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/article2_T0_tiles.svg">/Files/2018/article2_T0_tiles.svg</a>
+<p>Before the conference <a class="reference external" href="https://sites.google.com/view/modelsets/home">Model Sets and Aperiodic Order</a> held in Durham UK (Sep
+3-7 2018), I thought it would be a good idea to bring some real tiles at the
+conference. So I first decided of some conventions to represent the above tiles
+as topologically closed disk basically using the representation of integers in
+base 1:</p>
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/T0_shapes.svg">/Files/2018/T0_shapes.svg</a>
+<p>With these shapes, I created a 33 x 19 patch. With 3cm on each side, the patch
+takes 99cm x 57cm just within the capacity of the laser cut machine (1m x 60
+cm):</p>
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/33x19_A_scale3.svg">/Files/2018/33x19_A_scale3.svg</a>
+<p>With the help of David Renault from LaBRI, we went at <a class="reference external" href="https://www.iut.u-bordeaux.fr/cohabit/">Coh&#64;bit</a>, the FabLab
+of Bordeaux University and we laser cut two 3mm thick plywood for a total of
+1282 Wang tiles. This is the result:</p>
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/laser_cut_8x8.jpg"><img alt="/Files/2018/laser_cut_8x8.jpg" src="http://www.slabbe.org/Files/2018/laser_cut_8x8.jpg" /></a>
+<p>One may recreate the 33 x 19 tiling as follows (note that I am using
+Cartesian-like coordinates, so the first list <tt class="docutils literal">data[0]</tt> actually is the first
+column from bottom to top):</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+
+
+
+<p>The above patch have been chosen among 1000 other randomly generated as the
+closest to the assymptotic frequencies of the tiles in Jeandel-Rao tilings (or
+at least in the minimal subshift that I describe in the preprint):</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">tile_count</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+</pre></div>
+
+
+
+<p>The assymptotic frequencies:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">phi</span> <span class="o">=</span> <span class="n">golden_ratio</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Linv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span>
+<span class="o">....</span><span class="p">:</span>      <span class="mi">5</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">14</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span>
+<span class="o">....</span><span class="p">:</span>      <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">perfect_proportions</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">Linv</span><span class="p">])</span>
+</pre></div>
+
+
+
+<p>Comparison of the number of tiles of each type with the expected frequency:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">header_row</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'tile id'</span><span class="p">,</span> <span class="s1">'Assymptotic frequency'</span><span class="p">,</span> <span class="s1">'Expected nb of copies'</span><span class="p">,</span>
+<span class="o">....</span><span class="p">:</span>               <span class="s1">'Nb copies in the 33x19 patch'</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="n">perfect_proportions</span><span class="p">,</span> <span class="n">vector</span><span class="p">(</span><span class="n">perfect_proportions</span><span class="p">)</span><span class="o">*</span><span class="mi">33</span><span class="o">*</span><span class="mi">19</span><span class="p">,</span> <span class="n">tile_count</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">table</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">header_row</span><span class="o">=</span><span class="n">header_row</span><span class="p">)</span>
+<span class="n">tile</span> <span class="nb">id</span>   <span class="n">Assymptotic</span> <span class="n">frequency</span>   <span class="n">Expected</span> <span class="n">nb</span> <span class="n">of</span> <span class="n">copies</span>   <span class="n">Nb</span> <span class="n">copies</span> <span class="ow">in</span> <span class="n">the</span> <span class="mi">33</span><span class="n">x19</span> <span class="n">patch</span>
+<span class="o">+---------+-----------------------+-----------------------+------------------------------+</span>
+  <span class="mi">0</span>         <span class="mf">0.108271182329550</span>       <span class="mf">67.8860313206280</span>        <span class="mi">67</span>
+  <span class="mi">1</span>         <span class="mf">0.108271182329550</span>       <span class="mf">67.8860313206280</span>        <span class="mi">65</span>
+  <span class="mi">2</span>         <span class="mf">0.0255593590340479</span>      <span class="mf">16.0257181143480</span>        <span class="mi">16</span>
+  <span class="mi">3</span>         <span class="mf">0.108271182329550</span>       <span class="mf">67.8860313206280</span>        <span class="mi">71</span>
+  <span class="mi">4</span>         <span class="mf">0.0669152706817991</span>      <span class="mf">41.9558747174880</span>        <span class="mi">42</span>
+  <span class="mi">5</span>         <span class="mf">0.0827118232955023</span>      <span class="mf">51.8603132062800</span>        <span class="mi">51</span>
+  <span class="mi">6</span>         <span class="mf">0.108271182329550</span>       <span class="mf">67.8860313206280</span>        <span class="mi">65</span>
+  <span class="mi">7</span>         <span class="mf">0.149627093977301</span>       <span class="mf">93.8161879237680</span>        <span class="mi">95</span>
+  <span class="mi">8</span>         <span class="mf">0.0669152706817991</span>      <span class="mf">41.9558747174880</span>        <span class="mi">44</span>
+  <span class="mi">9</span>         <span class="mf">0.108271182329550</span>       <span class="mf">67.8860313206280</span>        <span class="mi">67</span>
+  <span class="mi">10</span>        <span class="mf">0.0669152706817991</span>      <span class="mf">41.9558747174880</span>        <span class="mi">44</span>
+</pre></div>
+
+
+
+<p>I brought the \(33\times19=641\) tiles at the conference and offered to the
+first 7 persons to find a \(7\times 7\) tiling the opportunity to keep the
+49 tiles they used. 49 is a good number since the frequency of the lowest tile
+(with id 2) is about 2% which allows to have at least one copy of each tile in
+a subset of 49 tiles allowing a solution.</p>
+<p>A natural question to ask is how many such \(7\times 7\) tilings does there
+exist?  With ticket <a class="reference external" href="https://trac.sagemath.org/ticket/25125">#25125</a> that was merged in Sage 8.3 this Spring, it is
+possible to enumerate and count solutions in parallel with Knuth dancing links
+algorithm. After the installation of the Sage Optional package <a class="reference external" href="https://pypi.python.org/pypi/slabbe/">slabbe</a> (<tt class="docutils literal">sage
+<span class="pre">-pip</span> install slabbe</tt>), one may compute that there are 152244 solutions.</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe</span> <span class="kn">import</span> <span class="n">WangTileSolver</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">tiles</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="o">....</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span> <span class="o">=</span> <span class="n">WangTileSet</span><span class="p">(</span><span class="n">tiles</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">T0_solver</span> <span class="o">=</span> <span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">T0_solver</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">(</span><span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">16</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">82.3</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">98.3</span> <span class="n">ms</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">388</span> <span class="n">ms</span>
+<span class="mi">152244</span>
+</pre></div>
+
+
+
+<p>One may also get the list of all solutions and print one of them:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">L</span> <span class="o">=</span> <span class="n">T0_solver</span><span class="o">.</span><span class="n">all_solutions</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+<span class="mi">152244</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">6.46</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">344</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">6.8</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">6.82</span> <span class="n">s</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">A</span> <span class="n">wang</span> <span class="n">tiling</span> <span class="n">of</span> <span class="n">a</span> <span class="mi">7</span> <span class="n">x</span> <span class="mi">7</span> <span class="n">rectangle</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">table</span><span class="p">()</span>  <span class="c1"># warning: the output is in Cartesian-like coordinates</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+
+
+
+<p>This is the number of distinct sets of 49 tiles which admits a 7x7 solution:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">sage</span><span class="p">:</span> <span class="k">def</span> <span class="nf">count_tiles</span><span class="p">(</span><span class="n">tiling</span><span class="p">):</span>
+<span class="o">....</span><span class="p">:</span>     <span class="n">C</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">tiling</span><span class="o">.</span><span class="n">table</span><span class="p">()))</span>
+<span class="o">....</span><span class="p">:</span>     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Lfreq</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">count_tiles</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Lfreq_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">Lfreq</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">Lfreq_count</span><span class="p">)</span>
+<span class="mi">83258</span>
+</pre></div>
+
+
+
+<p>Number of other solutions with the same set of 49 tiles:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Counter</span><span class="p">(</span><span class="n">Lfreq_count</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">Counter</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">49076</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">19849</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">6313</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">3664</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">1410</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">1341</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">705</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span>
+<span class="mi">293</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">18</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+<span class="mi">22</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">32</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">28</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+
+
+
+<p>How the number of \(k\times k\)-solutions grows for <cite>k</cite> from 0 to 9:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="p">[</span><span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">444</span><span class="p">,</span> <span class="mi">1723</span><span class="p">,</span> <span class="mi">9172</span><span class="p">,</span> <span class="mi">50638</span><span class="p">,</span> <span class="mi">152244</span><span class="p">,</span> <span class="mi">262019</span><span class="p">,</span> <span class="mi">1641695</span><span class="p">]</span>
+</pre></div>
+
+
+
+<p>Unfortunately, most of those \(k\times k\)-solutions are not extendable. Indeed
+the number of \(k\times k\) patches in the language of the minimal aperiodic
+subshift that I am able to describe and which is a proper subset of Jeandel-Rao
+tilings seems, according to some heuristic, to be something like:</p>
+
+
+<div class="pygments_manni"><pre><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">268</span><span class="p">,</span> <span class="mi">367</span><span class="p">,</span> <span class="mi">483</span><span class="p">]</span>
+</pre></div>
+
+
+
+<p>I do not share my (ugly) code for this computation yet, as I will rather share
+clean code soon when times come. So among the 152244 about only 483 (0.32%) of
+them are prolongable into a uniformly recurrent tiling of the plane.</p>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles">by Sébastien Labbé at September 06, 2018 11:47 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>May 02, 2018</h2>
 
 <div class="channelgroup">
@@ -2345,466 +2583,6 @@ not fall solely on my shoulders.</p></div>
 </div>
 
 </div>
-<div class="daygroup">
-<h2>September 22, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-6949985998313614355">
-<h4><a href="http://sagemath.blogspot.com/2016/07/datadogs-pricing-dont-make-same-mistake.html">DataDog's pricing: don't make the same mistake I made</a></h4>
-<div class="entry">
-<div class="content">
-(I wrote a 1-year <a href="http://sagemath.blogspot.com/2017/09/datadog-dont-make-same-mistake-i-did.html">followup post here.</a>)<br /><br />I stupidly made a mistake recently by choosing to use <a href="https://www.datadoghq.com/">DataDog</a> for monitoring the infrastructure for my startup (<a href="https://cloud.sagemath.com/">SageMathCloud</a>).<br /><br />I got bit by their pricing UI design that looks similar to many other sites, but is different in a way that caused me to <strong>spend far more money than I expected.</strong><br /><br />I'm writing this post so that you won't make the same mistake I did. &nbsp;As a product, DataDog is of course a lot of hard work to create, and they can try to charge whatever they want. However, my problem is that <strong>what</strong> they are going to charge was confusing and misleading to me.<br /><br />I wanted to see some nice web-based data about my new autoscaled Kubernetes cluster, so I looked around at options. DataDog looked like a new and awesomely-priced service for seeing live logging. And when I looked (not carefully enough) at the pricing, it looked like only $15/month to monitor a bunch of machines. I'm naive about the cost of cloud monitoring -- I've been using Stackdriver on Google cloud platform for years, which is completely free (for now, though that will change), and I've also used self hosted open solutions, and some quite nice solutions I've written myself. So my expectations were way out of whack.<br /><br />Ever busy, I signed up for the "$15/month plan":<br /><div class="separator"><a href="https://1.bp.blogspot.com/-NK09JkZDOD0/V5Jyf6jYy2I/AAAAAAABYNA/l_LP-NJv6hgODAvvaO868frbtJ4hP9SUQCLcB/s1600/dd-pricing.png"><img border="0" height="225" src="https://1.bp.blogspot.com/-NK09JkZDOD0/V5Jyf6jYy2I/AAAAAAABYNA/l_LP-NJv6hgODAvvaO868frbtJ4hP9SUQCLcB/s400/dd-pricing.png" width="400" /></a></div><br /><br />One of the people on my team spent a little time and installed datadog on all the VM's in our cluster, and also made DataDog automatically start running on any nodes in our Kubernetes cluster. That's a lot of machines.<br /><br />Today I got the first monthly bill, which is for the month that just happened. The cost was $639.19 USD charged to my credit card. I was really confused for a while, wondering if I had bought a year subscription.<br /><br /><div class="separator"><a href="https://3.bp.blogspot.com/-LK7iRxeqMKI/V5JymhrBN-I/AAAAAAABYNE/lCA0YC3cfSMJ9LuTsFgsrt8vTUR4rvRIQCLcB/s1600/dd-invoice.png"><img border="0" height="198" src="https://3.bp.blogspot.com/-LK7iRxeqMKI/V5JymhrBN-I/AAAAAAABYNE/lCA0YC3cfSMJ9LuTsFgsrt8vTUR4rvRIQCLcB/s400/dd-invoice.png" width="400" /></a></div><br /><br />After a while I realized that the cost is per host! When I looked at the pricing page the first time, I had just saw in big letters "$15", and "$18 month-to-month" and "up to 500 hosts". I completely missed the "Per Host" line, because I was so naive that I didn't think the price could possibly be that high.<br /><br />I tried immediately to delete my credit card and cancel my plan, but the "Remove Card" button is greyed out, and it says you can "modify your subscription by contacting us at success@datadoghq.com":<br /><br /><div class="separator"><a href="https://3.bp.blogspot.com/-iohuYjKf3_A/V5JzPDN7qHI/AAAAAAABYNM/QBn6pqJ_OL0roteJIyxHWx5wajJRs4_EwCLcB/s1600/dd-cancel.png"><img border="0" height="318" src="https://3.bp.blogspot.com/-iohuYjKf3_A/V5JzPDN7qHI/AAAAAAABYNM/QBn6pqJ_OL0roteJIyxHWx5wajJRs4_EwCLcB/s400/dd-cancel.png" width="400" /></a></div><br /><br />So I wrote to success@datadoghq.com:<br /><br /><pre><code>Dear Datadog,<br /><br />Everybody on my team was completely mislead by your<br />horrible pricing description.<br /><br />Please cancel the subscription for wstein immediately<br />and remove my credit card from your system.<br /><br />This is the first time I've wasted this much money<br />by being misled by a website in my life.<br /><br />I'm also very unhappy that I can't delete my credit<br />card or cancel my subscription via your website.  It's<br />like one more stripe API call to remove the credit card<br />(I know -- I implemented this same feature for my site).</code></pre><pre><code><br /></code></pre><hr />And they responded:<br /><br /><pre><code>Thanks for reaching out. If you'd like to cancel your<br />Datadog subscription, you're able to do so by going into<br />the platform under 'Plan and Usage' and choose the option<br />downgrade to 'Lite', that will insure your credit card<br />will not be charged in the future. Please be sure to<br />reduce your host count down to the (5) allowed under<br />the 'Lite' plan - those are the maximum allowed for<br />the free plan.<br /><br />Also, please note you'll be charged for the hosts<br />monitored through this month. Please take a look at<br />our billing FAQ.</code></pre><hr /><br />They were right -- I was able to uninstall the daemons, downgrade to Lite, remove my card, etc. all through the website without manual intervention.<br /><br />When people have been confused with billing for <a href="https://cloud.sagemath.com/">my site</a>, I have apologized, immediately refunded their money, and opened a ticket to make the UI clearer. &nbsp;DataDog didn't do any of that.<br /><br />I wish DataDog would at least clearly state that when you use their service you are potentially on the hook for an <strong>arbitrarily large</strong> charge for any month. Yes, if they had made that clear, they wouldn't have had me as a customer, so they are not incentivized to do so.<br /><br />A fool and their money are soon parted. I hope this post reduces the chances you'll be a fool like me. &nbsp;If you chose to use DataDog, and their monitoring tools are very impressive, I hope you'll be aware of the cost.  <br /><br /><br />ADDED:<br /><br />On <a href="https://news.ycombinator.com/threads?id=williamstein" target="_blank">Hacker News</a> somebody asked: "<span>How could their pricing page be clearer? It says per host in fairly large letters underneath it.&nbsp;</span><span>I'm asking because I will be designing a similar page soon (that's also billed per host) and I'd like to avoid the same mistakes." &nbsp;My answer:</span><br /><span><br /></span><span>[EDIT: This pricing page by the top poster in this thread is way better than I suggest below -- https://www.serverdensity.com/pricing/]</span><br /><span><br /></span><span>1.&nbsp;</span><i></i><span>VERY clearly</span><i></i><span>&nbsp;state that when you sign up for the service, then you are on the hook for up to $18*500 = $9000 + tax in charges for any month. Even Google compute engine (and Amazon) don't create such a trap, and have a clear explicit quota increase process.</span><br /><div>2. Instead of "HUGE $15" newline "(small light) per host", put "HUGE $18 per host" all on the same line. It would easily fit. I don't even know how the $15/host datadog discount could ever really work, given that the number of hosts might constantly change and there is no prepayment.</div><div>3. Inform users clearly in the UI at any time how much they are going to owe for that month (so far), rather than surprising them at the end. Again, Google Cloud Platform has a very clear running total in their billing section, and any time you create a new VM it gives the exact amount that VM will cost per month.</div><div>4. If one works with a team, 3 is especially important. The reason that I had monitors on 50+ machines is that another person working on the project, who never looked at pricing or anything, just thought -- he I'll just set this up everywhere. He had no idea there was a per-machine fee.</div><span class="comment"><span class="c00"></span></span><br /><div class="reply"><div><span class="comment"><span class="c00"><span><u><a href="https://news.ycombinator.com/reply?id=12146416&goto=item%3Fid%3D12145879%2312146416">reply</a></u></span></span></span></div></div><span class="comment"><span class="c00"></span></span></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2016/07/datadogs-pricing-dont-make-same-mistake.html">by William Stein (noreply@blogger.com) at September 22, 2017 01:03 PM</a>
-</p>
-</div>
-</div>
-
-
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-8893535883917863217">
-<h4><a href="http://sagemath.blogspot.com/2017/09/datadog-dont-make-same-mistake-i-did.html">DataDog: Don't make the same mistake I did -- a followup and thoughts about very unhappy customers</a></h4>
-<div class="entry">
-<div class="content">
-This is a followup to <a href="http://sagemath.blogspot.com/2016/07/datadogs-pricing-dont-make-same-mistake.html">my previous blog post about DataDog billing</a>. <br /><br />TL;DR:<br />- I don't recommend DataDog,<br />- dealing with unhappy customers is hard,<br />- monitoring for data science nerds?<br /><br /><a href="https://news.ycombinator.com/item?id=15315028" target="_blank">Hacker News Comments</a><br /><h2 id="datadog-at-google-cloud-summit">DataDog at Google Cloud Summit</h2>I was recently at the <a href="https://cloudplatformonline.com/summit-seattle-2017.html">Seattle Google Cloud Summit</a> and <a href="https://www.datadoghq.com/">DataDog</a> was well represented, with the biggest booth and top vendor billing during the keynote. Clearly they are doing something right. I had a past <a href="http://sagemath.blogspot.com/2016/07/datadogs-pricing-dont-make-same-mistake.html">unpleasant experience</a> with them, and I had just been auditing my records and discovered that last year DataDog had actually charged me a<b> lot </b>more than I thought, so was kind of annoyed. Nonetheless, they kept coming up and talking to me, server monitoring is life-and-death important to me, and their actual software is very impressive in some ways.<br /><br />Nick Parisi started talking with me about DataDog. He sincerely wanted to know about my past experience with monitoring and the DataDog product, which he was clearly very enthuisiastic about. So I told him a bit, and he encouraged me to tell him more, explaining that he did not work at DataDog last year, and that he would like to know what happened. So he gave me his email, and he was <em>very genuinely concerned and helpful</em>, so I sent him an email with a link to my post, etc. I didn't receive a response, so a week later I asked why, and received a followup email from Jay Robichau, who is DataDog's Director of Sales.<br /><h2 id="conference-call-with-datadog">Conference Call with DataDog</h2>Jay setup a conference call with me today at 10am (September 22, 2017). Before the call, I sent him a summary of my blog post, and also requested a refund, especially for the suprise bill they sent me nearly 6 weeks after my post.<br /><br />During the call, Jay explained that he was "protecting" Nick from me, and that I would mostly talk with Michelle Danis who is in charge of customer success. My expectation for the call is that we would find some common ground, and that they would at least appreciate the chance to make things right and talk with an unhappy customer. I was also curious about how a successful startup company addresses the concerns of an unhappy customer (me).<br /><br />I expected the conversation to be difficult but go well, with me writing a post singing the praises of the charming DataDog sales and customer success people. A few weeks ago <a href="https://cocalc.com/">CoCalc.com</a> (my employer) had a very unhappy customer who got (rightfully) angry over a miscommunication, told us he would no longer use our product, and would definitely not recommend it to anybody else. I wrote to him wanting to at least continue the discussion and help, but he was completely gone. <em>I would do absolutely anything I could to ensure he is a satisfied, if only he would give me the chance.</em> Also, there was <a href="https://cre8math.com/2017/08/27/to-processing-i/comment-page-1/">a recent blog post</a> from somebody unhappy with using CoCalc/Sage for graphics, and I reached out to them as best I could to at least clarify things...<br /><br />In any case, here's what DataDog charged us as a result of us running their daemon on a few dozen containers in our Kubernetes cluster (a contractor who is not a native English speaker actually setup these monitors for us):<br /><pre><code><br /></code></pre><pre><code>07/22/2016  449215JWJH87S8N4  DATADOG 866-329-4466 NY  $639.19<br />08/29/2016  2449215L2JH87V8WZ DATADOG 866-329-4466 NY  $927.22</code></pre><br />I was shocked by the 07/22 bill which spured my post, and discovered the 8/29 one only later. We canceled our subscription on July 22 (cancelling was difficult in itself).<br /><br />Michelle started the conference call by explaining that the 08/29 bill was for charges incurred before 07/22, and that <strong>their billing system has over a month lag</strong> (and it does even today, unlike Google Cloud Platform, say). Then Michelle explained at length many of the changes that DataDog has made to their software to address the issues I (and others?) have pointed out with their pricing description and billing. She was very interested in whether I would be a DataDog customer in the future, and when I said no, she explained that they would not refund my money since the bill was not a mistake.<br /><br />I asked if they now provide a periodic summary of the upcoming bill, as Google cloud platform (say) does. She said that today they don't, though they are working on it. They do now provide a summary of usage so far in an admin page.<br /><br />Finally, I explained in no uncertain terms that I felt misled by their pricing. I expected that they would understand, and pointed out that they had just described to me many ways in which they were addressing this very problem. Very surprisingly, Michelle's response was that she absolutely would not agree that there was any problem with their pricing description a year ago, and they definitely would not refund my money. She kept bringing up the terms of service. I agreed that I didn't think legally they were in the wrong, given what she had explained, just that -- as they had just pointed out -- their pricing and billing was unclear in various ways. They would not agree at all.<br /><strong><br /></strong><strong>I can't recommend doing business with DataDog. I had very much hoped to write the opposite in this updated post. Unfortunately, their pricing and terms are still confusing today compared to competitors, and they are unforgiving of mistakes. This dog bites. &nbsp; &nbsp;</strong><br /><br />(<strong>Disclaimer:</strong> I took notes during the call, but most of the above is from memory, and I probably misheard or misunderstood something. I invite comments from DataDog to set the record straight.)<br /><br />Also, for what it is worth, I definitely&nbsp;<b>do&nbsp;</b>recommend Google Cloud Platform. &nbsp;They put in the effort to do many things right regarding clear billing.<br /><h2 id="how-do-startups-deal-with-unhappy-customers">How do Startups Deal with Unhappy Customers?</h2>I am very curious about how other<b><i> startups</i></b> deal with unhappy customers. At CoCalc we have had very few "major incidents" yet... but I want to be as prepared as possible. At the Google Cloud Summit, I went to some amazing "war storries by SRE's" session in which they talked about situations they had been in years ago in which their decisions meant the difference between whether they would have a company or job tomorrow or not. These guys clearly have amazing instincts for when a problem was do-or-die serious and when it wasn't. And their deep preparation "in depth" was WHY they were on that stage, and a big reason why older companies like Google are still around. Having a strategy for addressing very angry customers is surely just as important.<br /><br /><div class="separator"><a href="http://3.bp.blogspot.com/-91tgUApR4-0/WcVgtf2unPI/AAAAAAABZbA/i2UM_kTIEiQNgKw6qXepuG0c-LKA1SiUQCK4BGAYYCw/s1600/sre.jpg"><img border="0" height="170" src="https://3.bp.blogspot.com/-91tgUApR4-0/WcVgtf2unPI/AAAAAAABZbA/i2UM_kTIEiQNgKw6qXepuG0c-LKA1SiUQCK4BGAYYCw/s400/sre.jpg" width="400" /></a></div><br /><center></center><center> <b>Google SRE's</b>: these guys are serious. <br /> <br /></center>I mentioned my DataDog story to a long-time Google employee there (16 years!) and he said he had recently been involved in a similar situation with Google's Stackdriver monitoring, where the bill to a customer was $85K in a month just for Stackdriver. I asked what Google did, and he said they refunded the money, then worked with the customer to better use their tools.<br /><br />There is of course no way to please all of the people all of the time. However, I genuinely feel that I was ripped off and misled by DataDog, but I have the impression that Jay and Michelle honestly view me as some jerk trying to rip them off for $1500. &nbsp; And they probably hate me for telling you about my experiences.<br /><br />So far, with CoCalc we charge customers in advance for any service we provide, so less people are surprised by a bill. &nbsp;Sometimes there are problems with recurring subscriptions when a person is charged for the upcoming month of a subscription, and don't want to continue (e.g., because their course is over), we always fully refund the charge. What does your company do? Why? I do worry that our billing model means that we miss out on potential revenue.<br /><br />We all know what successful huge consumer companies like Amazon and Wal-Mart do.<br /><h2 id="monitoring-for-data-science-nerds">Monitoring for Data Science Nerds?</h2>I wonder if there is interest in a service like DataDog, but targeted at Data Science Nerds, built on CoCalc, which provides hosted collaborative Jupyter notebooks with Pandas, R, etc., pre-installed. <a href="https://promcon.io/2017-munich/talks/analyze-prometheus-metrics-like-a-data-scientist/">This talk</a> at PrometheusCon 2017 mostly discussed the friction that people face moving data from Prometheus to analyze using data science tools (e.g., R, Python, Jupyter). CoCalc provides a collaborative data science environment, so if we were to smooth over those points of friction, perhaps it could be useful to certain people. And <a href="https://cocalc.com/policies/pricing.html">much more efficient...</a></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2017/09/datadog-dont-make-same-mistake-i-did.html">by William Stein (noreply@blogger.com) at September 22, 2017 12:32 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>August 31, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/08/31/eurocomb">
-<h4><a href="http://opendreamkit.org/2017/08/31/eurocomb/">Introduction to SageMath</a></h4>
-<div class="entry">
-<div class="content">
-<p>Viviane Pons gave a Sage Introduction talk at the internation combinatorics conference <a href="http://www.dmg.tuwien.ac.at/eurocomb2017/">Eurocomb 2017</a></p>
-
-<p><a href="https://www.lri.fr/~pons/docs/2017_Eurocomb_sage.pdf">Slides</a></p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/08/31/eurocomb/">August 31, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>August 26, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/08/26/live-documents-workshop">
-<h4><a href="http://opendreamkit.org/2017/08/26/live-documents-workshop/">Workshop on live structured documents</a></h4>
-<div class="entry">
-<div class="content">
-<p><a href="http://opendreamkit.org">OpenDreamKit</a> is hosting a workshop on live structured documents
-to take place at Simula Research Laboratory in Oslo, Norway
-from Monday 16. October to Friday 20. October.</p>
-
-<p>The workshop is dedicated to various aspects of live documents, including:</p>
-
-<ul>
-  <li>Authoring language and tools (ReST, XML, latex, …),</li>
-  <li>Converters (Sphinx, pandoc, docbook, …),</li>
-  <li>Infrastructure for rendering documents,</li>
-  <li>Infrastructure for interacting with the computing backends (e.g.  <a href="https://github.com/oreillymedia/thebe">Thebe</a> based on the Jupyter protocol, <a href="https://github.com/sympy/sympy-live/">sympy live</a>, …),</li>
-  <li>Online services providing computing backends (e.g. <a href="https://try.jupyter.org">tmpnb</a>, <a href="https://sagecell.sagemath.org/">sagecell</a>, <a href="https://mybinder.org">binder</a>, …),</li>
-  <li>Integrated collaborative authoring environments (sharelatex, SMC, texmacs, …)</li>
-</ul>
-
-<p>Participants can register <a href="https://www.eventbrite.com/e/opendreamkit-workshop-on-live-structured-documents-tickets-37364670736">via eventbrite</a>.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/08/26/live-documents-workshop/">August 26, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>July 29, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/07/29/GroupsStAndrews">
-<h4><a href="http://opendreamkit.org/2017/07/29/GroupsStAndrews/">OpenDreamKit at Groups St Andrews in Birmingham</a></h4>
-<div class="entry">
-<div class="content">
-<h2 id="opendreamkit-at-groups-st-andrews-in-birmingham">OpenDreamKit at Groups St Andrews in Birmingham</h2>
-
-<p><a href="http://www.groupsstandrews.org/">Groups St Andrews</a> is a conference series with
-a conference every four years. This year’s Groups St Andrews will be in
-Birmingham, and I will attend, bring
-a <a href="http://opendreamkit.org/public/groups-st-andrews-2017.pdf">poster</a>, give a contributed talk
-about computing in permutation groups, and teach a course on GAP.</p>
-
-<p>This post serves the main purpose of providing a page on the OpenDreamKit website
-that can hold all the links that will appear on the poster, and possible further
-information.</p>
-
-<h2 id="links">Links</h2>
-
-<ul>
-  <li>
-    <p><a href="http://opendreamkit.org">OpenDreamKit</a></p>
-  </li>
-  <li>
-    <p><a href="https://jupyter.org">Jupyter</a></p>
-  </li>
-  <li><a href="http://www.gap-system.org">GAP</a>, <a href="https://github.com/gap-system">GAP GitHub</a>, <a href="https://github.com/gap-packages/">GAP Packages on GitHub</a></li>
-  <li>
-    <p><a href="https://github.com/gap-packages/jupyter-kernel-gap">GAP Jupyter Kernel</a></p>
-  </li>
-  <li><a href="https://sagemath.org">SageMath</a></li>
-  <li>
-    <p><a href="https://cocalc.com">CoCalc (formerly SageMathCloud</a>)</p>
-  </li>
-  <li><a href="https://openmath.github.io">OpenMath</a></li>
-  <li><a href="https://mathhub.info">MathHub</a></li>
-  <li><a href="https://uniformal.github.io">MMT</a></li>
-  <li><a href="https://mathhub.info/MitM">Maths in the Middle</a></li>
-  <li>
-    <p><a href="https://mathhub.info/mh/mmt/graphs/tgview.html">Theory Graphs</a></p>
-  </li>
-  <li><a href="https://lmfdb.org">L-Functions and Modular Forms Database</a></li>
-</ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/07/29/GroupsStAndrews/">July 29, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>June 09, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/06/09/CythonSphinx">
-<h4><a href="http://opendreamkit.org/2017/06/09/CythonSphinx/">Sphinx documentation of Cython code using "binding=True"</a></h4>
-<div class="entry">
-<div class="content">
-<p>One of the deliverables (<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/87">D4.13</a>)
-of the OpenDreamKit project is refactoring the documentation system of <a href="http://www.sagemath.org/">SageMath</a>.
-The SageMath documentation is built using a heavily customized <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a>.
-Many of the customizations are neccessary to support autodoc
-(automatically generated documentation from docstrings) for <a href="http://cython.org/">Cython</a> files.</p>
-
-<p>Thanks to some changes I made to Sphinx, autodoc for Cython now works provided that:</p>
-
-<ol>
-  <li>
-    <p>You use Sphinx version 1.6 or later.</p>
-  </li>
-  <li>
-    <p>The Cython code is compiled with the <code class="highlighter-rouge">binding=True</code>
-<a href="http://cython.readthedocs.io/en/latest/src/reference/compilation.html#compiler-directives">directive</a>.
-See <a href="http://cython.readthedocs.io/en/latest/src/reference/compilation.html#how-to-set-directives">How to set directives</a>
-in the Cython documentation.</p>
-  </li>
-  <li>
-    <p>A small monkey-patch is applied to <code class="highlighter-rouge">inspect.isfunction</code>.
-You can put this in your Sphinx <code class="highlighter-rouge">conf.py</code> for example:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> def isfunction(obj):
-     return hasattr(type(obj), "__code__")
-
- import inspect
- inspect.isfunction = isfunction
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>This was used successfully for the documentation of
-<a href="http://cysignals.readthedocs.io/en/latest/">cysignals</a>
-and <a href="http://fpylll.readthedocs.io/en/latest/">fpylll</a>.
-There is <a href="https://trac.sagemath.org/ticket/22747">ongoing work</a> to do the same for SageMath.</p>
-
-<h2 id="implementation-of-functions-in-python">Implementation of functions in Python</h2>
-
-<p>To understand why items 2 and 3 on the above list are needed,
-we need to look at how Python implements functions.
-In Python, there are two kinds of functions
-(we really mean functions here, not methods or other callables):</p>
-
-<ol>
-  <li>
-    <p>User-defined functions, defined with <code class="highlighter-rouge">def</code> or <code class="highlighter-rouge">lambda</code>:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt;&gt;&gt; def foo(): pass
- &gt;&gt;&gt; type(foo)
- &lt;class 'function'&gt;
- &gt;&gt;&gt; type(lambda x: x)
- &lt;class 'function'&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Built-in functions such as <code class="highlighter-rouge">len</code>, <code class="highlighter-rouge">repr</code> or <code class="highlighter-rouge">isinstance</code>:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt;&gt;&gt; type(len)
- &lt;class 'builtin_function_or_method'&gt;
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>In the CPython implementation, these are completely independent classes
-with different behaviours.</p>
-
-<h2 id="user-defined-functions-binding-as-methods">User-defined functions binding as methods</h2>
-
-<p>Just to give one example, built-in functions do not have a
-<code class="highlighter-rouge">__get__</code> method, which means that they do not become methods when used in a class.</p>
-
-<p>Let’s consider this class:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class X(object):
-    def printme(self):
-        return repr(self)
-</code></pre></div></div>
-
-<p>This is essentially equivalent to</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class X(object):
-    printme = (lambda self: repr(self))
-
-&gt;&gt;&gt; X().printme()
-'&lt;__main__.X object at 0x7fb342f960b8&gt;'
-</code></pre></div></div>
-
-<p>However, directly putting the built-in function <code class="highlighter-rouge">repr</code> in the class
-does not work as expected:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Y(object):
-    printme = repr
-
-&gt;&gt;&gt; Y().printme()
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-TypeError: repr() takes exactly one argument (0 given)
-</code></pre></div></div>
-
-<p>This is simply something that built-in functions do not support.</p>
-
-<h2 id="user-defined-vs-built-in-functions">User-defined vs. built-in functions</h2>
-
-<p>Here is a list of the main differences between user-defined and built-in functions:</p>
-
-<ul>
-  <li>
-    <p>User-defined functions are implemented in Python,
-built-in functions are implemented in C.</p>
-  </li>
-  <li>
-    <p>Only user-defined functions support <code class="highlighter-rouge">__get__</code> and can become methods
-(see above).</p>
-  </li>
-  <li>
-    <p>Only user-defined functions support introspection such as
-<code class="highlighter-rouge">inspect.getargspec()</code> and <code class="highlighter-rouge">inspect.getsourcefile()</code>.</p>
-  </li>
-  <li>
-    <p>CPython has specific optimizations for calling built-in functions.</p>
-  </li>
-  <li>
-    <p>The <code class="highlighter-rouge">inspect</code> module and profiling make
-a difference between the two kinds of functions.</p>
-  </li>
-</ul>
-
-<p>Cython generates C code, so Cython functions must be built-in functions.
-This has unfortunate disadvantages, such as the lack of introspection support,
-which is particularly important for Sphinx.</p>
-
-<h2 id="the-cython-function-type-cyfunction">The Cython function type: cyfunction</h2>
-
-<p>Luckily, the Cython developers came up with a solution:
-they invented a completely new function type (called <code class="highlighter-rouge">cyfunction</code>),
-which is implemented like built-in functions
-but which behaves as much as possible like user-defined functions.</p>
-
-<p>By default, functions in Cython are built-in functions.
-With the directive <code class="highlighter-rouge">binding=True</code>, functions in Cython become cyfunctions.
-Since cyfunctions are not specifically optimized by CPython,
-this comes with a performance penalty.
-More precisely, calling cyfunctions from Python is slower than
-calling built-in functions from Python.
-The slowdown can be significant for simple functions.
-Within Cython, cyfunctions are as fast as built-in functions.</p>
-
-<p>Since a <code class="highlighter-rouge">cyfunction</code> is not a built-in function
-nor a user-defined function (those two types are not subclassable),
-the <code class="highlighter-rouge">inspect</code> module (and hence Sphinx) does not recognize it as being a function.
-So, to have full inspect support for Cython functions,
-we need to change <code class="highlighter-rouge">inspect.isfunction</code>.
-After various attempts, I came up with <code class="highlighter-rouge">hasattr(type(obj), "__code__")</code>
-to test whether the object <code class="highlighter-rouge">obj</code> is a function (for introspection purposes).
-This will match user-defined functions and cyfunctions
-but not built-in functions, nor any other Python type that I know of.</p>
-
-<h2 id="the-future-a-pep-to-change-the-function-types">The future: a PEP to change the function types?</h2>
-
-<p>I have some vague plans for a Python Enhancement Proposal (PEP)
-to change the implementation of the Python function types.
-The goal is that Cython functions can be implemented
-on top of some standard Python function type,
-with all features that cyfunctions currently have,
-the performance of built-in functions
-and introspection support of user-defined functions.</p>
-
-<p>At this point, it is too early to say anything about the implementation
-of this hypothetical future Python function type.
-If anything happens, I will surely post an update.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/06/09/CythonSphinx/">June 09, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>June 01, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://sagemath.blogspot.com/" title="Sage: Open Source Mathematics Software">William Stein</a></h3>
-
-
-<div class="entrygroup" id="tag:blogger.com,1999:blog-6365588202025292315.post-6758158987467701094">
-<h4><a href="http://sagemath.blogspot.com/2016/10/rethinkdb-must-relicense-now-what-is.html">RethinkDB must relicense NOW</a></h4>
-<div class="entry">
-<div class="content">
-<h2>What is RethinkDB?</h2><div><i><b>UPDATE:</b> &nbsp;Several months after I wrote this post, RethinkDB was relicensed. &nbsp;For <a href="https://github.com/sagemathinc/cocalc" target="_blank">the CoCalc project</a>, it was too late, and by then we had <a href="http://blog.sagemath.com/2017/02/09/rethinkdb-vs-postgres.html" target="_blank">already switched to PostgreSQL</a>.&nbsp;</i></div><div><br /></div><div><br /></div>RethinkDB is a <strong>INCREDIBLE</strong> high quality polished open source realtime database that is easy to deploy, shard, replicate, and supports a reactive client programming model, which is useful for collaborative web-based applications. Shockingly, the 7-year old company that created RethinkDB <a href="https://rethinkdb.com/blog/">has just shutdown</a>. I am the CEO of a company, <a href="https://cloud.sagemath.com/">SageMath, Inc.,</a> that uses RethinkDB very heavily, so I have a strong interest in RethinkDB surviving as an independent open source project.<br /><h2 id="three-types-of-open-source-projects">Three Types of Open Source Projects</h2>There are many types of open source projects. <a href="https://github.com/rethinkdb/rethinkdb/graphs/contributors?from=2015-09-10&to=2016-10-10&type=c">RethinkDB was</a> the type of open source project where most work on RethinkDB has been fulltime focused work, done by employees of the RethinkDB company. RethinkDB is licensed under the AGPL, but the company <a href="https://www.rethinkdb.com/faq/">promised to make</a> the software available to customers under other licenses.<br /><br /><strong>Academia:</strong> I started the <a href="http://sagemath.org/">SageMath</a> open source math software project in 2005, which has <a href="https://trac.sagemath.org/">over 500 contributors</a>, and a relatively healthy volunteer ecosystem, with about hundred contributors to each release, and many releases each year. These are mostly volunteer contributions by academics: usually grad students, postdocs, and math professors. They contribute because SageMath is directly relevant to their research, and they often contribute state of the art code that implements algorithms they have created or refined as part of their research. Sage is licensed under the GPL, and that license has worked extremely well for us. Academics sometimes even get significant grants from <a href="https://groups.google.com/forum/#!topic/sage-edu/9FP4mR_Pjbc">the NSF</a> or <a href="http://opendreamkit.org/">the EU</a> to support Sage development.<br /><br /><strong>Companies:</strong> I also started the <a href="http://cython.org/">Cython</a> compiler project in 2007, which has had dozens of contributors and is now the defacto standard for writing or wrapping fast code for use by Python. The developers of Cython mostly work at companies (e.g., Google) as a side project in their spare time. (Here's a <a href="https://mail.python.org/pipermail/cython-devel/2016-October/004948.html">message today about a new release</a> from a Cython developer, who works at Google.) Cython is licensed under the Apache License.<br /><h2 id="what-rethinkdb-will-become">What RethinkDB Will Become</h2>RethinkDB will no longer be an open source project whose development is sponsored by a single company dedicated to the project. Will it be an academic project, a company-supported project, or dead?<br /><br />A friend of mine at Oxford University surveyed his <strong>academic</strong> CS colleagues about RethinkDB, and they said they had zero interest in it. Indeed, from an academic research point of view, I agree that <strong>there is nothing interesting about RethinkDB</strong>. I myself am a college professor, and understand these people! Academic volunteer open source contributors are definitely not going to come to RethinkDB's rescue. The value in RethinkDB is not in the innovative new algorithms or ideas, but in the high quality carefully debugged implementations of standard algorithms (largely the work of bad ass German programmer Daniel Mewes). The RethinkDB devs had to carefully tune each parameter in those algorithms based on extensive automated testing, user feedback, the Jepsen tests, etc.<br /><br />That leaves companies. Whether or not you like or agree with this, many companies will <a href="https://www.google.com/search?q=google+agpl+will+not+touch&rlz=1C5CHFA_enUS691US691&oq=google+agpl+will+not+touch&aqs=chrome..69i57j69i64.4391j0j7&sourceid=chrome&ie=UTF-8">not touch AGPL licensed code</a>:<br /><blockquote><em>"Google open source guru Chris DiBona says that the web giant continues to ban the lightning-rod AGPL open source license within the company because doing so "saves engineering time" and because most AGPL projects are of no use to the company."</em></blockquote>This is just the way it is -- it's psychology and culture, so deal with it. In contrast, companies very frequently embrace open source code that is licensed under the Apache or BSD licenses, and they keep such projects alive. The extremely popular PostgreSQL database is <a href="https://www.postgresql.org/about/licence/">licensed under an almost-BSD license</a>. MySQL is freely licensed under the GPL, but <a href="http://www.mysql.com/about/legal/licensing/oem/">there are good reasons</a> why people buy a commercial MySQL license (from Oracle) for MySQL. Like RethinkDB, MongoDB is AGPL licensed, but they are <a href="https://www.mongodb.com/community/licensing">happy to sell</a> a different license to companies.<br /><br />With RethinkDB today, the only option is AGPL. This very strongly discourage use by the only possible group of users and developers that have any chance to keep RethinkDB from death. If this situation is not resolved as soon as possible, I am <strong>extremely afraid</strong> that it never will be resolved. Ever. If you care about RethinkDB, you should be afraid too. Ignoring the landscape and culture of volunteer open source projects is dangerous.<br /><h2 id="a-proposal">A Proposal</h2>I don't know who can make the decision to relicense RethinkDB. I don't kow what is going on with investors or who is in control. I am an outsider. Here is a proposal that might provide a way out <strong>today</strong>:<br /><br /><strong>PROPOSAL:</strong> Dear RethinkDB, sell me an Apache (or BSD) license to the RethinkDB source code. Make this the last thing your company sells before it shuts down. Just do it.<br /><br /><br /><a href="https://news.ycombinator.com/item?id=12680444" target="_blank">Hacker News Discussion</a></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://sagemath.blogspot.com/2016/10/rethinkdb-must-relicense-now-what-is.html">by William Stein (noreply@blogger.com) at June 01, 2017 01:25 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -2941,7 +2719,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" class="message" title="no activity in 356 days">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" title="SageMath – The Matroid Union">The Matroid Union</a>
@@ -2974,7 +2752,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-September 06, 2018 10:46 PM<br>
+September 06, 2018 11:47 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
