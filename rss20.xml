@@ -71,7 +71,7 @@ column from bottom to top):&lt;/p&gt;
 
 
 &lt;p&gt;The above patch have been chosen among 1000 other randomly generated as the
-closest to the assymptotic frequencies of the tiles in Jeandel-Rao tilings (or
+closest to the asymptotic frequencies of the tiles in Jeandel-Rao tilings (or
 at least in the minimal subshift that I describe in the preprint):&lt;/p&gt;
 
 
@@ -82,7 +82,7 @@ at least in the minimal subshift that I describe in the preprint):&lt;/p&gt;
 
 
 
-&lt;p&gt;The assymptotic frequencies:&lt;/p&gt;
+&lt;p&gt;The asymptotic frequencies:&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;golden_ratio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -97,23 +97,23 @@ at least in the minimal subshift that I describe in the preprint):&lt;/p&gt;
 &lt;p&gt;Comparison of the number of tiles of each type with the expected frequency:&lt;/p&gt;
 
 
-&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tile id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Assymptotic frequency'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Expected nb of copies'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tile id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Asymptotic frequency'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Expected nb of copies'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;....&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;               &lt;span class=&quot;s1&quot;&gt;'Nb copies in the 33x19 patch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;perfect_proportions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perfect_proportions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tile_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header_row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tile&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Assymptotic&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frequency&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Expected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copies&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Nb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copies&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x19&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patch&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;+---------+-----------------------+-----------------------+------------------------------+&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0255593590340479&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;16.0257181143480&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;71&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0827118232955023&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;51.8603132062800&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.149627093977301&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;93.8161879237680&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;       &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;        &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;tile&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Asymptotic&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frequency&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Expected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copies&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;Nb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copies&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x19&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patch&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+---------+----------------------+-----------------------+------------------------------+&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0255593590340479&lt;/span&gt;     &lt;span class=&quot;mf&quot;&gt;16.0257181143480&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;71&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;     &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0827118232955023&lt;/span&gt;     &lt;span class=&quot;mf&quot;&gt;51.8603132062800&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.149627093977301&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;93.8161879237680&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;     &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;         &lt;span class=&quot;mf&quot;&gt;0.108271182329550&lt;/span&gt;      &lt;span class=&quot;mf&quot;&gt;67.8860313206280&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;        &lt;span class=&quot;mf&quot;&gt;0.0669152706817991&lt;/span&gt;     &lt;span class=&quot;mf&quot;&gt;41.9558747174880&lt;/span&gt;        &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -199,10 +199,11 @@ algorithm. After the installation of the Sage Optional package &lt;a class=&quot
 
 
 
-&lt;p&gt;Unfortunately, most of those \(k\times k\)-solutions are not extendable. Indeed
-the number of \(k\times k\) patches in the language of the minimal aperiodic
-subshift that I am able to describe and which is a proper subset of Jeandel-Rao
-tilings seems, according to some heuristic, to be something like:&lt;/p&gt;
+&lt;p&gt;Unfortunately, most of those \(k\times k\)-solutions are not extendable to a
+tiling of the whole plane. Indeed the number of \(k\times k\) patches in
+the language of the minimal aperiodic subshift that I am able to describe and
+which is a proper subset of Jeandel-Rao tilings seems, according to some
+heuristic, to be something like:&lt;/p&gt;
 
 
 &lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;108&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;184&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;268&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;367&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;483&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -214,7 +215,7 @@ tilings seems, according to some heuristic, to be something like:&lt;/p&gt;
 clean code soon when times come. So among the 152244 about only 483 (0.32%) of
 them are prolongable into a uniformly recurrent tiling of the plane.&lt;/p&gt;
 &lt;/div&gt;</description>
-	<pubDate>Fri, 07 Sep 2018 00:47:48 +0000</pubDate>
+	<pubDate>Fri, 07 Sep 2018 09:16:00 +0000</pubDate>
 </item>
 <item>
 	<title>OpenDreamKit: Free Computational Mathematics</title>
