@@ -54,6 +54,172 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>December 12, 2018</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers">Comparison of Wang tiling solvers</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<p>During the last year, I have written a <a class="reference external" href="https://github.com/seblabbe/slabbe/blob/develop/slabbe/wang_tiles.py">Python module</a> to deal with Wang
+tiles containing about 4K lines of code including doctests and documentation.</p>
+<p>It can be installed like this:</p>
+
+
+<div class="pygments_manni"><pre>sage -pip install slabbe
+</pre></div>
+
+
+
+<p>It can be used like this:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe</span> <span class="kn">import</span> <span class="n">WangTileSet</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">tiles</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="o">....</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span> <span class="o">=</span> <span class="n">WangTileSet</span><span class="p">([</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tiles</span><span class="p">])</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span><span class="o">.</span><span class="n">tikz</span><span class="p">(</span><span class="n">ncolumns</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+
+/Files/2018/T0_tiles.svg
+<p>The module on wang tiles contains a class <tt class="docutils literal">WangTileSolver</tt> which contains
+three reductions of the Wang tiling problem the first using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/numerical/sage/numerical/mip.html">MILP solvers</a>,
+the second using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/sat/index.html">SAT solvers</a> and the third using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/matrices/dancing_links.html">Knuth's dancing links</a>.</p>
+<p>Here is one example of a tiling found using the dancing links reduction:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">tiling</span> <span class="o">=</span> <span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">'dancing_links'</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">36</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">12</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">48</span> <span class="n">ms</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">65.5</span> <span class="n">ms</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">tiling</span><span class="o">.</span><span class="n">tikz</span><span class="p">()</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
+</pre></div>
+
+
+
+
+/Files/2018/T0_10x10tiling.svg
+<p>All these reductions now allow me to compare the efficiency of various types of
+solvers restricted to the Wang tiling type of problems. Here is the list of
+solvers that I often use.</p>
+<table border="1" class="docutils">
+<caption>List of solvers</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Solver</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">'Gurobi'</tt></td>
+<td>MILP solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'GLPK'</tt></td>
+<td>MILP solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'PPL'</tt></td>
+<td>MILP solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'LP'</tt></td>
+<td>a SAT solver using a reduction to LP</td>
+</tr>
+<tr><td><tt class="docutils literal">'cryptominisat'</tt></td>
+<td>SAT solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'picosat'</tt></td>
+<td>SAT solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'glucose'</tt></td>
+<td>SAT solver</td>
+</tr>
+<tr><td><tt class="docutils literal">'dancing_links'</tt></td>
+<td>Knuth's algorihm</td>
+</tr>
+</tbody>
+</table>
+<p>In this <a class="reference external" href="https://arxiv.org/abs/1808.07768">recent work</a> on the substitutive structure of Jeandel-Rao tilings, I
+introduced various Wang tile sets \(T_i\) for \(i\in\{0,1,\dots,12\}\).
+In this blog post, we will concentrate on the 11 Wang tile set \(T_0\)
+introduced by <a class="reference external" href="https://arxiv.org/abs/1506.06492">Jeandel and Rao</a> as well as \(T_2\) containing 20 tiles and
+\(T_3\) containing 24 tiles.</p>
+<p><strong>Tiling a n x n square</strong></p>
+<p>The most natural question to ask is to find valid Wang tilings of \(n\times
+n\) square with given Wang tiles. Below is the time spent by each mentionned
+solvers to find a valid tiling of a \(n\times n\) square in less than 10
+seconds for each of the three wang tile sets \(T_0\), \(T_2\) and
+\(T_3\).</p>
+
+/Files/2018/T0_square_tilings.svg
+
+/Files/2018/T2_square_tilings.svg
+
+/Files/2018/T3_square_tilings.svg
+<p>We remark that MILP solvers are slower. Dancing links can solve 20x20 squares
+with Jeandel Rao tiles \(T_0\) and SAT solvers are performing very well with
+Glucose being the best as it can find a 55x55 tiling with Jeandel-Rao tiles
+\(T_0\) in less than 10 seconds.</p>
+<p><strong>Finding all dominoes allowing a surrounding of given radius</strong></p>
+<p>One thing that is often needed in my research is to enumerate all horizontal
+and vertical dominoes that allow a given surrounding radius. This is a
+difficult question in general as deciding if a given tile set admits a tiling
+of the infinite plane is undecidable. But in some cases, the information we get
+from the dominoes admitting a surrounding of radius 1, 2, 3 or 4 is enough to
+conclude that the tiling can be desubstituted for instance. This is why we need
+to answer this question as fast as possible.</p>
+<p>Below is the comparison in the time taken by each solver to compute all
+vertical and horizontal dominoes allowing a surrounding of radius 1, 2 and 3
+(in less than 1000 seconds for each execution).</p>
+
+/Files/2018/T0_dominoes_surrounding.svg
+
+/Files/2018/T2_dominoes_surrounding.svg
+
+/Files/2018/T3_dominoes_surrounding.svg
+<p>What is surprising at first is that the solvers that performed well in the
+first \(n\times n\) square experience are not the best in the second
+experiment computing valid dominoes. Dancing links and the MILP solver Gurobi
+are now the best algorithms to compute all dominoes. They are followed by
+picosat and cryptominisat and then glucose.</p>
+<p><strong>The source code of the above comparisons</strong></p>
+<p>The source code of the above comparison can be found in this <a class="reference external" href="https://nbviewer.jupyter.org/url/www.slabbe.org/Files/2018/Comparison-of-Wang-tile-solvers.ipynb">Jupyter
+notebook</a>. Note that it depends on the <a class="reference external" href="https://trac.sagemath.org/ticket/26361">use of Glucose as a Sage optional
+package (#26361)</a> and on the most recent development version of <a class="reference external" href="https://pypi.python.org/pypi/slabbe">slabbe</a>
+optional Sage Package.</p>
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers">by Sébastien Labbé at December 12, 2018 03:24 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>September 07, 2018</h2>
 
 <div class="channelgroup">
@@ -64,7 +230,7 @@
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles" lang="en">
@@ -1541,1049 +1707,6 @@ I just got <a href="https://cocalc.com/">CoCalc</a> fully working locally on my 
 </div>
 
 </div>
-<div class="daygroup">
-<h2>December 06, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/12/06/EOSC">
-<h4><a href="http://opendreamkit.org/2017/12/06/EOSC/">State of the European Open Science Cloud and strategy of OpenDreamKit (draft)</a></h4>
-<div class="entry">
-<div class="content">
-<p>During the last week of November two events related to the European Open Science Cloud (EOSC) took place in Brussels: the <a href="https://eoscpilot.eu/eosc-stakeholder-forum-shaping-future-eosc">EOSC stakeholder forum</a> on 28-29 November and the 2017 edition of the <a href="https://www.digitalinfrastructures.eu/">DI4R (Digital Infrastructures for Research)</a>. These two events were closely related in regard with the momentum period 2018-2020 for the Scientific Community and the advancement of open and digital science.</p>
-
-<h2 id="the-vision">The vision</h2>
-
-<p>The European Open Science Cloud (EOSC) is currently a process to build a digital platform that is inspired by the F.A.I.R. principle. <strong>F.A.I.R. stands for: Findable, Accessible, Interoperable and Reusable.</strong></p>
-
-<p>FAIR is the idea between the recent actions taken by the European Commission and various funding agencies in favour of open data and open science.
-The EOSC platform, also called the EOSC-Hub, intends <em>in fine</em> to make possible to the whole European scientific Community and beyond: exchange of data, easy access to knowledge and access to all useful infrastructures for all scientific disciplines.</p>
-
-<p>The word “Open” in EOSC must be understood in every possible way. It means (not exhaustively) that the platform will :</p>
-<ul>
-  <li><strong>promote open source</strong> software and open access culture</li>
-  <li>make data <strong>as open as possible but as closed as necessary</strong> in regard with confidentiality and IPR (Intellectual Property Rights) concerns,</li>
-  <li>be a <strong>mix of paid and free services and/or software</strong></li>
-  <li>be open to <strong>all users</strong>: research centres, public bodies, companies, citizens</li>
-  <li>be accessible <strong>worldwide</strong></li>
-  <li>gather all infrastructures and technologies that are of help for scientists from <strong>all possible disciplines</strong></li>
-</ul>
-
-<p>Technically speaking, the general idea is to federate existing and yet to appear services, and to make these services <strong>interoperable with one another</strong>. Services and software can concern for example data and computation hosting, authentication, indexing, collaborative tools, data and service catalogues, etc. Thanks to the interoperability the researchers will be able to discover, navigate, use and re-use, data and combine them suing a various number of infrastructures. The interpretation of data is (or at last should be in our reading) quite broad here: it includes metadata and provenance, data models, tools and generally knowledge required to make sense of the data.</p>
-
-<p><img src="http://opendreamkit.org/public/images/EOSC-photo-big.JPG" alt="EOSC photo" class="img-responsive" /></p>
-
-<p>The core role of EOSC-Hub is to coordinate, foster interoperability, develop glue services, and generally speaking steer the efforts toward the needs of researchers. The outcome of the process is still unknown but the ambition is grand. Indeed, an EU official compared the EOSC to the internet. The WWW has been and still is a process, and it has changed the face of the Earth. <strong>The ambition of the EOSC is to change the way we do Science.</strong>
-An explanatory video is <a href="https://www.youtube.com/watch?time_continue=141&v=SC4-O8BmI4I">available here.</a></p>
-
-<p>The EOSC will eventually be linked to the future pan-European HPC, as well as with the future European Data Infrastructure (EDI) which are funded alongsie the EOSC by the European Commission. The EDI and the EOSC may at the end of the day merge, since differences of purpose for each is not yet fully clear.</p>
-
-<p><img src="http://opendreamkit.org/public/images/EOSC-sketch.JPG" alt="EOSC sketch" class="img-responsive" /></p>
-
-<h2 id="political-support-and-public-funding">Political support and public funding</h2>
-
-<p>The EOSC is part of two strategies of the European Commission: the <a href="https://ec.europa.eu/digital-single-market/en/policies/shaping-digital-single-market">Digital Single Market</a> on one hand and the <a href="http://ec.europa.eu/research/era/index_en.htm">European Research Area</a> on the other hand.</p>
-
-<p>The EOSC is the combination of the two, as <strong>it aims at creating a single research community without country or technical barriers</strong> (interoperability between software and services).</p>
-
-<p>In its <a href="http://ec.europa.eu/research/participants/data/ref/h2020/wp/2018-2020/main/h2020-wp1820-infrastructures_en.pdf">Work Programme 2018-2020 for European Research Infrastructures</a>, the European Commission has put 375 million Euros on the table for “implementing the European Open Science Cloud”. It was initially planned to open a topic of <strong>79M€ for adding other services and infrastructures to the EOSC, but it was postponed after 2020</strong> for the 9th Framework Programme for research and Innovation. According to Augusto Burgueño Arjon, Head of the Unit “eInfrastructure &amp; Science Cloud” at the DG Communication and Networks at the European Commission, <strong>it is not yet decided what this fund will be used for as it will depend on the evolution of the EOSC-Hub</strong>. AS according to the Commission and main supporters <strong>there is no room for failure</strong>, the next 3 years will be crucial. If EOSC implementation is a success, the first half of FP9 will focus on aggregating remaining infrastructures and services while the second half of FP9 will focus on sustaining and scaling the EOSC.</p>
-
-<p>Member States are pushing forward the EOSC as well. Germany and the Netherlands issued in May 2017 a <a href="https://www.government.nl/documents/reports/2017/05/30/joint-position-paper-on-the-european-open-science-cloud">joint position paper</a> on the EOSC, which France <a href="https://twitter.com/VidalFrederique/status/936650264899178497">officially joined</a> on the 01/12/2017. Furthermore 13 Member States have of to date signed an agreement to start a pan-European HPC programme. This new infrastructure will follow Prace and will be closely connected to EOSC.</p>
-
-<h2 id="infrastructures-involved">Infrastructures involved</h2>
-
-<p>Outside of public institutions there are 6 major players pushing forward the EOSC:</p>
-<ul>
-  <li><a href="https://www.egi.eu/">EGI</a> (federation of cloud providers and data centres)</li>
-  <li><a href="https://eudat.eu/">EUDAT</a> (data services),</li>
-  <li><a href="https://www.openaire.eu/">OpenAire</a> (open publication services),</li>
-  <li><a href="https://www.geant.org/">Géant</a> (network services)</li>
-  <li><a href="https://www.indigo-datacloud.eu/">Indigo Data-Cloud</a> (cloud services for science)</li>
-</ul>
-
-<p>Together they built a consortium of 74 partners coordinated by EGI, in order to answer the call H2020-EINFRA-12-2017(a) within the Work Programme 2018-2020. This project named “EOSC-Hub project” will receive 30M€ by the Commission for the 2018-2020 period. Beneficiaries include Research Infrastructures, national e-Infrastructure providers, SMEs and academic institutions. This consortium will be focused on and addressing issues of the EOSC such as interoperability, adoption of open standards and protocols, governance structure etc</p>
-
-<p>Indeed, our impression is that - while the vision is clear - <strong>the design and realisation of this vision has no clear shape yet</strong>: many ideas and components are floating around, some fully or half realised but simultaneously many questions remain unanswered or have not even been asked yet. This state of affairs is not surprising: the vision is grand and has the potential to disrupt (positively) the way in which research is carried out today; the actors are human beings, scientists, institutes, funding bodies and states all with their own priorities and constraints.
-Furthermore, <strong>there are real technical challenges in putting this “Cloud” together, and there are also cultural challenges to move more and more research activities towards Open Science</strong>. Existing metrics for academics and research institutions do not generally incentivise open science; which makes change of behaviour difficult. The biggest challenge for the EOSC is then maybe the challenge of skills and habit because as it was heard from an EU official: <strong>“if we do all this and no one is using it, it will be worthless”.</strong></p>
-
-<p>Some infrastructures and services were presented during the DI4R conference as “EOSC building blocks”. The presentations are all available following <a href="https://indico.egi.eu/indico/event/3455/timetable/#all">this link</a>.</p>
-
-<p>Two presentations attracted our attention:</p>
-
-<ul>
-  <li><a href="https://help.hubzero.org/">Hubzero</a> <a href="https://indico.egi.eu/indico/event/3455/session/7/contribution/137/material/slides/0.pdf">presentation</a>: open source platform for scientific and educational collaboration</li>
-  <li><a href="https://indico.egi.eu/indico/event/3455/session/7/contribution/137/material/slides/0.pdf">Presentation</a> introducing to FAIR: nothing new but explains principles for EOSC</li>
-</ul>
-
-<p>Contributions are open on Github to <a href="https://github.com/FAIRMetrics/Metrics">help develop FAIR metrics</a> for EOSC.</p>
-
-<h2 id="opendreamkit-and-the-eosc">OpenDreamKit and the EOSC</h2>
-
-<p>It seems that no e-infrastructure or service presented at the events specifically targets math-based research and teaching, so there could be some room for components of the OpendreamKit VRE.</p>
-
-<h3 id="partnership-with-egi">Partnership with EGI</h3>
-
-<p>Indeed there is an <strong>existing collaboration between EGI and OpenDreamKit</strong> for the deployment of JupyterHub in EGI services. This collaboration will become official in the next weeks with the signature of a Memorandum of Understanding between the two parties.
-Depending on the success of this joint work and of the need of the EOSC post-2020, the collaboration could be extended.</p>
-
-<h3 id="lobby">Lobby</h3>
-
-<p>OpenDreamKit as a consortium promoting Open Source software and Open Data in the name of large communities can take lobbying actions to have an impact on the shape of the future EOSC. The following actions can and will be taken:</p>
-
-<ul>
-  <li><strong>Become a stakeholder of the <a href="https://ec.europa.eu/research/openscience/index.cfm?pg=open-science-cloud">EOSC</a>:</strong></li>
-</ul>
-
-<p>1) Endorse the principles of the <a href="https://ec.europa.eu/research/openscience/pdf/eosc_declaration.pdf#view=fit&pagemode=none">EOSC declaration</a> by sending an official statement by mail</p>
-
-<p>2) Commit to take some of the specific actions forward</p>
-
-<p>Endorsement and commitment must be sent at <a href="mailto:RTD-EOSC@EC.EUROPA.EU">RTD-EOSC@EC.EUROPA.EU</a>.</p>
-
-<ul>
-  <li><strong>Contact experts implied in the EOSC:</strong>
-    <ul>
-      <li>
-        <p>From External Board of EOSC working for the Commission: several experts including Jean-François ABRAMATIC (INRIA) and the chairperson John Womersley (European Spallation Source)</p>
-      </li>
-      <li>
-        <p>From the External Advisory Board of the EOSC-pilot project (launched in preparation of EOSC-Hub project): the list is available <a href="https://eoscpilot.eu/about/external-advisory-board">on their website</a>. One expert, Françoise GENOVA, is also member of the OpenDreamKit Advisory Board.</p>
-      </li>
-    </ul>
-  </li>
-  <li>The European Commission <strong>Project Officer for OpenDreamKit is also deeply implied in the talks for the EOSC implementation</strong>, and the Coordinator will be in close relation with her in the next months and years.</li>
-</ul>
-
-<p><em>Reference: Hans fangohr’s <a href="https://fangohr.github.io/blog/towards-the-european-open-science-cloud.html">blogpost</a> on his group page</em></p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/12/06/EOSC/">December 06, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>November 15, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups">
-<h4><a href="http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups/">Subgroups and lattices of Lie groups</a></h4>
-<div class="entry">
-<div class="content">
-<p><a href="http://opendreamkit.org">OpenDreamKit</a> is hosting a workshop on “Subgroups and lattices of Lie groups”
-to take place at the <a href="http://faberresidency.cat/">Faber residency</a> in Olot, Spain from monday 19th
-of February to Saturday 3rd of March 2018. The aim is to bring together experts in the geometry, algebra
-and combinatorics together with software developers in order to improve algorithms and
-functionalities of open source packages concerning Lie groups and their subgroups.</p>
-
-<p>The organization page of the event is <a href="https://wiki.sagemath.org/days93">https://wiki.sagemath.org/days93</a>.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/11/15/lattices-in-Lie-groups/">November 15, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>November 02, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks">
-<h4><a href="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/">Publishing reproducible logbooks</a></h4>
-<div class="entry">
-<div class="content">
-<h2 id="scenario">Scenario</h2>
-
-<p>Jane has written a (math) paper based on experimentations. She would
-like anyone to be able to reproduce her calculations.</p>
-
-<p><a href="http://opendreamkit.org/public/images/use-cases-binder-logbook.png"> <img src="http://opendreamkit.org/public/images/use-cases-binder-logbook.png" alt="a binder logbook screenshot" class="small-screenshot" /> </a></p>
-
-<h2 id="suggestion-of-solution">Suggestion of solution</h2>
-
-<ol>
-  <li>
-    <p>Describe the experimentation as <a href="http://jupyter.org">Jupyter notebooks</a>,
-mixing prose, code, and outputs (think of them as logbooks);</p>
-  </li>
-  <li>
-    <p>Publish them on a public repository (e.g. on
-<a href="https://github.com">GitHub</a>);</p>
-  </li>
-  <li>
-    <p>Make that repository <a href="http://opendreamkit.org/tag/binder">Binder-ready</a> by describing the
-software stack required; for details, see the
-<a href="https://mybinder.readthedocs.io/en/latest/using.html#preparing-a-repository-for-binder">Binder documentation</a>;</p>
-  </li>
-  <li>
-    <p>Bonus: make the paper itself active</p>
-
-    <p>To do: explore using e.g. <a href="https://dlmf.nist.gov/LaTeXML/">latexml</a>+<a href="https://github.com/minrk/thebelab">thebe</a>?.</p>
-  </li>
-</ol>
-
-<!-- If executing the examples requires a non-trivial install/build step,
-also consider
-[using a `Dockerfile`](http://mybinder.readthedocs.io/en/latest/dockerfile.html),
-and auto-building the Docker image on <https://hub.docker.com></https://hub.docker.com>. !-->
-
-<h2 id="some-instances">Some instances</h2>
-
-<ul>
-  <li>
-    <p><a href="https://github.com/defeo/ffisom">Computing isomorphisms and embeddings of finite fields</a>,
-Ludovic Brieulle, Luca De Feo, Javad Doliskani, Jean-Pierre Flori and Éric Schost,
-<a href="https://arxiv.org/abs/1705.01221">arXiv:1705.01221 [cs.SC]</a>
-<a href="https://mybinder.org/v2/gh/defeo/ffisom/master?filepath=notebooks"><img src="https://mybinder.org/badge.svg" alt="launch binder" /></a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/hivert/Jupyter-Notebooks">The 0-Rook monoid and its representation theory</a>,
-Hivert and Gay
-<a href="https://mybinder.org/v2/gh/hivert/Jupyter-Notebooks/master?filepath=rook-0.ipynb"><img src="https://mybinder.org/badge.svg" alt="launch binder" /></a></p>
-  </li>
-</ul>
-
-<h2 id="to-do">To do</h2>
-
-<ul>
-  <li>Estimate the number of such instances;</li>
-  <li>Provide a template.</li>
-</ul>
-
-<h2 id="time-and-expertise-required">Time and expertise required</h2>
-
-<p>Assuming Jane is familiar with version control and Jupyter (basic lab
-skills taught at <a href="http://software-carpentry.org/">Software Carpentry</a>,
-that the experiments were prepared as notebooks, and the software
-required is packaged (conda, debian, docker container, …), the
-publishing part could take two hours the first time, and half an hour
-later on.</p>
-
-<h2 id="whats-new-since-opendreamkit-started">What’s new since OpenDreamKit started</h2>
-
-<ul>
-  <li>Apparition of <a href="http://mybinder.org">Binder</a>;</li>
-  <li>Expansion of the <a href="http://jupyter.org">Jupyter</a> technology;</li>
-  <li>Better packaging and interfacing of math software.</li>
-</ul>
-
-<h2 id="opendreamkit-contribution">OpenDreamKit contribution</h2>
-
-<ul>
-  <li>Development and contributions to Jupyter interfaces (kernels) for
-math software (GAP, Pari/GP, SageMath, Singular) and C++;
-see <a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/96">D.47</a>.</li>
-  <li>Contributions to the packaging of math software (GAP, Pari/GP,
-SageMath, Singular, …); see
-<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/58">D3.1</a>
-and
-<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/59">D3.10</a>;</li>
-  <li>Early adoption of Binder;</li>
-  <li>Contributions to the
-<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/238">deployment of new Binder instances</a>;</li>
-  <li>Advertising, training, providing a template (TODO!), …</li>
-</ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/11/02/use-case-publishing-reproducible-notebooks/">November 02, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud">
-<h4><a href="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud/">Post doc position opening at Université Paris-Sud</a></h4>
-<div class="entry">
-<div class="content">
-<p>This is an announcement for a postdoc position opening at Université
-Paris-Sud, working on the interplay between Data, Knowledge, and
-Software in Mathematics, and in particular the exploitation of
-mathematical knowledge for increased interoperability across
-computational mathematics software and mathematical databases.</p>
-
-<h1 id="time-line">Time line</h1>
-
-<p>Interviews in early december, for a recruitment from early 2018 to
-Fall 2019. Since we have a strong candidate for a half time position,
-we will also consider candidates interested in a half-time or shorter
-duration position.</p>
-
-<h1 id="salary">Salary</h1>
-
-<p>For a full-time month work and depending on the applicant’s past experience,
-between 2000€ and 3000€ of monthly “salaire net” (salary after non-wage
-abour cost but before income tax).</p>
-
-<p>Equivalently, what this salary represents for is a “salaire brut”
-of up to 46200€ yearly (for a full-time position).</p>
-
-<h1 id="location">Location</h1>
-
-<p>The postdoc will work at the
-<a href="http://www.lri.fr">Laboratoire de Recherche en Informatique</a> of
-<a href="http://www.u-psud.fr">Université Paris Sud</a>, in the
-Orsay-Bures-Gif-Saclay campus, 25 km South-West of Paris city centre.</p>
-
-<h1 id="mission-and-activities">Mission and activities</h1>
-
-<p>OpenDreamKit’s Work Package 6 explores the interplay between Data,
-Knowledge and Software in Mathematics. In particular, it aims at
-exploiting mathematical knowledge for increased interoperability
-across computational mathematics software and mathematical databases
-(known as the Math-In-The-Middle approach). See e.g. the <a href="http://127.0.0.1:4000/2017/10/15/WP6-Usecase/">recent
-publications</a> on that
-topic, and Section 3.1.6 ``Workpackage Description’’ of the
-<a href="https://github.com/OpenDreamKit/OpenDreamKit/raw/master/Proposal/proposal-www.pdf">OpenDreamKit
-Proposal</a>.</p>
-
-<p>A successful candidate will be expected to do significant progress, in
-close collaboration with the other OpenDreamKit participants and the
-community, on some of the tasks of this Work Package:</p>
-
-<ul>
-  <li>
-    <p>D6.8: Currated Math-in-the-Middle Ontology and Alignments for GAP /
-Sage / LMFDB</p>
-  </li>
-  <li>
-    <p>T6.5: Knowledge-based code infrastructure</p>
-
-    <p>Over the last decades, computational components, and in particular
-Axiom, MuPAD, \GAP, or \Sage, have embedded more and more
-mathematical knowledge directly inside the code, as a way to better
-structure it for expressiveness, flexibility, composability,
-documentation, and robustness. In this task we will review the
-various approaches taken in these software (e.g. categories and
-dynamic class hierarchies) and in proof assistants like Coq
-(e.g. static type systems), and compare their respective strength
-and weaknesses on concrete case studies. We will also explore
-whether paradigms offered by recent programming languages like Julia
-or Scala could enable a better implementation. Based on this we will
-suggest and experiment with design improvements, and explore
-challenges such as the compilation, verification, or
-interoperability of such code.</p>
-  </li>
-</ul>
-
-<p>The candidate will be welcome to work on closely related though more
-technical tasks:</p>
-
-<ul>
-  <li>
-    <p>T4.5: Dynamic documentation and exploration system</p>
-
-    <p>Introspection has become a critical tool in interactive computation,
-allowing user to explore, on the fly, the properties and
-capabilities of the objects under manipulation. This challenge
-becomes particularly acute in systems like Sage where large parts of
-the class hierarchy is built dynamically, and static documentation
-builders like Sphinx cannot anymore render all the available
-information.</p>
-
-    <p>In this task, we will investigate how to further enhance the user
-experience. This will include:</p>
-
-    <ul>
-      <li>
-        <p>On the fly generation of Javadoc style documentation, through
-introspection, allowing e.g. the exploration of the class
-hierarchy, available methods, etc.</p>
-      </li>
-      <li>
-        <p>Widgets based on the HTML5 and web component standards to display
-graphical views of the results of SPARQL queries, as well as populating data
-structures with the results of such queries,</p>
-      </li>
-      <li>
-        <p>D4.16: Exploratory support for semantic-aware interactive widgets
-providing views on objects of the underlying computational or
-database components. Preliminary steps are demonstrated in the
-<a href="http://www.larchenvironment.com/">Larch Environment</a> project (see
-demo videos) and
-<a href="https://github.com/jbandlow/sage-explorer">sage-explorer</a>. The
-ultimate aim would be to automatically generate LMFDB-style
-interfaces.</p>
-      </li>
-    </ul>
-
-    <p>Whenever possible, those features will be implemented generically
-for any computation kernel by extending the Jupyter protocol with
-introspection and documentation queries.</p>
-  </li>
-  <li>
-    <p>T6.9: Memoisation and production of new data</p>
-
-    <p>Many CAS users run large and intensive computations, for which they
-want to collect the results while simultaneously working on software
-improvements. GAP retains computed attribute values of objects
-within a session; Sage currently has a limited <code class="highlighter-rouge">cached_method</code>.
-Neither offers storage that is persistent across sessions or
-supports publication of the result or sharing within a
-collaboration. We will use, extend and contribute back to, an
-appropriate established persistent memoisation infrastructure, such
-as <code class="highlighter-rouge">python-joblib</code>, <code class="highlighter-rouge">redis-simple-cache</code> or <code class="highlighter-rouge">dogpile.cache</code>, adding
-features needed for storage and use of results in mathematical
-research. We will design something that is simple to deploy and
-configure, and makes it easy to share results in a controlled
-manner, but provides enough assurance to enable the user to rely on
-the data, give proper credit to the original computation and rerun
-the computation if they want to.</p>
-  </li>
-</ul>
-
-<h1 id="skills-and-background-requirements">Skills and background requirements</h1>
-
-<ul>
-  <li>
-    <p>Strong experience in the design and practical implementation of
-mathematics software: computational mathematics software (e.g.
-<a href="http://sagemath.org">SageMath</a>), knowledge management systems, or
-proof systems;</p>
-  </li>
-  <li>
-    <p>PhD in mathematics or computer science;</p>
-  </li>
-  <li>
-    <p>Experience in open-source development (collaborative development
-tools, interaction with the community, …);</p>
-  </li>
-  <li>
-    <p>Fluency in programming languages such as Scala, Python, Julia, etc
-appreciated;</p>
-  </li>
-  <li>
-    <p>Strong communication skills;</p>
-  </li>
-  <li>
-    <p>Fluency in oral and written English; speaking French is not a
-prerequisite.</p>
-  </li>
-</ul>
-
-<h1 id="context">Context</h1>
-
-<p>The position will be funded by</p>
-
-<p><a href="http://opendreamkit.org">OpenDreamKit</a>, a
-<a href="https://ec.europa.eu/programmes/horizon2020/">Horizon 2020</a>
-European <a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures">Research Infrastructure</a>
-project that will run for four years, starting from September</p>
-<ol>
-  <li>This project brings together the open-source computational
-mathematics ecosystem – and in particular
-<a href="http://linalg.org/">LinBox</a>,
-<a href="http://mpir.org">MPIR</a>,
-<a href="http://sagemath.org/">SageMath</a>,
-<a href="http://www.gap-system.org/">GAP</a>,
-<a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a>,
-<a href="http://lmfdb.org/">LMFDB</a>,
-<a href="http://www.singular.uni-kl.de/">Singular</a>,
-<a href="https://mathhub.info/">MathHub</a>,
-and the
-<a href="http://jupyter.org/">IPython/Jupyter</a> interactive computing
-environment.
-– toward building a
-flexible toolkit for
-<a href="http://www.2020-horizon.com/e-Infrastructures-for-virtual-research-environments-%28VRE%29-i1490.html">Virtual Research Environments</a>
-for mathematics. Lead by Université Paris-Sud, this project involves
-about 50 people spread over 15 sites in Europe, with a total budget of
-about 7.6 million euros.</li>
-</ol>
-
-<p>Within this ecosystem, the developer will work primarily on the free
-open-source mathematics software system
-<a href="http://sagemath.org">Sagemath</a>. Based on the
-<a href="http://www.python.org">Python</a> language and many existing open-source
-math libraries, SageMath is developed since 10 years by a worldwide
-community of 300 researchers, teachers and engineers, and has reached
-1.5M lines of code.</p>
-
-<p>The developer will work within one of the largest teams of SageMath
-developers, composed essentially of researchers in mathematics and
-computer science, at the <a href="http://www.lri.fr/">Laboratoire de Recherche en
-Informatique</a> (LRI) and in nearby institutions.
-The LRI also hosts a strong team working on proof systems.</p>
-
-<h1 id="applications">Applications</h1>
-
-<p>To apply for this position, please send an e-mail to Nicolas.Thiery at
-u-psud.fr before December 1st, with the following documents attached:</p>
-
-<ul>
-  <li>
-    <p>cover_letter.pdf: a cover letter, in English (why are you interested in this particular position);</p>
-  </li>
-  <li>
-    <p>CV.pdf: a CV, highlighting among other things your skills and
-background and your contributions to open source software;</p>
-  </li>
-  <li>
-    <p>phd_reports.pdf: PhD reports (when applicable);</p>
-  </li>
-  <li>
-    <p>reference letters (each named reference_letter_.pdf),
-or alternatively reference contact information.</p>
-  </li>
-</ul>
-
-<p>Applications sent after December 1st will be considered until the
-position is filled.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/11/02/postdoc-position-paris-sud/">November 02, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>October 19, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/10/19/Netmath">
-<h4><a href="http://opendreamkit.org/2017/10/19/Netmath/">Presentation of OpenDreamKit</a></h4>
-<div class="entry">
-<div class="content">
-<p>Viviane Pons presented the OpenDreamKit project and its impact for teaching to the <a href="https://www.netmath.de/">Netmath community</a></p>
-
-<ul>
-  <li><a href="https://www.lri.fr/~pons/docs/2017_Kaiserslautern.pdf">Slides</a></li>
-</ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/10/19/Netmath/">October 19, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>October 15, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/10/15/WP6-Usecase">
-<h4><a href="http://opendreamkit.org/2017/10/15/WP6-Usecase/">WP6 Math-in-the-Middle Integration Use Case to be Published at MACIS-2017 (two papers)</a></h4>
-<div class="entry">
-<div class="content">
-<p>OpenDreamKit WP6 (Data/Knowledge/Software-Bases) has reported on the first use cases in
-two papers to be publised at <a href="https://macis2017.sba-research.org/">MACIS 2017</a>.</p>
-<ul>
-  <li><a href="https://github.com/OpenDreamKit/OpenDreamKit/blob/master/WP6/MACIS17-interop/crc.pdf">Knowledge-Based Interoperability for Mathematical Software Systems</a> (Michael Kohlhase, Luca Defeo, Dennis Müller, Markus Pfeiffer, Florian Rabe, Nicolas M. Thiéry, Victor Vasilyxev, and Tom Wiesing) develops the Math-in-the-Middle Ontology for computational group theory and shows a three-system use case (Sage, GAP, Singular).</li>
-  <li><a href="https://github.com/OpenDreamKit/OpenDreamKit/blob/master/WP6/MACIS17-vt/crc.pdf">Virtual Theories - A Uniform Interface to Mathematical Knowledge Bases</a> (Tom Wiesing, Michael Kohlhase, and Florian Rabe) extends the MMT theories to “Virtual theories”, which do not have the “load-into-memory-fully” restrictions of “concrete theories” and are therefore suited for very large data sources like the <a href="http://lmfdb.org">LMFDB</a> or <a href="http://opendreamkit.org/oeis.org">OEIS</a>.</li>
-</ul></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/10/15/WP6-Usecase/">October 15, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>October 11, 2017</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://opendreamkit.org/" title="OpenDreamKit">OpenDreamKit</a></h3>
-
-
-<div class="entrygroup" id="http://opendreamkit.org/2017/10/11/SageWindows">
-<h4><a href="http://opendreamkit.org/2017/10/11/SageWindows/">Release: SageMath for Windows</a></h4>
-<div class="entry">
-<div class="content">
-<h1 id="introduction">Introduction</h1>
-
-<p>One of the main tasks for OpenDreamKit
-(<a href="https://github.com/OpenDreamKit/OpenDreamKit/issues/50">T.31</a>]) is
-improving portability of mathematical software across hardware platforms and
-operating systems.</p>
-
-<p>One particular such challenge, which has dogged the SageMath project
-practically since its inception, is getting a fully working port of Sage on
-Windows (and by extension this would mean working Windows versions of all
-the CAS’s and other software Sage depends on, such as GAP, Singular, etc.)</p>
-
-<p>This is particularly challenging, not so much because of the Sage Python
-library (which has some, but relatively little system-specific code).
-Rather, the challenge is in porting all of Sage’s 150+ standard
-dependencies, and ensuring that they integrate well on Windows, with a
-passing test suite.</p>
-
-<p>Although UNIX-like systems are popular among open source software developers
-and some academics, the desktop and laptop market share of Windows computers
-is estimated to be <a href="https://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Desktop_and_laptop_computers">more than
-75%</a>
-and is an important source of potential users, especially students.</p>
-
-<p>However, for most of its existence, the only way to “install” Sage on
-Windows was to run a Linux virtual machine that came pre-installed with
-Sage, which is made available on Sage’s downloads page.  This is clumsy and
-onerous for users–it forces them to work within an unfamiliar OS, and it
-can be difficult and confusing to connect files and directories in their
-host OS to files and directories inside the VM, and likewise for web-based
-applications like the notebook.  Because of this Windows users can feel like
-second-class citizens in the Sage ecosystem, and this may turn them away
-from Sage.</p>
-
-<p>Attempts at Windows support almost as old as Sage itself (initial Sage
-release in 2005). Microsoft offered funding to work on Windows version <a href="https://groups.google.com/d/msg/sage-devel/LTWgQ_24cPs/WW25BGe7KjwJ">as
-far back as
-2007</a>
-but was far too little for the amount of effort needed.</p>
-
-<p>Additional work done was done off and on through 2012, and partial support
-was possible at times. This included admirable work to try to support
-building with the native Windows development toolchain (e.g. MSVC).  There
-was even at one time an earlier version of a Sage installer for Windows, but
-long since abandoned.</p>
-
-<p>However, Sage development (and more importantly Sage’s dependencies)
-continued to advance faster than there were resources for the work on
-Windows support to keep up, and work mostly stalled after 2013.
-OpenDreamKit has provided a unique opportunity to fund the kind of sustained
-effort needed for Sage’s Windows support to catch up.</p>
-
-<h1 id="sage-for-windows-overview">Sage for Windows overview</h1>
-
-<p>As of SageMath version 8.0, Sage will be available for 64-bit versions of
-Windows 7 and up.  It can be downloaded through the <a href="https://www.sagemath.org/download-windows.html">SageMath
-website</a>, and up-to-date
-installation instructions are being developed at the <a href="http://wiki.sagemath.org/SageWindows">SageMath
-wiki</a>.  A 32-bit version had been
-planned as well, but is on hold due to technical limitations that will be
-discussed later.</p>
-
-<p>The installer contains all software and documentation making up the standard
-Sage distribution, all libraries needed for Cygwin support, a bash shell,
-numerous standard UNIX command-line utilities, and the
-<a href="https://mintty.github.io/">Mintty</a> terminal emulator, which is generally
-more user-friendly and better suited for Cygwin software than the standard
-Windows console.</p>
-
-<p>It is distributed in the form of a single-file executable installer, with a
-familiar install wizard interface (built with the venerable
-<a href="http://www.jrsoftware.org/isinfo.php">InnoSetup</a>.  The installer comes in
-at just under a gigabyte, but unpacks to more than 4.5 GB in version 8.0.</p>
-
-<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/installer1.png" alt="Sage for Windows Installer" class="img-responsive" /></p>
-
-<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/installer2.png" alt="Sage for Windows Installer" class="img-responsive" /></p>
-
-<p>Because of the large number of files comprising the complete SageMath
-distribution, and the heavy compression of the installer, installation can
-take a fair amount of time even on a recent system.  On my Intel i7 laptop
-it takes about ten minutes, but results will vary.  Fortunately, this has
-not yet been a source of complaints–beta testers have been content to run
-the installer in the background while doing other work–on a modern
-multi-core machine the installer itself does not use overly many resources.</p>
-
-<p>If you don’t like it, there’s also a standard uninstall:</p>
-
-<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/uninstall.png" alt="Sage for Windows Uninstaller" class="img-responsive" /></p>
-
-<p>The installer includes three desktop and/or start menu shortcuts:</p>
-
-<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/shortcuts.png" alt="Sage for Windows start menu shortcuts" class="img-responsive" /></p>
-
-<p>The shortcut titled just “SageMath 8.0” launches the standard Sage command
-prompt in a text-based console. In general it integrates well enough with
-the Windows shell to launch files with the default viewer for those file
-types. For example, plots are saved to files and displayed automatically
-with the default image viewer registered on the computer.</p>
-
-<p><img src="http://opendreamkit.org/public/images/2017-10-11-SageWindows/console.png" alt="Sage for Windows console" class="img-responsive" /></p>
-
-<p>(Because Mintty supports <a href="https://en.wikipedia.org/wiki/Sixel">SIXEL</a> mode
-graphics, it may also be possible to embed plots and equations directly in
-the console, but this has not been made to work yet with Sage.)</p>
-
-<p>“SageMath Shell” runs a bash shell with the environment set up to
-run software in the Sage distribution.  More advanced users, or users who
-wish to directly use other software included in the Sage distribution (e.g.
-GAP, Singular) without going through the Sage interface.  Finally,
-“SageMath Notebook” starts a Jupyter Notebook server with Sage configured as
-the default kernel and, where possible, opens the Notebook interface in the
-user’s browser.</p>
-
-<p>In principle this could also be used as a development environment for doing
-development of Sage and/or Sage extensions on Windows, but the current
-installer is geared primarily just for users.</p>
-
-<h1 id="rationale-for-cygwin-and-possible-alternatives">Rationale for Cygwin and possible alternatives</h1>
-
-<p>There are a few possible routes to supporting Sage on Windows, of which
-Cygwin is just one.  For example, before restarting work on the Cygwin port
-I experimented with a solution that would run Sage on Windows using
-<a href="https://www.docker.com/">Docker</a>.  I built an installer for Sage that would
-install Docker for Windows if it was not already installed, install and
-configure a pre-build Sage image for Docker, and install some desktop
-shortcuts that attempted to launch Sage in Docker as transparently as
-possible to the user.  That is, it would ensure that Docker was running,
-that a container for the Sage image was running, and then would redirect I/O
-to the Docker container.</p>
-
-<p>This approach “worked”, but was still fairly clumsy and error-prone.  In
-order to make the experience as transparent as possible a fair amount of
-automation of Docker was needed.  This could get particularly tricky in
-cases where the user also uses Docker directly, and accidentally interferes
-with the Sage Docker installation.  Handling issues like file system and
-network port mapping, while possible, was even more complicated.  What’s
-worse, running Linux images in Docker for Windows still requires
-virtualization.  On older versions this meant running VirtualBox in the
-background, while newer versions require the Hyper-V hypervisor (which is
-not available on all versions of Windows–particularly “Home” versions).
-Furthermore, this requires hardware-assisted virtualization (HAV) to be
-enabled in the user’s BIOS.  This typically does not come enabled by default
-on home PCs, and users must manually enable it in their BIOS menu.  We did
-not consider this a reasonable step to ask of users merely to “install
-Sage”.</p>
-
-<p>Another approach, which was looked at in the early efforts to port Sage to
-Windows, would be to get Sage and all its dependencies building with the
-standard Microsoft toolchain (MSVC, etc.).  This would mean both porting the
-code to work natively on Windows, using the MSVC runtime, as well as
-developing build systems compatible with MSVC.  There was a time when,
-remarkably, many of Sage’s dependencies did meet these requirements.  But
-since then the number of dependencies has grown too much, and Sage itself
-become too dependent on the GNU toolchain, that this would be an almost
-impossible undertaking.</p>
-
-<p>A middle ground between MSVC and Cygwin would be to build Sage using the
-MinGW toolchain, which is a port of GNU build tools (including binutils,
-gcc, make, autoconf, etc.) as well as some other common UNIX tools like the
-bash shell to Windows.  Unlike Cygwin, MinGW does not provide emulation of
-POSIX or Linux system APIs–it just provides a Windows-native port of the
-development tools.  Many of Sage’s dependencies would still need to be
-updated in order to work natively on Windows, but at the very least their
-build systems would require relatively little updating–not much more than
-is required for Cygwin.  This would actually be my preferred approach, and
-with enough time and resources it could probably work.  However, it would
-still require a significant amount of work to port some of Sage’s more
-non-trivial dependencies, such as GAP and Singular, to work on Windows
-without some POSIX emulation.</p>
-
-<p>So Cygwin is the path of least resistance.  Although bugs and shortcomings
-in Cygwin itself occasionally require some effort to work around (as a
-developer–users should not have to think about it), for the most part it
-<em>just works</em> with software written for UNIX-like systems.  It also has the
-advantage of providing a full UNIX-like shell experience, so shell scripts
-and scripts that use UNIX shell tools will work even on Windows.  However,
-since it works directly on the native filesystem, there is less opportunity
-for confusion regarding where files and folders are saved.  In fact, Cygwin
-supports both Windows-style paths (starting with <code class="highlighter-rouge">C:\\</code>) and UNIX-style
-paths (in this case starting with <code class="highlighter-rouge">C:/</code>).</p>
-
-<p>Finally, a note on the Windows Subsystem for Linux (WSL), which debuted
-shortly after I began my Cygwin porting efforts, as I often get asked about
-this: “Why not ‘just’ use the ‘bash for Windows’?”  The WSL is a new effort
-by Microsoft to allow running executables built for Linux directly on
-Windows, with full support from the Windows kernel for emulation of Linux
-system calls (including ones like <code class="highlighter-rouge">fork()</code>).  Basically, it aims to provide
-all the functionality of Cygwin, but with full support from the kernel, and
-the ability to run Linux binaries directly, without having to recompile
-them.  This is great of course. So the question is asked if Sage can run in
-this environment, and experiments suggest that it works pretty well
-(although the WSL is still under active development and has room for
-improvement).</p>
-
-<p>I wrote more about the WSL in a <a href="http://opendreamkit.org/2016/10/04/emerging-technologies-wsl/">blog
-post</a> last
-year, which also addresses why we can’t “just” use it for Sage for Windows.
-But in short: 1) The WSL is currently only intended as a developer tool:
-There’s no way to package Windows software for end users such that it uses
-the WSL transparently.  And 2) It’s only available on recent updates of
-Windows 10–it will never be available on older Windows versions.  So to
-reach the most users, and provide the most hassle-free user experience, the
-WSL is not currently a solution.  However, it may still prove useful for
-developers as a way to do Sage <em>development</em> on Windows. And in the future
-it may be the easiest way to install UNIX-based software on Windows as well,
-especially if Microsoft ever expands its scope.</p>
-
-<h1 id="development-challenges">Development challenges</h1>
-
-<p>The main challenge with porting Sage to Windows/Cygwin has relatively little
-to do with the Sage library itself, which is written almost entirely in
-Python/Cython and involves relatively few system interfaces (a notable
-exception to this is the advanced signal handling provided by
-<a href="https://github.com/sagemath/cysignals">Cysignals</a>, but this has been found
-to work almost flawlessly on Cygwin thanks to the Cygwin developers’ heroic
-efforts in emulating POSIX signal handling on Windows).  Rather, most of the
-effort has gone into build and portability issues with Sage’s more than 150
-dependencies.</p>
-
-<p>The majority of issues have been build-related issues.  Runtime issues are
-less common, as many of Sage’s dependencies are primarily mathematical,
-numerical code–mostly CPU-bound algorithms that have little use of
-platform-specific APIs.  Another reason is that, although there are some
-anomalous cases, Cygwin’s emulation of POSIX (and some Linux) interfaces is
-good enough that most existing code just works as-is.  However, because
-applications built in Cygwin are native Windows applications and DLLs, there
-are Windows-specific subtleties that come up when building some non-trivial
-software.  So most of the challenge has been getting all of Sage’s
-dependencies building cleanly on Cygwin, and then <em>maintaining</em> that support
-(as the maintainers of most of these dependencies are not themselves testing
-against Cygwin regularly).</p>
-
-<p>In fact, maintenance was the most difficult aspect of the Cygwin port (and
-this is one of the main reasons past efforts failed–without a sustained
-effort it was not possible to keep up with the pace of Sage development).  I
-had a snapshot of Sage that was fully working on Cygwin, with all tests
-passing, as soon as the end of summer in 2016.  That is, I started with one
-version of Sage and added to it all the fixes needed for that version to
-work.  However, by the time that work was done, there were many new
-developments to Sage that I had to redo my work on top of, and there were
-many new issues to fix.  This cycle repeated itself a number of times.</p>
-
-<h2 id="continuous-integration">Continuous integration</h2>
-
-<p>The critical component that was missing for creating a sustainable Cygwin
-port of Sage was a <em>patchbot</em> for Cygwin.  The Sage developers maintain a
-(volunteer) army of patchbots–computers running a number of different OS
-and hardware platforms that perform continuous integration testing of all
-proposed software changes to Sage.  The patchbots are able, ideally, to
-catch changes that break Sage–possibly only on specific platforms–before
-they are merged into the main development branch.  Without a patchbot
-testing changes on Cygwin, there was no way to stop changes from being
-merged that broke Cygwin.  With some effort I managed to get a Windows VM
-with Cygwin running reliably on UPSud’s OpenStack infrastructure, that
-could run a Cygwin patchbot for Sage.  By continuing to monitor this
-patchbot the Sage community can now receive prior warning if/when a change
-will break the Cygwin port.  I expect this will impact only a small number
-of changes–in particular those that update one of Sage’s dependencies.</p>
-
-<p>In so doing we are, indirectly, providing continuous integration on Cygwin
-for Sage’s many dependencies–something most of those projects do not have
-the resources to do on their own.  So this should be considered a service to
-the open source software community at large. (I am also planning to
-piggyback on the work I did for Sage to provide a Cygwin buildbot for
-Python–this will be important moving forward as the official Python source
-tree has been broken on Cygwin for some time, but is one of the most
-critical dependencies for Sage).</p>
-
-<h2 id="runtime-bugs">Runtime bugs</h2>
-
-<p>All that said, a few of the runtime bugs that come up are non-trivial as
-well.  One particular source of bugs is subtle synchronization issues in
-multi-process code, that arise primarily due to the large overhead of
-creating, destroying, and signalling processes on Cygwin, as compared to
-most UNIXes.  Other problems arise in areas of behavior that are not
-specified by the POSIX standard, and assumptions are made that might hold on,
-say, Linux, but that do not hold on Cygwin (but that are still
-POSIX-compliant!)  For example, a difference in (undocumented, in both
-cases) memory management between Linux and Cygwin made for a particularly
-challenging <a href="https://trac.sagemath.org/ticket/22633">bug in PARI</a>.
-Another <a href="https://trac.sagemath.org/ticket/21388">interesting bug</a> came up in
-a test that invoked a stack overflow bug in Python, which only came up on
-Cygwin due to the smaller default stack size of programs compiled for
-Windows.  There are also occasional bugs due to small differences in
-numerical results, due to the different implementation of the standard C
-math routines on Cygwin, versus GNU libc.  So one should not come away with
-the impression that porting software as complex as Sage and its dependencies
-to Cygwin is completely trivial, nor that similar bugs might not arise in
-the future.</p>
-
-<h2 id="challenges-with-32-bit-windowscygwin">Challenges with 32-bit Windows/Cygwin</h2>
-
-<p>The original work of porting Sage to Cygwin focused on the 32-bit version of
-Cygwin.  In fact, at the time that was the only version of Cygwin–the first
-release of the 64-bit version of Cygwin was not until 2013.  When I picked
-up work on this again I focused on 64-bit Cygwin–most software developers
-today are working primarily on 64-bit systems, and so from many projects
-I’ve worked on the past my experience has been that they have been more
-stable on 64-bit systems.  I figured this would likely be true for Sage and
-its dependencies as well.</p>
-
-<p>In fact, after getting Sage working on 64-bit Cygwin, when it came time to
-test on 32-bit Cygwin I hit some significant snags.  Without going into too
-many technical details, the main problem is that 32-bit Windows applications
-have a user address space limited to just 2 GB (or 3 GB with a special boot
-flag).  This is in fact not enough to fit all of Sage into memory at once.
-The good news is that for most cases one would never try to use all of Sage
-at once–this is only an issue if one tries to load every library in both
-Sage, and all its dependencies, into the same address space.  In practical
-use this is rare, though this limit can be hit while running the Sage test
-suite.</p>
-
-<p>With some care, such as reserving address space for the most likely to be
-used (especially simultaneously) libraries in Sage, we can work around this
-problem for the average user.  But the result may still not be 100% stable.</p>
-
-<p>It becomes a valid question whether it’s worth the effort.  There are
-unfortunately few publicly available statistics on the current market share
-of 64-bit versus 32-bit Windows versions among desktop users.  Very few new
-desktops and laptops sold anymore to the consumer market include 32-bit
-OSes, but it is still not too uncommon to find on some older, lower-end
-laptops.  In particular, some laptops sold not too long ago with Windows 7
-were 32-bit.  According to <a href="https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=10&qpcustomd=0">Net Market
-Share</a>,
-as of writing Windows 7 still makes up nearly 50% of all desktop operating
-system installments.  This still does not tell us about 32-bit versus
-64-bit.  The popular (<a href="http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/">12.5 million concurrent
-users</a>)
-Steam PC gaming platform publishes the results of their <a href="http://store.steampowered.com/hwsurvey/">usage statistics
-survey</a>, which as of writing shows
-barely over 5% of users with 32-bit versions of Windows.  However, computer
-gamers are not likely to be representative of the overall market, being more
-likely to upgrade their software and hardware.</p>
-
-<p>So until some specific demand for a 32-bit version of SageMath for Windows
-is heard, we will not likely invest more effort into it.</p>
-
-<h1 id="conclusion-and-future-work">Conclusion and future work</h1>
-
-<p>Focusing on Cygwin for porting Sage to Windows was definitely the right way
-to go.  It took me only a few months in the summer of 2016 to get the vast
-majority of the work done.  The rest was just a question of keeping up with
-changes to Sage and fixing more bugs (this required enough constant effort
-that it’s no wonder nobody managed to quite do it before).  Now, however,
-enough issues have been addressed that the Windows version has remained
-fairly stable, even in the face of ongoing updates to Sage.</p>
-
-<p>Porting more of Sage’s dependencies to build with MinGW and without Cygwin
-might still be a worthwhile effort, as Cygwin adds some overhead in a few
-areas, but if we had started with that it would have been too much effort.</p>
-
-<p>In the near future, however, the priority needs to be improvements to user
-experience of the Windows Installer.  In particular, a better solution is
-needed for installing Sage’s optional packages on Windows (preferably
-without needing to compile them). And an improved experience for using Sage
-in the Jupyter Notebook, such that the Notebook server can run in the
-background as a Windows Service, would be nice. This feature would not be
-specific to Sage either, and could benefit all users of the Jupyter Notebook
-on Windows.</p>
-
-<p>Finally, I need to better document the process of doing Sage development on
-Cygwin, including the typical kinds of problems that arise.  I also need to
-better document how to set up and maintain the Cygwin patchbot, and how to
-build releases of the Sage on Windows installer so that its maintenance does
-not fall solely on my shoulders.</p></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://opendreamkit.org/2017/10/11/SageWindows/">October 11, 2017 12:00 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
 
 </div>
 <div class="body-corner">
@@ -2720,7 +1843,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" title="SageMath – The Matroid Union">The Matroid Union</a>
@@ -2753,7 +1876,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-December 12, 2018 02:47 PM<br>
+December 12, 2018 03:49 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
