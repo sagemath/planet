@@ -5,8 +5,47 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2019-02-26T21:49:30+00:00</updated>
+	<updated>2019-03-02T13:22:13+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
+
+	<entry xml:lang="en">
+		<title type="html">Comment installer et utiliser RISE, une extension du notebook Jupyter pour faire des présentations</title>
+		<link href="http://www.slabbe.org/blogue/2019/01/comment-installer-et-utiliser-rise-une-extension-du-notebook-jupyter-pour-faire-des-presentations"/>
+		<id>http://www.slabbe.org/blogue/2019/01/comment-installer-et-utiliser-rise-une-extension-du-notebook-jupyter-pour-faire-des-presentations</id>
+		<updated>2019-01-24T10:37:00+00:00</updated>
+		<content type="html">&lt;div class=&quot;document&quot;&gt;
+&lt;p&gt;La semaine dernière, Jeroen Demeyer a fait une présentation lors de l'&lt;a class=&quot;reference external&quot; href=&quot;https://pari.math.u-bordeaux.fr/Events/PARI2019/&quot;&gt;Atelier
+PARI/GP 2019&lt;/a&gt; au sujet de &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/cypari2/&quot;&gt;cypari2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La présentation de Jeroen consistait en des diapositives HTML où les calculs
+sont faits en direct (avec Jupyter) et où on peut les modifier en direct dans
+les diapositives. Impressionant! Tout cela grâce au package Python &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/rise/&quot;&gt;RISE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pour installer et utiliser RISE, une extension du Jupyter Notebook pour faire
+des présentations éditables, il ne suffit pas de l'installer il faut aussi
+recopier les css au bon endroit. Pour l'installer dans Sage, il suffit de
+faire:&lt;/p&gt;
+
+
+&lt;div class=&quot;pygments_manni&quot;&gt;&lt;pre&gt;sage -pip install rise
+sage -sh
+jupyter-nbextension install rise --py --sys-prefix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Après on peut consulter ce &lt;a class=&quot;reference external&quot; href=&quot;https://youtu.be/sXyFa_r1nxA&quot;&gt;démo&lt;/a&gt; sur youtube et la &lt;a class=&quot;reference external&quot; href=&quot;https://rise.readthedocs.io/en/docs_hot_fixes/index.html&quot;&gt;documentation de RISE est ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</content>
+		<author>
+			<name>Sébastien Labbé</name>
+			<uri>http://www.slabbe.org/blogue</uri>
+		</author>
+		<source>
+			<title type="html">Sébastien Labbé</title>
+			<subtitle type="html">Sébastien Labbé</subtitle>
+			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
+			<id>http://www.slabbe.org/blogue/feed/atom/</id>
+			<updated>2019-03-02T13:22:05+00:00</updated>
+		</source>
+	</entry>
 
 	<entry xml:lang="en">
 		<title type="html">Comparison of Wang tiling solvers</title>
@@ -146,14 +185,14 @@ optional Sage Package.&lt;/p&gt;
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
+			<uri>http://www.slabbe.org/blogue</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
 			<subtitle type="html">Sébastien Labbé</subtitle>
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2019-01-03T15:22:31+00:00</updated>
+			<updated>2019-03-02T13:22:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -368,14 +407,14 @@ them are prolongable into a uniformly recurrent tiling of the plane.&lt;/p&gt;
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
+			<uri>http://www.slabbe.org/blogue</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
 			<subtitle type="html">Sébastien Labbé</subtitle>
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2019-01-03T15:22:31+00:00</updated>
+			<updated>2019-03-02T13:22:05+00:00</updated>
 		</source>
 	</entry>
 
@@ -1369,74 +1408,7 @@ position is filled.&lt;/p&gt;</content>
 			<subtitle type="html">A blog for and by the matroid community</subtitle>
 			<link rel="self" href="http://matroidunion.org/?feed=rss2&amp;cat=7"/>
 			<id>http://matroidunion.org/?feed=rss2&amp;cat=7</id>
-			<updated>2019-02-26T21:49:26+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Remote project meeting</title>
-		<link href="http://opendreamkit.org/2018/02/06/project-meeting/"/>
-		<id>http://opendreamkit.org/2018/02/06/project-meeting</id>
-		<updated>2018-02-06T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;This is an online project meeting to review all achievements since March 2017.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://opendreamkit.org/meetings/2018-02-01-SteeringCommitteeMeeting/ProgressReports/&quot;&gt;Progress reports&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-02T23:01:06+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Expérimentation mathématique et combinatoire avec Sage</title>
-		<link href="http://opendreamkit.org/2018/01/23/ENS/"/>
-		<id>http://opendreamkit.org/2018/01/23/ENS</id>
-		<updated>2018-01-23T00:00:00+00:00</updated>
-		<content type="html">&lt;p&gt;Viviane Pons gave a two hours lecture on mathematical experimentation, research and open-source mathematical software development for a seminar organized by the students of the prestigious school &lt;em&gt;Ecole Normale supérieure de Lyon&lt;/em&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.lri.fr/~pons/docs/2018_ENS.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/VivianePons/public-notebooks/blob/master/2018-01-22-ENSLyon.ipynb&quot;&gt;Sage Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-		<author>
-			<name>The OpenDreamKit consortium</name>
-			<email>contact@opendreamkit.org</email>
-			<uri>http://opendreamkit.org/</uri>
-		</author>
-		<source>
-			<title type="html">OpenDreamKit</title>
-			<link rel="self" href="http://opendreamkit.org/atom.xml"/>
-			<id>http://opendreamkit.org/</id>
-			<updated>2018-05-02T23:01:06+00:00</updated>
-		</source>
-	</entry>
-
-	<entry>
-		<title type="html">Low latency local CoCalc and SageMath on the Google Pixelbook: playing with Crouton, Gallium OS, Rkt, Docker</title>
-		<link href="http://sagemath.blogspot.com/2018/01/low-latency-local-cocalc-and-sagemath.html"/>
-		<id>tag:blogger.com,1999:blog-6365588202025292315.post-2384880310944100833</id>
-		<updated>2018-01-01T22:29:07+00:00</updated>
-		<content type="html">I just got &lt;a href=&quot;https://cocalc.com/&quot;&gt;CoCalc&lt;/a&gt; fully working locally on my Google Pixelbook Chromebook! I want this, since (1) I was inspired by a recent &lt;a href=&quot;https://danluu.com/input-lag/&quot;&gt;blog post about computer latency&lt;/a&gt;, and (2) I'm going to be traveling a lot next week (the &lt;a href=&quot;http://jointmathematicsmeetings.org/jmm&quot;&gt;JMM in San Diego&lt;/a&gt;&amp;nbsp;-- come see me at the Sage booth), and may have times without Internet during which I want to work on &lt;a href=&quot;https://github.com/sagemathinc/cocalc&quot;&gt;CoCalc's development&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;267&quot; src=&quot;https://3.bp.blogspot.com/-7rPrp2EoRZ0/WkslLBSY-oI/AAAAAAABaUY/0W8HlSBPxagb2ygA-u6X-7o_t88FF7MLACLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B9.50.25%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;I first tried &lt;a href=&quot;https://termux.com/&quot;&gt;Termux&lt;/a&gt;, which is a &quot;Linux in Android&quot; userland that runs on the Pixelbook (via Android), but there were way, way too many problems for CoCalc, which is a very complicated application, so this was out. The only option was to enable ChromeOS dev mode.&lt;br /&gt;&lt;br /&gt;I next considered partitioning the hard drive, installing Linux natively (in addition to ChromeOS), and dual booting. However, it seems the canonical option is &lt;a href=&quot;https://galliumos.org/&quot;&gt;Gallium OS&lt;/a&gt; and it nobody has got that to work with Pixelbook yet (?). In fact, it appears that Gallium OS development made have stopped a year ago (?). Bummer. So I gave up on that approach...&lt;br /&gt;&lt;br /&gt;The next option was to try &lt;a href=&quot;https://github.com/dnschneid/crouton&quot;&gt;Crouton&lt;/a&gt; + Docker, since we have a &lt;a href=&quot;https://hub.docker.com/u/sagemathinc/&quot;&gt;CoCalc Docker image&lt;/a&gt;. Unfortunately, it seems currently impossible to use Docker with the standard ChromeOS kernel.&amp;nbsp; The next thing I considered was to use Crouton + &lt;a href=&quot;https://coreos.com/rkt/&quot;&gt;Rkt&lt;/a&gt;, since there are &lt;a href=&quot;https://blog.vantol.org/running-docker-containers-on-a-chromebook-with-rkt/&quot;&gt;blog posts&lt;/a&gt; claiming Rkt can run vanilla Docker containers on Crouton.&lt;br /&gt;&lt;br /&gt;I setup Crouton, installed the cli-extra chroot, and easily &lt;a href=&quot;https://coreos.com/rkt/docs/latest/distributions.html#deb-based&quot;&gt;installed Rkt&lt;/a&gt;. I learned how &lt;a href=&quot;https://medium.com/@adriaandejonge/moving-from-docker-to-rkt-310dc9aec938&quot;&gt;Rkt is different than Docker&lt;/a&gt;, and tried a bunch of simple standard Docker containers, which worked. However, when I tried running the &lt;a href=&quot;https://hub.docker.com/r/sagemathinc/cocalc-dev/&quot;&gt;(huge) CoCalc Docker container&lt;/a&gt;, I hit major performance issues, and things broke down. If I had the 16GB Chromebook and more patience, maybe this would have worked. But with only 8GB RAM, it really wasn't feasible.&lt;br /&gt;&lt;br /&gt;The next idea was to just use Crouton Linux directly (so no containers), and fix whatever issues arose. I did this, and it worked well, with CoCalc giving me a very nice local browser-based interface to my Crouton environment. Also, since we've spent so much time optimizing CoCalc to be fast over the web, it feels REALLY fast when used locally. I made some changes to the CoCalc sources and added &lt;a href=&quot;https://github.com/sagemathinc/cocalc/tree/master/src/dev/minimal&quot;&gt;a directory&lt;/a&gt;, to hopefully make this easier if anybody else tries. This is definitely not a 1-click solution.&lt;br /&gt;&lt;br /&gt;Finally, for &lt;a href=&quot;http://www.sagemath.org/&quot;&gt;SageMath&lt;/a&gt; I first tried &lt;a href=&quot;https://launchpad.net/~aims/+archive/ubuntu/sagemath&quot;&gt;the Ubuntu PPA&lt;/a&gt;, but realized it is hopelessly out of date. I then downloaded and extracted the &lt;a href=&quot;http://www.sagemath.org/download-linux.html&quot;&gt;Ubuntu 16.04 binary&lt;/a&gt; and it worked fine. Of course, I'm also building Sage from source (I'm the founder of SageMath after all), but that takes a long time...&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot;&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s1600/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;258&quot; src=&quot;https://3.bp.blogspot.com/-lKz_gMDc3rQ/WkslQxLprUI/AAAAAAABaUc/2x74Krpa9lQGV8DjQV2m71NIzu-C8YEtgCLcBGAs/s400/Screenshot%2B2018-01-01%2Bat%2B10.14.26%2BPM.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot;&gt;&lt;br /&gt;&lt;/div&gt;Anyway, Crouton works really, really well on the Pixelbook, especially if you do not need to run Docker containers.</content>
-		<author>
-			<name>William Stein</name>
-			<email>noreply@blogger.com</email>
-			<uri>http://sagemath.blogspot.com/</uri>
-		</author>
-		<source>
-			<title type="html">Sage: Open Source Mathematics Software</title>
-			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
-			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
-			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2019-02-06T11:39:38+00:00</updated>
+			<updated>2019-03-02T13:22:09+00:00</updated>
 		</source>
 	</entry>
 
