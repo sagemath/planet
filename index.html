@@ -184,8 +184,8 @@ the dimension of the linear one, but this is not the case here).</p>
 
 
 
-<p>The starting point is taken randomly, but the results of the form
-\(\theta_1,\theta_2,1-\theta_2/\theta_1\) are about the same:</p>
+<p>The starting point is taken randomly, but the results of the form of a 3-tuple
+\((\theta_1,\theta_2,1-\theta_2/\theta_1)\) are about the same:</p>
 
 
 <div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
@@ -205,11 +205,15 @@ the dimension of the linear one, but this is not the case here).</p>
 
 
 
-<p>It performs an orbit of length \(10^8\) in about 5 seconds and
-of length \(10^9\) in about 50 seconds:</p>
+<p>It performs an orbit of length \(10^7\) in about .5 seconds, of length
+\(10^8\) in about 5 seconds and of length \(10^9\) in about 50 seconds:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span><span class="p">)</span>
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">540</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">540</span> <span class="n">ms</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">539</span> <span class="n">ms</span>
+<span class="p">(</span><span class="mf">0.30488799356325225</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11234354880132114</span><span class="p">,</span> <span class="mf">1.3684748208296182</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">5.09</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">5.09</span> <span class="n">s</span>
 <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">5.08</span> <span class="n">s</span>
 <span class="p">(</span><span class="mf">0.30455473631148755</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11217550411862384</span><span class="p">,</span> <span class="mf">1.3683262505689446</span><span class="p">)</span>
@@ -337,8 +341,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 <span class="n">sage</span><span class="p">:</span> <span class="n">selmer_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">selmer_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">arp_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">arp_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">=</span> <span class="n">Graphics</span><span class="p">()</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Optimal algo:$1+1/(d-1)$'</span><span class="p">,</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dashed'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Optimal algo:$1+1/(d-1)$'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dashed'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">([(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">1</span><span class="p">)],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Strong convergence threshold'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">brun_points</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Brun'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'cyan'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">selmer_points</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Selmer'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -359,7 +362,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 
 
 <p class="date">
-<a href="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3">by Sébastien Labbé at March 27, 2020 12:28 PM</a>
+<a href="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3">by Sébastien Labbé at March 27, 2020 01:00 PM</a>
 </p>
 </div>
 </div>
@@ -573,7 +576,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-March 27, 2020 12:28 PM<br>
+March 27, 2020 01:29 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
