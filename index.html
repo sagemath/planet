@@ -54,6 +54,321 @@
 <div class="bodypadding">
 
 <div class="daygroup">
+<h2>March 27, 2020</h2>
+
+<div class="channelgroup">
+
+
+
+
+
+
+
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+
+
+<div class="entrygroup" id="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3" lang="en">
+<h4><a href="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3">Computer experiments for the Lyapunov exponent for MCF algorithms when dimension is larger than 3</a></h4>
+<div class="entry">
+<div class="content">
+<div class="document">
+<!-- The goal of continued fraction algorithms is to find diophantine approximations
+to real numbers. By Dirichlet, we know these exists. In my ... -->
+<p>In November 2015, I wanted to share intuitions I developped on the behavior of
+various distinct Multidimensional Continued Fractions algorithms obtained from
+various kind of experiments performed with them often involving combinatorics
+and digitial geometry but also including the computation of their first two
+Lyapunov exponents.</p>
+<p>As continued fractions are deeply related to the combinatorics of Sturmian
+sequences which can be seen as the digitalization of a straight line in the
+grid \(\mathbb{Z}^2\), the multidimensional continued fractions algorithm
+are related to the digitalization of a straight line and hyperplanes in
+\(\mathbb{Z}^d\).</p>
+<p>This is why I shared those experiments in what I called <a class="reference external" href="http://arxiv.org/abs/1511.08399">3-dimensional
+Continued Fraction Algorithms Cheat Sheets</a> because of its format inspired
+from typical cheat sheets found on the web.  All of the experiments can be
+reproduced using the optional SageMath package <a class="reference external" href="https://pypi.org/project/slabbe/">slabbe</a> where I share my
+research code. People asked me whether I was going to try to publish those
+Cheat Sheets, but I was afraid the format would change the organization of the
+information and data in each page, so, in the end, I never submitted those
+Cheat Sheets anywhere.</p>
+<p>Here I should say that \(d\) stands for the dimension of the vector space on
+which the involved matrices act. Some author prefer to use \(d\) for the
+dimension of the projective space and \(d+1\) for the dimension of the vector
+space.</p>
+<p>One of the consequence of the Cheat Sheets is that it made people realize that
+the algorithm proposed by Julien Cassaigne had the same first two Lyapunov
+exponents as the Selmer algorithm (first 3 significant digits were the same).
+Julien then discovered the explanation as its algorithm is conjugated to some
+semi-sorted version of the Selmer algorihm. This result was <a class="reference external" href="https://doi.org/10.1007/978-3-319-66396-8_14">shared</a> during
+WORDS 2017 conference. Julien Leroy, Julien Cassaigne and I are still working
+on the extended version of the paper. It is taking longer mainly because of my
+fault because I have been working hard on aperiodic Wang tilings in the
+previous 2 years.</p>
+<p>During July 2019, Wolfgang, Valérie and Jörg asked me to perform computations
+of the first two Lyapunov exponents for \(d\)-dimensional Multidimensional
+Continued Fraction algorithms for \(d\) larger than 3. The main question of
+interest is whether the second Lyapunov exponent keeps being negative as the
+dimension increases. This property is related to the notion of strong
+convergence almost everywhere of the simultaneous diopantine approximations
+provided by the algorithm of a fixed vector of real numbers. It did not take me
+too long to update my package since I had started to generalize my code to
+larger dimensions during Fall 2017. It turns out that, as the dimension
+increases, all known MCF algorithms have their second Lyapunov exponent become
+positive. My computations were thus confirming what they eventually published
+in their <a class="reference external" href="https://arxiv.org/abs/1910.09386">preprint</a> in November 2019.</p>
+<p>My motivation for sharing the results is the conference
+<a class="reference external" href="https://www.lorentzcenter.nl/multidimensional-continued-fractions-and-euclidean-dynamics.html">Multidimensional Continued Fractions and Euclidean Dynamics</a>
+held this week (supposed to be held in Lorentz Center, March 23-27 2020, it got
+cancelled because of the corona virus) where some discussions during video
+meetings are related to this subject.</p>
+<p>The computations can be summarized in one graphics showing the values of
+\(1-\theta_2/\theta_1\) with respect to \(d\) for various
+\(d\)-dimensional MCF algorithms. It seems that \(\theta_2\) is negative
+up to dimension 10 for Brun, up to dimension 4 for Selmer and up to dimension 5
+for ARP.</p>
+<a class="reference external image-reference" href="http://www.slabbe.org/Files/2020/lyapunov_exponent_comparison.png"><img alt="/Files/2020/lyapunov_exponent_comparison.png" src="http://www.slabbe.org/Files/2020/lyapunov_exponent_comparison.png" /></a>
+<p>I have to say that I was disapointed by the results because the algorithm
+Arnoux-Rauzy-Poincaré (ARP) that Valérie and me <a class="reference external" href="http://dx.doi.org/10.1016/j.aam.2014.11.001">introduced</a> was not performing so
+well as its second Lyapunov exponent seems to become positive for dimension
+\(d\geq 6\). I had good expectations for ARP because it reaches the highest
+value for \(1-\theta_2/\theta_1\) in the computations performed in the Cheat
+Sheets, thus better than Brun, better than Selmer when \(d=3\).</p>
+<p>The algorithm for the computation of the first two Lyapunov exponents was
+provided to me by Vincent Delecroix. It applies the algorithm
+\((v,w)\mapsto(M^{-1}v,M^T w)\) millions of times.  The evolution of the
+size of the vector \(v\) gives the first Lyapunov exponents.  The evolution
+of the size of the vector \(w\) gives the second Lyapunov exponents.  Since
+the computation is performed on 64-bits <tt class="docutils literal">double</tt> floating point number, their
+are numerical issues to deal with. This is why some Gramm Shimdts operation is
+performed on the vector \(w\) at each time the vectors are renormalized to
+keep the vector \(w\) orthogonal to \(v\).  Otherwise, the numerical errors
+cumulate and the computed value for the \(\theta_2\) becomes the same as
+\(\theta_1\). You can look at the algorithm online starting at <a class="reference external" href="https://github.com/seblabbe/slabbe/blob/develop/slabbe/mult_cont_frac_pyx.pyx#L1723">line 1723</a>
+of the file <tt class="docutils literal">mult_cont_frac_pyx.pyx</tt> from my optional package.</p>
+<p>I do not know from where Vincent took that algorithm. So, I do not know how
+exact it is and whether there exits any proof of lower bounds and upper bounds on
+the computations being performed. What I can say is that it is quite reliable in
+the sense that is returns the same values over and over again (by that I mean
+<cite>3 common most significant digits</cite>) with any fixed inputs (number of
+iterations).</p>
+<p>Below, I show the code illustrating how to reproduce the results.</p>
+<p>The version <cite>0.6</cite> (November 2019) of my package <tt class="docutils literal">slabbe</tt> includes the
+necessary code to deal with some \(d\)-dimensional Multidimensional Continued
+Fraction (MCF) algorithms. Its <a class="reference external" href="https://www.labri.fr/perso/slabbe/docs/">documentation</a> is available online. It is a PIP
+package, so it can be installed like this:</p>
+
+
+<div class="pygments_manni"><pre>sage -pip install slabbe
+</pre></div>
+
+
+
+<p>Recall that the dimension \(d\) below is the linear one (some authors prefer
+to use \(d\) for the dimension of the projective version and \(d+1\) for
+the dimension of the linear one, but this is not the case here).</p>
+<p>Import the Brun, Selmer and Arnoux-Rauzy-Poincaré MCF algorithms from the optional package:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.mult_cont_frac</span> <span class="kn">import</span> <span class="n">Brun</span><span class="p">,</span> <span class="n">Selmer</span><span class="p">,</span> <span class="n">ARP</span>
+</pre></div>
+
+
+
+<p>The computation of the first two Lyapunov exponents performed on one single orbit:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">0.30473782969922547</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11220958022368056</span><span class="p">,</span> <span class="mf">1.3682167728713919</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>The starting point is taken randomly, but the results of the form
+\(\theta_1,\theta_2,1-\theta_2/\theta_1\) are about the same:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">0.30345018206132324</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11171509867725296</span><span class="p">,</span> <span class="mf">1.3681497170915415</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>Increasing the dimension \(d\) yields:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">0.32639514522732005</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07191456560115839</span><span class="p">,</span> <span class="mf">1.2203297648654456</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">0.30918877340506756</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0463930802132972</span><span class="p">,</span> <span class="mf">1.1500477514185734</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>It performs an orbit of length \(10^8\) in about 5 seconds and
+of length \(10^9\) in about 50 seconds:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">5.09</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">5.09</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">5.08</span> <span class="n">s</span>
+<span class="p">(</span><span class="mf">0.30455473631148755</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11217550411862384</span><span class="p">,</span> <span class="mf">1.3683262505689446</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">51.2</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">51.2</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">51.2</span> <span class="n">s</span>
+<span class="p">(</span><span class="mf">0.30438755982577026</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11211562816821799</span><span class="p">,</span> <span class="mf">1.368331834035505</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>Here, in what follows, I must admit that I needed to do a small fix to my
+package, so the code below will not work in version <cite>0.6</cite> of my package, I will
+update my package in the next days in order that the computations below can be
+reproduced:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.lyapunov</span> <span class="kn">import</span> <span class="n">lyapunov_comparison_table</span>
+</pre></div>
+
+
+
+<p>For each \(3\leq d\leq 20\), I compute 30 orbits and I show the most
+significant digits and the standard deviation of the 30 values computed.</p>
+<p>For Brun algorithm:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Brun</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">190</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.8</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.99</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">6</span><span class="nb">min</span> <span class="mi">31</span><span class="n">s</span>
+  <span class="n">Algorithm</span>     \<span class="c1">#Orbits   $\theta_1$ (std)     $\theta_2$ (std)      $1-\theta_2/\theta_1$ (std)</span>
+<span class="o">+-------------+----------+--------------------+---------------------+-----------------------------+</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.3045</span> <span class="p">(</span><span class="mf">0.00040</span><span class="p">)</span>     <span class="o">-</span><span class="mf">0.1122</span> <span class="p">(</span><span class="mf">0.00017</span><span class="p">)</span>     <span class="mf">1.3683</span> <span class="p">(</span><span class="mf">0.00022</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.32632</span> <span class="p">(</span><span class="mf">0.000055</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.07188</span> <span class="p">(</span><span class="mf">0.000051</span><span class="p">)</span>   <span class="mf">1.2203</span> <span class="p">(</span><span class="mf">0.00014</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.30919</span> <span class="p">(</span><span class="mf">0.000032</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.04647</span> <span class="p">(</span><span class="mf">0.000041</span><span class="p">)</span>   <span class="mf">1.1503</span> <span class="p">(</span><span class="mf">0.00013</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.28626</span> <span class="p">(</span><span class="mf">0.000027</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.03043</span> <span class="p">(</span><span class="mf">0.000035</span><span class="p">)</span>   <span class="mf">1.1063</span> <span class="p">(</span><span class="mf">0.00012</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.26441</span> <span class="p">(</span><span class="mf">0.000024</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.01966</span> <span class="p">(</span><span class="mf">0.000027</span><span class="p">)</span>   <span class="mf">1.0743</span> <span class="p">(</span><span class="mf">0.00010</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.24504</span> <span class="p">(</span><span class="mf">0.000027</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.01207</span> <span class="p">(</span><span class="mf">0.000024</span><span class="p">)</span>   <span class="mf">1.04926</span> <span class="p">(</span><span class="mf">0.000096</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.22824</span> <span class="p">(</span><span class="mf">0.000021</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.00649</span> <span class="p">(</span><span class="mf">0.000026</span><span class="p">)</span>   <span class="mf">1.0284</span> <span class="p">(</span><span class="mf">0.00012</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.2138</span> <span class="p">(</span><span class="mf">0.00098</span><span class="p">)</span>     <span class="o">-</span><span class="mf">0.0022</span> <span class="p">(</span><span class="mf">0.00015</span><span class="p">)</span>     <span class="mf">1.0104</span> <span class="p">(</span><span class="mf">0.00074</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.20085</span> <span class="p">(</span><span class="mf">0.000015</span><span class="p">)</span>   <span class="mf">0.00106</span> <span class="p">(</span><span class="mf">0.000022</span><span class="p">)</span>    <span class="mf">0.9947</span> <span class="p">(</span><span class="mf">0.00011</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.18962</span> <span class="p">(</span><span class="mf">0.000017</span><span class="p">)</span>   <span class="mf">0.00368</span> <span class="p">(</span><span class="mf">0.000021</span><span class="p">)</span>    <span class="mf">0.9806</span> <span class="p">(</span><span class="mf">0.00011</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.17967</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.00580</span> <span class="p">(</span><span class="mf">0.000020</span><span class="p">)</span>    <span class="mf">0.9677</span> <span class="p">(</span><span class="mf">0.00011</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.17077</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.00755</span> <span class="p">(</span><span class="mf">0.000021</span><span class="p">)</span>    <span class="mf">0.9558</span> <span class="p">(</span><span class="mf">0.00012</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.16278</span> <span class="p">(</span><span class="mf">0.000012</span><span class="p">)</span>   <span class="mf">0.00900</span> <span class="p">(</span><span class="mf">0.000017</span><span class="p">)</span>    <span class="mf">0.9447</span> <span class="p">(</span><span class="mf">0.00010</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.15556</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.01022</span> <span class="p">(</span><span class="mf">0.000013</span><span class="p">)</span>    <span class="mf">0.93433</span> <span class="p">(</span><span class="mf">0.000086</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.149002</span> <span class="p">(</span><span class="mf">9.5e-6</span><span class="p">)</span>    <span class="mf">0.01124</span> <span class="p">(</span><span class="mf">0.000015</span><span class="p">)</span>    <span class="mf">0.9246</span> <span class="p">(</span><span class="mf">0.00010</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.14303</span> <span class="p">(</span><span class="mf">0.000010</span><span class="p">)</span>   <span class="mf">0.01211</span> <span class="p">(</span><span class="mf">0.000019</span><span class="p">)</span>    <span class="mf">0.9153</span> <span class="p">(</span><span class="mf">0.00014</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.13755</span> <span class="p">(</span><span class="mf">0.000012</span><span class="p">)</span>   <span class="mf">0.01285</span> <span class="p">(</span><span class="mf">0.000018</span><span class="p">)</span>    <span class="mf">0.9065</span> <span class="p">(</span><span class="mf">0.00013</span><span class="p">)</span>
+  <span class="n">Brun</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.13251</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.01349</span> <span class="p">(</span><span class="mf">0.000019</span><span class="p">)</span>    <span class="mf">0.8982</span> <span class="p">(</span><span class="mf">0.00014</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>For Selmer algorithm:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Selmer</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">203</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.78</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.98</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">6</span><span class="nb">min</span> <span class="mi">27</span><span class="n">s</span>
+  <span class="n">Algorithm</span>       \<span class="c1">#Orbits   $\theta_1$ (std)     $\theta_2$ (std)      $1-\theta_2/\theta_1$ (std)</span>
+<span class="o">+---------------+----------+--------------------+---------------------+-----------------------------+</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.1827</span> <span class="p">(</span><span class="mf">0.00041</span><span class="p">)</span>     <span class="o">-</span><span class="mf">0.0707</span> <span class="p">(</span><span class="mf">0.00017</span><span class="p">)</span>     <span class="mf">1.3871</span> <span class="p">(</span><span class="mf">0.00029</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.15808</span> <span class="p">(</span><span class="mf">0.000058</span><span class="p">)</span>   <span class="o">-</span><span class="mf">0.02282</span> <span class="p">(</span><span class="mf">0.000036</span><span class="p">)</span>   <span class="mf">1.1444</span> <span class="p">(</span><span class="mf">0.00023</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.13199</span> <span class="p">(</span><span class="mf">0.000033</span><span class="p">)</span>   <span class="mf">0.00176</span> <span class="p">(</span><span class="mf">0.000034</span><span class="p">)</span>    <span class="mf">0.9866</span> <span class="p">(</span><span class="mf">0.00026</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.11205</span> <span class="p">(</span><span class="mf">0.000017</span><span class="p">)</span>   <span class="mf">0.01595</span> <span class="p">(</span><span class="mf">0.000036</span><span class="p">)</span>    <span class="mf">0.8577</span> <span class="p">(</span><span class="mf">0.00031</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.09697</span> <span class="p">(</span><span class="mf">0.000012</span><span class="p">)</span>   <span class="mf">0.02481</span> <span class="p">(</span><span class="mf">0.000030</span><span class="p">)</span>    <span class="mf">0.7442</span> <span class="p">(</span><span class="mf">0.00032</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.085340</span> <span class="p">(</span><span class="mf">8.5e-6</span><span class="p">)</span>    <span class="mf">0.03041</span> <span class="p">(</span><span class="mf">0.000032</span><span class="p">)</span>    <span class="mf">0.6437</span> <span class="p">(</span><span class="mf">0.00036</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>    <span class="mi">30</span>         <span class="mf">0.076136</span> <span class="p">(</span><span class="mf">5.9e-6</span><span class="p">)</span>    <span class="mf">0.03379</span> <span class="p">(</span><span class="mf">0.000032</span><span class="p">)</span>    <span class="mf">0.5561</span> <span class="p">(</span><span class="mf">0.00041</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.068690</span> <span class="p">(</span><span class="mf">5.5e-6</span><span class="p">)</span>    <span class="mf">0.03565</span> <span class="p">(</span><span class="mf">0.000023</span><span class="p">)</span>    <span class="mf">0.4810</span> <span class="p">(</span><span class="mf">0.00032</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.062557</span> <span class="p">(</span><span class="mf">4.4e-6</span><span class="p">)</span>    <span class="mf">0.03646</span> <span class="p">(</span><span class="mf">0.000021</span><span class="p">)</span>    <span class="mf">0.4172</span> <span class="p">(</span><span class="mf">0.00031</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.057417</span> <span class="p">(</span><span class="mf">3.6e-6</span><span class="p">)</span>    <span class="mf">0.03654</span> <span class="p">(</span><span class="mf">0.000017</span><span class="p">)</span>    <span class="mf">0.3636</span> <span class="p">(</span><span class="mf">0.00028</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.05305</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.03615</span> <span class="p">(</span><span class="mf">0.000018</span><span class="p">)</span>    <span class="mf">0.3186</span> <span class="p">(</span><span class="mf">0.00032</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.04928</span> <span class="p">(</span><span class="mf">0.000060</span><span class="p">)</span>   <span class="mf">0.03546</span> <span class="p">(</span><span class="mf">0.000051</span><span class="p">)</span>    <span class="mf">0.2804</span> <span class="p">(</span><span class="mf">0.00040</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.046040</span> <span class="p">(</span><span class="mf">2.0e-6</span><span class="p">)</span>    <span class="mf">0.03462</span> <span class="p">(</span><span class="mf">0.000013</span><span class="p">)</span>    <span class="mf">0.2482</span> <span class="p">(</span><span class="mf">0.00027</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.04318</span> <span class="p">(</span><span class="mf">0.000011</span><span class="p">)</span>   <span class="mf">0.03365</span> <span class="p">(</span><span class="mf">0.000014</span><span class="p">)</span>    <span class="mf">0.2208</span> <span class="p">(</span><span class="mf">0.00028</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.040658</span> <span class="p">(</span><span class="mf">3.3e-6</span><span class="p">)</span>    <span class="mf">0.03263</span> <span class="p">(</span><span class="mf">0.000013</span><span class="p">)</span>    <span class="mf">0.1974</span> <span class="p">(</span><span class="mf">0.00030</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.038411</span> <span class="p">(</span><span class="mf">2.7e-6</span><span class="p">)</span>    <span class="mf">0.031596</span> <span class="p">(</span><span class="mf">9.8e-6</span><span class="p">)</span>     <span class="mf">0.1774</span> <span class="p">(</span><span class="mf">0.00022</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.036399</span> <span class="p">(</span><span class="mf">2.2e-6</span><span class="p">)</span>    <span class="mf">0.030571</span> <span class="p">(</span><span class="mf">8.0e-6</span><span class="p">)</span>     <span class="mf">0.1601</span> <span class="p">(</span><span class="mf">0.00019</span><span class="p">)</span>
+  <span class="n">Selmer</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>   <span class="mi">30</span>         <span class="mf">0.0346</span> <span class="p">(</span><span class="mf">0.00011</span><span class="p">)</span>     <span class="mf">0.02955</span> <span class="p">(</span><span class="mf">0.000093</span><span class="p">)</span>    <span class="mf">0.1452</span> <span class="p">(</span><span class="mf">0.00019</span><span class="p">)</span>
+</pre></div>
+
+
+
+<p>For Arnoux-Rauzy-Poincaré algorithm:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">ARP</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">226</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.76</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.99</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">13</span><span class="nb">min</span> <span class="mi">20</span><span class="n">s</span>
+  <span class="n">Algorithm</span>                        \<span class="c1">#Orbits   $\theta_1$ (std)     $\theta_2$ (std)      $1-\theta_2/\theta_1$ (std)</span>
+<span class="o">+--------------------------------+----------+--------------------+---------------------+-----------------------------+</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=3)    30         0.4428 (0.00056)     -0.1722 (0.00025)     1.3888 (0.00016)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=4)    30         0.6811 (0.00020)     -0.16480 (0.000085)   1.24198 (0.000093)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=5)    30         0.7982 (0.00012)     -0.0776 (0.00010)     1.0972 (0.00013)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=6)    30         0.83563 (0.000091)   0.0475 (0.00010)      0.9432 (0.00012)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=7)    30         0.8363 (0.00011)     0.1802 (0.00016)      0.7845 (0.00020)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=8)    30         0.8213 (0.00013)     0.3074 (0.00023)      0.6257 (0.00028)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=9)    30         0.8030 (0.00012)     0.4205 (0.00017)      0.4763 (0.00022)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=10)   30         0.7899 (0.00011)     0.5160 (0.00016)      0.3467 (0.00020)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=11)   30         0.7856 (0.00014)     0.5924 (0.00020)      0.2459 (0.00022)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=12)   30         0.7883 (0.00010)     0.6497 (0.00012)      0.1759 (0.00014)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=13)   30         0.7930 (0.00010)     0.6892 (0.00014)      0.1309 (0.00014)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=14)   30         0.7962 (0.00012)     0.7147 (0.00015)      0.10239 (0.000077)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=15)   30         0.7974 (0.00012)     0.7309 (0.00014)      0.08340 (0.000074)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=16)   30         0.7969 (0.00015)     0.7411 (0.00014)      0.07010 (0.000048)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=17)   30         0.7960 (0.00014)     0.7482 (0.00014)      0.06005 (0.000050)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=18)   30         0.7952 (0.00013)     0.7537 (0.00014)      0.05218 (0.000046)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=19)   30         0.7949 (0.00012)     0.7584 (0.00013)      0.04582 (0.000035)</span>
+  <span class="n">Arnoux</span><span class="o">-</span><span class="n">Rauzy</span><span class="o">-</span><span class="n">Poincar</span>\<span class="s1">'e (d=20)   30         0.7948 (0.00014)     0.7626 (0.00013)      0.04058 (0.000025)</span>
+</pre></div>
+
+
+
+<p>The computation of the figure shown above is done with the code below:</p>
+
+
+<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">brun_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.3683</span><span class="p">,</span> <span class="mf">1.2203</span><span class="p">,</span> <span class="mf">1.1503</span><span class="p">,</span> <span class="mf">1.1063</span><span class="p">,</span> <span class="mf">1.0743</span><span class="p">,</span> <span class="mf">1.04926</span><span class="p">,</span> <span class="mf">1.0284</span><span class="p">,</span> <span class="mf">1.0104</span><span class="p">,</span> <span class="mf">0.9947</span><span class="p">,</span> <span class="mf">0.9806</span><span class="p">,</span> <span class="mf">0.9677</span><span class="p">,</span> <span class="mf">0.9558</span><span class="p">,</span> <span class="mf">0.9447</span><span class="p">,</span> <span class="mf">0.93433</span><span class="p">,</span> <span class="mf">0.9246</span><span class="p">,</span> <span class="mf">0.9153</span><span class="p">,</span> <span class="mf">0.9065</span><span class="p">,</span> <span class="mf">0.8982</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">selmer_list</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.3871</span><span class="p">,</span> <span class="mf">1.1444</span><span class="p">,</span> <span class="mf">0.9866</span><span class="p">,</span> <span class="mf">0.8577</span><span class="p">,</span> <span class="mf">0.7442</span><span class="p">,</span> <span class="mf">0.6437</span><span class="p">,</span> <span class="mf">0.5561</span><span class="p">,</span> <span class="mf">0.4810</span><span class="p">,</span> <span class="mf">0.4172</span><span class="p">,</span> <span class="mf">0.3636</span><span class="p">,</span> <span class="mf">0.3186</span><span class="p">,</span> <span class="mf">0.2804</span><span class="p">,</span> <span class="mf">0.2482</span><span class="p">,</span> <span class="mf">0.2208</span><span class="p">,</span> <span class="mf">0.1974</span><span class="p">,</span> <span class="mf">0.1774</span><span class="p">,</span> <span class="mf">0.1601</span><span class="p">,</span> <span class="mf">0.1452</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">arp_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.3888</span><span class="p">,</span> <span class="mf">1.24198</span><span class="p">,</span> <span class="mf">1.0972</span><span class="p">,</span> <span class="mf">0.9432</span><span class="p">,</span> <span class="mf">0.7845</span><span class="p">,</span> <span class="mf">0.6257</span><span class="p">,</span> <span class="mf">0.4763</span><span class="p">,</span> <span class="mf">0.3467</span><span class="p">,</span> <span class="mf">0.2459</span><span class="p">,</span> <span class="mf">0.1759</span><span class="p">,</span> <span class="mf">0.1309</span><span class="p">,</span> <span class="mf">0.10239</span><span class="p">,</span> <span class="mf">0.08340</span><span class="p">,</span> <span class="mf">0.07010</span><span class="p">,</span> <span class="mf">0.06005</span><span class="p">,</span> <span class="mf">0.05218</span><span class="p">,</span> <span class="mf">0.04582</span><span class="p">,</span> <span class="mf">0.04058</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">brun_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">brun_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">selmer_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">selmer_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">arp_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">arp_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">=</span> <span class="n">Graphics</span><span class="p">()</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Optimal algo:$1+1/(d-1)$'</span><span class="p">,</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dashed'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">([(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">1</span><span class="p">)],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Strong convergence threshold'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">brun_points</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Brun'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'cyan'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">selmer_points</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'Selmer'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">arp_points</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">'ARP'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">ymin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">axes_labels</span><span class="p">([</span><span class="s1">'$d$'</span><span class="p">,</span><span class="s1">''</span><span class="p">])</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Computation of first 2 Lyapunov Exponents: comparison of the value $1-</span><span class="se">\\</span><span class="s1">theta_2/</span><span class="se">\\</span><span class="s1">theta_1$</span><span class="se">\n</span><span class="s1"> for $d$-dimensional MCF algorithms Brun, Selmer and ARP for $3</span><span class="se">\\</span><span class="s1">leq d</span><span class="se">\\</span><span class="s1">leq 20$'</span><span class="p">)</span>
+</pre></div>
+
+
+
+</div></div>
+
+
+
+
+
+
+
+<p class="date">
+<a href="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3">by Sébastien Labbé at March 27, 2020 12:28 PM</a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="daygroup">
 <h2>May 09, 2019</h2>
 
 <div class="channelgroup">
@@ -81,467 +396,6 @@
 
 <p class="date">
 <a href="http://sagemath.blogspot.com/2019/05/should-i-resign-from-my-full-professor.html">by William Stein (noreply@blogger.com) at May 09, 2019 02:21 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>January 24, 2019</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
-
-
-<div class="entrygroup" id="http://www.slabbe.org/blogue/2019/01/comment-installer-et-utiliser-rise-une-extension-du-notebook-jupyter-pour-faire-des-presentations" lang="en">
-<h4><a href="http://www.slabbe.org/blogue/2019/01/comment-installer-et-utiliser-rise-une-extension-du-notebook-jupyter-pour-faire-des-presentations">Comment installer et utiliser RISE, une extension du notebook Jupyter pour faire des présentations</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>La semaine dernière, Jeroen Demeyer a fait une présentation lors de l'<a class="reference external" href="https://pari.math.u-bordeaux.fr/Events/PARI2019/">Atelier
-PARI/GP 2019</a> au sujet de <a class="reference external" href="https://pypi.org/project/cypari2/">cypari2</a>.</p>
-<p>La présentation de Jeroen consistait en des diapositives HTML où les calculs
-sont faits en direct (avec Jupyter) et où on peut les modifier en direct dans
-les diapositives. Impressionant! Tout cela grâce au package Python <a class="reference external" href="https://pypi.org/project/rise/">RISE</a>.</p>
-<p>Pour installer et utiliser RISE, une extension du Jupyter Notebook pour faire
-des présentations éditables, il ne suffit pas de l'installer il faut aussi
-recopier les css au bon endroit. Pour l'installer dans Sage, il suffit de
-faire:</p>
-
-
-<div class="pygments_manni"><pre>sage -pip install rise
-sage -sh
-jupyter-nbextension install rise --py --sys-prefix
-</pre></div>
-
-
-
-<p>Après on peut consulter ce <a class="reference external" href="https://youtu.be/sXyFa_r1nxA">démo</a> sur youtube et la <a class="reference external" href="https://rise.readthedocs.io/en/docs_hot_fixes/index.html">documentation de RISE est ici</a>.</p>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.slabbe.org/blogue/2019/01/comment-installer-et-utiliser-rise-une-extension-du-notebook-jupyter-pour-faire-des-presentations">by Sébastien Labbé at January 24, 2019 10:37 AM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>December 12, 2018</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
-
-
-<div class="entrygroup" id="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers" lang="en">
-<h4><a href="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers">Comparison of Wang tiling solvers</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>During the last year, I have written a <a class="reference external" href="https://github.com/seblabbe/slabbe/blob/develop/slabbe/wang_tiles.py">Python module</a> to deal with Wang
-tiles containing about 4K lines of code including doctests and documentation.</p>
-<p>It can be installed like this:</p>
-
-
-<div class="pygments_manni"><pre>sage -pip install slabbe
-</pre></div>
-
-
-
-<p>It can be used like this:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe</span> <span class="kn">import</span> <span class="n">WangTileSet</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">tiles</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-<span class="o">....</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span> <span class="o">=</span> <span class="n">WangTileSet</span><span class="p">([</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tiles</span><span class="p">])</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span><span class="o">.</span><span class="n">tikz</span><span class="p">(</span><span class="n">ncolumns</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
-</pre></div>
-
-
-
-
-/Files/2018/T0_tiles.svg
-<p>The module on wang tiles contains a class <tt class="docutils literal">WangTileSolver</tt> which contains
-three reductions of the Wang tiling problem the first using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/numerical/sage/numerical/mip.html">MILP solvers</a>,
-the second using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/sat/index.html">SAT solvers</a> and the third using <a class="reference external" href="http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/matrices/dancing_links.html">Knuth's dancing links</a>.</p>
-<p>Here is one example of a tiling found using the dancing links reduction:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">tiling</span> <span class="o">=</span> <span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">'dancing_links'</span><span class="p">)</span>
-<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">36</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">12</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">48</span> <span class="n">ms</span>
-<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">65.5</span> <span class="n">ms</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">tiling</span><span class="o">.</span><span class="n">tikz</span><span class="p">()</span><span class="o">.</span><span class="n">pdf</span><span class="p">()</span>
-</pre></div>
-
-
-
-
-/Files/2018/T0_10x10tiling.svg
-<p>All these reductions now allow me to compare the efficiency of various types of
-solvers restricted to the Wang tiling type of problems. Here is the list of
-solvers that I often use.</p>
-<table border="1" class="docutils">
-<caption>List of solvers</caption>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">Solver</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td><tt class="docutils literal">'Gurobi'</tt></td>
-<td>MILP solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'GLPK'</tt></td>
-<td>MILP solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'PPL'</tt></td>
-<td>MILP solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'LP'</tt></td>
-<td>a SAT solver using a reduction to LP</td>
-</tr>
-<tr><td><tt class="docutils literal">'cryptominisat'</tt></td>
-<td>SAT solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'picosat'</tt></td>
-<td>SAT solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'glucose'</tt></td>
-<td>SAT solver</td>
-</tr>
-<tr><td><tt class="docutils literal">'dancing_links'</tt></td>
-<td>Knuth's algorihm</td>
-</tr>
-</tbody>
-</table>
-<p>In this <a class="reference external" href="https://arxiv.org/abs/1808.07768">recent work</a> on the substitutive structure of Jeandel-Rao tilings, I
-introduced various Wang tile sets \(T_i\) for \(i\in\{0,1,\dots,12\}\).
-In this blog post, we will concentrate on the 11 Wang tile set \(T_0\)
-introduced by <a class="reference external" href="https://arxiv.org/abs/1506.06492">Jeandel and Rao</a> as well as \(T_2\) containing 20 tiles and
-\(T_3\) containing 24 tiles.</p>
-<p><strong>Tiling a n x n square</strong></p>
-<p>The most natural question to ask is to find valid Wang tilings of \(n\times
-n\) square with given Wang tiles. Below is the time spent by each mentionned
-solvers to find a valid tiling of a \(n\times n\) square in less than 10
-seconds for each of the three wang tile sets \(T_0\), \(T_2\) and
-\(T_3\).</p>
-
-/Files/2018/T0_square_tilings.svg
-
-/Files/2018/T2_square_tilings.svg
-
-/Files/2018/T3_square_tilings.svg
-<p>We remark that MILP solvers are slower. Dancing links can solve 20x20 squares
-with Jeandel Rao tiles \(T_0\) and SAT solvers are performing very well with
-Glucose being the best as it can find a 55x55 tiling with Jeandel-Rao tiles
-\(T_0\) in less than 10 seconds.</p>
-<p><strong>Finding all dominoes allowing a surrounding of given radius</strong></p>
-<p>One thing that is often needed in my research is to enumerate all horizontal
-and vertical dominoes that allow a given surrounding radius. This is a
-difficult question in general as deciding if a given tile set admits a tiling
-of the infinite plane is undecidable. But in some cases, the information we get
-from the dominoes admitting a surrounding of radius 1, 2, 3 or 4 is enough to
-conclude that the tiling can be desubstituted for instance. This is why we need
-to answer this question as fast as possible.</p>
-<p>Below is the comparison in the time taken by each solver to compute all
-vertical and horizontal dominoes allowing a surrounding of radius 1, 2 and 3
-(in less than 1000 seconds for each execution).</p>
-
-/Files/2018/T0_dominoes_surrounding.svg
-
-/Files/2018/T2_dominoes_surrounding.svg
-
-/Files/2018/T3_dominoes_surrounding.svg
-<p>What is surprising at first is that the solvers that performed well in the
-first \(n\times n\) square experience are not the best in the second
-experiment computing valid dominoes. Dancing links and the MILP solver Gurobi
-are now the best algorithms to compute all dominoes. They are followed by
-picosat and cryptominisat and then glucose.</p>
-<p><strong>The source code of the above comparisons</strong></p>
-<p>The source code of the above comparison can be found in this <a class="reference external" href="https://nbviewer.jupyter.org/url/www.slabbe.org/Files/2018/Comparison-of-Wang-tile-solvers.ipynb">Jupyter
-notebook</a>. Note that it depends on the <a class="reference external" href="https://trac.sagemath.org/ticket/26361">use of Glucose as a Sage optional
-package (#26361)</a> and on the most recent development version of <a class="reference external" href="https://pypi.python.org/pypi/slabbe">slabbe</a>
-optional Sage Package.</p>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.slabbe.org/blogue/2018/12/comparison-of-wang-tiling-solvers">by Sébastien Labbé at December 12, 2018 03:24 PM</a>
-</p>
-</div>
-</div>
-
-
-</div>
-
-</div>
-<div class="daygroup">
-<h2>September 07, 2018</h2>
-
-<div class="channelgroup">
-
-
-
-
-
-
-
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
-
-
-<div class="entrygroup" id="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles" lang="en">
-<h4><a href="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles">Wooden laser-cut Jeandel-Rao tiles</a></h4>
-<div class="entry">
-<div class="content">
-<div class="document">
-<p>I have been working on Jeandel-Rao tiles <a class="reference external" href="https://arxiv.org/abs/1808.07768">lately</a>.</p>
-<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/article2_T0_tiles.svg">/Files/2018/article2_T0_tiles.svg</a>
-<p>Before the conference <a class="reference external" href="https://sites.google.com/view/modelsets/home">Model Sets and Aperiodic Order</a> held in Durham UK (Sep
-3-7 2018), I thought it would be a good idea to bring some real tiles at the
-conference. So I first decided of some conventions to represent the above tiles
-as topologically closed disk basically using the representation of integers in
-base 1:</p>
-<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/T0_shapes.svg">/Files/2018/T0_shapes.svg</a>
-<p>With these shapes, I created a 33 x 19 patch. With 3cm on each side, the patch
-takes 99cm x 57cm just within the capacity of the laser cut machine (1m x 60
-cm):</p>
-<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/33x19_A_scale3.svg">/Files/2018/33x19_A_scale3.svg</a>
-<p>With the help of David Renault from LaBRI, we went at <a class="reference external" href="https://www.iut.u-bordeaux.fr/cohabit/">Coh&#64;bit</a>, the FabLab
-of Bordeaux University and we laser cut two 3mm thick plywood for a total of
-1282 Wang tiles. This is the result:</p>
-<a class="reference external image-reference" href="http://www.slabbe.org/Files/2018/laser_cut_8x8.jpg"><img alt="/Files/2018/laser_cut_8x8.jpg" src="http://www.slabbe.org/Files/2018/laser_cut_8x8.jpg" /></a>
-<p>One may recreate the 33 x 19 tiling as follows (note that I am using
-Cartesian-like coordinates, so the first list <tt class="docutils literal">data[0]</tt> actually is the first
-column from bottom to top):</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-<span class="o">....</span><span class="p">:</span>  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-</pre></div>
-
-
-
-<p>The above patch have been chosen among 1000 other randomly generated as the
-closest to the asymptotic frequencies of the tiles in Jeandel-Rao tilings (or
-at least in the minimal subshift that I describe in the preprint):</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">tile_count</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
-</pre></div>
-
-
-
-<p>The asymptotic frequencies:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">phi</span> <span class="o">=</span> <span class="n">golden_ratio</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">Linv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span>
-<span class="o">....</span><span class="p">:</span>      <span class="mi">5</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">14</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span>
-<span class="o">....</span><span class="p">:</span>      <span class="mi">2</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">phi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">perfect_proportions</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">Linv</span><span class="p">])</span>
-</pre></div>
-
-
-
-<p>Comparison of the number of tiles of each type with the expected frequency:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">header_row</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'tile id'</span><span class="p">,</span> <span class="s1">'Asymptotic frequency'</span><span class="p">,</span> <span class="s1">'Expected nb of copies'</span><span class="p">,</span>
-<span class="o">....</span><span class="p">:</span>               <span class="s1">'Nb copies in the 33x19 patch'</span><span class="p">]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="n">perfect_proportions</span><span class="p">,</span> <span class="n">vector</span><span class="p">(</span><span class="n">perfect_proportions</span><span class="p">)</span><span class="o">*</span><span class="mi">33</span><span class="o">*</span><span class="mi">19</span><span class="p">,</span> <span class="n">tile_count</span><span class="p">]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">table</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">header_row</span><span class="o">=</span><span class="n">header_row</span><span class="p">)</span>
-  <span class="n">tile</span> <span class="nb">id</span>   <span class="n">Asymptotic</span> <span class="n">frequency</span>   <span class="n">Expected</span> <span class="n">nb</span> <span class="n">of</span> <span class="n">copies</span>   <span class="n">Nb</span> <span class="n">copies</span> <span class="ow">in</span> <span class="n">the</span> <span class="mi">33</span><span class="n">x19</span> <span class="n">patch</span>
-<span class="o">+---------+----------------------+-----------------------+------------------------------+</span>
-  <span class="mi">0</span>         <span class="mf">0.108271182329550</span>      <span class="mf">67.8860313206280</span>        <span class="mi">67</span>
-  <span class="mi">1</span>         <span class="mf">0.108271182329550</span>      <span class="mf">67.8860313206280</span>        <span class="mi">65</span>
-  <span class="mi">2</span>         <span class="mf">0.0255593590340479</span>     <span class="mf">16.0257181143480</span>        <span class="mi">16</span>
-  <span class="mi">3</span>         <span class="mf">0.108271182329550</span>      <span class="mf">67.8860313206280</span>        <span class="mi">71</span>
-  <span class="mi">4</span>         <span class="mf">0.0669152706817991</span>     <span class="mf">41.9558747174880</span>        <span class="mi">42</span>
-  <span class="mi">5</span>         <span class="mf">0.0827118232955023</span>     <span class="mf">51.8603132062800</span>        <span class="mi">51</span>
-  <span class="mi">6</span>         <span class="mf">0.108271182329550</span>      <span class="mf">67.8860313206280</span>        <span class="mi">65</span>
-  <span class="mi">7</span>         <span class="mf">0.149627093977301</span>      <span class="mf">93.8161879237680</span>        <span class="mi">95</span>
-  <span class="mi">8</span>         <span class="mf">0.0669152706817991</span>     <span class="mf">41.9558747174880</span>        <span class="mi">44</span>
-  <span class="mi">9</span>         <span class="mf">0.108271182329550</span>      <span class="mf">67.8860313206280</span>        <span class="mi">67</span>
-  <span class="mi">10</span>        <span class="mf">0.0669152706817991</span>     <span class="mf">41.9558747174880</span>        <span class="mi">44</span>
-</pre></div>
-
-
-
-<p>I brought the \(33\times19=641\) tiles at the conference and offered to the
-first 7 persons to find a \(7\times 7\) tiling the opportunity to keep the
-49 tiles they used. 49 is a good number since the frequency of the lowest tile
-(with id 2) is about 2% which allows to have at least one copy of each tile in
-a subset of 49 tiles allowing a solution.</p>
-<p>A natural question to ask is how many such \(7\times 7\) tilings does there
-exist?  With ticket <a class="reference external" href="https://trac.sagemath.org/ticket/25125">#25125</a> that was merged in Sage 8.3 this Spring, it is
-possible to enumerate and count solutions in parallel with Knuth dancing links
-algorithm. After the installation of the Sage Optional package <a class="reference external" href="https://pypi.python.org/pypi/slabbe/">slabbe</a> (<tt class="docutils literal">sage
-<span class="pre">-pip</span> install slabbe</tt>), one may compute that there are 152244 solutions.</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe</span> <span class="kn">import</span> <span class="n">WangTileSet</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">tiles</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-<span class="o">....</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">T0</span> <span class="o">=</span> <span class="n">WangTileSet</span><span class="p">(</span><span class="n">tiles</span><span class="p">)</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">T0_solver</span> <span class="o">=</span> <span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
-<span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">T0_solver</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">(</span><span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">16</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">82.3</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">98.3</span> <span class="n">ms</span>
-<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">388</span> <span class="n">ms</span>
-<span class="mi">152244</span>
-</pre></div>
-
-
-
-<p>One may also get the list of all solutions and print one of them:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">L</span> <span class="o">=</span> <span class="n">T0_solver</span><span class="o">.</span><span class="n">all_solutions</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
-<span class="mi">152244</span>
-<span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">6.46</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">344</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">6.8</span> <span class="n">s</span>
-<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">6.82</span> <span class="n">s</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">A</span> <span class="n">wang</span> <span class="n">tiling</span> <span class="n">of</span> <span class="n">a</span> <span class="mi">7</span> <span class="n">x</span> <span class="mi">7</span> <span class="n">rectangle</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">table</span><span class="p">()</span>  <span class="c1"># warning: the output is in Cartesian-like coordinates</span>
-<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
- <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-</pre></div>
-
-
-
-<p>This is the number of distinct sets of 49 tiles which admits a 7x7 solution:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="n">sage</span><span class="p">:</span> <span class="k">def</span> <span class="nf">count_tiles</span><span class="p">(</span><span class="n">tiling</span><span class="p">):</span>
-<span class="o">....</span><span class="p">:</span>     <span class="n">C</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">tiling</span><span class="o">.</span><span class="n">table</span><span class="p">()))</span>
-<span class="o">....</span><span class="p">:</span>     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">Lfreq</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">count_tiles</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
-<span class="n">sage</span><span class="p">:</span> <span class="n">Lfreq_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">Lfreq</span><span class="p">)</span>
-<span class="n">sage</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">Lfreq_count</span><span class="p">)</span>
-<span class="mi">83258</span>
-</pre></div>
-
-
-
-<p>Number of other solutions with the same set of 49 tiles:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Counter</span><span class="p">(</span><span class="n">Lfreq_count</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="n">Counter</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">49076</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">19849</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">6313</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">3664</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">1410</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">1341</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">705</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span>
-<span class="mi">293</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">18</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-<span class="mi">22</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">32</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">28</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
-</pre></div>
-
-
-
-<p>How the number of \(k\times k\)-solutions grows for <cite>k</cite> from 0 to 9:</p>
-
-
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="p">[</span><span class="n">T0</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">number_of_solutions</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">444</span><span class="p">,</span> <span class="mi">1723</span><span class="p">,</span> <span class="mi">9172</span><span class="p">,</span> <span class="mi">50638</span><span class="p">,</span> <span class="mi">152244</span><span class="p">,</span> <span class="mi">262019</span><span class="p">,</span> <span class="mi">1641695</span><span class="p">]</span>
-</pre></div>
-
-
-
-<p>Unfortunately, most of those \(k\times k\)-solutions are not extendable to a
-tiling of the whole plane. Indeed the number of \(k\times k\) patches in
-the language of the minimal aperiodic subshift that I am able to describe and
-which is a proper subset of Jeandel-Rao tilings seems, according to some
-heuristic, to be something like:</p>
-
-
-<div class="pygments_manni"><pre><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">268</span><span class="p">,</span> <span class="mi">367</span><span class="p">,</span> <span class="mi">483</span><span class="p">]</span>
-</pre></div>
-
-
-
-<p>I do not share my (ugly) code for this computation yet, as I will rather share
-clean code soon when times come. So among the 152244 about only 483 (0.32%) of
-them are prolongable into a uniformly recurrent tiling of the plane.</p>
-</div></div>
-
-
-
-
-
-
-
-<p class="date">
-<a href="http://www.slabbe.org/blogue/2018/09/wooden-laser-cut-jeandel-rao-tiles">by Sébastien Labbé at September 07, 2018 09:16 AM</a>
 </p>
 </div>
 </div>
@@ -686,7 +540,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" class="message" title="no activity in 356 days">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org" class="message" title="no activity in 356 days">The Matroid Union</a>
@@ -719,7 +573,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-March 27, 2020 11:27 AM<br>
+March 27, 2020 12:28 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
