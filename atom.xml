@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2020-03-27T15:31:38+00:00</updated>
+	<updated>2020-03-27T16:32:30+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry xml:lang="en">
@@ -14,8 +14,6 @@
 		<id>http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3</id>
 		<updated>2020-03-27T13:00:00+00:00</updated>
 		<content type="html">&lt;div class=&quot;document&quot;&gt;
-&lt;!-- The goal of continued fraction algorithms is to find diophantine approximations
-to real numbers. By Dirichlet, we know these exists. In my ... --&gt;
 &lt;p&gt;In November 2015, I wanted to share intuitions I developped on the behavior of
 various distinct Multidimensional Continued Fractions algorithms obtained from
 various kind of experiments performed with them often involving combinatorics
@@ -35,10 +33,9 @@ Cheat Sheets, but I was afraid the format would change the organization of the
 information and data in each page, so, in the end, I never submitted those
 Cheat Sheets anywhere.&lt;/p&gt;
 &lt;p&gt;Here I should say that \(d\) stands for the dimension of the vector space on
-which the involved matrices act. Some author prefer to use \(d\) for the
-dimension of the projective space and \(d+1\) for the dimension of the vector
-space.&lt;/p&gt;
-&lt;p&gt;One of the consequence of the Cheat Sheets is that it made people realize that
+which the involved matrices act and \(d-1\) is the dimension of the
+projective space on which the algorithm acts.&lt;/p&gt;
+&lt;p&gt;One of the consequence of the Cheat Sheets is that it made us realize that
 the algorithm proposed by Julien Cassaigne had the same first two Lyapunov
 exponents as the Selmer algorithm (first 3 significant digits were the same).
 Julien then discovered the explanation as its algorithm is conjugated to some
@@ -64,14 +61,14 @@ in their &lt;a class=&quot;reference external&quot; href=&quot;https://arxiv.org
 held this week (supposed to be held in Lorentz Center, March 23-27 2020, it got
 cancelled because of the corona virus) where some discussions during video
 meetings are related to this subject.&lt;/p&gt;
-&lt;p&gt;The computations can be summarized in one graphics showing the values of
-\(1-\theta_2/\theta_1\) with respect to \(d\) for various
+&lt;p&gt;The computations performed below can be summarized in one graphics showing the
+values of \(1-\theta_2/\theta_1\) with respect to \(d\) for various
 \(d\)-dimensional MCF algorithms. It seems that \(\theta_2\) is negative
 up to dimension 10 for Brun, up to dimension 4 for Selmer and up to dimension 5
 for ARP.&lt;/p&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;http://www.slabbe.org/Files/2020/lyapunov_exponent_comparison.png&quot;&gt;&lt;img alt=&quot;/Files/2020/lyapunov_exponent_comparison.png&quot; src=&quot;http://www.slabbe.org/Files/2020/lyapunov_exponent_comparison.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;I have to say that I was disapointed by the results because the algorithm
-Arnoux-Rauzy-Poincaré (ARP) that Valérie and me &lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.aam.2014.11.001&quot;&gt;introduced&lt;/a&gt; was not performing so
+Arnoux-Rauzy-Poincaré (ARP) that Valérie and I &lt;a class=&quot;reference external&quot; href=&quot;http://dx.doi.org/10.1016/j.aam.2014.11.001&quot;&gt;introduced&lt;/a&gt; was not performing so
 well as its second Lyapunov exponent seems to become positive for dimension
 \(d\geq 6\). I had good expectations for ARP because it reaches the highest
 value for \(1-\theta_2/\theta_1\) in the computations performed in the Cheat
@@ -79,8 +76,8 @@ Sheets, thus better than Brun, better than Selmer when \(d=3\).&lt;/p&gt;
 &lt;p&gt;The algorithm for the computation of the first two Lyapunov exponents was
 provided to me by Vincent Delecroix. It applies the algorithm
 \((v,w)\mapsto(M^{-1}v,M^T w)\) millions of times.  The evolution of the
-size of the vector \(v\) gives the first Lyapunov exponents.  The evolution
-of the size of the vector \(w\) gives the second Lyapunov exponents.  Since
+size of the vector \(v\) gives the first Lyapunov exponent.  The evolution
+of the size of the vector \(w\) gives the second Lyapunov exponent.  Since
 the computation is performed on 64-bits &lt;tt class=&quot;docutils literal&quot;&gt;double&lt;/tt&gt; floating point number, their
 are numerical issues to deal with. This is why some Gramm Shimdts operation is
 performed on the vector \(w\) at each time the vectors are renormalized to
@@ -106,9 +103,8 @@ package, so it can be installed like this:&lt;/p&gt;
 
 
 
-&lt;p&gt;Recall that the dimension \(d\) below is the linear one (some authors prefer
-to use \(d\) for the dimension of the projective version and \(d+1\) for
-the dimension of the linear one, but this is not the case here).&lt;/p&gt;
+&lt;p&gt;Recall that the dimension \(d\) below is the linear one and \(d-1\) is the
+dimension of the space for the corresponding projective algorithm.&lt;/p&gt;
 &lt;p&gt;Import the Brun, Selmer and Arnoux-Rauzy-Poincaré MCF algorithms from the optional package:&lt;/p&gt;
 
 
@@ -298,14 +294,14 @@ significant digits and the standard deviation of the 30 values computed.&lt;/p&g
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue/</uri>
+			<uri>http://www.slabbe.org/blogue</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
 			<subtitle type="html">Sébastien Labbé</subtitle>
 			<link rel="self" href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml"/>
 			<id>http://www.slabbe.org/blogue/feed/atom/</id>
-			<updated>2020-03-27T14:30:41+00:00</updated>
+			<updated>2020-03-27T16:32:24+00:00</updated>
 		</source>
 	</entry>
 
