@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2020-04-14T07:01:01+00:00</updated>
+	<updated>2020-04-14T08:01:44+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -24,7 +24,7 @@
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2020-04-13T20:53:14+00:00</updated>
+			<updated>2020-04-14T08:01:38+00:00</updated>
 		</source>
 	</entry>
 
@@ -341,7 +341,7 @@ significant digits and the standard deviation of the 30 values computed.&lt;/p&g
 			<subtitle type="html">This is my blog about things related to Sage.</subtitle>
 			<link rel="self" href="http://sagemath.blogspot.com/feeds/posts/default"/>
 			<id>tag:blogger.com,1999:blog-6365588202025292315</id>
-			<updated>2020-04-13T20:53:14+00:00</updated>
+			<updated>2020-04-14T08:01:38+00:00</updated>
 		</source>
 	</entry>
 
