@@ -5,7 +5,7 @@
 	<link rel="self" href="http://planet.sagemath.org/atom.xml"/>
 	<link href="http://planet.sagemath.org"/>
 	<id>http://planet.sagemath.org/atom.xml</id>
-	<updated>2020-08-09T10:48:44+00:00</updated>
+	<updated>2020-08-09T11:49:57+00:00</updated>
 	<generator uri="http://www.planetplanet.org/">Planet/2.0 +http://www.planetplanet.org</generator>
 
 	<entry>
@@ -314,7 +314,7 @@ significant digits and the standard deviation of the 30 values computed.&lt;/p&g
 &lt;/div&gt;</content>
 		<author>
 			<name>Sébastien Labbé</name>
-			<uri>http://www.slabbe.org/blogue</uri>
+			<uri>http://www.slabbe.org/blogue/</uri>
 		</author>
 		<source>
 			<title type="html">Sébastien Labbé</title>
