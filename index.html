@@ -100,7 +100,7 @@ This is a followup to <a href="http://sagemath.blogspot.com/2016/07/datadogs-pri
 
 
 
-<h3><a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a></h3>
+<h3><a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a></h3>
 
 
 <div class="entrygroup" id="http://www.slabbe.org/blogue/2020/03/computer-experiments-for-the-lyapunov-exponent-for-mcf-algorithms-when-dimension-is-larger-than-3" lang="en">
@@ -192,7 +192,7 @@ Fraction (MCF) algorithms. Its <a class="reference external" href="https://www.l
 package, so it can be installed like this:</p>
 
 
-<div class="pygments_manni"><pre>sage -pip install slabbe
+<div class="pygments_manni"><pre><span></span>sage -pip install slabbe
 </pre></div>
 
 
@@ -202,7 +202,7 @@ dimension of the space for the corresponding projective algorithm.</p>
 <p>Import the Brun, Selmer and Arnoux-Rauzy-Poincaré MCF algorithms from the optional package:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.mult_cont_frac</span> <span class="kn">import</span> <span class="n">Brun</span><span class="p">,</span> <span class="n">Selmer</span><span class="p">,</span> <span class="n">ARP</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.mult_cont_frac</span> <span class="kn">import</span> <span class="n">Brun</span><span class="p">,</span> <span class="n">Selmer</span><span class="p">,</span> <span class="n">ARP</span>
 </pre></div>
 
 
@@ -210,7 +210,7 @@ dimension of the space for the corresponding projective algorithm.</p>
 <p>The computation of the first two Lyapunov exponents performed on one single orbit:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">(</span><span class="mf">0.30473782969922547</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11220958022368056</span><span class="p">,</span> <span class="mf">1.3682167728713919</span><span class="p">)</span>
 </pre></div>
 
@@ -220,7 +220,7 @@ dimension of the space for the corresponding projective algorithm.</p>
 \((\theta_1,\theta_2,1-\theta_2/\theta_1)\) are about the same:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">(</span><span class="mf">0.30345018206132324</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11171509867725296</span><span class="p">,</span> <span class="mf">1.3681497170915415</span><span class="p">)</span>
 </pre></div>
 
@@ -229,7 +229,7 @@ dimension of the space for the corresponding projective algorithm.</p>
 <p>Increasing the dimension \(d\) yields:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">(</span><span class="mf">0.32639514522732005</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07191456560115839</span><span class="p">,</span> <span class="mf">1.2203297648654456</span><span class="p">)</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">(</span><span class="mf">0.30918877340506756</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0463930802132972</span><span class="p">,</span> <span class="mf">1.1500477514185734</span><span class="p">)</span>
@@ -241,7 +241,7 @@ dimension of the space for the corresponding projective algorithm.</p>
 \(10^8\) in about 5 seconds and of length \(10^9\) in about 50 seconds:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">Brun</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">lyapunov_exponents</span><span class="p">(</span><span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">540</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">540</span> <span class="n">ms</span>
 <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">539</span> <span class="n">ms</span>
 <span class="p">(</span><span class="mf">0.30488799356325225</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.11234354880132114</span><span class="p">,</span> <span class="mf">1.3684748208296182</span><span class="p">)</span>
@@ -263,7 +263,7 @@ update my package in the next days in order that the computations below can be
 reproduced:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.lyapunov</span> <span class="kn">import</span> <span class="n">lyapunov_comparison_table</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">slabbe.lyapunov</span> <span class="kn">import</span> <span class="n">lyapunov_comparison_table</span>
 </pre></div>
 
 
@@ -273,7 +273,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 <p>For Brun algorithm:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Brun</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Brun</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">190</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.8</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.99</span> <span class="n">s</span>
 <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">6</span><span class="nb">min</span> <span class="mi">31</span><span class="n">s</span>
@@ -304,7 +304,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 <p>For Selmer algorithm:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Selmer</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">Selmer</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">203</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.78</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.98</span> <span class="n">s</span>
 <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">6</span><span class="nb">min</span> <span class="mi">27</span><span class="n">s</span>
@@ -335,7 +335,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 <p>For Arnoux-Rauzy-Poincaré algorithm:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">ARP</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">algos</span> <span class="o">=</span> <span class="p">[</span><span class="n">ARP</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="o">%</span><span class="n">time</span> <span class="n">lyapunov_comparison_table</span><span class="p">(</span><span class="n">algos</span><span class="p">,</span> <span class="n">n_orbits</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">226</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">2.76</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">2.99</span> <span class="n">s</span>
 <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">13</span><span class="nb">min</span> <span class="mi">20</span><span class="n">s</span>
@@ -366,7 +366,7 @@ significant digits and the standard deviation of the 30 values computed.</p>
 <p>The computation of the figure shown above is done with the code below:</p>
 
 
-<div class="pygments_manni"><pre><span class="n">sage</span><span class="p">:</span> <span class="n">brun_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.3683</span><span class="p">,</span> <span class="mf">1.2203</span><span class="p">,</span> <span class="mf">1.1503</span><span class="p">,</span> <span class="mf">1.1063</span><span class="p">,</span> <span class="mf">1.0743</span><span class="p">,</span> <span class="mf">1.04926</span><span class="p">,</span> <span class="mf">1.0284</span><span class="p">,</span> <span class="mf">1.0104</span><span class="p">,</span> <span class="mf">0.9947</span><span class="p">,</span> <span class="mf">0.9806</span><span class="p">,</span> <span class="mf">0.9677</span><span class="p">,</span> <span class="mf">0.9558</span><span class="p">,</span> <span class="mf">0.9447</span><span class="p">,</span> <span class="mf">0.93433</span><span class="p">,</span> <span class="mf">0.9246</span><span class="p">,</span> <span class="mf">0.9153</span><span class="p">,</span> <span class="mf">0.9065</span><span class="p">,</span> <span class="mf">0.8982</span><span class="p">]</span>
+<div class="pygments_manni"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">brun_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.3683</span><span class="p">,</span> <span class="mf">1.2203</span><span class="p">,</span> <span class="mf">1.1503</span><span class="p">,</span> <span class="mf">1.1063</span><span class="p">,</span> <span class="mf">1.0743</span><span class="p">,</span> <span class="mf">1.04926</span><span class="p">,</span> <span class="mf">1.0284</span><span class="p">,</span> <span class="mf">1.0104</span><span class="p">,</span> <span class="mf">0.9947</span><span class="p">,</span> <span class="mf">0.9806</span><span class="p">,</span> <span class="mf">0.9677</span><span class="p">,</span> <span class="mf">0.9558</span><span class="p">,</span> <span class="mf">0.9447</span><span class="p">,</span> <span class="mf">0.93433</span><span class="p">,</span> <span class="mf">0.9246</span><span class="p">,</span> <span class="mf">0.9153</span><span class="p">,</span> <span class="mf">0.9065</span><span class="p">,</span> <span class="mf">0.8982</span><span class="p">]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">selmer_list</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.3871</span><span class="p">,</span> <span class="mf">1.1444</span><span class="p">,</span> <span class="mf">0.9866</span><span class="p">,</span> <span class="mf">0.8577</span><span class="p">,</span> <span class="mf">0.7442</span><span class="p">,</span> <span class="mf">0.6437</span><span class="p">,</span> <span class="mf">0.5561</span><span class="p">,</span> <span class="mf">0.4810</span><span class="p">,</span> <span class="mf">0.4172</span><span class="p">,</span> <span class="mf">0.3636</span><span class="p">,</span> <span class="mf">0.3186</span><span class="p">,</span> <span class="mf">0.2804</span><span class="p">,</span> <span class="mf">0.2482</span><span class="p">,</span> <span class="mf">0.2208</span><span class="p">,</span> <span class="mf">0.1974</span><span class="p">,</span> <span class="mf">0.1774</span><span class="p">,</span> <span class="mf">0.1601</span><span class="p">,</span> <span class="mf">0.1452</span><span class="p">]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">arp_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.3888</span><span class="p">,</span> <span class="mf">1.24198</span><span class="p">,</span> <span class="mf">1.0972</span><span class="p">,</span> <span class="mf">0.9432</span><span class="p">,</span> <span class="mf">0.7845</span><span class="p">,</span> <span class="mf">0.6257</span><span class="p">,</span> <span class="mf">0.4763</span><span class="p">,</span> <span class="mf">0.3467</span><span class="p">,</span> <span class="mf">0.2459</span><span class="p">,</span> <span class="mf">0.1759</span><span class="p">,</span> <span class="mf">0.1309</span><span class="p">,</span> <span class="mf">0.10239</span><span class="p">,</span> <span class="mf">0.08340</span><span class="p">,</span> <span class="mf">0.07010</span><span class="p">,</span> <span class="mf">0.06005</span><span class="p">,</span> <span class="mf">0.05218</span><span class="p">,</span> <span class="mf">0.04582</span><span class="p">,</span> <span class="mf">0.04058</span><span class="p">]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">brun_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">brun_list</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
@@ -575,7 +575,7 @@ maintainer</a>.
 <a href="http://mathandhats.blogspot.com/feeds/posts/default/-/sage" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://mathandhats.blogspot.com" class="message" title="no activity in 356 days">Simon Spicer</a>
 </li>
 <li>
-<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue/" title="Sébastien Labbé">Sébastien Labbé</a>
+<a href="http://www.slabbe.org/blogue/categorie/sage/feed/atom/index.xml" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://www.slabbe.org/blogue" title="Sébastien Labbé">Sébastien Labbé</a>
 </li>
 <li>
 <a href="http://matroidunion.org/?feed=rss2&amp;cat=7" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a href="http://matroidunion.org/" class="message" title="no activity in 356 days">The Matroid Union</a>
@@ -608,7 +608,7 @@ maintainer</a>.
 
 <p>
 <strong>Last updated:</strong><br>
-November 16, 2020 10:10 PM<br>
+November 16, 2020 11:11 PM<br>
 <em>All times are UTC.</em><br>
 <br>
 Powered by:<br>
